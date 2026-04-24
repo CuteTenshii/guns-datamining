@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "js-beautify": "^1.15.4"
+  },
+  "devDependencies": {
+    "@types/js-beautify": "^1.14.3",
+    "@types/node": "^25.6.0"
+  }
+}
