@@ -26,7 +26,7 @@ async function saveBeautified(url: string, content: string, isCSS: boolean) {
   const formatted = isCSS
     ? beautify.css(content, { indent_size: 2 })
     : beautify.js(content, { indent_size: 2, space_in_empty_paren: true });
-  await saveFile(`./output${new URL(url).pathname}`, formatted);
+  await saveFile(`./output${decodeURIComponent(new URL(url).pathname)}`, formatted);
 }
 
 async function fetchText(url: string): Promise<string> {
@@ -45,7 +45,7 @@ async function fetchAsset(url: string) {
     console.error(`Failed to fetch asset from ${url}: ${res.status} ${res.statusText}`);
     return;
   }
-  const filePath = `./output/assets${new URL(url).pathname}`;
+  const filePath = `./output/assets${decodeURIComponent(new URL(url).pathname)}`;
   await saveFile(filePath, Buffer.from(await res.arrayBuffer()));
   console.log(`Saved asset: ${filePath}`);
 }
