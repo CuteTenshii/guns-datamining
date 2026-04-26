@@ -126,7 +126,7 @@ function parseWebpackManifest(content: string): string[] {
   }
 
   const numberedMatch = content.match(
-    /"static\/chunks\/" \+ \(\(\{([\s\S]+?)\}\)\[e\] \|\| e\) \+ "\." \+ \(\{([\s\S]+?)\}\)\[e\] \+ "\.js"/,
+    /"static\/chunks\/"\s*\+\s*\(\(\{([\s\S]+?)\}\)\[\w+\]\s*\|\|\s*\w+\)\s*\+\s*"\."\s*\+\s*\(\{([\s\S]+?)\}\)\[\w+\]\s*\+\s*"\.js"/,
   );
   if (numberedMatch) {
     const nameMap = parseJsObject(numberedMatch[1]);
@@ -137,7 +137,9 @@ function parseWebpackManifest(content: string): string[] {
     }
   }
 
-  const cssMatch = content.match(/miniCssF = e => "static\/css\/" \+ \(\{([\s\S]+?)\}\)\[e\] \+ "\.css"/);
+  const cssMatch = content.match(
+    /miniCssF\s*=\s*\w+\s*=>\s*"static\/css\/"\s*\+\s*\(\{([\s\S]+?)\}\)\[\w+\]\s*\+\s*"\.css"/,
+  );
   if (cssMatch) {
     for (const hash of Object.values(parseJsObject(cssMatch[1]))) {
       urls.add(`${base}static/css/${hash}.css`);
