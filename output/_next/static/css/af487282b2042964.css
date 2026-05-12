@@ -1,0 +1,88 @@
+.GUNS__7d-a387b0d0-ec1769a0-bb642590 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh
+}
+
+.GUNS__dc-f67e46db-fd5a2a6e-abd7d0d9 {
+  background-color: #101010;
+  border: 2px solid #161616;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 15px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 500px
+}
+
+.GUNS__dc-f67e46db-fd5a2a6e-abd7d0d9 h1:not(.GUNS__c6-a74ffb16-b3ec7790-97176c27 h1),
+.GUNS__dc-f67e46db-fd5a2a6e-abd7d0d9 h3 {
+  margin: 0
+}
+
+.GUNS__dc-f67e46db-fd5a2a6e-abd7d0d9 h1:not(.GUNS__c6-a74ffb16-b3ec7790-97176c27 h1) {
+  font-size: 23px;
+  font-weight: 500;
+  color: #fafafa
+}
+
+.GUNS__dc-f67e46db-fd5a2a6e-abd7d0d9 h3 {
+  margin-top: 4px !important;
+  font-size: 16px;
+  font-weight: 450;
+  color: #939393
+}
+
+.GUNS__68-39de63c3-e71175e6-30d1f88a {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column
+}
+
+.GUNS__45-09662aac-e027c7cd-9f159553 {
+  width: fit-content;
+  color: #fafafa;
+  text-decoration: none;
+  padding: 7px 15px;
+  border: 2px solid #191919;
+  background-color: #151515;
+  border-radius: 12px;
+  transition: .2s;
+  cursor: pointer;
+  display: flex;
+  align-items: center
+}
+
+.GUNS__45-09662aac-e027c7cd-9f159553 svg {
+  font-size: 23px
+}
+
+.GUNS__45-09662aac-e027c7cd-9f159553:active {
+  transform: translateY(4px)
+}
+
+.GUNS__45-09662aac-e027c7cd-9f159553:hover {
+  border: 2px solid #222222;
+  background-color: #181818
+}
+
+.GUNS__c6-a74ffb16-b3ec7790-97176c27 {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px
+}
+
+@media(max-width:560px) {
+  .GUNS__dc-f67e46db-fd5a2a6e-abd7d0d9 {
+    width: 93%;
+    box-sizing: border-box
+  }
+}
