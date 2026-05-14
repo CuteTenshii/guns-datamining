@@ -22,11 +22,16 @@ async function saveFile(filePath: string, content: string | Buffer) {
   await writeFile(filePath, content);
 }
 
-async function saveBeautified(url: string, content: string, isCSS: boolean) {
+function stripBuildHash(pathname: string): string {
+  return pathname.replace(/[.\-][0-9a-f]{16}(\.[a-z]+)$/i, '$1');
+}
+
+async function saveBeautified(url: string, content: string, isCSS: boolean, outputPath?: string) {
   const formatted = isCSS
     ? beautify.css(content, { indent_size: 2 })
     : beautify.js(content, { indent_size: 2, space_in_empty_paren: true });
-  await saveFile(`./output${decodeURIComponent(new URL(url).pathname)}`, formatted);
+  const pathname = outputPath ?? stripBuildHash(decodeURIComponent(new URL(url).pathname));
+  await saveFile(`./output${pathname}`, formatted);
 }
 
 async function fetchText(url: string): Promise<string> {
@@ -73,11 +78,11 @@ async function processPage(path: string, seen: Set<string>) {
     await saveBeautified(url, content, false);
 
     if (new URL(url).pathname.includes('/chunks/webpack')) {
-      for (const discoveredUrl of parseWebpackManifest(content)) {
+      for (const { url: discoveredUrl, path } of parseWebpackManifest(content)) {
         if (seen.has(discoveredUrl)) continue;
         seen.add(discoveredUrl);
         const discoveredContent = await fetchText(discoveredUrl);
-        await saveBeautified(discoveredUrl, discoveredContent, discoveredUrl.endsWith('.css'));
+        await saveBeautified(discoveredUrl, discoveredContent, discoveredUrl.endsWith('.css'), path);
       }
     }
   }
@@ -88,10 +93,13 @@ async function processPage(path: string, seen: Set<string>) {
     if (href) cssUrls.push(new URL(href, BASE_URL).toString());
   });
 
+  const pageName = path === '/' ? 'index' : path.slice(1).replace(/\//g, '-');
+  let cssIndex = 0;
   for (const url of cssUrls) {
     if (seen.has(url)) continue;
     seen.add(url);
-    await saveBeautified(url, await fetchText(url), true);
+    const cssPath = `/_next/static/css/${pageName}-${cssIndex++}.css`;
+    await saveBeautified(url, await fetchText(url), true, cssPath);
   }
 
   for (const url of extractAssetUrls($, html)) {
@@ -120,12 +128,13 @@ async function main() {
   }
 }
 
-function parseWebpackManifest(content: string): string[] {
-  const urls = new Set<string>();
+function parseWebpackManifest(content: string): Array<{ url: string; path: string }> {
+  const entries = new Map<string, string>();
   const base = `${BASE_URL}/_next/`;
 
   for (const match of content.matchAll(/"(static\/chunks\/[\w.-]+\.js)"/g)) {
-    urls.add(base + match[1]);
+    const url = base + match[1];
+    entries.set(url, stripBuildHash(`/_next/${match[1]}`));
   }
 
   const numberedMatch = content.match(
@@ -136,7 +145,7 @@ function parseWebpackManifest(content: string): string[] {
     const hashMap = parseJsObject(numberedMatch[2]);
     for (const [id, hash] of Object.entries(hashMap)) {
       const name = nameMap[id] ?? id;
-      urls.add(`${base}static/chunks/${name}.${hash}.js`);
+      entries.set(`${base}static/chunks/${name}.${hash}.js`, `/_next/static/chunks/${name}.js`);
     }
   }
 
@@ -144,12 +153,12 @@ function parseWebpackManifest(content: string): string[] {
     /miniCssF\s*=\s*\w+\s*=>\s*"static\/css\/"\s*\+\s*\(\{([\s\S]+?)\}\)\[\w+\]\s*\+\s*"\.css"/,
   );
   if (cssMatch) {
-    for (const hash of Object.values(parseJsObject(cssMatch[1]))) {
-      urls.add(`${base}static/css/${hash}.css`);
+    for (const [id, hash] of Object.entries(parseJsObject(cssMatch[1]))) {
+      entries.set(`${base}static/css/${hash}.css`, `/_next/static/css/${id}.css`);
     }
   }
 
-  return [...urls];
+  return [...entries.entries()].map(([url, path]) => ({ url, path }));
 }
 
 function parseJsObject(content: string): Record<string, string> {
