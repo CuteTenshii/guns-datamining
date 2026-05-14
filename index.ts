@@ -1,5 +1,5 @@
 import * as cheerio from 'cheerio';
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, rm, writeFile } from 'node:fs/promises';
 import { dirname } from 'node:path';
 import beautify from 'js-beautify';
 
@@ -110,6 +110,8 @@ async function processPage(path: string, seen: Set<string>) {
 }
 
 async function main() {
+  await rm('./output', { recursive: true, force: true });
+
   const clearanceRes = await fetch(BASE_URL, {
     headers: { 'User-Agent': USER_AGENT },
     redirect: 'manual',
