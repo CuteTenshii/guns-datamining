@@ -40,6 +40,9 @@ async function fetchText(url: string): Promise<string> {
     console.log(`Fetched ${url}`);
     return res.text();
   }
+  if (res.status === 401) {
+    return process.exit(1);
+  }
   console.error(`Failed to fetch ${url}: ${res.status} ${res.statusText}`);
   return '';
 }
