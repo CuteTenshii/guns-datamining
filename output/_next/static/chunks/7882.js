@@ -4675,8 +4675,8 @@ void main() {
               a = await s.json();
             s.ok ? u(a) : console.error(`Error fetching Discord ${t}:`, a.error), f(!1)
           };
-          e.discord && "enabled" === e.config.presence && !e.ban && e.verified ? (f(!0), t("presence")) : e.discord && e.config.use_discord_avatar && !e.ban && e.verified && t("avatar")
-        }, [e.discord?.id, e.config.presence, e.config.use_discord_avatar, e.ban, e.verified]), (0, s.jsxs)(s.Fragment, {
+          e.discord && "enabled" === _.presence && !e.ban && e.verified ? (f(!0), t("presence")) : e.discord && _.use_discord_avatar && !e.ban && e.verified && t("avatar")
+        }, [e.discord?.id, _.presence, _.use_discord_avatar, e.ban, e.verified]), (0, s.jsxs)(s.Fragment, {
           children: [(0, s.jsx)("style", {
             children: `
                 html {
