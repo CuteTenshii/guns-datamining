@@ -49,9 +49,8 @@ async function fetchText(url: string): Promise<string> {
     console.log(`Fetched ${url}`);
     return res.text();
   }
-  if (res.status === 401) {
-    return process.exit(1);
-  }
+  if (res.status === 401) return process.exit(1);
+
   console.error(`Failed to fetch ${url}: ${res.status} ${res.statusText}`);
   return '';
 }
@@ -59,6 +58,8 @@ async function fetchText(url: string): Promise<string> {
 async function fetchAsset(url: string) {
   const res = await fetchWithRetry(url, { headers: makeHeaders() });
   if (!res.ok) {
+    if (res.status === 401) return process.exit(1);
+
     console.error(`Failed to fetch asset from ${url}: ${res.status} ${res.statusText}`);
     return;
   }
@@ -70,6 +71,8 @@ async function fetchAsset(url: string) {
 async function processPage(path: string, seen: Set<string>) {
   const res = await fetchWithRetry(`${BASE_URL}${path}`, { headers: makeHeaders() });
   if (!res.ok) {
+    if (res.status === 401) return process.exit(1);
+
     console.error(`Failed to fetch ${path}: ${res.status} ${res.statusText}`);
     return;
   }
