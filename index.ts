@@ -34,8 +34,17 @@ async function saveBeautified(url: string, content: string, isCSS: boolean, outp
   await saveFile(`./output${pathname}`, formatted);
 }
 
+async function fetchWithRetry(url: string, options?: RequestInit): Promise<Response> {
+  while (true) {
+    const res = await fetch(url, options);
+    if (res.status < 500) return res;
+    console.error(`Got ${res.status} from ${url}, retrying in 5s...`);
+    await new Promise(r => setTimeout(r, 5000));
+  }
+}
+
 async function fetchText(url: string): Promise<string> {
-  const res = await fetch(url, { headers: makeHeaders() });
+  const res = await fetchWithRetry(url, { headers: makeHeaders() });
   if (res.ok) {
     console.log(`Fetched ${url}`);
     return res.text();
@@ -48,7 +57,7 @@ async function fetchText(url: string): Promise<string> {
 }
 
 async function fetchAsset(url: string) {
-  const res = await fetch(url, { headers: makeHeaders() });
+  const res = await fetchWithRetry(url, { headers: makeHeaders() });
   if (!res.ok) {
     console.error(`Failed to fetch asset from ${url}: ${res.status} ${res.statusText}`);
     return;
@@ -59,7 +68,7 @@ async function fetchAsset(url: string) {
 }
 
 async function processPage(path: string, seen: Set<string>) {
-  const res = await fetch(`${BASE_URL}${path}`, { headers: makeHeaders() });
+  const res = await fetchWithRetry(`${BASE_URL}${path}`, { headers: makeHeaders() });
   if (!res.ok) {
     console.error(`Failed to fetch ${path}: ${res.status} ${res.statusText}`);
     return;
