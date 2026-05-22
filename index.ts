@@ -138,7 +138,8 @@ async function main() {
   const seen = new Set<string>();
   const paths = [
     '/', '/tenshii', '/pricing', '/leaderboard', '/login', '/register', '/reset', '/terms', '/privacy',
-    '/terms/copyright', '/sent', '/reset', '/logout', '/verify/a', '/reset/a', '/password/success',
+    '/terms/copyright', '/sent', '/reset', '/logout', '/verify/a', '/reset/a', '/password/success', '/recovery',
+    '/recovery/start',
   ];
   for (const path of paths) {
     await processPage(path, seen);
