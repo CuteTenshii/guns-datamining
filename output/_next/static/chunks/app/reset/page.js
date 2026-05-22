@@ -89,6 +89,7 @@
           m.current && (m.current.type = v ? "password" : "text")
         }, [v]), (0, n.jsxs)("div", {
           className: l().inputContainerWrapper,
+          "data-dashboard-feature-label": "string" == typeof e ? e : void 0,
           children: [(0, n.jsx)("h1", {
             className: l().featureName,
             children: e
@@ -624,6 +625,6 @@
     }
   },
   e => {
-    e.O(0, [6794, 1268, 3200, 8441, 3794, 7358], () => e(e.s = 63855)), _N_E = e.O()
+    e.O(0, [6794, 4103, 3200, 8441, 3794, 7358], () => e(e.s = 63855)), _N_E = e.O()
   }
 ]);

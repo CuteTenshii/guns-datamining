@@ -23,7 +23,7 @@
           [d, n] = (0, s.useState)("all"),
           [m, w] = (0, s.useState)(null),
           [b, p] = (0, s.useState)(!0),
-          [_, x] = (0, s.useState)(null),
+          [x, _] = (0, s.useState)(null),
           f = (0, h.kj)();
         (0, s.useEffect)(() => {
           let a = !0;
@@ -38,10 +38,10 @@
                 }),
                 l = await e.json();
               if (!a) return;
-              !e.ok || l?.error ? x(l?.error) : (w(l), x(null))
+              !e.ok || l?.error ? _(l?.error) : (w(l), _(null))
             } catch (e) {
               if (!a) return;
-              x(e?.message)
+              _(e?.message)
             } finally {
               a && p(!1)
             }
@@ -99,64 +99,66 @@
                 }), b ? (0, t.jsx)("div", {
                   className: i().emptyState,
                   children: f("leaderboard.table.leaderboard_loading_text")
-                }) : _ ? (0, t.jsx)("div", {
+                }) : x ? (0, t.jsx)("div", {
                   className: i().emptyState,
-                  children: _
+                  children: x
                 }) : 0 === u.length ? (0, t.jsx)("div", {
                   className: i().emptyState,
                   children: f("leaderboard.table.no_data_text")
-                }) : u.map((a, e) => {
-                  let l = e < 3 ? i().rankTop : "",
-                    s = 0 === e ? i().rowTop1 : 1 === e ? i().rowTop2 : 2 === e ? i().rowTop3 : "",
-                    r = a.displayName || a.username || "Unknown",
-                    d = a.username || "unknown",
-                    n = "number" == typeof a.views ? a.views.toLocaleString("en-US") : "0",
-                    h = r ? r.slice(0, 1) : "?",
-                    m = !!a.premium;
-                  return (0, t.jsx)(o(), {
-                    href: `/${d}`,
-                    className: i().rowLink,
-                    target: "_blank",
-                    prefetch: !1,
-                    children: (0, t.jsxs)("div", {
-                      className: `${i().row} ${s}`,
-                      children: [(0, t.jsx)("span", {
-                        className: `${i().rank} ${l}`,
-                        children: e + 1
-                      }), (0, t.jsxs)("div", {
-                        className: i().profile,
-                        children: [a.avatar ? (0, t.jsx)("img", {
-                          className: i().avatar,
-                          src: a.avatar,
-                          alt: ""
-                        }) : (0, t.jsx)("div", {
-                          className: i().avatarFallback,
-                          children: h
+                }) : (0, t.jsx)(t.Fragment, {
+                  children: u.map((a, e) => {
+                    let l = e < 3 ? i().rankTop : "",
+                      s = 0 === e ? i().rowTop1 : 1 === e ? i().rowTop2 : 2 === e ? i().rowTop3 : "",
+                      r = a.displayName || a.username || "Unknown",
+                      d = a.username || "unknown",
+                      n = "number" == typeof a.views ? a.views.toLocaleString("en-US") : "0",
+                      h = r ? r.slice(0, 1) : "?",
+                      m = !!a.premium;
+                    return (0, t.jsx)(o(), {
+                      href: `/${d}`,
+                      className: i().rowLink,
+                      target: "_blank",
+                      prefetch: !1,
+                      children: (0, t.jsxs)("div", {
+                        className: `${i().row} ${s}`,
+                        children: [(0, t.jsx)("span", {
+                          className: `${i().rank} ${l}`,
+                          children: e + 1
                         }), (0, t.jsxs)("div", {
-                          className: i().nameBlock,
-                          children: [(0, t.jsxs)("div", {
-                            className: i().displayLine,
-                            children: [(0, t.jsx)("h1", {
-                              className: i().displayName,
-                              children: r
-                            }), m && (0, t.jsx)("span", {
-                              className: i().premiumBadge,
-                              children: (0, t.jsx)("span", {
-                                className: i().premiumIcon,
-                                children: c.A.premium
-                              })
+                          className: i().profile,
+                          children: [a.avatar ? (0, t.jsx)("img", {
+                            className: i().avatar,
+                            src: a.avatar,
+                            alt: ""
+                          }) : (0, t.jsx)("div", {
+                            className: i().avatarFallback,
+                            children: h
+                          }), (0, t.jsxs)("div", {
+                            className: i().nameBlock,
+                            children: [(0, t.jsxs)("div", {
+                              className: i().displayLine,
+                              children: [(0, t.jsx)("h1", {
+                                className: i().displayName,
+                                children: r
+                              }), m && (0, t.jsx)("span", {
+                                className: i().premiumBadge,
+                                children: (0, t.jsx)("span", {
+                                  className: i().premiumIcon,
+                                  children: c.A.premium
+                                })
+                              })]
+                            }), (0, t.jsxs)("span", {
+                              className: i().username,
+                              children: ["@", d]
                             })]
-                          }), (0, t.jsxs)("span", {
-                            className: i().username,
-                            children: ["@", d]
                           })]
+                        }), (0, t.jsx)("span", {
+                          className: i().views,
+                          children: n
                         })]
-                      }), (0, t.jsx)("span", {
-                        className: i().views,
-                        children: n
-                      })]
+                      }, `${d}-${e}`)
                     }, `${d}-${e}`)
-                  }, `${d}-${e}`)
+                  })
                 })]
               })]
             })
@@ -323,6 +325,6 @@
     }
   },
   a => {
-    a.O(0, [9404, 1268, 6992, 8500, 3200, 226, 1382, 8441, 3794, 7358], () => a(a.s = 41143)), _N_E = a.O()
+    a.O(0, [9404, 4103, 6992, 8500, 3200, 226, 1382, 8441, 3794, 7358], () => a(a.s = 41143)), _N_E = a.O()
   }
 ]);

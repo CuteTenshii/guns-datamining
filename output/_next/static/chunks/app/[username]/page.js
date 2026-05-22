@@ -100,16 +100,18 @@
         let D = (0, l.useMemo)(() => t?.length ? t.map(e => ({
             ...e,
             normalizedValue: Math.min(j, Math.max(S, e.value)),
-            position: Math.min(100, Math.max(0, (e.value - S) / R * 100))
+            position: Math.min(100, Math.max(0, (Math.min(j, Math.max(S, e.value)) - S) / R * 100))
           })) : [], [t, S, j, R]),
           W = (0, l.useMemo)(() => {
             if (!d) return `${A}`;
             let e = "function" == typeof d ? d(A) : d;
             return null == e || !1 === e ? `${A}` : e
           }, [d, A]),
-          B = !p && (L || G);
+          B = !p && (L || G),
+          z = "string" == typeof e ? e : void 0;
         return (0, n.jsxs)("div", {
           className: o().inputContainerWrapper,
+          "data-dashboard-feature-label": z,
           children: [e && (0, n.jsx)("h1", {
             className: o().featureName,
             style: {
@@ -142,7 +144,6 @@
                     children: (0, n.jsx)("span", {
                       className: u().tooltip,
                       "data-visible": B,
-                      "aria-hidden": !B,
                       children: W
                     })
                   })]
@@ -182,7 +183,7 @@
                   children: D.map((e, t) => (0, n.jsxs)("div", {
                     className: u().mark,
                     style: {
-                      left: `${e.position+2}%`
+                      left: `${e.position}%`
                     },
                     children: [(0, n.jsx)("span", {
                       className: u().markDot,
@@ -269,7 +270,7 @@
       }), r(1980)
     },
     44419: (e, t, r) => {
-      Promise.resolve().then(r.bind(r, 57882))
+      Promise.resolve().then(r.bind(r, 16053))
     },
     51047: e => {
       e.exports = {
@@ -478,23 +479,24 @@
         let P = (0, l.useCallback)(() => {
             N.current && (clearTimeout(N.current), N.current = null)
           }, []),
-          k = (0, l.useCallback)(e => {
-            if (m) return;
+          k = (0, l.useCallback)(() => "undefined" != typeof document && "active" === document.documentElement.getAttribute("data-user-page-enter-transition"), []),
+          M = (0, l.useCallback)(e => {
+            if (m || k()) return;
             let t = e?.immediate ?? !1;
             (P(), t || E <= 0) ? p(!0): N.current = setTimeout(() => p(!0), E)
-          }, [P, E, m]),
-          M = (0, l.useCallback)(e => {
+          }, [P, E, m, k]),
+          C = (0, l.useCallback)(e => {
             P(), e?.immediate, p(!1)
           }, [P]);
         (0, l.useEffect)(() => () => {
           P()
         }, [P]), (0, l.useEffect)(() => {
-          m && M({
+          m && C({
             immediate: !0
           })
-        }, [m, M]);
-        let C = (e, t, r) => Math.min(Math.max(e, t), r),
-          L = (0, l.useCallback)(() => {
+        }, [m, C]);
+        let L = (e, t, r) => Math.min(Math.max(e, t), r),
+          U = (0, l.useCallback)(() => {
             let e = S.current,
               t = j.current;
             if (!e || !t) return;
@@ -517,31 +519,31 @@
             }
             let o = window.innerWidth - a.width - 8,
               s = window.innerHeight - a.height - 8,
-              c = a.width >= window.innerWidth ? 8 : C(i, 8, Math.max(8, o));
+              c = a.width >= window.innerWidth ? 8 : L(i, 8, Math.max(8, o));
             _({
-              top: a.height >= window.innerHeight ? 8 : C(l, 8, Math.max(8, s)),
+              top: a.height >= window.innerHeight ? 8 : L(l, 8, Math.max(8, s)),
               left: c
             })
           }, [u, r]);
         (0, l.useLayoutEffect)(() => {
           if (!b) return;
-          L();
-          let e = () => L();
+          U();
+          let e = () => U();
           return window.addEventListener("resize", e), window.addEventListener("scroll", e, !0), () => {
             window.removeEventListener("resize", e), window.removeEventListener("scroll", e, !0)
           }
-        }, [L, b]);
-        let U = (0, l.useCallback)(e => {
-          e.stopPropagation(), g(!0), b ? M({
+        }, [U, b]);
+        let G = (0, l.useCallback)(e => {
+          k() || (e.stopPropagation(), g(!0), b ? C({
             immediate: !0
-          }) : k({
+          }) : M({
             immediate: !0
-          })
-        }, [M, k, b]);
+          }))
+        }, [C, k, M, b]);
         (0, l.useEffect)(() => {
           if (!b || !v) return;
           let e = e => {
-            S.current && (S.current.contains(e.target) || M({
+            S.current && (S.current.contains(e.target) || C({
               immediate: !0
             }))
           };
@@ -550,37 +552,35 @@
           }), () => {
             document.removeEventListener("touchstart", e)
           }
-        }, [m, M, v, b]);
-        let G = {
+        }, [m, C, v, b]);
+        let $ = {
             "--tooltip-max-width": "number" == typeof c ? `${c}px` : c,
             top: `${w.top}px`,
             left: `${w.left}px`
           },
-          $ = (0, n.jsx)("span", {
+          O = (0, n.jsx)("span", {
             ref: j,
             className: `${o().tooltip} ${f??""}`,
             style: {
-              ...G,
+              ...$,
               borderColor: h ? "#1a1a1a33" : "var(--tooltip-border-color)",
               backgroundColor: h ? "#14141463" : "var(--tooltip-background-color)"
             },
             "data-visible": b,
             "data-placement": r,
-            "aria-hidden": !b,
-            role: "tooltip",
             children: e
           });
         return (0, n.jsxs)("span", {
           ref: S,
           className: `${o().wrapper} ${d??""}`,
-          onMouseEnter: () => k(),
-          onMouseLeave: () => M(),
-          onFocusCapture: () => k(),
-          onBlurCapture: () => M({
+          onMouseEnter: () => M(),
+          onMouseLeave: () => C(),
+          onFocusCapture: () => M(),
+          onBlurCapture: () => C({
             immediate: !0
           }),
-          onTouchStart: U,
-          children: [t, y ? (0, a.createPortal)($, document.body) : $]
+          onTouchStart: G,
+          children: [t, y ? (0, a.createPortal)(O, document.body) : O]
         })
       }
     },
@@ -797,6 +797,6 @@
     }
   },
   e => {
-    e.O(0, [7958, 7274, 3785, 1405, 1268, 1831, 6922, 4664, 9367, 6413, 5592, 8500, 4564, 7629, 3200, 5395, 7231, 8542, 7882, 8441, 3794, 7358], () => e(e.s = 44419)), _N_E = e.O()
+    e.O(0, [7958, 7274, 3785, 2520, 4103, 6564, 9427, 8463, 1831, 4664, 9367, 8413, 6413, 5592, 8500, 5686, 4564, 9388, 3200, 5395, 2131, 8542, 6053, 8441, 3794, 7358], () => e(e.s = 44419)), _N_E = e.O()
   }
 ]);

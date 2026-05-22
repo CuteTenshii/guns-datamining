@@ -20,7 +20,7 @@
     19376: (e, t, n) => {
       "use strict";
       n.d(t, {
-        A: () => d
+        A: () => c
       });
       var l = n(95155),
         a = n(12115),
@@ -28,16 +28,16 @@
         s = n(71537),
         i = n.n(s);
       let u = (e, t, n) => Math.min(Math.max(e, t), n),
-        c = (e, t) => e > t ? [] : Array.from({
+        d = (e, t) => e > t ? [] : Array.from({
           length: t - e + 1
         }, (t, n) => e + n);
 
-      function d({
+      function c({
         value: e,
         onChange: t,
         total: n,
         className: s,
-        siblings: d = 1,
+        siblings: c = 1,
         disabled: o = !1,
         prevIcon: f = (0, l.jsx)("span", {
           children: "‹"
@@ -49,23 +49,23 @@
         let b = u(e, 1, Math.max(1, n)),
           h = (0, a.useMemo)(() => (function(e, t, n) {
             let l = Math.max(0, n);
-            if (t <= 2 * l + 5) return c(1, t);
+            if (t <= 2 * l + 5) return d(1, t);
             let a = Math.max(e - l, 2),
               r = Math.min(e + l, t - 1),
               s = a > 2,
               i = r < t - 1,
               u = [1];
-            if (!s && !i) return u.push(...c(2, t - 1), t), u;
+            if (!s && !i) return u.push(...d(2, t - 1), t), u;
             if (!s && i) {
               let e = Math.min(t - 1, 3 + 2 * l);
-              return u.push(...c(2, e)), u.push("end-ellipsis", t), u
+              return u.push(...d(2, e)), u.push("end-ellipsis", t), u
             }
             if (s && !i) {
               let e = Math.max(2, t - (3 + 2 * l) + 1);
-              return u.push("start-ellipsis", ...c(e, t - 1), t), u
+              return u.push("start-ellipsis", ...d(e, t - 1), t), u
             }
-            return u.push("start-ellipsis", ...c(a, r), "end-ellipsis", t), u
-          })(b, Math.max(1, n), d), [b, n, d]);
+            return u.push("start-ellipsis", ...d(a, r), "end-ellipsis", t), u
+          })(b, Math.max(1, n), c), [b, n, c]);
         if (n <= 1) return null;
         let m = e => {
           if (o || e === b) return;
@@ -124,19 +124,19 @@
         let {
           leading: i = !1,
           trailing: u = !0,
-          maxWait: c
-        } = n, [d, o] = (0, l.useState)(e), f = (0, l.useRef)(null), p = (0, l.useRef)(null), b = (0, l.useRef)(!1), h = (0, l.useCallback)(() => {
+          maxWait: d
+        } = n, [c, o] = (0, l.useState)(e), f = (0, l.useRef)(null), p = (0, l.useRef)(null), b = (0, l.useRef)(!1), h = (0, l.useCallback)(() => {
           r(f), r(p), b.current = !1
         }, []), m = (0, l.useCallback)(() => {
           r(f), r(p), b.current = !1, o(e)
         }, [e]);
         return (0, l.useEffect)(() => (i && !b.current && (o(e), b.current = !0), r(f), u && (f.current = setTimeout(() => {
           o(e), b.current = !1
-        }, t)), "number" == typeof c && (r(p), p.current = setTimeout(() => {
+        }, t)), "number" == typeof d && (r(p), p.current = setTimeout(() => {
           o(e), b.current = !1, r(f)
-        }, c)), () => {
+        }, d)), () => {
           r(f), r(p)
-        }), [e, t, i, u, c]), [d, {
+        }), [e, t, i, u, d]), [c, {
           cancel: h,
           flush: m,
           setValue: o
@@ -146,7 +146,7 @@
     60141: (e, t, n) => {
       "use strict";
       n.d(t, {
-        A: () => c
+        A: () => d
       });
       var l = n(95155),
         a = n(29722),
@@ -155,13 +155,13 @@
         i = n(7092),
         u = n.n(i);
 
-      function c({
+      function d({
         featureName: e,
         icon: t,
         placeholder: n,
         data: i,
-        value: c,
-        defaultValue: d = null,
+        value: d,
+        defaultValue: c = null,
         onChangeFunction: o,
         dropdownMaxHeight: f = 240,
         dropdownClassName: p,
@@ -170,8 +170,8 @@
         name: m,
         required: v,
         id: _,
-        onFocus: N,
-        onBlur: g,
+        onFocus: g,
+        onBlur: N,
         onKeyDown: x,
         ...S
       }) {
@@ -183,8 +183,8 @@
             label: e.label ?? e.value,
             disabled: e.disabled ?? !1
           }).filter(e => !!e) : [], [i]),
-          y = void 0 !== c,
-          [j, E] = (0, r.useState)(d ?? null),
+          y = void 0 !== d,
+          [j, E] = (0, r.useState)(c ?? null),
           [k, U] = (0, r.useState)(!1),
           [G, A] = (0, r.useState)(!1),
           [M, C] = (0, r.useState)(-1),
@@ -208,11 +208,11 @@
             })
           }, []);
         (0, r.useEffect)(() => {
-          y || E(d ?? null)
-        }, [d, y]), (0, r.useEffect)(() => {
+          y || E(c ?? null)
+        }, [c, y]), (0, r.useEffect)(() => {
           H(!0)
         }, []);
-        let K = y ? c ?? null : j,
+        let K = y ? d ?? null : j,
           P = null == K ? "" : String(K),
           V = w.find(e => e.value === K) ?? null,
           J = !!V || null != K && "" != `${K}`;
@@ -304,10 +304,12 @@
               children: "No options available"
             })
           }),
-          Z = I && "undefined" != typeof document ? (0, s.createPortal)(Y, document.body) : null;
+          Z = I && "undefined" != typeof document ? (0, s.createPortal)(Y, document.body) : null,
+          ee = "string" == typeof e ? e : void 0;
         return (0, l.jsxs)("div", {
           className: u().container,
           ref: L,
+          "data-dashboard-feature-label": ee,
           children: [e && (0, l.jsx)("div", {
             className: u().label,
             children: e
@@ -331,11 +333,11 @@
               type: "button",
               className: (0, a.A)(u().trigger, t ? u().triggerWithIcon : void 0),
               onFocus: e => {
-                A(!0), N?.(e)
+                A(!0), g?.(e)
               },
               onBlur: e => {
                 let t = e.relatedTarget;
-                t && L.current?.contains(t) || (A(!1), U(!1)), g?.(e)
+                t && L.current?.contains(t) || (A(!1), U(!1)), N?.(e)
               },
               onClick: () => {
                 h || U(e => {

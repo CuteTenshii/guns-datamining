@@ -3,10 +3,10 @@
     30803: (e, a, t) => {
       "use strict";
       t.r(a), t.d(a, {
-        default: () => C
+        default: () => j
       });
-      var r = t(95155),
-        d = t(12115),
+      var d = t(95155),
+        r = t(12115),
         s = t(43477),
         i = t.n(s),
         n = t(12555),
@@ -15,38 +15,38 @@
         l = t(31887),
         f = t.n(l),
         p = t(66609);
-      async function u(e) {
+      async function m(e) {
         return new Promise((a, t) => {
-          let r = new Image,
-            d = new FileReader;
-          d.onload = e => {
-            r.src = e.target.result
-          }, r.onload = () => {
-            let t = r.width,
-              d = r.height;
-            if (t > 45 || d > 45) {
+          let d = new Image,
+            r = new FileReader;
+          r.onload = e => {
+            d.src = e.target.result
+          }, d.onload = () => {
+            let t = d.width,
+              r = d.height;
+            if (t > 45 || r > 45) {
               let t = document.createElement("canvas"),
-                d = t.getContext("2d");
-              t.width = 32, t.height = 32, d.drawImage(r, 0, 0, 32, 32), t.toBlob(t => {
+                r = t.getContext("2d");
+              t.width = 32, t.height = 32, r.drawImage(d, 0, 0, 32, 32), t.toBlob(t => {
                 a(new File([t], e.name, {
                   type: e.type
                 }))
               }, e.type)
             } else a(e)
-          }, r.onerror = e => t(e), d.onerror = e => t(e), d.readAsDataURL(e)
+          }, d.onerror = e => t(e), r.onerror = e => t(e), r.readAsDataURL(e)
         })
       }
-      async function m(e, a) {
+      async function u(e, a) {
         if (!(!(e.size / 1e6 > 10) || (p.oR.error("Could not upload file. Max file size is 10MB"), 0))) return null;
-        "favicon" === a && (e = await u(e));
+        "favicon" === a && (e = await m(e));
         let t = new FormData;
         t.append(a, e);
-        let r = await fetch(`/api/dashboard/premium/upload/metadata/${a}`, {
+        let d = await fetch(`/api/dashboard/premium/upload/metadata/${a}`, {
             body: t,
             method: "POST"
           }),
-          d = await r.json();
-        return r.ok ? (p.oR.success(`Successfully uploaded ${a}.`), d.url) : (p.oR.error(d.error), console.error("Failed to upload file:", r.statusText), null)
+          r = await d.json();
+        return d.ok ? (p.oR.success(`Successfully uploaded ${a}.`), r.url) : (p.oR.error(r.error), console.error("Failed to upload file:", d.statusText), null)
       }
       async function _(e) {
         try {
@@ -60,7 +60,7 @@
         }
       }
       var b = t(54834);
-      async function h(e, a, t, r, d) {
+      async function h(e, a, t, d, r) {
         try {
           a(b.A.loading);
           let s = await fetch("https://guns.lol/api/dashboard/premium/metadata", {
@@ -72,14 +72,14 @@
               })
             }),
             i = await s.json();
-          s.ok ? (p.oR.success(d("dashboard.premium.metadata.update_success")), setTimeout(() => {
-            r(e), t(!1)
+          s.ok ? (p.oR.success(r("dashboard.premium.metadata.update_success")), setTimeout(() => {
+            d(e), t(!1)
           }, 500)) : p.oR.error(i.error)
         } catch (e) {
-          p.oR.error(d("common.unsaved_changes.unknown_error")), console.error(e.message)
+          p.oR.error(r("common.unsaved_changes.unknown_error")), console.error(e.message)
         } finally {
           setTimeout(() => {
-            a(d("common.unsaved_changes.save_button"))
+            a(r("common.unsaved_changes.save_button"))
           }, 500)
         }
       }
@@ -87,36 +87,36 @@
         g = t(57157),
         S = t(98241),
         v = t.n(S),
-        x = t(39449),
-        U = t(77561),
-        G = t(45941),
-        j = t(96351);
-      let C = ({
+        U = t(39449),
+        G = t(60884),
+        x = t(45941),
+        C = t(96351);
+      let j = ({
         data: e
       }) => {
-        let a = (0, j.kj)(),
+        let a = (0, C.kj)(),
           t = e.config.premium,
           s = t?.metadata,
           l = e.premium && t.typewriter.length > 0 && t.typewriter_enabled ? t.typewriter[0] : e.config.description,
-          u = "" !== e.config.display_name ? e.config.display_name : e.username,
-          [S, C] = (0, d.useState)(!1),
-          [y, w] = (0, d.useState)(!1),
-          [E, A] = (0, d.useState)(s?.image ?? ""),
-          [B, P] = (0, d.useState)(s?.favicon ?? ""),
-          k = a("dashboard.premium.metadata.default_description"),
-          M = "" !== l ? l : k,
-          [R, T] = (0, d.useState)({
-            title: s?.title ?? "@" + u,
-            description: s?.description ?? M,
+          m = "" !== e.config.display_name ? e.config.display_name : e.username,
+          [S, j] = (0, r.useState)(!1),
+          [y, w] = (0, r.useState)(!1),
+          [E, B] = (0, r.useState)(s?.image ?? ""),
+          [P, A] = (0, r.useState)(s?.favicon ?? ""),
+          M = a("dashboard.premium.metadata.default_description"),
+          R = "" !== l ? l : M,
+          [T, k] = (0, r.useState)({
+            title: s?.title ?? "@" + m,
+            description: s?.description ?? R,
             informationOverlay: s?.information_overlay ?? !1
           }),
-          [W, I] = (0, d.useState)(R),
-          [F, D] = (0, d.useState)(!1),
-          $ = a("common.unsaved_changes.save_button"),
-          [O, L] = (0, d.useState)($);
-        (0, d.useEffect)(() => {
-          D(JSON.stringify(W) !== JSON.stringify(R))
-        }, [W, R]);
+          [W, I] = (0, r.useState)(T),
+          [F, $] = (0, r.useState)(!1),
+          D = a("common.unsaved_changes.save_button"),
+          [O, L] = (0, r.useState)(D);
+        (0, r.useEffect)(() => {
+          $(JSON.stringify(W) !== JSON.stringify(T))
+        }, [W, T]);
         let z = e => a => {
             I(t => ({
               ...t,
@@ -124,34 +124,34 @@
             }))
           },
           H = async (e, t) => {
-            "favicon" === t ? C(!0) : w(!0);
+            "favicon" === t ? j(!0) : w(!0);
             try {
-              let r = e.target.files?.[0];
-              if (e.target.disabled = !0, !r) return;
-              let d = "image" === t ? [".gif", ".png", ".jpeg", ".jpg"] : G.nB.metadata,
-                s = Q(r.name).toLowerCase();
-              if (!d.includes(s)) {
+              let d = e.target.files?.[0];
+              if (e.target.disabled = !0, !d) return;
+              let r = "image" === t ? [".gif", ".png", ".jpeg", ".jpg"] : x.nB.metadata,
+                s = Q(d.name).toLowerCase();
+              if (!r.includes(s)) {
                 p.oR.error(a("dashboard.premium.metadata.invalid_file")), e.target.disabled = !1, e.target.value = "";
                 return
               }
-              let i = await m(r, t);
-              e.target.disabled = !1, i ? "favicon" === t ? P(i) : A(i) : (e.target.value = "", e.target.disabled = !1)
+              let i = await u(d, t);
+              e.target.disabled = !1, i ? "favicon" === t ? A(i) : B(i) : (e.target.value = "", e.target.disabled = !1)
             } finally {
-              "favicon" === t ? C(!1) : w(!1)
+              "favicon" === t ? j(!1) : w(!1)
             }
           }, J = e => {
-            null !== _(e) && ("favicon" === e ? P("") : A(""))
-          }, Q = e => "." + e.substring(e.lastIndexOf(".") + 1), V = "" !== E ? (0, r.jsx)(N.A, {
+            null !== _(e) && ("favicon" === e ? A("") : B(""))
+          }, Q = e => "." + e.substring(e.lastIndexOf(".") + 1), V = "" !== E ? (0, d.jsx)(N.A, {
             checked: W.informationOverlay,
             onChangeFunction: e => z("informationOverlay")(e.currentTarget.checked)
-          }) : (0, r.jsx)("div", {
+          }) : (0, d.jsx)("div", {
             className: i().userInformationOverlayText,
-            children: (0, r.jsxs)("h1", {
+            children: (0, d.jsxs)("h1", {
               children: [n.A.image, " ", a("dashboard.premium.metadata.info_overlay.missing_image")]
             })
           });
-        return (0, r.jsxs)(r.Fragment, {
-          children: [(0, r.jsx)(p.l$, {
+        return (0, d.jsxs)(d.Fragment, {
+          children: [(0, d.jsx)(p.l$, {
             richColors: !0,
             position: "top-center",
             theme: "dark",
@@ -160,10 +160,10 @@
               success: b.A.successToast
             },
             visibleToasts: 2
-          }), (0, r.jsx)(x.N, {
-            children: F && (0, r.jsx)("div", {
+          }), (0, d.jsx)(U.N, {
+            children: F && (0, d.jsx)("div", {
               className: v().unsavedChangesWrapper,
-              children: (0, r.jsxs)(U.P.div, {
+              children: (0, d.jsxs)(G.P.div, {
                 className: v().unsavedChangesBar,
                 initial: {
                   opacity: 0,
@@ -185,192 +185,192 @@
                   stiffness: 300,
                   damping: 20
                 },
-                children: [(0, r.jsx)("h1", {
+                children: [(0, d.jsx)("h1", {
                   children: a("common.unsaved_changes.title")
-                }), (0, r.jsx)("h1", {
+                }), (0, d.jsx)("h1", {
                   className: v().compactText,
                   children: a("common.unsaved_changes.compact")
-                }), (0, r.jsxs)("div", {
+                }), (0, d.jsxs)("div", {
                   className: v().unsavedChangesButtons,
-                  children: [(0, r.jsx)("span", {
+                  children: [(0, d.jsx)("span", {
                     className: v().resetButton,
                     onClick: () => {
-                      I(R), D(!1)
+                      I(T), $(!1)
                     },
                     children: a("common.unsaved_changes.reset")
-                  }), (0, r.jsx)("span", {
+                  }), (0, d.jsx)("span", {
                     className: v().saveButton,
                     onClick: () => {
-                      h(W, L, D, T, a)
+                      h(W, L, $, k, a)
                     },
                     children: O
                   })]
                 })]
               })
             })
-          }), (0, r.jsx)("div", {
+          }), (0, d.jsx)("div", {
             className: i().metadataContainerWrapper,
-            children: (0, r.jsxs)("div", {
+            children: (0, d.jsxs)("div", {
               className: i().metadataContainer,
-              children: [(0, r.jsxs)("div", {
+              children: [(0, d.jsxs)("div", {
                 className: i().metadataContainerDescription,
-                children: [(0, r.jsxs)("h1", {
+                children: [(0, d.jsxs)("h1", {
                   children: [n.A.metadata, " ", a("dashboard.premium.metadata.section.title")]
-                }), (0, r.jsx)("h3", {
+                }), (0, d.jsx)("h3", {
                   children: a("dashboard.premium.metadata.section.description")
                 })]
-              }), (0, r.jsxs)("div", {
+              }), (0, d.jsxs)("div", {
                 className: i().metadataCustomizationWrapper,
-                children: [(0, r.jsxs)("div", {
+                children: [(0, d.jsxs)("div", {
                   className: i().metadataCustomization,
-                  children: [(0, r.jsx)(c.A, {
+                  children: [(0, d.jsx)(c.A, {
                     featureName: a("dashboard.premium.metadata.fields.title.label"),
                     icon: n.A.title,
                     placeholder: a("dashboard.premium.metadata.fields.title.placeholder", {
-                      handle: `@${u}`
+                      handle: `@${m}`
                     }),
                     value: W.title,
                     onChangeFunction: e => {
                       z("title")(e.target.value)
                     },
                     maxLength: 50
-                  }), (0, r.jsx)(o.A, {
+                  }), (0, d.jsx)(o.A, {
                     featureName: a("dashboard.premium.metadata.fields.description.label"),
-                    placeholder: "" !== l ? l : k,
+                    placeholder: "" !== l ? l : M,
                     value: W.description,
                     onChangeFunction: e => {
                       z("description")(e.target.value)
                     },
                     maxLength: 150
-                  }), (0, r.jsxs)("div", {
+                  }), (0, d.jsxs)("div", {
                     className: i().imageWrapper,
-                    children: [(0, r.jsxs)("div", {
+                    children: [(0, d.jsxs)("div", {
                       className: f().uploadCardWrapper,
                       style: {
                         padding: 3,
                         width: "100%"
                       },
-                      children: [(0, r.jsx)("h1", {
+                      children: [(0, d.jsx)("h1", {
                         className: i().websiteImageText,
                         children: a("dashboard.premium.metadata.image.title")
-                      }), (0, r.jsx)("div", {
+                      }), (0, d.jsx)("div", {
                         className: f().uploadCard,
-                        children: "" === E ? y ? (0, r.jsxs)("div", {
+                        children: "" === E ? y ? (0, d.jsxs)("div", {
                           className: f().uploaderMessage,
-                          children: [(0, r.jsx)("span", {
+                          children: [(0, d.jsx)("span", {
                             children: n.A.loading
-                          }), (0, r.jsx)("h1", {
+                          }), (0, d.jsx)("h1", {
                             children: a("dashboard.premium.metadata.image.uploading")
                           })]
-                        }) : (0, r.jsxs)(r.Fragment, {
-                          children: [(0, r.jsxs)("div", {
+                        }) : (0, d.jsxs)(d.Fragment, {
+                          children: [(0, d.jsxs)("div", {
                             className: f().uploadCardText,
-                            children: [n.A.image, (0, r.jsx)("h1", {
+                            children: [n.A.image, (0, d.jsx)("h1", {
                               children: a("dashboard.premium.metadata.image.upload_prompt")
                             })]
-                          }), (0, r.jsx)("input", {
+                          }), (0, d.jsx)("input", {
                             className: i().fileInputStyle,
                             type: "file",
                             accept: ".png, .jpeg, .jpg, .gif",
                             onChange: e => H(e, "image")
                           })]
-                        }) : (0, r.jsxs)(r.Fragment, {
-                          children: [(0, r.jsxs)("div", {
+                        }) : (0, d.jsxs)(d.Fragment, {
+                          children: [(0, d.jsxs)("div", {
                             className: f().fileBadge,
-                            children: [(0, r.jsx)("span", {
+                            children: [(0, d.jsx)("span", {
                               children: Q(E).toUpperCase()
-                            }), (0, r.jsx)("span", {
+                            }), (0, d.jsx)("span", {
                               onClick: () => J("image"),
                               children: n.A.deleteFile
                             })]
-                          }), (0, r.jsx)("img", {
+                          }), (0, d.jsx)("img", {
                             src: E,
                             alt: "Image",
                             className: f().uploadCardImage
                           })]
                         })
                       })]
-                    }), (0, r.jsxs)("div", {
+                    }), (0, d.jsxs)("div", {
                       className: f().uploadCardWrapper,
                       style: {
                         padding: 3,
                         width: "100%"
                       },
-                      children: [(0, r.jsx)("h1", {
+                      children: [(0, d.jsx)("h1", {
                         className: i().websiteImageText,
                         children: a("dashboard.premium.metadata.favicon.title")
-                      }), (0, r.jsx)("div", {
+                      }), (0, d.jsx)("div", {
                         className: f().uploadCard,
-                        children: "" === B ? S ? (0, r.jsxs)("div", {
+                        children: "" === P ? S ? (0, d.jsxs)("div", {
                           className: f().uploaderMessage,
-                          children: [(0, r.jsx)("span", {
+                          children: [(0, d.jsx)("span", {
                             children: n.A.loading
-                          }), (0, r.jsx)("h1", {
+                          }), (0, d.jsx)("h1", {
                             children: a("dashboard.premium.metadata.favicon.uploading")
                           })]
-                        }) : (0, r.jsxs)(r.Fragment, {
-                          children: [(0, r.jsxs)("div", {
+                        }) : (0, d.jsxs)(d.Fragment, {
+                          children: [(0, d.jsxs)("div", {
                             className: f().uploadCardText,
-                            children: [n.A.image, (0, r.jsx)("h1", {
+                            children: [n.A.image, (0, d.jsx)("h1", {
                               children: a("dashboard.premium.metadata.favicon.upload_prompt")
                             })]
-                          }), (0, r.jsx)("input", {
+                          }), (0, d.jsx)("input", {
                             className: i().fileInputStyle,
                             type: "file",
                             accept: ".png, .jpeg, .jpg, .ico",
                             onChange: e => H(e, "favicon")
                           })]
-                        }) : (0, r.jsxs)(r.Fragment, {
-                          children: [(0, r.jsxs)("div", {
+                        }) : (0, d.jsxs)(d.Fragment, {
+                          children: [(0, d.jsxs)("div", {
                             className: f().fileBadge,
-                            children: [(0, r.jsx)("span", {
-                              children: Q(B).toUpperCase()
-                            }), (0, r.jsx)("span", {
+                            children: [(0, d.jsx)("span", {
+                              children: Q(P).toUpperCase()
+                            }), (0, d.jsx)("span", {
                               onClick: () => J("favicon"),
                               children: n.A.deleteFile
                             })]
-                          }), (0, r.jsx)("img", {
-                            src: B,
+                          }), (0, d.jsx)("img", {
+                            src: P,
                             alt: "Favicon",
                             className: f().uploadCardImage
                           })]
                         })
                       })]
                     })]
-                  }), (0, r.jsx)("div", {
+                  }), (0, d.jsx)("div", {
                     className: i().switchWrapper,
-                    children: (0, r.jsx)(g.A, {
+                    children: (0, d.jsx)(g.A, {
                       featureName: a("dashboard.premium.metadata.info_overlay.label"),
                       helpDescription: a("dashboard.premium.metadata.info_overlay.description"),
                       element: V
                     })
                   })]
-                }), (0, r.jsxs)("div", {
+                }), (0, d.jsxs)("div", {
                   className: i().metadataPreview,
-                  children: [(0, r.jsx)("h1", {
+                  children: [(0, d.jsx)("h1", {
                     className: i().metadataPreviewText,
                     children: a("dashboard.premium.metadata.preview.title")
-                  }), (0, r.jsx)("span", {
+                  }), (0, d.jsx)("span", {
                     className: i().metadataNotification,
                     children: a("dashboard.premium.metadata.preview.notice")
-                  }), (0, r.jsxs)("div", {
+                  }), (0, d.jsxs)("div", {
                     className: i().preview,
-                    children: [(0, r.jsxs)("div", {
+                    children: [(0, d.jsxs)("div", {
                       className: i().previewDescription,
-                      children: [(0, r.jsx)("h1", {
+                      children: [(0, d.jsx)("h1", {
                         children: a("dashboard.premium.metadata.preview.title_format", {
-                          title: "" !== W.title ? W.title : `@${u}`
+                          title: "" !== W.title ? W.title : `@${m}`
                         })
-                      }), (0, r.jsx)("span", {
-                        children: "" !== W.description ? W.description : M
+                      }), (0, d.jsx)("span", {
+                        children: "" !== W.description ? W.description : R
                       })]
-                    }), E ? W.informationOverlay ? (0, r.jsx)("img", {
+                    }), E ? W.informationOverlay ? (0, d.jsx)("img", {
                       src: `https://og.guns.lol/api/og?username=${e.username}&background=${E}`,
                       alt: ""
-                    }) : (0, r.jsx)("img", {
+                    }) : (0, d.jsx)("img", {
                       src: E,
                       alt: ""
-                    }) : (0, r.jsx)("img", {
+                    }) : (0, d.jsx)("img", {
                       src: `https://og.guns.lol/api/og?username=${e.username}`,
                       alt: ""
                     })]
@@ -421,6 +421,7 @@
         userBackground: "GUNS__1b-a406d6d9-09098974-fa701f72",
         usernameEffectsPreview: "GUNS__0d-8e65c78d-38c264d9-1c9094cb",
         usernameEffectSelected: "GUNS__5d-7d172db9-b5f3d0fa-ea56fc8b",
+        usernameEffectPreviewTitle: "GUNS__70-514f1f26-31de8fd9-7fe32d54",
         selectedEffect: "GUNS__be-47dc343d-71803c93-10fe152e",
         usernameEffectsPreviewInnerWrapper: "GUNS__c6-a334ff05-74b39924-f7d662c0",
         saveButtonUsernameEffects: "GUNS__8a-5dce6898-30600ca8-5fc8bfc5",
@@ -495,13 +496,13 @@
       t.d(a, {
         N: () => h
       });
-      var r = t(95155),
-        d = t(12115),
+      var d = t(95155),
+        r = t(12115),
         s = t(39551),
         i = t(28819),
         n = t(15131),
         c = t(24866);
-      class o extends d.Component {
+      class o extends r.Component {
         getSnapshotBeforeUpdate(e) {
           let a = this.props.childRef.current;
           if (a && e.isPresent && !this.props.isPresent) {
@@ -520,9 +521,9 @@
         children: e,
         isPresent: a
       }) {
-        let t = (0, d.useId)(),
-          s = (0, d.useRef)(null),
-          i = (0, d.useRef)({
+        let t = (0, r.useId)(),
+          s = (0, r.useRef)(null),
+          i = (0, r.useRef)({
             width: 0,
             height: 0,
             top: 0,
@@ -530,33 +531,33 @@
           }),
           {
             nonce: n
-          } = (0, d.useContext)(c.Q);
-        return (0, d.useInsertionEffect)(() => {
+          } = (0, r.useContext)(c.Q);
+        return (0, r.useInsertionEffect)(() => {
           let {
             width: e,
-            height: r,
-            top: d,
+            height: d,
+            top: r,
             left: c
           } = i.current;
-          if (a || !s.current || !e || !r) return;
+          if (a || !s.current || !e || !d) return;
           s.current.dataset.motionPopId = t;
           let o = document.createElement("style");
           return n && (o.nonce = n), document.head.appendChild(o), o.sheet && o.sheet.insertRule(`
           [data-motion-pop-id="${t}"] {
             position: absolute !important;
             width: ${e}px !important;
-            height: ${r}px !important;
-            top: ${d}px !important;
+            height: ${d}px !important;
+            top: ${r}px !important;
             left: ${c}px !important;
           }
         `), () => {
             document.head.removeChild(o)
           }
-        }, [a]), (0, r.jsx)(o, {
+        }, [a]), (0, d.jsx)(o, {
           isPresent: a,
           childRef: s,
           sizeRef: i,
-          children: d.cloneElement(e, {
+          children: r.cloneElement(e, {
             ref: s
           })
         })
@@ -570,29 +571,29 @@
         presenceAffectsLayout: o,
         mode: f
       }) => {
-        let u = (0, i.M)(p),
-          m = (0, d.useId)(),
-          _ = (0, d.useCallback)(e => {
-            for (let a of (u.set(e, !0), u.values()))
+        let m = (0, i.M)(p),
+          u = (0, r.useId)(),
+          _ = (0, r.useCallback)(e => {
+            for (let a of (m.set(e, !0), m.values()))
               if (!a) return;
             s && s()
-          }, [u, s]),
-          b = (0, d.useMemo)(() => ({
-            id: m,
+          }, [m, s]),
+          b = (0, r.useMemo)(() => ({
+            id: u,
             initial: a,
             isPresent: t,
             custom: c,
             onExitComplete: _,
-            register: e => (u.set(e, !1), () => u.delete(e))
+            register: e => (m.set(e, !1), () => m.delete(e))
           }), o ? [Math.random(), _] : [t, _]);
-        return (0, d.useMemo)(() => {
-          u.forEach((e, a) => u.set(a, !1))
-        }, [t]), d.useEffect(() => {
-          t || u.size || !s || s()
-        }, [t]), "popLayout" === f && (e = (0, r.jsx)(l, {
+        return (0, r.useMemo)(() => {
+          m.forEach((e, a) => m.set(a, !1))
+        }, [t]), r.useEffect(() => {
+          t || m.size || !s || s()
+        }, [t]), "popLayout" === f && (e = (0, d.jsx)(l, {
           isPresent: t,
           children: e
-        })), (0, r.jsx)(n.t.Provider, {
+        })), (0, d.jsx)(n.t.Provider, {
           value: b,
           children: e
         })
@@ -601,13 +602,13 @@
       function p() {
         return new Map
       }
-      var u = t(79196);
-      let m = e => e.key || "";
+      var m = t(79196);
+      let u = e => e.key || "";
 
       function _(e) {
         let a = [];
-        return d.Children.forEach(e, e => {
-          (0, d.isValidElement)(e) && a.push(e)
+        return r.Children.forEach(e, e => {
+          (0, r.isValidElement)(e) && a.push(e)
         }), a
       }
       var b = t(4524);
@@ -620,164 +621,49 @@
         mode: o = "sync",
         propagate: l = !1
       }) => {
-        let [p, h] = (0, u.xQ)(l), N = (0, d.useMemo)(() => _(e), [e]), g = l && !p ? [] : N.map(m), S = (0, d.useRef)(!0), v = (0, d.useRef)(N), x = (0, i.M)(() => new Map), [U, G] = (0, d.useState)(N), [j, C] = (0, d.useState)(N);
+        let [p, h] = (0, m.xQ)(l), N = (0, r.useMemo)(() => _(e), [e]), g = l && !p ? [] : N.map(u), S = (0, r.useRef)(!0), v = (0, r.useRef)(N), U = (0, i.M)(() => new Map), [G, x] = (0, r.useState)(N), [C, j] = (0, r.useState)(N);
         (0, b.E)(() => {
           S.current = !1, v.current = N;
-          for (let e = 0; e < j.length; e++) {
-            let a = m(j[e]);
-            g.includes(a) ? x.delete(a) : !0 !== x.get(a) && x.set(a, !1)
+          for (let e = 0; e < C.length; e++) {
+            let a = u(C[e]);
+            g.includes(a) ? U.delete(a) : !0 !== U.get(a) && U.set(a, !1)
           }
-        }, [j, g.length, g.join("-")]);
+        }, [C, g.length, g.join("-")]);
         let y = [];
-        if (N !== U) {
+        if (N !== G) {
           let e = [...N];
-          for (let a = 0; a < j.length; a++) {
-            let t = j[a],
-              r = m(t);
-            g.includes(r) || (e.splice(a, 0, t), y.push(t))
+          for (let a = 0; a < C.length; a++) {
+            let t = C[a],
+              d = u(t);
+            g.includes(d) || (e.splice(a, 0, t), y.push(t))
           }
-          "wait" === o && y.length && (e = y), C(_(e)), G(N);
+          "wait" === o && y.length && (e = y), j(_(e)), x(N);
           return
         }
         let {
           forceRender: w
-        } = (0, d.useContext)(s.L);
-        return (0, r.jsx)(r.Fragment, {
-          children: j.map(e => {
-            let d = m(e),
-              s = (!l || !!p) && (N === j || g.includes(d));
-            return (0, r.jsx)(f, {
+        } = (0, r.useContext)(s.L);
+        return (0, d.jsx)(d.Fragment, {
+          children: C.map(e => {
+            let r = u(e),
+              s = (!l || !!p) && (N === C || g.includes(r));
+            return (0, d.jsx)(f, {
               isPresent: s,
               initial: (!S.current || !!t) && void 0,
               custom: s ? void 0 : a,
               presenceAffectsLayout: c,
               mode: o,
               onExitComplete: s ? void 0 : () => {
-                if (!x.has(d)) return;
-                x.set(d, !0);
+                if (!U.has(r)) return;
+                U.set(r, !0);
                 let e = !0;
-                x.forEach(a => {
+                U.forEach(a => {
                   a || (e = !1)
-                }), e && (null == w || w(), C(v.current), l && (null == h || h()), n && n())
+                }), e && (null == w || w(), j(v.current), l && (null == h || h()), n && n())
               },
               children: e
-            }, d)
+            }, r)
           })
-        })
-      }
-    },
-    57157: (e, a, t) => {
-      "use strict";
-      t.d(a, {
-        A: () => c
-      });
-      var r = t(95155),
-        d = t(98241),
-        s = t.n(d),
-        i = t(54834),
-        n = t(81576);
-
-      function c({
-        featureName: e,
-        helpDescription: a,
-        element: t,
-        id: d
-      }) {
-        return (0, r.jsxs)("div", {
-          className: s().featureName,
-          children: [(0, r.jsxs)("h1", {
-            className: s().featureNameText,
-            style: {
-              marginBottom: "6px"
-            },
-            children: [e, (0, r.jsxs)(n.Ay, {
-              width: "370px",
-              position: "top",
-              id: d,
-              children: [(0, r.jsx)(n.Ay.Target, {
-                children: i.A.help
-              }), (0, r.jsx)(n.Ay.Dropdown, {
-                children: (0, r.jsx)("div", {
-                  className: s().helpDescription,
-                  children: a.split("\n").map((e, a) => (0, r.jsxs)("span", {
-                    children: [e, (0, r.jsx)("br", {})]
-                  }, a))
-                })
-              })]
-            })]
-          }), t]
-        })
-      }
-    },
-    73728: e => {
-      e.exports = {
-        switch: "GUNS__37-bebc3157-36356f81-31aa98a5",
-        input: "GUNS__07-6848431b-ec698247-987f2132",
-        track: "GUNS__c1-89bc1537-00272519-3133d28f",
-        thumb: "GUNS__13-b5e3f9d4-24f5d8e3-cfe09b0b"
-      }
-    },
-    81469: (e, a, t) => {
-      "use strict";
-      t.d(a, {
-        A: () => p
-      });
-      var r = t(95155),
-        d = t(29722),
-        s = t(12115),
-        i = t(98241),
-        n = t.n(i),
-        c = t(73728),
-        o = t.n(c),
-        l = t(96351);
-      let f = ["ar", "he", "fa", "ur"];
-
-      function p({
-        featureName: e,
-        onChangeFunction: a,
-        className: t,
-        id: i,
-        onChange: c,
-        defaultChecked: p,
-        disabled: u,
-        ...m
-      }) {
-        let _ = (0, l.useLang)(),
-          b = (0, s.useId)(),
-          h = f.includes(_) ? "rtl" : "ltr";
-        return (0, r.jsxs)("div", {
-          className: n().inputContainerWrapper,
-          children: [e && (0, r.jsx)("h1", {
-            className: n().featureName,
-            children: e
-          }), (0, r.jsx)("div", {
-            className: n().inputWrapperDiv,
-            style: {
-              direction: h
-            },
-            children: (0, r.jsxs)("label", {
-              className: (0, d.A)(o().switch, t),
-              "data-disabled": u,
-              "data-direction": h,
-              children: [(0, r.jsx)("input", {
-                ...m,
-                id: i ?? b,
-                type: "checkbox",
-                className: o().input,
-                defaultChecked: p,
-                disabled: u,
-                onChange: e => {
-                  c?.(e), a?.(e)
-                }
-              }), (0, r.jsx)("span", {
-                className: o().track,
-                "aria-hidden": "true",
-                children: (0, r.jsx)("span", {
-                  className: o().thumb
-                })
-              })]
-            })
-          })]
         })
       }
     }

@@ -1,7 +1,31 @@
 "use strict";
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [9056], {
-    41272: (e, t, n) => {
+  [9014], {
+    73321: (e, t, n) => {
+      var r = n(74645);
+      n.o(r, "redirect") && n.d(t, {
+        redirect: function() {
+          return r.redirect
+        }
+      }), n.o(r, "useParams") && n.d(t, {
+        useParams: function() {
+          return r.useParams
+        }
+      }), n.o(r, "usePathname") && n.d(t, {
+        usePathname: function() {
+          return r.usePathname
+        }
+      }), n.o(r, "useRouter") && n.d(t, {
+        useRouter: function() {
+          return r.useRouter
+        }
+      }), n.o(r, "useSearchParams") && n.d(t, {
+        useSearchParams: function() {
+          return r.useSearchParams
+        }
+      })
+    },
+    75810: (e, t, n) => {
       function r(e) {
         if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
         return e
@@ -474,7 +498,7 @@
                   if (!e) return P();
                   S.init({
                     dsn: "https://d233059272824702afc8c43834c4912d@sentry.hcaptcha.com/6",
-                    release: "2.3.0",
+                    release: "2.2.0",
                     environment: "production"
                   });
                   let v = S.scope;
@@ -498,10 +522,7 @@
                 }(e.sentry);
                 return yield function e(t, n, r = 0) {
                   return m(this, null, function*() {
-                    var i, s;
-                    let a = null != (i = t.maxRetries) ? i : 2,
-                      o = null != (s = t.retryDelay) ? s : 1e3,
-                      c = r < a ? "Retry loading hCaptcha Api" : "Exceeded maximum retries";
+                    let i = r < 2 ? "Retry loading hCaptcha Api" : "Exceeded maximum retries";
                     try {
                       return yield function(e = {
                         cleanup: !1
@@ -597,14 +618,11 @@
                           return t.captureException(e), Promise.reject(Error(g))
                         }
                       }(t, n)
-                    } catch (i) {
+                    } catch (s) {
                       return n.addBreadcrumb({
                         category: y,
-                        message: c
-                      }), r >= a ? (n.captureException(i), Promise.reject(i)) : (n.addBreadcrumb({
-                        category: y,
-                        message: `Waiting ${o}ms before retry attempt ${r+1}`
-                      }), yield new Promise(e => setTimeout(e, o)), e(t, n, r += 1))
+                        message: i
+                      }), r >= 2 ? (n.captureException(s), Promise.reject(s)) : e(t, n, r += 1)
                     }
                   })
                 }(e, t)
@@ -778,30 +796,6 @@
           })
         }, t
       }(s.Component)
-    },
-    73321: (e, t, n) => {
-      var r = n(74645);
-      n.o(r, "redirect") && n.d(t, {
-        redirect: function() {
-          return r.redirect
-        }
-      }), n.o(r, "useParams") && n.d(t, {
-        useParams: function() {
-          return r.useParams
-        }
-      }), n.o(r, "usePathname") && n.d(t, {
-        usePathname: function() {
-          return r.usePathname
-        }
-      }), n.o(r, "useRouter") && n.d(t, {
-        useRouter: function() {
-          return r.useRouter
-        }
-      }), n.o(r, "useSearchParams") && n.d(t, {
-        useSearchParams: function() {
-          return r.useSearchParams
-        }
-      })
     }
   }
 ]);

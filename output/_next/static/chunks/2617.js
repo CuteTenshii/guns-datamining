@@ -8,9 +8,9 @@
       var s = a(95155),
         r = a(12115),
         n = a(39449),
-        i = a(77561),
-        o = a(43477),
-        l = a.n(o),
+        o = a(60884),
+        i = a(43477),
+        l = a.n(i),
         d = a(66609),
         c = a(9992),
         p = a(60141),
@@ -30,7 +30,7 @@
         letterSpacingData: a
       }) => {
         let n = (0, x.kj)(),
-          [i, o] = (0, r.useState)(!1),
+          [o, i] = (0, r.useState)(!1),
           [c, p] = (0, r.useState)(!1),
           [m, u] = (0, r.useState)(e),
           [w, j] = (0, r.useState)("string" == typeof e ? e : ""),
@@ -109,14 +109,14 @@
             let s = await R(t);
             if (!s) return void d.oR.error(n("dashboard.premium.fonts.errors.invalid_font"));
             let r = s.names.fullName?.en !== "false" ? s.names.fullName.en : n("dashboard.premium.fonts.custom_font_name"),
-              i = new FormData;
-            i.append("font", t), i.append("fontName", r), i.append("fontWeight", s.tables.os2.usWeightClass), i.append("fontStyle", s.names.fontSubfamily?.en || "Regular");
-            let o = await fetch("https://guns.lol/api/dashboard/premium/upload/font", {
+              o = new FormData;
+            o.append("font", t), o.append("fontName", r), o.append("fontWeight", s.tables.os2.usWeightClass), o.append("fontStyle", s.names.fontSubfamily?.en || "Regular");
+            let i = await fetch("https://guns.lol/api/dashboard/premium/upload/font", {
                 method: "POST",
-                body: i
+                body: o
               }),
-              l = await o.json();
-            o.ok ? (d.oR.success(n("dashboard.premium.fonts.upload_success")), u({
+              l = await i.json();
+            i.ok ? (d.oR.success(n("dashboard.premium.fonts.upload_success")), u({
               name: r,
               weight: s.tables.os2.usWeightClass,
               style: s.names.fontSubfamily?.en || "Regular"
@@ -185,8 +185,8 @@
         }];
         return (0, s.jsxs)(s.Fragment, {
           children: [(0, s.jsxs)(_.A, {
-            opened: i,
-            onClose: () => o(!1),
+            opened: o,
+            onClose: () => i(!1),
             centered: !0,
             title: n("dashboard.premium.fonts.modal.title"),
             size: "550px",
@@ -316,7 +316,7 @@
             }), (0, s.jsxs)("span", {
               className: l().manageFontsButton,
               onClick: () => {
-                "string" != typeof m && P(m.url), o(!0)
+                "string" != typeof m && P(m.url), i(!0)
               },
               children: [f.A.font, " ", n("dashboard.premium.fonts.section_button")]
             })]
@@ -330,8 +330,8 @@
           cursorEffects: a,
           setCursorEffects: r,
           font: n,
-          pageEnterText: i,
-          setPageEnterText: o,
+          pageEnterText: o,
+          setPageEnterText: i,
           fontSize: d,
           letterSpacing: c
         }) => {
@@ -357,6 +357,9 @@
             }, {
               value: "particles",
               label: h("dashboard.premium.special.cursor_effects.options.particles")
+            }, {
+              value: "shooting_star",
+              label: h("dashboard.premium.special.cursor_effects.options.shooting_star")
             }];
           return (0, s.jsx)(s.Fragment, {
             children: (0, s.jsx)("div", {
@@ -387,9 +390,9 @@
                   }), (0, s.jsx)(m.A, {
                     featureName: h("dashboard.premium.special.page_enter_text.label"),
                     onChangeFunction: function(e) {
-                      o(e.target.value)
+                      i(e.target.value)
                     },
-                    value: i,
+                    value: o,
                     placeholder: h("dashboard.premium.special.page_enter_text.placeholder"),
                     icon: f.A.pageEnterText
                   })]
@@ -405,7 +408,7 @@
           animation: r
         }) => {
           let n = (0, x.kj)(),
-            i = [{
+            o = [{
               value: "default",
               label: n("dashboard.premium.profile.layout.options.default")
             }, {
@@ -417,8 +420,11 @@
             }, {
               value: "sleek",
               label: n("dashboard.premium.profile.layout.options.sleek")
+            }, {
+              value: "portfolio",
+              label: n("dashboard.premium.profile.layout.options.portfolio")
             }],
-            o = [{
+            i = [{
               value: "fade",
               label: n("dashboard.premium.profile.animation.options.fade")
             }, {
@@ -441,14 +447,14 @@
                     value: t,
                     placeholder: n("dashboard.premium.profile.select_placeholder"),
                     icon: f.A.layout,
-                    data: i
+                    data: o
                   }), (0, s.jsx)(p.A, {
                     featureName: n("dashboard.premium.profile.animation.label"),
                     onChangeFunction: a,
                     value: r,
                     placeholder: n("dashboard.premium.profile.select_placeholder"),
                     icon: f.A.animation,
-                    data: o
+                    data: i
                   })]
                 })
               })
@@ -467,8 +473,8 @@
         isEditing: a,
         editingValue: r,
         onEditingValueChange: n,
-        onEditKeyPress: i,
-        onSaveEdit: o,
+        onEditKeyPress: o,
+        onSaveEdit: i,
         onCancelEdit: d,
         onStartEdit: c,
         onRemove: p
@@ -505,7 +511,7 @@
                 type: "text",
                 value: r,
                 onChange: e => n(e.target.value),
-                onKeyDown: i,
+                onKeyDown: o,
                 maxLength: 100,
                 className: l().tagEditInput
               }), (0, s.jsxs)("div", {
@@ -513,7 +519,7 @@
                 children: [(0, s.jsx)("button", {
                   type: "button",
                   className: l().tagActionButton,
-                  onClick: o,
+                  onClick: i,
                   disabled: t,
                   children: f.A.confirm
                 }), (0, s.jsx)("button", {
@@ -553,15 +559,15 @@
         tagsList: t
       }) => {
         let a = (0, x.kj)(),
-          [n, i] = (0, r.useState)(""),
-          [o, c] = (0, r.useState)([]),
+          [n, o] = (0, r.useState)(""),
+          [i, c] = (0, r.useState)([]),
           [p, u] = (0, r.useState)(null),
           [h, b] = (0, r.useState)(null),
           [g, y] = (0, r.useState)(""),
           [v, _] = (0, r.useState)(!1),
           [w, j] = (0, r.useState)(!1),
           N = {
-            margin: 0 === o.length ? "7px 0 0px 0" : "20px 0 15px 0"
+            margin: 0 === i.length ? "7px 0 0px 0" : "20px 0 15px 0"
           };
         (0, r.useEffect)(() => {
           j(!0)
@@ -588,13 +594,13 @@
               _(!1)
             }
           }, R = async () => {
-            v || !A(n) || (o.length > 4 ? d.oR.error(a("dashboard.premium.settings.typewriter.tags.errors.max_count")) : await E([...o, {
+            v || !A(n) || (i.length > 4 ? d.oR.error(a("dashboard.premium.settings.typewriter.tags.errors.max_count")) : await E([...i, {
               id: `tag-new-${Date.now()}`,
               text: n.trim()
-            }]) && i(""))
+            }]) && o(""))
           }, I = async e => {
             if (v) return;
-            let t = o.filter(t => t.id !== e);
+            let t = i.filter(t => t.id !== e);
             await E(t) && h === e && (b(null), y(""))
           }, P = async e => {
             if (u(null), v) return;
@@ -603,24 +609,24 @@
               over: a
             } = e;
             if (!a || t.id === a.id) return;
-            let s = o.findIndex(e => e.id === t.id),
-              r = o.findIndex(e => e.id === a.id);
+            let s = i.findIndex(e => e.id === t.id),
+              r = i.findIndex(e => e.id === a.id);
             if (r === s || -1 === s || -1 === r) return;
-            let n = (0, S.be)(o, s, r);
-            c(n), await E(n, !1) || c(o)
+            let n = (0, S.be)(i, s, r);
+            c(n), await E(n, !1) || c(i)
           }, $ = e => {
             if (v) return;
-            let t = o.find(t => t.id === e);
+            let t = i.find(t => t.id === e);
             t && (b(e), y(t.text))
           }, O = () => {
             b(null), y("")
           }, D = async () => {
             if (!h || v || !A(g)) return;
             let e = g.trim(),
-              t = o.findIndex(e => e.id === h);
+              t = i.findIndex(e => e.id === h);
             if (-1 === t) return;
-            if (e === o[t].text) return void O();
-            let a = [...o];
+            if (e === i[t].text) return void O();
+            let a = [...i];
             a[t] = {
               ...a[t],
               text: e
@@ -643,7 +649,7 @@
               placeholder: a("dashboard.premium.settings.typewriter.tags.placeholder"),
               value: n,
               onChangeFunction: e => {
-                i(e.target.value)
+                o(e.target.value)
               },
               onKeyPress: B
             }), (0, s.jsx)("button", {
@@ -656,7 +662,7 @@
           }), (0, s.jsx)("div", {
             className: l().tagsWrapper,
             style: N,
-            children: 0 !== o.length && (0, s.jsxs)(s.Fragment, {
+            children: 0 !== i.length && (0, s.jsxs)(s.Fragment, {
               children: [(0, s.jsx)("h1", {
                 className: l().myTexts,
                 children: a("dashboard.premium.settings.typewriter.tags.title")
@@ -666,7 +672,7 @@
                 onDragStart: e => {
                   let {
                     active: t
-                  } = e, a = o.find(e => e.id === t.id);
+                  } = e, a = i.find(e => e.id === t.id);
                   a && u(a)
                 },
                 onDragCancel: () => {
@@ -675,11 +681,11 @@
                 onDragEnd: P,
                 autoScroll: !1,
                 children: [(0, s.jsx)(S.gB, {
-                  items: o.map(e => e.id),
+                  items: i.map(e => e.id),
                   strategy: S._G,
                   children: (0, s.jsx)("div", {
                     className: l().tags,
-                    children: o.map(e => (0, s.jsx)(T, {
+                    children: i.map(e => (0, s.jsx)(T, {
                       item: e,
                       isUpdating: v,
                       isEditing: h === e.id,
@@ -719,18 +725,18 @@
           let n = JSON.stringify({
               typewriter_enabled: a
             }),
-            i = JSON.stringify({
+            o = JSON.stringify({
               typewriter_list: s
             }),
-            o = await fetch("https://guns.lol/api/dashboard/premium/typewriter", {
+            i = await fetch("https://guns.lol/api/dashboard/premium/typewriter", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json"
               },
-              body: t ? n : i
+              body: t ? n : o
             }),
-            l = await o.json();
-          if (o.ok) return t ? d.oR.success(r("dashboard.premium.settings.typewriter.typewriter_toggle_success", {
+            l = await i.json();
+          if (i.ok) return t ? d.oR.success(r("dashboard.premium.settings.typewriter.typewriter_toggle_success", {
             action: r(a ? "dashboard.premium.settings.typewriter.enabled_label" : "dashboard.premium.settings.typewriter.disabled_label")
           })) : e && d.oR.success(r("dashboard.premium.settings.typewriter.text_updated")), !0;
           return d.oR.error(l.error), !1
@@ -743,8 +749,8 @@
         setHideViews: t,
         isTypewriterEnabled: a,
         setIsTypewriterEnabled: n,
-        typewriterList: i,
-        setParallaxAnimation: o,
+        typewriterList: o,
+        setParallaxAnimation: i,
         parallaxAnimation: c,
         setTypewriterSpeed: p,
         typewriterSpeed: m,
@@ -753,7 +759,7 @@
       }) => {
         let b = (0, x.kj)(),
           [y, w] = (0, r.useState)(!1),
-          [j, N] = (0, r.useState)(i),
+          [j, N] = (0, r.useState)(o),
           k = [{
             value: 3,
             label: b("dashboard.premium.settings.typewriter.speed_marks.slow")
@@ -845,7 +851,7 @@
                   featureName: b("dashboard.premium.settings.parallax.label"),
                   helpDescription: b("dashboard.premium.settings.parallax.description"),
                   element: (0, s.jsx)(C.A, {
-                    onChangeFunction: e => o(e.currentTarget.checked),
+                    onChangeFunction: e => i(e.currentTarget.checked),
                     checked: c
                   })
                 }), (0, s.jsx)(C.A, {
@@ -874,10 +880,10 @@
                 animation: e.animation ?? "fade"
               })
             }),
-            i = await n.json();
+            o = await n.json();
           n.ok ? (d.oR.success(r("common.unsaved_changes.settings_saved")), setTimeout(() => {
             s(e), a(!1)
-          }, 500)) : d.oR.error(i.error)
+          }, 500)) : d.oR.error(o.error)
         } catch (e) {
           console.error(e.message)
         } finally {
@@ -892,7 +898,7 @@
         data: e
       }) => {
         let t = (0, x.kj)(),
-          [a, o] = (0, r.useState)({
+          [a, i] = (0, r.useState)({
             ...e.config.premium
           }),
           [p, m] = (0, r.useState)(a),
@@ -907,8 +913,8 @@
             ...r
           } = p, {
             typewriter_enabled: n,
-            typewriter_speed: i,
-            typewriter_delete_speed: o,
+            typewriter_speed: o,
+            typewriter_delete_speed: i,
             ...l
           } = a;
           f(JSON.stringify(r) !== JSON.stringify(l))
@@ -932,7 +938,7 @@
           }), (0, s.jsx)(n.N, {
             children: u && (0, s.jsx)("div", {
               className: D().unsavedChangesWrapper,
-              children: (0, s.jsxs)(i.P.div, {
+              children: (0, s.jsxs)(o.P.div, {
                 className: D().unsavedChangesBar,
                 initial: {
                   opacity: 0,
@@ -972,7 +978,7 @@
                   }), (0, s.jsx)("span", {
                     className: D().saveButton,
                     onClick: () => {
-                      $(p, g, f, o, t)
+                      $(p, g, f, i, t)
                     },
                     children: b
                   })]
@@ -1031,12 +1037,12 @@
       var s = a(95155),
         r = a(12115),
         n = a(67361),
-        i = a.n(n);
-      let o = (0, r.createContext)(null),
+        o = a.n(n);
+      let i = (0, r.createContext)(null),
         l = (0, r.createContext)(null),
         d = (...e) => e.filter(Boolean).join(" "),
         c = () => {
-          let e = (0, r.useContext)(o);
+          let e = (0, r.useContext)(i);
           if (!e) throw Error("Accordion components must be used within <Accordion>");
           return e
         },
@@ -1076,10 +1082,10 @@
               toggleItem: v,
               isItemActive: y
             }), [n, g, v, y]);
-          return (0, s.jsx)(o.Provider, {
+          return (0, s.jsx)(i.Provider, {
             value: x,
             children: (0, s.jsx)("div", {
-              className: d(i().accordion, c),
+              className: d(o().accordion, c),
               ...p,
               children: e
             })
@@ -1091,11 +1097,11 @@
             className: a = "",
             ...n
           }) => {
-            let o = c(),
+            let i = c(),
               p = (0, r.useId)(),
               m = (0, r.useRef)(`${p}-control`),
               u = (0, r.useRef)(`${p}-panel`),
-              f = o.isItemActive(e),
+              f = i.isItemActive(e),
               h = (0, r.useMemo)(() => ({
                 value: e,
                 controlIdRef: m,
@@ -1105,7 +1111,7 @@
               value: h,
               children: (0, s.jsx)("div", {
                 ...n,
-                className: d(i().item, a),
+                className: d(o().item, a),
                 "data-active": f || void 0,
                 children: t
               })
@@ -1117,7 +1123,7 @@
             onClick: a,
             disabled: r,
             id: n,
-            ...o
+            ...i
           }, l) {
             let m = c(),
               u = p(),
@@ -1126,10 +1132,10 @@
             let h = m.isItemActive(u.value);
             return (0, s.jsx)("button", {
               type: "button",
-              ...o,
+              ...i,
               id: f,
               ref: l,
-              className: d(i().control, t),
+              className: d(o().control, t),
               "data-active": h || void 0,
               disabled: r,
               onClick: e => {
@@ -1143,7 +1149,7 @@
             className: t = "",
             id: a,
             ...n
-          }, o) {
+          }, i) {
             let l = c(),
               m = p(),
               u = a ?? m.panelIdRef.current;
@@ -1169,12 +1175,12 @@
             return (0, s.jsx)("div", {
               ...n,
               id: u,
-              ref: o,
-              className: d(i().panel, t),
+              ref: i,
+              className: d(o().panel, t),
               "data-active": f || void 0,
               children: (0, s.jsx)("div", {
                 ref: h,
-                className: i().content,
+                className: o().content,
                 style: {
                   overflow: "hidden",
                   maxHeight: x,
@@ -1182,7 +1188,7 @@
                   transition: y ? "max-height 220ms cubic-bezier(0.4, 0, 0.2, 1), opacity 180ms ease" : void 0
                 },
                 children: (0, s.jsx)("div", {
-                  className: i().contentInner,
+                  className: o().contentInner,
                   children: e
                 })
               })

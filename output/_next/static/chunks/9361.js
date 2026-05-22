@@ -67,7 +67,7 @@
     49361: (e, a, s) => {
       "use strict";
       s.r(a), s.d(a, {
-        default: () => O
+        default: () => G
       });
       var r = s(95155),
         t = s(12115),
@@ -421,13 +421,13 @@
           children: a
         })
       };
-      var v = s(61778),
-        b = s(81934),
+      var b = s(61778),
+        v = s(81934),
         j = s(57776),
         _ = s(40428),
         w = s(12521),
         N = s(21924);
-      let z = ({
+      let k = ({
         data: e
       }) => {
         let a = (0, h.kj)(),
@@ -440,15 +440,15 @@
             isLoading: !1,
             assetType: ""
           },
-          [m, z] = (0, t.useState)("" !== s.url ? s.url : ""),
-          [C, y] = (0, t.useState)("" !== s.avatar ? s.avatar : ""),
-          [k, S] = (0, t.useState)("" !== s.custom_cursor ? s.custom_cursor : ""),
-          [T, A] = (0, t.useState)(!1),
+          [m, k] = (0, t.useState)("" !== s.url ? s.url : ""),
+          [y, z] = (0, t.useState)("" !== s.avatar ? s.avatar : ""),
+          [C, S] = (0, t.useState)("" !== s.custom_cursor ? s.custom_cursor : ""),
+          [A, T] = (0, t.useState)(!1),
           [M, L] = (0, t.useState)(e.config.shuffle_audios ?? !1),
           [B, E] = (0, t.useState)(e.config.audio_player ?? !1),
-          [R, q] = (0, t.useState)(""),
-          [F, P] = (0, t.useState)(s.audio),
-          [I, D] = (0, t.useState)(""),
+          [R, F] = (0, t.useState)(""),
+          [q, P] = (0, t.useState)(s.audio),
+          [D, I] = (0, t.useState)(""),
           [W, $] = (0, t.useState)({
             id: "",
             currentTitle: ""
@@ -456,8 +456,8 @@
           [U, O] = (0, t.useState)(),
           G = (0, t.useRef)(null),
           H = e.premium ? 4 : 2,
-          V = "string" == typeof F && "" !== F,
-          Y = (0, t.useMemo)(() => V ? 1 : Array.isArray(F) ? F.length : 0, [F, V]),
+          V = "string" == typeof q && "" !== q,
+          Y = (0, t.useMemo)(() => V ? 1 : Array.isArray(q) ? q.length : 0, [q, V]),
           J = "audioManager" === R ? a("dashboard.customize.audio.modal.manager") : "addAudio" === R ? a("dashboard.customize.audio.modal.add") : "editAudioDetails" === R ? a("dashboard.customize.audio.modal.edit") : "",
           [Z, X] = (0, t.useState)(""),
           [K, Q] = (0, t.useState)(null),
@@ -473,7 +473,7 @@
             x: 0,
             y: 0
           }),
-          [ev, eb] = (0, t.useState)(!1),
+          [eb, ev] = (0, t.useState)(!1),
           ej = (0, t.useRef)(null),
           e_ = (0, t.useRef)({}),
           ew = (0, t.useRef)({
@@ -502,7 +502,7 @@
             let s = e.target.files?.[0];
             if (!s) return;
             let r = f.nB.audio,
-              t = ez(s.name).toLowerCase();
+              t = ek(s.name).toLowerCase();
             if (!r.includes(t)) {
               c.oR.error(a("dashboard.customize.audio.errors.invalid_file")), e.target.value = "";
               return
@@ -510,23 +510,23 @@
             O(s)
           };
 
-        function ez(e) {
+        function ek(e) {
           return "." + e.substring(e.lastIndexOf(".") + 1)
         }
-        let eC = (e, a, s) => Math.min(s, Math.max(a, e)),
-          ey = e => {
+        let ey = (e, a, s) => Math.min(s, Math.max(a, e)),
+          ez = e => {
             let a = e;
             for (; a > 180;) a -= 360;
             for (; a < -180;) a += 360;
             return a
           },
-          ek = (e, a) => Math.hypot(e.x - a.x, e.y - a.y),
+          eC = (e, a) => Math.hypot(e.x - a.x, e.y - a.y),
           eS = (e, a) => 180 * Math.atan2(a.y - e.y, a.x - e.x) / Math.PI,
-          eT = (e, a) => ({
+          eA = (e, a) => ({
             x: (e.x + a.x) / 2,
             y: (e.y + a.y) / 2
           }),
-          eA = (0, t.useCallback)((e, a, s, r) => {
+          eT = (0, t.useCallback)((e, a, s, r) => {
             if (!s) return {
               x: 0,
               y: 0
@@ -548,7 +548,7 @@
             eh(1), eg(0), ex({
               x: 0,
               y: 0
-            }), eb(!1), e_.current = {}, ew.current.mode = "none"
+            }), ev(!1), e_.current = {}, ew.current.mode = "none"
           }, []),
           eL = (0, t.useCallback)(() => {
             eu(!1), ec(e => (e && URL.revokeObjectURL(e.objectUrl), null)), eM()
@@ -580,14 +580,14 @@
             });
             try {
               let s = await (0, u.iN)("avatar", e, a);
-              s && y(s)
+              s && z(s)
             } finally {
               n(l)
             }
           }, eR = async e => {
             let a = e.target.files?.[0];
-            e.target.value = "", !a || (".gif" === ez(a.name).toLowerCase() ? await eE(a) : (0, u.vH)(a, "avatar") && await eB(a))
-          }, eq = () => {
+            e.target.value = "", !a || (".gif" === ek(a.name).toLowerCase() ? await eE(a) : (0, u.vH)(a, "avatar") && await eB(a))
+          }, eF = () => {
             let e = Object.values(e_.current);
             e.length < 2 || (ew.current = {
               mode: "pinch",
@@ -595,17 +595,17 @@
               startX: 0,
               startY: 0,
               startOffset: ef,
-              pinchDistance: ek(e[0], e[1]),
+              pinchDistance: eC(e[0], e[1]),
               pinchAngle: eS(e[0], e[1]),
-              pinchCenter: eT(e[0], e[1]),
+              pinchCenter: eA(e[0], e[1]),
               pinchStartZoom: em,
               pinchStartRotation: ep,
               pinchStartOffset: ef
             })
-          }, eF = e => {
+          }, eq = e => {
             e.currentTarget.hasPointerCapture(e.pointerId) && e.currentTarget.releasePointerCapture(e.pointerId), delete e_.current[e.pointerId];
             let a = Object.values(e_.current);
-            if (a.length >= 2) return void eq();
+            if (a.length >= 2) return void eF();
             if (1 === a.length) {
               ew.current = {
                 mode: "pan",
@@ -627,8 +627,8 @@
             }
             ew.current.mode = "none", ew.current.panPointerId = -1
           }, eP = async () => {
-            if (el && !ev) {
-              eb(!0), n({
+            if (el && !eb) {
+              ev(!0), n({
                 isLoading: !0,
                 assetType: "avatar"
               });
@@ -657,21 +657,21 @@
                   x = new File([g], `${f}-avatar.png`, {
                     type: "image/png"
                   }),
-                  v = await (0, u.iN)("avatar", x, a);
-                v && (y(v), eL())
+                  b = await (0, u.iN)("avatar", x, a);
+                b && (z(b), eL())
               } catch {
                 c.oR.error(a("dashboard.customize.assets.avatar_editor.errors.process"))
               } finally {
-                n(l), eb(!1)
+                n(l), ev(!1)
               }
             }
           };
         (0, t.useEffect)(() => {
-          el && ex(e => eA(e, em, el, ep))
-        }, [el, em, ep, eA]), (0, t.useEffect)(() => () => {
+          el && ex(e => eT(e, em, el, ep))
+        }, [el, em, ep, eT]), (0, t.useEffect)(() => () => {
           el && URL.revokeObjectURL(el.objectUrl)
         }, [el]);
-        let eI = (0, t.useMemo)(() => {
+        let eD = (0, t.useMemo)(() => {
           if (!el) return null;
           let e = Math.max(340 / el.naturalWidth, 340 / el.naturalHeight) * em;
           return {
@@ -680,14 +680,14 @@
           }
         }, [el, em]);
         (0, t.useMemo)(() => (em - 1) / 3 * 100, [em]), (0, t.useMemo)(() => (ep - -180) / 360 * 100, [ep]);
-        let eD = (0, t.useMemo)(() => .001 > Math.abs(em - 1), [em]),
+        let eI = (0, t.useMemo)(() => .001 > Math.abs(em - 1), [em]),
           eW = (0, t.useMemo)(() => .1 > Math.abs(ep), [ep]),
           e$ = async () => {
-            et || (U ? (ei(!0), await (0, u.C9)(I, U, es, P) && (q("audioManager"), O(void 0), D(""), ea(""), er(null)), ei(!1)) : c.oR.error(a("dashboard.customize.audio.errors.select_file")))
+            et || (U ? (ei(!0), await (0, u.C9)(D, U, es, P) && (F("audioManager"), O(void 0), I(""), ea(""), er(null)), ei(!1)) : c.oR.error(a("dashboard.customize.audio.errors.select_file")))
           }, eU = async (e, a) => {
             await (0, u.qc)(e, a)
           }, eO = async () => {
-            eo || (en(!0), await (0, u.l4)(W.id, W.currentTitle, K ?? Z, P) && (q("audioManager"), $({
+            eo || (en(!0), await (0, u.l4)(W.id, W.currentTitle, K ?? Z, P) && (F("audioManager"), $({
               id: "",
               currentTitle: ""
             }), X(""), Q(null)), en(!1))
@@ -712,19 +712,19 @@
             }), e.target.disabled = !0;
             try {
               let t = await (0, u.iN)(s, r, a);
-              t ? ("background" === s && z(t), "avatar" === s && y(t), "cursor" === s && S(t)) : e.target.value = ""
+              t ? ("background" === s && k(t), "avatar" === s && z(t), "cursor" === s && S(t)) : e.target.value = ""
             } finally {
               e.target.disabled = !1, n(l)
             }
           }, eJ = (0, t.useMemo)(() => ({
             url: m,
-            avatar: C,
-            custom_cursor: k
-          }), [m, C, k]), eZ = async e => {
+            avatar: y,
+            custom_cursor: C
+          }), [m, y, C]), eZ = async e => {
             let s, r = e.target.files?.[0];
             if (!r) return;
             let t = f.nB.cover,
-              i = ez(r.name).toLowerCase();
+              i = ek(r.name).toLowerCase();
             if (!t.includes(i)) {
               c.oR.error(a("dashboard.customize.audio.errors.invalid_file")), e.target.value = "";
               return
@@ -736,7 +736,7 @@
             let s, r = e.target.files?.[0];
             if (!r) return;
             let t = f.nB.cover,
-              i = ez(r.name).toLowerCase();
+              i = ek(r.name).toLowerCase();
             if (!t.includes(i)) {
               c.oR.error(a("dashboard.customize.audio.errors.invalid_file")), e.target.value = "";
               return
@@ -747,17 +747,17 @@
           };
         return (0, r.jsxs)(r.Fragment, {
           children: [(0, r.jsx)(j.A, {
-            opened: T,
-            onClose: () => A(!1),
+            opened: A,
+            onClose: () => T(!1),
             title: J,
             size: "550px",
             centered: !0,
             children: "audioManager" === R ? (0, r.jsxs)("div", {
               className: o().audioManager,
-              children: [(V || Array.isArray(F) && 0 !== F.length) && (0, r.jsx)("h3", {
+              children: [(V || Array.isArray(q) && 0 !== q.length) && (0, r.jsx)("h3", {
                 className: o().audioManagerDescription,
                 children: a("dashboard.customize.audio.manager.description")
-              }), ("string" == typeof F && "" !== F || Array.isArray(F) && 0 !== F.length) && !e.premium && (0, r.jsx)("div", {
+              }), ("string" == typeof q && "" !== q || Array.isArray(q) && 0 !== q.length) && !e.premium && (0, r.jsx)("div", {
                 className: o().premiumAd,
                 style: {
                   width: "100%",
@@ -773,7 +773,7 @@
                       style: {
                         fontSize: "17px"
                       },
-                      children: (0, r.jsxs)(b.A, {
+                      children: (0, r.jsxs)(v.A, {
                         href: "/pricing",
                         target: "_blank",
                         children: [d.premium, " ", a("dashboard.customize.premium_label")]
@@ -783,7 +783,7 @@
                 })
               }), (0, r.jsxs)("div", {
                 className: o().audiosWrapper,
-                children: [!V && Array.isArray(F) && 0 === F.length || !V && !Array.isArray(F) || "string" == typeof F && "" === F ? (0, r.jsx)("h1", {
+                children: [!V && Array.isArray(q) && 0 === q.length || !V && !Array.isArray(q) || "string" == typeof q && "" === q ? (0, r.jsx)("h1", {
                   className: o().noAudios,
                   children: a("dashboard.customize.audio.manager.empty")
                 }) : (0, r.jsx)("h1", {
@@ -794,7 +794,7 @@
                   })
                 }), (0, r.jsx)("div", {
                   className: o().audios,
-                  children: !V && Array.isArray(F) && 0 === F.length || "string" == typeof F && "" === F ? null : V ? (0, r.jsxs)("div", {
+                  children: !V && Array.isArray(q) && 0 === q.length || "string" == typeof q && "" === q ? null : V ? (0, r.jsxs)("div", {
                     className: o().audioContainer,
                     children: [(0, r.jsxs)("div", {
                       className: o().audioContainerWrapper,
@@ -803,7 +803,7 @@
                         children: [(0, r.jsx)("h1", {
                           children: a("dashboard.customize.audio.single_title")
                         }), (0, r.jsx)(x, {
-                          url: F
+                          url: q
                         })]
                       })]
                     }), (0, r.jsxs)("div", {
@@ -817,8 +817,8 @@
                         children: d.deleteButton
                       })]
                     })]
-                  }) : Array.isArray(F) && F.map((e, s) => (0, r.jsx)(t.Fragment, {
-                    children: (0, r.jsx)(v.A, {
+                  }) : Array.isArray(q) && q.map((e, s) => (0, r.jsx)(t.Fragment, {
+                    children: (0, r.jsx)(b.A, {
                       content: a("dashboard.customize.audio.tooltip"),
                       hideTooltip: !!e.selected,
                       children: (0, r.jsxs)("div", {
@@ -846,7 +846,7 @@
                           }), (0, r.jsx)("span", {
                             className: o().editButton,
                             onClick: () => {
-                              q("editAudioDetails"), $({
+                              F("editAudioDetails"), $({
                                 id: e.id,
                                 currentTitle: e.title
                               }), X(e.cover ?? "")
@@ -864,7 +864,7 @@
                 })]
               }), (0, r.jsxs)("div", {
                 className: o().audioManagerBottomWrapper,
-                children: [("string" == typeof F && "" !== F || Array.isArray(F) && 0 !== F.length) && (0, r.jsxs)("div", {
+                children: [("string" == typeof q && "" !== q || Array.isArray(q) && 0 !== q.length) && (0, r.jsxs)("div", {
                   className: o().audioManagerSettings,
                   children: [(0, r.jsxs)("div", {
                     className: o().shuffleSongs,
@@ -895,7 +895,7 @@
                   })]
                 }), (0, r.jsxs)("span", {
                   onClick: () => {
-                    q("addAudio")
+                    F("addAudio")
                   },
                   className: o().addAudioButton,
                   children: [d.audio, " ", a("dashboard.customize.audio.manager.add_button")]
@@ -918,7 +918,7 @@
                         children: [d.audio, (0, r.jsxs)("div", {
                           className: o().fileBadge,
                           children: [(0, r.jsx)("span", {
-                            children: ez(U.name).toUpperCase()
+                            children: ek(U.name).toUpperCase()
                           }), (0, r.jsx)("span", {
                             onClick: function() {
                               O(void 0), G.current && (G.current.value = "")
@@ -968,7 +968,7 @@
                         children: [(0, r.jsxs)("div", {
                           className: o().fileBadge,
                           children: [(0, r.jsx)("span", {
-                            children: ez(es ? es.name : ee).toUpperCase()
+                            children: ek(es ? es.name : ee).toUpperCase()
                           }), (0, r.jsx)("span", {
                             onClick: function() {
                               er(null), ea("")
@@ -990,9 +990,9 @@
                 }), (0, r.jsx)(g.A, {
                   featureName: a("dashboard.customize.audio.add.title_label"),
                   onChangeFunction: e => {
-                    D(e.target.value)
+                    I(e.target.value)
                   },
-                  value: I,
+                  value: D,
                   placeholder: a("dashboard.customize.audio.add.title_placeholder"),
                   icon: d.audio
                 })]
@@ -1043,7 +1043,7 @@
                       children: [(0, r.jsxs)("div", {
                         className: o().fileBadge,
                         children: [(0, r.jsx)("span", {
-                          children: ez(K ? K.name : Z).toUpperCase()
+                          children: ek(K ? K.name : Z).toUpperCase()
                         }), (0, r.jsx)("span", {
                           onClick: function() {
                             X(""), Q(null)
@@ -1104,7 +1104,7 @@
                   el && ((e.preventDefault(), e.currentTarget.setPointerCapture(e.pointerId), e_.current[e.pointerId] = {
                     x: e.clientX,
                     y: e.clientY
-                  }, Object.values(e_.current).length >= 2) ? eq() : ew.current = {
+                  }, Object.values(e_.current).length >= 2) ? eF() : ew.current = {
                     mode: "pan",
                     panPointerId: e.pointerId,
                     startX: e.clientX,
@@ -1130,47 +1130,47 @@
                   let a = Object.values(e_.current),
                     s = ew.current;
                   if (a.length >= 2) {
-                    "pinch" !== s.mode && eq();
+                    "pinch" !== s.mode && eF();
                     let r = ew.current,
-                      t = ek(a[0], a[1]),
+                      t = eC(a[0], a[1]),
                       i = eS(a[0], a[1]),
-                      o = eT(a[0], a[1]),
+                      o = eA(a[0], a[1]),
                       n = r.pinchDistance > 0 ? t / r.pinchDistance : 1,
-                      l = eC(r.pinchStartZoom * n, 1, 4),
-                      c = ey(r.pinchStartRotation + ey(i - r.pinchAngle)),
+                      l = ey(r.pinchStartZoom * n, 1, 4),
+                      c = ez(r.pinchStartRotation + ez(i - r.pinchAngle)),
                       d = 340 / (e.currentTarget.clientWidth > 0 ? e.currentTarget.clientWidth : 340),
-                      u = eA({
+                      u = eT({
                         x: r.pinchStartOffset.x + (o.x - r.pinchCenter.x) * d,
                         y: r.pinchStartOffset.y + (o.y - r.pinchCenter.y) * d
                       }, l, el, c);
                     eh(l), eg(c), ex(u);
                     return
                   }
-                  "pan" !== s.mode || s.panPointerId !== e.pointerId || ex(eA({
+                  "pan" !== s.mode || s.panPointerId !== e.pointerId || ex(eT({
                     x: s.startOffset.x + (e.clientX - s.startX) * (340 / (e.currentTarget.clientWidth > 0 ? e.currentTarget.clientWidth : 340)),
                     y: s.startOffset.y + (e.clientY - s.startY) * (340 / (e.currentTarget.clientWidth > 0 ? e.currentTarget.clientWidth : 340))
                   }, em, el, ep))
                 },
-                onPointerUp: eF,
-                onPointerCancel: eF,
-                onLostPointerCapture: eF,
+                onPointerUp: eq,
+                onPointerCancel: eq,
+                onLostPointerCapture: eq,
                 onWheel: e => {
                   if (!el) return;
                   if (e.preventDefault(), e.shiftKey) {
-                    let a = ey(ep + (e.deltaY < 0 ? 2 : -2));
-                    eg(a), ex(e => eA(e, em, el, a));
+                    let a = ez(ep + (e.deltaY < 0 ? 2 : -2));
+                    eg(a), ex(e => eT(e, em, el, a));
                     return
                   }
-                  let a = eC(em + (e.deltaY < 0 ? .09 : -.09), 1, 4);
-                  eh(a), ex(e => eA(e, a, el, ep))
+                  let a = ey(em + (e.deltaY < 0 ? .09 : -.09), 1, 4);
+                  eh(a), ex(e => eT(e, a, el, ep))
                 },
-                children: [el && eI && (0, r.jsx)("img", {
+                children: [el && eD && (0, r.jsx)("img", {
                   src: el.objectUrl,
                   alt: a("dashboard.customize.assets.avatar_editor.alt_preview"),
                   className: o().avatarCropperImage,
                   style: {
-                    width: `${100*eI.widthRatio}%`,
-                    height: `${100*eI.heightRatio}%`,
+                    width: `${100*eD.widthRatio}%`,
+                    height: `${100*eD.heightRatio}%`,
                     left: `calc(50% + ${ef.x/340*100}%)`,
                     top: `calc(50% + ${ef.y/340*100}%)`,
                     transform: `translate(-50%, -50%) rotate(${ep}deg)`
@@ -1204,9 +1204,9 @@
                         type: "button",
                         className: o().avatarCropperInlineReset,
                         onClick: () => {
-                          eh(1), ex(e => eA(e, 1, el, ep))
+                          eh(1), ex(e => eT(e, 1, el, ep))
                         },
-                        disabled: eD,
+                        disabled: eI,
                         children: a("dashboard.customize.assets.avatar_editor.controls.reset")
                       }), (0, r.jsxs)("strong", {
                         children: [em.toFixed(2), "x"]
@@ -1221,7 +1221,7 @@
                       value: em,
                       onChange: e => {
                         let a = Number(e.currentTarget.value);
-                        eh(a), ex(e => eA(e, a, el, ep))
+                        eh(a), ex(e => eT(e, a, el, ep))
                       }
                     })
                   })]
@@ -1237,7 +1237,7 @@
                         type: "button",
                         className: o().avatarCropperInlineReset,
                         onClick: () => {
-                          eg(0), ex(e => eA(e, em, el, 0))
+                          eg(0), ex(e => eT(e, em, el, 0))
                         },
                         disabled: eW,
                         children: a("dashboard.customize.assets.avatar_editor.controls.reset")
@@ -1253,8 +1253,8 @@
                       step: 1,
                       value: ep,
                       onChange: e => {
-                        let a = ey(Number(e.currentTarget.value));
-                        eg(a), ex(e => eA(e, em, el, a))
+                        let a = ez(Number(e.currentTarget.value));
+                        eg(a), ex(e => eT(e, em, el, a))
                       }
                     })
                   })]
@@ -1269,7 +1269,7 @@
                     type: "button",
                     className: o().avatarCropperPrimaryButton,
                     onClick: eP,
-                    children: [ev ? d.loading : null, ev ? a("dashboard.customize.assets.avatar_editor.actions.saving") : a("dashboard.customize.assets.avatar_editor.actions.apply")]
+                    children: [eb ? d.loading : null, eb ? a("dashboard.customize.assets.avatar_editor.actions.saving") : a("dashboard.customize.assets.avatar_editor.actions.apply")]
                   })]
                 })]
               })]
@@ -1281,7 +1281,7 @@
             isLoading: i.isLoading && "background" === i.assetType,
             onFileChange: e => eY(e, "background"),
             fileType: "background",
-            setAsset: z
+            setAsset: k
           }), (0, r.jsxs)("div", {
             className: o().uploadCardWrapper,
             children: [(0, r.jsx)("span", {
@@ -1289,7 +1289,7 @@
             }), (0, r.jsx)("div", {
               className: o().uploadCard,
               onClick: () => {
-                q("audioManager"), A(!0)
+                F("audioManager"), T(!0)
               },
               children: (0, r.jsxs)("div", {
                 className: o().uploadCardText,
@@ -1305,7 +1305,7 @@
             isLoading: i.isLoading && "avatar" === i.assetType,
             onFileChange: eR,
             fileType: "avatar",
-            setAsset: y
+            setAsset: z
           }), (0, r.jsx)(p, {
             label: a("dashboard.customize.assets.cursor"),
             value: eJ.custom_cursor,
@@ -1317,8 +1317,8 @@
           })]
         })
       };
-      var C = s(60141);
-      async function y(e, a) {
+      var y = s(60141);
+      async function z(e, a) {
         try {
           let s = await fetch("https://guns.lol/api/dashboard/customize/usernameEffects", {
               method: "POST",
@@ -1332,10 +1332,10 @@
           console.error(e.message)
         }
       }
-      var k = s(41609),
-        S = s.n(k),
-        T = s(57882),
-        A = s(57157),
+      var C = s(41609),
+        S = s.n(C),
+        A = s(16053),
+        T = s(57157),
         M = s(81469),
         L = s(61861),
         B = s(98500),
@@ -1352,18 +1352,18 @@
         usernameEffects: p,
         blur: f,
         setBlur: x,
-        usernameGlow: v,
+        usernameGlow: b,
         setUsernameGlow: _,
         badgeGlow: w,
-        setBadgeGlow: z,
-        socialGlow: k,
+        setBadgeGlow: k,
+        socialGlow: C,
         setSocialGlow: B,
         userData: R,
-        locationMarker: q,
-        setLocation: F
+        locationMarker: F,
+        setLocation: q
       }) => {
         let P = (0, h.kj)(),
-          [I, D] = (0, t.useState)(""),
+          [D, I] = (0, t.useState)(""),
           W = {
             usernameEffects: P("dashboard.customize.general.username_effects.modal_title"),
             discordPresenceSettings: P("dashboard.customize.general.discord_presence.modal_title")
@@ -1377,7 +1377,16 @@
           }),
           Y = "" !== R.config.display_name ? R.config.display_name : R.username,
           J = R.premium,
-          Z = [{
+          Z = R.config.opacity ?? 1,
+          X = R.config.profile_gradient ? {
+            backgroundColor: (0, A.E2)(R.config.color, Z),
+            backgroundImage: `linear-gradient(25deg, ${(0,A.E2)(R.config.gradient_1,Z)}, ${(0,A.E2)(R.config.gradient_2,Z)})`,
+            color: R.config.text_color
+          } : {
+            backgroundColor: (0, A.E2)(R.config.color, Z),
+            color: R.config.text_color
+          },
+          K = [{
             value: "none",
             label: P("dashboard.customize.general.background_effects.none")
           }, {
@@ -1411,14 +1420,14 @@
             value: "tv",
             label: P("dashboard.customize.general.background_effects.tv")
           }],
-          X = [{
+          Q = [{
             value: "enabled",
             label: P("dashboard.customize.general.discord_presence.enabled")
           }, {
             value: "disabled",
             label: P("dashboard.customize.general.discord_presence.disabled")
           }],
-          K = (0, t.useMemo)(() => [{
+          ee = (0, t.useMemo)(() => [{
             value: .2,
             label: P("dashboard.customize.general.sliders.opacity.marks.twenty")
           }, {
@@ -1428,7 +1437,7 @@
             value: .8,
             label: P("dashboard.customize.general.sliders.opacity.marks.eighty")
           }], [P]),
-          Q = (0, t.useMemo)(() => [{
+          ea = (0, t.useMemo)(() => [{
             value: 20,
             label: P("dashboard.customize.general.sliders.blur.marks.twenty")
           }, {
@@ -1438,9 +1447,10 @@
             value: 80,
             label: P("dashboard.customize.general.sliders.blur.marks.eighty")
           }], [P]),
-          ee = {
+          es = {
             none: "none",
             rgb: "rainbow",
+            rainbow: "rainbow",
             black: "sparkle_black",
             blue: "sparkle_blue",
             green: "sparkle_green",
@@ -1448,11 +1458,18 @@
             red: "sparkle_red",
             white: "sparkle_white",
             yellow: "sparkle_yellow",
+            sparkle_black: "sparkle_black",
+            sparkle_blue: "sparkle_blue",
+            sparkle_green: "sparkle_green",
+            sparkle_pink: "sparkle_pink",
+            sparkle_red: "sparkle_red",
+            sparkle_white: "sparkle_white",
+            sparkle_yellow: "sparkle_yellow",
             typewriter: "typewriter",
             fuzzy: "fuzzy",
             shuffle: "shuffle"
           },
-          ea = (0, t.useMemo)(() => [{
+          er = (0, t.useMemo)(() => [{
             urlName: "typewriter",
             image: !1,
             name: P("dashboard.customize.general.username_effects.list.typewriter"),
@@ -1508,7 +1525,7 @@
             name: P("dashboard.customize.general.username_effects.list.sparkle_yellow"),
             premium: !1
           }], [P]),
-          es = (0, t.useMemo)(() => ({
+          et = (0, t.useMemo)(() => ({
             rainbow: P("dashboard.customize.general.username_effects.samples.rainbow"),
             typewriter: P("dashboard.customize.general.username_effects.samples.typewriter"),
             fuzzy: P("dashboard.customize.general.username_effects.samples.fuzzy"),
@@ -1516,8 +1533,8 @@
           }), [P]);
         (0, t.useEffect)(() => {
           if ("" !== p) {
-            let e = ee[p],
-              a = ea.find(a => a.urlName === e),
+            let e = es[p],
+              a = er.find(a => a.urlName === e),
               s = !!a && a.premium;
             G({
               urlName: e,
@@ -1526,8 +1543,8 @@
               image: a?.image
             })
           }
-        }, [p, ea]);
-        let er = (e, a, s, r) => {
+        }, [p, er]);
+        let ei = (e, a, s, r) => {
             G({
               urlName: e,
               name: a,
@@ -1535,13 +1552,13 @@
               image: r
             })
           },
-          et = () => {
-            y(O.urlName, close)
+          eo = () => {
+            z(O.urlName, close)
           },
-          ei = e => {
-            "username" === e ? _(!v) : "socials" === e ? B(!k) : "badges" === e && z(!w)
+          en = e => {
+            "username" === e ? _(!b) : "socials" === e ? B(!C) : "badges" === e && k(!w)
           },
-          eo = async () => {
+          el = async () => {
             let e = await fetch("https://guns.lol/api/dashboard/customize/discordPresenceSettings", {
                 method: "POST",
                 headers: {
@@ -1557,10 +1574,10 @@
             opened: $,
             onClose: () => U(!1),
             centered: !0,
-            size: "discordPresenceSettings" === I ? "400px" : "auto",
-            title: W[I],
-            bodyClassName: "usernameEffects" === I ? o().usernameEffectsModalBody : void 0,
-            children: "usernameEffects" === I ? (0, r.jsxs)(r.Fragment, {
+            size: "discordPresenceSettings" === D ? "400px" : "auto",
+            title: W[D],
+            bodyClassName: "usernameEffects" === D ? o().usernameEffectsModalBody : void 0,
+            children: "usernameEffects" === D ? (0, r.jsxs)(r.Fragment, {
               children: [(0, r.jsxs)("div", {
                 className: o().usernameEffectsModalContent,
                 children: [(0, r.jsxs)("div", {
@@ -1569,16 +1586,16 @@
                     className: o().usernameEffectsSelection,
                     children: [(0, r.jsx)("div", {
                       className: `${o().usernameEffect} ${"none"===O.urlName&&o().selectedEffect}`,
-                      onClick: () => er("none", P("dashboard.customize.general.username_effects.none"), !1, !1),
+                      onClick: () => ei("none", P("dashboard.customize.general.username_effects.none"), !1, !1),
                       children: (0, r.jsxs)("div", {
                         className: o().noUsernameEffect,
                         children: [d.none, (0, r.jsx)("span", {
                           children: P("dashboard.customize.general.username_effects.none")
                         })]
                       })
-                    }), ea.map((e, a) => (0, r.jsxs)("div", {
+                    }), er.map((e, a) => (0, r.jsxs)("div", {
                       className: `${o().usernameEffect} ${O.urlName===e.urlName&&o().selectedEffect}`,
-                      onClick: () => er(e.urlName, e.name, e.premium, e.image),
+                      onClick: () => ei(e.urlName, e.name, e.premium, e.image),
                       children: [e.premium && (0, r.jsx)("div", {
                         className: o().premiumOnly,
                         children: R.premium ? d.premium : d.lock
@@ -1587,22 +1604,22 @@
                         alt: "Username effect preview"
                       }) : "rainbow" === e.urlName ? (0, r.jsx)("h1", {
                         className: o().rainbowName,
-                        children: es.rainbow
+                        children: et.rainbow
                       }) : "typewriter" === e.urlName ? (0, r.jsx)(S(), {
                         options: {
-                          strings: es.typewriter,
+                          strings: et.typewriter,
                           autoStart: !0,
                           loop: !0,
                           pauseFor: 1e3,
-                          stringSplitter: T.dz
+                          stringSplitter: A.dz
                         }
                       }) : "fuzzy" === e.urlName ? (0, r.jsx)(L.A, {
-                        username: es.fuzzy,
+                        username: et.fuzzy,
                         usernameEffect: "fuzzy",
                         textColor: "#fafafa",
                         fontSize: "22px"
                       }) : "shuffle" === e.urlName && (0, r.jsx)(L.A, {
-                        username: es.shuffle,
+                        username: et.shuffle,
                         usernameEffect: "shuffle",
                         textColor: "#fafafa",
                         fontSize: "22px"
@@ -1614,11 +1631,9 @@
                       className: o().usernameEffectsPreviewInnerWrapper,
                       children: [(0, r.jsx)("div", {
                         className: o().userBackground,
-                        style: {
-                          backgroundColor: R.config.color,
-                          color: R.config.text_color
-                        },
+                        style: X,
                         children: O.image ? (0, r.jsx)("h1", {
+                          className: o().usernameEffectPreviewTitle,
                           style: {
                             backgroundImage: "" !== O ? `url(https://assets.guns.lol/${O.urlName}.gif)` : ""
                           },
@@ -1638,7 +1653,7 @@
                               strings: Y,
                               autoStart: !0,
                               loop: !0,
-                              stringSplitter: T.dz
+                              stringSplitter: A.dz
                             }
                           })]
                         }) : "fuzzy" === O.urlName ? (0, r.jsx)(L.A, {
@@ -1682,13 +1697,13 @@
                     className: o().saveButtonUsernameEffects,
                     onClick: () => U(!1),
                     children: P("dashboard.customize.general.username_effects.preview.buttons.cancel")
-                  }), O.premium && !R.premium ? (0, r.jsx)(b.A, {
+                  }), O.premium && !R.premium ? (0, r.jsx)(v.A, {
                     href: "/pricing",
                     target: "_blank",
                     children: P("dashboard.customize.general.username_effects.preview.buttons.buy")
                   }) : (0, r.jsx)("span", {
                     className: o().saveButtonUsernameEffects,
-                    onClick: et,
+                    onClick: eo,
                     children: P("dashboard.customize.general.username_effects.preview.buttons.save")
                   })]
                 })]
@@ -1700,18 +1715,18 @@
                     className: o().saveButtonUsernameEffects,
                     onClick: () => U(!1),
                     children: P("dashboard.customize.general.username_effects.preview.buttons.cancel")
-                  }), O.premium && !R.premium ? (0, r.jsx)(b.A, {
+                  }), O.premium && !R.premium ? (0, r.jsx)(v.A, {
                     href: "/pricing",
                     target: "_blank",
                     children: P("dashboard.customize.general.username_effects.preview.buttons.buy")
                   }) : (0, r.jsx)("span", {
                     className: o().saveButtonUsernameEffects,
-                    onClick: et,
+                    onClick: eo,
                     children: P("dashboard.customize.general.username_effects.preview.buttons.save")
                   })]
                 })
               })]
-            }) : "discordPresenceSettings" === I && ("enabled" === s ? (0, r.jsxs)("div", {
+            }) : "discordPresenceSettings" === D && ("enabled" === s ? (0, r.jsxs)("div", {
               className: o().discordPresenceSettingsContainer,
               children: [(0, r.jsxs)("div", {
                 className: o().discordPresenceSettingsSwitchWrapperContainer,
@@ -1741,7 +1756,7 @@
                 placeholder: P("dashboard.customize.general.discord_presence.idle_text_placeholder")
               }), (0, r.jsx)("span", {
                 className: o().saveDiscordPresenceSettingsButton,
-                onClick: eo,
+                onClick: el,
                 children: P("dashboard.customize.general.discord_presence.save_button")
               })]
             }) : (0, r.jsx)("h1", {
@@ -1781,8 +1796,8 @@
                   })]
                 }), R.discord || !R.discord && "enabled" === R.config.presence ? (0, r.jsxs)("div", {
                   className: o().discordPresenceSelectWrapper,
-                  children: [(0, r.jsx)(C.A, {
-                    data: X,
+                  children: [(0, r.jsx)(y.A, {
+                    data: Q,
                     featureName: P("dashboard.customize.general.discord_presence.field_label"),
                     value: s,
                     onChangeFunction: i,
@@ -1791,7 +1806,7 @@
                   }), (0, r.jsx)("span", {
                     className: o().discordPresenceSettings,
                     onClick: () => {
-                      D("discordPresenceSettings"), U(!0)
+                      I("discordPresenceSettings"), U(!0)
                     },
                     children: d.settings
                   })]
@@ -1814,8 +1829,8 @@
                 })]
               }), (0, r.jsxs)("div", {
                 className: o().featureRow,
-                children: [(0, r.jsx)(C.A, {
-                  data: Z,
+                children: [(0, r.jsx)(y.A, {
+                  data: K,
                   featureName: P("dashboard.customize.general.background_effects_field"),
                   value: n,
                   onChangeFunction: l,
@@ -1829,7 +1844,7 @@
                   }), (0, r.jsxs)("span", {
                     className: o().usernameEffectsButton,
                     onClick: () => {
-                      D("usernameEffects"), U(!0)
+                      I("usernameEffects"), U(!0)
                     },
                     children: [d.backgroundEffects, " ", P("dashboard.customize.general.username_effects.button_label")]
                   })]
@@ -1839,7 +1854,7 @@
               className: o().generalComponentRight,
               children: [(0, r.jsxs)("div", {
                 className: `${o().featureRow} ${o().sliderDiv}`,
-                children: [(0, r.jsx)(A.A, {
+                children: [(0, r.jsx)(T.A, {
                   featureName: P("dashboard.customize.general.sliders.opacity.title"),
                   helpDescription: P("dashboard.customize.general.sliders.opacity.description"),
                   element: (0, r.jsx)(N.A, {
@@ -1849,9 +1864,9 @@
                     max: 1,
                     min: 0,
                     label: e => `${Math.floor(100*e)}%`,
-                    marks: K
+                    marks: ee
                   })
-                }), (0, r.jsx)(A.A, {
+                }), (0, r.jsx)(T.A, {
                   featureName: P("dashboard.customize.general.sliders.blur.title"),
                   helpDescription: P("dashboard.customize.general.sliders.blur.description"),
                   element: (0, r.jsx)(N.A, {
@@ -1861,20 +1876,20 @@
                     max: 100,
                     min: 0,
                     label: e => `${e}px`,
-                    marks: Q
+                    marks: ea
                   })
                 })]
               }), (0, r.jsxs)("div", {
                 className: o().featureRow,
                 children: [(0, r.jsx)(g.A, {
                   featureName: P("dashboard.customize.general.location.label"),
-                  value: q,
+                  value: F,
                   onChangeFunction: e => {
-                    F(e.target.value)
+                    q(e.target.value)
                   },
                   placeholder: P("dashboard.customize.general.location.placeholder"),
                   icon: d.locationMarker
-                }), (0, r.jsx)(A.A, {
+                }), (0, r.jsx)(T.A, {
                   featureName: P("dashboard.customize.general.glow.title"),
                   helpDescription: P("dashboard.customize.general.glow.description"),
                   element: (0, r.jsx)("div", {
@@ -1882,16 +1897,16 @@
                     children: (0, r.jsxs)("div", {
                       className: o().glowSettingsInner,
                       children: [(0, r.jsxs)("div", {
-                        className: `${o().glowSetting} ${v&&o().glowSettingEnabled}`,
-                        onClick: () => ei("username"),
+                        className: `${o().glowSetting} ${b&&o().glowSettingEnabled}`,
+                        onClick: () => en("username"),
                         children: [d.glow, " ", P("dashboard.customize.general.glow.username")]
                       }), (0, r.jsxs)("div", {
-                        className: `${o().glowSetting} ${k&&o().glowSettingEnabled}`,
-                        onClick: () => ei("socials"),
+                        className: `${o().glowSetting} ${C&&o().glowSettingEnabled}`,
+                        onClick: () => en("socials"),
                         children: [d.glow, " ", P("dashboard.customize.general.glow.socials")]
                       }), (0, r.jsxs)("div", {
                         className: `${o().glowSetting} ${w&&o().glowSettingEnabled}`,
-                        onClick: () => ei("badges"),
+                        onClick: () => en("badges"),
                         children: [d.glow, " ", P("dashboard.customize.general.glow.badges")]
                       })]
                     })
@@ -1902,9 +1917,10 @@
           })]
         })
       };
-      var q = s(9992),
-        F = s(30184);
-      let P = ({
+      var F = s(9992),
+        q = s(30184);
+      let P = new Set(["dither", "plasma", "aurora", "snowflakes", "rain", "blurred", "night", "tv"]),
+        D = ({
           accentColor: e,
           setAccentColor: a,
           textColor: s,
@@ -1918,9 +1934,13 @@
           isGradientEnabled: m,
           setGradientEnabled: p,
           setIconColor: g,
-          iconColor: f
+          iconColor: f,
+          backgroundEffects: x,
+          backgroundEffectsColor: b,
+          setBackgroundEffectsColor: v
         }) => {
-          let x = (0, h.kj)();
+          let j = (0, h.kj)(),
+            _ = P.has(x);
           return (0, r.jsx)(r.Fragment, {
             children: (0, r.jsxs)("div", {
               className: o().generalComponentContainer,
@@ -1928,30 +1948,38 @@
                 className: o().generalComponentLeft,
                 children: [(0, r.jsxs)("div", {
                   className: o().featureRow,
-                  children: [(0, r.jsx)(F.A, {
-                    featureName: x("dashboard.customize.color.fields.accent"),
+                  children: [(0, r.jsx)(q.A, {
+                    featureName: j("dashboard.customize.color.fields.accent"),
                     onChangeFunction: a,
                     value: e,
-                    placeholder: x("dashboard.customize.color.placeholder")
-                  }), (0, r.jsx)(F.A, {
-                    featureName: x("dashboard.customize.color.fields.text"),
+                    placeholder: j("dashboard.customize.color.placeholder")
+                  }), (0, r.jsx)(q.A, {
+                    featureName: j("dashboard.customize.color.fields.text"),
                     onChangeFunction: t,
                     value: s,
-                    placeholder: x("dashboard.customize.color.placeholder")
+                    placeholder: j("dashboard.customize.color.placeholder")
                   })]
                 }), (0, r.jsxs)("div", {
                   className: o().featureRow,
-                  children: [(0, r.jsx)(F.A, {
-                    featureName: x("dashboard.customize.color.fields.background"),
+                  children: [(0, r.jsx)(q.A, {
+                    featureName: j("dashboard.customize.color.fields.background"),
                     onChangeFunction: n,
                     value: i,
-                    placeholder: x("dashboard.customize.color.placeholder")
-                  }), (0, r.jsx)(F.A, {
-                    featureName: x("dashboard.customize.color.fields.icon"),
+                    placeholder: j("dashboard.customize.color.placeholder")
+                  }), (0, r.jsx)(q.A, {
+                    featureName: j("dashboard.customize.color.fields.icon"),
                     onChangeFunction: g,
                     value: f,
-                    placeholder: x("dashboard.customize.color.placeholder")
+                    placeholder: j("dashboard.customize.color.placeholder")
                   })]
+                }), _ && (0, r.jsx)("div", {
+                  className: o().featureRow,
+                  children: (0, r.jsx)(q.A, {
+                    featureName: j("dashboard.customize.color.fields.background_effect"),
+                    onChangeFunction: v,
+                    value: b,
+                    placeholder: j("dashboard.customize.color.placeholder")
+                  })
                 })]
               }), (0, r.jsxs)("div", {
                 className: o().generalComponentRight,
@@ -1960,19 +1988,19 @@
                   onClick: function() {
                     m ? p(!1) : p(!0)
                   },
-                  children: x(m ? "dashboard.customize.color.gradient.disable_button" : "dashboard.customize.color.gradient.enable_button")
+                  children: j(m ? "dashboard.customize.color.gradient.disable_button" : "dashboard.customize.color.gradient.enable_button")
                 }), m && (0, r.jsxs)("div", {
                   className: o().featureRow,
-                  children: [(0, r.jsx)(F.A, {
-                    featureName: x("dashboard.customize.color.gradient.primary"),
+                  children: [(0, r.jsx)(q.A, {
+                    featureName: j("dashboard.customize.color.gradient.primary"),
                     onChangeFunction: c,
                     value: l,
-                    placeholder: x("dashboard.customize.color.placeholder")
-                  }), (0, r.jsx)(F.A, {
-                    featureName: x("dashboard.customize.color.gradient.secondary"),
+                    placeholder: j("dashboard.customize.color.placeholder")
+                  }), (0, r.jsx)(q.A, {
+                    featureName: j("dashboard.customize.color.gradient.secondary"),
                     onChangeFunction: u,
                     value: d,
-                    placeholder: x("dashboard.customize.color.placeholder")
+                    placeholder: j("dashboard.customize.color.placeholder")
                   })]
                 })]
               })]
@@ -2001,7 +2029,7 @@
                 className: `${o().generalComponentLeft} ${o().otherComponent} ${o().otherComponentWrapper}`,
                 children: [(0, r.jsxs)("div", {
                   className: `${o().featureRow} ${o().otherComponent}`,
-                  children: [(0, r.jsx)(A.A, {
+                  children: [(0, r.jsx)(T.A, {
                     featureName: g("dashboard.customize.other.monochrome_icons.label"),
                     helpDescription: g("dashboard.customize.other.monochrome_icons.description"),
                     element: (0, r.jsx)(M.A, {
@@ -2012,7 +2040,7 @@
                     featureName: g("dashboard.customize.other.animated_title"),
                     checked: i,
                     onChangeFunction: e => n(e.currentTarget.checked)
-                  }), (0, r.jsx)(A.A, {
+                  }), (0, r.jsx)(T.A, {
                     featureName: g("dashboard.customize.other.swap_box_colors.label"),
                     helpDescription: g("dashboard.customize.other.swap_box_colors.description"),
                     element: (0, r.jsx)(M.A, {
@@ -2040,11 +2068,12 @@
             })
           })
         };
-      var D = s(54834);
-      async function W(e, a, s, r, t) {
+      var W = s(54834);
+      async function $(e, a, s, r, t) {
         try {
-          a(D.A.loading);
-          let i = await fetch("https://guns.lol/api/dashboard/customize", {
+          a(W.A.loading);
+          let i = /^#[0-9a-fA-F]{6}$/.test(e.background_effects_color ?? ""),
+            o = await fetch("https://guns.lol/api/dashboard/customize", {
               method: "POST",
               body: JSON.stringify({
                 color: e.color,
@@ -2057,6 +2086,7 @@
                 description: e.description,
                 presence: e.presence,
                 background_effects: e.background_effects,
+                background_effects_color: i ? e.background_effects_color : "#000000",
                 opacity: e.opacity,
                 blur: e.blur,
                 username_glow: e.username_glow,
@@ -2071,10 +2101,10 @@
                 discord_avatar_decoration: e.discord_avatar_decoration ?? !0
               })
             }),
-            o = await i.json();
-          i.ok ? (c.oR.success(t("common.unsaved_changes.settings_saved")), setTimeout(() => {
+            n = await o.json();
+          o.ok ? (c.oR.success(t("common.unsaved_changes.settings_saved")), setTimeout(() => {
             r(e), s(!1)
-          }, 500)) : c.oR.error(o.error)
+          }, 500)) : c.oR.error(n.error)
         } catch (e) {
           console.error(e.message)
         } finally {
@@ -2083,9 +2113,9 @@
           }, 500)
         }
       }
-      var $ = s(39449),
-        U = s(77561);
-      let O = ({
+      var U = s(39449),
+        O = s(60884);
+      let G = ({
         data: e
       }) => {
         let a = (0, h.kj)(),
@@ -2099,7 +2129,7 @@
         (0, t.useEffect)(() => {
           g(JSON.stringify(u) !== JSON.stringify(i))
         }, [u, i]);
-        let v = e => a => {
+        let b = e => a => {
           m(s => ({
             ...s,
             [e]: a
@@ -2112,13 +2142,13 @@
             theme: "dark",
             className: l().toasterStyles,
             icons: {
-              success: D.A.successToast
+              success: W.A.successToast
             },
             visibleToasts: 2
-          }), (0, r.jsx)($.N, {
+          }), (0, r.jsx)(U.N, {
             children: p && (0, r.jsx)("div", {
               className: l().unsavedChangesWrapper,
-              children: (0, r.jsxs)(U.P.div, {
+              children: (0, r.jsxs)(O.P.div, {
                 className: l().unsavedChangesBar,
                 initial: {
                   opacity: 0,
@@ -2157,7 +2187,7 @@
                     children: a("common.unsaved_changes.reset")
                   }), (0, r.jsx)("span", {
                     className: l().saveButton,
-                    onClick: () => W(u, x, g, n, a),
+                    onClick: () => $(u, x, g, n, a),
                     children: f
                   })]
                 })]
@@ -2165,12 +2195,12 @@
             })
           }), (0, r.jsxs)("div", {
             className: o().featureGap,
-            children: [(0, r.jsx)(q.A, {
+            children: [(0, r.jsx)(F.A, {
               featureName: a("dashboard.customize.sections.assets"),
-              children: (0, r.jsx)(z, {
+              children: (0, r.jsx)(k, {
                 data: e
               })
-            }), !e.premium && (0, r.jsx)(b.A, {
+            }), !e.premium && (0, r.jsx)(v.A, {
               href: "/pricing",
               style: {
                 textDecoration: "none"
@@ -2186,66 +2216,113 @@
                   })
                 })
               })
-            }), (0, r.jsx)(q.A, {
+            }), (0, r.jsx)(F.A, {
               featureName: a("dashboard.customize.sections.general"),
               children: (0, r.jsx)(R, {
                 description: u.description,
-                setDescription: v("description"),
+                setDescription: b("description"),
                 discordPresence: u.presence,
-                setDiscordPresence: v("presence"),
+                setDiscordPresence: b("presence"),
                 backgroundEffects: u.background_effects,
-                setBackgroundEffects: v("background_effects"),
+                setBackgroundEffects: b("background_effects"),
                 opacity: u.opacity,
-                setOpacity: v("opacity"),
+                setOpacity: b("opacity"),
                 usernameEffects: u.username_effects,
                 blur: u.blur,
-                setBlur: v("blur"),
+                setBlur: b("blur"),
                 usernameGlow: u.username_glow,
-                setUsernameGlow: v("username_glow"),
+                setUsernameGlow: b("username_glow"),
                 socialGlow: u.social_glow,
-                setSocialGlow: v("social_glow"),
+                setSocialGlow: b("social_glow"),
                 badgeGlow: u.badge_glow,
-                setBadgeGlow: v("badge_glow"),
+                setBadgeGlow: b("badge_glow"),
                 userData: e,
                 locationMarker: u.location,
-                setLocation: v("location")
+                setLocation: b("location")
               })
-            }), (0, r.jsx)(q.A, {
+            }), (0, r.jsx)(F.A, {
               featureName: a("dashboard.customize.sections.color"),
-              children: (0, r.jsx)(P, {
+              children: (0, r.jsx)(D, {
                 accentColor: u.color,
-                setAccentColor: v("color"),
+                setAccentColor: b("color"),
                 textColor: u.text_color,
-                setTextColor: v("text_color"),
+                setTextColor: b("text_color"),
                 backgroundColor: u.bg_color,
-                setBackgroundColor: v("bg_color"),
+                setBackgroundColor: b("bg_color"),
                 gradientPrimary: u.gradient_1,
-                setGradientPrimary: v("gradient_1"),
+                setGradientPrimary: b("gradient_1"),
                 gradientSecondary: u.gradient_2,
-                setGradientSecondary: v("gradient_2"),
+                setGradientSecondary: b("gradient_2"),
                 isGradientEnabled: u.profile_gradient,
-                setGradientEnabled: v("profile_gradient"),
-                setIconColor: v("icon_color"),
-                iconColor: u.icon_color
+                setGradientEnabled: b("profile_gradient"),
+                setIconColor: b("icon_color"),
+                iconColor: u.icon_color,
+                backgroundEffects: u.background_effects,
+                backgroundEffectsColor: u.background_effects_color || "#000000",
+                setBackgroundEffectsColor: b("background_effects_color")
               })
-            }), (0, r.jsx)(q.A, {
+            }), (0, r.jsx)(F.A, {
               featureName: a("dashboard.customize.sections.other"),
               children: (0, r.jsx)(I, {
                 discordAvatar: u.use_discord_avatar,
-                setDiscordAvatar: v("use_discord_avatar"),
+                setDiscordAvatar: b("use_discord_avatar"),
                 monochromeIcons: u.monochrome,
-                setMonochromeIcons: v("monochrome"),
+                setMonochromeIcons: b("monochrome"),
                 animatedTitle: u.animated_title,
-                setAnimatedTitle: v("animated_title"),
+                setAnimatedTitle: b("animated_title"),
                 volumeControl: u.volume_control,
-                setVolumeControl: v("volume_control"),
+                setVolumeControl: b("volume_control"),
                 swapColors: u.swap_colors,
-                setSwapColors: v("swap_colors"),
+                setSwapColors: b("swap_colors"),
                 discordAvatarDecoration: u.discord_avatar_decoration,
-                setDiscordAvatarDecoration: v("discord_avatar_decoration")
+                setDiscordAvatarDecoration: b("discord_avatar_decoration")
               })
             })]
           })]
+        })
+      }
+    },
+    57157: (e, a, s) => {
+      "use strict";
+      s.d(a, {
+        A: () => l
+      });
+      var r = s(95155),
+        t = s(98241),
+        i = s.n(t),
+        o = s(54834),
+        n = s(81576);
+
+      function l({
+        featureName: e,
+        helpDescription: a,
+        element: s,
+        id: t
+      }) {
+        return (0, r.jsxs)("div", {
+          className: i().featureName,
+          "data-dashboard-feature-label": "string" == typeof e ? e : void 0,
+          children: [(0, r.jsxs)("h1", {
+            className: i().featureNameText,
+            style: {
+              marginBottom: "6px"
+            },
+            children: [e, (0, r.jsxs)(n.Ay, {
+              width: "370px",
+              position: "top",
+              id: t,
+              children: [(0, r.jsx)(n.Ay.Target, {
+                children: o.A.help
+              }), (0, r.jsx)(n.Ay.Dropdown, {
+                children: (0, r.jsx)("div", {
+                  className: i().helpDescription,
+                  children: a.split("\n").map((e, a) => (0, r.jsxs)("span", {
+                    children: [e, (0, r.jsx)("br", {})]
+                  }, a))
+                })
+              })]
+            })]
+          }), s]
         })
       }
     },
@@ -2257,6 +2334,79 @@
         checkboxContent: "GUNS__ab-99239a2d-372d534a-01c82082",
         label: "GUNS__41-9e476fd0-97f08255-c536c341",
         description: "GUNS__09-9ac6549b-7658a140-3ba7fea8"
+      }
+    },
+    73728: e => {
+      e.exports = {
+        switch: "GUNS__37-bebc3157-36356f81-31aa98a5",
+        input: "GUNS__07-6848431b-ec698247-987f2132",
+        track: "GUNS__c1-89bc1537-00272519-3133d28f",
+        thumb: "GUNS__13-b5e3f9d4-24f5d8e3-cfe09b0b"
+      }
+    },
+    81469: (e, a, s) => {
+      "use strict";
+      s.d(a, {
+        A: () => m
+      });
+      var r = s(95155),
+        t = s(29722),
+        i = s(12115),
+        o = s(98241),
+        n = s.n(o),
+        l = s(73728),
+        c = s.n(l),
+        d = s(96351);
+      let u = ["ar", "he", "fa", "ur"];
+
+      function m({
+        featureName: e,
+        onChangeFunction: a,
+        className: s,
+        id: o,
+        onChange: l,
+        defaultChecked: m,
+        disabled: h,
+        ...p
+      }) {
+        let g = (0, d.useLang)(),
+          f = (0, i.useId)(),
+          x = u.includes(g) ? "rtl" : "ltr",
+          b = "string" == typeof e ? e : void 0;
+        return (0, r.jsxs)("div", {
+          className: n().inputContainerWrapper,
+          "data-dashboard-feature-label": b,
+          children: [e && (0, r.jsx)("h1", {
+            className: n().featureName,
+            children: e
+          }), (0, r.jsx)("div", {
+            className: n().inputWrapperDiv,
+            style: {
+              direction: x
+            },
+            children: (0, r.jsxs)("label", {
+              className: (0, t.A)(c().switch, s),
+              "data-disabled": h,
+              "data-direction": x,
+              children: [(0, r.jsx)("input", {
+                ...p,
+                id: o ?? f,
+                type: "checkbox",
+                className: c().input,
+                defaultChecked: m,
+                disabled: h,
+                onChange: e => {
+                  l?.(e), a?.(e)
+                }
+              }), (0, r.jsx)("span", {
+                className: c().track,
+                children: (0, r.jsx)("span", {
+                  className: c().thumb
+                })
+              })]
+            })
+          })]
+        })
       }
     }
   }

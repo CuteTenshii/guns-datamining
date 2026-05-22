@@ -73,6 +73,7 @@
       }) {
         return (0, s.jsxs)("div", {
           className: l().featureName,
+          "data-dashboard-feature-label": "string" == typeof e ? e : void 0,
           children: [(0, s.jsxs)("h1", {
             className: l().featureNameText,
             style: {
@@ -258,10 +259,12 @@
               children: "No options available"
             })
           }),
-          Y = D && "undefined" != typeof document ? (0, i.createPortal)(X, document.body) : null;
+          Y = D && "undefined" != typeof document ? (0, i.createPortal)(X, document.body) : null,
+          ee = "string" == typeof e ? e : void 0;
         return (0, s.jsxs)("div", {
           className: d().container,
           ref: q,
+          "data-dashboard-feature-label": ee,
           children: [e && (0, s.jsx)("div", {
             className: d().label,
             children: e

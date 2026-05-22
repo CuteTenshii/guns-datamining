@@ -169,49 +169,216 @@
         customUrlDescriptionWrapper: "GUNS__71-d2a26ca2-e880a6c1-cf9d07d0"
       }
     },
+    28485: (e, a, t) => {
+      "use strict";
+      t.d(a, {
+        Fb: () => l,
+        Uy: () => n,
+        V$: () => o,
+        vp: () => s
+      });
+      let o = {
+          snapchat: "Snapchat",
+          gitlab: "GitLab",
+          patreon: "Patreon",
+          youtube: "YouTube",
+          discord: "Discord",
+          instagram: "Instagram",
+          tiktok: "TikTok",
+          x: "X",
+          telegram: "Telegram",
+          soundcloud: "SoundCloud",
+          buymeacoffee: "Buy Me a Coffee",
+          "ko-fi": "Ko-fi",
+          onlyfans: "OnlyFans",
+          paypal: "PayPal",
+          github: "GitHub",
+          roblox: "Roblox",
+          cashapp: "CashApp",
+          twitch: "Twitch",
+          namemc: "NameMC",
+          linkedin: "LinkedIn",
+          reddit: "Reddit",
+          steam: "Steam",
+          kick: "Kick",
+          pinterest: "Pinterest",
+          lastfm: "LastFM",
+          facebook: "Facebook",
+          payhip: "Payhip",
+          spotify: "Spotify",
+          bitcoin: "Bitcoin",
+          eth: "Ethereum",
+          monero: "Monero",
+          ltc: "Litecoin",
+          litecoin: "Litecoin",
+          solana: "Solana",
+          xrp: "XRP",
+          customUrl: "Custom URL",
+          ethereum: "Ethereum",
+          custom_url: "Custom URL",
+          email: "Email",
+          threads: "Threads",
+          vk: "VK",
+          signal: "Signal",
+          applemusic: "Apple Music",
+          venmo: "Venmo",
+          playstation: "PlayStation",
+          xbox: "Xbox",
+          tellonym: "Tellonym",
+          bluesky: "Bluesky"
+        },
+        c = {
+          playstation: {
+            key: "dashboard.links.placeholders.playstation",
+            fallback: "PlayStation Username"
+          }
+        };
+
+      function s(e, a) {
+        let t = c[e];
+        if (!t) return "...";
+        let o = a(t.key),
+          s = "string" == typeof o ? o : t.fallback;
+        return s === t.key ? t.fallback : s
+      }
+      let n = {
+          snapchat: "snapchat.com/add/",
+          gitlab: "gitlab.com/",
+          patreon: "patreon.com/",
+          youtube: "youtube.com/",
+          onlyfans: "onlyfans.com/",
+          discord: "discord.com/",
+          instagram: "instagram.com/",
+          tiktok: "tiktok.com/",
+          x: "x.com/",
+          buymeacoffee: "buymeacoffee.com/",
+          "ko-fi": "ko-fi.com/",
+          telegram: "t.me/",
+          soundcloud: "soundcloud.com/",
+          paypal: "paypal.me/",
+          github: "github.com/",
+          namemc: "namemc.com/",
+          roblox: "roblox.com/",
+          cashapp: "cash.app/$",
+          twitch: "twitch.tv/",
+          linkedin: "linkedin.com/",
+          reddit: "reddit.com/",
+          steam: "steamcommunity.com/id/",
+          kick: "kick.com/",
+          pinterest: "pinterest.com/",
+          lastfm: "last.fm/user/",
+          facebook: "facebook.com/",
+          payhip: "payhip.com/",
+          spotify: "open.spotify.com/",
+          bitcoin: "",
+          eth: "",
+          ltc: "",
+          monero: "",
+          solana: "",
+          email: "",
+          xrp: "",
+          custom_url: "https://",
+          threads: "threads.com/@",
+          vk: "vk.com/",
+          signal: "signal.me/#eu/",
+          applemusic: "music.apple.com/",
+          venmo: "venmo.com/",
+          playstation: "",
+          xbox: "xbox.com/play/user/",
+          tellonym: "tellonym.me/",
+          bluesky: "bsky.app/profile/"
+        },
+        l = {
+          snapchat: 178,
+          gitlab: 120,
+          patreon: 136,
+          youtube: 138,
+          discord: 134,
+          instagram: 151,
+          onlyfans: 139,
+          tiktok: 120,
+          x: 87,
+          telegram: 77,
+          soundcloud: 163,
+          paypal: 120,
+          github: 126,
+          roblox: 125,
+          cashapp: 121,
+          buymeacoffee: 182,
+          "ko-fi": 112,
+          twitch: 105,
+          linkedin: 136,
+          namemc: 141,
+          reddit: 122,
+          steam: 222,
+          kick: 108,
+          pinterest: 143,
+          lastfm: 127,
+          facebook: 147,
+          payhip: 130,
+          spotify: 168,
+          bitcoin: 0,
+          eth: 0,
+          ltc: 0,
+          solana: 0,
+          xrp: 0,
+          email: 0,
+          monero: 0,
+          custom_url: 90,
+          threads: 150,
+          vk: 96,
+          signal: 148,
+          applemusic: 166,
+          venmo: 128,
+          playstation: 0,
+          xbox: 184,
+          tellonym: 132,
+          bluesky: 159
+        }
+    },
     30184: (e, a, t) => {
       "use strict";
       t.d(a, {
-        A: () => m
+        A: () => S
       });
       var o = t(95155),
-        i = t(12115),
-        n = t(47650),
-        r = t(29722),
-        c = t(98241),
-        l = t.n(c),
-        s = t(65095),
-        d = t.n(s);
-      let f = "#1c1c1c",
-        u = (e, a, t) => Math.min(Math.max(e, a), t),
+        c = t(12115),
+        s = t(47650),
+        n = t(29722),
+        l = t(98241),
+        r = t.n(l),
+        d = t(65095),
+        f = t.n(d);
+      let u = "#1c1c1c",
+        b = (e, a, t) => Math.min(Math.max(e, a), t),
         h = e => {
           if (!e) return "";
           let a = e.trim(),
             t = a.replace(/^#/, "").replace(/[^0-9a-f]/gi, "").slice(0, 6).toLowerCase();
           return t ? `#${t}` : a.startsWith("#") ? "#" : ""
         },
-        b = e => {
+        p = e => {
           if (/^#[0-9a-f]{6}$/i.test(e)) return e.toLowerCase();
           if (/^#[0-9a-f]{3}$/i.test(e)) return `#${e.slice(1).split("").map(e=>`${e}${e}`).join("")}`.toLowerCase();
           return null
         },
         _ = e => {
-          let a, t, o, i, n, r, c, {
-            r: l,
-            g: s,
-            b: d
+          let a, t, o, c, s, n, l, {
+            r,
+            g: d,
+            b: f
           } = {
             r: (a = parseInt(e.replace("#", ""), 16)) >> 16 & 255,
             g: a >> 8 & 255,
             b: 255 & a
           };
-          return r = (n = Math.max(t = l / 255, o = s / 255, i = d / 255)) - Math.min(t, o, i), c = 0, 0 !== r && (c = (n === t ? (o - i) / r % 6 : n === o ? (i - t) / r + 2 : (t - o) / r + 4) * 60) < 0 && (c += 360), {
-            h: c,
-            s: 0 === n ? 0 : r / n,
-            v: n
+          return n = (s = Math.max(t = r / 255, o = d / 255, c = f / 255)) - Math.min(t, o, c), l = 0, 0 !== n && (l = (s === t ? (o - c) / n % 6 : s === o ? (c - t) / n + 2 : (t - o) / n + 4) * 60) < 0 && (l += 360), {
+            h: l,
+            s: 0 === s ? 0 : n / s,
+            v: s
           }
         },
-        p = (0, o.jsx)("svg", {
+        m = (0, o.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "19",
           height: "19",
@@ -222,243 +389,245 @@
           })
         });
 
-      function m({
+      function S({
         featureName: e,
         onChangeFunction: a,
         value: t,
-        placeholder: c = "#000000",
-        icon: s,
-        className: m,
-        disabled: S,
-        style: g,
+        placeholder: l = "#000000",
+        icon: d,
+        className: S,
+        disabled: g,
+        style: N,
         ...v
       }) {
-        let N = (0, i.useRef)(null),
-          U = (0, i.useRef)(null),
-          x = (0, i.useRef)(null),
-          [G, y] = (0, i.useState)(!1),
-          [C, k] = (0, i.useState)(() => _(f)),
-          [j, w] = (0, i.useState)(f),
-          [M, E] = (0, i.useState)(!1),
-          [I, A] = (0, i.useState)(!1),
-          [T, L] = (0, i.useState)({
+        let U = (0, c.useRef)(null),
+          x = (0, c.useRef)(null),
+          y = (0, c.useRef)(null),
+          [k, G] = (0, c.useState)(!1),
+          [C, j] = (0, c.useState)(() => _(u)),
+          [w, M] = (0, c.useState)(u),
+          [A, E] = (0, c.useState)(!1),
+          [I, L] = (0, c.useState)(!1),
+          [B, R] = (0, c.useState)({
             left: 0,
             top: 0,
             width: 220
           }),
-          [B, D] = (0, i.useState)(!1),
-          W = h("string" == typeof t ? t : ""),
-          O = (0, i.useMemo)(() => W ? b(W) : null, [W]),
-          R = O ?? j;
-        (0, i.useEffect)(() => {
-          O && w(O)
-        }, [O]), (0, i.useEffect)(() => {
-          k(_(R))
-        }, [R]), (0, i.useEffect)(() => {
-          D(!0)
+          [T, $] = (0, c.useState)(!1),
+          D = h("string" == typeof t ? t : ""),
+          F = (0, c.useMemo)(() => D ? p(D) : null, [D]),
+          O = F ?? w;
+        (0, c.useEffect)(() => {
+          F && M(F)
+        }, [F]), (0, c.useEffect)(() => {
+          j(_(O))
+        }, [O]), (0, c.useEffect)(() => {
+          $(!0)
         }, []);
-        let $ = (0, i.useCallback)(() => {
-          if (!N.current) return;
-          let e = N.current.getBoundingClientRect(),
+        let W = (0, c.useCallback)(() => {
+          if (!U.current) return;
+          let e = U.current.getBoundingClientRect(),
             a = Math.min(270, e.width),
-            t = x.current?.offsetHeight ?? 260,
+            t = y.current?.offsetHeight ?? 260,
             o = e.bottom + 10;
           if (o + t > window.innerHeight - 12) {
             let a = e.top - 10 - t;
             a >= 12 && (o = a)
           }
-          let i = window.innerWidth - a - 12;
-          L({
-            left: u(e.left, 12, Math.max(12, i)),
+          let c = window.innerWidth - a - 12;
+          R({
+            left: b(e.left, 12, Math.max(12, c)),
             top: o,
             width: a
           })
         }, []);
-        (0, i.useLayoutEffect)(() => {
-          if (!G) return;
+        (0, c.useLayoutEffect)(() => {
+          if (!k) return;
           let e = () => {
-            $()
+            W()
           };
           return e(), window.addEventListener("resize", e), window.addEventListener("scroll", e, !0), () => {
             window.removeEventListener("resize", e), window.removeEventListener("scroll", e, !0)
           }
-        }, [G, $]), (0, i.useEffect)(() => {
-          if (!G) return;
+        }, [k, W]), (0, c.useEffect)(() => {
+          if (!k) return;
           let e = e => {
               let a = e.target,
-                t = N.current,
-                o = x.current;
-              t && t.contains(a) || o && o.contains(a) || y(!1)
+                t = U.current,
+                o = y.current;
+              t && t.contains(a) || o && o.contains(a) || G(!1)
             },
             a = e => {
-              "Escape" === e.key && y(!1)
+              "Escape" === e.key && G(!1)
             };
           return document.addEventListener("mousedown", e), document.addEventListener("keydown", a), () => {
             document.removeEventListener("mousedown", e), document.removeEventListener("keydown", a)
           }
-        }, [G]);
-        let F = (0, i.useCallback)(e => {
-            k(e);
+        }, [k]);
+        let P = (0, c.useCallback)(e => {
+            j(e);
             let t = (e => {
               let a, {
                 r: t,
                 g: o,
-                b: i
+                b: c
               } = (({
                 h: e,
                 s: a,
                 v: t
               }) => {
                 let o = t * a,
-                  i = o * (1 - Math.abs(e / 60 % 2 - 1)),
-                  n = t - o,
-                  r = 0,
-                  c = 0,
-                  l = 0;
-                e < 60 ? (r = o, c = i) : e < 120 ? (r = i, c = o) : e < 180 ? (c = o, l = i) : e < 240 ? (c = i, l = o) : e < 300 ? (r = i, l = o) : (r = o, l = i);
-                let s = Math.round((r + n) * 255);
+                  c = o * (1 - Math.abs(e / 60 % 2 - 1)),
+                  s = t - o,
+                  n = 0,
+                  l = 0,
+                  r = 0;
+                e < 60 ? (n = o, l = c) : e < 120 ? (n = c, l = o) : e < 180 ? (l = o, r = c) : e < 240 ? (l = c, r = o) : e < 300 ? (n = c, r = o) : (n = o, r = c);
+                let d = Math.round((n + s) * 255);
                 return {
-                  r: s,
-                  g: Math.round((c + n) * 255),
-                  b: Math.round((l + n) * 255)
+                  r: d,
+                  g: Math.round((l + s) * 255),
+                  b: Math.round((r + s) * 255)
                 }
               })({
                 ...e,
                 h: (e.h % 360 + 360) % 360,
-                s: u(e.s, 0, 1),
-                v: u(e.v, 0, 1)
+                s: b(e.s, 0, 1),
+                v: b(e.v, 0, 1)
               });
-              return a = e => e.toString(16).padStart(2, "0"), `#${a(t)}${a(o)}${a(i)}`
+              return a = e => e.toString(16).padStart(2, "0"), `#${a(t)}${a(o)}${a(c)}`
             })(e);
-            w(t), a?.(t)
+            M(t), a?.(t)
           }, [a]),
-          H = (0, i.useCallback)(e => {
+          H = (0, c.useCallback)(e => {
             let t = h(e.target.value);
             a?.(t)
           }, [a]),
-          P = (0, i.useCallback)((e, a) => {
-            if (!U.current) return;
-            let t = U.current.getBoundingClientRect(),
-              o = u((e - t.left) / t.width, 0, 1),
-              i = u((a - t.top) / t.height, 0, 1);
-            F({
+          z = (0, c.useCallback)((e, a) => {
+            if (!x.current) return;
+            let t = x.current.getBoundingClientRect(),
+              o = b((e - t.left) / t.width, 0, 1),
+              c = b((a - t.top) / t.height, 0, 1);
+            P({
               h: C.h,
               s: o,
-              v: 1 - i
+              v: 1 - c
             })
-          }, [C.h, F]),
-          q = (0, i.useCallback)(e => {
-            if (S) return;
+          }, [C.h, P]),
+          q = (0, c.useCallback)(e => {
+            if (g) return;
             e.preventDefault();
             let a = e.pointerId;
-            P(e.clientX, e.clientY);
+            z(e.clientX, e.clientY);
             let t = e => {
-                e.pointerId === a && P(e.clientX, e.clientY)
+                e.pointerId === a && z(e.clientX, e.clientY)
               },
               o = e => {
                 e.pointerId === a && (document.removeEventListener("pointermove", t), document.removeEventListener("pointerup", o))
               };
             document.addEventListener("pointermove", t), document.addEventListener("pointerup", o)
-          }, [S, P]),
-          z = (0, i.useCallback)(e => {
-            F({
+          }, [g, z]),
+          V = (0, c.useCallback)(e => {
+            P({
               ...C,
               h: Number(e.target.value)
             })
-          }, [C, F]),
-          J = (0, i.useCallback)(() => {
-            S || y(e => (e || $(), !0))
-          }, [S, $]),
-          V = (0, i.useCallback)(() => {
-            S || y(e => {
+          }, [C, P]),
+          X = (0, c.useCallback)(() => {
+            g || G(e => (e || W(), !0))
+          }, [g, W]),
+          J = (0, c.useCallback)(() => {
+            g || G(e => {
               let a = !e;
-              return a && $(), a
+              return a && W(), a
             })
-          }, [S, $]),
-          X = (0, i.useCallback)(async () => {
-            if (!S && M && void 0 !== window.EyeDropper && !I) try {
-              A(!0);
+          }, [g, W]),
+          K = (0, c.useCallback)(async () => {
+            if (!g && A && void 0 !== window.EyeDropper && !I) try {
+              L(!0);
               let e = new window.EyeDropper,
                 a = await e.open(),
-                t = b(a.sRGBHex);
-              t && F(_(t))
+                t = p(a.sRGBHex);
+              t && P(_(t))
             } catch (e) {} finally {
-              A(!1)
+              L(!1)
             }
-          }, [S, I, M, F]);
-        (0, i.useEffect)(() => {
+          }, [g, I, A, P]);
+        (0, c.useEffect)(() => {
           E(void 0 !== window.EyeDropper)
         }, []);
-        let Y = (0, r.A)(l().inputWrapperInput, d().textInput, s && d().textInputWithIcon, m),
-          K = "undefined" != typeof document ? document.body : null,
-          Z = !!(G && B && K),
-          Q = Z ? {
+        let Y = (0, n.A)(r().inputWrapperInput, f().textInput, d && f().textInputWithIcon, S),
+          Z = "undefined" != typeof document ? document.body : null,
+          Q = !!(k && T && Z),
+          ee = Q ? {
             position: "fixed",
-            left: `${T.left}px`,
-            top: `${T.top}px`,
-            width: `${T.width}px`
+            left: `${B.left}px`,
+            top: `${B.top}px`,
+            width: `${B.width}px`
           } : void 0,
-          ee = (0, o.jsxs)("div", {
-            ref: x,
-            className: d().panel,
-            style: Q,
+          ea = "string" == typeof e ? e : void 0,
+          et = (0, o.jsxs)("div", {
+            ref: y,
+            className: f().panel,
+            style: ee,
             children: [(0, o.jsxs)("div", {
-              ref: U,
-              className: d().svArea,
+              ref: x,
+              className: f().svArea,
               style: {
                 backgroundColor: `hsl(${C.h}, 100%, 50%)`
               },
               onPointerDown: q,
               children: [(0, o.jsx)("div", {
-                className: d().svWhiteOverlay
+                className: f().svWhiteOverlay
               }), (0, o.jsx)("div", {
-                className: d().svBlackOverlay
+                className: f().svBlackOverlay
               }), (0, o.jsx)("div", {
-                className: d().svCursor,
+                className: f().svCursor,
                 style: {
                   left: `${100*C.s}%`,
                   top: `${(1-C.v)*100}%`
                 }
               })]
             }), (0, o.jsx)("div", {
-              className: d().hueSliderWrapper,
+              className: f().hueSliderWrapper,
               children: (0, o.jsx)("input", {
                 type: "range",
                 min: 0,
                 max: 360,
                 step: 1,
                 value: C.h,
-                onChange: z,
-                className: d().hueSlider,
-                disabled: S
+                onChange: V,
+                className: f().hueSlider,
+                disabled: g
               })
             })]
           });
         return (0, o.jsxs)("div", {
-          className: l().inputContainerWrapper,
+          className: r().inputContainerWrapper,
+          "data-dashboard-feature-label": ea,
           children: [(0, o.jsx)("h1", {
-            className: l().featureName,
+            className: r().featureName,
             children: e
           }), (0, o.jsxs)("div", {
-            className: (0, r.A)(l().inputWrapperDiv, d().wrapper),
-            ref: N,
+            className: (0, n.A)(r().inputWrapperDiv, f().wrapper),
+            ref: U,
             children: [(0, o.jsx)("button", {
               type: "button",
-              className: d().leftSwatchButton,
-              onClick: V,
+              className: f().leftSwatchButton,
+              onClick: J,
               style: {
-                cursor: S ? "not-allowed" : "pointer"
+                cursor: g ? "not-allowed" : "pointer"
               },
-              disabled: S,
+              disabled: g,
               children: (0, o.jsx)("span", {
-                className: d().colorSwatch,
+                className: f().colorSwatch,
                 style: {
-                  backgroundColor: R
+                  backgroundColor: O
                 }
               })
-            }), s && (0, o.jsx)("span", {
-              className: d().leftIcon,
-              children: s
+            }), d && (0, o.jsx)("span", {
+              className: f().leftIcon,
+              children: d
             }), (0, o.jsx)("input", {
               type: "text",
               autoComplete: "off",
@@ -466,21 +635,21 @@
               inputMode: "text",
               maxLength: 7,
               className: Y,
-              placeholder: c,
-              value: W,
+              placeholder: l,
+              value: D,
               onChange: H,
-              onFocus: J,
-              onClick: J,
-              disabled: S,
-              style: g,
+              onFocus: X,
+              onClick: X,
+              disabled: g,
+              style: N,
               ...v
             }), (0, o.jsx)("button", {
               type: "button",
-              className: d().pickerButton,
-              onClick: M ? X : V,
-              disabled: S || M && I,
-              children: p
-            }), G && (Z && K ? (0, n.createPortal)(ee, K) : ee)]
+              className: f().pickerButton,
+              onClick: A ? K : J,
+              disabled: g || A && I,
+              children: m
+            }), k && (Q && Z ? (0, s.createPortal)(et, Z) : et)]
           })]
         })
       }
@@ -488,36 +657,37 @@
     57157: (e, a, t) => {
       "use strict";
       t.d(a, {
-        A: () => l
+        A: () => r
       });
       var o = t(95155),
-        i = t(98241),
-        n = t.n(i),
-        r = t(54834),
-        c = t(81576);
+        c = t(98241),
+        s = t.n(c),
+        n = t(54834),
+        l = t(81576);
 
-      function l({
+      function r({
         featureName: e,
         helpDescription: a,
         element: t,
-        id: i
+        id: c
       }) {
         return (0, o.jsxs)("div", {
-          className: n().featureName,
+          className: s().featureName,
+          "data-dashboard-feature-label": "string" == typeof e ? e : void 0,
           children: [(0, o.jsxs)("h1", {
-            className: n().featureNameText,
+            className: s().featureNameText,
             style: {
               marginBottom: "6px"
             },
-            children: [e, (0, o.jsxs)(c.Ay, {
+            children: [e, (0, o.jsxs)(l.Ay, {
               width: "370px",
               position: "top",
-              id: i,
-              children: [(0, o.jsx)(c.Ay.Target, {
-                children: r.A.help
-              }), (0, o.jsx)(c.Ay.Dropdown, {
+              id: c,
+              children: [(0, o.jsx)(l.Ay.Target, {
+                children: n.A.help
+              }), (0, o.jsx)(l.Ay.Dropdown, {
                 children: (0, o.jsx)("div", {
-                  className: n().helpDescription,
+                  className: s().helpDescription,
                   children: a.split("\n").map((e, a) => (0, o.jsxs)("span", {
                     children: [e, (0, o.jsx)("br", {})]
                   }, a))
@@ -549,26 +719,16 @@
     82461: (e, a, t) => {
       "use strict";
       t.r(a), t.d(a, {
-        default: () => H
+        default: () => W
       });
       var o = t(95155),
-        i = t(12115),
-        n = t(7029),
-        r = t.n(n),
-        c = t(52131),
-        l = t(28485),
-        s = t(66609);
-
-      function d() {
-        return (d = Object.assign ? Object.assign.bind() : function(e) {
-          for (var a = 1; a < arguments.length; a++) {
-            var t = arguments[a];
-            for (var o in t)({}).hasOwnProperty.call(t, o) && (e[o] = t[o])
-          }
-          return e
-        }).apply(null, arguments)
-      }
-      var f = function(e, a) {
+        c = t(12115),
+        s = t(7029),
+        n = t.n(s),
+        l = t(52131),
+        r = t(28485),
+        d = t(66609),
+        f = function(e, a) {
           return e < a ? -1 : +(e > a)
         },
         u = function(e) {
@@ -576,7 +736,7 @@
             return e + a
           }, 0)
         },
-        h = function() {
+        b = function() {
           function e(e) {
             this.colors = e
           }
@@ -587,7 +747,7 @@
             return e
           }, e
         }(),
-        b = function() {
+        h = function() {
           function e(e, a, t) {
             return (e << 10) + (a << 5) + t
           }
@@ -621,8 +781,8 @@
             }
           }
 
-          function t(e, a, t, o, i, n, r) {
-            this.r1 = e, this.r2 = a, this.g1 = t, this.g2 = o, this.b1 = i, this.b2 = n, this.histo = r
+          function t(e, a, t, o, c, s, n) {
+            this.r1 = e, this.r2 = a, this.g1 = t, this.g2 = o, this.b1 = c, this.b2 = s, this.histo = n
           }
 
           function o() {
@@ -637,11 +797,11 @@
             count: function(a) {
               var t = this.histo;
               if (!this._count_set || a) {
-                var o, i, n, r = 0;
+                var o, c, s, n = 0;
                 for (o = this.r1; o <= this.r2; o++)
-                  for (i = this.g1; i <= this.g2; i++)
-                    for (n = this.b1; n <= this.b2; n++) r += t[e(o, i, n)] || 0;
-                this._count = r, this._count_set = !0
+                  for (c = this.g1; c <= this.g2; c++)
+                    for (s = this.b1; s <= this.b2; s++) n += t[e(o, c, s)] || 0;
+                this._count = n, this._count_set = !0
               }
               return this._count
             },
@@ -651,16 +811,16 @@
             avg: function(a) {
               var t = this.histo;
               if (!this._avg || a) {
-                var o, i, n, r, c = 0,
-                  l = 0,
-                  s = 0,
-                  d = 0;
+                var o, c, s, n, l = 0,
+                  r = 0,
+                  d = 0,
+                  f = 0;
                 if (this.r1 === this.r2 && this.g1 === this.g2 && this.b1 === this.b2) this._avg = [this.r1 << 3, this.g1 << 3, this.b1 << 3];
                 else {
-                  for (i = this.r1; i <= this.r2; i++)
-                    for (n = this.g1; n <= this.g2; n++)
-                      for (r = this.b1; r <= this.b2; r++) c += o = t[e(i, n, r)] || 0, l += o * (i + .5) * 8, s += o * (n + .5) * 8, d += o * (r + .5) * 8;
-                  this._avg = c ? [~~(l / c), ~~(s / c), ~~(d / c)] : [~~(8 * (this.r1 + this.r2 + 1) / 2), ~~(8 * (this.g1 + this.g2 + 1) / 2), ~~(8 * (this.b1 + this.b2 + 1) / 2)]
+                  for (c = this.r1; c <= this.r2; c++)
+                    for (s = this.g1; s <= this.g2; s++)
+                      for (n = this.b1; n <= this.b2; n++) l += o = t[e(c, s, n)] || 0, r += o * (c + .5) * 8, d += o * (s + .5) * 8, f += o * (n + .5) * 8;
+                  this._avg = l ? [~~(r / l), ~~(d / l), ~~(f / l)] : [~~(8 * (this.r1 + this.r2 + 1) / 2), ~~(8 * (this.g1 + this.g2 + 1) / 2), ~~(8 * (this.b1 + this.b2 + 1) / 2)]
                 }
               }
               return this._avg
@@ -690,7 +850,7 @@
               return this.nearest(e)
             },
             nearest: function(e) {
-              for (var a, t, o, i = this.vboxes, n = 0; n < i.size(); n++)((t = Math.sqrt(Math.pow(e[0] - i.peek(n).color[0], 2) + Math.pow(e[1] - i.peek(n).color[1], 2) + Math.pow(e[2] - i.peek(n).color[2], 2))) < a || void 0 === a) && (a = t, o = i.peek(n).color);
+              for (var a, t, o, c = this.vboxes, s = 0; s < c.size(); s++)((t = Math.sqrt(Math.pow(e[0] - c.peek(s).color[0], 2) + Math.pow(e[1] - c.peek(s).color[1], 2) + Math.pow(e[2] - c.peek(s).color[2], 2))) < a || void 0 === a) && (a = t, o = c.peek(s).color);
               return o
             },
             forcebw: function() {
@@ -705,131 +865,111 @@
               o[0] > 251 && o[1] > 251 && o[2] > 251 && (e[t].color = [255, 255, 255])
             }
           }, {
-            quantize: function(i, n) {
-              if (!Number.isInteger(n) || n < 1 || n > 256) throw Error("Invalid maximum color count. It must be an integer between 1 and 256.");
-              if (!i.length || n < 2 || n > 256 || !i.length || n < 2 || n > 256) return !1;
-              for (var r, c, l, s, d, u, b, _, p, m, S, g = [], v = new Set, N = 0; N < i.length; N++) {
-                var U = i[N],
-                  x = U.join(",");
-                v.has(x) || (v.add(x), g.push(U))
+            quantize: function(c, s) {
+              if (!Number.isInteger(s) || s < 1 || s > 256) throw Error("Invalid maximum color count. It must be an integer between 1 and 256.");
+              if (!c.length || s < 2 || s > 256 || !c.length || s < 2 || s > 256) return !1;
+              for (var n, l, r, d, u, h, p, _, m, S, g, N = [], v = new Set, U = 0; U < c.length; U++) {
+                var x = c[U],
+                  y = x.join(",");
+                v.has(y) || (v.add(y), N.push(x))
               }
-              if (g.length <= n) return new h(g);
-              var G = (c = Array(32768), i.forEach(function(a) {
-                c[r = e(a[0] >> 3, a[1] >> 3, a[2] >> 3)] = (c[r] || 0) + 1
-              }), c);
-              G.forEach(function() {});
-              var y = (u = 1e6, b = 0, _ = 1e6, p = 0, m = 1e6, S = 0, i.forEach(function(e) {
-                  (l = e[0] >> 3) < u ? u = l : l > b && (b = l), (s = e[1] >> 3) < _ ? _ = s : s > p && (p = s), (d = e[2] >> 3) < m ? m = d : d > S && (S = d)
-                }), new t(u, b, _, p, m, S, G)),
+              if (N.length <= s) return new b(N);
+              var k = (l = Array(32768), c.forEach(function(a) {
+                l[n = e(a[0] >> 3, a[1] >> 3, a[2] >> 3)] = (l[n] || 0) + 1
+              }), l);
+              k.forEach(function() {});
+              var G = (h = 1e6, p = 0, _ = 1e6, m = 0, S = 1e6, g = 0, c.forEach(function(e) {
+                  (r = e[0] >> 3) < h ? h = r : r > p && (p = r), (d = e[1] >> 3) < _ ? _ = d : d > m && (m = d), (u = e[2] >> 3) < S ? S = u : u > g && (g = u)
+                }), new t(h, p, _, m, S, g, k)),
                 C = new a(function(e, a) {
                   return f(e.count(), a.count())
                 });
 
-              function k(a, t) {
-                for (var o, i = a.size(), n = 0; n < 1e3;) {
-                  if (i >= t || n++ > 1e3) return;
+              function j(a, t) {
+                for (var o, c = a.size(), s = 0; s < 1e3;) {
+                  if (c >= t || s++ > 1e3) return;
                   if ((o = a.pop()).count()) {
-                    var r = function(a, t) {
+                    var n = function(a, t) {
                         if (t.count()) {
                           var o = t.r2 - t.r1 + 1,
-                            i = t.g2 - t.g1 + 1,
-                            n = Math.max.apply(null, [o, i, t.b2 - t.b1 + 1]);
+                            c = t.g2 - t.g1 + 1,
+                            s = Math.max.apply(null, [o, c, t.b2 - t.b1 + 1]);
                           if (1 == t.count()) return [t.copy()];
-                          var r, c, l, s, d = 0,
-                            f = [],
-                            u = [];
-                          if (n == o)
-                            for (r = t.r1; r <= t.r2; r++) {
-                              for (s = 0, c = t.g1; c <= t.g2; c++)
-                                for (l = t.b1; l <= t.b2; l++) s += a[e(r, c, l)] || 0;
-                              f[r] = d += s
-                            } else if (n == i)
-                              for (r = t.g1; r <= t.g2; r++) {
-                                for (s = 0, c = t.r1; c <= t.r2; c++)
-                                  for (l = t.b1; l <= t.b2; l++) s += a[e(c, r, l)] || 0;
-                                f[r] = d += s
+                          var n, l, r, d, f = 0,
+                            u = [],
+                            b = [];
+                          if (s == o)
+                            for (n = t.r1; n <= t.r2; n++) {
+                              for (d = 0, l = t.g1; l <= t.g2; l++)
+                                for (r = t.b1; r <= t.b2; r++) d += a[e(n, l, r)] || 0;
+                              u[n] = f += d
+                            } else if (s == c)
+                              for (n = t.g1; n <= t.g2; n++) {
+                                for (d = 0, l = t.r1; l <= t.r2; l++)
+                                  for (r = t.b1; r <= t.b2; r++) d += a[e(l, n, r)] || 0;
+                                u[n] = f += d
                               } else
-                                for (r = t.b1; r <= t.b2; r++) {
-                                  for (s = 0, c = t.r1; c <= t.r2; c++)
-                                    for (l = t.g1; l <= t.g2; l++) s += a[e(c, l, r)] || 0;
-                                  f[r] = d += s
+                                for (n = t.b1; n <= t.b2; n++) {
+                                  for (d = 0, l = t.r1; l <= t.r2; l++)
+                                    for (r = t.g1; r <= t.g2; r++) d += a[e(l, r, n)] || 0;
+                                  u[n] = f += d
                                 }
-                          return f.forEach(function(e, a) {
-                              u[a] = d - e
+                          return u.forEach(function(e, a) {
+                              b[a] = f - e
                             }),
                             function(e) {
-                              var a, o, i, n, c, l = e + "1",
-                                s = e + "2",
+                              var a, o, c, s, l, r = e + "1",
+                                d = e + "2",
                                 h = 0;
-                              for (r = t[l]; r <= t[s]; r++)
-                                if (f[r] > d / 2) {
-                                  for (i = t.copy(), n = t.copy(), c = (a = r - t[l]) <= (o = t[s] - r) ? Math.min(t[s] - 1, ~~(r + o / 2)) : Math.max(t[l], ~~(r - 1 - a / 2)); !f[c];) c++;
-                                  for (h = u[c]; !h && f[c - 1];) h = u[--c];
-                                  return i[s] = c, n[l] = i[s] + 1, [i, n]
+                              for (n = t[r]; n <= t[d]; n++)
+                                if (u[n] > f / 2) {
+                                  for (c = t.copy(), s = t.copy(), l = (a = n - t[r]) <= (o = t[d] - n) ? Math.min(t[d] - 1, ~~(n + o / 2)) : Math.max(t[r], ~~(n - 1 - a / 2)); !u[l];) l++;
+                                  for (h = b[l]; !h && u[l - 1];) h = b[--l];
+                                  return c[d] = l, s[r] = c[d] + 1, [c, s]
                                 }
-                            }(n == o ? "r" : n == i ? "g" : "b")
+                            }(s == o ? "r" : s == c ? "g" : "b")
                         }
-                      }(G, o),
-                      c = r[0],
-                      l = r[1];
-                    if (!c) return;
-                    a.push(c), l && (a.push(l), i++)
-                  } else a.push(o), n++
+                      }(k, o),
+                      l = n[0],
+                      r = n[1];
+                    if (!l) return;
+                    a.push(l), r && (a.push(r), c++)
+                  } else a.push(o), s++
                 }
               }
-              C.push(y), k(C, .75 * n);
-              for (var j = new a(function(e, a) {
+              C.push(G), j(C, .75 * s);
+              for (var w = new a(function(e, a) {
                   return f(e.count() * e.volume(), a.count() * a.volume())
-                }); C.size();) j.push(C.pop());
-              k(j, n);
-              for (var w = new o; j.size();) w.push(j.pop());
-              return w
+                }); C.size();) w.push(C.pop());
+              j(w, s);
+              for (var M = new o; w.size();) M.push(w.pop());
+              return M
             }
           }
         }().quantize,
-        _ = function(e, a, t, o) {
-          for (var i, n, r, c, l, s = o || {}, d = s.ignoreWhite, f = void 0 === d || d, u = s.whiteThreshold, h = void 0 === u ? 250 : u, b = s.alphaThreshold, _ = void 0 === b ? 125 : b, p = s.minSaturation, m = void 0 === p ? 0 : p, S = [], g = 0; g < a; g += t)
-            if (n = e[0 + (i = 4 * g)], r = e[i + 1], c = e[i + 2], !(void 0 !== (l = e[i + 3]) && l < _ || f && n > h && r > h && c > h)) {
-              if (m > 0) {
-                var v = Math.max(n, r, c);
-                if (0 === v || (v - Math.min(n, r, c)) / v < m) continue
-              }
-              S.push([n, r, c])
-            } return S
-        },
         p = function(e) {
-          var a = e.colorCount,
-            t = e.quality;
-          if (void 0 !== a && Number.isInteger(a)) {
-            if (1 === a) throw Error("colorCount should be between 2 and 20. To get one color, call getColor() instead of getPalette()");
-            a = Math.min(a = Math.max(a, 2), 20)
-          } else a = 10;
-          return (void 0 === t || !Number.isInteger(t) || t < 1) && (t = 10), {
-            colorCount: a,
-            quality: t,
-            ignoreWhite: void 0 === e.ignoreWhite || !!e.ignoreWhite,
-            whiteThreshold: "number" == typeof e.whiteThreshold ? e.whiteThreshold : 250,
-            alphaThreshold: "number" == typeof e.alphaThreshold ? e.alphaThreshold : 125,
-            minSaturation: "number" == typeof e.minSaturation ? Math.max(0, Math.min(1, e.minSaturation)) : 0
-          }
-        },
-        m = function() {};
-      async function S(e, a, t, o, i, n, r, c = "") {
-        let l = new FormData;
-        n(!0), l.append("social", e), l.append("value", a), l.append("id", t), l.append("mode", o), l.append("icon", r), c && l.append("glow_color", c);
-        let d = await fetch("https://guns.lol/api/dashboard/links/edit", {
+          this.canvas = document.createElement("canvas"), this.context = this.canvas.getContext("2d"), this.width = this.canvas.width = e.naturalWidth, this.height = this.canvas.height = e.naturalHeight, this.context.drawImage(e, 0, 0, this.width, this.height)
+        };
+      p.prototype.getImageData = function() {
+        return this.context.getImageData(0, 0, this.width, this.height)
+      };
+      var _ = function() {};
+      async function m(e, a, t, o, c, s, n, l = "") {
+        let r = new FormData;
+        s(!0), r.append("social", e), r.append("value", a), r.append("id", t), r.append("mode", o), r.append("icon", n), l && r.append("glow_color", l);
+        let f = await fetch("https://guns.lol/api/dashboard/links/edit", {
             method: "POST",
-            body: l
+            body: r
           }),
-          f = await d.json();
-        return d.ok ? (i(f.socials), setTimeout(function() {
-          n(!1)
-        }, 500), !0) : (s.oR.error(f.error), console.error(f.error), setTimeout(function() {
-          n(!1)
+          u = await f.json();
+        return f.ok ? (c(u.socials), setTimeout(function() {
+          s(!1)
+        }, 500), !0) : (d.oR.error(u.error), console.error(u.error), setTimeout(function() {
+          s(!1)
         }, 500), null)
       }
-      async function g(e, a, t, o) {
-        let i = await fetch("https://guns.lol/api/dashboard/links/delete", {
+      async function S(e, a, t, o) {
+        let c = await fetch("https://guns.lol/api/dashboard/links/delete", {
           method: "POST",
           body: JSON.stringify({
             social: e,
@@ -837,10 +977,10 @@
           })
         });
         o.target.style.pointerEvents = "none";
-        let n = await i.json();
-        return i.ok ? (t(n.socials), !0) : (s.oR.error(n.error), console.error(n.error), o.target.style.pointerEvents = "all", null)
+        let s = await c.json();
+        return c.ok ? (t(s.socials), !0) : (d.oR.error(s.error), console.error(s.error), o.target.style.pointerEvents = "all", null)
       }
-      async function v(e, a, t) {
+      async function g(e, a, t) {
         let o = await fetch("https://guns.lol/api/dashboard/links/visibility", {
             method: "POST",
             headers: {
@@ -851,37 +991,37 @@
               hidden: a
             })
           }),
-          i = await o.json();
-        return o.ok ? (t(i.socials), !0) : (console.error(i.error), null)
+          c = await o.json();
+        return o.ok ? (t(c.socials), !0) : (console.error(c.error), null)
       }
-      async function N(e, a, t, o, i, n, r = "") {
-        let c = new FormData;
-        n(!0), c.append("social", e), c.append("value", a), c.append("mode", o), r && c.append("glow_color", r), i && c.append("icon", i);
-        let l = await fetch("https://guns.lol/api/dashboard/links/add", {
+      async function N(e, a, t, o, c, s, n = "") {
+        let l = new FormData;
+        s(!0), l.append("social", e), l.append("value", a), l.append("mode", o), n && l.append("glow_color", n), c && l.append("icon", c);
+        let r = await fetch("https://guns.lol/api/dashboard/links/add", {
             method: "POST",
-            body: c
+            body: l
           }),
-          d = await l.json();
-        return l.ok ? (t(d.socials), setTimeout(function() {
-          n(!1)
-        }, 500), !0) : (s.oR.error(d.error), console.error(d.error), setTimeout(function() {
-          n(!1)
+          f = await r.json();
+        return r.ok ? (t(f.socials), setTimeout(function() {
+          s(!1)
+        }, 500), !0) : (d.oR.error(f.error), console.error(f.error), setTimeout(function() {
+          s(!1)
         }, 500), null)
       }
-      async function U(e) {
+      async function v(e) {
         return new Promise(a => {
           let t = new Image,
             o = URL.createObjectURL(e);
           t.onload = () => {
             try {
-              let e = new m().getPalette(t, 5),
-                i = e && e[0];
-              if (!i) {
+              let e = new _().getPalette(t, 5),
+                c = e && e[0];
+              if (!c) {
                 a("#a3a3a3"), URL.revokeObjectURL(o);
                 return
               }
-              let [n, r, c] = i, l = "#" + (0x1000000 + (n << 16) + (r << 8) + c).toString(16).slice(1);
-              a(l)
+              let [s, n, l] = c, r = "#" + (0x1000000 + (s << 16) + (n << 8) + l).toString(16).slice(1);
+              a(r)
             } catch (e) {
               console.error("ColorThief failed to get color", e), a("#a3a3a3")
             } finally {
@@ -892,276 +1032,209 @@
           }, t.src = o
         })
       }
-      m.prototype.getColor = function(e, a) {
-        if ("object" == typeof a && null !== a) {
-          var t = this.getPalette(e, d({
-            colorCount: 5
-          }, a));
-          return null === t ? null : t[0]
-        }
-        var o = this.getPalette(e, 5, a);
-        return null === o ? null : o[0]
-      }, m.prototype.getPalette = function(e, a, t) {
-        var o, i, n, r = {
-          ignoreWhite: (o = p("object" == typeof a && null !== a ? {
-            colorCount: a.colorCount,
-            quality: a.quality,
-            ignoreWhite: a.ignoreWhite,
-            whiteThreshold: a.whiteThreshold,
-            alphaThreshold: a.alphaThreshold,
-            minSaturation: a.minSaturation
-          } : {
+      _.prototype.getColor = function(e, a) {
+        return void 0 === a && (a = 10), this.getPalette(e, 5, a)[0]
+      }, _.prototype.getPalette = function(e, a, t) {
+        var o = function(e) {
+            var a = e.colorCount,
+              t = e.quality;
+            if (void 0 !== a && Number.isInteger(a)) {
+              if (1 === a) throw Error("colorCount should be between 2 and 20. To get one color, call getColor() instead of getPalette()");
+              a = Math.min(a = Math.max(a, 2), 20)
+            } else a = 10;
+            return (void 0 === t || !Number.isInteger(t) || t < 1) && (t = 10), {
+              colorCount: a,
+              quality: t
+            }
+          }({
             colorCount: a,
             quality: t
-          })).ignoreWhite,
-          whiteThreshold: o.whiteThreshold,
-          alphaThreshold: o.alphaThreshold,
-          minSaturation: o.minSaturation
-        };
-        if (!e) throw Error("sourceImage is required");
-        if (e instanceof HTMLImageElement) {
-          if (!e.complete) throw Error('Image has not finished loading. Wait for the "load" event before calling getColor/getPalette.');
-          if (!e.naturalWidth) throw Error("Image has no dimensions. It may not have loaded successfully.")
-        }
-        try {
-          var c = function(e) {
-            if (e instanceof HTMLImageElement) {
-              var a = document.createElement("canvas"),
-                t = a.getContext("2d"),
-                o = a.width = e.naturalWidth,
-                i = a.height = e.naturalHeight;
-              return t.drawImage(e, 0, 0, o, i), {
-                imageData: t.getImageData(0, 0, o, i),
-                pixelCount: o * i
-              }
-            }
-            if (e instanceof HTMLCanvasElement) {
-              var n = e.getContext("2d"),
-                r = e.width,
-                c = e.height;
-              return {
-                imageData: n.getImageData(0, 0, r, c),
-                pixelCount: r * c
-              }
-            }
-            if ("undefined" != typeof ImageData && e instanceof ImageData) return {
-              imageData: e,
-              pixelCount: e.width * e.height
-            };
-            if ("undefined" != typeof ImageBitmap && e instanceof ImageBitmap) {
-              var l = document.createElement("canvas"),
-                s = l.getContext("2d");
-              return l.width = e.width, l.height = e.height, s.drawImage(e, 0, 0), {
-                imageData: s.getImageData(0, 0, e.width, e.height),
-                pixelCount: e.width * e.height
-              }
-            }
-            throw Error("Unsupported source type. Expected HTMLImageElement, HTMLCanvasElement, ImageData, or ImageBitmap.")
-          }(e);
-          i = c.imageData, n = c.pixelCount
-        } catch (e) {
-          if ("SecurityError" === e.name) throw Error('Image is tainted by cross-origin data. Add crossorigin="anonymous" to the <img> tag and ensure the server sends appropriate CORS headers.', {
-            cause: e
-          });
-          throw e
-        }
-        var l = _(i.data, n, o.quality, r);
-        0 === l.length && (l = _(i.data, n, o.quality, d({}, r, {
-          ignoreWhite: !1
-        }))), 0 === l.length && (l = _(i.data, n, o.quality, d({}, r, {
-          ignoreWhite: !1,
-          alphaThreshold: 0
-        })));
-        var s = b(l, o.colorCount),
-          f = s ? s.palette() : null;
-        if (f) return f;
-        var u = function(e, a, t) {
-          for (var o = 0, i = 0, n = 0, r = 0, c = 0; c < a; c += t) {
-            var l = 4 * c;
-            o += e[l], i += e[l + 1], n += e[l + 2], r++
-          }
-          return 0 === r ? null : [Math.round(o / r), Math.round(i / r), Math.round(n / r)]
-        }(i.data, n, o.quality);
-        return u ? [u] : null
-      }, m.prototype.getColorFromUrl = function(e, a, t) {
+          }),
+          c = new p(e),
+          s = h(function(e, a, t) {
+            for (var o, c, s, n, l, r = [], d = 0; d < a; d += t) c = e[0 + (o = 4 * d)], s = e[o + 1], n = e[o + 2], (void 0 === (l = e[o + 3]) || l >= 125) && (c > 250 && s > 250 && n > 250 || r.push([c, s, n]));
+            return r
+          }(c.getImageData().data, c.width * c.height, o.quality), o.colorCount);
+        return s ? s.palette() : null
+      }, _.prototype.getColorFromUrl = function(e, a, t) {
         var o = this,
-          i = document.createElement("img");
-        i.addEventListener("load", function() {
-          var n = o.getPalette(i, 5, t);
-          a(n ? n[0] : null, e)
-        }), i.src = e
-      }, m.prototype.getImageData = function(e, a) {
+          c = document.createElement("img");
+        c.addEventListener("load", function() {
+          a(o.getPalette(c, 5, t)[0], e)
+        }), c.src = e
+      }, _.prototype.getImageData = function(e, a) {
         var t = new XMLHttpRequest;
         t.open("GET", e, !0), t.responseType = "arraybuffer", t.onload = function() {
           if (200 == this.status) {
-            for (var e = new Uint8Array(this.response), t = Array(e.length), o = 0; o < e.length; o++) t[o] = String.fromCharCode(e[o]);
-            var i = t.join("");
-            a("data:image/png;base64," + window.btoa(i))
+            var e = new Uint8Array(this.response);
+            i = e.length;
+            for (var t = Array(i), o = 0; o < e.length; o++) t[o] = String.fromCharCode(e[o]);
+            var c = t.join("");
+            a("data:image/png;base64," + window.btoa(c))
           }
         }, t.send()
-      }, m.prototype.getColorAsync = function(e, a, t) {
+      }, _.prototype.getColorAsync = function(e, a, t) {
         var o = this;
         this.getImageData(e, function(e) {
-          var i = document.createElement("img");
-          i.addEventListener("load", function() {
-            var e = o.getPalette(i, 5, t);
-            a(e ? e[0] : null, this)
-          }), i.src = e
+          var c = document.createElement("img");
+          c.addEventListener("load", function() {
+            a(o.getPalette(c, 5, t)[0], this)
+          }), c.src = e
         })
       };
-      var x = t(37897),
-        G = t(57157),
+      var U = t(37897),
+        x = t(57157),
         y = t(98500),
-        C = t.n(y),
-        k = t(45941),
-        j = t(30184),
-        w = t(96351),
-        M = t(12521);
+        k = t.n(y),
+        G = t(45941),
+        C = t(30184),
+        j = t(96351),
+        w = t(12521);
 
-      function E({
+      function M({
         social: e,
         id: a,
         socialMode: t,
-        socialsConfig: n,
-        setSocials: d,
-        setIsModalOpened: f,
-        previousIcon: u
+        socialsConfig: s,
+        setSocials: f,
+        setIsModalOpened: u,
+        previousIcon: b
       }) {
-        let h = (0, w.kj)(),
-          b = (0, l.vp)(e, h),
-          _ = n.find(t => t.social === e && t.id === a),
-          [p, m] = (0, i.useState)(() => _ ? _.value : ""),
-          [g, v] = (0, i.useState)(),
-          [N, y] = (0, i.useState)(!1),
-          [E, I] = (0, i.useState)(u),
-          [A, T] = (0, i.useState)(t ?? "link"),
-          [L, B] = (0, i.useState)(_?.glow_color || "#a3a3a3"),
-          D = !!E,
-          W = "custom_url" !== e ? p.replace("https://" + l.Uy[e], "") : p.replace("https://", "");
-        async function O(t) {
-          let o = "custom_url" === e && D ? L : "",
-            i = await S(e, W, a, A, d, y, g || E, o);
-          t.target.style.pointerEvents = "none", i ? (s.oR.success(h("dashboard.links.social_edit.save_success")), f(!1)) : t.target.style.pointerEvents = "all"
+        let h = (0, j.kj)(),
+          p = (0, r.vp)(e, h),
+          _ = s.find(t => t.social === e && t.id === a),
+          [S, g] = (0, c.useState)(() => _ ? _.value : ""),
+          [N, y] = (0, c.useState)(),
+          [M, A] = (0, c.useState)(!1),
+          [E, I] = (0, c.useState)(b),
+          [L, B] = (0, c.useState)(t ?? "link"),
+          [R, T] = (0, c.useState)(_?.glow_color || "#a3a3a3"),
+          $ = !!E,
+          D = "custom_url" !== e ? S.replace("https://" + r.Uy[e], "") : S.replace("https://", "");
+        async function F(t) {
+          let o = "custom_url" === e && $ ? R : "",
+            c = await m(e, D, a, L, f, A, N || E, o);
+          t.target.style.pointerEvents = "none", c ? (d.oR.success(h("dashboard.links.social_edit.save_success")), u(!1)) : t.target.style.pointerEvents = "all"
         }
-        let R = async e => {
+        let O = async e => {
           var a;
           let t;
           e.target.disabled = !0;
           let o = e.target.files?.[0];
           if (!o) return;
-          let i = k.nB.icon,
-            n = $(o.name).toLowerCase();
-          if (!i.includes(n)) {
-            s.oR.error(h("dashboard.links.social_edit.invalid_file")), e.target.disabled = !1, e.target.value = "";
+          let c = G.nB.icon,
+            s = W(o.name).toLowerCase();
+          if (!c.includes(s)) {
+            d.oR.error(h("dashboard.links.social_edit.invalid_file")), e.target.disabled = !1, e.target.value = "";
             return
           }
           try {
-            let e = await U(o);
-            B(e)
+            let e = await v(o);
+            T(e)
           } catch (e) {
-            B("#a3a3a3")
+            T("#a3a3a3")
           }
-          v(o), a = o, (t = new FileReader).onload = function(e) {
+          y(o), a = o, (t = new FileReader).onload = function(e) {
             I(e.target.result)
           }, t.readAsDataURL(a)
         };
 
-        function $(e) {
+        function W(e) {
           return "." + e.substring(e.lastIndexOf(".") + 1)
         }
-        let F = e => {
-          T(e)
+        let P = e => {
+          B(e)
         };
         return (0, o.jsxs)(o.Fragment, {
           children: [(0, o.jsxs)("div", {
-            className: r()[e + "ModalSocial"],
+            className: n()[e + "ModalSocial"],
             children: ["custom_url" === e && (0, o.jsxs)(o.Fragment, {
               children: [(0, o.jsxs)("div", {
-                className: r().iconUploadWrapper,
+                className: n().iconUploadWrapper,
                 children: [(0, o.jsx)("h1", {
-                  className: r().uploaderHeadingText,
+                  className: n().uploaderHeadingText,
                   children: h("dashboard.links.social_edit.icon.label")
                 }), (0, o.jsx)("div", {
-                  className: r().iconUpload,
+                  className: n().iconUpload,
                   children: E ? (0, o.jsxs)(o.Fragment, {
                     children: [(0, o.jsxs)("div", {
-                      className: r().fileBadge,
+                      className: n().fileBadge,
                       children: [(0, o.jsx)("span", {
-                        children: $(g && g.name ? g.name : E).toUpperCase()
+                        children: W(N && N.name ? N.name : E).toUpperCase()
                       }), (0, o.jsx)("span", {
                         onClick: function() {
-                          I(""), v(""), B("#a3a3a3")
+                          I(""), y(""), T("#a3a3a3")
                         },
-                        children: c.A.deleteFile
+                        children: l.A.deleteFile
                       })]
                     }), (0, o.jsx)("img", {
                       src: E,
                       alt: "Icon",
-                      className: r().uploadCardImage
+                      className: n().uploadCardImage
                     })]
                   }) : (0, o.jsxs)(o.Fragment, {
                     children: [(0, o.jsxs)("div", {
-                      className: r().uploadCardText,
-                      children: [c.A.image, (0, o.jsx)("h1", {
+                      className: n().uploadCardText,
+                      children: [l.A.image, (0, o.jsx)("h1", {
                         children: h("dashboard.links.social_edit.icon.upload_prompt")
                       })]
                     }), (0, o.jsx)("input", {
                       type: "file",
-                      accept: M.vJ.icon.map(e => e).join(", "),
+                      accept: w.vJ.icon.map(e => e).join(", "),
                       onChange: e => {
-                        R(e)
+                        O(e)
                       }
                     })]
                   })
                 })]
-              }), D && (0, o.jsx)(j.A, {
+              }), $ && (0, o.jsx)(C.A, {
                 featureName: h("dashboard.links.social_edit.icon_glow.label"),
-                onChangeFunction: B,
-                value: L,
+                onChangeFunction: T,
+                value: R,
                 placeholder: h("dashboard.links.social_edit.icon_glow.placeholder")
               })]
             }), (0, o.jsxs)("div", {
-              className: r().socialInputWrapper,
-              children: [!["ltc", "eth", "bitcoin", "monero", "solana", "xrp", "playstation"].includes(e) && (0, o.jsx)(G.A, {
+              className: n().socialInputWrapper,
+              children: [!["ltc", "eth", "bitcoin", "monero", "solana", "xrp", "playstation"].includes(e) && (0, o.jsx)(x.A, {
                 featureName: h("dashboard.links.social_edit.mode.label"),
                 helpDescription: h("dashboard.links.social_edit.mode.description"),
                 element: (0, o.jsxs)("div", {
-                  className: r().socialModeSelection,
+                  className: n().socialModeSelection,
                   children: [(0, o.jsxs)("span", {
-                    className: `${r().socialModeSelectionButton} ${"link"===A&&r().active}`,
-                    onClick: () => F("link"),
-                    children: [c.A.link, " ", h("dashboard.links.social_edit.mode.link_option")]
+                    className: `${n().socialModeSelectionButton} ${"link"===L&&n().active}`,
+                    onClick: () => P("link"),
+                    children: [l.A.link, " ", h("dashboard.links.social_edit.mode.link_option")]
                   }), (0, o.jsxs)("span", {
-                    className: `${r().socialModeSelectionButton} ${"text"===A&&r().active}`,
-                    onClick: () => F("text"),
-                    children: [c.A.text, " ", h("dashboard.links.social_edit.mode.text_option")]
+                    className: `${n().socialModeSelectionButton} ${"text"===L&&n().active}`,
+                    onClick: () => P("text"),
+                    children: [l.A.text, " ", h("dashboard.links.social_edit.mode.text_option")]
                   })]
                 })
-              }), "link" === A ? (0, o.jsx)(x.A, {
+              }), "link" === L ? (0, o.jsx)(U.A, {
                 onChangeFunction: e => {
-                  m(e.target.value)
+                  g(e.target.value)
                 },
-                value: W,
-                placeholder: b,
-                prefix: l.Uy[e],
-                prefixLength: l.Fb[e],
-                icon: c.A["custom_url" === e ? "customUrl" : e]
-              }) : (0, o.jsx)(x.A, {
+                value: D,
+                placeholder: p,
+                prefix: r.Uy[e],
+                prefixLength: r.Fb[e],
+                icon: l.A["custom_url" === e ? "customUrl" : e]
+              }) : (0, o.jsx)(U.A, {
                 onChangeFunction: e => {
-                  m(e.target.value)
+                  g(e.target.value)
                 },
-                value: W,
-                placeholder: b,
-                icon: c.A["custom_url" === e ? "customUrl" : e]
+                value: D,
+                placeholder: p,
+                icon: l.A["custom_url" === e ? "customUrl" : e]
               })]
             })]
           }), (0, o.jsxs)("div", {
-            className: r().socialSaveButtonWrapper,
+            className: n().socialSaveButtonWrapper,
             children: [(0, o.jsxs)("span", {
-              className: r().socialSaveButton,
-              onClick: O,
-              children: [N && c.A.loading, " ", h("dashboard.links.social_edit.save_button")]
-            }), (0, o.jsx)(C(), {
+              className: n().socialSaveButton,
+              onClick: F,
+              children: [M && l.A.loading, " ", h("dashboard.links.social_edit.save_button")]
+            }), (0, o.jsx)(k(), {
               href: "https://help.guns.lol/getting-started/adding-links",
               target: "_blank",
               children: h("dashboard.links.social_edit.help_link")
@@ -1170,230 +1243,230 @@
         })
       }
 
-      function I({
+      function A({
         social: e,
         setSocials: a,
         setIsModalOpened: t
       }) {
-        let n = (0, w.kj)(),
-          d = (0, l.vp)(e, n),
-          [f, u] = (0, i.useState)(""),
-          [h, b] = (0, i.useState)(),
-          [_, p] = (0, i.useState)(""),
-          [m, S] = (0, i.useState)(!1),
-          [g, v] = (0, i.useState)(!1),
-          [y, E] = (0, i.useState)("link"),
-          [I, A] = (0, i.useState)("#a3a3a3");
-        async function T(o) {
-          if (!g) {
-            v(!0), o.target.style.pointerEvents = "none";
+        let s = (0, j.kj)(),
+          f = (0, r.vp)(e, s),
+          [u, b] = (0, c.useState)(""),
+          [h, p] = (0, c.useState)(),
+          [_, m] = (0, c.useState)(""),
+          [S, g] = (0, c.useState)(!1),
+          [y, M] = (0, c.useState)(!1),
+          [A, E] = (0, c.useState)("link"),
+          [I, L] = (0, c.useState)("#a3a3a3");
+        async function B(o) {
+          if (!y) {
+            M(!0), o.target.style.pointerEvents = "none";
             try {
               let o = "custom_url" === e && _ ? I : "";
-              await N(e, f, a, y, h, S, o) && t(!1)
+              await N(e, u, a, A, h, g, o) && t(!1)
             } finally {
-              o.target.style.pointerEvents = "all", v(!1)
+              o.target.style.pointerEvents = "all", M(!1)
             }
           }
         }
-        let L = async e => {
+        let R = async e => {
           var a;
           let t;
           e.target.disabled = !0;
           let o = e.target.files?.[0];
           if (!o) return;
-          let i = k.nB.icon,
-            r = B(o.name).toLowerCase();
-          if (!i.includes(r)) {
-            s.oR.error(n("dashboard.links.social_add.invalid_file")), e.target.disabled = !1, e.target.value = "";
+          let c = G.nB.icon,
+            n = T(o.name).toLowerCase();
+          if (!c.includes(n)) {
+            d.oR.error(s("dashboard.links.social_add.invalid_file")), e.target.disabled = !1, e.target.value = "";
             return
           }
           try {
-            let e = await U(o);
-            A(e)
+            let e = await v(o);
+            L(e)
           } catch (e) {
-            A("#a3a3a3")
+            L("#a3a3a3")
           }
-          b(o), a = o, (t = new FileReader).onload = function(e) {
-            p(e.target.result)
+          p(o), a = o, (t = new FileReader).onload = function(e) {
+            m(e.target.result)
           }, t.readAsDataURL(a)
         };
 
-        function B(e) {
+        function T(e) {
           return "." + e.substring(e.lastIndexOf(".") + 1)
         }
-        let D = e => {
+        let $ = e => {
           E(e)
         };
         return (0, o.jsxs)(o.Fragment, {
           children: [(0, o.jsxs)("div", {
-            className: r()[e + "ModalSocial"],
+            className: n()[e + "ModalSocial"],
             children: ["custom_url" === e && (0, o.jsxs)(o.Fragment, {
               children: [(0, o.jsxs)("div", {
-                className: r().iconUploadWrapper,
+                className: n().iconUploadWrapper,
                 children: [(0, o.jsx)("h1", {
-                  className: r().uploaderHeadingText,
-                  children: n("dashboard.links.social_add.icon.label")
+                  className: n().uploaderHeadingText,
+                  children: s("dashboard.links.social_add.icon.label")
                 }), (0, o.jsx)("div", {
-                  className: r().iconUpload,
+                  className: n().iconUpload,
                   children: "" === _ ? (0, o.jsxs)(o.Fragment, {
                     children: [(0, o.jsxs)("div", {
-                      className: r().uploadCardText,
-                      children: [c.A.image, (0, o.jsx)("h1", {
-                        children: n("dashboard.links.social_add.icon.upload_prompt")
+                      className: n().uploadCardText,
+                      children: [l.A.image, (0, o.jsx)("h1", {
+                        children: s("dashboard.links.social_add.icon.upload_prompt")
                       })]
                     }), (0, o.jsx)("input", {
                       type: "file",
-                      accept: M.vJ.icon.map(e => e).join(", "),
+                      accept: w.vJ.icon.map(e => e).join(", "),
                       onChange: e => {
-                        L(e)
+                        R(e)
                       }
                     })]
                   }) : (0, o.jsxs)(o.Fragment, {
                     children: [(0, o.jsxs)("div", {
-                      className: r().fileBadge,
+                      className: n().fileBadge,
                       children: [(0, o.jsx)("span", {
-                        children: B(h.name).toUpperCase()
+                        children: T(h.name).toUpperCase()
                       }), (0, o.jsx)("span", {
                         onClick: function() {
-                          p(""), b(""), A("#a3a3a3")
+                          m(""), p(""), L("#a3a3a3")
                         },
-                        children: c.A.deleteFile
+                        children: l.A.deleteFile
                       })]
                     }), (0, o.jsx)("img", {
                       src: _,
                       alt: "Icon",
-                      className: r().uploadCardImage
+                      className: n().uploadCardImage
                     })]
                   })
                 })]
-              }), !!_ && (0, o.jsx)(j.A, {
-                featureName: n("dashboard.links.social_add.icon_glow.label"),
-                onChangeFunction: A,
+              }), !!_ && (0, o.jsx)(C.A, {
+                featureName: s("dashboard.links.social_add.icon_glow.label"),
+                onChangeFunction: L,
                 value: I,
-                placeholder: n("dashboard.links.social_add.icon_glow.placeholder")
+                placeholder: s("dashboard.links.social_add.icon_glow.placeholder")
               })]
             }), (0, o.jsxs)("div", {
-              className: r().socialInputWrapper,
-              children: [!["ltc", "eth", "bitcoin", "monero", "solana", "xrp", "playstation"].includes(e) && (0, o.jsx)(G.A, {
-                featureName: n("dashboard.links.social_add.mode.label"),
-                helpDescription: n("dashboard.links.social_add.mode.description"),
+              className: n().socialInputWrapper,
+              children: [!["ltc", "eth", "bitcoin", "monero", "solana", "xrp", "playstation"].includes(e) && (0, o.jsx)(x.A, {
+                featureName: s("dashboard.links.social_add.mode.label"),
+                helpDescription: s("dashboard.links.social_add.mode.description"),
                 element: (0, o.jsxs)("div", {
-                  className: r().socialModeSelection,
+                  className: n().socialModeSelection,
                   children: [(0, o.jsxs)("span", {
-                    className: `${r().socialModeSelectionButton} ${"link"===y&&r().active}`,
-                    onClick: () => D("link"),
-                    children: [c.A.link, " ", n("dashboard.links.social_add.mode.link_option")]
+                    className: `${n().socialModeSelectionButton} ${"link"===A&&n().active}`,
+                    onClick: () => $("link"),
+                    children: [l.A.link, " ", s("dashboard.links.social_add.mode.link_option")]
                   }), (0, o.jsxs)("span", {
-                    className: `${r().socialModeSelectionButton} ${"text"===y&&r().active}`,
-                    onClick: () => D("text"),
-                    children: [c.A.text, " ", n("dashboard.links.social_add.mode.text_option")]
+                    className: `${n().socialModeSelectionButton} ${"text"===A&&n().active}`,
+                    onClick: () => $("text"),
+                    children: [l.A.text, " ", s("dashboard.links.social_add.mode.text_option")]
                   })]
                 })
-              }), "link" === y ? (0, o.jsx)(x.A, {
+              }), "link" === A ? (0, o.jsx)(U.A, {
                 onChangeFunction: e => {
-                  u(e.target.value)
+                  b(e.target.value)
                 },
-                value: f,
-                placeholder: d,
-                prefix: l.Uy[e],
-                prefixLength: l.Fb[e],
-                icon: c.A["custom_url" === e ? "customUrl" : e]
-              }) : (0, o.jsx)(x.A, {
+                value: u,
+                placeholder: f,
+                prefix: r.Uy[e],
+                prefixLength: r.Fb[e],
+                icon: l.A["custom_url" === e ? "customUrl" : e]
+              }) : (0, o.jsx)(U.A, {
                 onChangeFunction: e => {
-                  u(e.target.value)
+                  b(e.target.value)
                 },
-                value: f,
-                placeholder: d,
-                icon: c.A["custom_url" === e ? "customUrl" : e]
+                value: u,
+                placeholder: f,
+                icon: l.A["custom_url" === e ? "customUrl" : e]
               })]
             })]
           }), (0, o.jsxs)("div", {
-            className: r().socialSaveButtonWrapper,
+            className: n().socialSaveButtonWrapper,
             children: [(0, o.jsxs)("span", {
-              className: r().socialSaveButton,
-              onClick: T,
-              children: [m && c.A.loading, " ", n("dashboard.links.social_add.save_button")]
-            }), (0, o.jsx)(C(), {
+              className: n().socialSaveButton,
+              onClick: B,
+              children: [S && l.A.loading, " ", s("dashboard.links.social_add.save_button")]
+            }), (0, o.jsx)(k(), {
               href: "https://help.guns.lol/getting-started/adding-links",
               target: "_blank",
-              children: n("dashboard.links.social_add.help_link")
+              children: s("dashboard.links.social_add.help_link")
             })]
           })]
         })
       }
-      var A = t(44923),
-        T = t(87256),
+      var E = t(44923),
+        I = t(87256),
         L = t(39768);
 
       function B({
         socials: e,
         setSocials: a,
         setCurrentModal: t,
-        setIsModalOpened: n
+        setIsModalOpened: s
       }) {
-        let c = (0, w.kj)(),
-          [l, d] = (0, i.useState)(e),
-          [f, u] = (0, i.useState)(null),
-          [h, b] = (0, i.useState)(!1);
-        (0, i.useEffect)(() => {
-          b(!0)
-        }, []), (0, i.useEffect)(() => {
-          d(e)
+        let l = (0, j.kj)(),
+          [r, f] = (0, c.useState)(e),
+          [u, b] = (0, c.useState)(null),
+          [h, p] = (0, c.useState)(!1);
+        (0, c.useEffect)(() => {
+          p(!0)
+        }, []), (0, c.useEffect)(() => {
+          f(e)
         }, [e]);
-        let _ = (0, A.FR)((0, A.MS)(A.AN, {
+        let _ = (0, E.FR)((0, E.MS)(E.AN, {
             activationConstraint: {
               distance: 10
             }
           })),
-          p = async e => {
-            u(null);
+          m = async e => {
+            b(null);
             let {
               active: t,
               over: o
             } = e;
             if (!o || t.id === o.id) return;
-            let i = l.findIndex(e => e.id === t.id),
-              n = l.findIndex(e => e.id === o.id);
-            if (n === i) return;
-            let r = (0, T.VE)(l, i, n),
-              f = r.map(e => ({
+            let c = r.findIndex(e => e.id === t.id),
+              s = r.findIndex(e => e.id === o.id);
+            if (s === c) return;
+            let n = (0, I.VE)(r, c, s),
+              u = n.map(e => ({
                 id: e.id
-              })); - 1 !== i && -1 !== n && (d(r), a(r)), (await fetch("https://guns.lol/api/dashboard/links/order", {
+              })); - 1 !== c && -1 !== s && (f(n), a(n)), (await fetch("https://guns.lol/api/dashboard/links/order", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json"
               },
               body: JSON.stringify({
-                newOrder: f
+                newOrder: u
               })
-            })).ok || s.oR.error(c("dashboard.links.badge_list.errors.socials_order"))
+            })).ok || d.oR.error(l("dashboard.links.badge_list.errors.socials_order"))
           };
-        return h ? (0, o.jsxs)(A.Mp, {
+        return h ? (0, o.jsxs)(E.Mp, {
           sensors: _,
-          collisionDetection: A.fp,
+          collisionDetection: E.fp,
           onDragStart: e => {
             let {
               active: a
-            } = e, t = l.find(e => e.id === a.id);
-            t && u(t)
+            } = e, t = r.find(e => e.id === a.id);
+            t && b(t)
           },
-          onDragEnd: p,
-          children: [(0, o.jsx)(T.gB, {
-            items: l.map(e => e.id),
-            strategy: T.vl,
+          onDragEnd: m,
+          children: [(0, o.jsx)(I.gB, {
+            items: r.map(e => e.id),
+            strategy: I.vl,
             children: (0, o.jsx)("div", {
-              className: r().displaySocials,
-              children: l.map(e => (0, o.jsx)(D, {
+              className: n().displaySocials,
+              children: r.map(e => (0, o.jsx)(R, {
                 item: e,
-                setIsModalOpened: n,
+                setIsModalOpened: s,
                 setCurrentModal: t,
                 setSocials: a
               }, e.id))
             })
-          }), (0, o.jsx)(A.Hd, {
-            children: f && (0, o.jsx)(D, {
-              item: f,
-              setIsModalOpened: n,
+          }), (0, o.jsx)(E.Hd, {
+            children: u && (0, o.jsx)(R, {
+              item: u,
+              setIsModalOpened: s,
               setCurrentModal: t,
               setSocials: a
             })
@@ -1401,49 +1474,49 @@
         }) : null
       }
 
-      function D({
+      function R({
         item: e,
         setIsModalOpened: a,
         setCurrentModal: t,
-        setSocials: i
+        setSocials: c
       }) {
-        let n = (0, w.kj)(),
+        let s = (0, j.kj)(),
           {
-            attributes: d,
-            listeners: f,
-            setNodeRef: u,
+            attributes: f,
+            listeners: u,
+            setNodeRef: b,
             transform: h,
-            transition: b,
+            transition: p,
             isDragging: _
-          } = (0, T.gl)({
+          } = (0, I.gl)({
             id: e.id,
             animateLayoutChanges: () => !1
           }),
-          p = {
+          m = {
             transform: L.Ks.Transform.toString(h),
-            transition: b,
+            transition: p,
             opacity: +!_
           },
-          m = !0 === e.hidden,
-          S = async () => {
-            let a = !m;
-            await v(e.id, a, i) ? s.oR.success(a ? n("dashboard.links.visibility.hide_success") : n("dashboard.links.visibility.show_success")) : s.oR.error(n("dashboard.links.visibility.toggle_error"))
+          N = !0 === e.hidden,
+          v = async () => {
+            let a = !N;
+            await g(e.id, a, c) ? d.oR.success(a ? s("dashboard.links.visibility.hide_success") : s("dashboard.links.visibility.show_success")) : d.oR.error(s("dashboard.links.visibility.toggle_error"))
           };
         return (0, o.jsxs)("div", {
-          ref: u,
-          style: p,
-          className: r().socialContainer,
+          ref: b,
+          style: m,
+          className: n().socialContainer,
           children: [(0, o.jsx)("div", {
-            className: r().dragHandleContainer,
-            ...d,
+            className: n().dragHandleContainer,
             ...f,
-            children: c.A.dragHandle
+            ...u,
+            children: l.A.dragHandle
           }), (0, o.jsxs)("div", {
-            className: `${r().socialCard} ${m?r().socialCardHidden:""}`,
+            className: `${n().socialCard} ${N?n().socialCardHidden:""}`,
             children: [(0, o.jsxs)("div", {
-              className: r().buttonDiv,
+              className: n().buttonDiv,
               children: [(0, o.jsx)("span", {
-                className: r().editButton,
+                className: n().editButton,
                 onClick: () => {
                   a(!0), t({
                     modify: !0,
@@ -1454,43 +1527,43 @@
                     mode: e.mode
                   })
                 },
-                children: c.A.editButton
+                children: l.A.editButton
               }), (0, o.jsx)("span", {
-                className: r().visibilityButton,
-                onClick: S,
-                children: m ? c.A.eyeOff : c.A.eye
+                className: n().visibilityButton,
+                onClick: v,
+                children: N ? l.A.eyeOff : l.A.eye
               }), (0, o.jsx)("span", {
-                className: r().deleteButton,
-                onClick: a => g(e.social, e.id, i, a),
-                children: c.A.deleteButton
+                className: n().deleteButton,
+                onClick: a => S(e.social, e.id, c, a),
+                children: l.A.deleteButton
               })]
             }), (0, o.jsx)("div", {
-              className: r()[e.social.toLowerCase() + "Card"],
-              children: (0, o.jsx)(x.A, {
+              className: n()[e.social.toLowerCase() + "Card"],
+              children: (0, o.jsx)(U.A, {
                 value: e.value.replace("https://", ""),
                 readOnly: !0,
-                featureName: l.V$[e.social],
-                icon: "custom_url" === e.social && e.icon ? e.icon : c.A["custom_url" === e.social ? "customUrl" : e.social],
+                featureName: r.V$[e.social],
+                icon: "custom_url" === e.social && e.icon ? e.icon : l.A["custom_url" === e.social ? "customUrl" : e.social],
                 isImageUrl: "custom_url" === e.social && e.icon
               })
             })]
           })]
         })
       }
-      var W = t(98241),
-        O = t.n(W),
-        R = t(54834),
-        $ = t(61778),
-        F = t(57776);
-      let H = ({
+      var T = t(98241),
+        $ = t.n(T),
+        D = t(54834),
+        F = t(61778),
+        O = t(57776);
+      let W = ({
         data: e
       }) => {
-        let a = (0, w.kj)(),
+        let a = (0, j.kj)(),
           t = e.config,
-          n = ["link", "changeOrder", "ltc", "eth", "deleteButton", "editButton", "empty", "moneroMonochrome", "image", "deleteFile", "loading", "dragHandle", "text", "eye", "eyeOff"],
-          [d, f] = (0, i.useState)(t.socials),
-          [u, h] = (0, i.useState)(!1),
-          [b, _] = (0, i.useState)({
+          s = ["link", "changeOrder", "ltc", "eth", "deleteButton", "editButton", "empty", "moneroMonochrome", "image", "deleteFile", "loading", "dragHandle", "text", "eye", "eyeOff"],
+          [f, u] = (0, c.useState)(t.socials),
+          [b, h] = (0, c.useState)(!1),
+          [p, _] = (0, c.useState)({
             modify: !1,
             social: "",
             id: "",
@@ -1498,38 +1571,38 @@
             category: "",
             mode: ""
           }),
-          p = "edit" === b.category ? a("dashboard.links.modals.edit_title", {
-            social: m(b.social) || ""
-          }) : "social" === b.category ? a("dashboard.links.modals.add_title", {
-            social: m(b.social) || ""
+          m = "edit" === p.category ? a("dashboard.links.modals.edit_title", {
+            social: S(p.social) || ""
+          }) : "social" === p.category ? a("dashboard.links.modals.add_title", {
+            social: S(p.social) || ""
           }) : "";
 
-        function m(e) {
-          return "custom_url" === e || "customUrl" === e ? a("dashboard.links.custom_url.label") : l.V$[e]
+        function S(e) {
+          return "custom_url" === e || "customUrl" === e ? a("dashboard.links.custom_url.label") : r.V$[e]
         }
         return (0, o.jsxs)(o.Fragment, {
-          children: [(0, o.jsx)(s.l$, {
+          children: [(0, o.jsx)(d.l$, {
             richColors: !0,
             position: "top-center",
             theme: "dark",
-            className: O().toasterStyles,
+            className: $().toasterStyles,
             icons: {
-              success: R.A.successToast
+              success: D.A.successToast
             },
             visibleToasts: 2
           }), (0, o.jsxs)("div", {
-            className: r().socialSelection,
+            className: n().socialSelection,
             children: [(0, o.jsxs)("div", {
-              className: r().socialSelectionDescription,
+              className: n().socialSelectionDescription,
               children: [(0, o.jsxs)("h1", {
-                children: [c.A.link, " ", a("dashboard.links.selection.title")]
+                children: [l.A.link, " ", a("dashboard.links.selection.title")]
               }), (0, o.jsx)("h3", {
                 children: a("dashboard.links.selection.subtitle")
               })]
             }), (0, o.jsx)("div", {
-              className: r().socialSelectionContainer,
-              children: Object.entries(c.A).map(([e, t], i) => !n.includes(e) && (0, o.jsx)($.A, {
-                content: m(e),
+              className: n().socialSelectionContainer,
+              children: Object.entries(l.A).map(([e, t], c) => !s.includes(e) && (0, o.jsx)(F.A, {
+                content: S(e),
                 children: (0, o.jsx)("div", {
                   onClick: () => {
                     var a;
@@ -1539,11 +1612,11 @@
                       category: "social"
                     })
                   },
-                  className: `${r().socialLink} ${r()[e]}`,
+                  className: `${n().socialLink} ${n()[e]}`,
                   children: "customUrl" === e ? (0, o.jsxs)("div", {
-                    className: r().customUrlDescriptionWrapper,
+                    className: n().customUrlDescriptionWrapper,
                     children: [t, (0, o.jsxs)("div", {
-                      className: r().customUrlDescription,
+                      className: n().customUrlDescription,
                       children: [(0, o.jsx)("h1", {
                         children: a("dashboard.links.custom_url.title")
                       }), (0, o.jsx)("h3", {
@@ -1551,33 +1624,33 @@
                       })]
                     })]
                   }) : t
-                }, i)
-              }, i))
+                }, c)
+              }, c))
             })]
-          }), (0, o.jsx)(F.A, {
-            opened: u,
+          }), (0, o.jsx)(O.A, {
+            opened: b,
             onClose: () => h(!1),
-            title: p,
+            title: m,
             centered: !0,
             size: "430px",
-            children: "edit" === b.category ? (0, o.jsx)(E, {
-              social: b.social,
-              id: b.id,
-              socialMode: b.mode,
-              previousIcon: b.icon,
-              socialsConfig: d,
-              setSocials: f,
+            children: "edit" === p.category ? (0, o.jsx)(M, {
+              social: p.social,
+              id: p.id,
+              socialMode: p.mode,
+              previousIcon: p.icon,
+              socialsConfig: f,
+              setSocials: u,
               setIsModalOpened: h
-            }) : "social" === b.category && (0, o.jsx)(I, {
-              social: b.social,
-              setSocials: f,
+            }) : "social" === p.category && (0, o.jsx)(A, {
+              social: p.social,
+              setSocials: u,
               setIsModalOpened: h
             })
           }), (0, o.jsx)("div", {
-            className: r().displaySocialsWrapper,
+            className: n().displaySocialsWrapper,
             children: (0, o.jsx)(B, {
-              socials: d,
-              setSocials: f,
+              socials: f,
+              setSocials: u,
               setCurrentModal: _,
               setIsModalOpened: h
             })

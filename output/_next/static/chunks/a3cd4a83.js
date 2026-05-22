@@ -2,10 +2,10 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [4664], {
     6926: (e, t, r) => {
-      let s, i, n;
+      let i, s, n;
       r.d(t, {
-        AH: () => N,
-        Mj: () => A,
+        AH: () => L,
+        Mj: () => M,
         SP: () => j,
         To: () => er,
         Vu: () => el,
@@ -13,17 +13,58 @@
         bv: () => G,
         hH: () => Y,
         i: () => K,
-        oF: () => o,
-        s0: () => S
+        oF: () => u,
+        s0: () => y
       });
       var a = r(97650),
-        l = (s = new Float32Array([-1, -1, 0, 3, -1, 0, -1, 3, 0]), i = new Float32Array([0, 0, 2, 0, 0, 2]), (n = new a.LoY).setAttribute("position", new a.THS(s, 3)), n.setAttribute("uv", new a.THS(i, 2)), n),
-        o = class e {
+        l = class {
+          constructor() {
+            this.startTime = performance.now(), this.previousTime = 0, this.currentTime = 0, this._delta = 0, this._elapsed = 0, this._fixedDelta = 1e3 / 60, this.timescale = 1, this.useFixedDelta = !1, this._autoReset = !1
+          }
+          get autoReset() {
+            return this._autoReset
+          }
+          set autoReset(e) {
+            "undefined" != typeof document && void 0 !== document.hidden && (e ? document.addEventListener("visibilitychange", this) : document.removeEventListener("visibilitychange", this), this._autoReset = e)
+          }
+          get delta() {
+            return .001 * this._delta
+          }
+          get fixedDelta() {
+            return .001 * this._fixedDelta
+          }
+          set fixedDelta(e) {
+            this._fixedDelta = 1e3 * e
+          }
+          get elapsed() {
+            return .001 * this._elapsed
+          }
+          update(e) {
+            this.useFixedDelta ? this._delta = this.fixedDelta : (this.previousTime = this.currentTime, this.currentTime = (void 0 !== e ? e : performance.now()) - this.startTime, this._delta = this.currentTime - this.previousTime), this._delta *= this.timescale, this._elapsed += this._delta
+          }
+          reset() {
+            this._delta = 0, this._elapsed = 0, this.currentTime = performance.now() - this.startTime
+          }
+          getDelta() {
+            return this.delta
+          }
+          getElapsed() {
+            return this.elapsed
+          }
+          handleEvent(e) {
+            document.hidden || (this.currentTime = performance.now() - this.startTime)
+          }
+          dispose() {
+            this.autoReset = !1
+          }
+        },
+        o = (i = new Float32Array([-1, -1, 0, 3, -1, 0, -1, 3, 0]), s = new Float32Array([0, 0, 2, 0, 0, 2]), (n = new a.LoY).setAttribute("position", new a.THS(i, 3)), n.setAttribute("uv", new a.THS(s, 2)), n),
+        u = class e {
           static get fullscreenGeometry() {
-            return l
+            return o
           }
           constructor(e = "Pass", t = new a.Z58, r = new a.qUd) {
-            this.name = e, this.renderer = null, this.scene = t, this.camera = r, this.screen = null, this.rtt = !0, this.needsSwap = !0, this.needsDepthBlit = !1, this.needsDepthTexture = !1, this.enabled = !0
+            this.name = e, this.renderer = null, this.scene = t, this.camera = r, this.screen = null, this.rtt = !0, this.needsSwap = !0, this.needsDepthTexture = !1, this.enabled = !0
           }
           get renderToScreen() {
             return !this.rtt
@@ -62,7 +103,7 @@
             return null
           }
           setDepthTexture(e, t = a.Rkk) {}
-          render(e, t, r, s, i) {
+          render(e, t, r, i, s) {
             throw Error("Render method not implemented!")
           }
           setSize(e, t) {}
@@ -75,11 +116,11 @@
             null !== this.fullscreenMaterial && this.fullscreenMaterial.dispose()
           }
         },
-        h = class extends o {
+        h = class extends u {
           constructor() {
             super("ClearMaskPass", null, null), this.needsSwap = !1
           }
-          render(e, t, r, s, i) {
+          render(e, t, r, i, s) {
             let n = e.state.buffers.stencil;
             n.setLocked(!1), n.setTest(!1)
           }
@@ -129,13 +170,12 @@ gl_FragColor=vec4(0.0);
 gl_FragDepth=readDepth(vUv);
 #endif
 }`,
-        u = "varying vec2 vUv;void main(){vUv=position.xy*0.5+0.5;gl_Position=vec4(position.xy,1.0,1.0);}",
-        d = class extends a.BKk {
+        d = "varying vec2 vUv;void main(){vUv=position.xy*0.5+0.5;gl_Position=vec4(position.xy,1.0,1.0);}",
+        f = class extends a.BKk {
           constructor() {
             super({
               name: "CopyMaterial",
               defines: {
-                COLOR_SPACE_CONVERSION: "1",
                 DEPTH_PACKING: "0",
                 COLOR_WRITE: "1"
               },
@@ -150,7 +190,7 @@ gl_FragDepth=readDepth(vUv);
               depthWrite: !1,
               depthTest: !1,
               fragmentShader: c,
-              vertexShader: u
+              vertexShader: d
             }), this.depthFunc = a.lGu
           }
           get inputBuffer() {
@@ -170,12 +210,6 @@ gl_FragDepth=readDepth(vUv);
           set depthPacking(e) {
             this.defines.DEPTH_PACKING = e.toFixed(0), this.needsUpdate = !0
           }
-          get colorSpaceConversion() {
-            return void 0 !== this.defines.COLOR_SPACE_CONVERSION
-          }
-          set colorSpaceConversion(e) {
-            this.colorSpaceConversion !== e && (e ? this.defines.COLOR_SPACE_CONVERSION = !0 : delete this.defines.COLOR_SPACE_CONVERSION, this.needsUpdate = !0)
-          }
           get channelWeights() {
             return this.uniforms.channelWeights.value
           }
@@ -192,9 +226,9 @@ gl_FragDepth=readDepth(vUv);
             this.uniforms.opacity.value = e
           }
         },
-        f = class extends o {
+        p = class extends u {
           constructor(e, t = !0) {
-            super("CopyPass"), this.fullscreenMaterial = new d, this.needsSwap = !1, this.renderTarget = e, void 0 === e && (this.renderTarget = new a.nWS(1, 1, {
+            super("CopyPass"), this.fullscreenMaterial = new f, this.needsSwap = !1, this.renderTarget = e, void 0 === e && (this.renderTarget = new a.nWS(1, 1, {
               minFilter: a.k6q,
               magFilter: a.k6q,
               stencilBuffer: !1,
@@ -216,7 +250,7 @@ gl_FragDepth=readDepth(vUv);
           setAutoResizeEnabled(e) {
             this.autoResize = e
           }
-          render(e, t, r, s, i) {
+          render(e, t, r, i, s) {
             this.fullscreenMaterial.inputBuffer = t.texture, e.setRenderTarget(this.renderToScreen ? null : this.renderTarget), e.render(this.scene, this.camera)
           }
           setSize(e, t) {
@@ -226,8 +260,8 @@ gl_FragDepth=readDepth(vUv);
             void 0 !== r && (this.renderTarget.texture.type = r, r !== a.OUM ? this.fullscreenMaterial.defines.FRAMEBUFFER_PRECISION_HIGH = "1" : null !== e && e.outputColorSpace === a.er$ && (this.renderTarget.texture.colorSpace = a.er$))
           }
         },
-        p = new a.Q1f,
-        v = class extends o {
+        v = new a.Q1f,
+        m = class extends u {
           constructor(e = !0, t = !0, r = !1) {
             super("ClearPass", null, null), this.needsSwap = !1, this.color = e, this.depth = t, this.stencil = r, this.overrideClearColor = null, this.overrideClearAlpha = -1
           }
@@ -246,18 +280,18 @@ gl_FragDepth=readDepth(vUv);
           setOverrideClearAlpha(e) {
             this.overrideClearAlpha = e
           }
-          render(e, t, r, s, i) {
+          render(e, t, r, i, s) {
             let n = this.overrideClearColor,
               a = this.overrideClearAlpha,
               l = e.getClearAlpha(),
               o = null !== n,
-              h = a >= 0;
-            o ? (e.getClearColor(p), e.setClearColor(n, h ? a : l)) : h && e.setClearAlpha(a), e.setRenderTarget(this.renderToScreen ? null : t), e.clear(this.color, this.depth, this.stencil), o ? e.setClearColor(p, l) : h && e.setClearAlpha(l)
+              u = a >= 0;
+            o ? (e.getClearColor(v), e.setClearColor(n, u ? a : l)) : u && e.setClearAlpha(a), e.setRenderTarget(this.renderToScreen ? null : t), e.clear(this.color, this.depth, this.stencil), o ? e.setClearColor(v, l) : u && e.setClearAlpha(l)
           }
         },
-        m = class extends o {
+        g = class extends u {
           constructor(e, t) {
-            super("MaskPass", e, t), this.needsSwap = !1, this.clearPass = new v(!1, !1, !0), this.inverse = !1
+            super("MaskPass", e, t), this.needsSwap = !1, this.clearPass = new m(!1, !1, !0), this.inverse = !1
           }
           set mainScene(e) {
             this.scene = e
@@ -286,73 +320,32 @@ gl_FragDepth=readDepth(vUv);
           setInverted(e) {
             this.inverted = e
           }
-          render(e, t, r, s, i) {
+          render(e, t, r, i, s) {
             let n = e.getContext(),
               a = e.state.buffers,
               l = this.scene,
               o = this.camera,
-              h = this.clearPass,
-              c = +!this.inverted;
-            a.color.setMask(!1), a.depth.setMask(!1), a.color.setLocked(!0), a.depth.setLocked(!0), a.stencil.setTest(!0), a.stencil.setOp(n.REPLACE, n.REPLACE, n.REPLACE), a.stencil.setFunc(n.ALWAYS, c, 0xffffffff), a.stencil.setClear(1 - c), a.stencil.setLocked(!0), this.clearPass.enabled && (this.renderToScreen ? h.render(e, null) : (h.render(e, t), h.render(e, r))), this.renderToScreen ? e.setRenderTarget(null) : (e.setRenderTarget(t), e.render(l, o), e.setRenderTarget(r)), e.render(l, o), a.color.setLocked(!1), a.depth.setLocked(!1), a.stencil.setLocked(!1), a.stencil.setFunc(n.EQUAL, 1, 0xffffffff), a.stencil.setOp(n.KEEP, n.KEEP, n.KEEP), a.stencil.setLocked(!0)
+              u = this.clearPass,
+              h = +!this.inverted;
+            a.color.setMask(!1), a.depth.setMask(!1), a.color.setLocked(!0), a.depth.setLocked(!0), a.stencil.setTest(!0), a.stencil.setOp(n.REPLACE, n.REPLACE, n.REPLACE), a.stencil.setFunc(n.ALWAYS, h, 0xffffffff), a.stencil.setClear(1 - h), a.stencil.setLocked(!0), this.clearPass.enabled && (this.renderToScreen ? u.render(e, null) : (u.render(e, t), u.render(e, r))), this.renderToScreen ? e.setRenderTarget(null) : (e.setRenderTarget(t), e.render(l, o), e.setRenderTarget(r)), e.render(l, o), a.color.setLocked(!1), a.depth.setLocked(!1), a.stencil.setLocked(!1), a.stencil.setFunc(n.EQUAL, 1, 0xffffffff), a.stencil.setOp(n.KEEP, n.KEEP, n.KEEP), a.stencil.setLocked(!0)
           }
         },
-        g = class {
-          constructor() {
-            this.startTime = performance.now(), this.previousTime = 0, this.currentTime = 0, this._delta = 0, this._elapsed = 0, this._fixedDelta = 1e3 / 60, this.timescale = 1, this.useFixedDelta = !1, this._autoReset = !1
-          }
-          get autoReset() {
-            return this._autoReset
-          }
-          set autoReset(e) {
-            "undefined" != typeof document && void 0 !== document.hidden && (e ? document.addEventListener("visibilitychange", this) : document.removeEventListener("visibilitychange", this), this._autoReset = e)
-          }
-          get delta() {
-            return .001 * this._delta
-          }
-          get fixedDelta() {
-            return .001 * this._fixedDelta
-          }
-          set fixedDelta(e) {
-            this._fixedDelta = 1e3 * e
-          }
-          get elapsed() {
-            return .001 * this._elapsed
-          }
-          update(e) {
-            this.useFixedDelta ? this._delta = this.fixedDelta : (this.previousTime = this.currentTime, this.currentTime = (void 0 !== e ? e : performance.now()) - this.startTime, this._delta = this.currentTime - this.previousTime), this._delta *= this.timescale, this._elapsed += this._delta
-          }
-          reset() {
-            this._delta = 0, this._elapsed = 0, this.currentTime = performance.now() - this.startTime
-          }
-          getDelta() {
-            return this.delta
-          }
-          getElapsed() {
-            return this.elapsed
-          }
-          handleEvent(e) {
-            document.hidden || (this.currentTime = performance.now() - this.startTime)
-          }
-          dispose() {
-            this.autoReset = !1
-          }
-        },
-        S = class {
+        y = class {
           constructor(e = null, {
             depthBuffer: t = !0,
             stencilBuffer: r = !1,
-            multisampling: s = 0,
-            frameBufferType: i
+            multisampling: i = 0,
+            frameBufferType: s
           } = {}) {
-            this.renderer = null, this.inputBuffer = this.createBuffer(t, r, i, s), this.outputBuffer = this.inputBuffer.clone(), this.copyPass = new f, this.depthTexture = null, this.depthRenderTarget = null, this.passes = [], this.timer = new g, this.autoRenderToScreen = !0, this.setRenderer(e)
+            this.renderer = null, this.inputBuffer = this.createBuffer(t, r, s, i), this.outputBuffer = this.inputBuffer.clone(), this.copyPass = new p, this.depthTexture = null, this.passes = [], this.timer = new l, this.autoRenderToScreen = !0, this.setRenderer(e)
           }
           get multisampling() {
-            return this.inputBuffer.samples
+            return this.inputBuffer.samples || 0
           }
           set multisampling(e) {
             let t = this.inputBuffer,
               r = this.multisampling;
-            r > 0 && e > 0 ? (this.inputBuffer.samples = e, this.outputBuffer.samples = e, this.inputBuffer.dispose(), this.outputBuffer.dispose()) : r !== e && (this.inputBuffer.dispose(), this.outputBuffer.dispose(), this.inputBuffer = this.createBuffer(t.depthBuffer, t.stencilBuffer, t.texture.type, e), this.outputBuffer = this.inputBuffer.clone())
+            r > 0 && e > 0 ? (this.inputBuffer.samples = e, this.outputBuffer.samples = e, this.inputBuffer.dispose(), this.outputBuffer.dispose()) : r !== e && (this.inputBuffer.dispose(), this.outputBuffer.dispose(), this.inputBuffer = this.createBuffer(t.depthBuffer, t.stencilBuffer, t.texture.type, e), this.inputBuffer.depthTexture = this.depthTexture, this.outputBuffer = this.inputBuffer.clone())
           }
           getTimer() {
             return this.timer
@@ -364,44 +357,26 @@ gl_FragDepth=readDepth(vUv);
             if (this.renderer = e, null !== e) {
               let t = e.getSize(new a.I9Y),
                 r = e.getContext().getContextAttributes().alpha,
-                s = this.inputBuffer.texture.type;
-              for (let i of (s === a.OUM && e.outputColorSpace === a.er$ && (this.inputBuffer.texture.colorSpace = a.er$, this.outputBuffer.texture.colorSpace = a.er$, this.inputBuffer.dispose(), this.outputBuffer.dispose()), e.autoClear = !1, this.setSize(t.width, t.height), this.passes)) i.initialize(e, r, s)
+                i = this.inputBuffer.texture.type;
+              for (let s of (i === a.OUM && e.outputColorSpace === a.er$ && (this.inputBuffer.texture.colorSpace = a.er$, this.outputBuffer.texture.colorSpace = a.er$, this.inputBuffer.dispose(), this.outputBuffer.dispose()), e.autoClear = !1, this.setSize(t.width, t.height), this.passes)) s.initialize(e, r, i)
             }
           }
           replaceRenderer(e, t = !0) {
             let r = this.renderer,
-              s = r.domElement.parentNode;
-            return this.setRenderer(e), t && null !== s && (s.removeChild(r.domElement), s.appendChild(e.domElement)), r
+              i = r.domElement.parentNode;
+            return this.setRenderer(e), t && null !== i && (i.removeChild(r.domElement), i.appendChild(e.domElement)), r
           }
           createDepthTexture() {
-            let e = this.inputBuffer,
-              t = new a.VCu;
-            this.depthTexture = t, e.stencilBuffer ? (t.format = a.dcC, t.type = a.V3x) : t.type = a.RQf;
-            let r = t.clone();
-            return r.name = "EffectComposer.StableDepth", this.depthRenderTarget = new a.nWS(e.width, e.height, {
-              depthBuffer: !0,
-              stencilBuffer: e.stencilBuffer,
-              depthTexture: r
-            }), r
-          }
-          blitDepthBuffer(e) {
-            let t = this.renderer,
-              r = this.depthRenderTarget,
-              s = t.properties,
-              i = t.getContext();
-            t.setRenderTarget(r);
-            let n = s.get(e).__webglFramebuffer,
-              a = s.get(r).__webglFramebuffer,
-              l = e.stencilBuffer ? i.DEPTH_BUFFER_BIT | i.STENCIL_BUFFER_BIT : i.DEPTH_BUFFER_BIT;
-            i.bindFramebuffer(i.READ_FRAMEBUFFER, n), i.bindFramebuffer(i.DRAW_FRAMEBUFFER, a), i.blitFramebuffer(0, 0, e.width, e.height, 0, 0, r.width, r.height, l, i.NEAREST), i.bindFramebuffer(i.READ_FRAMEBUFFER, null), i.bindFramebuffer(i.DRAW_FRAMEBUFFER, null), t.setRenderTarget(null)
+            let e = this.depthTexture = new a.VCu;
+            return this.inputBuffer.depthTexture = e, this.inputBuffer.dispose(), this.inputBuffer.stencilBuffer ? (e.format = a.dcC, e.type = a.V3x) : e.type = a.bkx, e
           }
           deleteDepthTexture() {
             if (null !== this.depthTexture)
-              for (let e of (this.depthTexture.dispose(), this.depthTexture = null, this.depthRenderTarget.dispose(), this.depthRenderTarget = null, this.inputBuffer.depthTexture = null, this.outputBuffer.depthTexture = null, this.passes)) e.setDepthTexture(null)
+              for (let e of (this.depthTexture.dispose(), this.depthTexture = null, this.inputBuffer.depthTexture = null, this.inputBuffer.dispose(), this.passes)) e.setDepthTexture(null)
           }
-          createBuffer(e, t, r, s) {
-            let i = this.renderer,
-              n = null === i ? new a.I9Y : i.getDrawingBufferSize(new a.I9Y),
+          createBuffer(e, t, r, i) {
+            let s = this.renderer,
+              n = null === s ? new a.I9Y : s.getDrawingBufferSize(new a.I9Y),
               l = {
                 minFilter: a.k6q,
                 magFilter: a.k6q,
@@ -410,7 +385,7 @@ gl_FragDepth=readDepth(vUv);
                 type: r
               },
               o = new a.nWS(n.width, n.height, l);
-            return s > 0 && (o.samples = s), r === a.OUM && null !== i && i.outputColorSpace === a.er$ && (o.texture.colorSpace = a.er$), o.texture.name = "EffectComposer.Buffer", o.texture.generateMipmaps = !1, o
+            return i > 0 && (o.samples = i), r === a.OUM && null !== s && s.outputColorSpace === a.er$ && (o.texture.colorSpace = a.er$), o.texture.name = "EffectComposer.Buffer", o.texture.generateMipmaps = !1, o
           }
           setMainScene(e) {
             for (let t of this.passes) t.mainScene = e
@@ -420,67 +395,45 @@ gl_FragDepth=readDepth(vUv);
           }
           addPass(e, t) {
             let r = this.passes,
-              s = this.renderer,
-              i = s.getDrawingBufferSize(new a.I9Y),
-              n = s.getContext().getContextAttributes().alpha,
+              i = this.renderer,
+              s = i.getDrawingBufferSize(new a.I9Y),
+              n = i.getContext().getContextAttributes().alpha,
               l = this.inputBuffer.texture.type;
-            if (e.renderer = s, e.setSize(i.width, i.height), e.initialize(s, n, l), this.autoRenderToScreen && (r.length > 0 && (r[r.length - 1].renderToScreen = !1), e.renderToScreen && (this.autoRenderToScreen = !1)), void 0 !== t ? r.splice(t, 0, e) : r.push(e), this.autoRenderToScreen && (r[r.length - 1].renderToScreen = !0), e.needsDepthTexture || null !== this.depthTexture)
+            if (e.setRenderer(i), e.setSize(s.width, s.height), e.initialize(i, n, l), this.autoRenderToScreen && (r.length > 0 && (r[r.length - 1].renderToScreen = !1), e.renderToScreen && (this.autoRenderToScreen = !1)), void 0 !== t ? r.splice(t, 0, e) : r.push(e), this.autoRenderToScreen && (r[r.length - 1].renderToScreen = !0), e.needsDepthTexture || null !== this.depthTexture)
               if (null === this.depthTexture) {
                 let t = this.createDepthTexture();
                 for (e of r) e.setDepthTexture(t)
-              } else {
-                let t = this.depthRenderTarget.depthTexture;
-                e.setDepthTexture(t)
-              }
+              } else e.setDepthTexture(this.depthTexture)
           }
           removePass(e) {
             let t = this.passes,
-              r = t.indexOf(e);
-            if (-1 !== r && t.splice(r, 1).length > 0) {
-              if (null !== this.depthTexture && !t.reduce((e, t) => e || t.needsDepthTexture, !1)) {
-                let t = this.depthRenderTarget.depthTexture;
-                e.getDepthTexture() === t && e.setDepthTexture(null), this.deleteDepthTexture()
-              }
-              this.autoRenderToScreen && r === t.length && (e.renderToScreen = !1, t.length > 0 && (t[t.length - 1].renderToScreen = !0))
-            }
+              r = t.indexOf(e); - 1 !== r && t.splice(r, 1).length > 0 && (null !== this.depthTexture && (t.reduce((e, t) => e || t.needsDepthTexture, !1) || (e.getDepthTexture() === this.depthTexture && e.setDepthTexture(null), this.deleteDepthTexture())), this.autoRenderToScreen && r === t.length && (e.renderToScreen = !1, t.length > 0 && (t[t.length - 1].renderToScreen = !0)))
           }
           removeAllPasses() {
             let e = this.passes;
             this.deleteDepthTexture(), e.length > 0 && (this.autoRenderToScreen && (e[e.length - 1].renderToScreen = !1), this.passes = [])
           }
           render(e) {
-            let t, r = this.renderer,
-              s = this.copyPass,
-              i = this.inputBuffer,
-              n = this.outputBuffer,
-              a = !1;
-            for (let l of (void 0 === e && (this.timer.update(), e = this.timer.getDelta()), this.passes))
-              if (l.enabled) {
-                if (i.depthTexture = this.depthTexture, n.depthTexture = null, l.render(r, i, n, e, a), l.needsDepthBlit && null !== this.depthRenderTarget && this.blitDepthBuffer(i), l.needsSwap) {
-                  if (a) {
-                    s.renderToScreen = l.renderToScreen;
-                    let t = r.getContext(),
-                      o = r.state.buffers.stencil;
-                    o.setFunc(t.NOTEQUAL, 1, 0xffffffff), s.render(r, i, n, e, a), o.setFunc(t.EQUAL, 1, 0xffffffff)
-                  }
-                  t = i, i = n, n = t
-                }
-                l instanceof m ? a = !0 : l instanceof h && (a = !1)
-              }
+            let t, r, i, s = this.renderer,
+              n = this.copyPass,
+              a = this.inputBuffer,
+              l = this.outputBuffer,
+              o = !1;
+            for (let u of (void 0 === e && (this.timer.update(), e = this.timer.getDelta()), this.passes)) u.enabled && (u.render(s, a, l, e, o), u.needsSwap && (o && (n.renderToScreen = u.renderToScreen, t = s.getContext(), (r = s.state.buffers.stencil).setFunc(t.NOTEQUAL, 1, 0xffffffff), n.render(s, a, l, e, o), r.setFunc(t.EQUAL, 1, 0xffffffff)), i = a, a = l, l = i), u instanceof g ? o = !0 : u instanceof h && (o = !1))
           }
           setSize(e, t, r) {
-            let s = this.renderer,
-              i = s.getSize(new a.I9Y);
-            (void 0 === e || void 0 === t) && (e = i.width, t = i.height), (i.width !== e || i.height !== t) && s.setSize(e, t, r);
-            let n = s.getDrawingBufferSize(new a.I9Y);
-            for (let e of (this.inputBuffer.setSize(n.width, n.height), this.outputBuffer.setSize(n.width, n.height), null !== this.depthRenderTarget && this.depthRenderTarget.setSize(n.width, n.height), this.passes)) e.setSize(n.width, n.height)
+            let i = this.renderer,
+              s = i.getSize(new a.I9Y);
+            (void 0 === e || void 0 === t) && (e = s.width, t = s.height), (s.width !== e || s.height !== t) && i.setSize(e, t, r);
+            let n = i.getDrawingBufferSize(new a.I9Y);
+            for (let e of (this.inputBuffer.setSize(n.width, n.height), this.outputBuffer.setSize(n.width, n.height), this.passes)) e.setSize(n.width, n.height)
           }
           reset() {
             this.dispose(), this.autoRenderToScreen = !0
           }
           dispose() {
             for (let e of this.passes) e.dispose();
-            this.passes = [], null !== this.inputBuffer && this.inputBuffer.dispose(), null !== this.outputBuffer && this.outputBuffer.dispose(), this.deleteDepthTexture(), this.copyPass.dispose(), this.timer.dispose(), o.fullscreenGeometry.dispose()
+            this.passes = [], null !== this.inputBuffer && this.inputBuffer.dispose(), null !== this.outputBuffer && this.outputBuffer.dispose(), this.deleteDepthTexture(), this.copyPass.dispose(), this.timer.dispose(), u.fullscreenGeometry.dispose()
           }
         },
         x = {
@@ -490,7 +443,7 @@ gl_FragDepth=readDepth(vUv);
           VERTEX_HEAD: "VERTEX_HEAD",
           VERTEX_MAIN_SUPPORT: "VERTEX_MAIN_SUPPORT"
         },
-        w = class {
+        S = class {
           constructor() {
             this.shaderParts = new Map([
               [x.FRAGMENT_HEAD, null],
@@ -501,7 +454,7 @@ gl_FragDepth=readDepth(vUv);
             ]), this.defines = new Map, this.uniforms = new Map, this.blendModes = new Map, this.extensions = new Set, this.attributes = 0, this.varyings = new Set, this.uvTransformation = !1, this.readDepth = !1, this.colorSpace = a.Zr2
           }
         },
-        y = !1,
+        w = !1,
         T = class {
           constructor(e = null) {
             this.originalMaterials = new Map, this.material = null, this.materials = null, this.materialsBackSide = null, this.materialsDoubleSide = null, this.materialsFlatShaded = null, this.materialsFlatShadedBackSide = null, this.materialsFlatShadedDoubleSide = null, this.setMaterial(e), this.meshCount = 0, this.replaceMaterial = e => {
@@ -535,12 +488,12 @@ gl_FragDepth=readDepth(vUv);
             let t = e.uniforms,
               r = new Map;
             for (let e in t) {
-              let s = t[e].value;
-              s.isRenderTargetTexture && (t[e].value = null, r.set(e, s))
+              let i = t[e].value;
+              i.isRenderTargetTexture && (t[e].value = null, r.set(e, i))
             }
-            let s = e.clone();
-            for (let e of r) t[e[0]].value = e[1], s.uniforms[e[0]].value = e[1];
-            return s
+            let i = e.clone();
+            for (let e of r) t[e[0]].value = e[1], i.uniforms[e[0]].value = e[1];
+            return i
           }
           setMaterial(e) {
             if (this.disposeMaterials(), this.material = e, null !== e) {
@@ -565,16 +518,16 @@ gl_FragDepth=readDepth(vUv);
             }
           }
           render(e, t, r) {
-            let s = e.shadowMap.enabled;
-            if (e.shadowMap.enabled = !1, y) {
-              let s = this.originalMaterials;
-              for (let i of (this.meshCount = 0, t.traverse(this.replaceMaterial), e.render(t, r), s)) i[0].material = i[1];
-              this.meshCount !== s.size && s.clear()
+            let i = e.shadowMap.enabled;
+            if (e.shadowMap.enabled = !1, w) {
+              let i = this.originalMaterials;
+              for (let s of (this.meshCount = 0, t.traverse(this.replaceMaterial), e.render(t, r), i)) s[0].material = s[1];
+              this.meshCount !== i.size && i.clear()
             } else {
-              let s = t.overrideMaterial;
-              t.overrideMaterial = this.material, e.render(t, r), t.overrideMaterial = s
+              let i = t.overrideMaterial;
+              t.overrideMaterial = this.material, e.render(t, r), t.overrideMaterial = i
             }
-            e.shadowMap.enabled = s
+            e.shadowMap.enabled = i
           }
           disposeMaterials() {
             if (null !== this.material)
@@ -584,21 +537,21 @@ gl_FragDepth=readDepth(vUv);
             this.originalMaterials.clear(), this.disposeMaterials()
           }
           static get workaroundEnabled() {
-            return y
+            return w
           }
           static set workaroundEnabled(e) {
-            y = e
+            w = e
           }
         },
-        b = class extends a.Qev {
-          constructor(e, t = -1, r = -1, s = 1) {
-            super(), this.resizable = e, this.baseSize = new a.I9Y(1, 1), this.preferredSize = new a.I9Y(t, r), this.target = this.preferredSize, this.s = s, this.effectiveSize = new a.I9Y, this.addEventListener("change", () => this.updateEffectiveSize()), this.updateEffectiveSize()
+        U = class extends a.Qev {
+          constructor(e, t = -1, r = -1, i = 1) {
+            super(), this.resizable = e, this.baseSize = new a.I9Y(1, 1), this.preferredSize = new a.I9Y(t, r), this.target = this.preferredSize, this.s = i, this.effectiveSize = new a.I9Y, this.addEventListener("change", () => this.updateEffectiveSize()), this.updateEffectiveSize()
           }
           updateEffectiveSize() {
             let e = this.baseSize,
               t = this.preferredSize,
               r = this.effectiveSize,
-              s = this.scale; - 1 !== t.width ? r.width = t.width : -1 !== t.height ? r.width = Math.round(t.height * (e.width / Math.max(e.height, 1))) : r.width = Math.round(e.width * s), -1 !== t.height ? r.height = t.height : -1 !== t.width ? r.height = Math.round(t.width / Math.max(e.width / Math.max(e.height, 1), 1)) : r.height = Math.round(e.height * s)
+              i = this.scale; - 1 !== t.width ? r.width = t.width : -1 !== t.height ? r.width = Math.round(t.height * (e.width / Math.max(e.height, 1))) : r.width = Math.round(e.width * i), -1 !== t.height ? r.height = t.height : -1 !== t.width ? r.height = Math.round(t.width / Math.max(e.width / Math.max(e.height, 1), 1)) : r.height = Math.round(e.height * i)
           }
           get width() {
             return this.effectiveSize.width
@@ -707,42 +660,41 @@ gl_FragDepth=readDepth(vUv);
             return -1
           }
         },
-        U = new Map([
-          [0, "vec4 blend(const in vec4 dst,const in vec4 src,const in float opacity){vec3 c=dst.rgb+src.rgb;return mix(dst,vec4(c,max(dst.a,src.a)),opacity);}"],
-          [1, "vec4 blend(const in vec4 dst,const in vec4 src,const in float opacity){return mix(dst,src,src.a*opacity);}"],
-          [2, "vec4 blend(const in vec4 dst,const in vec4 src,const in float opacity){vec3 c=(dst.rgb+src.rgb)*0.5;return mix(dst,vec4(c,max(dst.a,src.a)),opacity);}"],
-          [3, "vec4 blend(const in vec4 dst,const in vec4 src,const in float opacity){vec3 a=RGBToHSL(dst.rgb);vec3 b=RGBToHSL(src.rgb);vec3 c=HSLToRGB(vec3(b.xy,a.z));return mix(dst,vec4(c,max(dst.a,src.a)),opacity);}"],
-          [4, "vec4 blend(const in vec4 dst,const in vec4 src,const in float opacity){vec3 a=dst.rgb,b=src.rgb;vec3 c=mix(step(0.0,b)*(1.0-min(vec3(1.0),(1.0-a)/max(b,1e-9))),vec3(1.0),step(1.0,a));return mix(dst,vec4(c,max(dst.a,src.a)),opacity);}"],
-          [5, "vec4 blend(const in vec4 dst,const in vec4 src,const in float opacity){vec3 a=dst.rgb,b=src.rgb;vec3 c=step(0.0,a)*mix(min(vec3(1.0),a/max(1.0-b,1e-9)),vec3(1.0),step(1.0,b));return mix(dst,vec4(c,max(dst.a,src.a)),opacity);}"],
-          [6, "vec4 blend(const in vec4 dst,const in vec4 src,const in float opacity){vec3 c=min(dst.rgb,src.rgb);return mix(dst,vec4(c,max(dst.a,src.a)),opacity);}"],
-          [7, "vec4 blend(const in vec4 dst,const in vec4 src,const in float opacity){vec3 c=abs(dst.rgb-src.rgb);return mix(dst,vec4(c,max(dst.a,src.a)),opacity);}"],
-          [8, "vec4 blend(const in vec4 dst,const in vec4 src,const in float opacity){vec3 c=dst.rgb/max(src.rgb,1e-9);return mix(dst,vec4(c,max(dst.a,src.a)),opacity);}"],
+        b = new Map([
+          [0, "vec4 blend(const in vec4 x,const in vec4 y,const in float opacity){return mix(x,vec4(x.rgb+y.rgb,y.a),y.a*opacity);}"],
+          [2, "vec4 blend(const in vec4 x,const in vec4 y,const in float opacity){return mix(x,vec4((x.rgb+y.rgb)*0.5,y.a),y.a*opacity);}"],
+          [3, "vec4 blend(const in vec4 x,const in vec4 y,const in float opacity){vec3 xHSL=RGBToHSL(x.rgb);vec3 yHSL=RGBToHSL(y.rgb);vec3 z=HSLToRGB(vec3(yHSL.xy,xHSL.z));return mix(x,vec4(z,y.a),y.a*opacity);}"],
+          [4, "vec4 blend(const in vec4 x,const in vec4 y,const in float opacity){vec3 a=x.rgb,b=y.rgb;vec3 z=mix(step(0.0,b)*(1.0-min(vec3(1.0),(1.0-a)/b)),vec3(1.0),step(1.0,a));return mix(x,vec4(z,y.a),y.a*opacity);}"],
+          [5, "vec4 blend(const in vec4 x,const in vec4 y,const in float opacity){vec3 a=x.rgb,b=y.rgb;vec3 z=step(0.0,a)*mix(min(vec3(1.0),a/max(1.0-b,1e-9)),vec3(1.0),step(1.0,b));return mix(x,vec4(z,y.a),y.a*opacity);}"],
+          [6, "vec4 blend(const in vec4 x,const in vec4 y,const in float opacity){return mix(x,vec4(min(x.rgb,y.rgb),y.a),y.a*opacity);}"],
+          [7, "vec4 blend(const in vec4 x,const in vec4 y,const in float opacity){return mix(x,vec4(abs(x.rgb-y.rgb),y.a),y.a*opacity);}"],
+          [8, "vec4 blend(const in vec4 x,const in vec4 y,const in float opacity){return mix(x,vec4(x.rgb/max(y.rgb,1e-12),y.a),y.a*opacity);}"],
           [9, null],
-          [10, "vec4 blend(const in vec4 dst,const in vec4 src,const in float opacity){vec3 c=dst.rgb+src.rgb-2.0*dst.rgb*src.rgb;return mix(dst,vec4(c,max(dst.a,src.a)),opacity);}"],
-          [11, "vec4 blend(const in vec4 dst,const in vec4 src,const in float opacity){vec3 a=min(dst.rgb,1.0);vec3 b=min(src.rgb,1.0);vec3 c=mix(2.0*a*b,1.0-2.0*(1.0-a)*(1.0-b),step(0.5,b));return mix(dst,vec4(c,max(dst.a,src.a)),opacity);}"],
-          [12, "vec4 blend(const in vec4 dst,const in vec4 src,const in float opacity){vec3 c=step(1.0,dst.rgb+src.rgb);return mix(dst,vec4(c,max(dst.a,src.a)),opacity);}"],
-          [13, "vec4 blend(const in vec4 dst,const in vec4 src,const in float opacity){vec3 a=RGBToHSL(dst.rgb);vec3 b=RGBToHSL(src.rgb);vec3 c=HSLToRGB(vec3(b.x,a.yz));return mix(dst,vec4(c,max(dst.a,src.a)),opacity);}"],
-          [14, "vec4 blend(const in vec4 dst,const in vec4 src,const in float opacity){vec3 c=max(1.0-src.rgb,0.0);return mix(dst,vec4(c,max(dst.a,src.a)),opacity);}"],
-          [15, "vec4 blend(const in vec4 dst,const in vec4 src,const in float opacity){vec3 c=src.rgb*max(1.0-dst.rgb,0.0);return mix(dst,vec4(c,max(dst.a,src.a)),opacity);}"],
-          [16, "vec4 blend(const in vec4 dst,const in vec4 src,const in float opacity){vec3 c=max(dst.rgb,src.rgb);return mix(dst,vec4(c,max(dst.a,src.a)),opacity);}"],
-          [17, "vec4 blend(const in vec4 dst,const in vec4 src,const in float opacity){vec3 c=clamp(src.rgb+dst.rgb-1.0,0.0,1.0);return mix(dst,vec4(c,max(dst.a,src.a)),opacity);}"],
-          [18, "vec4 blend(const in vec4 dst,const in vec4 src,const in float opacity){vec3 c=min(dst.rgb+src.rgb,1.0);return mix(dst,vec4(c,max(dst.a,src.a)),opacity);}"],
-          [19, "vec4 blend(const in vec4 dst,const in vec4 src,const in float opacity){vec3 c=clamp(2.0*src.rgb+dst.rgb-1.0,0.0,1.0);return mix(dst,vec4(c,max(dst.a,src.a)),opacity);}"],
-          [20, "vec4 blend(const in vec4 dst,const in vec4 src,const in float opacity){vec3 a=RGBToHSL(dst.rgb);vec3 b=RGBToHSL(src.rgb);vec3 c=HSLToRGB(vec3(a.xy,b.z));return mix(dst,vec4(c,max(dst.a,src.a)),opacity);}"],
-          [21, "vec4 blend(const in vec4 dst,const in vec4 src,const in float opacity){vec3 c=dst.rgb*src.rgb;return mix(dst,vec4(c,max(dst.a,src.a)),opacity);}"],
-          [22, "vec4 blend(const in vec4 dst,const in vec4 src,const in float opacity){vec3 c=max(1.0-abs(1.0-dst.rgb-src.rgb),0.0);return mix(dst,vec4(c,max(dst.a,src.a)),opacity);}"],
-          [23, "vec4 blend(const in vec4 dst,const in vec4 src,const in float opacity){return mix(dst,src,opacity);}"],
-          [24, "vec4 blend(const in vec4 dst,const in vec4 src,const in float opacity){vec3 a=2.0*src.rgb*dst.rgb;vec3 b=1.0-2.0*(1.0-src.rgb)*(1.0-dst.rgb);vec3 c=mix(a,b,step(0.5,dst.rgb));return mix(dst,vec4(c,max(dst.a,src.a)),opacity);}"],
-          [25, "vec4 blend(const in vec4 dst,const in vec4 src,const in float opacity){vec3 src2=2.0*src.rgb;vec3 c=mix(mix(src2,dst.rgb,step(0.5*dst.rgb,src.rgb)),max(src2-1.0,vec3(0.0)),step(dst.rgb,src2-1.0));return mix(dst,vec4(c,max(dst.a,src.a)),opacity);}"],
-          [26, "vec4 blend(const in vec4 dst,const in vec4 src,const in float opacity){vec3 a=min(dst.rgb*dst.rgb/max(1.0-src.rgb,1e-9),1.0);vec3 c=mix(a,src.rgb,step(1.0,src.rgb));return mix(dst,vec4(c,max(dst.a,src.a)),opacity);}"],
-          [27, "vec4 blend(const in vec4 dst,const in vec4 src,const in float opacity){vec3 a=RGBToHSL(dst.rgb);vec3 b=RGBToHSL(src.rgb);vec3 c=HSLToRGB(vec3(a.x,b.y,a.z));return mix(dst,vec4(c,max(dst.a,src.a)),opacity);}"],
-          [28, "vec4 blend(const in vec4 dst,const in vec4 src,const in float opacity){vec3 c=dst.rgb+src.rgb-min(dst.rgb*src.rgb,1.0);return mix(dst,vec4(c,max(dst.a,src.a)),opacity);}"],
-          [29, "vec4 blend(const in vec4 dst,const in vec4 src,const in float opacity){vec3 src2=2.0*src.rgb;vec3 d=dst.rgb+(src2-1.0);vec3 w=step(0.5,src.rgb);vec3 a=dst.rgb-(1.0-src2)*dst.rgb*(1.0-dst.rgb);vec3 b=mix(d*(sqrt(dst.rgb)-dst.rgb),d*dst.rgb*((16.0*dst.rgb-12.0)*dst.rgb+3.0),w*(1.0-step(0.25,dst.rgb)));vec3 c=mix(a,b,w);return mix(dst,vec4(c,max(dst.a,src.a)),opacity);}"],
-          [30, "vec4 blend(const in vec4 dst,const in vec4 src,const in float opacity){return src;}"],
-          [31, "vec4 blend(const in vec4 dst,const in vec4 src,const in float opacity){vec3 c=max(dst.rgb-src.rgb,0.0);return mix(dst,vec4(c,max(dst.a,src.a)),opacity);}"],
-          [32, "vec4 blend(const in vec4 dst,const in vec4 src,const in float opacity){vec3 c=mix(max(1.0-min((1.0-dst.rgb)/(2.0*src.rgb),1.0),0.0),min(dst.rgb/(2.0*(1.0-src.rgb)),1.0),step(0.5,src.rgb));return mix(dst,vec4(c,max(dst.a,src.a)),opacity);}"]
+          [10, "vec4 blend(const in vec4 x,const in vec4 y,const in float opacity){return mix(x,vec4((x.rgb+y.rgb-2.0*x.rgb*y.rgb),y.a),y.a*opacity);}"],
+          [11, "vec4 blend(const in vec4 x,const in vec4 y,const in float opacity){vec3 a=min(x.rgb,1.0);vec3 b=min(y.rgb,1.0);vec3 z=mix(2.0*a*b,1.0-2.0*(1.0-a)*(1.0-b),step(0.5,b));return mix(x,vec4(z,y.a),y.a*opacity);}"],
+          [12, "vec4 blend(const in vec4 x,const in vec4 y,const in float opacity){return mix(x,vec4(step(1.0,x.rgb+y.rgb),y.a),y.a*opacity);}"],
+          [13, "vec4 blend(const in vec4 x,const in vec4 y,const in float opacity){vec3 xHSL=RGBToHSL(x.rgb);vec3 yHSL=RGBToHSL(y.rgb);vec3 z=HSLToRGB(vec3(yHSL.x,xHSL.yz));return mix(x,vec4(z,y.a),y.a*opacity);}"],
+          [14, "vec4 blend(const in vec4 x,const in vec4 y,const in float opacity){return mix(x,vec4(1.0-y.rgb,y.a),y.a*opacity);}"],
+          [15, "vec4 blend(const in vec4 x,const in vec4 y,const in float opacity){return mix(x,vec4(y.rgb*(1.0-x.rgb),y.a),y.a*opacity);}"],
+          [16, "vec4 blend(const in vec4 x,const in vec4 y,const in float opacity){return mix(x,vec4(max(x.rgb,y.rgb),y.a),y.a*opacity);}"],
+          [17, "vec4 blend(const in vec4 x,const in vec4 y,const in float opacity){return mix(x,vec4(clamp(y.rgb+x.rgb-1.0,0.0,1.0),y.a),y.a*opacity);}"],
+          [18, "vec4 blend(const in vec4 x,const in vec4 y,const in float opacity){return mix(x,vec4(min(x.rgb+y.rgb,1.0),y.a),y.a*opacity);}"],
+          [19, "vec4 blend(const in vec4 x,const in vec4 y,const in float opacity){return mix(x,vec4(clamp(2.0*y.rgb+x.rgb-1.0,0.0,1.0),y.a),y.a*opacity);}"],
+          [20, "vec4 blend(const in vec4 x,const in vec4 y,const in float opacity){vec3 xHSL=RGBToHSL(x.rgb);vec3 yHSL=RGBToHSL(y.rgb);vec3 z=HSLToRGB(vec3(xHSL.xy,yHSL.z));return mix(x,vec4(z,y.a),y.a*opacity);}"],
+          [21, "vec4 blend(const in vec4 x,const in vec4 y,const in float opacity){return mix(x,vec4(x.rgb*y.rgb,y.a),y.a*opacity);}"],
+          [22, "vec4 blend(const in vec4 x,const in vec4 y,const in float opacity){return mix(x,vec4(1.0-abs(1.0-x.rgb-y.rgb),y.a),y.a*opacity);}"],
+          [23, "vec4 blend(const in vec4 x,const in vec4 y,const in float opacity){return mix(x,y,y.a*opacity);}"],
+          [24, "vec4 blend(const in vec4 x,const in vec4 y,const in float opacity){vec3 z=mix(2.0*y.rgb*x.rgb,1.0-2.0*(1.0-y.rgb)*(1.0-x.rgb),step(0.5,x.rgb));return mix(x,vec4(z,y.a),y.a*opacity);}"],
+          [25, "vec4 blend(const in vec4 x,const in vec4 y,const in float opacity){vec3 y2=2.0*y.rgb;vec3 z=mix(mix(y2,x.rgb,step(0.5*x.rgb,y.rgb)),max(y2-1.0,vec3(0.0)),step(x.rgb,y2-1.0));return mix(x,vec4(z,y.a),y.a*opacity);}"],
+          [26, "vec4 blend(const in vec4 x,const in vec4 y,const in float opacity){vec3 z=mix(min(x.rgb*x.rgb/max(1.0-y.rgb,1e-12),1.0),y.rgb,step(1.0,y.rgb));return mix(x,vec4(z,y.a),y.a*opacity);}"],
+          [27, "vec4 blend(const in vec4 x,const in vec4 y,const in float opacity){vec3 xHSL=RGBToHSL(x.rgb);vec3 yHSL=RGBToHSL(y.rgb);vec3 z=HSLToRGB(vec3(xHSL.x,yHSL.y,xHSL.z));return mix(x,vec4(z,y.a),y.a*opacity);}"],
+          [28, "vec4 blend(const in vec4 x,const in vec4 y,const in float opacity){return mix(x,vec4(x.rgb+y.rgb-min(x.rgb*y.rgb,1.0),y.a),y.a*opacity);}"],
+          [29, "vec4 blend(const in vec4 x,const in vec4 y,const in float opacity){vec3 a=x.rgb;vec3 b=y.rgb;vec3 y2=2.0*b;vec3 w=step(0.5,b);vec3 c=a-(1.0-y2)*a*(1.0-a);vec3 d=mix(a+(y2-1.0)*(sqrt(a)-a),a+(y2-1.0)*a*((16.0*a-12.0)*a+3.0),w*(1.0-step(0.25,a)));vec3 z=mix(c,d,w);return mix(x,vec4(z,y.a),y.a*opacity);}"],
+          [30, "vec4 blend(const in vec4 x,const in vec4 y,const in float opacity){return y;}"],
+          [31, "vec4 blend(const in vec4 x,const in vec4 y,const in float opacity){return mix(x,vec4(max(x.rgb+y.rgb-1.0,0.0),y.a),y.a*opacity);}"],
+          [32, "vec4 blend(const in vec4 x,const in vec4 y,const in float opacity){vec3 z=mix(max(1.0-min((1.0-x.rgb)/(2.0*y.rgb),1.0),0.0),min(x.rgb/(2.0*(1.0-y.rgb)),1.0),step(0.5,y.rgb));return mix(x,vec4(z,y.a),y.a*opacity);}"]
         ]),
-        E = class extends a.Qev {
+        A = class extends a.Qev {
           constructor(e, t = 1) {
             super(), this._blendFunction = e, this.opacity = new a.nc$(t)
           }
@@ -767,20 +719,20 @@ gl_FragDepth=readDepth(vUv);
             this.blendFunction = e
           }
           getShaderCode() {
-            return U.get(this.blendFunction)
+            return b.get(this.blendFunction)
           }
         };
       a.GOR;
-      var A = class extends a.Qev {
+      var M = class extends a.Qev {
           constructor(e, t, {
             attributes: r = 0,
-            blendFunction: s = 23,
-            defines: i = new Map,
+            blendFunction: i = 23,
+            defines: s = new Map,
             uniforms: n = new Map,
             extensions: l = null,
             vertexShader: o = null
           } = {}) {
-            super(), this.name = e, this.renderer = null, this.attributes = r, this.fragmentShader = t, this.vertexShader = o, this.defines = i, this.uniforms = n, this.extensions = l, this.blendMode = new E(s), this.blendMode.addEventListener("change", e => this.setChanged()), this._inputColorSpace = a.Zr2, this._outputColorSpace = a.jf0
+            super(), this.name = e, this.renderer = null, this.attributes = r, this.fragmentShader = t, this.vertexShader = o, this.defines = s, this.uniforms = n, this.extensions = l, this.blendMode = new A(i), this.blendMode.addEventListener("change", e => this.setChanged()), this._inputColorSpace = a.Zr2, this._outputColorSpace = a.jf0
           }
           get inputColorSpace() {
             return this._inputColorSpace
@@ -844,11 +796,11 @@ gl_FragDepth=readDepth(vUv);
           dispose() {
             for (let e of Object.keys(this)) {
               let t = this[e];
-              (t instanceof a.nWS || t instanceof a.imn || t instanceof a.gPd || t instanceof o) && this[e].dispose()
+              (t instanceof a.nWS || t instanceof a.imn || t instanceof a.gPd || t instanceof u) && this[e].dispose()
             }
           }
         },
-        B = `#ifdef FRAMEBUFFER_PRECISION_HIGH
+        E = `#ifdef FRAMEBUFFER_PRECISION_HIGH
 uniform mediump sampler2D inputBuffer;
 #else
 uniform lowp sampler2D inputBuffer;
@@ -856,7 +808,7 @@ uniform lowp sampler2D inputBuffer;
 varying vec2 vUv0;varying vec2 vUv1;varying vec2 vUv2;varying vec2 vUv3;void main(){vec4 sum=texture2D(inputBuffer,vUv0);sum+=texture2D(inputBuffer,vUv1);sum+=texture2D(inputBuffer,vUv2);sum+=texture2D(inputBuffer,vUv3);gl_FragColor=sum*0.25;
 #include <colorspace_fragment>
 }`,
-        M = [new Float32Array([0, 0]), new Float32Array([0, 1, 1]), new Float32Array([0, 1, 1, 2]), new Float32Array([0, 1, 2, 2, 3]), new Float32Array([0, 1, 2, 3, 4, 4, 5]), new Float32Array([0, 1, 2, 3, 4, 5, 7, 8, 9, 10])],
+        B = [new Float32Array([0, 0]), new Float32Array([0, 1, 1]), new Float32Array([0, 1, 1, 2]), new Float32Array([0, 1, 2, 2, 3]), new Float32Array([0, 1, 2, 3, 4, 4, 5]), new Float32Array([0, 1, 2, 3, 4, 5, 7, 8, 9, 10])],
         R = class extends a.BKk {
           constructor(e = new a.IUQ) {
             super({
@@ -871,7 +823,7 @@ varying vec2 vUv0;varying vec2 vUv1;varying vec2 vUv2;varying vec2 vUv3;void mai
               toneMapped: !1,
               depthWrite: !1,
               depthTest: !1,
-              fragmentShader: B,
+              fragmentShader: E,
               vertexShader: "uniform vec4 texelSize;uniform float kernel;uniform float scale;varying vec2 vUv0;varying vec2 vUv1;varying vec2 vUv2;varying vec2 vUv3;void main(){vec2 uv=position.xy*0.5+0.5;vec2 dUv=(texelSize.xy*vec2(kernel)+texelSize.zw)*scale;vUv0=vec2(uv.x-dUv.x,uv.y+dUv.y);vUv1=vec2(uv.x+dUv.x,uv.y+dUv.y);vUv2=vec2(uv.x+dUv.x,uv.y-dUv.y);vUv3=vec2(uv.x-dUv.x,uv.y-dUv.y);gl_Position=vec4(position.xy,1.0,1.0);}"
             }), this.setTexelSize(e.x, e.y), this.kernelSize = 2
           }
@@ -882,7 +834,7 @@ varying vec2 vUv0;varying vec2 vUv1;varying vec2 vUv2;varying vec2 vUv3;void mai
             this.inputBuffer = e
           }
           get kernelSequence() {
-            return M[this.kernelSize]
+            return B[this.kernelSize]
           }
           get scale() {
             return this.uniforms.scale.value
@@ -913,24 +865,24 @@ varying vec2 vUv0;varying vec2 vUv1;varying vec2 vUv2;varying vec2 vUv3;void mai
           }
           setSize(e, t) {
             let r = 1 / e,
-              s = 1 / t;
-            this.uniforms.texelSize.value.set(r, s, .5 * r, .5 * s)
+              i = 1 / t;
+            this.uniforms.texelSize.value.set(r, i, .5 * r, .5 * i)
           }
         },
-        F = class extends o {
+        F = class extends u {
           constructor({
             kernelSize: e = 2,
             resolutionScale: t = .5,
-            width: r = b.AUTO_SIZE,
-            height: s = b.AUTO_SIZE,
-            resolutionX: i = r,
-            resolutionY: n = s
+            width: r = U.AUTO_SIZE,
+            height: i = U.AUTO_SIZE,
+            resolutionX: s = r,
+            resolutionY: n = i
           } = {}) {
             super("KawaseBlurPass"), this.renderTargetA = new a.nWS(1, 1, {
               depthBuffer: !1
             }), this.renderTargetA.texture.name = "Blur.Target.A", this.renderTargetB = this.renderTargetA.clone(), this.renderTargetB.texture.name = "Blur.Target.B";
-            const l = this.resolution = new b(this, i, n, t);
-            l.addEventListener("change", e => this.setSize(l.baseWidth, l.baseHeight)), this._blurMaterial = new R, this._blurMaterial.kernelSize = e, this.copyMaterial = new d
+            const l = this.resolution = new U(this, s, n, t);
+            l.addEventListener("change", e => this.setSize(l.baseWidth, l.baseHeight)), this._blurMaterial = new R, this._blurMaterial.kernelSize = e, this.copyMaterial = new f
           }
           getResolution() {
             return this.resolution
@@ -989,33 +941,33 @@ varying vec2 vUv0;varying vec2 vUv1;varying vec2 vUv2;varying vec2 vUv3;void mai
           setResolutionScale(e) {
             this.resolution.scale = e
           }
-          render(e, t, r, s, i) {
+          render(e, t, r, i, s) {
             let n = this.scene,
               a = this.camera,
               l = this.renderTargetA,
               o = this.renderTargetB,
-              h = this.blurMaterial,
-              c = h.kernelSequence,
-              u = t;
-            this.fullscreenMaterial = h;
-            for (let t = 0, r = c.length; t < r; ++t) {
+              u = this.blurMaterial,
+              h = u.kernelSequence,
+              c = t;
+            this.fullscreenMaterial = u;
+            for (let t = 0, r = h.length; t < r; ++t) {
               let r = (1 & t) == 0 ? l : o;
-              h.kernel = c[t], h.inputBuffer = u.texture, e.setRenderTarget(r), e.render(n, a), u = r
+              u.kernel = h[t], u.inputBuffer = c.texture, e.setRenderTarget(r), e.render(n, a), c = r
             }
-            this.fullscreenMaterial = this.copyMaterial, this.copyMaterial.inputBuffer = u.texture, e.setRenderTarget(this.renderToScreen ? null : r), e.render(n, a)
+            this.fullscreenMaterial = this.copyMaterial, this.copyMaterial.inputBuffer = c.texture, e.setRenderTarget(this.renderToScreen ? null : r), e.render(n, a)
           }
           setSize(e, t) {
             let r = this.resolution;
             r.setBaseSize(e, t);
-            let s = r.width,
-              i = r.height;
-            this.renderTargetA.setSize(s, i), this.renderTargetB.setSize(s, i), this.blurMaterial.setSize(e, t)
+            let i = r.width,
+              s = r.height;
+            this.renderTargetA.setSize(i, s), this.renderTargetB.setSize(i, s), this.blurMaterial.setSize(e, t)
           }
           initialize(e, t, r) {
             void 0 !== r && (this.renderTargetA.texture.type = r, this.renderTargetB.texture.type = r, r !== a.OUM ? (this.blurMaterial.defines.FRAMEBUFFER_PRECISION_HIGH = "1", this.copyMaterial.defines.FRAMEBUFFER_PRECISION_HIGH = "1") : null !== e && e.outputColorSpace === a.er$ && (this.renderTargetA.texture.colorSpace = a.er$, this.renderTargetB.texture.colorSpace = a.er$))
           }
           static get AUTO_SIZE() {
-            return b.AUTO_SIZE
+            return U.AUTO_SIZE
           }
         },
         _ = `#include <common>
@@ -1041,7 +993,7 @@ gl_FragColor=texel*mask;
 gl_FragColor=vec4(l*mask);
 #endif
 }`,
-        P = class extends a.BKk {
+        z = class extends a.BKk {
           constructor(e = !1, t = null) {
             super({
               name: "LuminanceMaterial",
@@ -1059,7 +1011,7 @@ gl_FragColor=vec4(l*mask);
               depthWrite: !1,
               depthTest: !1,
               fragmentShader: _,
-              vertexShader: u
+              vertexShader: d
             }), this.colorOutput = e, this.luminanceRange = t
           }
           set inputBuffer(e) {
@@ -1127,22 +1079,22 @@ gl_FragColor=vec4(l*mask);
             this.luminanceRange = e
           }
         },
-        C = class extends o {
+        P = class extends u {
           constructor({
             renderTarget: e,
             luminanceRange: t,
             colorOutput: r,
-            resolutionScale: s = 1,
-            width: i = b.AUTO_SIZE,
-            height: n = b.AUTO_SIZE,
-            resolutionX: l = i,
+            resolutionScale: i = 1,
+            width: s = U.AUTO_SIZE,
+            height: n = U.AUTO_SIZE,
+            resolutionX: l = s,
             resolutionY: o = n
           } = {}) {
-            super("LuminancePass"), this.fullscreenMaterial = new P(r, t), this.needsSwap = !1, this.renderTarget = e, void 0 === this.renderTarget && (this.renderTarget = new a.nWS(1, 1, {
+            super("LuminancePass"), this.fullscreenMaterial = new z(r, t), this.needsSwap = !1, this.renderTarget = e, void 0 === this.renderTarget && (this.renderTarget = new a.nWS(1, 1, {
               depthBuffer: !1
             }), this.renderTarget.texture.name = "LuminancePass.Target");
-            const h = this.resolution = new b(this, l, o, s);
-            h.addEventListener("change", e => this.setSize(h.baseWidth, h.baseHeight))
+            const u = this.resolution = new U(this, l, o, i);
+            u.addEventListener("change", e => this.setSize(u.baseWidth, u.baseHeight))
           }
           get texture() {
             return this.renderTarget.texture
@@ -1153,7 +1105,7 @@ gl_FragColor=vec4(l*mask);
           getResolution() {
             return this.resolution
           }
-          render(e, t, r, s, i) {
+          render(e, t, r, i, s) {
             this.fullscreenMaterial.inputBuffer = t.texture, e.setRenderTarget(this.renderToScreen ? null : this.renderTarget), e.render(this.scene, this.camera)
           }
           setSize(e, t) {
@@ -1164,13 +1116,13 @@ gl_FragColor=vec4(l*mask);
             void 0 !== r && r !== a.OUM && (this.renderTarget.texture.type = r, this.fullscreenMaterial.defines.FRAMEBUFFER_PRECISION_HIGH = "1")
           }
         },
-        z = `#ifdef FRAMEBUFFER_PRECISION_HIGH
+        C = `#ifdef FRAMEBUFFER_PRECISION_HIGH
 uniform mediump sampler2D inputBuffer;
 #else
 uniform lowp sampler2D inputBuffer;
 #endif
 #define WEIGHT_INNER 0.125
-#define WEIGHT_OUTER 0.05556
+#define WEIGHT_OUTER 0.0555555
 varying vec2 vUv;varying vec2 vUv00;varying vec2 vUv01;varying vec2 vUv02;varying vec2 vUv03;varying vec2 vUv04;varying vec2 vUv05;varying vec2 vUv06;varying vec2 vUv07;varying vec2 vUv08;varying vec2 vUv09;varying vec2 vUv10;varying vec2 vUv11;float clampToBorder(const in vec2 uv){return float(uv.s>=0.0&&uv.s<=1.0&&uv.t>=0.0&&uv.t<=1.0);}void main(){vec4 c=vec4(0.0);vec4 w=WEIGHT_INNER*vec4(clampToBorder(vUv00),clampToBorder(vUv01),clampToBorder(vUv02),clampToBorder(vUv03));c+=w.x*texture2D(inputBuffer,vUv00);c+=w.y*texture2D(inputBuffer,vUv01);c+=w.z*texture2D(inputBuffer,vUv02);c+=w.w*texture2D(inputBuffer,vUv03);w=WEIGHT_OUTER*vec4(clampToBorder(vUv04),clampToBorder(vUv05),clampToBorder(vUv06),clampToBorder(vUv07));c+=w.x*texture2D(inputBuffer,vUv04);c+=w.y*texture2D(inputBuffer,vUv05);c+=w.z*texture2D(inputBuffer,vUv06);c+=w.w*texture2D(inputBuffer,vUv07);w=WEIGHT_OUTER*vec4(clampToBorder(vUv08),clampToBorder(vUv09),clampToBorder(vUv10),clampToBorder(vUv11));c+=w.x*texture2D(inputBuffer,vUv08);c+=w.y*texture2D(inputBuffer,vUv09);c+=w.z*texture2D(inputBuffer,vUv10);c+=w.w*texture2D(inputBuffer,vUv11);c+=WEIGHT_OUTER*texture2D(inputBuffer,vUv);gl_FragColor=c;
 #include <colorspace_fragment>
 }`,
@@ -1186,7 +1138,7 @@ varying vec2 vUv;varying vec2 vUv00;varying vec2 vUv01;varying vec2 vUv02;varyin
               toneMapped: !1,
               depthWrite: !1,
               depthTest: !1,
-              fragmentShader: z,
+              fragmentShader: C,
               vertexShader: "uniform vec2 texelSize;varying vec2 vUv;varying vec2 vUv00;varying vec2 vUv01;varying vec2 vUv02;varying vec2 vUv03;varying vec2 vUv04;varying vec2 vUv05;varying vec2 vUv06;varying vec2 vUv07;varying vec2 vUv08;varying vec2 vUv09;varying vec2 vUv10;varying vec2 vUv11;void main(){vUv=position.xy*0.5+0.5;vUv00=vUv+texelSize*vec2(-1.0,1.0);vUv01=vUv+texelSize*vec2(1.0,1.0);vUv02=vUv+texelSize*vec2(-1.0,-1.0);vUv03=vUv+texelSize*vec2(1.0,-1.0);vUv04=vUv+texelSize*vec2(-2.0,2.0);vUv05=vUv+texelSize*vec2(0.0,2.0);vUv06=vUv+texelSize*vec2(2.0,2.0);vUv07=vUv+texelSize*vec2(-2.0,0.0);vUv08=vUv+texelSize*vec2(2.0,0.0);vUv09=vUv+texelSize*vec2(-2.0,-2.0);vUv10=vUv+texelSize*vec2(0.0,-2.0);vUv11=vUv+texelSize*vec2(2.0,-2.0);gl_Position=vec4(position.xy,1.0,1.0);}"
             })
           }
@@ -1205,7 +1157,7 @@ uniform lowp sampler2D inputBuffer;uniform lowp sampler2D supportBuffer;
 uniform float radius;varying vec2 vUv;varying vec2 vUv0;varying vec2 vUv1;varying vec2 vUv2;varying vec2 vUv3;varying vec2 vUv4;varying vec2 vUv5;varying vec2 vUv6;varying vec2 vUv7;void main(){vec4 c=vec4(0.0);c+=texture2D(inputBuffer,vUv0)*0.0625;c+=texture2D(inputBuffer,vUv1)*0.125;c+=texture2D(inputBuffer,vUv2)*0.0625;c+=texture2D(inputBuffer,vUv3)*0.125;c+=texture2D(inputBuffer,vUv)*0.25;c+=texture2D(inputBuffer,vUv4)*0.125;c+=texture2D(inputBuffer,vUv5)*0.0625;c+=texture2D(inputBuffer,vUv6)*0.125;c+=texture2D(inputBuffer,vUv7)*0.0625;vec4 baseColor=texture2D(supportBuffer,vUv);gl_FragColor=mix(baseColor,c,radius);
 #include <colorspace_fragment>
 }`,
-        O = class extends a.BKk {
+        k = class extends a.BKk {
           constructor() {
             super({
               name: "UpsamplingMaterial",
@@ -1239,11 +1191,11 @@ uniform float radius;varying vec2 vUv;varying vec2 vUv0;varying vec2 vUv1;varyin
             this.uniforms.texelSize.value.set(1 / e, 1 / t)
           }
         },
-        k = class extends o {
+        H = class extends u {
           constructor() {
             super("MipmapBlurPass"), this.needsSwap = !1, this.renderTarget = new a.nWS(1, 1, {
               depthBuffer: !1
-            }), this.renderTarget.texture.name = "Upsampling.Mipmap0", this.downsamplingMipmaps = [], this.upsamplingMipmaps = [], this.downsamplingMaterial = new D, this.upsamplingMaterial = new O, this.resolution = new a.I9Y
+            }), this.renderTarget.texture.name = "Upsampling.Mipmap0", this.downsamplingMipmaps = [], this.upsamplingMipmaps = [], this.downsamplingMaterial = new D, this.upsamplingMaterial = new k, this.resolution = new a.I9Y
           }
           get texture() {
             return this.renderTarget.texture
@@ -1260,7 +1212,7 @@ uniform float radius;varying vec2 vUv;varying vec2 vUv0;varying vec2 vUv1;varyin
                 e.texture.name = "Downsampling.Mipmap" + r, this.downsamplingMipmaps.push(e)
               }
               this.upsamplingMipmaps.push(t);
-              for (let r = 1, s = e - 1; r < s; ++r) {
+              for (let r = 1, i = e - 1; r < i; ++r) {
                 let e = t.clone();
                 e.texture.name = "Upsampling.Mipmap" + r, this.upsamplingMipmaps.push(e)
               }
@@ -1273,7 +1225,7 @@ uniform float radius;varying vec2 vUv;varying vec2 vUv0;varying vec2 vUv1;varyin
           set radius(e) {
             this.upsamplingMaterial.radius = e
           }
-          render(e, t, r, s, i) {
+          render(e, t, r, i, s) {
             let {
               scene: n,
               camera: a
@@ -1281,26 +1233,26 @@ uniform float radius;varying vec2 vUv;varying vec2 vUv0;varying vec2 vUv1;varyin
               downsamplingMaterial: l,
               upsamplingMaterial: o
             } = this, {
-              downsamplingMipmaps: h,
-              upsamplingMipmaps: c
-            } = this, u = t;
+              downsamplingMipmaps: u,
+              upsamplingMipmaps: h
+            } = this, c = t;
             this.fullscreenMaterial = l;
-            for (let t = 0, r = h.length; t < r; ++t) {
-              let r = h[t];
-              l.setSize(u.width, u.height), l.inputBuffer = u.texture, e.setRenderTarget(r), e.render(n, a), u = r
+            for (let t = 0, r = u.length; t < r; ++t) {
+              let r = u[t];
+              l.setSize(c.width, c.height), l.inputBuffer = c.texture, e.setRenderTarget(r), e.render(n, a), c = r
             }
             this.fullscreenMaterial = o;
-            for (let t = c.length - 1; t >= 0; --t) {
-              let r = c[t];
-              o.setSize(u.width, u.height), o.inputBuffer = u.texture, o.supportBuffer = h[t].texture, e.setRenderTarget(r), e.render(n, a), u = r
+            for (let t = h.length - 1; t >= 0; --t) {
+              let r = h[t];
+              o.setSize(c.width, c.height), o.inputBuffer = c.texture, o.supportBuffer = u[t].texture, e.setRenderTarget(r), e.render(n, a), c = r
             }
           }
           setSize(e, t) {
             let r = this.resolution;
             r.set(e, t);
-            let s = r.width,
-              i = r.height;
-            for (let e = 0, t = this.downsamplingMipmaps.length; e < t; ++e) s = Math.round(.5 * s), i = Math.round(.5 * i), this.downsamplingMipmaps[e].setSize(s, i), e < this.upsamplingMipmaps.length && this.upsamplingMipmaps[e].setSize(s, i)
+            let i = r.width,
+              s = r.height;
+            for (let e = 0, t = this.downsamplingMipmaps.length; e < t; ++e) i = Math.round(.5 * i), s = Math.round(.5 * s), this.downsamplingMipmaps[e].setSize(i, s), e < this.upsamplingMipmaps.length && this.upsamplingMipmaps[e].setSize(i, s)
           }
           initialize(e, t, r) {
             if (void 0 !== r) {
@@ -1315,42 +1267,42 @@ uniform float radius;varying vec2 vUv;varying vec2 vUv0;varying vec2 vUv1;varyin
             for (let e of (super.dispose(), this.downsamplingMipmaps.concat(this.upsamplingMipmaps))) e.dispose()
           }
         },
-        H = `#ifdef FRAMEBUFFER_PRECISION_HIGH
+        O = `#ifdef FRAMEBUFFER_PRECISION_HIGH
 uniform mediump sampler2D map;
 #else
 uniform lowp sampler2D map;
 #endif
-uniform float intensity;void mainImage(const in vec4 inputColor,const in vec2 uv,out vec4 outputColor){outputColor=texture2D(map,uv)*intensity;}`,
-        G = class extends A {
+uniform float intensity;void mainImage(const in vec4 inputColor,const in vec2 uv,out vec4 outputColor){vec4 texel=texture2D(map,uv);outputColor=vec4(texel.rgb*intensity,max(inputColor.a,texel.a));}`,
+        G = class extends M {
           constructor({
             blendFunction: e = 28,
             luminanceThreshold: t = 1,
             luminanceSmoothing: r = .03,
-            mipmapBlur: s = !0,
-            intensity: i = 1,
+            mipmapBlur: i = !0,
+            intensity: s = 1,
             radius: n = .85,
             levels: l = 8,
             kernelSize: o = 3,
-            resolutionScale: h = .5,
-            width: c = b.AUTO_SIZE,
-            height: u = b.AUTO_SIZE,
-            resolutionX: d = c,
-            resolutionY: f = u
+            resolutionScale: u = .5,
+            width: h = U.AUTO_SIZE,
+            height: c = U.AUTO_SIZE,
+            resolutionX: d = h,
+            resolutionY: f = c
           } = {}) {
-            super("BloomEffect", H, {
+            super("BloomEffect", O, {
               blendFunction: e,
               uniforms: new Map([
                 ["map", new a.nc$(null)],
-                ["intensity", new a.nc$(i)]
+                ["intensity", new a.nc$(s)]
               ])
             }), this.renderTarget = new a.nWS(1, 1, {
               depthBuffer: !1
             }), this.renderTarget.texture.name = "Bloom.Target", this.blurPass = new F({
               kernelSize: o
-            }), this.luminancePass = new C({
+            }), this.luminancePass = new P({
               colorOutput: !0
-            }), this.luminanceMaterial.threshold = t, this.luminanceMaterial.smoothing = r, this.mipmapBlurPass = new k, this.mipmapBlurPass.enabled = s, this.mipmapBlurPass.radius = n, this.mipmapBlurPass.levels = l, this.uniforms.get("map").value = s ? this.mipmapBlurPass.texture : this.renderTarget.texture;
-            const p = this.resolution = new b(this, d, f, h);
+            }), this.luminanceMaterial.threshold = t, this.luminanceMaterial.smoothing = r, this.mipmapBlurPass = new H, this.mipmapBlurPass.enabled = i, this.mipmapBlurPass.radius = n, this.mipmapBlurPass.levels = l, this.uniforms.get("map").value = i ? this.mipmapBlurPass.texture : this.renderTarget.texture;
+            const p = this.resolution = new U(this, d, f, u);
             p.addEventListener("change", e => this.setSize(p.baseWidth, p.baseHeight))
           }
           get texture() {
@@ -1423,9 +1375,9 @@ uniform float intensity;void mainImage(const in vec4 inputColor,const in vec2 uv
             this.resolution.scale = e
           }
           update(e, t, r) {
-            let s = this.renderTarget,
-              i = this.luminancePass;
-            i.enabled ? (i.render(e, t), this.mipmapBlurPass.enabled ? this.mipmapBlurPass.render(e, i.renderTarget) : this.blurPass.render(e, i.renderTarget, s)) : this.mipmapBlurPass.enabled ? this.mipmapBlurPass.render(e, t) : this.blurPass.render(e, t, s)
+            let i = this.renderTarget,
+              s = this.luminancePass;
+            s.enabled ? (s.render(e, t), this.mipmapBlurPass.enabled ? this.mipmapBlurPass.render(e, s.renderTarget) : this.blurPass.render(e, s.renderTarget, i)) : this.mipmapBlurPass.enabled ? this.mipmapBlurPass.render(e, t) : this.blurPass.render(e, t, i)
           }
           setSize(e, t) {
             let r = this.resolution;
@@ -1439,9 +1391,9 @@ uniform float intensity;void mainImage(const in vec4 inputColor,const in vec2 uv
       a.BKk;
       a.BKk, a.GYF;
       a.BKk;
-      var N = class extends o {
+      var L = class extends u {
         constructor(e, t, r = null) {
-          super("RenderPass", e, t), this.needsSwap = !1, this.needsDepthBlit = !0, this.clearPass = new v, this.overrideMaterialManager = null === r ? null : new T(r), this.ignoreBackground = !1, this.skipShadowMapUpdate = !1, this.selection = null
+          super("RenderPass", e, t), this.needsSwap = !1, this.clearPass = new m, this.overrideMaterialManager = null === r ? null : new T(r), this.ignoreBackground = !1, this.skipShadowMapUpdate = !1, this.selection = null
         }
         set mainScene(e) {
           this.scene = e
@@ -1496,45 +1448,45 @@ uniform float intensity;void mainImage(const in vec4 inputColor,const in vec2 uv
         getClearPass() {
           return this.clearPass
         }
-        render(e, t, r, s, i) {
+        render(e, t, r, i, s) {
           let n = this.scene,
             a = this.camera,
             l = this.selection,
             o = a.layers.mask,
-            h = n.background,
-            c = e.shadowMap.autoUpdate,
-            u = this.renderToScreen ? null : t;
-          null !== l && a.layers.set(l.getLayer()), this.skipShadowMapUpdate && (e.shadowMap.autoUpdate = !1), (this.ignoreBackground || null !== this.clearPass.overrideClearColor) && (n.background = null), this.clearPass.enabled && this.clearPass.render(e, t), e.setRenderTarget(u), null !== this.overrideMaterialManager ? this.overrideMaterialManager.render(e, n, a) : e.render(n, a), a.layers.mask = o, n.background = h, e.shadowMap.autoUpdate = c
+            u = n.background,
+            h = e.shadowMap.autoUpdate,
+            c = this.renderToScreen ? null : t;
+          null !== l && a.layers.set(l.getLayer()), this.skipShadowMapUpdate && (e.shadowMap.autoUpdate = !1), (this.ignoreBackground || null !== this.clearPass.overrideClearColor) && (n.background = null), this.clearPass.enabled && this.clearPass.render(e, t), e.setRenderTarget(c), null !== this.overrideMaterialManager ? this.overrideMaterialManager.render(e, n, a) : e.render(n, a), a.layers.mask = o, n.background = u, e.shadowMap.autoUpdate = h
         }
       };
 
-      function L(e, t, r) {
-        let s = document.createElement("canvas"),
-          i = s.getContext("2d");
-        if (s.width = e, s.height = t, r instanceof Image) i.drawImage(r, 0, 0);
+      function N(e, t, r) {
+        let i = document.createElement("canvas"),
+          s = i.getContext("2d");
+        if (i.width = e, i.height = t, r instanceof Image) s.drawImage(r, 0, 0);
         else {
-          let s = i.createImageData(e, t);
-          s.data.set(r), i.putImageData(s, 0, 0)
+          let i = s.createImageData(e, t);
+          i.data.set(r), s.putImageData(i, 0, 0)
         }
-        return s
+        return i
       }
       var W = class e {
           constructor(e = 0, t = 0, r = null) {
             this.width = e, this.height = t, this.data = r
           }
           toCanvas() {
-            return "undefined" == typeof document ? null : L(this.width, this.height, this.data)
+            return "undefined" == typeof document ? null : N(this.width, this.height, this.data)
           }
           static from(t) {
             let r, {
-              width: s,
-              height: i
+              width: i,
+              height: s
             } = t;
             if (t instanceof Image) {
-              let e = L(s, i, t);
-              null !== e && (r = e.getContext("2d").getImageData(0, 0, s, i).data)
+              let e = N(i, s, t);
+              null !== e && (r = e.getContext("2d").getImageData(0, 0, i, s).data)
             } else r = t.data;
-            return new e(s, i, r)
+            return new e(i, s, r)
           }
         },
         $ = new a.Q1f;
@@ -1546,20 +1498,20 @@ uniform float intensity;void mainImage(const in vec4 inputColor,const in vec2 uv
           return !0
         }
         scaleUp(t, r = !0) {
-          let s = this.image;
-          return t <= s.width ? Promise.reject(Error("The target size must be greater than the current size")) : new Promise((i, n) => {
-            let a = URL.createObjectURL(new Blob(['"use strict";(()=>{var O={SCALE_UP:"lut.scaleup"};var _=[new Float32Array(3),new Float32Array(3)],n=[new Float32Array(3),new Float32Array(3),new Float32Array(3),new Float32Array(3)],Z=[[new Float32Array([0,0,0]),new Float32Array([1,0,0]),new Float32Array([1,1,0]),new Float32Array([1,1,1])],[new Float32Array([0,0,0]),new Float32Array([1,0,0]),new Float32Array([1,0,1]),new Float32Array([1,1,1])],[new Float32Array([0,0,0]),new Float32Array([0,0,1]),new Float32Array([1,0,1]),new Float32Array([1,1,1])],[new Float32Array([0,0,0]),new Float32Array([0,1,0]),new Float32Array([1,1,0]),new Float32Array([1,1,1])],[new Float32Array([0,0,0]),new Float32Array([0,1,0]),new Float32Array([0,1,1]),new Float32Array([1,1,1])],[new Float32Array([0,0,0]),new Float32Array([0,0,1]),new Float32Array([0,1,1]),new Float32Array([1,1,1])]];function d(a,t,r,m){let i=r[0]-t[0],e=r[1]-t[1],y=r[2]-t[2],h=a[0]-t[0],A=a[1]-t[1],w=a[2]-t[2],c=e*w-y*A,l=y*h-i*w,x=i*A-e*h,u=Math.sqrt(c*c+l*l+x*x),b=u*.5,s=c/u,F=l/u,f=x/u,p=-(a[0]*s+a[1]*F+a[2]*f),M=m[0]*s+m[1]*F+m[2]*f;return Math.abs(M+p)*b/3}function V(a,t,r,m,i,e){let y=(r+m*t+i*t*t)*4;e[0]=a[y+0],e[1]=a[y+1],e[2]=a[y+2]}function k(a,t,r,m,i,e){let y=r*(t-1),h=m*(t-1),A=i*(t-1),w=Math.floor(y),c=Math.floor(h),l=Math.floor(A),x=Math.ceil(y),u=Math.ceil(h),b=Math.ceil(A),s=y-w,F=h-c,f=A-l;if(w===y&&c===h&&l===A)V(a,t,y,h,A,e);else{let p;s>=F&&F>=f?p=Z[0]:s>=f&&f>=F?p=Z[1]:f>=s&&s>=F?p=Z[2]:F>=s&&s>=f?p=Z[3]:F>=f&&f>=s?p=Z[4]:f>=F&&F>=s&&(p=Z[5]);let[M,g,X,Y]=p,P=_[0];P[0]=s,P[1]=F,P[2]=f;let o=_[1],L=x-w,S=u-c,U=b-l;o[0]=L*M[0]+w,o[1]=S*M[1]+c,o[2]=U*M[2]+l,V(a,t,o[0],o[1],o[2],n[0]),o[0]=L*g[0]+w,o[1]=S*g[1]+c,o[2]=U*g[2]+l,V(a,t,o[0],o[1],o[2],n[1]),o[0]=L*X[0]+w,o[1]=S*X[1]+c,o[2]=U*X[2]+l,V(a,t,o[0],o[1],o[2],n[2]),o[0]=L*Y[0]+w,o[1]=S*Y[1]+c,o[2]=U*Y[2]+l,V(a,t,o[0],o[1],o[2],n[3]);let T=d(g,X,Y,P)*6,q=d(M,X,Y,P)*6,C=d(M,g,Y,P)*6,E=d(M,g,X,P)*6;n[0][0]*=T,n[0][1]*=T,n[0][2]*=T,n[1][0]*=q,n[1][1]*=q,n[1][2]*=q,n[2][0]*=C,n[2][1]*=C,n[2][2]*=C,n[3][0]*=E,n[3][1]*=E,n[3][2]*=E,e[0]=n[0][0]+n[1][0]+n[2][0]+n[3][0],e[1]=n[0][1]+n[1][1]+n[2][1]+n[3][1],e[2]=n[0][2]+n[1][2]+n[2][2]+n[3][2]}}var v=class{static expand(t,r){let m=Math.cbrt(t.length/4),i=new Float32Array(3),e=new t.constructor(r**3*4),y=t instanceof Uint8Array?255:1,h=r**2,A=1/(r-1);for(let w=0;w<r;++w)for(let c=0;c<r;++c)for(let l=0;l<r;++l){let x=l*A,u=c*A,b=w*A,s=Math.round(l+c*r+w*h)*4;k(t,m,x,u,b,i),e[s+0]=i[0],e[s+1]=i[1],e[s+2]=i[2],e[s+3]=y}return e}};self.addEventListener("message",a=>{let t=a.data,r=t.data;t.operation===O.SCALE_UP&&(r=v.expand(r,t.size)),postMessage(r,[r.buffer]),close()});})();\n'], {
+          let i = this.image;
+          return t <= i.width ? Promise.reject(Error("The target size must be greater than the current size")) : new Promise((s, n) => {
+            let a = URL.createObjectURL(new Blob(['"use strict";(()=>{var O={SCALE_UP:"lut.scaleup"};var _=[new Float32Array(3),new Float32Array(3)],n=[new Float32Array(3),new Float32Array(3),new Float32Array(3),new Float32Array(3)],Z=[[new Float32Array([0,0,0]),new Float32Array([1,0,0]),new Float32Array([1,1,0]),new Float32Array([1,1,1])],[new Float32Array([0,0,0]),new Float32Array([1,0,0]),new Float32Array([1,0,1]),new Float32Array([1,1,1])],[new Float32Array([0,0,0]),new Float32Array([0,0,1]),new Float32Array([1,0,1]),new Float32Array([1,1,1])],[new Float32Array([0,0,0]),new Float32Array([0,1,0]),new Float32Array([1,1,0]),new Float32Array([1,1,1])],[new Float32Array([0,0,0]),new Float32Array([0,1,0]),new Float32Array([0,1,1]),new Float32Array([1,1,1])],[new Float32Array([0,0,0]),new Float32Array([0,0,1]),new Float32Array([0,1,1]),new Float32Array([1,1,1])]];function d(a,t,r,m){let i=r[0]-t[0],e=r[1]-t[1],y=r[2]-t[2],h=a[0]-t[0],A=a[1]-t[1],w=a[2]-t[2],c=e*w-y*A,l=y*h-i*w,x=i*A-e*h,u=Math.sqrt(c*c+l*l+x*x),b=u*.5,s=c/u,F=l/u,f=x/u,p=-(a[0]*s+a[1]*F+a[2]*f),M=m[0]*s+m[1]*F+m[2]*f;return Math.abs(M+p)*b/3}function V(a,t,r,m,i,e){let y=(r+m*t+i*t*t)*4;e[0]=a[y+0],e[1]=a[y+1],e[2]=a[y+2]}function k(a,t,r,m,i,e){let y=r*(t-1),h=m*(t-1),A=i*(t-1),w=Math.floor(y),c=Math.floor(h),l=Math.floor(A),x=Math.ceil(y),u=Math.ceil(h),b=Math.ceil(A),s=y-w,F=h-c,f=A-l;if(w===y&&c===h&&l===A)V(a,t,y,h,A,e);else{let p;s>=F&&F>=f?p=Z[0]:s>=f&&f>=F?p=Z[1]:f>=s&&s>=F?p=Z[2]:F>=s&&s>=f?p=Z[3]:F>=f&&f>=s?p=Z[4]:f>=F&&F>=s&&(p=Z[5]);let[M,g,X,Y]=p,P=_[0];P[0]=s,P[1]=F,P[2]=f;let o=_[1],L=x-w,S=u-c,U=b-l;o[0]=L*M[0]+w,o[1]=S*M[1]+c,o[2]=U*M[2]+l,V(a,t,o[0],o[1],o[2],n[0]),o[0]=L*g[0]+w,o[1]=S*g[1]+c,o[2]=U*g[2]+l,V(a,t,o[0],o[1],o[2],n[1]),o[0]=L*X[0]+w,o[1]=S*X[1]+c,o[2]=U*X[2]+l,V(a,t,o[0],o[1],o[2],n[2]),o[0]=L*Y[0]+w,o[1]=S*Y[1]+c,o[2]=U*Y[2]+l,V(a,t,o[0],o[1],o[2],n[3]);let T=d(g,X,Y,P)*6,q=d(M,X,Y,P)*6,C=d(M,g,Y,P)*6,E=d(M,g,X,P)*6;n[0][0]*=T,n[0][1]*=T,n[0][2]*=T,n[1][0]*=q,n[1][1]*=q,n[1][2]*=q,n[2][0]*=C,n[2][1]*=C,n[2][2]*=C,n[3][0]*=E,n[3][1]*=E,n[3][2]*=E,e[0]=n[0][0]+n[1][0]+n[2][0]+n[3][0],e[1]=n[0][1]+n[1][1]+n[2][1]+n[3][1],e[2]=n[0][2]+n[1][2]+n[2][2]+n[3][2]}}var v=class{static expand(t,r){let m=Math.cbrt(t.length/4),i=new Float32Array(3),e=new t.constructor(r**3*4),y=t instanceof Uint8Array?255:1,h=r**2,A=1/(r-1);for(let w=0;w<r;++w)for(let c=0;c<r;++c)for(let l=0;l<r;++l){let x=l*A,u=c*A,b=w*A,s=Math.round(l+c*r+w*h)*4;k(t,m,x,u,b,i),e[s+0]=i[0],e[s+1]=i[1],e[s+2]=i[2],e[s+3]=y}return e}};self.addEventListener("message",a=>{let t=a.data,r=t.data;switch(t.operation){case O.SCALE_UP:r=v.expand(r,t.size);break}postMessage(r,[r.buffer]),close()});})();\n'], {
                 type: "text/javascript"
               })),
               l = new Worker(a);
             l.addEventListener("error", e => n(e.error)), l.addEventListener("message", r => {
-              let s = new e(r.data, t);
-              this.colorSpace = s.colorSpace, s.type = this.type, s.name = this.name, URL.revokeObjectURL(a), i(s)
+              let i = new e(r.data, t);
+              this.colorSpace = i.colorSpace, i.type = this.type, i.name = this.name, URL.revokeObjectURL(a), s(i)
             });
-            let o = r ? [s.data.buffer] : [];
+            let o = r ? [i.data.buffer] : [];
             l.postMessage({
               operation: "lut.scaleup",
-              data: s.data,
+              data: i.data,
               size: t
             }, o)
           })
@@ -1567,19 +1519,19 @@ uniform float intensity;void mainImage(const in vec4 inputColor,const in vec2 uv
         applyLUT(e) {
           let t = this.image,
             r = e.image,
-            s = Math.min(t.width, t.height, t.depth);
-          if (s !== Math.min(r.width, r.height, r.depth)) console.error("Size mismatch");
+            i = Math.min(t.width, t.height, t.depth);
+          if (i !== Math.min(r.width, r.height, r.depth)) console.error("Size mismatch");
           else if (e.type !== a.RQf || this.type !== a.RQf) console.error("Both LUTs must be FloatType textures");
           else if (e.format !== a.GWd || this.format !== a.GWd) console.error("Both LUTs must be RGBA textures");
           else {
             let e = t.data,
-              i = r.data,
-              n = s ** 2,
-              a = s - 1;
-            for (let t = 0, r = s ** 3; t < r; ++t) {
+              s = r.data,
+              n = i ** 2,
+              a = i - 1;
+            for (let t = 0, r = i ** 3; t < r; ++t) {
               let r = 4 * t,
-                l = 4 * Math.round(e[r + 0] * a + e[r + 1] * a * s + e[r + 2] * a * n);
-              e[r + 0] = i[l + 0], e[r + 1] = i[l + 1], e[r + 2] = i[l + 2]
+                l = 4 * Math.round(e[r + 0] * a + e[r + 1] * a * i + e[r + 2] * a * n);
+              e[r + 0] = s[l + 0], e[r + 1] = s[l + 1], e[r + 2] = s[l + 2]
             }
             this.needsUpdate = !0
           }
@@ -1589,7 +1541,7 @@ uniform float intensity;void mainImage(const in vec4 inputColor,const in vec2 uv
           if (this.type === a.RQf) {
             let e = this.image.data,
               t = new Uint8Array(e.length);
-            for (let r = 0, s = e.length; r < s; ++r) t[r] = 255 * e[r] + .5;
+            for (let r = 0, i = e.length; r < i; ++r) t[r] = 255 * e[r] + .5;
             this.image.data = t, this.type = a.OUM, this.needsUpdate = !0
           }
           return this
@@ -1598,7 +1550,7 @@ uniform float intensity;void mainImage(const in vec4 inputColor,const in vec2 uv
           if (this.type === a.OUM) {
             let e = this.image.data,
               t = new Float32Array(e.length);
-            for (let r = 0, s = e.length; r < s; ++r) t[r] = e[r] / 255;
+            for (let r = 0, i = e.length; r < i; ++r) t[r] = e[r] / 255;
             this.image.data = t, this.type = a.RQf, this.needsUpdate = !0
           }
           return this
@@ -1629,37 +1581,37 @@ uniform float intensity;void mainImage(const in vec4 inputColor,const in vec2 uv
           return r.name = this.name, r.type = this.type, r.format = this.format, r.minFilter = a.k6q, r.magFilter = a.k6q, r.wrapS = this.wrapS, r.wrapT = this.wrapT, r.generateMipmaps = !1, r.needsUpdate = !0, this.colorSpace = r.colorSpace, r
         }
         static from(t) {
-          let r, s = t.image,
+          let r, i = t.image,
             {
-              width: i,
+              width: s,
               height: n
-            } = s,
-            a = Math.min(i, n);
-          if (s instanceof Image) {
-            let e = W.from(s).data;
-            if (i > n) {
+            } = i,
+            a = Math.min(s, n);
+          if (i instanceof Image) {
+            let e = W.from(i).data;
+            if (s > n) {
               r = new Uint8Array(e.length);
               for (let t = 0; t < a; ++t)
-                for (let s = 0; s < a; ++s)
-                  for (let i = 0; i < a; ++i) {
-                    let n = (i + t * a + s * a * a) * 4,
-                      l = (i + s * a + t * a * a) * 4;
+                for (let i = 0; i < a; ++i)
+                  for (let s = 0; s < a; ++s) {
+                    let n = (s + t * a + i * a * a) * 4,
+                      l = (s + i * a + t * a * a) * 4;
                     r[l + 0] = e[n + 0], r[l + 1] = e[n + 1], r[l + 2] = e[n + 2], r[l + 3] = e[n + 3]
                   }
             } else r = new Uint8Array(e.buffer)
-          } else r = s.data.slice();
+          } else r = i.data.slice();
           let l = new e(r, a);
           return l.type = t.type, l.name = t.name, t.colorSpace = l.colorSpace, l
         }
         static createNeutral(t) {
           let r = new Float32Array(t ** 3 * 4),
-            s = t ** 2,
-            i = 1 / (t - 1);
+            i = t ** 2,
+            s = 1 / (t - 1);
           for (let e = 0; e < t; ++e)
             for (let n = 0; n < t; ++n)
               for (let a = 0; a < t; ++a) {
-                let l = (e + n * t + a * s) * 4;
-                r[l + 0] = e * i, r[l + 1] = n * i, r[l + 2] = a * i, r[l + 3] = 1
+                let l = (e + n * t + a * i) * 4;
+                r[l + 0] = e * s, r[l + 1] = n * s, r[l + 2] = a * s, r[l + 3] = 1
               }
           let n = new e(r, t);
           return n.name = "neutral", n
@@ -1672,7 +1624,7 @@ outputColor=vec4(min(inputColor.rgb*noise,vec3(1.0)),inputColor.a);
 outputColor=vec4(noise,inputColor.a);
 #endif
 }`,
-        K = class extends A {
+        K = class extends M {
           constructor({
             blendFunction: e = 28,
             premultiply: t = !1
@@ -1704,7 +1656,7 @@ void mainImage(const in vec4 inputColor,const in vec2 uv,out vec4 outputColor){f
 y+=time*scrollSpeed;
 #endif
 vec2 sl=vec2(sin(y*count),cos(y*count));outputColor=vec4(sl.xyx,inputColor.a);}`,
-        Y = class extends A {
+        Y = class extends M {
           constructor({
             blendFunction: e = 24,
             density: t = 1.25,
@@ -1808,14 +1760,14 @@ gl_FragColor=vec4(n[index],d[index]);}`,
             this.uniforms.texelSize.value.set(1 / e, 1 / t)
           }
         },
-        j = class extends o {
+        j = class extends u {
           constructor({
             normalBuffer: e = null,
             resolutionScale: t = .5,
-            width: r = b.AUTO_SIZE,
-            height: s = b.AUTO_SIZE,
-            resolutionX: i = r,
-            resolutionY: n = s
+            width: r = U.AUTO_SIZE,
+            height: i = U.AUTO_SIZE,
+            resolutionX: s = r,
+            resolutionY: n = i
           } = {}) {
             super("DepthDownsamplingPass");
             const l = new Q;
@@ -1825,7 +1777,7 @@ gl_FragColor=vec4(n[index],d[index]);}`,
               depthBuffer: !1,
               type: a.RQf
             }), this.renderTarget.texture.name = "DepthDownsamplingPass.Target", this.renderTarget.texture.generateMipmaps = !1;
-            const o = this.resolution = new b(this, i, n, t);
+            const o = this.resolution = new U(this, s, n, t);
             o.addEventListener("change", e => this.setSize(o.baseWidth, o.baseHeight))
           }
           get texture() {
@@ -1840,7 +1792,7 @@ gl_FragColor=vec4(n[index],d[index]);}`,
           setDepthTexture(e, t = a.Rkk) {
             this.fullscreenMaterial.depthBuffer = e, this.fullscreenMaterial.depthPacking = t
           }
-          render(e, t, r, s, i) {
+          render(e, t, r, i, s) {
             e.setRenderTarget(this.renderToScreen ? null : this.renderTarget), e.render(this.scene, this.camera)
           }
           setSize(e, t) {
@@ -1848,8 +1800,8 @@ gl_FragColor=vec4(n[index],d[index]);}`,
             r.setBaseSize(e, t), this.renderTarget.setSize(r.width, r.height), this.fullscreenMaterial.setSize(e, t)
           }
           initialize(e, t, r) {
-            let s = e.getContext();
-            if (!(s.getExtension("EXT_color_buffer_float") || s.getExtension("EXT_color_buffer_half_float"))) throw Error("Rendering to float texture is not supported.")
+            let i = e.getContext();
+            if (!(i.getExtension("EXT_color_buffer_float") || i.getExtension("EXT_color_buffer_half_float"))) throw Error("Rendering to float texture is not supported.")
           }
         },
         q = `#ifdef FRAMEBUFFER_PRECISION_HIGH
@@ -1865,10 +1817,10 @@ uniform vec4 maskParams;varying vec2 vUv;varying vec2 vUv2;varying vec2 vOffset;
             kernelSize: e = 2,
             offset: t = 0,
             rotation: r = 0,
-            focusArea: s = .4,
-            feather: i = .3
+            focusArea: i = .4,
+            feather: s = .3
           } = {}) {
-            super(), this.fragmentShader = q, this.vertexShader = "uniform vec4 texelSize;uniform float kernel;uniform float scale;uniform float aspect;uniform vec2 rotation;varying vec2 vUv;varying vec2 vUv2;varying vec2 vOffset;void main(){vec2 uv=position.xy*0.5+0.5;vUv=uv;vUv2=(uv-0.5)*2.0*vec2(aspect,1.0);vUv2=vec2(dot(rotation,vUv2),dot(rotation,vec2(vUv2.y,-vUv2.x)));vOffset=(texelSize.xy*vec2(kernel)+texelSize.zw)*scale;gl_Position=vec4(position.xy,1.0,1.0);}", this.kernelSize = e, this.uniforms.aspect = new a.nc$(1), this.uniforms.rotation = new a.nc$(new a.I9Y), this.uniforms.maskParams = new a.nc$(new a.IUQ), this._offset = t, this._focusArea = s, this._feather = i, this.rotation = r, this.updateParams()
+            super(), this.fragmentShader = q, this.vertexShader = "uniform vec4 texelSize;uniform float kernel;uniform float scale;uniform float aspect;uniform vec2 rotation;varying vec2 vUv;varying vec2 vUv2;varying vec2 vOffset;void main(){vec2 uv=position.xy*0.5+0.5;vUv=uv;vUv2=(uv-0.5)*2.0*vec2(aspect,1.0);vUv2=vec2(dot(rotation,vUv2),dot(rotation,vec2(vUv2.y,-vUv2.x)));vOffset=(texelSize.xy*vec2(kernel)+texelSize.zw)*scale;gl_Position=vec4(position.xy,1.0,1.0);}", this.kernelSize = e, this.uniforms.aspect = new a.nc$(1), this.uniforms.rotation = new a.nc$(new a.I9Y), this.uniforms.maskParams = new a.nc$(new a.IUQ), this._offset = t, this._focusArea = i, this._feather = s, this.rotation = r, this.updateParams()
           }
           updateParams() {
             let e = this.uniforms.maskParams.value,
@@ -1909,23 +1861,23 @@ uniform vec4 maskParams;varying vec2 vUv;varying vec2 vUv2;varying vec2 vOffset;
             offset: e = 0,
             rotation: t = 0,
             focusArea: r = .4,
-            feather: s = .3,
-            kernelSize: i = 2,
+            feather: i = .3,
+            kernelSize: s = 2,
             resolutionScale: n = .5,
-            resolutionX: a = b.AUTO_SIZE,
-            resolutionY: l = b.AUTO_SIZE
+            resolutionX: a = U.AUTO_SIZE,
+            resolutionY: l = U.AUTO_SIZE
           } = {}) {
             super({
-              kernelSize: i,
+              kernelSize: s,
               resolutionScale: n,
               resolutionX: a,
               resolutionY: l
             }), this.blurMaterial = new J({
-              kernelSize: i,
+              kernelSize: s,
               offset: e,
               rotation: t,
               focusArea: r,
-              feather: s
+              feather: i
             })
           }
         },
@@ -1935,17 +1887,17 @@ uniform mediump sampler2D map;
 uniform lowp sampler2D map;
 #endif
 uniform vec2 maskParams;varying vec2 vUv2;float linearGradientMask(const in float x){return step(maskParams.x,x)-step(maskParams.y,x);}void mainImage(const in vec4 inputColor,const in vec2 uv,out vec4 outputColor){float mask=linearGradientMask(vUv2.y);vec4 texel=texture2D(map,uv);outputColor=mix(texel,inputColor,mask);}`,
-        er = class extends A {
+        er = class extends M {
           constructor({
             blendFunction: e,
             offset: t = 0,
             rotation: r = 0,
-            focusArea: s = .4,
-            feather: i = .3,
+            focusArea: i = .4,
+            feather: s = .3,
             kernelSize: n = 2,
             resolutionScale: l = .5,
-            resolutionX: o = b.AUTO_SIZE,
-            resolutionY: h = b.AUTO_SIZE
+            resolutionX: o = U.AUTO_SIZE,
+            resolutionY: u = U.AUTO_SIZE
           } = {}) {
             super("TiltShiftEffect", et, {
               vertexShader: "uniform vec2 rotation;varying vec2 vUv2;void mainSupport(const in vec2 uv){vUv2=(uv-0.5)*2.0*vec2(aspect,1.0);vUv2=vec2(dot(rotation,vUv2),dot(rotation,vec2(vUv2.y,-vUv2.x)));}",
@@ -1955,20 +1907,20 @@ uniform vec2 maskParams;varying vec2 vUv2;float linearGradientMask(const in floa
                 ["maskParams", new a.nc$(new a.I9Y)],
                 ["map", new a.nc$(null)]
               ])
-            }), this._offset = t, this._focusArea = s, this._feather = i, this.renderTarget = new a.nWS(1, 1, {
+            }), this._offset = t, this._focusArea = i, this._feather = s, this.renderTarget = new a.nWS(1, 1, {
               depthBuffer: !1
             }), this.renderTarget.texture.name = "TiltShift.Target", this.uniforms.get("map").value = this.renderTarget.texture, this.blurPass = new ee({
               kernelSize: n,
               resolutionScale: l,
               resolutionX: o,
-              resolutionY: h,
+              resolutionY: u,
               offset: t,
               rotation: r,
-              focusArea: s,
-              feather: i
+              focusArea: i,
+              feather: s
             });
-            const c = this.resolution = new b(this, o, h, l);
-            c.addEventListener("change", e => this.setSize(c.baseWidth, c.baseHeight)), this.rotation = r, this.updateParams()
+            const h = this.resolution = new U(this, o, u, l);
+            h.addEventListener("change", e => this.setSize(h.baseWidth, h.baseHeight)), this.rotation = r, this.updateParams()
           }
           updateParams() {
             let e = this.uniforms.get("maskParams").value,
@@ -2017,7 +1969,7 @@ uniform vec2 maskParams;varying vec2 vUv2;float linearGradientMask(const in floa
       a.BKk;
       a.BKk;
       a.BKk;
-      var es = `#include <common>
+      var ei = `#include <common>
 #include <packing>
 #include <dithering_pars_fragment>
 #define packFloatToRGBA(v) packDepthToRGBA(v)
@@ -2057,8 +2009,8 @@ return orthographicDepthToViewZ(depth,cameraNear,cameraFar);
 #endif
 #include <dithering_fragment>
 }`,
-        ei = class extends a.BKk {
-          constructor(e, t, r, s, i = !1) {
+        es = class extends a.BKk {
+          constructor(e, t, r, i, s = !1) {
             super({
               name: "EffectMaterial",
               defines: {
@@ -2080,8 +2032,8 @@ return orthographicDepthToViewZ(depth,cameraNear,cameraFar);
               toneMapped: !1,
               depthWrite: !1,
               depthTest: !1,
-              dithering: i
-            }), e && this.setShaderParts(e), t && this.setDefines(t), r && this.setUniforms(r), this.copyCameraSettings(s)
+              dithering: s
+            }), e && this.setShaderParts(e), t && this.setDefines(t), r && this.setUniforms(r), this.copyCameraSettings(i)
           }
           set inputBuffer(e) {
             this.uniforms.inputBuffer.value = e
@@ -2108,7 +2060,7 @@ return orthographicDepthToViewZ(depth,cameraNear,cameraFar);
             this.setShaderParts(e.shaderParts), this.setDefines(e.defines), this.setUniforms(e.uniforms), this.setExtensions(e.extensions)
           }
           setShaderParts(e) {
-            return this.fragmentShader = es.replace(x.FRAGMENT_HEAD, e.get(x.FRAGMENT_HEAD) || "").replace(x.FRAGMENT_MAIN_UV, e.get(x.FRAGMENT_MAIN_UV) || "").replace(x.FRAGMENT_MAIN_IMAGE, e.get(x.FRAGMENT_MAIN_IMAGE) || ""), this.vertexShader = "uniform vec2 resolution;uniform vec2 texelSize;uniform float cameraNear;uniform float cameraFar;uniform float aspect;uniform float time;varying vec2 vUv;VERTEX_HEAD void main(){vUv=position.xy*0.5+0.5;VERTEX_MAIN_SUPPORT gl_Position=vec4(position.xy,1.0,1.0);}".replace(x.VERTEX_HEAD, e.get(x.VERTEX_HEAD) || "").replace(x.VERTEX_MAIN_SUPPORT, e.get(x.VERTEX_MAIN_SUPPORT) || ""), this.needsUpdate = !0, this
+            return this.fragmentShader = ei.replace(x.FRAGMENT_HEAD, e.get(x.FRAGMENT_HEAD) || "").replace(x.FRAGMENT_MAIN_UV, e.get(x.FRAGMENT_MAIN_UV) || "").replace(x.FRAGMENT_MAIN_IMAGE, e.get(x.FRAGMENT_MAIN_IMAGE) || ""), this.vertexShader = "uniform vec2 resolution;uniform vec2 texelSize;uniform float cameraNear;uniform float cameraFar;uniform float aspect;uniform float time;varying vec2 vUv;VERTEX_HEAD void main(){vUv=position.xy*0.5+0.5;VERTEX_MAIN_SUPPORT gl_Position=vec4(position.xy,1.0,1.0);}".replace(x.VERTEX_HEAD, e.get(x.VERTEX_HEAD) || "").replace(x.VERTEX_MAIN_SUPPORT, e.get(x.VERTEX_MAIN_SUPPORT) || ""), this.needsUpdate = !0, this
           }
           setDefines(e) {
             for (let t of e.entries()) this.defines[t[0]] = t[1];
@@ -2161,16 +2113,16 @@ return orthographicDepthToViewZ(depth,cameraNear,cameraFar);
       var en = 255 / 256;
 
       function ea(e, t, r) {
-        for (let s of t) {
-          let t = "$1" + e + s.charAt(0).toUpperCase() + s.slice(1),
-            i = RegExp("([^\\.])(\\b" + s + "\\b)", "g");
-          for (let e of r.entries()) null !== e[1] && r.set(e[0], e[1].replace(i, t))
+        for (let i of t) {
+          let t = "$1" + e + i.charAt(0).toUpperCase() + i.slice(1),
+            s = RegExp("([^\\.])(\\b" + i + "\\b)", "g");
+          for (let e of r.entries()) null !== e[1] && r.set(e[0], e[1].replace(s, t))
         }
       }
       new Float32Array([255 / 256 / 0x1000000, 255 / 256 / 65536, 255 / 256 / 256, 255 / 256]), new Float32Array([en, en / 256, en / 65536, 1 / 0x1000000]);
-      var el = class extends o {
+      var el = class extends u {
           constructor(e, ...t) {
-            super("EffectPass"), this.fullscreenMaterial = new ei(null, null, null, e), this.listener = e => this.handleEvent(e), this.effects = [], this.setEffects(t), this.skipRendering = !1, this.minTime = 1, this.maxTime = 1 / 0, this.timeScale = 1
+            super("EffectPass"), this.fullscreenMaterial = new es(null, null, null, e), this.listener = e => this.handleEvent(e), this.effects = [], this.setEffects(t), this.skipRendering = !1, this.minTime = 1, this.maxTime = 1 / 0, this.timeScale = 1
           }
           set mainScene(e) {
             for (let t of this.effects) t.mainScene = e
@@ -2196,64 +2148,64 @@ return orthographicDepthToViewZ(depth,cameraNear,cameraFar);
             for (let t of (this.effects = e.sort((e, t) => t.attributes - e.attributes), this.effects)) t.addEventListener("change", this.listener)
           }
           updateMaterial() {
-            let e = new w,
+            let e = new S,
               t = 0;
             for (let r of this.effects)
               if (9 === r.blendMode.blendFunction) e.attributes |= 1 & r.getAttributes();
               else if ((e.attributes & r.getAttributes() & 2) != 0) throw Error(`Convolution effects cannot be merged (${r.name})`);
             else ! function(e, t, r) {
-              let s = t.getFragmentShader(),
-                i = t.getVertexShader(),
-                n = void 0 !== s && /mainImage/.test(s),
-                l = void 0 !== s && /mainUv/.test(s);
-              if (r.attributes |= t.getAttributes(), void 0 === s) throw Error(`Missing fragment shader (${t.name})`);
+              let i = t.getFragmentShader(),
+                s = t.getVertexShader(),
+                n = void 0 !== i && /mainImage/.test(i),
+                l = void 0 !== i && /mainUv/.test(i);
+              if (r.attributes |= t.getAttributes(), void 0 === i) throw Error(`Missing fragment shader (${t.name})`);
               if (l && (2 & r.attributes) != 0) throw Error(`Effects that transform UVs are incompatible with convolution effects (${t.name})`);
               if (n || l) {
                 let o = /\w+\s+(\w+)\([\w\s,]*\)\s*{/g,
-                  h = r.shaderParts,
-                  c = h.get(x.FRAGMENT_HEAD) || "",
-                  u = h.get(x.FRAGMENT_MAIN_UV) || "",
-                  d = h.get(x.FRAGMENT_MAIN_IMAGE) || "",
-                  f = h.get(x.VERTEX_HEAD) || "",
-                  p = h.get(x.VERTEX_MAIN_SUPPORT) || "",
+                  u = r.shaderParts,
+                  h = u.get(x.FRAGMENT_HEAD) || "",
+                  c = u.get(x.FRAGMENT_MAIN_UV) || "",
+                  d = u.get(x.FRAGMENT_MAIN_IMAGE) || "",
+                  f = u.get(x.VERTEX_HEAD) || "",
+                  p = u.get(x.VERTEX_MAIN_SUPPORT) || "",
                   v = new Set,
                   m = new Set;
-                if (l && (u += `	${e}MainUv(UV);
-`, r.uvTransformation = !0), null !== i && /mainSupport/.test(i)) {
-                  let t = /mainSupport *\([\w\s]*?uv\s*?\)/.test(i);
-                  for (let s of (p += `	${e}MainSupport(`, p += t ? "vUv);\n" : ");\n", i.matchAll(/(?:varying\s+\w+\s+([\S\s]*?);)/g)))
-                    for (let e of s[1].split(/\s*,\s*/)) r.varyings.add(e), v.add(e), m.add(e);
-                  for (let e of i.matchAll(o)) m.add(e[1])
+                if (l && (c += `	${e}MainUv(UV);
+`, r.uvTransformation = !0), null !== s && /mainSupport/.test(s)) {
+                  let t = /mainSupport *\([\w\s]*?uv\s*?\)/.test(s);
+                  for (let i of (p += `	${e}MainSupport(`, p += t ? "vUv);\n" : ");\n", s.matchAll(/(?:varying\s+\w+\s+([\S\s]*?);)/g)))
+                    for (let e of i[1].split(/\s*,\s*/)) r.varyings.add(e), v.add(e), m.add(e);
+                  for (let e of s.matchAll(o)) m.add(e[1])
                 }
-                for (let e of s.matchAll(o)) m.add(e[1]);
+                for (let e of i.matchAll(o)) m.add(e[1]);
                 for (let e of t.defines.keys()) m.add(e.replace(/\([\w\s,]*\)/g, ""));
                 for (let e of t.uniforms.keys()) m.add(e);
-                m.delete("while"), m.delete("for"), m.delete("if"), t.uniforms.forEach((t, s) => r.uniforms.set(e + s.charAt(0).toUpperCase() + s.slice(1), t)), t.defines.forEach((t, s) => r.defines.set(e + s.charAt(0).toUpperCase() + s.slice(1), t));
+                m.delete("while"), m.delete("for"), m.delete("if"), t.uniforms.forEach((t, i) => r.uniforms.set(e + i.charAt(0).toUpperCase() + i.slice(1), t)), t.defines.forEach((t, i) => r.defines.set(e + i.charAt(0).toUpperCase() + i.slice(1), t));
                 let g = new Map([
-                  ["fragment", s],
-                  ["vertex", i]
+                  ["fragment", i],
+                  ["vertex", s]
                 ]);
-                ea(e, m, r.defines), ea(e, m, g), s = g.get("fragment"), i = g.get("vertex");
-                let S = t.blendMode;
-                if (r.blendModes.set(S.blendFunction, S), n) {
-                  null !== t.inputColorSpace && t.inputColorSpace !== r.colorSpace && (d += t.inputColorSpace === a.er$ ? "color0 = sRGBTransferOETF(color0);\n	" : "color0 = sRGBToLinear(color0);\n	"), t.outputColorSpace !== a.jf0 ? r.colorSpace = t.outputColorSpace : null !== t.inputColorSpace && (r.colorSpace = t.inputColorSpace), d += `${e}MainImage(color0, UV, `, (1 & r.attributes) != 0 && /MainImage *\([\w\s,]*?depth[\w\s,]*?\)/.test(s) && (d += "depth, ", r.readDepth = !0), d += "color1);\n	";
-                  let i = e + "BlendOpacity";
-                  r.uniforms.set(i, S.opacity), d += `color0 = blend${S.blendFunction}(color0, color1, ${i});
+                ea(e, m, r.defines), ea(e, m, g), i = g.get("fragment"), s = g.get("vertex");
+                let y = t.blendMode;
+                if (r.blendModes.set(y.blendFunction, y), n) {
+                  null !== t.inputColorSpace && t.inputColorSpace !== r.colorSpace && (d += t.inputColorSpace === a.er$ ? "color0 = sRGBTransferOETF(color0);\n	" : "color0 = sRGBToLinear(color0);\n	"), t.outputColorSpace !== a.jf0 ? r.colorSpace = t.outputColorSpace : null !== t.inputColorSpace && (r.colorSpace = t.inputColorSpace), d += `${e}MainImage(color0, UV, `, (1 & r.attributes) != 0 && /MainImage *\([\w\s,]*?depth[\w\s,]*?\)/.test(i) && (d += "depth, ", r.readDepth = !0), d += "color1);\n	";
+                  let s = e + "BlendOpacity";
+                  r.uniforms.set(s, y.opacity), d += `color0 = blend${y.blendFunction}(color0, color1, ${s});
 
-	`, c += `uniform float ${i};
+	`, h += `uniform float ${s};
 
 `
                 }
-                if (c += s + "\n", null !== i && (f += i + "\n"), h.set(x.FRAGMENT_HEAD, c), h.set(x.FRAGMENT_MAIN_UV, u), h.set(x.FRAGMENT_MAIN_IMAGE, d), h.set(x.VERTEX_HEAD, f), h.set(x.VERTEX_MAIN_SUPPORT, p), null !== t.extensions)
+                if (h += i + "\n", null !== s && (f += s + "\n"), u.set(x.FRAGMENT_HEAD, h), u.set(x.FRAGMENT_MAIN_UV, c), u.set(x.FRAGMENT_MAIN_IMAGE, d), u.set(x.VERTEX_HEAD, f), u.set(x.VERTEX_MAIN_SUPPORT, p), null !== t.extensions)
                   for (let e of t.extensions) r.extensions.add(e)
               } else throw Error(`Could not find mainImage or mainUv function (${t.name})`)
             }("e" + t++, r, e);
             let r = e.shaderParts.get(x.FRAGMENT_HEAD),
-              s = e.shaderParts.get(x.FRAGMENT_MAIN_IMAGE),
-              i = e.shaderParts.get(x.FRAGMENT_MAIN_UV),
+              i = e.shaderParts.get(x.FRAGMENT_MAIN_IMAGE),
+              s = e.shaderParts.get(x.FRAGMENT_MAIN_UV),
               n = /\bblend\b/g;
             for (let t of e.blendModes.values()) r += t.getShaderCode().replace(n, `blend${t.blendFunction}`) + "\n";
-            for (let [t, n] of((1 & e.attributes) != 0 ? (e.readDepth && (s = "float depth = readDepth(UV);\n\n	" + s), this.needsDepthTexture = null === this.getDepthTexture()) : this.needsDepthTexture = !1, e.colorSpace === a.er$ && (s += "color0 = sRGBToLinear(color0);\n	"), e.uvTransformation ? (i = "vec2 transformedUv = vUv;\n" + i, e.defines.set("UV", "transformedUv")) : e.defines.set("UV", "vUv"), e.shaderParts.set(x.FRAGMENT_HEAD, r), e.shaderParts.set(x.FRAGMENT_MAIN_IMAGE, s), e.shaderParts.set(x.FRAGMENT_MAIN_UV, i), e.shaderParts)) null !== n && e.shaderParts.set(t, n.trim().replace(/^#/, "\n#"));
+            for (let [t, n] of((1 & e.attributes) != 0 ? (e.readDepth && (i = "float depth = readDepth(UV);\n\n	" + i), this.needsDepthTexture = null === this.getDepthTexture()) : this.needsDepthTexture = !1, e.colorSpace === a.er$ && (i += "color0 = sRGBToLinear(color0);\n	"), e.uvTransformation ? (s = "vec2 transformedUv = vUv;\n" + s, e.defines.set("UV", "transformedUv")) : e.defines.set("UV", "vUv"), e.shaderParts.set(x.FRAGMENT_HEAD, r), e.shaderParts.set(x.FRAGMENT_MAIN_IMAGE, i), e.shaderParts.set(x.FRAGMENT_MAIN_UV, s), e.shaderParts)) null !== n && e.shaderParts.set(t, n.trim().replace(/^#/, "\n#"));
             this.skipRendering = 0 === t, this.needsSwap = !this.skipRendering, this.fullscreenMaterial.setShaderData(e)
           }
           recompile() {
@@ -2265,18 +2217,18 @@ return orthographicDepthToViewZ(depth,cameraNear,cameraFar);
           setDepthTexture(e, t = a.Rkk) {
             for (let r of (this.fullscreenMaterial.depthBuffer = e, this.fullscreenMaterial.depthPacking = t, this.effects)) r.setDepthTexture(e, t)
           }
-          render(e, t, r, s, i) {
-            for (let r of this.effects) r.update(e, t, s);
+          render(e, t, r, i, s) {
+            for (let r of this.effects) r.update(e, t, i);
             if (!this.skipRendering || this.renderToScreen) {
-              let i = this.fullscreenMaterial;
-              i.inputBuffer = t.texture, i.time += s * this.timeScale, e.setRenderTarget(this.renderToScreen ? null : r), e.render(this.scene, this.camera)
+              let s = this.fullscreenMaterial;
+              s.inputBuffer = t.texture, s.time += i * this.timeScale, e.setRenderTarget(this.renderToScreen ? null : r), e.render(this.scene, this.camera)
             }
           }
           setSize(e, t) {
             for (let r of (this.fullscreenMaterial.setSize(e, t), this.effects)) r.setSize(e, t)
           }
           initialize(e, t, r) {
-            for (let s of (this.renderer = e, this.effects)) s.initialize(e, t, r);
+            for (let i of (this.renderer = e, this.effects)) i.initialize(e, t, r);
             this.updateMaterial(), void 0 !== r && r !== a.OUM && (this.fullscreenMaterial.defines.FRAMEBUFFER_PRECISION_HIGH = "1")
           }
           dispose() {
@@ -2286,25 +2238,25 @@ return orthographicDepthToViewZ(depth,cameraNear,cameraFar);
             "change" === e.type && this.recompile()
           }
         },
-        eo = class extends o {
+        eo = class extends u {
           constructor(e, t, {
             renderTarget: r,
-            resolutionScale: s = 1,
-            width: i = b.AUTO_SIZE,
-            height: n = b.AUTO_SIZE,
-            resolutionX: l = i,
+            resolutionScale: i = 1,
+            width: s = U.AUTO_SIZE,
+            height: n = U.AUTO_SIZE,
+            resolutionX: l = s,
             resolutionY: o = n
           } = {}) {
-            super("NormalPass"), this.needsSwap = !1, this.renderPass = new N(e, t, new a.qBx);
-            const h = this.renderPass;
-            h.ignoreBackground = !0, h.skipShadowMapUpdate = !0;
-            const c = h.getClearPass();
-            c.overrideClearColor = new a.Q1f(7829503), c.overrideClearAlpha = 1, this.renderTarget = r, void 0 === this.renderTarget && (this.renderTarget = new a.nWS(1, 1, {
+            super("NormalPass"), this.needsSwap = !1, this.renderPass = new L(e, t, new a.qBx);
+            const u = this.renderPass;
+            u.ignoreBackground = !0, u.skipShadowMapUpdate = !0;
+            const h = u.getClearPass();
+            h.overrideClearColor = new a.Q1f(7829503), h.overrideClearAlpha = 1, this.renderTarget = r, void 0 === this.renderTarget && (this.renderTarget = new a.nWS(1, 1, {
               minFilter: a.hxR,
               magFilter: a.hxR
             }), this.renderTarget.texture.name = "NormalPass.Target");
-            const u = this.resolution = new b(this, l, o, s);
-            u.addEventListener("change", e => this.setSize(u.baseWidth, u.baseHeight))
+            const c = this.resolution = new U(this, l, o, i);
+            c.addEventListener("change", e => this.setSize(c.baseWidth, c.baseHeight))
           }
           set mainScene(e) {
             this.renderPass.mainScene = e
@@ -2327,7 +2279,7 @@ return orthographicDepthToViewZ(depth,cameraNear,cameraFar);
           setResolutionScale(e) {
             this.resolution.scale = e
           }
-          render(e, t, r, s, i) {
+          render(e, t, r, i, s) {
             let n = this.renderToScreen ? null : this.renderTarget;
             this.renderPass.render(e, n, n)
           }
@@ -2337,11 +2289,11 @@ return orthographicDepthToViewZ(depth,cameraNear,cameraFar);
           }
         };
 
-      function eh(e, t, r, s) {
-        var i;
-        return (i = e + (t - e) * .75) + (r + (s - r) * .75 - i) * .875
+      function eu(e, t, r, i) {
+        var s;
+        return (s = e + (t - e) * .75) + (r + (i - r) * .75 - s) * .875
       }
-      new Float32Array(3), new Float32Array(3), new Float32Array(3), new Float32Array(3), new Float32Array(3), new Float32Array(3), new Float32Array([0, 0, 0]), new Float32Array([1, 0, 0]), new Float32Array([1, 1, 0]), new Float32Array([1, 1, 1]), new Float32Array([0, 0, 0]), new Float32Array([1, 0, 0]), new Float32Array([1, 0, 1]), new Float32Array([1, 1, 1]), new Float32Array([0, 0, 0]), new Float32Array([0, 0, 1]), new Float32Array([1, 0, 1]), new Float32Array([1, 1, 1]), new Float32Array([0, 0, 0]), new Float32Array([0, 1, 0]), new Float32Array([1, 1, 0]), new Float32Array([1, 1, 1]), new Float32Array([0, 0, 0]), new Float32Array([0, 1, 0]), new Float32Array([0, 1, 1]), new Float32Array([1, 1, 1]), new Float32Array([0, 0, 0]), new Float32Array([0, 0, 1]), new Float32Array([0, 1, 1]), new Float32Array([1, 1, 1]), new Float32Array(2), new Float32Array(2), new Float32Array([0, -.25, .25, -.125, .125, -.375, .375]), new Float32Array([0, 0]), new Float32Array([.25, -.25]), new Float32Array([-.25, .25]), new Float32Array([.125, -.125]), new Float32Array([-.125, .125]), new Uint8Array([0, 0]), new Uint8Array([3, 0]), new Uint8Array([0, 3]), new Uint8Array([3, 3]), new Uint8Array([1, 0]), new Uint8Array([4, 0]), new Uint8Array([1, 3]), new Uint8Array([4, 3]), new Uint8Array([0, 1]), new Uint8Array([3, 1]), new Uint8Array([0, 4]), new Uint8Array([3, 4]), new Uint8Array([1, 1]), new Uint8Array([4, 1]), new Uint8Array([1, 4]), new Uint8Array([4, 4]), new Uint8Array([0, 0]), new Uint8Array([1, 0]), new Uint8Array([0, 2]), new Uint8Array([1, 2]), new Uint8Array([2, 0]), new Uint8Array([3, 0]), new Uint8Array([2, 2]), new Uint8Array([3, 2]), new Uint8Array([0, 1]), new Uint8Array([1, 1]), new Uint8Array([0, 3]), new Uint8Array([1, 3]), new Uint8Array([2, 1]), new Uint8Array([3, 1]), new Uint8Array([2, 3]), new Uint8Array([3, 3]), eh(0, 0, 0, 0), new Float32Array([0, 0, 0, 0]), eh(0, 0, 0, 1), new Float32Array([0, 0, 0, 1]), eh(0, 0, 1, 0), new Float32Array([0, 0, 1, 0]), eh(0, 0, 1, 1), new Float32Array([0, 0, 1, 1]), eh(0, 1, 0, 0), new Float32Array([0, 1, 0, 0]), eh(0, 1, 0, 1), new Float32Array([0, 1, 0, 1]), eh(0, 1, 1, 0), new Float32Array([0, 1, 1, 0]), eh(0, 1, 1, 1), new Float32Array([0, 1, 1, 1]), eh(1, 0, 0, 0), new Float32Array([1, 0, 0, 0]), eh(1, 0, 0, 1), new Float32Array([1, 0, 0, 1]), eh(1, 0, 1, 0), new Float32Array([1, 0, 1, 0]), eh(1, 0, 1, 1), new Float32Array([1, 0, 1, 1]), eh(1, 1, 0, 0), new Float32Array([1, 1, 0, 0]), eh(1, 1, 0, 1), new Float32Array([1, 1, 0, 1]), eh(1, 1, 1, 0), new Float32Array([1, 1, 1, 0]), eh(1, 1, 1, 1), new Float32Array([1, 1, 1, 1])
+      new Float32Array(3), new Float32Array(3), new Float32Array(3), new Float32Array(3), new Float32Array(3), new Float32Array(3), new Float32Array([0, 0, 0]), new Float32Array([1, 0, 0]), new Float32Array([1, 1, 0]), new Float32Array([1, 1, 1]), new Float32Array([0, 0, 0]), new Float32Array([1, 0, 0]), new Float32Array([1, 0, 1]), new Float32Array([1, 1, 1]), new Float32Array([0, 0, 0]), new Float32Array([0, 0, 1]), new Float32Array([1, 0, 1]), new Float32Array([1, 1, 1]), new Float32Array([0, 0, 0]), new Float32Array([0, 1, 0]), new Float32Array([1, 1, 0]), new Float32Array([1, 1, 1]), new Float32Array([0, 0, 0]), new Float32Array([0, 1, 0]), new Float32Array([0, 1, 1]), new Float32Array([1, 1, 1]), new Float32Array([0, 0, 0]), new Float32Array([0, 0, 1]), new Float32Array([0, 1, 1]), new Float32Array([1, 1, 1]), new Float32Array(2), new Float32Array(2), new Float32Array([0, -.25, .25, -.125, .125, -.375, .375]), new Float32Array([0, 0]), new Float32Array([.25, -.25]), new Float32Array([-.25, .25]), new Float32Array([.125, -.125]), new Float32Array([-.125, .125]), new Uint8Array([0, 0]), new Uint8Array([3, 0]), new Uint8Array([0, 3]), new Uint8Array([3, 3]), new Uint8Array([1, 0]), new Uint8Array([4, 0]), new Uint8Array([1, 3]), new Uint8Array([4, 3]), new Uint8Array([0, 1]), new Uint8Array([3, 1]), new Uint8Array([0, 4]), new Uint8Array([3, 4]), new Uint8Array([1, 1]), new Uint8Array([4, 1]), new Uint8Array([1, 4]), new Uint8Array([4, 4]), new Uint8Array([0, 0]), new Uint8Array([1, 0]), new Uint8Array([0, 2]), new Uint8Array([1, 2]), new Uint8Array([2, 0]), new Uint8Array([3, 0]), new Uint8Array([2, 2]), new Uint8Array([3, 2]), new Uint8Array([0, 1]), new Uint8Array([1, 1]), new Uint8Array([0, 3]), new Uint8Array([1, 3]), new Uint8Array([2, 1]), new Uint8Array([3, 1]), new Uint8Array([2, 3]), new Uint8Array([3, 3]), eu(0, 0, 0, 0), new Float32Array([0, 0, 0, 0]), eu(0, 0, 0, 1), new Float32Array([0, 0, 0, 1]), eu(0, 0, 1, 0), new Float32Array([0, 0, 1, 0]), eu(0, 0, 1, 1), new Float32Array([0, 0, 1, 1]), eu(0, 1, 0, 0), new Float32Array([0, 1, 0, 0]), eu(0, 1, 0, 1), new Float32Array([0, 1, 0, 1]), eu(0, 1, 1, 0), new Float32Array([0, 1, 1, 0]), eu(0, 1, 1, 1), new Float32Array([0, 1, 1, 1]), eu(1, 0, 0, 0), new Float32Array([1, 0, 0, 0]), eu(1, 0, 0, 1), new Float32Array([1, 0, 0, 1]), eu(1, 0, 1, 0), new Float32Array([1, 0, 1, 0]), eu(1, 0, 1, 1), new Float32Array([1, 0, 1, 1]), eu(1, 1, 0, 0), new Float32Array([1, 1, 0, 0]), eu(1, 1, 0, 1), new Float32Array([1, 1, 0, 1]), eu(1, 1, 1, 0), new Float32Array([1, 1, 1, 0]), eu(1, 1, 1, 1), new Float32Array([1, 1, 1, 1])
     }
   }
 ]);

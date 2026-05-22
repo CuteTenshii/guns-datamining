@@ -3381,11 +3381,6 @@
         value: !0
       }), Object.assign(t.default, t), e.exports = t.default)
     },
-    41463: (e, t, r) => {
-      "use strict";
-      var n, u;
-      e.exports = (null == (n = r.g.process) ? void 0 : n.env) && "object" == typeof(null == (u = r.g.process) ? void 0 : u.env) ? r.g.process : r(55208)
-    },
     41467: (e, t, r) => {
       "use strict";
       Object.defineProperty(t, "__esModule", {
@@ -3880,118 +3875,6 @@
       }("function" == typeof t.default || "object" == typeof t.default && null !== t.default) && void 0 === t.default.__esModule && (Object.defineProperty(t.default, "__esModule", {
         value: !0
       }), Object.assign(t.default, t), e.exports = t.default)
-    },
-    55208: e => {
-      var t = {
-          229: function(e) {
-            var t, r, n, u = e.exports = {};
-
-            function a() {
-              throw Error("setTimeout has not been defined")
-            }
-
-            function l() {
-              throw Error("clearTimeout has not been defined")
-            }
-            try {
-              t = "function" == typeof setTimeout ? setTimeout : a
-            } catch (e) {
-              t = a
-            }
-            try {
-              r = "function" == typeof clearTimeout ? clearTimeout : l
-            } catch (e) {
-              r = l
-            }
-
-            function o(e) {
-              if (t === setTimeout) return setTimeout(e, 0);
-              if ((t === a || !t) && setTimeout) return t = setTimeout, setTimeout(e, 0);
-              try {
-                return t(e, 0)
-              } catch (r) {
-                try {
-                  return t.call(null, e, 0)
-                } catch (r) {
-                  return t.call(this, e, 0)
-                }
-              }
-            }
-            var i = [],
-              s = !1,
-              c = -1;
-
-            function f() {
-              s && n && (s = !1, n.length ? i = n.concat(i) : c = -1, i.length && d())
-            }
-
-            function d() {
-              if (!s) {
-                var e = o(f);
-                s = !0;
-                for (var t = i.length; t;) {
-                  for (n = i, i = []; ++c < t;) n && n[c].run();
-                  c = -1, t = i.length
-                }
-                n = null, s = !1,
-                  function(e) {
-                    if (r === clearTimeout) return clearTimeout(e);
-                    if ((r === l || !r) && clearTimeout) return r = clearTimeout, clearTimeout(e);
-                    try {
-                      r(e)
-                    } catch (t) {
-                      try {
-                        return r.call(null, e)
-                      } catch (t) {
-                        return r.call(this, e)
-                      }
-                    }
-                  }(e)
-              }
-            }
-
-            function p(e, t) {
-              this.fun = e, this.array = t
-            }
-
-            function h() {}
-            u.nextTick = function(e) {
-              var t = Array(arguments.length - 1);
-              if (arguments.length > 1)
-                for (var r = 1; r < arguments.length; r++) t[r - 1] = arguments[r];
-              i.push(new p(e, t)), 1 !== i.length || s || o(d)
-            }, p.prototype.run = function() {
-              this.fun.apply(null, this.array)
-            }, u.title = "browser", u.browser = !0, u.env = {}, u.argv = [], u.version = "", u.versions = {}, u.on = h, u.addListener = h, u.once = h, u.off = h, u.removeListener = h, u.removeAllListeners = h, u.emit = h, u.prependListener = h, u.prependOnceListener = h, u.listeners = function(e) {
-              return []
-            }, u.binding = function(e) {
-              throw Error("process.binding is not supported")
-            }, u.cwd = function() {
-              return "/"
-            }, u.chdir = function(e) {
-              throw Error("process.chdir is not supported")
-            }, u.umask = function() {
-              return 0
-            }
-          }
-        },
-        r = {};
-
-      function n(e) {
-        var u = r[e];
-        if (void 0 !== u) return u.exports;
-        var a = r[e] = {
-            exports: {}
-          },
-          l = !0;
-        try {
-          t[e](a, a.exports, n), l = !1
-        } finally {
-          l && delete r[e]
-        }
-        return a.exports
-      }
-      n.ab = "//", e.exports = n(229)
     },
     55437: (e, t, r) => {
       "use strict";
@@ -5343,7 +5226,7 @@
     },
     61426: (e, t, r) => {
       "use strict";
-      var n = r(41463),
+      var n = r(87358),
         u = Symbol.for("react.transitional.element"),
         a = Symbol.for("react.portal"),
         l = Symbol.for("react.fragment"),
@@ -7733,6 +7616,97 @@
         value: !0
       }), Object.assign(t.default, t), e.exports = t.default)
     },
+    87358: e => {
+      var t, r, n, u = e.exports = {};
+
+      function a() {
+        throw Error("setTimeout has not been defined")
+      }
+
+      function l() {
+        throw Error("clearTimeout has not been defined")
+      }
+      try {
+        t = "function" == typeof setTimeout ? setTimeout : a
+      } catch (e) {
+        t = a
+      }
+      try {
+        r = "function" == typeof clearTimeout ? clearTimeout : l
+      } catch (e) {
+        r = l
+      }
+
+      function o(e) {
+        if (t === setTimeout) return setTimeout(e, 0);
+        if ((t === a || !t) && setTimeout) return t = setTimeout, setTimeout(e, 0);
+        try {
+          return t(e, 0)
+        } catch (r) {
+          try {
+            return t.call(null, e, 0)
+          } catch (r) {
+            return t.call(this, e, 0)
+          }
+        }
+      }
+      var i = [],
+        s = !1,
+        c = -1;
+
+      function f() {
+        s && n && (s = !1, n.length ? i = n.concat(i) : c = -1, i.length && d())
+      }
+
+      function d() {
+        if (!s) {
+          var e = o(f);
+          s = !0;
+          for (var t = i.length; t;) {
+            for (n = i, i = []; ++c < t;) n && n[c].run();
+            c = -1, t = i.length
+          }
+          n = null, s = !1,
+            function(e) {
+              if (r === clearTimeout) return clearTimeout(e);
+              if ((r === l || !r) && clearTimeout) return r = clearTimeout, clearTimeout(e);
+              try {
+                r(e)
+              } catch (t) {
+                try {
+                  return r.call(null, e)
+                } catch (t) {
+                  return r.call(this, e)
+                }
+              }
+            }(e)
+        }
+      }
+
+      function p(e, t) {
+        this.fun = e, this.array = t
+      }
+
+      function h() {}
+      u.nextTick = function(e) {
+        var t = Array(arguments.length - 1);
+        if (arguments.length > 1)
+          for (var r = 1; r < arguments.length; r++) t[r - 1] = arguments[r];
+        i.push(new p(e, t)), 1 !== i.length || s || o(d)
+      }, p.prototype.run = function() {
+        this.fun.apply(null, this.array)
+      }, u.title = "browser", u.browser = !0, u.env = {}, u.argv = [], u.version = "", u.versions = {}, u.on = h, u.addListener = h, u.once = h, u.off = h, u.removeListener = h, u.removeAllListeners = h, u.emit = h, u.prependListener = h, u.prependOnceListener = h, u.listeners = function(e) {
+        return []
+      }, u.binding = function(e) {
+        throw Error("process.binding is not supported")
+      }, u.cwd = function() {
+        return "/"
+      }, u.chdir = function(e) {
+        throw Error("process.chdir is not supported")
+      }, u.umask = function() {
+        return 0
+      }
+    },
     87491: (e, t, r) => {
       "use strict";
       let n;
@@ -8176,7 +8150,7 @@ Read more: https://nextjs.org/docs/messages/failed-to-find-server-action`), "__N
         }) : r()
       }
       window.next = {
-        version: "16.0.10",
+        version: "16.0.9",
         appDir: !0
       }, ("function" == typeof t.default || "object" == typeof t.default && null !== t.default) && void 0 === t.default.__esModule && (Object.defineProperty(t.default, "__esModule", {
         value: !0

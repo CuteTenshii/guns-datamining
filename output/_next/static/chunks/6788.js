@@ -17,21 +17,21 @@
     13699: (e, a, t) => {
       "use strict";
       t.d(a, {
-        j: () => c,
-        v: () => s
+        j: () => s,
+        v: () => c
       });
       let r = "pricingPage",
         n = "upgradePremiumPopup",
         o = "dashboardUpgradeModal",
         i = "badgePage",
-        s = {
+        c = {
           pricing: r,
           popup: n,
           modal: o,
           badges: i,
           aliasManager: "accountAliasManager"
         },
-        c = {
+        s = {
           pricing: `${r}Gift`,
           popup: `${n}Gift`,
           modal: `${o}Gift`,
@@ -47,33 +47,34 @@
     37897: (e, a, t) => {
       "use strict";
       t.d(a, {
-        A: () => c
+        A: () => s
       });
       var r = t(95155),
         n = t(12115),
         o = t(98241),
         i = t.n(o),
-        s = t(54834);
+        c = t(54834);
 
-      function c({
+      function s({
         featureName: e,
         onChangeFunction: a,
         value: t,
         placeholder: o,
-        icon: c,
+        icon: s,
         prefix: d,
-        prefixLength: l,
-        viewPassword: f,
+        prefixLength: f,
+        viewPassword: l,
         onKeyPress: u,
         isImageUrl: m,
         ..._
       }) {
-        let p = (0, n.useRef)(null),
-          [b, h] = (0, n.useState)(f);
+        let b = (0, n.useRef)(null),
+          [p, h] = (0, n.useState)(l);
         return (0, n.useEffect)(() => {
-          p.current && (p.current.type = b ? "password" : "text")
-        }, [b]), (0, r.jsxs)("div", {
+          b.current && (b.current.type = p ? "password" : "text")
+        }, [p]), (0, r.jsxs)("div", {
           className: i().inputContainerWrapper,
+          "data-dashboard-feature-label": "string" == typeof e ? e : void 0,
           children: [(0, r.jsx)("h1", {
             className: i().featureName,
             children: e
@@ -85,31 +86,31 @@
                 position: d ? "absolute" : "static"
               },
               children: [m ? (0, r.jsx)("img", {
-                src: c,
+                src: s,
                 alt: "icon",
                 className: i().inputWrapperIconImage
-              }) : c, d && (0, r.jsx)("h1", {
+              }) : s, d && (0, r.jsx)("h1", {
                 children: d
               })]
-            }), f && (0, r.jsx)("p", {
+            }), l && (0, r.jsx)("p", {
               onClick: () => {
-                h(!b)
+                h(!p)
               },
-              children: b ? s.A.hidePassword : s.A.views
+              children: p ? c.A.hidePassword : c.A.views
             }), (0, r.jsx)("input", {
               autoCorrect: "false",
-              type: b ? "password" : "text",
+              type: p ? "password" : "text",
               onKeyDown: u,
               value: t,
               style: {
-                paddingLeft: d ? l : "",
-                paddingRight: f ? 47 : ""
+                paddingLeft: d ? f : "",
+                paddingRight: l ? 47 : ""
               },
               placeholder: o,
               className: i().inputWrapperInput,
               onChange: a,
               ..._,
-              ref: p
+              ref: b
             })]
           })]
         })
@@ -118,22 +119,22 @@
     41458: (e, a, t) => {
       "use strict";
       t.d(a, {
-        A: () => G
+        A: () => U
       });
       var r = t(95155),
         n = t(54834),
         o = t(98241),
         i = t.n(o),
-        s = t(37897),
-        c = t(12115),
+        c = t(37897),
+        s = t(12115),
         d = t(58295),
-        l = t(66609),
-        f = t(98500),
-        u = t.n(f),
+        f = t(66609),
+        l = t(98500),
+        u = t.n(l),
         m = t(50686),
         _ = t(91801),
-        p = t.n(_),
-        b = t(97478),
+        b = t.n(_),
+        p = t(97478),
         h = t(3434),
         g = t(96351);
 
@@ -162,8 +163,8 @@
           children: [o(a.amount).totalPrice, "€"]
         });
         return (0, r.jsxs)("div", {
-          className: p().CustomBadgePurchaseModal,
-          children: [(0, r.jsx)(b.A, {
+          className: b().CustomBadgePurchaseModal,
+          children: [(0, r.jsx)(p.A, {
             featureName: n("modals.custom_badge.title_gift"),
             value: a.amount,
             min: 1,
@@ -174,7 +175,7 @@
             }),
             icon: h.A.shoppingBag
           }), (0, r.jsxs)("div", {
-            className: p().CustomBadgePurchaseModalDiscount,
+            className: b().CustomBadgePurchaseModalDiscount,
             children: [(0, r.jsx)("h1", {
               children: n("modals.custom_badge.information_text_gift")
             }), (0, r.jsx)("h3", {
@@ -184,7 +185,7 @@
               })
             })]
           }), (0, r.jsx)("span", {
-            className: p().CustomBadgePurchaseModalButton,
+            className: b().CustomBadgePurchaseModalButton,
             onClick: r => {
               t({
                 ...a,
@@ -198,42 +199,42 @@
         })
       }
       var S = t(61778),
-        v = t(57776);
+        G = t(57776);
 
-      function G({
+      function U({
         defaultSelection: e,
         redirectLogin: a,
         showGiftContainer: t,
         purchaseSource: o = "unknown"
       }) {
-        let f = (0, g.kj)(),
+        let l = (0, g.kj)(),
           _ = (0, g.VJ)(),
-          p = {
-            imagehost: f("modals.gift.gift_imagehost"),
-            premiumLifetime: f("modals.gift.gift_premium"),
-            verified: f("modals.gift.gift_verified_badge"),
-            custombadge: f("modals.gift.gift_custom_badge")
+          b = {
+            imagehost: l("modals.gift.gift_imagehost"),
+            premiumLifetime: l("modals.gift.gift_premium"),
+            verified: l("modals.gift.gift_verified_badge"),
+            custombadge: l("modals.gift.gift_custom_badge")
           },
-          [b, h] = (0, c.useState)(!1),
-          [G, U] = (0, c.useState)(""),
-          [x, w] = (0, c.useState)(""),
-          [y, j] = (0, c.useState)({
+          [p, h] = (0, s.useState)(!1),
+          [U, v] = (0, s.useState)(""),
+          [x, w] = (0, s.useState)(""),
+          [y, j] = (0, s.useState)({
             displayName: "",
             username: "",
             avatar: "",
             found: !1
           }),
-          [C, k] = (0, c.useState)(e),
-          [B, T] = (0, c.useState)(!1),
-          [M, P] = (0, c.useState)(!1),
-          [A, L] = (0, c.useState)({
+          [C, k] = (0, s.useState)(e),
+          [B, T] = (0, s.useState)(!1),
+          [M, P] = (0, s.useState)(!1),
+          [A, L] = (0, s.useState)({
             amount: 1,
             totalPrice: 0
           }),
           E = '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M11 12q-1.65 0-2.825-1.175T7 8t1.175-2.825T11 4t2.825 1.175T15 8t-1.175 2.825T11 12m11.1 11.5l-3.2-3.2q-.525.3-1.125.5T16.5 21q-1.875 0-3.187-1.312T12 16.5t1.313-3.187T16.5 12t3.188 1.313T21 16.5q0 .675-.2 1.275t-.5 1.125l3.2 3.2zM16.5 19q1.05 0 1.775-.725T19 16.5t-.725-1.775T16.5 14t-1.775.725T14 16.5t.725 1.775T16.5 19m-5.475-6q-1.05 1.55-1.05 3.5t1.05 3.5H3v-2.775q0-.85.425-1.575t1.175-1.1q1.275-.65 2.875-1.1t3.55-.45"></path></svg>',
           $ = async (e, a = !1) => {
-            if (!G) return void l.oR.error(f("modals.gift.error_gift_username"));
-            if (!C) return void l.oR.error(f("modals.gift.error_gift_product"));
+            if (!U) return void f.oR.error(l("modals.gift.error_gift_username"));
+            if (!C) return void f.oR.error(l("modals.gift.error_gift_product"));
             let t = await D(e, !1);
             (y.found || t) && (a ? P(!0) : T(!0))
           }, D = async (e, a = !0) => {
@@ -242,22 +243,22 @@
               let t = await fetch("https://guns.lol/api/gift/user", {
                   method: "POST",
                   body: JSON.stringify({
-                    username: G
+                    username: U
                   })
                 }),
                 r = await t.json();
-              if (!t.ok) return e.target.innerHTML = a ? E : f("modals.gift.continue_button"), l.oR.error(r.error), null;
+              if (!t.ok) return e.target.innerHTML = a ? E : l("modals.gift.continue_button"), f.oR.error(r.error), null;
               {
                 let t = {
                   displayName: r.display_name,
-                  username: G,
+                  username: U,
                   avatar: r.avatar,
                   found: !0
                 };
-                return j(t), e.target.innerHTML = a ? E : f("modals.gift.continue_button"), t
+                return j(t), e.target.innerHTML = a ? E : l("modals.gift.continue_button"), t
               }
             } finally {
-              e.target.innerHTML = a ? E : f("modals.gift.continue_button")
+              e.target.innerHTML = a ? E : l("modals.gift.continue_button")
             }
           }, W = B || M ? M && !B ? (0, r.jsx)(N, {
             continueFunction: $,
@@ -267,7 +268,7 @@
             type: C,
             gift: !0,
             giftMessage: x,
-            username: G,
+            username: U,
             customBadgeData: "custombadge" === C ? A : void 0,
             purchaseSource: o
           }) : (0, r.jsxs)("div", {
@@ -275,7 +276,7 @@
               className: i().giftBanner,
               children: [n.A.gift, (0, r.jsxs)("div", {
                 className: i().giftBannerContent,
-                children: [" ", f("modals.gift.gift_badge_text", {
+                children: [" ", l("modals.gift.gift_badge_text", {
                   exclusive: (0, r.jsx)("span", {
                     children: "exclusive"
                   })
@@ -312,17 +313,17 @@
                           username: "",
                           avatar: "",
                           found: !1
-                        }), U("")
+                        }), v("")
                       },
-                      children: [n.A.removeUser, " ", f("modals.gift.change_user")]
+                      children: [n.A.removeUser, " ", l("modals.gift.change_user")]
                     })]
                   }) : (0, r.jsxs)(r.Fragment, {
-                    children: [(0, r.jsx)(s.A, {
-                      featureName: f("modals.gift.gift_inputs.send_to"),
+                    children: [(0, r.jsx)(c.A, {
+                      featureName: l("modals.gift.gift_inputs.send_to"),
                       onChangeFunction: e => {
-                        U(e.target.value)
+                        v(e.target.value)
                       },
-                      value: G,
+                      value: U,
                       placeholder: "Username",
                       icon: n.A.user
                     }), (0, r.jsx)("span", {
@@ -332,8 +333,8 @@
                     })]
                   })
                 }), (0, r.jsx)(d.A, {
-                  featureName: f("modals.gift.gift_inputs.gift_message"),
-                  placeholder: f("modals.gift.gift_inputs.gift_message_placeholder"),
+                  featureName: l("modals.gift.gift_inputs.gift_message"),
+                  placeholder: l("modals.gift.gift_inputs.gift_message_placeholder"),
                   onChangeFunction: e => {
                     w(e.target.value)
                   },
@@ -342,7 +343,7 @@
                   className: i().yourGift,
                   children: [(0, r.jsx)("h1", {
                     className: i().yourGiftText,
-                    children: f("modals.gift.your_gift")
+                    children: l("modals.gift.your_gift")
                   }), (0, r.jsxs)("div", {
                     className: i().giftTypes,
                     children: [(0, r.jsxs)("div", {
@@ -351,9 +352,9 @@
                       children: [(0, r.jsxs)("div", {
                         className: i().giftDescription,
                         children: [(0, r.jsxs)("h1", {
-                          children: ["guns.lol ", f("common.pricing.verified.name")]
+                          children: ["guns.lol ", l("common.pricing.verified.name")]
                         }), (0, r.jsx)("h3", {
-                          children: f("modals.gift.gift_verified_badge")
+                          children: l("modals.gift.gift_verified_badge")
                         })]
                       }), (0, r.jsx)("span", {
                         className: i().priceText,
@@ -367,9 +368,9 @@
                       children: [(0, r.jsxs)("div", {
                         className: i().giftDescription,
                         children: [(0, r.jsxs)("h1", {
-                          children: ["guns.lol ", f("common.pricing.custom_badge.name")]
+                          children: ["guns.lol ", l("common.pricing.custom_badge.name")]
                         }), (0, r.jsx)("h3", {
-                          children: f("modals.gift.gift_custom_badge")
+                          children: l("modals.gift.gift_custom_badge")
                         })]
                       }), (0, r.jsx)("span", {
                         className: i().priceText,
@@ -383,12 +384,12 @@
                       children: [(0, r.jsxs)("div", {
                         className: i().giftDescription,
                         children: [(0, r.jsxs)("h1", {
-                          children: ["guns.lol ", f("common.pricing.premium_plan.name"), " ", (0, r.jsx)("span", {
+                          children: ["guns.lol ", l("common.pricing.premium_plan.name"), " ", (0, r.jsx)("span", {
                             className: i().saveText,
-                            children: f("modals.gift.save_premium")
+                            children: l("modals.gift.save_premium")
                           })]
                         }), (0, r.jsx)("h3", {
-                          children: f("modals.gift.gift_premium")
+                          children: l("modals.gift.gift_premium")
                         })]
                       }), (0, r.jsx)("span", {
                         className: i().priceText,
@@ -402,9 +403,9 @@
                       children: [(0, r.jsxs)("div", {
                         className: i().giftDescription,
                         children: [(0, r.jsxs)("h1", {
-                          children: ["guns.lol ", f("common.pricing.imagehost_plan.name")]
+                          children: ["guns.lol ", l("common.pricing.imagehost_plan.name")]
                         }), (0, r.jsx)("h3", {
-                          children: f("modals.gift.gift_imagehost")
+                          children: l("modals.gift.gift_imagehost")
                         })]
                       }), (0, r.jsx)("span", {
                         className: i().priceText,
@@ -419,15 +420,15 @@
                   children: (0, r.jsx)("span", {
                     className: i().continueButton,
                     onClick: e => $(e, "custombadge" === C),
-                    children: f("modals.gift.continue_button")
+                    children: l("modals.gift.continue_button")
                   })
                 })]
               })]
             })]
           });
         return (0, r.jsxs)(r.Fragment, {
-          children: [(0, r.jsx)(v.A, {
-            opened: b,
+          children: [(0, r.jsx)(G.A, {
+            opened: p,
             onClose: () => {
               h(!1), setTimeout(() => {
                 T(!1), P(!1), L({
@@ -436,12 +437,12 @@
                 })
               }, 500)
             },
-            title: p[C],
+            title: b[C],
             centered: !0,
             size: "auto",
             children: W
           }), t ? W : (0, r.jsx)(S.A, {
-            content: p[e],
+            content: b[e],
             offset: 15,
             children: (0, r.jsx)("span", {
               className: i().giftButton,
@@ -463,8 +464,8 @@
         n = t(91801),
         o = t.n(n),
         i = t(3434);
-      async function s(e, a, t, r, n, o = "unknown", i = "en") {
-        let c = await fetch("https://guns.lol/api/billing/createCheckout", {
+      async function c(e, a, t, r, n, o = "unknown", i = "en") {
+        let s = await fetch("https://guns.lol/api/billing/createCheckout", {
             method: "POST",
             body: JSON.stringify({
               type: e,
@@ -480,15 +481,15 @@
               }
             })
           }),
-          d = await c.json();
-        return c.ok ? (window.location.href = d.session, d.session) : {
+          d = await s.json();
+        return s.ok ? (window.location.href = d.session, d.session) : {
           error: !0,
           message: d.error
         }
       }
-      var c = t(66609),
+      var s = t(66609),
         d = t(12115);
-      async function l(e, a, t, r, n = "unknown", o = "en") {
+      async function f(e, a, t, r, n = "unknown", o = "en") {
         let i = await fetch("https://guns.lol/api/billing/giftCheckout", {
             method: "POST",
             body: JSON.stringify({
@@ -504,13 +505,13 @@
               }
             })
           }),
-          s = await i.json();
-        return i.ok ? (window.location.href = s.session, s.session) : {
+          c = await i.json();
+        return i.ok ? (window.location.href = c.session, c.session) : {
           error: !0,
-          message: s.error
+          message: c.error
         }
       }
-      async function f(e, a, t, r, n = "unknown") {
+      async function l(e, a, t, r, n = "unknown") {
         let o = await fetch("https://guns.lol/api/billing/giftCryptoCheckout", {
             method: "POST",
             body: JSON.stringify({
@@ -547,10 +548,10 @@
               }
             })
           }),
-          s = await i.json();
-        return i.ok ? (window.location.href = s.session, s.session) : {
+          c = await i.json();
+        return i.ok ? (window.location.href = c.session, c.session) : {
           error: !0,
-          message: s.error
+          message: c.error
         }
       }
       var m = t(96351);
@@ -561,15 +562,15 @@
         gift: t,
         giftMessage: n,
         username: _,
-        creditsData: p,
-        customBadgeData: b,
+        creditsData: b,
+        customBadgeData: p,
         aliasCreditsData: h,
         purchaseSource: g = "unknown"
       }) {
         let N = (0, m.kj)(),
           S = (0, m.useLang)(),
-          [v, G] = (0, d.useState)(""),
-          [U, x] = (0, d.useState)(!1),
+          [G, U] = (0, d.useState)(""),
+          [v, x] = (0, d.useState)(!1),
           w = e.toLowerCase(),
           y = {
             premiumlifetime: {
@@ -589,12 +590,12 @@
               price: "14,99€"
             },
             credits: {
-              name: `${p?.amount}x ${N("common.pricing.custom_badge_credits.name")}`,
-              price: p?.totalPrice + "€"
+              name: `${b?.amount}x ${N("common.pricing.custom_badge_credits.name")}`,
+              price: b?.totalPrice + "€"
             },
             custombadge: {
-              name: `${b?.amount}x ${N("common.pricing.custom_badge.name")}`,
-              price: b?.totalPrice + "€"
+              name: `${p?.amount}x ${N("common.pricing.custom_badge.name")}`,
+              price: p?.totalPrice + "€"
             },
             aliascredits: {
               name: `${h?.amount}x Alias Credits`,
@@ -602,21 +603,21 @@
             }
           } [w],
           j = async r => {
-            if (x(!1), !v) return void x(!0);
-            if (t && !_) return void c.oR.error(N("modals.payment_methods.unknown_error"));
+            if (x(!1), !G) return void x(!0);
+            if (t && !_) return void s.oR.error(N("modals.payment_methods.unknown_error"));
             let o = r.currentTarget,
               i = N("modals.payment_methods.purchase");
             o.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" strokeDasharray="15" strokeDashoffset="15" strokeLinecap="round" strokeWidth="2" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"></animate><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"></animateTransform></path></svg>', o.style.pointerEvents = "none";
             let d = null;
             try {
               let r = !!(t && _);
-              "card" === v ? d = r ? await l(e, _, n ?? "", b, g, S) : await s(e, a, p, b, h, g, S) : "crypto" === v && (d = r ? await f(e, _, n ?? "", b, g) : await u(e, a, p, b, h, g))
+              "card" === G ? d = r ? await f(e, _, n ?? "", p, g, S) : await c(e, a, b, p, h, g, S) : "crypto" === G && (d = r ? await l(e, _, n ?? "", p, g) : await u(e, a, b, p, h, g))
             } catch (e) {
-              c.oR.error(N("modals.payment_methods.unknown_error"))
+              s.oR.error(N("modals.payment_methods.unknown_error"))
             }
-            d && d.error && (c.oR.error(d.message ?? N("modals.payment_methods.unknown_error")), o.style.pointerEvents = "auto", o.innerHTML = i)
+            d && d.error && (s.oR.error(d.message ?? N("modals.payment_methods.unknown_error")), o.style.pointerEvents = "auto", o.innerHTML = i)
           }, C = e => {
-            e === v ? G("") : G(e)
+            e === G ? U("") : U(e)
           };
         return (0, r.jsxs)("div", {
           className: o().paymentMethods,
@@ -633,26 +634,26 @@
               })]
             })]
           }), (0, r.jsxs)("div", {
-            className: `${o().creditCard} ${"card"===v&&o().selectedMethod} `,
+            className: `${o().creditCard} ${"card"===G&&o().selectedMethod} `,
             onClick: () => C("card"),
             children: [(0, r.jsx)("h1", {
               children: N("modals.payment_methods.payment_method_card")
             }), " ", i.A.card, " ", i.A.paypal, " ", i.A.cashapp, " ", i.A.applepay, " ", i.A.googlepay]
           }), (0, r.jsxs)("div", {
-            className: `${o().crypto} ${"crypto"===v&&o().selectedMethod} `,
+            className: `${o().crypto} ${"crypto"===G&&o().selectedMethod} `,
             onClick: () => C("crypto"),
             children: [(0, r.jsx)("h1", {
               children: N("modals.payment_methods.payment_method_crypto")
             }), " ", i.A.bitcoin, i.A.litecoin, "  ", i.A.usdt, " ", i.A.monero, " ", i.A.eth, " ", (0, r.jsx)("span", {
               children: N("modals.payment_methods.more_crypto_text")
             })]
-          }), U && (0, r.jsx)("span", {
+          }), v && (0, r.jsx)("span", {
             className: o().error,
             children: N("modals.payment_methods.error_select_payment_method")
           }), (0, r.jsx)("span", {
             className: o().paymentMethodButton,
             style: {
-              marginTop: U ? "0px" : "10px"
+              marginTop: v ? "0px" : "10px"
             },
             onClick: j,
             children: N("modals.payment_methods.purchase")
@@ -663,31 +664,31 @@
     57776: (e, a, t) => {
       "use strict";
       t.d(a, {
-        A: () => c
+        A: () => s
       });
       var r = t(95155),
         n = t(12115),
         o = t(47650),
         i = t(5585),
-        s = t.n(i);
+        c = t.n(i);
 
-      function c({
+      function s({
         opened: e,
         onClose: a,
         onOverlayClose: t,
         onCloseButtonClick: i,
-        onEscapeClose: c,
+        onEscapeClose: s,
         title: d,
-        centered: l = !0,
-        size: f = "auto",
+        centered: f = !0,
+        size: l = "auto",
         closeOnOverlayClick: u = !0,
         withCloseButton: m = !0,
         centerTitle: _ = !1,
-        className: p,
-        bodyClassName: b,
+        className: b,
+        bodyClassName: p,
         children: h
       }) {
-        let [g, N] = (0, n.useState)(e), [S, v] = (0, n.useState)(!1), [G, U] = (0, n.useState)(null), x = (0, n.useRef)(null), w = (0, n.useRef)(null), y = (0, n.useRef)(null), j = (0, n.useRef)(!1), C = e => {
+        let [g, N] = (0, n.useState)(e), [S, G] = (0, n.useState)(!1), [U, v] = (0, n.useState)(null), x = (0, n.useRef)(null), w = (0, n.useRef)(null), y = (0, n.useRef)(null), j = (0, n.useRef)(!1), C = e => {
           if (!e) return !1;
           let a = window.getComputedStyle(e).overflowY;
           return e.scrollHeight > e.clientHeight + 1 && ("auto" === a || "scroll" === a)
@@ -703,24 +704,24 @@
         }, B = (e, a) => a < 0 ? e.scrollTop > 0 : !(a > 0) || e.scrollTop + e.clientHeight < e.scrollHeight;
         if ((0, n.useEffect)(() => {
             if (e) {
-              N(!0), v(!1);
+              N(!0), G(!1);
               return
             }
-            return v(!0), x.current = setTimeout(() => {
-              N(!1), v(!1)
+            return G(!0), x.current = setTimeout(() => {
+              N(!1), G(!1)
             }, 180), () => {
               x.current && (clearTimeout(x.current), x.current = null)
             }
           }, [e]), (0, n.useEffect)(() => {
             if ("undefined" == typeof document) return;
             let e = document.createElement("div");
-            return document.body.appendChild(e), U(e), () => {
-              document.body.removeChild(e), U(null)
+            return document.body.appendChild(e), v(e), () => {
+              document.body.removeChild(e), v(null)
             }
           }, []), (0, n.useEffect)(() => {
             if (!g) return;
             let e = e => {
-                "Escape" === e.key ? c ? c() : a() : ["ArrowUp", "ArrowDown", "PageUp", "PageDown", "Home", "End", " "].includes(e.key) && !w.current?.contains(e.target) && e.preventDefault()
+                "Escape" === e.key ? s ? s() : a() : ["ArrowUp", "ArrowDown", "PageUp", "PageDown", "Home", "End", " "].includes(e.key) && !w.current?.contains(e.target) && e.preventDefault()
               },
               t = e => {
                 let a = w.current;
@@ -748,7 +749,7 @@
             }), window.addEventListener("wheel", t, r), window.addEventListener("touchmove", t, r), () => {
               window.removeEventListener("keydown", e), window.removeEventListener("wheel", t, r), window.removeEventListener("touchmove", t, r)
             }
-          }, [B, k, a, c, g]), (0, n.useEffect)(() => {
+          }, [B, k, a, s, g]), (0, n.useEffect)(() => {
             if (!g) return;
             let e = e => {
               if (!w.current?.contains(e.target)) {
@@ -760,14 +761,14 @@
             return window.addEventListener("touchstart", e, {
               passive: !0
             }), () => window.removeEventListener("touchstart", e)
-          }, [g]), !g || !G) return null;
-        let T = "number" == typeof f ? `${f}px` : f,
+          }, [g]), !g || !U) return null;
+        let T = "number" == typeof l ? `${l}px` : l,
           M = {};
         T && "auto" !== T ? M.maxWidth = T : (M.width = "fit-content", M.maxWidth = "clamp(100%, 100%, 850px)", M.boxSizing = "border-box");
         let P = S ? "closing" : "open",
           A = (0, r.jsx)("div", {
-            className: s().overlay,
-            "data-centered": l,
+            className: c().overlay,
+            "data-centered": f,
             "data-state": P,
             onMouseDown: e => {
               j.current = e.target === e.currentTarget
@@ -778,15 +779,15 @@
               j.current = !1, n && (t ? t() : a())
             },
             children: (0, r.jsxs)("div", {
-              className: `${s().modal} ${p??""}`,
+              className: `${c().modal} ${b??""}`,
               "data-state": P,
               style: M,
               ref: w,
               onClick: e => e.stopPropagation(),
               children: [(d || m) && (0, r.jsxs)("div", {
-                className: s().header,
+                className: c().header,
                 children: [d && (0, r.jsx)("h2", {
-                  className: s().title,
+                  className: c().title,
                   style: _ ? {
                     textAlign: "center",
                     width: "100%"
@@ -794,7 +795,7 @@
                   children: d
                 }), m && (0, r.jsx)("button", {
                   type: "button",
-                  className: s().closeButton,
+                  className: c().closeButton,
                   onClick: i ?? a,
                   children: (0, r.jsx)("svg", {
                     xmlns: "http://www.w3.org/2000/svg",
@@ -808,12 +809,12 @@
                   })
                 })]
               }), (0, r.jsx)("div", {
-                className: `${s().body} ${b??""}`,
+                className: `${c().body} ${p??""}`,
                 children: h
               })]
             })
           });
-        return (0, o.createPortal)(A, G)
+        return (0, o.createPortal)(A, U)
       }
     },
     61778: (e, a, t) => {
@@ -825,8 +826,8 @@
         n = t(47650),
         o = t(12115),
         i = t(24579),
-        s = t.n(i);
-      let c = "undefined" != typeof navigator && /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        c = t.n(i);
+      let s = "undefined" != typeof navigator && /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
       function d({
         content: e,
@@ -834,39 +835,40 @@
         placement: t = "top",
         delay: i = 110,
         offset: d = 10,
-        maxWidth: l = 260,
-        className: f,
+        maxWidth: f = 260,
+        className: l,
         tooltipClassName: u,
         hideTooltip: m = !1,
         pageTooltipStyles: _ = !1
       }) {
-        let [p, b] = (0, o.useState)(!1), [h, g] = (0, o.useState)(!1), [N, S] = (0, o.useState)({
+        let [b, p] = (0, o.useState)(!1), [h, g] = (0, o.useState)(!1), [N, S] = (0, o.useState)({
           top: 0,
           left: 0
-        }), [v, G] = (0, o.useState)(!1), U = (0, o.useRef)(null), x = (0, o.useRef)(null), w = (0, o.useRef)(null), y = _ ? 25 + 30 * !!c : i;
+        }), [G, U] = (0, o.useState)(!1), v = (0, o.useRef)(null), x = (0, o.useRef)(null), w = (0, o.useRef)(null), y = _ ? 25 + 30 * !!s : i;
         (0, o.useEffect)(() => {
-          G(!0)
+          U(!0)
         }, []);
         let j = (0, o.useCallback)(() => {
-            U.current && (clearTimeout(U.current), U.current = null)
+            v.current && (clearTimeout(v.current), v.current = null)
           }, []),
-          C = (0, o.useCallback)(e => {
-            if (m) return;
-            let a = e?.immediate ?? !1;
-            (j(), a || y <= 0) ? b(!0): U.current = setTimeout(() => b(!0), y)
-          }, [j, y, m]),
+          C = (0, o.useCallback)(() => "undefined" != typeof document && "active" === document.documentElement.getAttribute("data-user-page-enter-transition"), []),
           k = (0, o.useCallback)(e => {
-            j(), e?.immediate, b(!1)
+            if (m || C()) return;
+            let a = e?.immediate ?? !1;
+            (j(), a || y <= 0) ? p(!0): v.current = setTimeout(() => p(!0), y)
+          }, [j, y, m, C]),
+          B = (0, o.useCallback)(e => {
+            j(), e?.immediate, p(!1)
           }, [j]);
         (0, o.useEffect)(() => () => {
           j()
         }, [j]), (0, o.useEffect)(() => {
-          m && k({
+          m && B({
             immediate: !0
           })
-        }, [m, k]);
-        let B = (e, a, t) => Math.min(Math.max(e, a), t),
-          T = (0, o.useCallback)(() => {
+        }, [m, B]);
+        let T = (e, a, t) => Math.min(Math.max(e, a), t),
+          M = (0, o.useCallback)(() => {
             let e = x.current,
               a = w.current;
             if (!e || !a) return;
@@ -887,33 +889,33 @@
               default:
                 o = r.top - n.height - d, i = r.left + r.width / 2 - n.width / 2
             }
-            let s = window.innerWidth - n.width - 8,
-              c = window.innerHeight - n.height - 8,
-              l = n.width >= window.innerWidth ? 8 : B(i, 8, Math.max(8, s));
+            let c = window.innerWidth - n.width - 8,
+              s = window.innerHeight - n.height - 8,
+              f = n.width >= window.innerWidth ? 8 : T(i, 8, Math.max(8, c));
             S({
-              top: n.height >= window.innerHeight ? 8 : B(o, 8, Math.max(8, c)),
-              left: l
+              top: n.height >= window.innerHeight ? 8 : T(o, 8, Math.max(8, s)),
+              left: f
             })
           }, [d, t]);
         (0, o.useLayoutEffect)(() => {
-          if (!p) return;
-          T();
-          let e = () => T();
+          if (!b) return;
+          M();
+          let e = () => M();
           return window.addEventListener("resize", e), window.addEventListener("scroll", e, !0), () => {
             window.removeEventListener("resize", e), window.removeEventListener("scroll", e, !0)
           }
-        }, [T, p]);
-        let M = (0, o.useCallback)(e => {
-          e.stopPropagation(), g(!0), p ? k({
+        }, [M, b]);
+        let P = (0, o.useCallback)(e => {
+          C() || (e.stopPropagation(), g(!0), b ? B({
             immediate: !0
-          }) : C({
+          }) : k({
             immediate: !0
-          })
-        }, [k, C, p]);
+          }))
+        }, [B, C, k, b]);
         (0, o.useEffect)(() => {
-          if (!p || !h) return;
+          if (!b || !h) return;
           let e = e => {
-            x.current && (x.current.contains(e.target) || k({
+            x.current && (x.current.contains(e.target) || B({
               immediate: !0
             }))
           };
@@ -922,37 +924,35 @@
           }), () => {
             document.removeEventListener("touchstart", e)
           }
-        }, [m, k, h, p]);
-        let P = {
-            "--tooltip-max-width": "number" == typeof l ? `${l}px` : l,
+        }, [m, B, h, b]);
+        let A = {
+            "--tooltip-max-width": "number" == typeof f ? `${f}px` : f,
             top: `${N.top}px`,
             left: `${N.left}px`
           },
-          A = (0, r.jsx)("span", {
+          L = (0, r.jsx)("span", {
             ref: w,
-            className: `${s().tooltip} ${u??""}`,
+            className: `${c().tooltip} ${u??""}`,
             style: {
-              ...P,
+              ...A,
               borderColor: _ ? "#1a1a1a33" : "var(--tooltip-border-color)",
               backgroundColor: _ ? "#14141463" : "var(--tooltip-background-color)"
             },
-            "data-visible": p,
+            "data-visible": b,
             "data-placement": t,
-            "aria-hidden": !p,
-            role: "tooltip",
             children: e
           });
         return (0, r.jsxs)("span", {
           ref: x,
-          className: `${s().wrapper} ${f??""}`,
-          onMouseEnter: () => C(),
-          onMouseLeave: () => k(),
-          onFocusCapture: () => C(),
-          onBlurCapture: () => k({
+          className: `${c().wrapper} ${l??""}`,
+          onMouseEnter: () => k(),
+          onMouseLeave: () => B(),
+          onFocusCapture: () => k(),
+          onBlurCapture: () => B({
             immediate: !0
           }),
-          onTouchStart: M,
-          children: [a, v ? (0, n.createPortal)(A, document.body) : A]
+          onTouchStart: P,
+          children: [a, G ? (0, n.createPortal)(L, document.body) : L]
         })
       }
     },
@@ -981,6 +981,10 @@
         dashboardLayoutMobile: "GUNS__1e-ca42171e-6d3429c2-1ed6f94b",
         subscriptionExpires: "GUNS__81-7de563b3-b1ce29f0-40e0a8b7",
         show: "GUNS__e7-f4be5a5f-d6b1682b-41b593e5",
+        mobileHeaderControls: "GUNS__c5-abf0b505-3da4bdbb-2ca18425",
+        mobileHeaderIconButton: "GUNS__0c-ba26afab-17c48600-0e79612e",
+        mobileDiscordButton: "GUNS__0d-c98a5d08-29270a17-41a8a301",
+        dashboardSearchMobileButton: "GUNS__02-ae56a952-17bbe3b0-ebc37a90",
         menuCloseButton: "GUNS__71-38bb9deb-0f51a8cc-23535a63",
         menuCardButtons: "GUNS__59-37776ade-3b11f6ea-31dd64a4",
         menuCardHome: "GUNS__1e-b17e5f7c-4f7934e3-fb3c9925",
@@ -1094,7 +1098,31 @@
         trustpilotNotification: "GUNS__43-920b3847-7fa1bd7c-43afc47b",
         trustpilotButtons: "GUNS__af-321c9cab-e339e79e-e28afba2",
         giveawayItem: "GUNS__b5-263062f1-a27f7aa4-63146190",
-        giveawayList: "GUNS__98-d8f2f94e-9e7d7516-b3b0cb80"
+        giveawayList: "GUNS__98-d8f2f94e-9e7d7516-b3b0cb80",
+        dashboardSearchButtonContainer: "GUNS__56-807256ba-fa5621c4-62a14c2c",
+        dashboardSearchButton: "GUNS__b2-1781a7bd-cd228fa8-b545e05f",
+        featureSearchInputWrapper: "GUNS__a6-6aa06398-d5b465ea-585c20d9",
+        featureSearchResult: "GUNS__3c-9376f2df-f5dd6a5f-adf90f75",
+        dashboardSearchIcon: "GUNS__9e-00efc765-7e9e3fa9-ae816f92",
+        dashboardSearchText: "GUNS__27-2782f11f-3d323a16-96166443",
+        featureSearchModal: "GUNS__d0-c03b1f7d-3033bc99-a1efd58f",
+        featureSearchModalBody: "GUNS__a9-6a10fa27-8c956fb0-cabbf821",
+        featureSearch: "GUNS__9e-92294a49-e995bf00-3376c97f",
+        featureSearchInputShell: "GUNS__a5-a7bac5fc-9cab3fb3-4f0c482b",
+        featureSearchClearButton: "GUNS__fd-2312280c-1536b34f-e138255a",
+        featureSearchMeta: "GUNS__19-a9850574-ea965e45-b05f282e",
+        featureSearchResults: "GUNS__33-54155f5b-0e1ab449-a661a95a",
+        featureSearchGroup: "GUNS__62-81ee0639-4c3fecb3-7d87b345",
+        featureSearchGroupTitle: "GUNS__4c-3bd86133-133c03d3-6569a0f7",
+        featureSearchGroupItems: "GUNS__fa-dad489f0-715098c0-f8dd8e86",
+        featureSearchResultActive: "GUNS__3c-d3f60cb3-f07bac2f-801e570f",
+        featureSearchResultIcon: "GUNS__1d-718568a6-b62d30dc-678605a9",
+        featureSearchResultText: "GUNS__9a-46fbd998-b92ccf70-a34bd9fb",
+        featureSearchResultHint: "GUNS__ed-e483fd6a-d0253001-abe29fc2",
+        featureSearchResultLocked: "GUNS__47-92c92754-9035965e-dfa2e8d9",
+        featureSearchEmpty: "GUNS__e6-439efccd-f45e41cc-8e4eb41d",
+        "dashboard-feature-search-highlight-ring": "GUNS__36-4f537d43-7a5a8fae-f449c6b8",
+        "dashboard-feature-search-highlight-reduced": "GUNS__d4-f530fdd8-0f3c880b-a393d6f9"
       }
     }
   }

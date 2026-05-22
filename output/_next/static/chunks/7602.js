@@ -39,6 +39,7 @@
         userBackground: "GUNS__1b-a406d6d9-09098974-fa701f72",
         usernameEffectsPreview: "GUNS__0d-8e65c78d-38c264d9-1c9094cb",
         usernameEffectSelected: "GUNS__5d-7d172db9-b5f3d0fa-ea56fc8b",
+        usernameEffectPreviewTitle: "GUNS__70-514f1f26-31de8fd9-7fe32d54",
         selectedEffect: "GUNS__be-47dc343d-71803c93-10fe152e",
         usernameEffectsPreviewInnerWrapper: "GUNS__c6-a334ff05-74b39924-f7d662c0",
         saveButtonUsernameEffects: "GUNS__8a-5dce6898-30600ca8-5fc8bfc5",
@@ -238,7 +239,7 @@
         mode: i = "sync",
         propagate: f = !1
       }) => {
-        let [u, N] = (0, _.xQ)(f), U = (0, d.useMemo)(() => b(e), [e]), G = f && !u ? [] : U.map(p), h = (0, d.useRef)(!0), m = (0, d.useRef)(U), g = (0, c.M)(() => new Map), [C, v] = (0, d.useState)(U), [y, w] = (0, d.useState)(U);
+        let [u, N] = (0, _.xQ)(f), U = (0, d.useMemo)(() => b(e), [e]), G = f && !u ? [] : U.map(p), h = (0, d.useRef)(!0), m = (0, d.useRef)(U), g = (0, c.M)(() => new Map), [v, C] = (0, d.useState)(U), [y, w] = (0, d.useState)(U);
         (0, S.E)(() => {
           h.current = !1, m.current = U;
           for (let e = 0; e < y.length; e++) {
@@ -247,14 +248,14 @@
           }
         }, [y, G.length, G.join("-")]);
         let R = [];
-        if (U !== C) {
+        if (U !== v) {
           let e = [...U];
           for (let a = 0; a < y.length; a++) {
             let r = y[a],
               t = p(r);
             G.includes(t) || (e.splice(a, 0, r), R.push(r))
           }
-          "wait" === i && R.length && (e = R), w(b(e)), v(U);
+          "wait" === i && R.length && (e = R), w(b(e)), C(U);
           return
         }
         let {

@@ -3,11 +3,11 @@
     12521: (e, a, c) => {
       "use strict";
       c.d(a, {
-        dO: () => i,
+        dO: () => o,
         vJ: () => t
       });
       let d = ["cursor", "background", "avatar", "cover", "icon", "audio", "banner", "metadata", "font", "templateImage", "badge", "imagehostUpload"],
-        l = {
+        i = {
           cursor: {
             exts: ["png", "jpg", "jpeg", "webp", "gif", "cur"],
             mimes: ["image/webp", "image/gif", "image/png", "image/jpeg", "image/jpg"],
@@ -68,20 +68,20 @@
             mimes: ["image/jpeg", "image/png", "image/gif", "image/webp", "video/mp4", "video/m4v", "video/x-m4v", "video/quicktime", "video/webm"]
           }
         },
-        t = Object.fromEntries(d.map(e => [e, l[e].exts.map(e => e.startsWith(".") ? e : `.${e}`)]));
-      Object.fromEntries(d.map(e => [e, [...l[e].exts]])), Object.fromEntries(d.map(e => [e, [...l[e].mimes]]));
-      let i = Object.fromEntries(d.filter(e => "imagehostUpload" !== e).map(e => [e, l[e].maxMB]))
+        t = Object.fromEntries(d.map(e => [e, i[e].exts.map(e => e.startsWith(".") ? e : `.${e}`)]));
+      Object.fromEntries(d.map(e => [e, [...i[e].exts]])), Object.fromEntries(d.map(e => [e, [...i[e].mimes]]));
+      let o = Object.fromEntries(d.filter(e => "imagehostUpload" !== e).map(e => [e, i[e].maxMB]))
     },
     15041: (e, a, c) => {
       "use strict";
       c.d(a, {
-        A: () => i
+        A: () => o
       });
       var d = c(95155);
       c(12115);
-      var l = c(79153),
-        t = c.n(l);
-      let i = {
+      var i = c(79153),
+        t = c.n(i);
+      let o = {
         staff: (0, d.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           className: t().staff,
@@ -336,20 +336,21 @@
     45941: (e, a, c) => {
       "use strict";
       c.d(a, {
-        nB: () => o,
-        $h: () => i,
+        nB: () => l,
+        $h: () => o,
         hR: () => t,
         o2: () => r
       });
       var d = c(12521);
-      let l = JSON.parse('{"n":{"socials":[],"user_badges":[],"custom_badges":[],"color":"#1b1b1b","text_color":"#ffffff","icon_color":"#ffffff","bg_color":"#080808","gradient_1":"#881c9c","gradient_2":"#0d0d0d","profile_gradient":false,"use_discord_avatar":false,"volume_control":false,"badge_glow":true,"social_glow":true,"username_glow":true,"swap_colors":false,"monochrome":true,"animated_title":false,"shuffle_audios":false,"audio_player":false,"location":"","discord_avatar_decoration":true,"page_views":0,"blur":10,"opacity":0.5,"url":"","audio":[],"avatar":"","custom_cursor":"","description":"","presence":"","discord_presence_settings":{"show_badges":true,"show_guild_tag":true,"idle_text":""},"display_name":"","background_effects":"","username_effects":"","premium":{"effects_color":"#ffffff","badge_color":"#ffffff","border_color":"#ffffff","typewriter_enabled":false,"typewriter_speed":5,"typewriter_delete_speed":7,"typewriter":[],"hide_views":false,"border_enabled":false,"second_tab_enabled":false,"monochrome_badges":false,"animation":"fade","parallax_animation":false,"join_date":"relative","border_width":2,"border_radius":20,"avatar_radius":35,"links_position":"center","second_tab":{},"cursor_effects":"","font":"satoshi","page_enter_text":"","layout":"default","banner":"","buttons":[],"show_url":false,"text_align":"center","button_shadow":false,"button_border_radius":12,"metadata":{"title":"","description":"","image":"","favicon":"","information_overlay":false}}}}'),
-        t = l.n,
-        i = l.n.premium,
-        o = d.vJ,
+      let i = JSON.parse('{"n":{"socials":[],"user_badges":[],"custom_badges":[],"color":"#1b1b1b","text_color":"#ffffff","icon_color":"#ffffff","bg_color":"#080808","gradient_1":"#881c9c","gradient_2":"#0d0d0d","profile_gradient":false,"use_discord_avatar":false,"volume_control":false,"badge_glow":true,"social_glow":true,"username_glow":true,"swap_colors":false,"monochrome":true,"animated_title":false,"shuffle_audios":false,"audio_player":false,"location":"","discord_avatar_decoration":true,"page_views":0,"blur":10,"opacity":0.5,"url":"","audio":[],"avatar":"","custom_cursor":"","description":"","presence":"","discord_presence_settings":{"show_badges":true,"show_guild_tag":true,"idle_text":""},"display_name":"","background_effects":"","background_effects_color":"#000000","username_effects":"","premium":{"effects_color":"#ffffff","badge_color":"#ffffff","border_color":"#ffffff","typewriter_enabled":false,"typewriter_speed":5,"typewriter_delete_speed":7,"typewriter":[],"hide_views":false,"border_enabled":false,"border_style":"static","border_opacity":0.3,"second_tab_enabled":false,"monochrome_badges":false,"animation":"fade","parallax_animation":false,"join_date":"relative","border_width":2,"border_radius":20,"avatar_radius":35,"links_position":"center","portfolio_border_radius":20,"second_tab":{},"cursor_effects":"","font":"satoshi","page_enter_text":"","layout":"default","portfolio_modules":[{"id":"portfolio-about","type":"about","visible":true,"settings":{"title":"About me","description":"","secondary_description":"","cards":[]}},{"id":"portfolio-projects","type":"projects","visible":true,"settings":{"title":"Featured projects","projects":[]}}],"portfolio_audio_hidden":false,"banner":"","buttons":[],"show_url":false,"text_align":"center","button_shadow":false,"button_border_radius":12,"metadata":{"title":"","description":"","image":"","favicon":"","information_overlay":false}}}}'),
+        t = i.n,
+        o = i.n.premium,
+        l = d.vJ,
         r = d.dO
     },
     79153: e => {
       e.exports = {
+        snowflakes: "GUNS__21-abceb62b-d2d284ce-fa9e6c34",
         snowflake: "GUNS__15-fd9a72b1-a6264d1c-7957595a",
         inner: "GUNS__7a-279c19d5-ab38bf74-f8cbcddd",
         "snowflakes-shake": "GUNS__c8-87774ec9-5d85d2ed-6e3b3195",
@@ -449,23 +450,46 @@
         discordStatusIcon: "GUNS__22-0c0e9afd-711e289b-6f44184c",
         offlineText: "GUNS__72-cd73e190-809f964b-bfb2726a",
         discordEmoji: "GUNS__af-f98dcbae-9a104b1d-0e19c85f",
+        discordEmojiText: "GUNS__bb-dbea1d0f-c486c18b-7eadd2ba",
         discordNotConnected: "GUNS__e8-95f42e11-9c2d5921-9ac513b5",
         mainContainer: "GUNS__93-3c334130-83cd226e-15ccda62",
         userContainerWrapper: "GUNS__19-00d4b0cd-85c65e72-e5392a5f",
         discordLoading: "GUNS__f1-1f7d095b-02d7a43f-3441b9b5",
         userContainer: "GUNS__82-8f867934-3ea339fa-6da81ad0",
         audioPlayer: "GUNS__7a-b515ab01-32744781-bd9f9596",
+        shimmerProfileBorder: "GUNS__31-3479f742-128ab5c7-86a5334e",
+        profileBorderLayer: "GUNS__20-1a3ed75f-02e7d8f5-ce73128d",
+        profileShimmerBorderLayer: "GUNS__9d-cbaef793-76ad0b3d-3fbe8272",
+        profilePulseBorderLayer: "GUNS__20-9746957b-2224127f-f5813810",
+        profilePulseBorder: "GUNS__4a-39b2f295-882a5d44-e3b0ee39",
         audioContainer: "GUNS__9f-4db759b2-2cafec6e-51cb5698",
-        audioIcon: "GUNS__62-0c46dede-143f9d40-184fb9da",
+        audioLyricsShell: "GUNS__8a-508a5a8b-48f1ae79-21397f4c",
+        audioLyricsBackdropLayer: "GUNS__fd-748bec6e-7ac123ec-6c2aee30",
+        audioLyricsCoverBackdrop: "GUNS__0a-392f124d-bb68a4ea-4b98a98c",
+        audioLyricsBlobPrimary: "GUNS__f4-0cb3f638-4b64ccb9-e9f0691b",
+        audioLyricsBlobSecondary: "GUNS__2a-dabac02f-ae72eb94-08ce9018",
+        audioLyricsBlobPrimaryDrift: "GUNS__eb-3f58ebb7-b2662ec3-44b19e4b",
+        audioLyricsBlobSecondaryDrift: "GUNS__ef-a55c1b7a-546784c8-c38513a9",
+        audioLyricsViewport: "GUNS__5f-a7f2729c-11c55425-52a11493",
+        audioLyricsLine: "GUNS__2e-d242fe25-ffd8fad1-13d3e894",
+        audioLyricsLineText: "GUNS__dc-cf64ef92-4bb94b35-9891925b",
+        audioLyricsLineNear: "GUNS__c5-db06c013-692dacc5-962a153e",
+        audioLyricsLineFaded: "GUNS__59-d51bd889-d18dc8c2-de301fe0",
+        audioLyricsLineActive: "GUNS__4a-47d44945-22d13b20-20f78547",
+        audioLyricsLinePast: "GUNS__bf-2bf24bb0-5db579c3-b9b1813d",
+        audioLyricsEmpty: "GUNS__0a-a4754d74-ed91e51d-12a472d0",
         audioControls: "GUNS__1c-7c211bc5-ef03de2b-3fd2d8a0",
+        audioTitle: "GUNS__4a-ced57475-61c4512f-69f8a84d",
+        audioIcon: "GUNS__62-0c46dede-143f9d40-184fb9da",
         audioProgressBarWrapper: "GUNS__5a-9d9e5c3d-397a1591-c0fefe6c",
         audioProgressBar: "GUNS__fc-03ce5e2f-6bc6ea9c-ea813d3c",
+        audioProgressTrack: "GUNS__30-0493d741-5a713887-6d426999",
         audioProgress: "GUNS__4d-d13a527e-500b3dd2-f5dccd1d",
         audioProgressPlaying: "GUNS__03-b858da30-82d46c49-d8e1032c",
+        audioProgressThumb: "GUNS__0f-890c4356-146e0815-1042f5ad",
         controlButtons: "GUNS__91-5d3a15c3-4e254f78-0eb14391",
         sideControlButton: "GUNS__4d-291bf2d6-6d722fb4-344e8aab",
         mainControlButton: "GUNS__b9-1a6f35f5-afca6fab-8fde5e51",
-        audioTitle: "GUNS__4a-ced57475-61c4512f-69f8a84d",
         userContainerLayout3: "GUNS__cb-53f421d5-201f29e2-e3488251",
         unfold: "GUNS__9b-4119deeb-4f0a5ab6-39af0cbf",
         unfoldStart: "GUNS__e8-c6f66567-76f5db6d-4efade14",
@@ -475,10 +499,19 @@
         fadeUp: "GUNS__91-e19f38e4-bdb10f7b-fb4f0f8d",
         backgroundColor: "GUNS__0b-71ee24da-879f8bc4-034dd17e",
         profileViews: "GUNS__c4-52afb1ed-980a1997-1f6253bb",
+        profileViewsInline: "GUNS__c7-1e65a0ea-695263de-4085cd09",
         rainbowName: "GUNS__df-d77a6efe-7283b020-e627bea1",
         rainbowAnimation: "GUNS__05-bf14b627-5612f67f-9f190f0a",
         discordPresenceWrapper: "GUNS__ea-7cc99cdd-7cf0e8a0-e7e282b4",
         discordActivity: "GUNS__db-1a74e7b1-7ff34e35-f82e47c3",
+        discordActivityTextStack: "GUNS__f3-35d23e0a-c743ef44-3f17f79b",
+        discordActivityImageStack: "GUNS__8f-50ccf96f-b1205994-ab21f98e",
+        discordActivityTextLayer: "GUNS__6e-bc97003b-f275b5c1-27e17f8e",
+        discordActivityImageLayer: "GUNS__4b-2ae082a8-37b2a993-e87b7b81",
+        discordActivityEnter: "GUNS__06-dadd1cde-513ccbed-34184473",
+        discordActivityFadeIn: "GUNS__d2-fb157ed5-b88ec83a-a9a3de70",
+        discordActivityExit: "GUNS__33-130f905c-c1cbbd73-5dc8a6ce",
+        discordActivityFadeOut: "GUNS__27-06ddc09f-63b78fb4-60ec1486",
         volumeButton: "GUNS__90-2f1123ac-d6ec9f60-17266127",
         customBadge: "GUNS__a2-331a9a55-79687ca1-e102ba79",
         defaultEmoji: "GUNS__29-71e4554e-cb64f690-6dc85c06",
@@ -518,6 +551,7 @@
         bubbleExit: "GUNS__26-3dbd3c78-e1d2c08f-315c2047",
         fadeOut: "GUNS__95-3b858808-88130984-23b0f7f4",
         overlayExit: "GUNS__22-cd10bc5e-19b266bd-785fd4d3",
+        audioPlayerInner: "GUNS__2d-2aa3552d-eb527a3b-5138acf3",
         zoomInSpin: "GUNS__d4-83c64042-656db435-1caac8e0",
         fadeIn: "GUNS__2f-b32f1c4e-17b0d833-f0c99168"
       }
@@ -528,21 +562,21 @@
         A: () => t
       });
       var d = c(95155),
-        l = c(12115);
+        i = c(12115);
 
       function t({
         value: e,
         timeout: a = 2e3,
         children: c,
         spanClassName: t,
-        opts: i
+        opts: o
       }) {
-        let [o, r] = (0, l.useState)(!1), s = (0, l.useRef)(null);
-        (0, l.useEffect)(() => () => {
-          s.current && clearTimeout(s.current)
+        let [l, r] = (0, i.useState)(!1), f = (0, i.useRef)(null);
+        (0, i.useEffect)(() => () => {
+          f.current && clearTimeout(f.current)
         }, []);
-        let f = (0, l.useMemo)(() => "undefined" != typeof navigator && !!navigator.clipboard, [!0]),
-          _ = (0, l.useCallback)(async () => {
+        let s = (0, i.useMemo)(() => "undefined" != typeof navigator && !!navigator.clipboard, [!0]),
+          _ = (0, i.useCallback)(async () => {
             if ("undefined" == typeof document) return !1;
             try {
               let a = document.createElement("textarea");
@@ -553,14 +587,14 @@
               return !1
             }
           }, [e]),
-          b = (0, l.useCallback)(async () => {
-            if (f && window.isSecureContext && navigator.clipboard) try {
+          b = (0, i.useCallback)(async () => {
+            if (s && window.isSecureContext && navigator.clipboard) try {
               return await navigator.clipboard.writeText(e), !0
             } catch {}
             return await _()
-          }, [_, !0, f, e]),
-          m = (0, l.useCallback)(async () => {
-            await b() && (r(!0), s.current && clearTimeout(s.current), s.current = setTimeout(() => r(!1), a))
+          }, [_, !0, s, e]),
+          m = (0, i.useCallback)(async () => {
+            await b() && (r(!0), f.current && clearTimeout(f.current), f.current = setTimeout(() => r(!1), a))
           }, [b, a]),
           n = (0, d.jsx)("span", {
             onClick: () => {
@@ -571,13 +605,13 @@
             onKeyDown: e => {
               ("Enter" === e.key || " " === e.key) && (e.preventDefault(), m())
             },
-            children: o ? i?.copiedIcon ?? i?.copiedText ?? "Copied" : i?.copyIcon ?? i?.copyText ?? "Copy"
+            children: l ? o?.copiedIcon ?? o?.copiedText ?? "Copied" : o?.copyIcon ?? o?.copyText ?? "Copy"
           });
         return "function" == typeof c ? (0, d.jsx)(d.Fragment, {
           children: c({
-            copied: o,
+            copied: l,
             copy: m,
-            isSupported: f
+            isSupported: s
           })
         }) : n
       }

@@ -719,3 +719,76 @@
   width: 22px;
   height: 22px
 }
+
+.GUNS__ff-068e59b5-c326696e-2305f40a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  gap: 12px
+}
+
+.GUNS__e6-5d8f1c80-d1204ac5-e260ea3d {
+  display: flex;
+  flex-shrink: 0
+}
+
+.GUNS__b8-54e72ad2-e1858671-fcdcdca9 {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex: 1 1;
+  gap: 1px
+}
+
+.GUNS__ce-0a5ba18b-76cb6152-03bb8e5f {
+  margin: 0;
+  color: var(--textColor);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.5px
+}
+
+.GUNS__11-96f4e304-69317103-886b6d13 {
+  margin: 0;
+  color: var(--secondTabWidgetDescription);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+
+.GUNS__64-e47e733a-15dbb969-59727756 {
+  opacity: .5
+}
+
+.GUNS__ac-6d99abd2-9163eea9-f407a0b2 {
+  font-size: .55em;
+  opacity: .6;
+  margin-left: 4px;
+  letter-spacing: .05em;
+  vertical-align: middle
+}
+
+.GUNS__2d-3ed180da-8cae80a6-b7cbecb2 {
+  display: flex;
+  align-items: center;
+  color: var(--platformTextColor);
+  font-size: 11px;
+  opacity: .5;
+  margin-top: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+
+.GUNS__0f-eff9d74e-4a852b12-89c268b9 {
+  transform-box: view-box;
+  transform-origin: 50% 50%
+}

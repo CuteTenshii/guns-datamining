@@ -6,19 +6,19 @@
         n: () => m
       });
       var s = r(95155),
-        t = r(12115),
-        o = r(67361),
-        l = r.n(o);
-      let c = (0, t.createContext)(null),
-        n = (0, t.createContext)(null),
+        o = r(12115),
+        t = r(67361),
+        l = r.n(t);
+      let c = (0, o.createContext)(null),
+        n = (0, o.createContext)(null),
         i = (...e) => e.filter(Boolean).join(" "),
         d = () => {
-          let e = (0, t.useContext)(c);
+          let e = (0, o.useContext)(c);
           if (!e) throw Error("Accordion components must be used within <Accordion>");
           return e
         },
         f = () => {
-          let e = (0, t.useContext)(n);
+          let e = (0, o.useContext)(n);
           if (!e) throw Error("Accordion.Item subcomponents must be used within <Accordion.Item>");
           return e
         },
@@ -27,32 +27,32 @@
           children: e,
           value: a,
           defaultValue: r,
-          multiple: o = !1,
+          multiple: t = !1,
           onChange: n,
           className: d = "",
           ...f
         }) => {
           let m = void 0 !== a,
-            _ = m ? h(a, o) : null,
-            [u, g] = (0, t.useState)(() => h(r, o)),
+            _ = m ? h(a, t) : null,
+            [u, g] = (0, o.useState)(() => h(r, t)),
             p = m ? _ : u,
-            b = (0, t.useCallback)(e => o ? Array.isArray(p) && p.includes(e) : p === e, [p, o]),
-            x = (0, t.useCallback)(e => {
+            b = (0, o.useCallback)(e => t ? Array.isArray(p) && p.includes(e) : p === e, [p, t]),
+            x = (0, o.useCallback)(e => {
               let a = ((e, a, r) => {
                 if (r) {
                   let r = Array.isArray(e) ? e : [];
                   return r.includes(a) ? r.filter(e => e !== a) : [...r, a]
                 }
                 return e === a ? null : a
-              })(p, e, o);
+              })(p, e, t);
               m || g(a), n?.(a)
-            }, [p, m, o, n]),
-            v = (0, t.useMemo)(() => ({
-              multiple: o,
+            }, [p, m, t, n]),
+            v = (0, o.useMemo)(() => ({
+              multiple: t,
               currentValue: p,
               toggleItem: x,
               isItemActive: b
-            }), [o, p, x, b]);
+            }), [t, p, x, b]);
           return (0, s.jsx)(c.Provider, {
             value: v,
             children: (0, s.jsx)("div", {
@@ -66,14 +66,14 @@
             value: e,
             children: a,
             className: r = "",
-            ...o
+            ...t
           }) => {
             let c = d(),
-              f = (0, t.useId)(),
-              h = (0, t.useRef)(`${f}-control`),
-              m = (0, t.useRef)(`${f}-panel`),
+              f = (0, o.useId)(),
+              h = (0, o.useRef)(`${f}-control`),
+              m = (0, o.useRef)(`${f}-panel`),
               _ = c.isItemActive(e),
-              u = (0, t.useMemo)(() => ({
+              u = (0, o.useMemo)(() => ({
                 value: e,
                 controlIdRef: h,
                 panelIdRef: m
@@ -81,24 +81,24 @@
             return (0, s.jsx)(n.Provider, {
               value: u,
               children: (0, s.jsx)("div", {
-                ...o,
+                ...t,
                 className: i(l().item, r),
                 "data-active": _ || void 0,
                 children: a
               })
             })
           },
-          Control: (0, t.forwardRef)(function({
+          Control: (0, o.forwardRef)(function({
             children: e,
             className: a = "",
             onClick: r,
-            disabled: t,
-            id: o,
+            disabled: o,
+            id: t,
             ...c
           }, n) {
             let h = d(),
               m = f(),
-              _ = o ?? m.controlIdRef.current;
+              _ = t ?? m.controlIdRef.current;
             m.controlIdRef.current = _;
             let u = h.isItemActive(m.value);
             return (0, s.jsx)("button", {
@@ -108,28 +108,28 @@
               ref: n,
               className: i(l().control, a),
               "data-active": u || void 0,
-              disabled: t,
+              disabled: o,
               onClick: e => {
-                r?.(e), e.defaultPrevented || t || h.toggleItem(m.value)
+                r?.(e), e.defaultPrevented || o || h.toggleItem(m.value)
               },
               children: e
             })
           }),
-          Panel: (0, t.forwardRef)(function({
+          Panel: (0, o.forwardRef)(function({
             children: e,
             className: a = "",
             id: r,
-            ...o
+            ...t
           }, c) {
             let n = d(),
               h = f(),
               m = r ?? h.panelIdRef.current;
             h.panelIdRef.current = m;
             let _ = n.isItemActive(h.value),
-              u = (0, t.useRef)(null),
-              [g, p] = (0, t.useState)(0),
-              [b, x] = (0, t.useState)(!1);
-            (0, t.useEffect)(() => {
+              u = (0, o.useRef)(null),
+              [g, p] = (0, o.useState)(0),
+              [b, x] = (0, o.useState)(!1);
+            (0, o.useEffect)(() => {
               let e = u.current;
               if (!e) return;
               let a = window,
@@ -144,7 +144,7 @@
             }, []);
             let v = _ ? b && g > 0 ? `${g}px` : void 0 : "0px";
             return (0, s.jsx)("div", {
-              ...o,
+              ...t,
               id: m,
               ref: c,
               className: i(l().panel, a),
@@ -265,8 +265,8 @@
         A: () => x
       });
       var s = r(95155),
-        t = r(66348),
-        o = r.n(t),
+        o = r(66348),
+        t = r.n(o),
         l = r(59791),
         c = r.n(l),
         n = r(54834),
@@ -283,7 +283,7 @@
       }) {
         let a = (0, u.kj)(),
           r = new Date().getFullYear(),
-          [t, l] = (0, f.useState)(""),
+          [o, l] = (0, f.useState)(""),
           [i, g] = (0, f.useState)("up"),
           p = [{
             question: a("common.footer.faq.question_1"),
@@ -323,35 +323,35 @@
         }, []);
         let b = {
           up: (0, s.jsx)("span", {
-            className: o().statusUp,
+            className: t().statusUp,
             children: n.A.statusDot
           }),
           down: (0, s.jsx)("span", {
-            className: o().statusDown,
+            className: t().statusDown,
             children: n.A.statusDot
           }),
           partial: (0, s.jsx)("span", {
-            className: o().statusPartial,
+            className: t().statusPartial,
             children: n.A.statusDot
           })
         };
         return (0, s.jsxs)("div", {
           children: [(0, s.jsxs)("div", {
-            className: o().faq,
+            className: t().faq,
             children: [(0, s.jsx)("h1", {
-              className: o().faqText,
+              className: t().faqText,
               children: a("common.footer.faq.title")
             }), (0, s.jsx)(h.n, {
               children: p
             })]
           }), (0, s.jsxs)("div", {
-            className: o().footerWrapper,
+            className: t().footerWrapper,
             children: [(0, s.jsx)("div", {
-              className: o().gunsBannerWrapper,
+              className: t().gunsBannerWrapper,
               children: (0, s.jsx)("div", {
-                className: o().gunsBanner,
+                className: t().gunsBanner,
                 children: (0, s.jsxs)("div", {
-                  className: o().gunsBannerDescription,
+                  className: t().gunsBannerDescription,
                   children: [(0, s.jsx)("h1", {
                     children: a("common.footer.banner.title")
                   }), (0, s.jsx)("h3", {
@@ -359,7 +359,7 @@
                       users: e
                     })
                   }), (0, s.jsxs)("div", {
-                    className: o().gunsBannerButtons,
+                    className: t().gunsBannerButtons,
                     children: [(0, s.jsx)("div", {
                       className: c().inputContainerWrapper,
                       children: (0, s.jsxs)("div", {
@@ -374,7 +374,7 @@
                           })
                         }), (0, s.jsx)("input", {
                           autoCorrect: "false",
-                          value: t,
+                          value: o,
                           onChange: e => {
                             l(e.target.value)
                           },
@@ -384,7 +384,7 @@
                         })]
                       })
                     }), (0, s.jsx)(_.A, {
-                      href: `/register?claim=${t}&ref=guns_footer_banner`,
+                      href: `/register?claim=${o}&ref=guns_footer_banner`,
                       className: `${c().claimNow}`,
                       children: a("common.footer.banner.claim_now_text")
                     })]
@@ -392,17 +392,17 @@
                 })
               })
             }), (0, s.jsxs)("div", {
-              className: o().footerContainer,
+              className: t().footerContainer,
               children: [(0, s.jsxs)("div", {
-                className: o().footer,
+                className: t().footer,
                 children: [(0, s.jsxs)("div", {
-                  className: o().footerLeft,
+                  className: t().footerLeft,
                   children: [(0, s.jsxs)("div", {
-                    className: o().serviceWrapper,
+                    className: t().serviceWrapper,
                     children: [(0, s.jsxs)("div", {
-                      className: o().logoWrapper,
+                      className: t().logoWrapper,
                       children: [(0, s.jsxs)("div", {
-                        className: o().logoFooter,
+                        className: t().logoFooter,
                         children: [(0, s.jsx)("img", {
                           src: "https://assets.guns.lol/guns_logo_no_background_cropped.png",
                           alt: ""
@@ -415,7 +415,7 @@
                         href: "https://status.guns.lol",
                         target: "_blank",
                         children: (0, s.jsxs)("span", {
-                          className: o().systemStatus,
+                          className: t().systemStatus,
                           children: [b[i], " ", a("common.footer.banner.system_status_text")]
                         })
                       })]
@@ -423,19 +423,19 @@
                       children: a("common.footer.footer_description")
                     })]
                   }), (0, s.jsx)("div", {
-                    className: o().languageSelectionFooter,
+                    className: t().languageSelectionFooter,
                     children: (0, s.jsx)(m.A, {})
                   })]
                 }), (0, s.jsxs)("div", {
-                  className: o().footerRight,
+                  className: t().footerRight,
                   children: [(0, s.jsxs)("div", {
-                    className: o().categorySeperator,
+                    className: t().categorySeperator,
                     children: [(0, s.jsxs)("div", {
-                      className: o().linkCategory,
+                      className: t().linkCategory,
                       children: [(0, s.jsx)("h1", {
                         children: a("common.footer.footer_categories.general")
                       }), (0, s.jsxs)("div", {
-                        className: o().links,
+                        className: t().links,
                         children: [(0, s.jsx)(_.A, {
                           href: "/login",
                           children: a("common.footer.footer_categories_links.login")
@@ -446,8 +446,8 @@
                           href: "/pricing",
                           children: a("common.footer.footer_categories_links.pricing")
                         }), (0, s.jsx)(_.A, {
-                          href: "/reset",
-                          children: a("common.footer.footer_categories_links.reset_password")
+                          href: "/recovery",
+                          children: a("common.footer.footer_categories_links.recover_account")
                         }), (0, s.jsx)(_.A, {
                           href: "/leaderboard",
                           children: a("common.footer.footer_categories_links.leaderboard")
@@ -458,11 +458,11 @@
                         })]
                       })]
                     }), (0, s.jsxs)("div", {
-                      className: o().linkCategory,
+                      className: t().linkCategory,
                       children: [(0, s.jsx)("h1", {
                         children: a("common.footer.footer_categories.resources")
                       }), (0, s.jsxs)("div", {
-                        className: o().links,
+                        className: t().links,
                         children: [(0, s.jsx)(d(), {
                           href: "https://help.guns.lol",
                           target: "_blank",
@@ -486,13 +486,13 @@
                       })]
                     })]
                   }), (0, s.jsxs)("div", {
-                    className: o().categorySeperator,
+                    className: t().categorySeperator,
                     children: [(0, s.jsxs)("div", {
-                      className: o().linkCategory,
+                      className: t().linkCategory,
                       children: [(0, s.jsx)("h1", {
                         children: a("common.footer.footer_categories.contact")
                       }), (0, s.jsxs)("div", {
-                        className: o().links,
+                        className: t().links,
                         children: [(0, s.jsx)(d(), {
                           href: "https://discord.gg/guns",
                           target: "_blank",
@@ -509,11 +509,11 @@
                         })]
                       })]
                     }), (0, s.jsxs)("div", {
-                      className: o().linkCategory,
+                      className: t().linkCategory,
                       children: [(0, s.jsx)("h1", {
                         children: a("common.footer.footer_categories.legal")
                       }), (0, s.jsxs)("div", {
-                        className: o().links,
+                        className: t().links,
                         children: [(0, s.jsx)(_.A, {
                           href: "/terms",
                           children: a("common.footer.footer_categories_links.terms_of_service")
@@ -529,18 +529,18 @@
                   })]
                 })]
               }), (0, s.jsxs)("div", {
-                className: o().footerBottomWrapper,
+                className: t().footerBottomWrapper,
                 children: [(0, s.jsx)("div", {
-                  className: o().footerDivider
+                  className: t().footerDivider
                 }), (0, s.jsxs)("div", {
-                  className: o().footerBottom,
+                  className: t().footerBottom,
                   children: [(0, s.jsx)("span", {
-                    className: o().footerCopyright,
+                    className: t().footerCopyright,
                     children: a("common.footer.footer_copyright_text", {
                       year: r
                     })
                   }), (0, s.jsxs)("div", {
-                    className: o().footerSocials,
+                    className: t().footerSocials,
                     children: [(0, s.jsx)(d(), {
                       href: "https://discord.gg/guns",
                       target: "_blank",
@@ -571,7 +571,7 @@
         data: e
       }) {
         let a = !!e?.session?.userId,
-          [r, t] = (0, f.useState)(!1),
+          [r, o] = (0, f.useState)(!1),
           [l, c] = (0, f.useState)(!1),
           n = (0, f.useRef)(null),
           i = (0, f.useRef)(null),
@@ -604,12 +604,12 @@
             href: _("/register?ref=header"),
             highlighted: !0
           }],
-          x = a ? o().desktopNav : o().desktopNavExpanded,
+          x = a ? t().desktopNav : t().desktopNavExpanded,
           v = e => (0, s.jsx)(d(), {
             href: e.href,
             target: e.external ? "_blank" : void 0,
             rel: e.external ? "noreferrer" : void 0,
-            className: e.highlighted ? o().highlightedLink : void 0,
+            className: e.highlighted ? t().highlightedLink : void 0,
             children: e.label
           }, e.label);
         (0, f.useEffect)(() => {
@@ -626,21 +626,21 @@
           }
         }, [a]);
         let N = (0, f.useRef)(l),
-          j = [o().header, r ? o().active : "", l ? o().forceMobileNav : ""].filter(Boolean).join(" ");
+          j = [t().header, r ? t().active : "", l ? t().forceMobileNav : ""].filter(Boolean).join(" ");
         return (0, f.useEffect)(() => {
-          N.current && !l && t(!1), N.current = l
+          N.current && !l && o(!1), N.current = l
         }, [l]), (0, s.jsx)("header", {
-          className: `${o().headerWrapper} ${r?o().headerWrapperActive:""}`,
+          className: `${t().headerWrapper} ${r?t().headerWrapperActive:""}`,
           children: (0, s.jsxs)("div", {
             className: j,
             children: [(0, s.jsx)("div", {
-              className: o().blurBackground
+              className: t().blurBackground
             }), (0, s.jsx)(d(), {
               href: "/",
-              className: o().leftSideHeader,
+              className: t().leftSideHeader,
               ref: n,
               children: (0, s.jsxs)("div", {
-                className: o().logo,
+                className: t().logo,
                 children: [(0, s.jsx)("img", {
                   src: "https://assets.guns.lol/guns_logo_no_background_cropped.png",
                   alt: "guns.lol logo"
@@ -655,18 +655,18 @@
               ref: i,
               children: [g.map(v), b.map(v)]
             }), (0, s.jsx)("span", {
-              className: o().mobileMenuButton,
-              onClick: () => t(e => !e),
+              className: t().mobileMenuButton,
+              onClick: () => o(e => !e),
               children: p.A.hamburger
             }), (0, s.jsxs)("div", {
-              className: `${o().mobileNavigation} ${r?o().mobileNavigationOpen:""}`,
+              className: `${t().mobileNavigation} ${r?t().mobileNavigationOpen:""}`,
               children: [(0, s.jsx)("div", {
-                className: o().mobileNavGroup,
+                className: t().mobileNavGroup,
                 children: g.map(v)
               }), (0, s.jsxs)("div", {
-                className: o().mobileNavGroup,
+                className: t().mobileNavGroup,
                 children: [(0, s.jsx)("div", {
-                  className: o().mobileNavLanguage,
+                  className: t().mobileNavLanguage,
                   children: (0, s.jsx)(m.A, {})
                 }), b.map(v)]
               })]
@@ -680,12 +680,12 @@
         data: a,
         statsData: r
       }) {
-        let t = (1e4 * Math.round(r.users / 1e4)).toLocaleString("en-US");
+        let o = (1e4 * Math.round(r.users / 1e4)).toLocaleString("en-US");
         return (0, s.jsxs)(s.Fragment, {
           children: [(0, s.jsx)(b, {
             data: a
           }), e, (0, s.jsx)(g, {
-            formattedUsers: t
+            formattedUsers: o
           })]
         })
       }
@@ -693,11 +693,11 @@
     87974: (e, a, r) => {
       "use strict";
       r.d(a, {
-        A: () => t
+        A: () => o
       });
       var s = r(95155);
       r(12115);
-      let t = {
+      let o = {
         signUp: (0, s.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "1em",

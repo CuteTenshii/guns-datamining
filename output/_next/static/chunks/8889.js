@@ -7,8 +7,8 @@
       });
       var e = i(95155),
         d = i(12115),
-        n = i(56891),
-        o = i.n(n),
+        o = i(56891),
+        n = i.n(o),
         t = i(98241),
         l = i.n(t),
         m = i(86297),
@@ -30,7 +30,7 @@
       function N({
         data: s
       }) {
-        let a, i, n, t = (0, g.kj)(),
+        let a, i, o, t = (0, g.kj)(),
           N = (0, g.useLang)(),
           [f, _] = (0, d.useState)(""),
           [C, S] = (0, d.useState)({
@@ -63,8 +63,8 @@
             domainVisibility: t("dashboard.imagehost.domains.modals.visibility_title"),
             unsupportedDns: t("dashboard.imagehost.domains.modals.unsupported_title")
           }), [t]),
-          [sd, sn] = (0, d.useState)(null),
-          so = D.some(s => "active" !== s.status || "active" !== s.sslStatus),
+          [sd, so] = (0, d.useState)(null),
+          sn = D.some(s => "active" !== s.status || "active" !== s.sslStatus),
           st = async s => {
             await navigator.clipboard.writeText(s), c.oR.success(t("dashboard.imagehost.domains.notifications.copied"))
           }, sl = (0, d.useCallback)(async () => {
@@ -121,7 +121,7 @@
             X("unsupportedDns"), ss(W.trim()), G(!0), z(!1);
             return
           }
-          s.ok ? (c.oR.success(t("dashboard.imagehost.domains.notifications.domain_added")), sm(), Z(""), K("public"), sn({
+          s.ok ? (c.oR.success(t("dashboard.imagehost.domains.notifications.domain_added")), sm(), Z(""), K("public"), so({
             hostname: a.hostname,
             cfManaged: a.cf,
             records: a.dnsRecords
@@ -141,7 +141,7 @@
           if (a.ok) {
             let s = "active" === i.status && "active" === i.sslStatus,
               a = i.badge || !1;
-            s ? (sm(), sl(), sn(null), G(!1), c.oR.success(a ? t("dashboard.imagehost.domains.notifications.domain_active_badge") : t("dashboard.imagehost.domains.notifications.domain_active"))) : c.oR.info(t("dashboard.imagehost.domains.notifications.domain_pending"))
+            s ? (sm(), sl(), so(null), G(!1), c.oR.success(a ? t("dashboard.imagehost.domains.notifications.domain_active_badge") : t("dashboard.imagehost.domains.notifications.domain_active"))) : c.oR.info(t("dashboard.imagehost.domains.notifications.domain_pending"))
           } else i?.info ? c.oR.info(i.message) : c.oR.error(i.error);
           L(!1)
         }, sh = async (s, a) => {
@@ -203,7 +203,7 @@
           su()
         }, []);
         let sb = s => {
-            X("deleteDomain"), sn({
+            X("deleteDomain"), so({
               hostname: s,
               cfManaged: null,
               records: []
@@ -212,47 +212,47 @@
           sv = ({
             r: s
           }) => (0, e.jsxs)("div", {
-            className: `${o().dnsRecordRow} ${o().dnsRowCompact}`,
+            className: `${n().dnsRecordRow} ${n().dnsRowCompact}`,
             children: [(0, e.jsx)("div", {
-              className: o().dnsRowTop,
+              className: n().dnsRowTop,
               children: (0, e.jsx)("span", {
-                className: o().dnsType,
+                className: n().dnsType,
                 children: s.type
               })
             }), (0, e.jsxs)("div", {
-              className: o().dnsInline,
+              className: n().dnsInline,
               children: [(0, e.jsxs)("div", {
-                className: o().dnsField,
+                className: n().dnsField,
                 children: [(0, e.jsx)("span", {
-                  className: o().dnsLabel,
+                  className: n().dnsLabel,
                   children: t("dashboard.imagehost.domains.dns.field_name")
                 }), (0, e.jsxs)("div", {
-                  className: o().dnsValueWrapper,
+                  className: n().dnsValueWrapper,
                   children: [(0, e.jsx)("div", {
-                    className: o().dnsValue,
+                    className: n().dnsValue,
                     children: "@" !== s.nameCopy ? (0, e.jsxs)(e.Fragment, {
                       children: [s.nameCopy, (0, e.jsx)("span", {
                         children: s.name.replace(s.nameCopy, "")
                       })]
                     }) : s.name
                   }), (0, e.jsx)("span", {
-                    className: o().domainsCopyBtn,
+                    className: n().domainsCopyBtn,
                     onClick: () => st(s.nameCopy),
                     children: r.A.copy
                   })]
                 })]
               }), (0, e.jsxs)("div", {
-                className: o().dnsField,
+                className: n().dnsField,
                 children: [(0, e.jsx)("span", {
-                  className: o().dnsLabel,
+                  className: n().dnsLabel,
                   children: t("dashboard.imagehost.domains.dns.field_value")
                 }), (0, e.jsxs)("div", {
-                  className: o().dnsValueWrapper,
+                  className: n().dnsValueWrapper,
                   children: [(0, e.jsx)("div", {
-                    className: o().dnsValue,
+                    className: n().dnsValue,
                     children: s.value
                   }), (0, e.jsx)("span", {
-                    className: o().domainsCopyBtn,
+                    className: n().domainsCopyBtn,
                     onClick: () => st(s.value),
                     children: r.A.copy
                   })]
@@ -276,26 +276,26 @@
             title: se[Q],
             centered: !0,
             size: "domainVisibility" === Q ? "450px" : "auto",
-            children: "dnsSetup" === Q ? sd && (a = sd.hostname, i = sd.cfManaged, n = sd.records, (0, e.jsxs)("div", {
-              className: o().dnsModalBody,
+            children: "dnsSetup" === Q ? sd && (a = sd.hostname, i = sd.cfManaged, o = sd.records, (0, e.jsxs)("div", {
+              className: n().dnsModalBody,
               children: [(0, e.jsx)("div", {
-                className: o().dnsModalHeader,
+                className: n().dnsModalHeader,
                 children: (0, e.jsx)("div", {
-                  className: o().dnsDescription,
+                  className: n().dnsDescription,
                   children: t("dashboard.imagehost.domains.dns.instructions")
                 })
               }), (0, e.jsx)("div", {
-                className: o().dnsRecordsList,
+                className: n().dnsRecordsList,
                 style: {
                   marginTop: 4
                 },
-                children: n.map((s, a) => (0, e.jsx)(sv, {
+                children: o.map((s, a) => (0, e.jsx)(sv, {
                   r: s
                 }, a))
               }), (0, e.jsxs)("div", {
-                className: o().dnsActionRow,
+                className: n().dnsActionRow,
                 children: [i && (0, e.jsxs)("div", {
-                  className: o().dnsOnlyCf,
+                  className: n().dnsOnlyCf,
                   children: [(0, e.jsxs)("span", {
                     children: [m.A.domainNotice, " ", t("dashboard.imagehost.domains.dns.cf_notice")]
                   }), (0, e.jsx)("img", {
@@ -303,30 +303,30 @@
                     alt: "CF Proxy off"
                   })]
                 }), !i && (0, e.jsxs)("div", {
-                  className: o().dnsNotice,
+                  className: n().dnsNotice,
                   children: [m.A.domainNotice, " ", t("dashboard.imagehost.domains.dns.reminder")]
                 }), (0, e.jsxs)("span", {
-                  className: o().checkDomainButton,
+                  className: n().checkDomainButton,
                   onClick: () => sc(a),
                   children: [B ? m.A.loading : m.A.refresh, B ? "" : t("dashboard.imagehost.domains.dns.check_button")]
                 })]
               })]
             })) : "deleteDomain" === Q && sd ? (0, e.jsx)("div", {
-              className: o().deleteDomainModalBody,
+              className: n().deleteDomainModalBody,
               children: (0, e.jsxs)("div", {
-                className: o().deleteDomainDescription,
+                className: n().deleteDomainDescription,
                 children: [t("dashboard.imagehost.domains.modals.delete_domain_message", {
                   hostname: sd.hostname
                 }), (0, e.jsxs)("div", {
-                  className: o().deleteDomainButtons,
+                  className: n().deleteDomainButtons,
                   children: [(0, e.jsx)("span", {
-                    className: o().confirmDeleteButton,
+                    className: n().confirmDeleteButton,
                     onClick: s => {
                       sh(s, sd.hostname)
                     },
                     children: V ? m.A.loading : t("dashboard.imagehost.domains.modals.delete_button")
                   }), (0, e.jsx)("span", {
-                    className: o().cancelDeleteButton,
+                    className: n().cancelDeleteButton,
                     onClick: () => G(!1),
                     children: t("dashboard.imagehost.domains.modals.cancel_button")
                   })]
@@ -334,7 +334,7 @@
               })
             }) : "domainVisibility" === Q ? (0, e.jsxs)(e.Fragment, {
               children: [(0, e.jsx)("div", {
-                className: o().domainVisibilityHeader,
+                className: n().domainVisibilityHeader,
                 children: (0, e.jsx)("h3", {
                   children: t("dashboard.imagehost.domains.visibility.current", {
                     hostname: sa?.hostname,
@@ -342,14 +342,14 @@
                   })
                 })
               }), (0, e.jsx)("div", {
-                className: o().domainVisibilityBanner,
+                className: n().domainVisibilityBanner,
                 children: sa?.currentVisibility === "public" ? (0, e.jsxs)(e.Fragment, {
                   children: [m.A.alert, " ", t("dashboard.imagehost.domains.visibility.private_notice")]
                 }) : (0, e.jsxs)(e.Fragment, {
                   children: [m.A.info, " ", t("dashboard.imagehost.domains.visibility.public_notice")]
                 })
               }), (0, e.jsxs)("div", {
-                className: o().visibilityButtonContainer,
+                className: n().visibilityButtonContainer,
                 children: [(0, e.jsx)("span", {
                   onClick: () => sg(sa?.hostname, sa?.currentVisibility === "public" ? "private" : "public"),
                   children: sa?.currentVisibility === "public" ? t("dashboard.imagehost.domains.visibility.change_to_private") : t("dashboard.imagehost.domains.visibility.change_to_public")
@@ -359,11 +359,11 @@
                 })]
               })]
             }) : "unsupportedDns" === Q && (0, e.jsxs)("div", {
-              className: o().dnsModalBody,
+              className: n().dnsModalBody,
               children: [(0, e.jsxs)("div", {
-                className: o().errorModalBanner,
+                className: n().errorModalBanner,
                 children: [m.A.alert, (0, e.jsxs)("div", {
-                  className: o().errorModalBannerText,
+                  className: n().errorModalBannerText,
                   children: [t("dashboard.imagehost.domains.unsupported.title"), (0, e.jsx)("span", {
                     children: t("dashboard.imagehost.domains.unsupported.description", {
                       hostname: Y
@@ -371,7 +371,7 @@
                   })]
                 })]
               }), (0, e.jsxs)("div", {
-                className: o().warningText,
+                className: n().warningText,
                 children: [(0, e.jsx)("span", {
                   children: t("dashboard.imagehost.domains.unsupported.next_steps_title")
                 }), (0, e.jsx)("p", {
@@ -388,15 +388,15 @@
                   })
                 })]
               }), (0, e.jsx)("span", {
-                className: o().closeErrorModalButton,
+                className: n().closeErrorModalButton,
                 onClick: () => G(!1),
                 children: t("dashboard.imagehost.domains.unsupported.close_button")
               })]
             })
           }), (0, e.jsx)("div", {
-            className: o().domainsHeader,
+            className: n().domainsHeader,
             children: (0, e.jsxs)("div", {
-              className: o().domainsTitleContainer,
+              className: n().domainsTitleContainer,
               children: [(0, e.jsxs)("h1", {
                 children: [m.A.imagehostDomains, " ", t("dashboard.imagehost.domains.header.title")]
               }), (0, e.jsx)("h3", {
@@ -404,24 +404,24 @@
               })]
             })
           }), (0, e.jsxs)("div", {
-            className: o().domainsBody,
+            className: n().domainsBody,
             children: [(0, e.jsxs)("div", {
-              className: o().domainManagementContainer,
+              className: n().domainManagementContainer,
               children: [(0, e.jsxs)("div", {
-                className: o().addDomainContainer,
+                className: n().addDomainContainer,
                 children: [(0, e.jsx)("h1", {
-                  className: o().domainsLeftTitle,
+                  className: n().domainsLeftTitle,
                   children: t("dashboard.imagehost.domains.add_section.title")
                 }), (0, e.jsx)("h3", {
-                  className: o().domainsLeftSub,
+                  className: n().domainsLeftSub,
                   children: t("dashboard.imagehost.domains.add_section.subtitle")
                 }), (0, e.jsxs)("div", {
-                  className: o().addDomainInfo,
+                  className: n().addDomainInfo,
                   children: [m.A.sparkles, " ", (0, e.jsx)("span", {
                     children: t("dashboard.imagehost.domains.add_section.badge_note")
                   })]
                 }), (0, e.jsxs)("div", {
-                  className: o().domainsFormBlock,
+                  className: n().domainsFormBlock,
                   children: [(0, e.jsx)(p.A, {
                     id: "domainHost",
                     icon: m.A.link,
@@ -449,49 +449,49 @@
                       }]
                     })
                   }), (0, e.jsxs)("span", {
-                    className: o().addDomainButton,
+                    className: n().addDomainButton,
                     onClick: sr,
                     children: [J ? m.A.loading : m.A.addSign, " ", J ? t("dashboard.imagehost.domains.form.adding") : t("dashboard.imagehost.domains.form.add_button")]
-                  }), so && !O && (0, e.jsxs)("div", {
-                    className: o().pendingDomainsAlert,
+                  }), sn && !O && (0, e.jsxs)("div", {
+                    className: n().pendingDomainsAlert,
                     children: [m.A.alert, " ", t("dashboard.imagehost.domains.add_section.pending_alert")]
                   })]
                 })]
               }), (0, e.jsxs)("div", {
-                className: o().myDomainsContainer,
+                className: n().myDomainsContainer,
                 children: [(0, e.jsx)("h1", {
-                  className: o().domainsLeftTitle,
+                  className: n().domainsLeftTitle,
                   children: t("dashboard.imagehost.domains.my_domains.title", {
                     count: D.length
                   })
                 }), (0, e.jsx)("h3", {
-                  className: o().domainsLeftSub,
+                  className: n().domainsLeftSub,
                   children: t("dashboard.imagehost.domains.my_domains.subtitle")
                 }), (0, e.jsxs)("div", {
-                  className: o().domainsList,
+                  className: n().domainsList,
                   children: [O && (0, e.jsx)("div", {
-                    className: o().domainsLoading,
+                    className: n().domainsLoading,
                     children: m.A.loading
                   }), !O && 0 === D.length && (0, e.jsx)("div", {
-                    className: o().domainsEmpty,
+                    className: n().domainsEmpty,
                     children: t("dashboard.imagehost.domains.my_domains.empty")
                   }), !O && D.map(s => {
                     var a;
                     return (0, e.jsxs)("div", {
-                      className: o().domainCard,
+                      className: n().domainCard,
                       children: [(0, e.jsxs)("div", {
-                        className: o().domainCardLeft,
+                        className: n().domainCardLeft,
                         children: [(0, e.jsxs)("div", {
-                          className: o().domainCardHeader,
+                          className: n().domainCardHeader,
                           children: [(0, e.jsxs)("div", {
-                            className: o().domainCardTop,
+                            className: n().domainCardTop,
                             children: [(0, e.jsx)("span", {
-                              className: o().domainNameList,
+                              className: n().domainNameList,
                               children: s.domain
                             }), (0, e.jsxs)("div", {
-                              className: o().domainTagsWrapper,
+                              className: n().domainTagsWrapper,
                               children: [(0, e.jsx)("span", {
-                                className: `${o().domainStatus} ${"active"===s.status&&"active"===s.sslStatus?o().active:o().pending}`,
+                                className: `${n().domainStatus} ${"active"===s.status&&"active"===s.sslStatus?n().active:n().pending}`,
                                 children: "active" !== (a = s).status ? t({
                                   pending: "dashboard.imagehost.domains.status.hostname.pending",
                                   active: "dashboard.imagehost.domains.status.hostname.active",
@@ -512,17 +512,17 @@
                                   expired: "dashboard.imagehost.domains.status.ssl.expired"
                                 } [a.sslStatus] || "dashboard.imagehost.domains.status.ssl.unknown") : t("dashboard.imagehost.domains.status.active")
                               }), "active" === s.status && "active" === s.sslStatus && (0, e.jsx)("span", {
-                                className: o().usageCountBadge,
+                                className: n().usageCountBadge,
                                 children: t(y(N, "dashboard.imagehost.domains.my_domains.usage_badge", s.usageCount), {
                                   count: s.usageCount
                                 })
                               }), (0, e.jsx)("span", {
-                                className: o().visibilityBadge,
+                                className: n().visibilityBadge,
                                 children: "public" === s.visibility ? t("dashboard.imagehost.domains.visibility.public") : t("dashboard.imagehost.domains.visibility.private")
                               })]
                             })]
                           }), "active" === s.status && "active" === s.sslStatus && (0, e.jsxs)("div", {
-                            className: o().domainActions,
+                            className: n().domainActions,
                             children: [(0, e.jsx)("span", {
                               onClick: () => sp(s.domain),
                               children: m.A.applyDomain
@@ -540,17 +540,17 @@
                             })]
                           })]
                         }), (0, e.jsx)("span", {
-                          className: o().domainInfo,
+                          className: n().domainInfo,
                           children: t("dashboard.imagehost.domains.my_domains.added_on", {
                             date: new Date(1e3 * s.createdAt).toLocaleDateString()
                           })
                         })]
                       }), ("active" !== s.status || "active" !== s.sslStatus) && (0, e.jsxs)("div", {
-                        className: o().domainCardActions,
+                        className: n().domainCardActions,
                         children: [(0, e.jsxs)("span", {
-                          className: o().domainDnsSetupButton,
+                          className: n().domainDnsSetupButton,
                           onClick: () => {
-                            sn({
+                            so({
                               hostname: s.domain,
                               cfManaged: s.cfManaged,
                               records: s.dnsRecords
@@ -558,7 +558,7 @@
                           },
                           children: [m.A.dnsSetup, " ", t("dashboard.imagehost.domains.my_domains.open_dns")]
                         }), (0, e.jsx)("span", {
-                          className: o().domainDeleteButton,
+                          className: n().domainDeleteButton,
                           onClick: () => sb(s.domain),
                           children: m.A.deleteDomain
                         })]
@@ -568,9 +568,9 @@
                 })]
               })]
             }), (0, e.jsxs)("div", {
-              className: o().domainsListContainer,
+              className: n().domainsListContainer,
               children: [(0, e.jsxs)("div", {
-                className: o().domainsListHeader,
+                className: n().domainsListHeader,
                 children: [(0, e.jsx)("h1", {
                   children: t("dashboard.imagehost.domains.community.title")
                 }), (0, e.jsx)("h3", {
@@ -579,14 +579,14 @@
                   })
                 })]
               }), (0, e.jsx)("div", {
-                className: o().domainsControls,
+                className: n().domainsControls,
                 children: (0, e.jsxs)("div", {
-                  className: o().searchInputWrapper,
+                  className: n().searchInputWrapper,
                   children: [(0, e.jsxs)("div", {
-                    className: o().searchInputContainer,
+                    className: n().searchInputContainer,
                     children: [(0, e.jsx)("input", {
                       type: "text",
-                      className: o().searchInput,
+                      className: n().searchInput,
                       style: {
                         paddingRight: "" !== P ? "40px" : "15px"
                       },
@@ -595,32 +595,32 @@
                       onChange: s => E(s.target.value.trim()),
                       placeholder: t("dashboard.imagehost.domains.community.search_placeholder")
                     }), "" !== P && (0, e.jsx)("span", {
-                      className: o().removeSearchButton,
+                      className: n().removeSearchButton,
                       onClick: () => E(""),
                       children: m.A.removeSearch
                     })]
                   }), (0, e.jsx)("span", {
-                    className: o().searchButton,
+                    className: n().searchButton,
                     children: m.A.search
                   })]
                 })
               }), (0, e.jsxs)("div", {
-                className: o().domainsList,
+                className: n().domainsList,
                 children: [w && (0, e.jsx)("div", {
-                  className: o().domainsLoading,
+                  className: n().domainsLoading,
                   children: m.A.loading
                 }), !w && 0 === A.length && (0, e.jsx)("div", {
-                  className: o().domainsEmpty,
+                  className: n().domainsEmpty,
                   children: t("dashboard.imagehost.domains.community.empty")
                 }), !w && A.map(s => (0, e.jsxs)("div", {
-                  className: o().domainCardList,
+                  className: n().domainCardList,
                   children: [(0, e.jsxs)("div", {
-                    className: o().domainCardListLeft,
+                    className: n().domainCardListLeft,
                     children: [(0, e.jsx)("span", {
-                      className: o().domainName,
+                      className: n().domainName,
                       children: s.domain
                     }), (0, e.jsx)("div", {
-                      className: o().domainTags,
+                      className: n().domainTags,
                       children: "DEFAULT" !== s.id ? (0, e.jsxs)(e.Fragment, {
                         children: [(0, e.jsx)("span", {
                           children: t("dashboard.imagehost.domains.visibility.public")
@@ -634,13 +634,13 @@
                       })
                     })]
                   }), (0, e.jsx)("span", {
-                    className: `${o().applyDomainButton} ${f===s.domain?o().applied:""}`,
+                    className: `${n().applyDomainButton} ${f===s.domain?n().applied:""}`,
                     onClick: () => sp(s.domain),
                     children: f === s.domain ? t("dashboard.imagehost.domains.community.applied") : t("dashboard.imagehost.domains.community.apply_button")
                   })]
                 }, s.id))]
               }), C.totalPages > 1 && (0, e.jsx)("div", {
-                className: o().paginationWrapper,
+                className: n().paginationWrapper,
                 children: (0, e.jsx)(b.A, {
                   value: F,
                   onChange: H,
@@ -658,8 +658,8 @@
       });
       var e = i(95155),
         d = i(98241),
-        n = i.n(d),
-        o = i(54834),
+        o = i.n(d),
+        n = i(54834),
         t = i(81576);
 
       function l({
@@ -669,9 +669,10 @@
         id: d
       }) {
         return (0, e.jsxs)("div", {
-          className: n().featureName,
+          className: o().featureName,
+          "data-dashboard-feature-label": "string" == typeof s ? s : void 0,
           children: [(0, e.jsxs)("h1", {
-            className: n().featureNameText,
+            className: o().featureNameText,
             style: {
               marginBottom: "6px"
             },
@@ -680,10 +681,10 @@
               position: "top",
               id: d,
               children: [(0, e.jsx)(t.Ay.Target, {
-                children: o.A.help
+                children: n.A.help
               }), (0, e.jsx)(t.Ay.Dropdown, {
                 children: (0, e.jsx)("div", {
-                  className: n().helpDescription,
+                  className: o().helpDescription,
                   children: a.split("\n").map((s, a) => (0, e.jsxs)("span", {
                     children: [s, (0, e.jsx)("br", {})]
                   }, a))

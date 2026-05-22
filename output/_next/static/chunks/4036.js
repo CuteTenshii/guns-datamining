@@ -10,7 +10,7 @@
         n = t(98500),
         r = t.n(n),
         d = t(39449),
-        o = t(77561),
+        o = t(60884),
         l = t(56891),
         c = t.n(l),
         h = t(86297),
@@ -812,7 +812,8 @@
             top: `${R.top}px`,
             width: `${R.width}px`
           } : void 0,
-          ee = (0, a.jsxs)("div", {
+          ee = "string" == typeof e ? e : void 0,
+          es = (0, a.jsxs)("div", {
             ref: y,
             className: c().panel,
             style: q,
@@ -850,6 +851,7 @@
           });
         return (0, a.jsxs)("div", {
           className: o().inputContainerWrapper,
+          "data-dashboard-feature-label": ee,
           children: [(0, a.jsx)("h1", {
             className: o().featureName,
             children: e
@@ -894,7 +896,7 @@
               onClick: A ? V : Q,
               disabled: x || A && L,
               children: b
-            }), w && (Z && Y ? (0, n.createPortal)(ee, Y) : ee)]
+            }), w && (Z && Y ? (0, n.createPortal)(es, Y) : es)]
           })]
         })
       }
@@ -1150,9 +1152,11 @@
       }) {
         let g = (0, c.useLang)(),
           b = (0, n.useId)(),
-          f = h.includes(g) ? "rtl" : "ltr";
+          f = h.includes(g) ? "rtl" : "ltr",
+          x = "string" == typeof e ? e : void 0;
         return (0, a.jsxs)("div", {
           className: d().inputContainerWrapper,
+          "data-dashboard-feature-label": x,
           children: [e && (0, a.jsx)("h1", {
             className: d().featureName,
             children: e
@@ -1177,7 +1181,6 @@
                 }
               }), (0, a.jsx)("span", {
                 className: l().track,
-                "aria-hidden": "true",
                 children: (0, a.jsx)("span", {
                   className: l().thumb
                 })

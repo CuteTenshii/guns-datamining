@@ -146,6 +146,16 @@
             d: "m12 13.4l-2.9 2.9q-.275.275-.7.275t-.7-.275q-.275-.275-.275-.7t.275-.7l2.9-2.9l-2.9-2.875q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275l2.9 2.9l2.875-2.9q.275-.275.7-.275t.7.275q.3.3.3.713t-.3.687L13.375 12l2.9 2.9q.275.275.275.7t-.275.7q-.3.3-.712.3t-.688-.3z"
           })
         }),
+        search: (0, h.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          width: "1em",
+          height: "1em",
+          viewBox: "0 0 24 24",
+          children: (0, h.jsx)("path", {
+            fill: "currentColor",
+            d: "m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5t1.888-4.612T9.5 3t4.613 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3zM9.5 14q1.875 0 3.188-1.312T14 9.5t-1.312-3.187T9.5 5T6.313 6.313T5 9.5t1.313 3.188T9.5 14"
+          })
+        }),
         checkmark: (0, h.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "1em",
@@ -491,6 +501,26 @@
             fill: "currentColor",
             d: "M12 9a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5a5 5 0 0 1 5-5a5 5 0 0 1 5 5a5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"
           })
+        }),
+        google: (0, h.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          width: "1em",
+          height: "1em",
+          viewBox: "0 0 24 24",
+          children: (0, h.jsx)("path", {
+            fill: "currentColor",
+            d: "M11.99 13.9v-3.72h9.36c.14.63.25 1.22.25 2.05c0 5.71-3.83 9.77-9.6 9.77c-5.52 0-10-4.48-10-10S6.48 2 12 2c2.7 0 4.96.99 6.69 2.61l-2.84 2.76c-.72-.68-1.98-1.48-3.85-1.48c-3.31 0-6.01 2.75-6.01 6.12s2.7 6.12 6.01 6.12c3.83 0 5.24-2.65 5.5-4.22h-5.51z"
+          })
+        }),
+        delete: (0, h.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          width: "1em",
+          height: "1em",
+          viewBox: "0 0 24 24",
+          children: (0, h.jsx)("path", {
+            fill: "currentColor",
+            d: "M7 21q-.825 0-1.412-.587T5 19V6q-.425 0-.712-.288T4 5q0-.425.288-.712T5 4h4q0-.425.288-.712T10 3h4q.425 0 .713.288T15 4h4q.425 0 .713.288T20 5q0 .425-.288.713T19 6v13q0 .825-.587 1.413T17 21zm3-4q.425 0 .713-.288T11 16V9q0-.425-.288-.712T10 8q-.425 0-.712.288T9 9v7q0 .425.288.713T10 17m4 0q.425 0 .713-.288T15 16V9q0-.425-.288-.712T14 8q-.425 0-.712.288T13 9v7q0 .425.288.713T14 17"
+          })
         })
       }
     },
@@ -512,6 +542,7 @@
       }) {
         return (0, h.jsxs)("div", {
           className: s().inputContainerWrapper,
+          "data-dashboard-feature-label": "string" == typeof e ? e : void 0,
           children: [(0, h.jsx)("h1", {
             className: s().featureName,
             children: e
@@ -552,7 +583,7 @@
     97478: (e, l, t) => {
       "use strict";
       t.d(l, {
-        A: () => w
+        A: () => n
       });
       var h = t(95155),
         a = t(29722),
@@ -568,19 +599,19 @@
           let t = 10 ** l;
           return Math.round(e * t) / t
         },
-        n = (e, l) => "" === e || null == e || "number" != typeof e || Number.isNaN(e) ? "" : "number" == typeof l ? e.toFixed(l) : `${e}`;
+        w = (e, l) => "" === e || null == e || "number" != typeof e || Number.isNaN(e) ? "" : "number" == typeof l ? e.toFixed(l) : `${e}`;
 
-      function w({
+      function n({
         featureName: e,
         icon: l,
         value: t,
         placeholder: i,
-        min: w,
+        min: n,
         max: v,
         step: m = 1,
         precision: d,
-        hideControls: f = !1,
-        className: x,
+        hideControls: x = !1,
+        className: f,
         inputClassName: g,
         onChangeFunction: p,
         onChange: u,
@@ -590,9 +621,9 @@
         inputMode: M = "decimal",
         disabled: b,
         id: z,
-        ...L
+        ...C
       }) {
-        let C = "number" == typeof d ? d : (e => {
+        let L = "number" == typeof d ? d : (e => {
             if ("number" != typeof e || !Number.isFinite(e)) return;
             let l = e.toString().toLowerCase(),
               t = 0;
@@ -610,23 +641,25 @@
           V = z ?? H,
           N = (0, s.useRef)(null),
           [y, A] = (0, s.useState)(!1),
-          [k, _] = (0, s.useState)(() => n(t ?? "", C));
+          [k, S] = (0, s.useState)(() => w(t ?? "", L));
         (0, s.useEffect)(() => {
-          y || _(n(t ?? "", C))
-        }, [t, C, y]);
-        let S = (0, s.useCallback)(e => {
+          y || S(w(t ?? "", L))
+        }, [t, L, y]);
+        let _ = (0, s.useCallback)(e => {
             p?.(e), u?.(e)
           }, [p, u]),
           Z = e => {
             if (b) return;
             let l = "number" == typeof t && Number.isFinite(t) ? t : void 0,
-              h = o(r("number" == typeof l ? l + e * m : 1 === e ? "number" == typeof w ? w : m : "number" == typeof v ? v : -m, w, v), C);
-            _(n(h, C)), S(h), N.current?.focus()
+              h = o(r("number" == typeof l ? l + e * m : 1 === e ? "number" == typeof n ? n : m : "number" == typeof v ? v : -m, n, v), L);
+            S(w(h, L)), _(h), N.current?.focus()
           },
           U = !b && ("number" != typeof v || "number" != typeof t || t < v),
-          D = !b && ("number" != typeof w || "number" != typeof t || t > w);
+          D = !b && ("number" != typeof n || "number" != typeof t || t > n),
+          G = "string" == typeof e ? e : void 0;
         return (0, h.jsxs)("div", {
-          className: (0, a.A)(c().container, x),
+          className: (0, a.A)(c().container, f),
+          "data-dashboard-feature-label": G,
           children: [e && (0, h.jsx)("label", {
             htmlFor: V,
             className: c().label,
@@ -646,32 +679,32 @@
               autoComplete: "off",
               autoCorrect: "off",
               spellCheck: !1,
-              className: (0, a.A)(c().input, l && c().inputWithIcon, !f && c().inputWithControls, g),
+              className: (0, a.A)(c().input, l && c().inputWithIcon, !x && c().inputWithControls, g),
               value: k,
               placeholder: B,
-              min: w,
+              min: n,
               max: v,
               step: m,
               onChange: e => {
                 let l, t = e.currentTarget.value;
-                _(t);
+                S(t);
                 let h = t.replace(/,/g, ".");
-                if ("" === (l = h.trim()) || "-" === l || "+" === l || "." === l || "-." === l || "+." === l) return void S(0);
+                if ("" === (l = h.trim()) || "-" === l || "+" === l || "." === l || "-." === l || "+." === l) return void _(0);
                 let a = Number(h);
-                Number.isNaN(a) || S(o(r(a, w, v), C))
+                Number.isNaN(a) || _(o(r(a, n, v), L))
               },
               onFocus: e => {
                 A(!0), j?.(e)
               },
               onBlur: e => {
-                A(!1), _(n(t ?? "", C)), q?.(e)
+                A(!1), S(w(t ?? "", L)), q?.(e)
               },
               onKeyDown: e => {
                 "ArrowUp" === e.key ? (e.preventDefault(), Z(1)) : "ArrowDown" === e.key && (e.preventDefault(), Z(-1)), T?.(e)
               },
               disabled: b,
-              ...L
-            }), !f && (0, h.jsxs)("div", {
+              ...C
+            }), !x && (0, h.jsxs)("div", {
               className: c().controls,
               children: [(0, h.jsx)("button", {
                 type: "button",
