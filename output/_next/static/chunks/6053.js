@@ -4095,45 +4095,46 @@ void main() {
         fontSize: m,
         profileBorderClass: f = "",
         profileBorderEffect: h = "shimmer",
-        revealContent: g = !1,
-        revealOrder: x = 1,
-        lyricsConfig: v = null
+        profileBorderEffectEnabled: g = !!(f && h),
+        revealContent: x = !1,
+        revealOrder: v = 1,
+        lyricsConfig: y = null
       }) {
-        let y = e => {
+        let b = e => {
             if (isNaN(e) || e === 1 / 0) return "--:--";
             let t = Math.floor(e / 60),
               r = Math.floor(e % 60);
             return isNaN(t) || isNaN(r) ? "--:--" : `${t}:${r<10?`0${r}`:r}`
           },
-          b = p({
+          j = p({
             font: c,
             fontSize: m
           }),
-          j = y(t.currentTime),
-          _ = y(t.duration),
-          w = Number.isFinite(t.duration) && t.duration > 0 ? Math.min(Math.max(t.currentTime / t.duration * 100, 0), 100) : 0,
-          S = (0, s.useRef)(!1),
-          N = g ? "" : e,
-          C = (e, t, r) => g ? {
+          _ = b(t.currentTime),
+          w = b(t.duration),
+          S = Number.isFinite(t.duration) && t.duration > 0 ? Math.min(Math.max(t.currentTime / t.duration * 100, 0), 100) : 0,
+          N = (0, s.useRef)(!1),
+          C = x ? "" : e,
+          k = (e, t, r) => x ? {
             "data-reveal-part": e,
             style: {
               ...r,
-              "--portfolioRevealOrder": x + t
+              "--portfolioRevealOrder": v + t
             }
           } : r ? {
             style: r
           } : {},
-          k = (0, s.useRef)({
+          A = (0, s.useRef)({
             activePointerId: null,
             wasPlaying: !1,
             barRect: null,
             lastClientX: null
           }),
-          A = v?.lyrics_track_map && "object" == typeof v.lyrics_track_map ? v.lyrics_track_map : {},
-          F = String(o?.id ?? ""),
-          $ = Object.values(A).find(e => e?.track_url === o?.url),
-          T = A[F] || A.__single__ || $ || null,
-          P = (0, s.useMemo)(() => (function(e) {
+          F = y?.lyrics_track_map && "object" == typeof y.lyrics_track_map ? y.lyrics_track_map : {},
+          $ = String(o?.id ?? ""),
+          T = Object.values(F).find(e => e?.track_url === o?.url),
+          P = F[$] || F.__single__ || T || null,
+          U = (0, s.useMemo)(() => (function(e) {
             if (!e) return [];
             let t = e.split("\n"),
               r = [];
@@ -4156,8 +4157,8 @@ void main() {
               }
             }
             return r.sort((e, t) => e.timeMs - t.timeMs)
-          })(String(T?.synced_lyrics || "")), [T?.synced_lyrics]),
-          U = (0, s.useMemo)(() => (function(e, t) {
+          })(String(P?.synced_lyrics || "")), [P?.synced_lyrics]),
+          E = (0, s.useMemo)(() => (function(e, t) {
             if (0 === e.length || !Number.isFinite(t) || t < 0) return -1;
             let r = 1e3 * t,
               a = -1;
@@ -4165,17 +4166,18 @@ void main() {
               if (e[t].timeMs <= r) a = t;
               else break;
             return a
-          })(P, t.currentTime), [P, t.currentTime]),
-          E = U >= 0 ? U : 0,
-          z = g && v?.show_lyrics === !0,
-          B = e => {
+          })(U, t.currentTime), [U, t.currentTime]),
+          z = E >= 0 ? E : 0,
+          B = x && y?.show_lyrics === !0,
+          I = g && !!h,
+          M = e => {
             if (!e || "object" != typeof e) return !1;
-            let t = A[String(e.id ?? "")],
-              r = Object.values(A).find(t => t?.track_url === e?.url),
-              a = t || A.__single__ || r;
+            let t = F[String(e.id ?? "")],
+              r = Object.values(F).find(t => t?.track_url === e?.url),
+              a = t || F.__single__ || r;
             return "string" == typeof a?.synced_lyrics && a.synced_lyrics.trim().length > 0
           },
-          I = e => {
+          L = e => {
             if (!Array.isArray(d) || 0 === d.length) return null;
             let t = d.length,
               r = d.findIndex(e => e.id === o.id),
@@ -4183,11 +4185,11 @@ void main() {
               s = a >= 0 ? a : 0;
             for (let r = 1; r < t; r++) {
               let a = d[(s + e * r + t) % t];
-              if (B(a)) return a
+              if (M(a)) return a
             }
             return null
           },
-          M = e => {
+          D = e => {
             let r = t.ref,
               a = r?.duration || t.duration;
             if (!r || !Number.isFinite(a) || a <= 0) return;
@@ -4199,22 +4201,22 @@ void main() {
               ref: r
             }))
           },
-          L = e => {
-            let r = k.current.barRect,
+          W = e => {
+            let r = A.current.barRect,
               a = t.ref?.duration || t.duration;
             if (!r || !Number.isFinite(a) || a <= 0) return;
             let s = r.width > 0 ? (e - r.left) / r.width : 0;
-            k.current.lastClientX = e, M(s * a)
+            A.current.lastClientX = e, D(s * a)
           },
-          D = (e, r = !0) => {
+          R = (e, r = !0) => {
             let a = t.ref,
-              s = k.current.activePointerId === e.pointerId && k.current.wasPlaying;
-            k.current.activePointerId === e.pointerId && (e.preventDefault(), L(r ? e.clientX : k.current.lastClientX ?? e.clientX)), e.currentTarget.hasPointerCapture(e.pointerId) && e.currentTarget.releasePointerCapture(e.pointerId), k.current = {
+              s = A.current.activePointerId === e.pointerId && A.current.wasPlaying;
+            A.current.activePointerId === e.pointerId && (e.preventDefault(), W(r ? e.clientX : A.current.lastClientX ?? e.clientX)), e.currentTarget.hasPointerCapture(e.pointerId) && e.currentTarget.releasePointerCapture(e.pointerId), A.current = {
               activePointerId: null,
               wasPlaying: !1,
               barRect: null,
               lastClientX: null
-            }, a && s && W(a).then(e => {
+            }, a && s && G(a).then(e => {
               e && n(e => ({
                 ...e,
                 playing: !0,
@@ -4222,7 +4224,7 @@ void main() {
               }))
             })
           },
-          W = e => {
+          G = e => {
             let t = e.play();
             return t && "function" == typeof t.then ? t.then(() => !0).catch(t => (n(e => ({
               ...e,
@@ -4232,37 +4234,37 @@ void main() {
               error: t
             }) : console.warn("Audio playback failed.", t), !1)) : Promise.resolve(!0)
           },
-          R = () => {
+          H = () => {
             if (!t.ref || !Array.isArray(d) || 0 === d.length) return;
             let e = d.findIndex(e => e.id === o.id);
             if (1 === d.length) {
               t.ref.currentTime = 0;
               return
             }
-            if (z) {
-              let e = I(-1);
+            if (B) {
+              let e = L(-1);
               if (!e) return;
-              H(e);
+              q(e);
               return
             }
-            H(0 === e ? d[d.length - 1] : d[e - 1])
+            q(0 === e ? d[d.length - 1] : d[e - 1])
           },
-          G = () => {
+          O = () => {
             if (!t.ref || !Array.isArray(d) || 0 === d.length) return;
             let e = d.findIndex(e => e.id === o.id);
             if (1 === d.length) {
               t.ref.currentTime = 0;
               return
             }
-            if (z) {
-              let e = I(1);
+            if (B) {
+              let e = L(1);
               if (!e) return;
-              H(e);
+              q(e);
               return
             }
-            H(e === d.length - 1 ? d[0] : d[e + 1])
+            q(e === d.length - 1 ? d[0] : d[e + 1])
           },
-          H = e => {
+          q = e => {
             let a = t.ref;
             if (!a) return;
             let s = () => {
@@ -4274,7 +4276,7 @@ void main() {
                 }))
               },
               o = () => {
-                W(a).then(e => {
+                G(a).then(e => {
                   e && (n(e => ({
                     ...e,
                     playing: !0,
@@ -4299,17 +4301,17 @@ void main() {
               ref: a
             })), a.readyState >= 3 ? o() : a.addEventListener("canplaythrough", o)
           },
-          O = e => {
-            S.current || (S.current = !0, e(), setTimeout(() => {
-              S.current = !1
+          V = e => {
+            N.current || (N.current = !0, e(), setTimeout(() => {
+              N.current = !1
             }, 250))
           };
         return (0, a.jsxs)("div", {
-          className: `${i().audioPlayer} ${N} ${f}`,
+          className: `${i().audioPlayer} ${C} ${f}`,
           ref: l,
-          children: [f && !z && (0, a.jsx)(eM, {
+          children: [f && !B && (0, a.jsx)(eM, {
             effect: h
-          }), z && (0, a.jsxs)("div", {
+          }), B && (0, a.jsxs)("div", {
             className: i().audioLyricsBackdropLayer,
             children: [o.cover && (0, a.jsx)("div", {
               className: i().audioLyricsCoverBackdrop,
@@ -4325,31 +4327,31 @@ void main() {
             className: i().audioPlayerInner,
             children: [o.cover && "" !== o.cover ? (0, a.jsx)("img", {
               src: o.cover,
-              ...C("audio-cover", 0, {
+              ...k("audio-cover", 0, {
                 borderRadius: "calc(var(--containerRadius) - 10px)"
               }),
               alt: "",
               className: i().audioCover
             }) : (0, a.jsx)("span", {
               className: i().audioIcon,
-              ...C("audio-icon", 0, {
+              ...k("audio-icon", 0, {
                 borderRadius: "calc(var(--containerRadius) - 10px)"
               }),
               children: eE.A.audioIcon
             }), (0, a.jsxs)("div", {
               className: `${i().audioContainer}`,
-              ...C("audio-controls", 1),
+              ...k("audio-controls", 1),
               children: [(0, a.jsx)("h1", {
                 className: i().audioTitle,
-                style: b.audioPlayerTitle,
+                style: j.audioPlayerTitle,
                 children: o.title
               }), (0, a.jsxs)("div", {
                 className: i().audioControls,
                 children: [(0, a.jsxs)("div", {
                   className: i().audioProgressBarWrapper,
                   children: [(0, a.jsx)("span", {
-                    style: b.audioPlayerControls,
-                    children: j
+                    style: j.audioPlayerControls,
+                    children: _
                   }), (0, a.jsx)("div", {
                     className: i().audioProgressBar,
                     tabIndex: 0,
@@ -4361,7 +4363,7 @@ void main() {
                       if (!r) return;
                       e.preventDefault();
                       let a = e.currentTarget.getBoundingClientRect();
-                      k.current = {
+                      A.current = {
                         activePointerId: e.pointerId,
                         wasPlaying: !r.paused,
                         barRect: {
@@ -4373,17 +4375,17 @@ void main() {
                         ...e,
                         playing: !1,
                         ref: r
-                      }))), e.currentTarget.setPointerCapture(e.pointerId), L(e.clientX)
+                      }))), e.currentTarget.setPointerCapture(e.pointerId), W(e.clientX)
                     },
                     onPointerMove: e => {
-                      1 === e.buttons && k.current.activePointerId === e.pointerId && (e.preventDefault(), L(e.clientX))
+                      1 === e.buttons && A.current.activePointerId === e.pointerId && (e.preventDefault(), W(e.clientX))
                     },
-                    onPointerUp: e => D(e),
-                    onPointerCancel: e => D(e, !1),
-                    onLostPointerCapture: e => D(e, !1),
+                    onPointerUp: e => R(e),
+                    onPointerCancel: e => R(e, !1),
+                    onLostPointerCapture: e => R(e, !1),
                     onKeyDown: e => {
                       let r = t.ref?.duration || t.duration;
-                      Number.isFinite(r) && !(r <= 0) && ("ArrowLeft" === e.key || "ArrowDown" === e.key ? (e.preventDefault(), M(t.currentTime - 5)) : "ArrowRight" === e.key || "ArrowUp" === e.key ? (e.preventDefault(), M(t.currentTime + 5)) : "Home" === e.key ? (e.preventDefault(), M(0)) : "End" === e.key && (e.preventDefault(), M(r)))
+                      Number.isFinite(r) && !(r <= 0) && ("ArrowLeft" === e.key || "ArrowDown" === e.key ? (e.preventDefault(), D(t.currentTime - 5)) : "ArrowRight" === e.key || "ArrowUp" === e.key ? (e.preventDefault(), D(t.currentTime + 5)) : "Home" === e.key ? (e.preventDefault(), D(0)) : "End" === e.key && (e.preventDefault(), D(r)))
                     },
                     children: (0, a.jsxs)("div", {
                       className: i().audioProgressTrack,
@@ -4392,24 +4394,24 @@ void main() {
                       }), (0, a.jsx)("div", {
                         className: i().audioProgressPlaying,
                         style: {
-                          width: w + "%"
+                          width: S + "%"
                         }
                       }), (0, a.jsx)("div", {
                         className: i().audioProgressThumb,
                         style: {
-                          left: w + "%"
+                          left: S + "%"
                         }
                       })]
                     })
                   }), (0, a.jsx)("span", {
-                    style: b.audioPlayerControls,
-                    children: _
+                    style: j.audioPlayerControls,
+                    children: w
                   })]
                 }), (0, a.jsxs)("div", {
                   className: i().controlButtons,
                   children: [(0, a.jsx)("span", {
                     className: i().sideControlButton,
-                    onClick: () => O(R),
+                    onClick: () => V(H),
                     children: eE.A.skipBackward
                   }), (0, a.jsx)("span", {
                     className: i().mainControlButton,
@@ -4418,7 +4420,7 @@ void main() {
                       e && (t.playing ? (e.pause(), n(e => ({
                         ...e,
                         playing: !1
-                      }))) : W(e).then(e => {
+                      }))) : G(e).then(e => {
                         e && n(e => ({
                           ...e,
                           playing: !0
@@ -4428,23 +4430,25 @@ void main() {
                     children: t.playing ? eE.A.pause : eE.A.play
                   }), (0, a.jsx)("span", {
                     className: i().sideControlButton,
-                    onClick: () => O(G),
+                    onClick: () => V(O),
                     children: eE.A.skipForward
                   })]
                 })]
               })]
             })]
-          }), z && (0, a.jsx)("div", {
-            className: i().audioLyricsShell,
-            ...C("audio-lyrics", 2),
-            children: P.length > 0 ? (0, a.jsx)("div", {
+          }), B && (0, a.jsxs)("div", {
+            className: `${i().audioLyricsShell} ${I?f:""}`,
+            ...k("audio-lyrics", 2),
+            children: [I && (0, a.jsx)(eM, {
+              effect: h
+            }), U.length > 0 ? (0, a.jsx)("div", {
               className: i().audioLyricsViewport,
-              children: P.map((e, t) => {
-                let r = t - E,
+              children: U.map((e, t) => {
+                let r = t - z,
                   s = Math.abs(r);
                 if (s > 8) return null;
-                let o = t === U,
-                  n = U >= 0 && t < U,
+                let o = t === E,
+                  n = E >= 0 && t < E,
                   l = {
                     "--lyrics-line-offset": String(r)
                   };
@@ -4461,7 +4465,7 @@ void main() {
             }) : (0, a.jsx)("p", {
               className: i().audioLyricsEmpty,
               children: "No synced lyrics applied for this track yet."
-            })
+            })]
           })]
         })
       }
@@ -5149,19 +5153,21 @@ void main() {
           if (!b.current) return;
           let e = Array.from(b.current.querySelectorAll(`.${e8().portfolioReveal}`));
           if (e.length <= 1) return;
-          let t = window.matchMedia?.("(pointer: coarse)").matches === !0,
-            r = null,
-            a = null,
-            s = !1,
-            o = 0,
-            i = null,
-            n = () => {
+          let t = document.documentElement,
+            r = t.style.scrollSnapType;
+          t.style.scrollSnapType = "y proximity";
+          let a = null,
+            s = null,
+            o = !1,
+            i = 0,
+            n = null,
+            l = () => {
               var e;
               let t = Math.max(window.innerHeight || 1, 1),
                 r = Math.max(document.documentElement.scrollHeight - t, 1);
               e = Math.min(Math.max(window.scrollY / r, 0), 1), .003 > Math.abs(j.current - e) || (j.current = e, w(e))
             },
-            l = (t = window.scrollY + .5 * (window.innerHeight || 0)) => {
+            c = (t = window.scrollY + .5 * (window.innerHeight || 0)) => {
               let r = 0,
                 a = 1 / 0;
               for (let s = 0; s < e.length; s++) {
@@ -5170,61 +5176,57 @@ void main() {
               }
               return r
             },
-            c = t => {
+            d = t => {
               let r = Math.max(0, Math.min(e.length - 1, t)),
-                o = e[r].offsetTop,
+                a = e[r].offsetTop,
                 i = window.scrollY,
-                l = o - i;
-              if (2 > Math.abs(l)) return;
-              a && (a.stop(), a = null), s = !0;
-              let c = Math.min(2.1, Math.max(1.1, 1.1 + .18 * Math.min(Math.abs(l) / Math.max(window.innerHeight || 1, 1), 2.4)));
-              a = (0, e4.i)(i, o, {
+                n = a - i;
+              if (2 > Math.abs(n)) return;
+              s && (s.stop(), s = null), o = !0;
+              let c = Math.min(2.1, Math.max(1.1, 1.1 + .18 * Math.min(Math.abs(n) / Math.max(window.innerHeight || 1, 1), 2.4)));
+              s = (0, e4.i)(i, a, {
                 duration: c,
                 ease: [.16, 1, .3, 1],
                 onUpdate: e => {
                   window.scrollTo({
                     top: e,
                     behavior: "auto"
-                  }), n()
+                  }), l()
                 },
                 onComplete: () => {
-                  s = !1, a = null, n()
+                  o = !1, s = null, l()
                 }
               })
             },
-            d = () => {
-              n(), null !== r && window.clearTimeout(r), r = window.setTimeout(() => {
-                if (s) return;
-                let t = l(),
+            u = () => {
+              l(), null !== a && window.clearTimeout(a), a = window.setTimeout(() => {
+                if (o) return;
+                let t = c(),
                   r = e[t]?.offsetTop ?? window.scrollY;
-                Math.abs(window.scrollY - r) <= Math.max(20, Math.round(.03 * (window.innerHeight || 0))) || c(t)
+                Math.abs(window.scrollY - r) <= Math.max(20, Math.round(.03 * (window.innerHeight || 0))) || d(t)
               }, 150)
             },
-            u = e => {
-              if (7 > Math.abs(e.deltaY) || (o += e.deltaY, null !== i && window.clearTimeout(i), i = window.setTimeout(() => {
-                  o = 0
-                }, 150), 72 > Math.abs(o))) return;
-              let t = o > 0 ? 1 : -1,
-                r = l() + t;
-              o = 0, e.preventDefault(), a && (a.stop(), a = null, s = !1), c(r)
+            m = e => {
+              if (7 > Math.abs(e.deltaY) || (i += e.deltaY, null !== n && window.clearTimeout(n), n = window.setTimeout(() => {
+                  i = 0
+                }, 150), 72 > Math.abs(i))) return;
+              let t = i > 0 ? 1 : -1,
+                r = c() + t;
+              i = 0, e.preventDefault(), s && (s.stop(), s = null, o = !1), d(r)
             },
-            m = () => {
-              n(), s || c(l())
+            f = () => {
+              l(), o || d(c())
             },
-            f = e => {
-              c("number" == typeof e.detail?.targetIndex ? e.detail.targetIndex : 1)
+            p = e => {
+              d("number" == typeof e.detail?.targetIndex ? e.detail.targetIndex : 1)
             };
-          return (n(), t) ? (window.addEventListener("scroll", n, {
+          return l(), window.addEventListener("scroll", u, {
             passive: !0
-          }), window.addEventListener("resize", n), () => {
-            window.removeEventListener("scroll", n), window.removeEventListener("resize", n)
-          }) : (window.addEventListener("scroll", d, {
-            passive: !0
-          }), window.addEventListener("wheel", u, {
+          }), window.addEventListener("wheel", m, {
             passive: !1
-          }), window.addEventListener("resize", m), window.addEventListener(tt, f), () => {
-            window.removeEventListener("scroll", d), window.removeEventListener("wheel", u), window.removeEventListener("resize", m), window.removeEventListener(tt, f), null !== r && (window.clearTimeout(r), r = null), null !== i && (window.clearTimeout(i), i = null), a && (a.stop(), a = null)
-          })
+          }), window.addEventListener("resize", f), window.addEventListener(tt, p), () => {
+            window.removeEventListener("scroll", u), window.removeEventListener("wheel", m), window.removeEventListener("resize", f), window.removeEventListener(tt, p), t.style.scrollSnapType = r, null !== a && (window.clearTimeout(a), a = null), null !== n && (window.clearTimeout(n), n = null), s && (s.stop(), s = null)
+          }
         }, [y.length]), (0, a.jsxs)("div", {
           ref: b,
           className: e8().portfolioPage,
@@ -5324,6 +5326,7 @@ void main() {
             fontSize: o.font_size,
             profileBorderClass: m,
             profileBorderEffect: f,
+            profileBorderEffectEnabled: p,
             revealContent: !0,
             revealOrder: 1,
             lyricsConfig: e.settings
