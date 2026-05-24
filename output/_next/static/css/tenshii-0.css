@@ -926,9 +926,6 @@
   padding: var(--profileBorderWidth);
   pointer-events: none;
   z-index: 2;
-  overflow: hidden;
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -999,19 +996,9 @@
   margin-top: 12px;
   min-height: 220px;
   border-radius: max(5px, calc(var(--containerRadius) - 6px));
-  border: var(--containerBorder);
-  background-color: color-mix(in srgb, var(--containerColor) 68%, transparent);
-  background-origin: border-box;
-  box-sizing: border-box;
   overflow: hidden;
   position: relative;
-  z-index: 1;
-  isolation: isolate;
-  contain: paint;
-  clip-path: inset(0 round max(5px, calc(var(--containerRadius) - 6px)));
-  -webkit-mask-image: -webkit-radial-gradient(white, black);
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0)
+  z-index: 1
 }
 
 .GUNS__fd-748bec6e-7ac123ec-6c2aee30 {
@@ -1065,7 +1052,7 @@
   min-height: 350px;
   padding: 18px;
   overflow: hidden;
-  z-index: 3
+  z-index: 1
 }
 
 .GUNS__5f-a7f2729c-11c55425-52a11493:after,
@@ -1152,7 +1139,7 @@
   color: color-mix(in srgb, var(--textColor) 60%, #9f9f9f);
   font-size: 13px;
   text-align: center;
-  z-index: 3;
+  z-index: 1;
   position: relative
 }
 

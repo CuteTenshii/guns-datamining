@@ -721,7 +721,6 @@
         heroToggleSection: "GUNS__5f-8fd23ce5-2bad508c-28703145",
         heroToggleLabel: "GUNS__90-25f6b44c-12daf1b1-e16e612a",
         heroElementsPanel: "GUNS__70-63b502e7-58a8b271-20e8eb93",
-        portfolioBorderSettingsPanel: "GUNS__0e-5037f55d-c5a73fac-e9e7cb37",
         heroRadiusBlock: "GUNS__c6-1b3827be-287abcb5-cbb51542",
         heroRadiusHeader: "GUNS__94-a8edbc9d-35b61b3e-c8a5268c",
         heroRadiusInlineValue: "GUNS__26-1401fbf3-29d657a9-95bf7ce9",
@@ -799,8 +798,8 @@
         l = a.n(r),
         i = a(73728),
         f = a.n(i),
-        _ = a(96351);
-      let s = ["ar", "he", "fa", "ur"];
+        s = a(96351);
+      let _ = ["ar", "he", "fa", "ur"];
 
       function n({
         featureName: e,
@@ -812,9 +811,9 @@
         disabled: b,
         ...h
       }) {
-        let p = (0, _.useLang)(),
+        let p = (0, s.useLang)(),
           S = (0, d.useId)(),
-          m = s.includes(p) ? "rtl" : "ltr",
+          m = _.includes(p) ? "rtl" : "ltr",
           w = "string" == typeof e ? e : void 0;
         return (0, o.jsxs)("div", {
           className: l().inputContainerWrapper,
