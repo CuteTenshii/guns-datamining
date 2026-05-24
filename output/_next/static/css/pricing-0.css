@@ -1000,7 +1000,9 @@ html.rtl .GUNS__d8-26a669a3-c76077fb-d9f1319c {
   text-overflow: ellipsis;
   padding: 15px;
   box-sizing: border-box;
-  width: 100%
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto
 }
 
 .GUNS__33-35e74ae7-4c0445af-af50a607 {
