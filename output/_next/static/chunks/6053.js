@@ -32,23 +32,23 @@
     16053: (e, t, r) => {
       "use strict";
       r.d(t, {
-        default: () => tR,
-        pX: () => tW,
-        ZI: () => tL,
-        E2: () => tI,
-        CO: () => tD,
-        dz: () => tM
+        default: () => tG,
+        pX: () => tR,
+        ZI: () => tD,
+        E2: () => tW,
+        CO: () => tF,
+        dz: () => tL
       });
       var a = r(95155),
         s = r(12115),
-        i = r(79153),
-        o = r.n(i);
-      let n = ({
+        n = r(79153),
+        i = r.n(n);
+      let o = ({
           backgroundUrl: e,
           shuffleAudios: t,
           audio: r,
-          videoTagRef: i,
-          audioTagRef: n,
+          videoTagRef: n,
+          audioTagRef: o,
           audioData: l,
           setAudioData: c
         }) => {
@@ -66,8 +66,8 @@
               }
             })(e).video ? u(!0) : "" !== e && (u(!1), p.current && (p.current.style.backgroundImage = `url(${e})`))
           }, [e, p]), (0, s.useEffect)(() => {
-            d && i?.current && (g ? (i.current.defaultMuted = !0, i.current.muted = !0) : i.current.defaultMuted = !1)
-          }, [d, g, i]), (0, s.useEffect)(() => {
+            d && n?.current && (g ? (n.current.defaultMuted = !0, n.current.muted = !0) : n.current.defaultMuted = !1)
+          }, [d, g, n]), (0, s.useEffect)(() => {
             if (h || 0 !== r.length)
               if (h) c({
                 url: r,
@@ -107,10 +107,10 @@
               controls: !1,
               preload: m || "metadata",
               muted: g,
-              className: o().backgroundVideo,
-              ref: i
+              className: i().backgroundVideo,
+              ref: n
             }) : (0, a.jsx)("div", {
-              className: o().backgroundImage,
+              className: i().backgroundImage,
               style: {
                 backgroundImage: `url(${e})`
               },
@@ -118,7 +118,7 @@
             }), g && "" !== l.url && (0, a.jsx)("audio", {
               src: l.url,
               loop: !0,
-              ref: n
+              ref: o
             })]
           })
         },
@@ -128,8 +128,8 @@
         videoTagRef: e,
         audioTagRef: t,
         clickToEnterText: r,
-        userFont: i,
-        userContainerRef: n,
+        userFont: n,
+        userContainerRef: o,
         animationClass: c,
         setAudioPlayer: d,
         audioContainerRef: u,
@@ -141,8 +141,8 @@
           g = (0, s.useRef)({}),
           x = (0, s.useRef)(null),
           v = (0, s.useRef)(null),
-          b = (0, s.useRef)(null),
-          y = e => {
+          y = (0, s.useRef)(null),
+          b = e => {
             e.current.timeoutId && (window.clearTimeout(e.current.timeoutId), e.current.timeoutId = void 0), e.current.detachListeners && (e.current.detachListeners?.(), e.current.detachListeners = void 0)
           },
           _ = e => {
@@ -154,17 +154,17 @@
             })
           };
         (0, s.useEffect)(() => (document.documentElement.setAttribute(l, "active"), () => {
-          null !== b.current && (window.clearTimeout(b.current), b.current = null), document.documentElement.removeAttribute(l), y(h), y(g), t.current && x.current && t.current.removeEventListener("timeupdate", x.current)
+          null !== y.current && (window.clearTimeout(y.current), y.current = null), document.documentElement.removeAttribute(l), b(h), b(g), t.current && x.current && t.current.removeEventListener("timeupdate", x.current)
         }), [t]);
         let j = e => {
           if (e) {
-            if (e === o().fadeUp || e === o().scaleFade) {
-              n.current?.classList.add(e), u.current?.classList.add(e), m?.current?.classList.add(e);
+            if (e === i().fadeUp || e === i().scaleFade) {
+              o.current?.classList.add(e), u.current?.classList.add(e), m?.current?.classList.add(e);
               return
             }
-            e === o().unfold && document.querySelectorAll(`.${o().unfoldStart}`).forEach((e, t) => {
+            e === i().unfold && document.querySelectorAll(`.${i().unfoldStart}`).forEach((e, t) => {
               setTimeout(() => {
-                e.classList.add(o().unfold)
+                e.classList.add(i().unfold)
               }, 300 * t)
             })
           }
@@ -174,52 +174,52 @@
         }, [c]);
         let w = (e, t = !1, r) => {
           let a = t ? g : h;
-          y(a);
+          b(a);
           let s = 0,
-            i = e => {
+            n = e => {
               if (t && e instanceof HTMLAudioElement) {
                 let t;
                 _(e), x.current && e.removeEventListener("timeupdate", x.current), x.current = t = () => _(e), e.addEventListener("timeupdate", t)
               }
             },
-            o = e => {
+            i = e => {
               e.volume = .25;
               let t = e.play();
-              t && "function" == typeof t.then ? t.then(() => i(e)).catch(e => {
-                e?.name === "NotAllowedError" ? console.warn("Autoplay blocked for media element.", e) : n()
-              }) : i(e)
+              t && "function" == typeof t.then ? t.then(() => n(e)).catch(e => {
+                e?.name === "NotAllowedError" ? console.warn("Autoplay blocked for media element.", e) : o()
+              }) : n(e)
             },
-            n = (e = !1) => {
-              s >= 40 || (s += 1, y(a), a.current.timeoutId = window.setTimeout(() => {
+            o = (e = !1) => {
+              s >= 40 || (s += 1, b(a), a.current.timeoutId = window.setTimeout(() => {
                 a.current.timeoutId = void 0, l(e)
               }, 350))
             },
             l = (t = !1) => {
               let r = e.current;
-              if (!r || !r.src) return void n(t);
-              if (t) return void o(r);
-              if (r.readyState >= 2) o(r);
+              if (!r || !r.src) return void o(t);
+              if (t) return void i(r);
+              if (r.readyState >= 2) i(r);
               else {
                 let e;
                 e = () => {
-                  y(a), o(r)
+                  b(a), i(r)
                 }, r.addEventListener("loadeddata", e, {
                   once: !0
                 }), r.addEventListener("canplay", e, {
                   once: !0
                 }), a.current.detachListeners = () => {
                   r.removeEventListener("loadeddata", e), r.removeEventListener("canplay", e)
-                }, s < 40 && n(t)
+                }, s < 40 && o(t)
               }
             };
           l(r?.eager ?? !1)
         };
         return (0, a.jsx)(a.Fragment, {
           children: (0, a.jsx)("div", {
-            className: o().clickToEnterOverlay,
+            className: i().clickToEnterOverlay,
             onClick: () => {
-              p.current || (f.current && (f.current.classList.add(o().hide), f.current.style.pointerEvents = "none", document.documentElement.removeAttribute(l), b.current = window.setTimeout(() => {
-                f.current && (f.current.style.display = "none"), b.current = null
+              p.current || (f.current && (f.current.classList.add(i().hide), f.current.style.pointerEvents = "none", document.documentElement.removeAttribute(l), y.current = window.setTimeout(() => {
+                f.current && (f.current.style.display = "none"), y.current = null
               }, 650)), j(c), v.current = c, p.current = !0), w(e, !1, {
                 eager: !0
               }), w(t, !0, {
@@ -228,8 +228,8 @@
             },
             ref: f,
             children: (0, a.jsx)("div", {
-              className: o().clickToEnterText,
-              style: i.clickToEnter,
+              className: i().clickToEnterText,
+              style: n.clickToEnter,
               children: r
             })
           })
@@ -515,10 +515,10 @@
           } = e, a = !u.has(t) && r ? f[r] : 1;
           return Object.keys(d).reduce((e, r) => {
             let s = d[r],
-              i = m[t]?.[r] ?? s;
+              n = m[t]?.[r] ?? s;
             return e[r] = {
-              ...i,
-              fontSize: `${parseFloat(i.fontSize)*a}px`
+              ...n,
+              fontSize: `${parseFloat(n.fontSize)*a}px`
             }, e
           }, {})
         };
@@ -526,8 +526,8 @@
         g = r(59964),
         x = r(86275),
         v = r(29370),
-        b = r(6926),
-        y = r(97650);
+        y = r(6926),
+        b = r(97650);
       r(96173);
       let _ = `
 precision highp float;
@@ -653,11 +653,11 @@ void mainImage(in vec4 inputColor, in vec2 uv, out vec4 outputColor) {
   outputColor = color;
 }
 `;
-      class S extends b.Mj {
+      class S extends y.Mj {
         constructor() {
           const e = new Map([
-            ["colorNum", new y.nc$(4)],
-            ["pixelSize", new y.nc$(2)]
+            ["colorNum", new b.nc$(4)],
+            ["pixelSize", new b.nc$(2)]
           ]);
           super("RetroEffect", w, {
             uniforms: e
@@ -680,8 +680,8 @@ void mainImage(in vec4 inputColor, in vec2 uv, out vec4 outputColor) {
         let {
           colorNum: r,
           pixelSize: s
-        } = e, i = (0, v.AR)(S);
-        return (0, a.jsx)(i, {
+        } = e, n = (0, v.AR)(S);
+        return (0, a.jsx)(n, {
           ref: t,
           colorNum: r,
           pixelSize: s
@@ -692,30 +692,30 @@ void mainImage(in vec4 inputColor, in vec2 uv, out vec4 outputColor) {
         waveSpeed: e,
         waveFrequency: t,
         waveAmplitude: r,
-        waveColor: i,
-        colorNum: o,
-        pixelSize: n,
+        waveColor: n,
+        colorNum: i,
+        pixelSize: o,
         disableAnimation: l,
         enableMouseInteraction: c,
         mouseRadius: d
       }) {
         let u = (0, s.useRef)(null),
-          m = (0, s.useRef)(new y.I9Y),
+          m = (0, s.useRef)(new b.I9Y),
           {
             viewport: f,
             size: p,
             gl: h
           } = (0, g.C)(),
           x = (0, s.useRef)({
-            time: new y.nc$(0),
-            resolution: new y.nc$(new y.I9Y(0, 0)),
-            waveSpeed: new y.nc$(e),
-            waveFrequency: new y.nc$(t),
-            waveAmplitude: new y.nc$(r),
-            waveColor: new y.nc$(new y.Q1f(...i)),
-            mousePos: new y.nc$(new y.I9Y(0, 0)),
-            enableMouseInteraction: new y.nc$(+!!c),
-            mouseRadius: new y.nc$(d)
+            time: new b.nc$(0),
+            resolution: new b.nc$(new b.I9Y(0, 0)),
+            waveSpeed: new b.nc$(e),
+            waveFrequency: new b.nc$(t),
+            waveAmplitude: new b.nc$(r),
+            waveColor: new b.nc$(new b.Q1f(...n)),
+            mousePos: new b.nc$(new b.I9Y(0, 0)),
+            enableMouseInteraction: new b.nc$(+!!c),
+            mouseRadius: new b.nc$(d)
           });
         (0, s.useEffect)(() => {
           let e = h.getPixelRatio(),
@@ -724,12 +724,12 @@ void mainImage(in vec4 inputColor, in vec2 uv, out vec4 outputColor) {
             a = x.current.resolution.value;
           (a.x !== t || a.y !== r) && a.set(t, r)
         }, [p, h]);
-        let b = (0, s.useRef)([...i]);
+        let y = (0, s.useRef)([...n]);
         return (0, g.D)(({
           clock: a
         }) => {
           let s = x.current;
-          l || (s.time.value = a.getElapsedTime()), s.waveSpeed.value !== e && (s.waveSpeed.value = e), s.waveFrequency.value !== t && (s.waveFrequency.value = t), s.waveAmplitude.value !== r && (s.waveAmplitude.value = r), b.current.every((e, t) => e === i[t]) || (s.waveColor.value.set(...i), b.current = [...i]), s.enableMouseInteraction.value = +!!c, s.mouseRadius.value = d, c && s.mousePos.value.copy(m.current)
+          l || (s.time.value = a.getElapsedTime()), s.waveSpeed.value !== e && (s.waveSpeed.value = e), s.waveFrequency.value !== t && (s.waveFrequency.value = t), s.waveAmplitude.value !== r && (s.waveAmplitude.value = r), y.current.every((e, t) => e === n[t]) || (s.waveColor.value.set(...n), y.current = [...n]), s.enableMouseInteraction.value = +!!c, s.mouseRadius.value = d, c && s.mousePos.value.copy(m.current)
         }), (0, s.useEffect)(() => {
           if (!c) return;
           let e = e => {
@@ -755,8 +755,8 @@ void mainImage(in vec4 inputColor, in vec2 uv, out vec4 outputColor) {
             })]
           }), (0, a.jsx)(v.s0, {
             children: (0, a.jsx)(N, {
-              colorNum: o,
-              pixelSize: n
+              colorNum: i,
+              pixelSize: o
             })
           }), (0, a.jsxs)("mesh", {
             onPointerMove: e => {
@@ -783,9 +783,9 @@ void mainImage(in vec4 inputColor, in vec2 uv, out vec4 outputColor) {
         waveFrequency: t = 3,
         waveAmplitude: r = .3,
         waveColor: s = [.5, .5, .5],
-        colorNum: i = 4,
-        pixelSize: o = 2,
-        disableAnimation: n = !1,
+        colorNum: n = 4,
+        pixelSize: i = 2,
+        disableAnimation: o = !1,
         enableMouseInteraction: l = !0,
         mouseRadius: c = 1
       }) {
@@ -804,9 +804,9 @@ void mainImage(in vec4 inputColor, in vec2 uv, out vec4 outputColor) {
             waveFrequency: t,
             waveAmplitude: r,
             waveColor: s,
-            colorNum: i,
-            pixelSize: o,
-            disableAnimation: n,
+            colorNum: n,
+            pixelSize: i,
+            disableAnimation: o,
             enableMouseInteraction: l,
             mouseRadius: c
           })
@@ -814,10 +814,10 @@ void mainImage(in vec4 inputColor, in vec2 uv, out vec4 outputColor) {
       }
       N.displayName = "RetroEffect";
       var A = r(22634),
-        F = r(373),
+        $ = r(373),
         T = r(16748),
-        $ = r(41519),
-        P = r(10204);
+        P = r(41519),
+        U = r(10204);
       r(42789);
       let E = `#version 300 es
 in vec2 position;
@@ -825,7 +825,7 @@ void main() {
   gl_Position = vec4(position, 0.0, 1.0);
 }
 `,
-        U = `#version 300 es
+        z = `#version 300 es
 precision highp float;
 
 uniform float uTime;
@@ -924,16 +924,16 @@ void main() {
 }
 `;
 
-      function z(e) {
+      function M(e) {
         let {
           colorStops: t = ["#5227FF", "#7cff67", "#5227FF"],
           amplitude: r = 1,
-          blend: i = .5
-        } = e, o = (0, s.useRef)(e);
-        o.current = e;
-        let n = (0, s.useRef)(null);
+          blend: n = .5
+        } = e, i = (0, s.useRef)(e);
+        i.current = e;
+        let o = (0, s.useRef)(null);
         return (0, s.useEffect)(() => {
-          let e, a = n.current;
+          let e, a = o.current;
           if (!a) return;
           let s = new A.A({
               alpha: !0,
@@ -949,15 +949,15 @@ void main() {
             s.setSize(t, r), e && (e.uniforms.uResolution.value = [t, r])
           }
           l.clearColor(0, 0, 0, 0), l.enable(l.BLEND), l.blendFunc(l.ONE, l.ONE_MINUS_SRC_ALPHA), l.canvas.style.backgroundColor = "transparent", window.addEventListener("resize", c);
-          let d = new F.l(l);
+          let d = new $.l(l);
           d.attributes.uv && delete d.attributes.uv;
           let u = t.map(e => {
             let t = new T.Q(e);
             return [t.r, t.g, t.b]
           });
-          e = new $.B(l, {
+          e = new P.B(l, {
             vertex: E,
-            fragment: U,
+            fragment: z,
             uniforms: {
               uTime: {
                 value: 0
@@ -972,11 +972,11 @@ void main() {
                 value: [a.offsetWidth, a.offsetHeight]
               },
               uBlend: {
-                value: i
+                value: n
               }
             }
           });
-          let m = new P.e(l, {
+          let m = new U.e(l, {
             geometry: d,
             program: e
           });
@@ -986,11 +986,11 @@ void main() {
               f = requestAnimationFrame(p);
               let {
                 time: a = .01 * r,
-                speed: n = 1
-              } = o.current;
+                speed: o = 1
+              } = i.current;
               if (e) {
-                e.uniforms.uTime.value = a * n * .1, e.uniforms.uAmplitude.value = o.current.amplitude ?? 1, e.uniforms.uBlend.value = o.current.blend ?? i;
-                let r = o.current.colorStops ?? t;
+                e.uniforms.uTime.value = a * o * .1, e.uniforms.uAmplitude.value = i.current.amplitude ?? 1, e.uniforms.uBlend.value = i.current.blend ?? n;
+                let r = i.current.colorStops ?? t;
                 e.uniforms.uColorStops.value = r.map(e => {
                   let t = new T.Q(e);
                   return [t.r, t.g, t.b]
@@ -1003,12 +1003,12 @@ void main() {
             cancelAnimationFrame(f), window.removeEventListener("resize", c), a && l.canvas.parentNode === a && a.removeChild(l.canvas), l.getExtension("WEBGL_lose_context")?.loseContext()
           }
         }, [r]), (0, a.jsx)("div", {
-          ref: n,
+          ref: o,
           className: "aurora-container"
         })
       }
       r(1825);
-      let B = `#version 300 es
+      let I = `#version 300 es
 precision highp float;
 in vec2 position;
 in vec2 uv;
@@ -1018,7 +1018,7 @@ void main() {
   gl_Position = vec4(position, 0.0, 1.0);
 }
 `,
-        M = `#version 300 es
+        B = `#version 300 es
 precision highp float;
 uniform vec2 iResolution;
 uniform float iTime;
@@ -1078,13 +1078,13 @@ void main() {
   float alpha = length(rgb) * uOpacity;
   fragColor = vec4(finalColor, alpha);
 }`,
-        I = ({
+        L = ({
           color: e = "#ffffff",
           speed: t = 1,
           direction: r = "forward",
-          scale: i = 1,
-          opacity: o = 1,
-          mouseInteractive: n = !0
+          scale: n = 1,
+          opacity: i = 1,
+          mouseInteractive: o = !0
         }) => {
           let l = (0, s.useRef)(null),
             c = (0, s.useRef)({
@@ -1110,10 +1110,10 @@ void main() {
               h = p.gl,
               g = h.canvas;
             g.style.display = "block", g.style.width = "100%", g.style.height = "100%", d(), s.appendChild(g);
-            let x = new F.l(h),
-              v = new $.B(h, {
-                vertex: B,
-                fragment: M,
+            let x = new $.l(h),
+              v = new P.B(h, {
+                vertex: I,
+                fragment: B,
                 uniforms: {
                   iTime: {
                     value: 0
@@ -1134,31 +1134,31 @@ void main() {
                     value: f
                   },
                   uScale: {
-                    value: i
+                    value: n
                   },
                   uOpacity: {
-                    value: o
+                    value: i
                   },
                   uMouse: {
                     value: new Float32Array([0, 0])
                   },
                   uMouseInteractive: {
-                    value: +!!n
+                    value: +!!o
                   }
                 }
               }),
-              b = new P.e(h, {
+              y = new U.e(h, {
                 geometry: x,
                 program: v
               }),
-              y = e => {
-                if (!n) return;
+              b = e => {
+                if (!o) return;
                 let t = l.current.getBoundingClientRect();
                 c.current.x = e.clientX - t.left, c.current.y = e.clientY - t.top;
                 let r = v.uniforms.uMouse.value;
                 r[0] = c.current.x, r[1] = c.current.y
               };
-            n && l.current.addEventListener("mousemove", y);
+            o && l.current.addEventListener("mousemove", b);
             let _ = () => {
                 let e = l.current.getBoundingClientRect(),
                   t = Math.max(1, Math.floor(e.width)),
@@ -1178,18 +1178,18 @@ void main() {
                   v.uniforms.uDirection.value = e
                 }
                 v.uniforms.iTime.value = t, p.render({
-                  scene: b
+                  scene: y
                 }), w = requestAnimationFrame(N)
               };
             return w = requestAnimationFrame(N), () => {
-              cancelAnimationFrame(w), j.disconnect(), n && s.removeEventListener("mousemove", y), d()
+              cancelAnimationFrame(w), j.disconnect(), o && s.removeEventListener("mousemove", b), d()
             }
-          }, [e, t, r, i, o, n]), (0, a.jsx)("div", {
+          }, [e, t, r, n, i, o]), (0, a.jsx)("div", {
             ref: l,
             className: "plasma-container"
           })
         };
-      var L = r(29625);
+      var W = r(29625);
       let D = `
 precision highp float;
 precision highp int;
@@ -1263,7 +1263,7 @@ void main () {
   gl_PointSize = max(currentPosition.z * size * diff * pixelRatio, minSize * (pixelRatio > 1. ? 1.3 : 1.));
 }
 `,
-        W = `
+        F = `
 precision highp float;
 precision highp int;
 
@@ -1329,9 +1329,9 @@ void main(){
         className: e = "",
         starColor: t = "#aa8558",
         size: r = .05,
-        minSize: i = 1,
-        speed: o = .002,
-        fadeSpeed: n = 1.1,
+        minSize: n = 1,
+        speed: i = .002,
+        fadeSpeed: o = 1.1,
         shortRangeFadeSpeed: l = 1.3,
         minFlashingSpeed: c = .1,
         spread: d = 7,
@@ -1350,14 +1350,14 @@ void main(){
             a = x.current.clientHeight || window.innerHeight;
           if (!e || !a) return;
           let s = 0,
-            b = !0,
+            y = !0,
             _ = Math.min(window.devicePixelRatio || 1, 2),
             j = {
               clientWidth: e,
               clientHeight: a,
               clientHalfWidth: e / 2,
               clientHalfHeight: a / 2,
-              resolution: new y.I9Y(e, a),
+              resolution: new b.I9Y(e, a),
               pixelRatio: _,
               mouseI: 0,
               oldPosition: null,
@@ -1365,15 +1365,15 @@ void main(){
               rate: 1
             },
             w = 180 / Math.PI * Math.atan(a / 2 / 5e3) * 2,
-            S = new L.WebGLRenderer({
+            S = new W.WebGLRenderer({
               canvas: v.current,
               antialias: 1 === _,
               alpha: !0
             });
           S.setPixelRatio(j.pixelRatio), S.setClearColor(0, 0), S.setSize(e, a);
-          let N = new y.ubm(w, e / a, .1, 1e4);
+          let N = new b.ubm(w, e / a, .1, 1e4);
           N.position.set(0, 0, 5e3), N.updateProjectionMatrix();
-          let C = new y.Z58,
+          let C = new b.Z58,
             k = {
               resolution: {
                 value: j.resolution
@@ -1385,19 +1385,19 @@ void main(){
                 value: 0
               },
               color: {
-                value: new y.Q1f(t)
+                value: new b.Q1f(t)
               },
               size: {
                 value: r
               },
               minSize: {
-                value: i
+                value: n
               },
               speed: {
-                value: o
+                value: i
               },
               fadeSpeed: {
-                value: n
+                value: o
               },
               shortRangeFadeSpeed: {
                 value: l
@@ -1427,30 +1427,30 @@ void main(){
                 value: g
               }
             },
-            A = new y.LoY,
-            F = new Float32Array(96e4),
+            A = new b.LoY,
+            $ = new Float32Array(96e4),
             T = new Float32Array(128e4),
-            $ = new Float32Array(64e4),
-            P = new Float32Array(32e4);
-          for (let e = 0; e < 32e4; e++) F[3 * e] = Math.random(), F[3 * e + 1] = Math.random(), F[3 * e + 2] = Math.random(), T[4 * e] = -1, T[4 * e + 1] = -1, P[e] = Math.random();
-          A.setAttribute("position", new y.THS(F, 3)), A.setAttribute("mouse", new y.THS(T, 4)), A.setAttribute("aFront", new y.THS($, 2)), A.setAttribute("random", new y.THS(P, 1));
-          let E = new y.D$Q({
+            P = new Float32Array(64e4),
+            U = new Float32Array(32e4);
+          for (let e = 0; e < 32e4; e++) $[3 * e] = Math.random(), $[3 * e + 1] = Math.random(), $[3 * e + 2] = Math.random(), T[4 * e] = -1, T[4 * e + 1] = -1, U[e] = Math.random();
+          A.setAttribute("position", new b.THS($, 3)), A.setAttribute("mouse", new b.THS(T, 4)), A.setAttribute("aFront", new b.THS(P, 2)), A.setAttribute("random", new b.THS(U, 1));
+          let E = new b.D$Q({
               uniforms: k,
               vertexShader: D,
-              fragmentShader: W,
+              fragmentShader: F,
               transparent: !0,
               depthTest: !1,
-              blending: y.EZo
+              blending: b.EZo
             }),
-            U = new y.ONl(A, E);
-          U.frustumCulled = !1, C.add(U);
-          let z = (e, t) => {
+            z = new b.ONl(A, E);
+          z.frustumCulled = !1, C.add(z);
+          let M = (e, t) => {
               let r = e * j.rate + j.clientHalfWidth,
                 a = j.clientHeight - (t * j.rate + j.clientHalfHeight),
-                s = new y.I9Y(r, a),
-                i = j.oldPosition ? s.clone().sub(j.oldPosition) : new y.I9Y,
-                o = i.length(),
-                n = o > 0 ? i.clone().normalize() : new y.I9Y,
+                s = new b.I9Y(r, a),
+                n = j.oldPosition ? s.clone().sub(j.oldPosition) : new b.I9Y,
+                i = n.length(),
+                o = i > 0 ? n.clone().normalize() : new b.I9Y,
                 l = A.attributes.mouse,
                 c = A.attributes.aFront,
                 d = l.array,
@@ -1459,39 +1459,39 @@ void main(){
                 let t = (j.mouseI + e) % 32e4,
                   r = 4 * t,
                   a = 2 * t,
-                  l = j.oldPosition ? j.oldPosition.clone().add(i.clone().multiplyScalar(e / 800)) : s;
-                d[r] = l.x, d[r + 1] = l.y, d[r + 2] = j.timestamp, d[r + 3] = o, u[a] = n.x, u[a + 1] = n.y
+                  l = j.oldPosition ? j.oldPosition.clone().add(n.clone().multiplyScalar(e / 800)) : s;
+                d[r] = l.x, d[r + 1] = l.y, d[r + 2] = j.timestamp, d[r + 3] = i, u[a] = o.x, u[a + 1] = o.y
               }
               j.oldPosition = s, l.needsUpdate = !0, c.needsUpdate = !0, j.mouseI = (j.mouseI + 800) % 32e4
             },
+            I = e => {
+              M(e.clientX - j.clientHalfWidth, e.clientY - j.clientHalfHeight)
+            },
             B = e => {
-              z(e.clientX - j.clientHalfWidth, e.clientY - j.clientHalfHeight)
+              e.touches[0] && M(e.touches[0].clientX - j.clientHalfWidth, e.touches[0].clientY - j.clientHalfHeight)
             },
-            M = e => {
-              e.touches[0] && z(e.touches[0].clientX - j.clientHalfWidth, e.touches[0].clientY - j.clientHalfHeight)
-            },
-            I = () => {
+            L = () => {
               if (!x.current) return;
               let t = x.current.clientWidth || window.innerWidth,
                 r = x.current.clientHeight || window.innerHeight;
               t && r && (j.rate = 1 / (r / a) * Math.min(t / e, 1), j.clientWidth = t, j.clientHeight = r, j.clientHalfWidth = t / 2, j.clientHalfHeight = r / 2, j.resolution.set(t, r), N.aspect = t / r, N.updateProjectionMatrix(), S.setSize(t, r))
             },
             R = new IntersectionObserver(([e]) => {
-              b = e.isIntersecting
+              y = e.isIntersecting
             }, {
               threshold: 0
             });
           R.observe(x.current);
           let G = performance.now(),
             H = e => {
-              b && (j.timestamp = e - G, k.timestamp.value = j.timestamp, S.render(C, N)), s = requestAnimationFrame(H)
+              y && (j.timestamp = e - G, k.timestamp.value = j.timestamp, S.render(C, N)), s = requestAnimationFrame(H)
             };
-          return window.addEventListener("pointermove", B), window.addEventListener("touchmove", M, {
+          return window.addEventListener("pointermove", I), window.addEventListener("touchmove", B, {
             passive: !0
-          }), window.addEventListener("resize", I), s = requestAnimationFrame(H), () => {
-            R.disconnect(), cancelAnimationFrame(s), window.removeEventListener("pointermove", B), window.removeEventListener("touchmove", M), window.removeEventListener("resize", I), C.remove(U), A.dispose(), E.dispose(), S.dispose()
+          }), window.addEventListener("resize", L), s = requestAnimationFrame(H), () => {
+            R.disconnect(), cancelAnimationFrame(s), window.removeEventListener("pointermove", I), window.removeEventListener("touchmove", B), window.removeEventListener("resize", L), C.remove(z), A.dispose(), E.dispose(), S.dispose()
           }
-        }, [t, r, i, o, n, l, c, d, u, m, f, p, h, g]), (0, a.jsx)("div", {
+        }, [t, r, n, i, o, l, c, d, u, m, f, p, h, g]), (0, a.jsx)("div", {
           ref: x,
           className: e,
           style: {
@@ -1528,11 +1528,11 @@ void main() {
 void main() {
   gl_Position = position;
 }`,
-        q = `precision mediump float;
+        V = `precision mediump float;
 void main() {
   gl_FragColor = vec4(1.0);
 }`,
-        V = {
+        q = {
           aurora: !1,
           plasma: !1,
           dither: !1
@@ -1543,14 +1543,14 @@ void main() {
               s = e.createShader(e.FRAGMENT_SHADER);
             if (!a || !s) return !1;
             e.shaderSource(a, t), e.shaderSource(s, r), e.compileShader(a), e.compileShader(s);
-            let i = e.getShaderParameter(a, e.COMPILE_STATUS),
-              o = e.getShaderParameter(s, e.COMPILE_STATUS);
-            if (!i || !o) return e.deleteShader(a), e.deleteShader(s), !1;
-            let n = e.createProgram();
-            if (!n) return e.deleteShader(a), e.deleteShader(s), !1;
-            e.attachShader(n, a), e.attachShader(n, s), e.linkProgram(n);
-            let l = e.getProgramParameter(n, e.LINK_STATUS);
-            return e.deleteShader(a), e.deleteShader(s), e.deleteProgram(n), !!l
+            let n = e.getShaderParameter(a, e.COMPILE_STATUS),
+              i = e.getShaderParameter(s, e.COMPILE_STATUS);
+            if (!n || !i) return e.deleteShader(a), e.deleteShader(s), !1;
+            let o = e.createProgram();
+            if (!o) return e.deleteShader(a), e.deleteShader(s), !1;
+            e.attachShader(o, a), e.attachShader(o, s), e.linkProgram(o);
+            let l = e.getProgramParameter(o, e.LINK_STATUS);
+            return e.deleteShader(a), e.deleteShader(s), e.deleteProgram(o), !!l
           } catch {
             return !1
           }
@@ -1560,12 +1560,12 @@ void main() {
         backgroundEffects: e,
         backgroundEffectsColor: t,
         cursorEffects: r,
-        cursorEffectsColor: i,
-        textColor: n,
+        cursorEffectsColor: n,
+        textColor: o,
         backgroundColor: l,
         cursorUrl: c
       }) {
-        let d = /^#[0-9a-f]{6}$/i.test(t ?? "") ? t : n,
+        let d = /^#[0-9a-f]{6}$/i.test(t ?? "") ? t : o,
           u = (e => {
             let t, {
               r,
@@ -1578,42 +1578,42 @@ void main() {
             };
             return [r / 255, a / 255, s / 255]
           })(d),
-          [m, f] = (0, s.useState)(V),
+          [m, f] = (0, s.useState)(q),
           [p, g] = (0, s.useState)(!1),
           [x, v] = (0, s.useState)(!1);
         (0, s.useEffect)(() => {
-          let e, t, r, a, s, i = !1,
-            o = (t = !!((e = document.createElement("canvas").getContext("webgl2", {
+          let e, t, r, a, s, n = !1,
+            i = (t = !!((e = document.createElement("canvas").getContext("webgl2", {
               failIfMajorPerformanceCaveat: !0
             })) && Y(e, G, H)), e?.getExtension("WEBGL_lose_context")?.loseContext(), a = (r = document.createElement("canvas")).getContext("webgl", {
               failIfMajorPerformanceCaveat: !0
-            }) || r.getContext("experimental-webgl"), s = t || !!(a && Y(a, O, q)), a?.getExtension("WEBGL_lose_context")?.loseContext(), {
+            }) || r.getContext("experimental-webgl"), s = t || !!(a && Y(a, O, V)), a?.getExtension("WEBGL_lose_context")?.loseContext(), {
               aurora: t,
               plasma: t,
               dither: s
             });
-          return i || f(o), () => {
-            i = !0
+          return n || f(i), () => {
+            n = !0
           }
         }, []), (0, s.useEffect)(() => {
           window.cursoreffects && g(!0), window.gunsLolOneko && v(!0)
         }, []), (0, s.useEffect)(() => {
-          "cat" === r && x && window.gunsLolOneko?.setColor(i)
-        }, [x, r, i]);
-        let b = (0, s.useCallback)(() => {
+          "cat" === r && x && window.gunsLolOneko?.setColor(n)
+        }, [x, r, n]);
+        let y = (0, s.useCallback)(() => {
           let e = window.cursoreffects;
           e && r && "shooting_star" !== r && ({
             bubbles: () => new e.bubbleCursor({
-              color: [i]
+              color: [n]
             }),
             dot: () => new e.followingDotCursor({
-              color: [i]
+              color: [n]
             }),
             snowflakes: () => new e.snowflakeCursor({
-              color: [i]
+              color: [n]
             }),
             particles: () => new e.fairyDustCursor({
-              colors: [i]
+              colors: [n]
             }),
             ghost: () => new e.trailingCursor({
               particles: 15,
@@ -1621,91 +1621,91 @@ void main() {
               baseImageSrc: c
             })
           })[r]?.()
-        }, [r, i, c]);
+        }, [r, n, c]);
         (0, s.useEffect)(() => {
-          p && b()
-        }, [p, b]);
-        let y = "dither" === e && m.dither,
+          p && y()
+        }, [p, y]);
+        let b = "dither" === e && m.dither,
           _ = "aurora" === e && m.aurora,
           j = "plasma" === e && m.plasma,
           w = "shooting_star" !== r;
         return (0, a.jsxs)(a.Fragment, {
           children: ["snowflakes" === e ? (0, a.jsx)(a.Fragment, {
             children: (0, a.jsxs)("div", {
-              className: o().snowflakes,
+              className: i().snowflakes,
               style: {
                 color: d
               },
               children: [(0, a.jsx)("div", {
-                className: o().snowflake,
+                className: i().snowflake,
                 children: (0, a.jsx)("div", {
-                  className: o().inner,
+                  className: i().inner,
                   children: "❅"
                 })
               }), (0, a.jsx)("div", {
-                className: o().snowflake,
+                className: i().snowflake,
                 children: (0, a.jsx)("div", {
-                  className: o().inner,
+                  className: i().inner,
                   children: "❅"
                 })
               }), (0, a.jsx)("div", {
-                className: o().snowflake,
+                className: i().snowflake,
                 children: (0, a.jsx)("div", {
-                  className: o().inner,
+                  className: i().inner,
                   children: "❅"
                 })
               }), (0, a.jsx)("div", {
-                className: o().snowflake,
+                className: i().snowflake,
                 children: (0, a.jsx)("div", {
-                  className: o().inner,
+                  className: i().inner,
                   children: "❅"
                 })
               }), (0, a.jsx)("div", {
-                className: o().snowflake,
+                className: i().snowflake,
                 children: (0, a.jsx)("div", {
-                  className: o().inner,
+                  className: i().inner,
                   children: "❅"
                 })
               }), (0, a.jsx)("div", {
-                className: o().snowflake,
+                className: i().snowflake,
                 children: (0, a.jsx)("div", {
-                  className: o().inner,
+                  className: i().inner,
                   children: "❅"
                 })
               }), (0, a.jsx)("div", {
-                className: o().snowflake,
+                className: i().snowflake,
                 children: (0, a.jsx)("div", {
-                  className: o().inner,
+                  className: i().inner,
                   children: "❅"
                 })
               }), (0, a.jsx)("div", {
-                className: o().snowflake,
+                className: i().snowflake,
                 children: (0, a.jsx)("div", {
-                  className: o().inner,
+                  className: i().inner,
                   children: "❅"
                 })
               }), (0, a.jsx)("div", {
-                className: o().snowflake,
+                className: i().snowflake,
                 children: (0, a.jsx)("div", {
-                  className: o().inner,
+                  className: i().inner,
                   children: "❅"
                 })
               }), (0, a.jsx)("div", {
-                className: o().snowflake,
+                className: i().snowflake,
                 children: (0, a.jsx)("div", {
-                  className: o().inner,
+                  className: i().inner,
                   children: "❅"
                 })
               }), (0, a.jsx)("div", {
-                className: o().snowflake,
+                className: i().snowflake,
                 children: (0, a.jsx)("div", {
-                  className: o().inner,
+                  className: i().inner,
                   children: "❅"
                 })
               }), (0, a.jsx)("div", {
-                className: o().snowflake,
+                className: i().snowflake,
                 children: (0, a.jsx)("div", {
-                  className: o().inner,
+                  className: i().inner,
                   children: "❅"
                 })
               })]
@@ -1728,12 +1728,12 @@ void main() {
                             `
             })]
           }) : "blurred" === e ? (0, a.jsx)("div", {
-            className: o().blurredBackground
+            className: i().blurredBackground
           }) : "tv" === e ? (0, a.jsx)("div", {
-            className: o().oldTV
+            className: i().oldTV
           }) : "night" === e ? (0, a.jsx)("div", {
-            className: o().nightTime
-          }) : y ? (0, a.jsx)(k, {
+            className: i().nightTime
+          }) : b ? (0, a.jsx)(k, {
             waveColor: u,
             disableAnimation: !1,
             enableMouseInteraction: !0,
@@ -1742,12 +1742,12 @@ void main() {
             waveAmplitude: .3,
             waveFrequency: 2,
             waveSpeed: .06
-          }) : _ ? (0, a.jsx)(z, {
+          }) : _ ? (0, a.jsx)(M, {
             colorStops: [d, d, d],
             blend: .5,
             amplitude: .5,
             speed: .6
-          }) : j && (0, a.jsx)(I, {
+          }) : j && (0, a.jsx)(L, {
             color: d,
             speed: .5,
             direction: "forward",
@@ -1763,10 +1763,10 @@ void main() {
             strategy: "afterInteractive",
             src: "/oneko-colorable.js",
             id: "_ccat",
-            "data-color": i,
+            "data-color": n,
             onLoad: () => v(!0)
           }), "shooting_star" === r && (0, a.jsx)(R, {
-            starColor: i
+            starColor: n
           }), "" !== c && (0, a.jsx)("style", {
             children: `
                     * {
@@ -1776,11 +1776,11 @@ void main() {
           }), (0, a.jsx)("style", {
             children: `
                 ::-moz-selection {
-                    background: ${n};
+                    background: ${o};
                     color: ${l};
                 }
                 ::selection {
-                    background: ${n};
+                    background: ${o};
                     color: ${l};
                 }
                 `
@@ -1799,8 +1799,8 @@ void main() {
         config: e,
         premiumConfig: t,
         className: r,
-        carousel: i = !1,
-        trackClassName: n,
+        carousel: n = !1,
+        trackClassName: o,
         groupClassName: l
       }) => {
         let c = e.user_badges,
@@ -1811,7 +1811,7 @@ void main() {
           [h, g] = (0, s.useState)(!1),
           x = c.length > 0 && c[0] && "string" == typeof c[0],
           v = d.length > 0 && "string" == typeof d[0][0],
-          b = {
+          y = {
             staff: "Staff",
             premium: "Premium",
             verified: "Verified",
@@ -1833,7 +1833,7 @@ void main() {
             the_million: "The Million",
             hone: "Hone.gg"
           },
-          y = {
+          b = {
             staff: "staff",
             premium: "premium",
             verified: "verified",
@@ -1877,16 +1877,16 @@ void main() {
             "The Million": "theMillion",
             "Hone.gg": "hone"
           },
-          j = e => e ? b[e] ?? (e ? e.split("_").filter(Boolean).map(e => e.charAt(0).toUpperCase() + e.slice(1)).join(" ") : "Badge") : "Badge",
+          j = e => e ? y[e] ?? (e ? e.split("_").filter(Boolean).map(e => e.charAt(0).toUpperCase() + e.slice(1)).join(" ") : "Badge") : "Badge",
           w = e => {
             if (!e) return null;
-            let t = b[e];
+            let t = y[e];
             if (!t) return null;
             let r = _[t];
-            return r ? o()[r] ?? null : null
+            return r ? i()[r] ?? null : null
           };
         (0, s.useEffect)(() => {
-          if (!i) {
+          if (!n) {
             p(!1), g(!1);
             return
           }
@@ -1896,20 +1896,21 @@ void main() {
           let r = 0,
             a = !0,
             s = e.parentElement ?? e,
-            o = () => {
+            i = () => {
               cancelAnimationFrame(r), r = requestAnimationFrame(() => {
                 if (!a) return;
-                let e = s.clientWidth,
-                  r = t.scrollWidth - e > 1;
-                p(r), r || g(!1)
+                let r = [e.clientWidth, s.clientWidth, window.innerWidth].filter(e => e > 0),
+                  n = r.length > 0 ? Math.min(...r) : 0,
+                  i = t.scrollWidth - n > 1;
+                p(i), i || g(!1)
               })
             };
-          o();
-          let n = "undefined" != typeof ResizeObserver ? new ResizeObserver(o) : null;
-          return n?.observe(s), n?.observe(e), n?.observe(t), window.addEventListener("resize", o), document.fonts?.ready.then(o), () => {
-            a = !1, cancelAnimationFrame(r), n?.disconnect(), window.removeEventListener("resize", o)
+          i();
+          let o = "undefined" != typeof ResizeObserver ? new ResizeObserver(i) : null;
+          return o?.observe(s), o?.observe(e), o?.observe(t), window.addEventListener("resize", i), document.fonts?.ready.then(i), () => {
+            a = !1, cancelAnimationFrame(r), o?.disconnect(), window.removeEventListener("resize", i)
           }
-        }, [i, c, d, t.badge_color, t.monochrome_badges, e.badge_glow]), (0, s.useEffect)(() => {
+        }, [n, c, d, t.badge_color, t.monochrome_badges, e.badge_glow]), (0, s.useEffect)(() => {
           if (!h) return;
           let e = e => {
             let t = u.current;
@@ -1920,45 +1921,18 @@ void main() {
           }
         }, [h]);
         let S = () => {
-            i && f && g(!0)
+            n && f && g(!0)
           },
           N = (0, a.jsxs)(a.Fragment, {
             children: [x ? c.map(r => {
               let s = j(r),
-                i = w(r),
-                n = er.A[y[r]];
+                n = w(r),
+                o = er.A[b[r]];
               return (0, a.jsx)(ea.A, {
                 content: s,
                 pageTooltipStyles: !0,
                 children: (0, a.jsxs)("div", {
-                  className: o().badgeContainerFlex,
-                  children: [t.monochrome_badges && i && (0, a.jsx)("style", {
-                    children: `
-                    .${i} {
-                        color: ${t.badge_color}!important;
-                        filter: drop-shadow(${t.badge_color} 0 0 2.5px)!important;
-                    }
-                    `
-                  }), !e.badge_glow && i && (0, a.jsx)("style", {
-                    children: `
-                    .${i} {
-                        filter: none!important;
-                    }
-                    `
-                  }), n]
-                })
-              }, r)
-            }) : c.map(r => {
-              if (!r.enabled) return null;
-              let s = r.name,
-                i = j(s),
-                n = w(s),
-                l = er.A[y[s]];
-              return (0, a.jsx)(ea.A, {
-                content: i,
-                pageTooltipStyles: !0,
-                children: (0, a.jsxs)("div", {
-                  className: o().badgeContainerFlex,
+                  className: i().badgeContainerFlex,
                   children: [t.monochrome_badges && n && (0, a.jsx)("style", {
                     children: `
                     .${n} {
@@ -1972,6 +1946,33 @@ void main() {
                         filter: none!important;
                     }
                     `
+                  }), o]
+                })
+              }, r)
+            }) : c.map(r => {
+              if (!r.enabled) return null;
+              let s = r.name,
+                n = j(s),
+                o = w(s),
+                l = er.A[b[s]];
+              return (0, a.jsx)(ea.A, {
+                content: n,
+                pageTooltipStyles: !0,
+                children: (0, a.jsxs)("div", {
+                  className: i().badgeContainerFlex,
+                  children: [t.monochrome_badges && o && (0, a.jsx)("style", {
+                    children: `
+                    .${o} {
+                        color: ${t.badge_color}!important;
+                        filter: drop-shadow(${t.badge_color} 0 0 2.5px)!important;
+                    }
+                    `
+                  }), !e.badge_glow && o && (0, a.jsx)("style", {
+                    children: `
+                    .${o} {
+                        filter: none!important;
+                    }
+                    `
                   }), l]
                 })
               }, s)
@@ -1980,11 +1981,11 @@ void main() {
                 content: e[0],
                 pageTooltipStyles: !0,
                 children: (0, a.jsx)("div", {
-                  className: o().badgeContainerFlex,
+                  className: i().badgeContainerFlex,
                   children: (0, a.jsx)("img", {
                     src: e[1],
                     alt: "Custom Badge",
-                    className: o().customBadge,
+                    className: i().customBadge,
                     draggable: !1
                   })
                 })
@@ -1992,11 +1993,11 @@ void main() {
                 content: e.name,
                 pageTooltipStyles: !0,
                 children: (0, a.jsx)("div", {
-                  className: o().badgeContainerFlex,
+                  className: i().badgeContainerFlex,
                   children: (0, a.jsx)("img", {
                     src: e.icon,
                     alt: "Custom Badge",
-                    className: o().customBadge,
+                    className: i().customBadge,
                     draggable: !1
                   })
                 })
@@ -2006,15 +2007,15 @@ void main() {
         return (0, a.jsx)(a.Fragment, {
           children: (0, a.jsx)("div", {
             ref: u,
-            className: `${o().badgeContainer}${r?` ${r}`:""}`,
+            className: `${i().badgeContainer}${r?` ${r}`:""}`,
             "data-carousel-active": f ? "true" : void 0,
             "data-carousel-paused": f && h ? "true" : void 0,
             onMouseDown: S,
             onTouchEnd: () => {
               window.setTimeout(S, 0)
             },
-            children: i ? (0, a.jsxs)("div", {
-              className: n,
+            children: n ? (0, a.jsxs)("div", {
+              className: o,
               children: [(0, a.jsx)("div", {
                 ref: m,
                 className: l,
@@ -2028,9 +2029,9 @@ void main() {
           })
         })
       };
-      var ei = r(52131),
-        eo = r(98500),
-        en = r.n(eo),
+      var en = r(52131),
+        ei = r(98500),
+        eo = r.n(ei),
         el = r(28485),
         ec = r(37206),
         ed = r(96351),
@@ -2063,8 +2064,8 @@ void main() {
         socials: e,
         isMonochrome: t,
         iconColor: r,
-        socialGlow: i,
-        font: n,
+        socialGlow: n,
+        font: o,
         fontSize: l,
         username: c,
         ...d
@@ -2076,17 +2077,17 @@ void main() {
             url: "",
             id: ""
           }),
-          [v, b] = (0, s.useState)({
+          [v, y] = (0, s.useState)({
             url: "",
             id: ""
           }),
-          [y, _] = (0, s.useState)(""),
+          [b, _] = (0, s.useState)(""),
           j = p({
-            font: n,
+            font: o,
             fontSize: l
           }),
           [w, S] = (0, s.useState)([]),
-          N = u("custom_url" === y ? "userpage.socials.modal.custom_url.title" : "userpage.socials.modal.onlyfans.title"),
+          N = u("custom_url" === b ? "userpage.socials.modal.custom_url.title" : "userpage.socials.modal.onlyfans.title"),
           C = e.filter(e => !0 !== e.hidden);
         return (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(em.A, {
@@ -2095,9 +2096,9 @@ void main() {
             title: N,
             size: "470px",
             centered: !0,
-            className: o().warningModal,
-            children: "custom_url" === y ? (0, a.jsxs)("div", {
-              className: o().customUrlWarning,
+            className: i().warningModal,
+            children: "custom_url" === b ? (0, a.jsxs)("div", {
+              className: i().customUrlWarning,
               children: [(0, a.jsx)("h1", {
                 style: j.customUrlHeading,
                 children: u("userpage.socials.modal.custom_url.heading")
@@ -2105,13 +2106,13 @@ void main() {
                 style: j.customUrlLink,
                 children: g.url.replace("https://", "")
               }), (0, a.jsxs)("div", {
-                className: o().modalButtons,
-                children: [(0, a.jsx)(en(), {
+                className: i().modalButtons,
+                children: [(0, a.jsx)(eo(), {
                   prefetch: !1,
                   href: g.url,
                   target: "_blank",
                   onClick: e => {
-                    h(!1), tD(c, g.id, "click", w.includes(g.id)), S([...w, g.id])
+                    h(!1), tF(c, g.id, "click", w.includes(g.id)), S([...w, g.id])
                   },
                   style: j.customUrlButtons,
                   children: u("userpage.socials.modal.actions.visit")
@@ -2121,8 +2122,8 @@ void main() {
                   children: u("userpage.socials.modal.actions.cancel")
                 })]
               })]
-            }) : "onlyfans" === y && (0, a.jsxs)("div", {
-              className: o().customUrlWarning,
+            }) : "onlyfans" === b && (0, a.jsxs)("div", {
+              className: i().customUrlWarning,
               children: [(0, a.jsx)("h1", {
                 style: j.customUrlHeading,
                 children: u("userpage.socials.modal.onlyfans.heading")
@@ -2133,14 +2134,14 @@ void main() {
                 },
                 children: u("userpage.socials.modal.onlyfans.description")
               }), (0, a.jsxs)("div", {
-                className: o().modalButtons,
-                children: [(0, a.jsx)(en(), {
+                className: i().modalButtons,
+                children: [(0, a.jsx)(eo(), {
                   prefetch: !1,
                   href: v.url,
                   target: "_blank",
                   rel: "noopener noreferrer",
                   onClick: () => {
-                    h(!1), tD(c, v.id, "click", w.includes(v.id)), S([...w, v.id])
+                    h(!1), tF(c, v.id, "click", w.includes(v.id)), S([...w, v.id])
                   },
                   style: j.customUrlButtons,
                   children: u("userpage.socials.modal.actions.continue")
@@ -2152,25 +2153,25 @@ void main() {
               })]
             })
           }), (0, a.jsx)("div", {
-            className: o().userSocials,
+            className: i().userSocials,
             ...d,
             children: C.map((e, s) => {
-              let n, l, d, u, f, p;
+              let o, l, d, u, f, p;
               return (0, a.jsxs)("div", {
-                className: `${o().userSocial} ${o()[e.social]}`,
+                className: `${i().userSocial} ${i()[e.social]}`,
                 children: [t ? t && (0, a.jsx)("style", {
                   children: `
-                                    .${o()[e.social]} svg {
+                                    .${i()[e.social]} svg {
                                         color: ${r}!important;
-                                        ${!1!==i?`filter: drop-shadow(${r} 1px 0 7px)!important;`:"filter: none!important"}
+                                        ${!1!==n?`filter: drop-shadow(${r} 1px 0 7px)!important;`:"filter: none!important"}
                                     }`
                 }) : (0, a.jsx)("style", {
                   children: `
-                                .${o()[e.social]} svg {
-                                    ${!i&&"filter: none!important"}
+                                .${i()[e.social]} svg {
+                                    ${!n&&"filter: none!important"}
                             }
                             `
-                }), m.includes(e.social) ? (n = w.includes(e.id), (0, a.jsx)(eu.A, {
+                }), m.includes(e.social) ? (o = w.includes(e.id), (0, a.jsx)(eu.A, {
                   value: e.value,
                   children: ({
                     copied: r,
@@ -2181,16 +2182,16 @@ void main() {
                     content: "Copy Address",
                     children: (0, a.jsx)("span", {
                       onClick: t => {
-                        tD(c, e.id, "click", n), S([...w, e.id])
+                        tF(c, e.id, "click", o), S([...w, e.id])
                       },
                       style: {
                         display: "flex"
                       },
-                      children: "monero" === e.social && t ? ei.A.moneroMonochrome : ei.A[e.social]
+                      children: "monero" === e.social && t ? en.A.moneroMonochrome : en.A[e.social]
                     })
                   })
-                })) : (l = ei.A[e.social.replace("custom_url", "customUrl")], d = e.mode ?? "link", u = el.V$[e.social], f = w.includes(e.id), p = (e => {
-                  if ("custom_url" !== e.social || !1 === i || !e.icon) return;
+                })) : (l = en.A[e.social.replace("custom_url", "customUrl")], d = e.mode ?? "link", u = el.V$[e.social], f = w.includes(e.id), p = (e => {
+                  if ("custom_url" !== e.social || !1 === n || !e.icon) return;
                   let t = e.glow_color && "" !== e.glow_color.trim() ? e.glow_color : "#a3a3a3";
                   return {
                     filter: `drop-shadow(${t} 1px 0 7px)`
@@ -2199,10 +2200,10 @@ void main() {
                   children: "link" === d ? "email" === e.social ? (0, a.jsx)(ef, {
                     encoded: e.value,
                     onClick: t => {
-                      tD(c, e.id, "click", f), S([...w, e.id])
+                      tF(c, e.id, "click", f), S([...w, e.id])
                     },
                     children: l
-                  }) : (0, a.jsx)(en(), {
+                  }) : (0, a.jsx)(eo(), {
                     href: e.value,
                     target: "_blank",
                     onClick: t => ((e, t) => {
@@ -2210,19 +2211,19 @@ void main() {
                         social: r,
                         value: a,
                         id: s
-                      } = t, i = w.includes(s);
+                      } = t, n = w.includes(s);
                       if ("custom_url" === r || "onlyfans" === r) _(r), e.preventDefault(), h(!0), "custom_url" === r ? x({
                         url: a,
                         id: s
-                      }) : b({
+                      }) : y({
                         url: a,
                         id: s
                       });
-                      else tD(c, s, "click", i), S(e => [...e, s])
+                      else tF(c, s, "click", n), S(e => [...e, s])
                     })(t, e),
                     prefetch: !1,
-                    children: "monero" === e.social && t ? ei.A.moneroMonochrome : "custom_url" === e.social && e.icon ? (0, a.jsx)("img", {
-                      className: o().customIcon,
+                    children: "monero" === e.social && t ? en.A.moneroMonochrome : "custom_url" === e.social && e.icon ? (0, a.jsx)("img", {
+                      className: i().customIcon,
                       src: e.icon,
                       alt: "",
                       style: p
@@ -2238,13 +2239,13 @@ void main() {
                       content: `Copy ${u}`,
                       children: (0, a.jsx)("span", {
                         onClick: t => {
-                          tD(c, e.id, "click", f), S([...w, e.id])
+                          tF(c, e.id, "click", f), S([...w, e.id])
                         },
                         style: {
                           display: "flex"
                         },
-                        children: "monero" === e.social && t ? ei.A.moneroMonochrome : "custom_url" === e.social && e.icon ? (0, a.jsx)("img", {
-                          className: o().customIcon,
+                        children: "monero" === e.social && t ? en.A.moneroMonochrome : "custom_url" === e.social && e.icon ? (0, a.jsx)("img", {
+                          className: i().customIcon,
                           src: e.icon,
                           alt: "",
                           style: p
@@ -2274,7 +2275,7 @@ void main() {
         }
       }
 
-      function eb(e) {
+      function ey(e) {
         if ("string" == typeof e) return e.trim();
         if ("number" == typeof e) return String(e);
         if (e && "object" == typeof e && "number" == typeof e.low && "number" == typeof e.high) {
@@ -2284,12 +2285,12 @@ void main() {
         return ""
       }
 
-      function ey({
+      function eb({
         presenceInformation: e,
         font: t,
         fontSize: r,
-        description: i,
-        discordUserBadges: n,
+        description: n,
+        discordUserBadges: o,
         discordData: l,
         discordPresenceSettings: c,
         loading: d
@@ -2304,16 +2305,16 @@ void main() {
           m = e.activities || [],
           [f, h] = (0, s.useState)(0),
           [g, x] = (0, s.useState)(null),
-          [v, b] = (0, s.useState)(!1),
-          y = m[f] || m[0],
+          [v, y] = (0, s.useState)(!1),
+          b = m[f] || m[0],
           _ = p({
             font: t,
             fontSize: r
           }),
-          j = y?.name === "Spotify",
+          j = b?.name === "Spotify",
           w = {
-            display: y?.emoji?.startsWith("https://") && y?.type === 4 && !j && "flex",
-            alignItems: y?.emoji?.startsWith("https://") && y?.type === 4 && !j && "flex-end"
+            display: b?.emoji?.startsWith("https://") && b?.type === 4 && !j && "flex",
+            alignItems: b?.emoji?.startsWith("https://") && b?.type === 4 && !j && "flex-end"
           },
           S = ev(e),
           N = e.primaryGuild?.hasGuildTag ? e.primaryGuild : S.primaryGuild || {
@@ -2322,46 +2323,47 @@ void main() {
           C = S.avatar,
           k = S.displayName,
           A = e.status || "unknown",
-          F = "unknown" === A ? "offline" : A;
+          $ = "unknown" === A ? "offline" : A,
+          T = "not_in_guild" === e.unavailableReason;
         (0, s.useEffect)(() => {
-          h(e => e >= m.length ? 0 : e), x(null), b(!1)
+          h(e => e >= m.length ? 0 : e), x(null), y(!1)
         }, [m.length]), (0, s.useEffect)(() => {
           if (m.length <= 1) return;
           let e = window.setInterval(() => {
             h(e => {
               let t = (e + 1) % m.length;
-              return x(m[e] || m[0]), b(!0), t
+              return x(m[e] || m[0]), y(!0), t
             })
           }, 15e3);
           return () => window.clearInterval(e)
         }, [m.length, f]), (0, s.useEffect)(() => {
           if (!v) return;
           let e = window.setTimeout(() => {
-            x(null), b(!1)
+            x(null), y(!1)
           }, 360);
           return () => window.clearTimeout(e)
         }, [v, f]);
-        let T = e => {
+        let P = e => {
             if (!e) return null;
             let t = "Spotify" === e.name,
               r = "string" == typeof e.emoji ? e.emoji : "";
             return t ? (0, a.jsxs)(a.Fragment, {
               children: [(0, a.jsxs)(ex.A, {
                 children: [(0, a.jsx)("span", {
-                  className: o().highlight,
+                  className: i().highlight,
                   children: u[e.type]
                 }), " ", e.details]
               }), e.state && (0, a.jsx)(ex.A, {
                 children: `by ${e.state.replace(/;/g,",")}`
               })]
             }) : 4 === e.type ? (0, a.jsxs)(ex.A, {
-              contentClassName: r.startsWith("https://") ? o().discordEmojiText : void 0,
+              contentClassName: r.startsWith("https://") ? i().discordEmojiText : void 0,
               children: [r.startsWith("https://") ? (0, a.jsx)("img", {
                 src: r,
                 alt: "Discord Emoji",
-                className: o().discordEmoji
+                className: i().discordEmoji
               }) : r && (0, a.jsx)("span", {
-                className: o().defaultEmoji,
+                className: i().defaultEmoji,
                 children: r
               }), (0, a.jsx)("span", {
                 children: e.state
@@ -2369,7 +2371,7 @@ void main() {
             }) : (0, a.jsxs)(a.Fragment, {
               children: [(0, a.jsxs)(ex.A, {
                 children: [(0, a.jsx)("span", {
-                  className: o().highlight,
+                  className: i().highlight,
                   children: u[e.type]
                 }), " ", e.name]
               }), (0, a.jsx)(ex.A, {
@@ -2377,7 +2379,7 @@ void main() {
               })]
             })
           },
-          $ = e => {
+          U = e => {
             if (!e || 4 === e.type || !e.image || "{}" === JSON.stringify(e.image)) return null;
             let t = "Spotify" === e.name ? `Listening to ${e.details}${e.state?` by ${e.state.replace(/;/g,",")}`:""}` : `${u[e.type]} ${e.name}`;
             return (0, a.jsx)(ea.A, {
@@ -2391,36 +2393,36 @@ void main() {
           };
         return (0, a.jsx)(a.Fragment, {
           children: (0, a.jsx)("div", {
-            className: o().discordPresenceContainer,
+            className: i().discordPresenceContainer,
             style: {
               marginTop: "20px"
             },
-            children: e.success && y && !d ? (0, a.jsxs)("div", {
-              className: o().discordUserInformation,
+            children: e.success && !T && b && !d ? (0, a.jsxs)("div", {
+              className: i().discordUserInformation,
               children: [(0, a.jsx)("div", {
-                className: o().discordAvatar,
+                className: i().discordAvatar,
                 children: (0, a.jsxs)("div", {
-                  className: o().discordStatus,
+                  className: i().discordStatus,
                   children: [C && (0, a.jsx)("img", {
                     src: C,
                     alt: "Discord Avatar"
                   }), (0, a.jsx)("img", {
-                    src: `https://assets.guns.lol/${F}.png`,
-                    className: o().discordStatusIcon,
+                    src: `https://assets.guns.lol/${$}.png`,
+                    className: i().discordStatusIcon,
                     alt: ""
                   })]
                 })
               }), (0, a.jsxs)("div", {
-                className: o().discordActivity,
+                className: i().discordActivity,
                 children: [(0, a.jsxs)("div", {
-                  className: o().discordUser,
+                  className: i().discordUser,
                   children: [(0, a.jsxs)("div", {
-                    className: o().discordUserDiv,
+                    className: i().discordUserDiv,
                     children: [k && (0, a.jsx)("span", {
                       style: _.discordUsername,
                       children: k
                     }), c.show_guild_tag && N?.hasGuildTag && (0, a.jsxs)("div", {
-                      className: o().guildTag,
+                      className: i().guildTag,
                       children: [(0, a.jsx)("img", {
                         src: N?.iconUrl,
                         alt: "Guild Tag Icon"
@@ -2428,96 +2430,96 @@ void main() {
                         children: N?.tag
                       })]
                     }), c.show_badges && (0, a.jsx)("div", {
-                      className: o().discordUserBadges,
-                      children: n.map((e, t) => (0, a.jsx)(ea.A, {
+                      className: i().discordUserBadges,
+                      children: o.map((e, t) => (0, a.jsx)(ea.A, {
                         content: e,
                         pageTooltipStyles: !0,
                         children: (0, a.jsx)("div", {
-                          className: o().discordBadge,
+                          className: i().discordBadge,
                           children: (0, a.jsx)("img", {
-                            src: tW[e],
+                            src: tR[e],
                             alt: "Discord Badge"
                           })
                         }, t)
                       }, t))
                     })]
                   }), (0, a.jsxs)("div", {
-                    className: o().discordActivityTextStack,
+                    className: i().discordActivityTextStack,
                     children: [g && v && (0, a.jsx)("h3", {
-                      className: `${o().discordActivityTextLayer} ${o().discordActivityExit}`,
+                      className: `${i().discordActivityTextLayer} ${i().discordActivityExit}`,
                       style: _.discordStatus,
-                      children: T(g)
+                      children: P(g)
                     }), (0, a.jsx)("h3", {
-                      className: `${o().discordActivityTextLayer} ${v?o().discordActivityEnter:""}`,
+                      className: `${i().discordActivityTextLayer} ${v?i().discordActivityEnter:""}`,
                       style: _.discordStatus,
-                      children: T(y)
+                      children: P(b)
                     }, `activity-text-${f}`)]
                   })]
                 }), (0, a.jsx)("div", {
-                  className: o().activityImage,
+                  className: i().activityImage,
                   children: (0, a.jsxs)("div", {
-                    className: o().discordActivityImageStack,
+                    className: i().discordActivityImageStack,
                     children: [g && v && (0, a.jsx)("span", {
-                      className: `${o().discordActivityImageLayer} ${o().discordActivityExit}`,
-                      children: $(g)
+                      className: `${i().discordActivityImageLayer} ${i().discordActivityExit}`,
+                      children: U(g)
                     }), (0, a.jsx)("span", {
-                      className: `${o().discordActivityImageLayer} ${v?o().discordActivityEnter:""}`,
-                      children: $(y)
+                      className: `${i().discordActivityImageLayer} ${v?i().discordActivityEnter:""}`,
+                      children: U(b)
                     }, `activity-image-${f}`)]
                   })
                 })]
               })]
-            }) : !e.success || y || d ? d ? (0, a.jsx)("div", {
-              className: o().discordLoading,
+            }) : !e.success || T || b || d ? d ? (0, a.jsx)("div", {
+              className: i().discordLoading,
               children: (0, a.jsxs)("h1", {
                 children: [X.A.discord, " Loading Discord Presence..."]
               })
             }) : (0, a.jsxs)("div", {
-              className: o().discordNotConnected,
+              className: i().discordNotConnected,
               children: [(0, a.jsxs)("h1", {
                 style: _.discordUsername,
                 children: [X.A.userNotFound, " User Not found"]
-              }), l ? (0, a.jsxs)("h3", {
+              }), l || T ? (0, a.jsxs)("h3", {
                 style: _.discordStatus,
-                children: ["Join ", (0, a.jsx)(en(), {
+                children: ["Join ", (0, a.jsx)(eo(), {
                   href: "https://discord.gg/guns",
                   target: "_blank",
                   children: "discord.gg/guns"
                 }), " to display your status"]
               }) : (0, a.jsxs)("h3", {
                 style: _.discordStatus,
-                children: ["Please ", (0, a.jsx)(en(), {
+                children: ["Please ", (0, a.jsx)(eo(), {
                   href: "https://guns.lol/account",
                   target: "_blank",
                   children: "connect"
                 }), " your Discord account"]
               })]
             }) : (0, a.jsxs)("div", {
-              className: o().discordUserInformation,
+              className: i().discordUserInformation,
               children: [(0, a.jsx)("div", {
-                className: o().discordAvatar,
+                className: i().discordAvatar,
                 children: (0, a.jsxs)("div", {
-                  className: o().discordStatus,
+                  className: i().discordStatus,
                   children: [C && (0, a.jsx)("img", {
                     src: C,
                     alt: "Discord Avatar"
                   }), (0, a.jsx)("img", {
-                    src: `https://assets.guns.lol/${F}.png`,
-                    className: o().discordStatusIcon,
+                    src: `https://assets.guns.lol/${$}.png`,
+                    className: i().discordStatusIcon,
                     alt: ""
                   })]
                 })
               }), (0, a.jsxs)("div", {
-                className: o().discordActivity,
+                className: i().discordActivity,
                 children: [(0, a.jsxs)("div", {
-                  className: o().discordUser,
+                  className: i().discordUser,
                   children: [(0, a.jsxs)("div", {
-                    className: o().discordUserDiv,
+                    className: i().discordUserDiv,
                     children: [k && (0, a.jsx)("span", {
                       style: _.discordUsername,
                       children: k
                     }), c.show_guild_tag && N?.hasGuildTag && (0, a.jsxs)("div", {
-                      className: o().guildTag,
+                      className: i().guildTag,
                       children: [(0, a.jsx)("img", {
                         src: N?.iconUrl,
                         alt: "Guild Tag Icon"
@@ -2525,14 +2527,14 @@ void main() {
                         children: N?.tag
                       })]
                     }), c.show_badges && (0, a.jsx)("div", {
-                      className: o().discordUserBadges,
-                      children: n.map((e, t) => (0, a.jsx)(ea.A, {
+                      className: i().discordUserBadges,
+                      children: o.map((e, t) => (0, a.jsx)(ea.A, {
                         content: e,
                         pageTooltipStyles: !0,
                         children: (0, a.jsx)("div", {
-                          className: o().discordBadge,
+                          className: i().discordBadge,
                           children: (0, a.jsx)("img", {
-                            src: tW[e],
+                            src: tR[e],
                             alt: "Discord Badge"
                           })
                         }, t)
@@ -2544,14 +2546,14 @@ void main() {
                       ...w
                     },
                     children: "offline" === A || "unknown" === A ? (0, a.jsxs)(ex.A, {
-                      contentClassName: o().offlineText,
+                      contentClassName: i().offlineText,
                       children: ["last seen ", e.lastSeen ? (0, eg.m)(new Date(1e3 * e.lastSeen)).replace("about ", "") + " ago" : "unknown"]
                     }) : (0, a.jsx)(ex.A, {
                       children: c.idle_text || "currently doing nothing"
                     })
                   })]
                 }), (0, a.jsx)("div", {
-                  className: o().activityImage
+                  className: i().activityImage
                 })]
               })]
             })
@@ -2565,8 +2567,8 @@ void main() {
         let t = e[2],
           r = e[3],
           s = e[1],
-          i = e[0],
-          o = `
+          n = e[0],
+          i = `
         const workerScript = \`        
             import init, { GunsSolver } from 'https://assets.guns.lol/wasm/gpp_gunslol.js';
             self.onmessage = async function (event) {               
@@ -2595,7 +2597,7 @@ void main() {
             o09: '${s}',
             _2xa: '${r}',
             __s: '3',
-            _org_ts: "${i}",
+            _org_ts: "${n}",
         };
 
         worker.postMessage({
@@ -2616,7 +2618,7 @@ void main() {
         return (0, a.jsx)(h.default, {
           strategy: "beforeInteractive",
           id: "_gpp_2pkvinebmmlb",
-          children: o
+          children: i
         })
       }
 
@@ -2628,8 +2630,8 @@ void main() {
         challengeData: e,
         username: t,
         premiumConfig: r,
-        views: i,
-        containerBorderRadius: n,
+        views: n,
+        containerBorderRadius: o,
         hideCounter: l,
         isUnfold: c,
         animationStartClass: d,
@@ -2640,7 +2642,7 @@ void main() {
           g = e[3],
           x = e[1],
           v = e[0],
-          [b, y] = (0, s.useState)(!1),
+          [y, b] = (0, s.useState)(!1),
           [_, j] = (0, s.useState)(""),
           [w, S] = (0, s.useState)({
             _oo: "",
@@ -2650,32 +2652,32 @@ void main() {
             font: r.font,
             fontSize: r.font_size
           }),
-          C = !!n && n > 25 && .12 * n,
+          C = !!o && o > 25 && .12 * o,
           k = !0 === r.suppress_views_tracking;
         async function A(e) {
           j(e)
         }
-        async function F(e) {
+        async function $(e) {
           ! function(e, t, r) {
             var a;
-            let s, i, [o, n] = Object.entries(r)[1],
-              [l, c] = (i = 16 + ((a = e) + ((s = t || "0").charCodeAt(s.length - 1) || 48)) % 24, [a % 10, i]);
-            r[o] = ej(ej(n, l), c)
-          }(v, f, e), S(e), y(!0)
+            let s, n, [i, o] = Object.entries(r)[1],
+              [l, c] = (n = 16 + ((a = e) + ((s = t || "0").charCodeAt(s.length - 1) || 48)) % 24, [a % 10, n]);
+            r[i] = ej(ej(o, l), c)
+          }(v, f, e), S(e), b(!0)
         }
         return (0, s.useEffect)(() => {
           Object.assign(window, {
             getToken: A,
-            getResult: F
+            getResult: $
           });
           let e = setInterval(() => {
-            b && "" !== _ && !u && (fetch("https://guns.lol/api/analytics/record", {
+            y && "" !== _ && !u && (fetch("https://guns.lol/api/analytics/record", {
               cache: "no-store",
               body: JSON.stringify({
                 _t: _,
                 _gpp_ch: [g, v, x, f, w.seal, w._oo],
                 username: decodeURIComponent(t),
-                deviceType: tL(),
+                deviceType: tD(),
                 event: "view",
                 linkId: null,
                 referrer: document.referrer
@@ -2683,7 +2685,7 @@ void main() {
               method: "POST"
             }), clearInterval(e))
           }, 200)
-        }, [b, _, w]), (0, a.jsxs)(a.Fragment, {
+        }, [y, _, w]), (0, a.jsxs)(a.Fragment, {
           children: [!k && (0, a.jsx)(e_, {
             challengeData: e
           }), !k && (0, a.jsx)(h.default, {
@@ -2698,7 +2700,7 @@ void main() {
             "data-sitekey": "0x4AAAAAAAgU7T2niLQD-TLm",
             "data-callback": "getToken"
           }), !r.hide_views && !l && (0, a.jsx)("div", {
-            className: `${o().profileViews} ${m?o().profileViewsInline:""} ${c&&d}`,
+            className: `${i().profileViews} ${m?i().profileViewsInline:""} ${c&&d}`,
             style: m ? void 0 : {
               bottom: C ? 12 + C : 12,
               left: C ? 15 + C : 15
@@ -2708,7 +2710,7 @@ void main() {
               pageTooltipStyles: !0,
               children: (0, a.jsxs)("span", {
                 style: N.profileViewsCount,
-                children: [X.A.profileViews, " ", i.toLocaleString("en-US")]
+                children: [X.A.profileViews, " ", n.toLocaleString("en-US")]
               })
             })
           })]
@@ -2721,8 +2723,8 @@ void main() {
         config: t,
         premiumConfig: r,
         presenceInformation: s,
-        animationStartClass: i,
-        isTemplatePreview: n,
+        animationStartClass: n,
+        isTemplatePreview: o,
         discordLoading: l
       }) {
         let c = p({
@@ -2737,19 +2739,19 @@ void main() {
           g = e.discord?.user_badges ? h.includes("server_booster") || h.find(e => "server_booster" === e.name) ? [...e.discord.user_badges, "Server Booster"] : e.discord.user_badges : [],
           x = d.avatarDecoration || "",
           v = t.custom_badges,
-          b = h.length > 0 && h[0] && "string" == typeof h[0],
-          y = v.length > 0 && "string" == typeof v[0][0],
-          _ = h.length > 0 && b || !b && h.some(e => !0 === e.enabled),
-          j = v.length > 0 && y || !y && v.some(e => !0 === e.enabled),
-          w = i === o().unfoldStart,
+          y = h.length > 0 && h[0] && "string" == typeof h[0],
+          b = v.length > 0 && "string" == typeof v[0][0],
+          _ = h.length > 0 && y || !y && h.some(e => !0 === e.enabled),
+          j = v.length > 0 && b || !b && v.some(e => !0 === e.enabled),
+          w = n === i().unfoldStart,
           S = r.typewriter_speed ?? 5,
           N = r.typewriter_delete_speed ?? 7,
           C = !!(t.discord_avatar_decoration && x),
           k = t.username_effects,
           A = t.text_color,
-          F = r.links_position ?? "center",
+          $ = r.links_position ?? "center",
           T = !!("" !== t.avatar || t.use_discord_avatar && u),
-          $ = t.discord_presence_settings || {
+          P = t.discord_presence_settings || {
             show_badges: !0,
             show_guild_tag: !0,
             idle_text: ""
@@ -2762,11 +2764,11 @@ void main() {
               alt: "",
               className: K().banner
             }), T ? (0, a.jsxs)("div", {
-              className: o().avatarWrapper,
+              className: i().avatarWrapper,
               children: [C && (0, a.jsx)("img", {
                 src: x,
                 alt: "",
-                className: o().avatarDecorationLayout1,
+                className: i().avatarDecorationLayout1,
                 style: {
                   top: "" !== r.banner ? "21%" : "-7%"
                 }
@@ -2780,7 +2782,7 @@ void main() {
                 marginTop: "" !== r.banner ? "135px" : ""
               }
             }), (0, a.jsxs)("div", {
-              className: `${K().userDescription} ${w&&i}`,
+              className: `${K().userDescription} ${w&&n}`,
               children: [(0, a.jsx)(ea.A, {
                 content: `UID ${e.uid.toLocaleString("en-US")}`,
                 offset: 0,
@@ -2803,7 +2805,7 @@ void main() {
                         wrapperClassName: K().userDescriptionUsername,
                         cursorClassName: K().usernameCursor,
                         pauseFor: 1e3,
-                        stringSplitter: tM
+                        stringSplitter: tL
                       }
                     })
                   })]
@@ -2814,7 +2816,7 @@ void main() {
                   textColor: A,
                   marginBottom: "7px"
                 }) : (0, a.jsx)("h1", {
-                  className: `${K().userDescriptionUsername} ${"rgb"===t.username_effects&&o().rainbowName}`,
+                  className: `${K().userDescriptionUsername} ${"rgb"===t.username_effects&&i().rainbowName}`,
                   style: c.username,
                   children: f
                 })
@@ -2835,7 +2837,7 @@ void main() {
                     delay: 600 / S,
                     deleteSpeed: 600 / N,
                     pauseFor: 900,
-                    stringSplitter: tM
+                    stringSplitter: tL
                   }
                 }) : t.description
               }), t.location && (0, a.jsx)(ea.A, {
@@ -2843,14 +2845,14 @@ void main() {
                 pageTooltipStyles: !0,
                 offset: -10,
                 children: (0, a.jsxs)("span", {
-                  className: o().locationMarker,
+                  className: i().locationMarker,
                   style: c.locationMarker,
                   children: [X.A.locationMarker, " ", t.location]
                 })
               })]
             }), "enabled" === t.presence && (0, a.jsx)("div", {
-              className: `${o().discordPresenceWrapper} ${w&&i}`,
-              children: (0, a.jsx)(ey, {
+              className: `${i().discordPresenceWrapper} ${w&&n}`,
+              children: (0, a.jsx)(eb, {
                 loading: l,
                 presenceInformation: s,
                 font: r.font,
@@ -2858,10 +2860,10 @@ void main() {
                 discordUserBadges: g,
                 discordData: e.discord,
                 fontSize: r.font_size,
-                discordPresenceSettings: $
+                discordPresenceSettings: P
               })
             }), t.socials.length > 0 && (0, a.jsx)("div", {
-              className: `${K().socialsWrapper} ${w&&i}`,
+              className: `${K().socialsWrapper} ${w&&n}`,
               style: {
                 width: "100%"
               },
@@ -2874,7 +2876,7 @@ void main() {
                 username: e.username,
                 fontSize: r.font_size,
                 style: {
-                  justifyContent: "left" === F ? "flex-start" : "right" === F ? "flex-end" : "center"
+                  justifyContent: "left" === $ ? "flex-start" : "right" === $ ? "flex-end" : "center"
                 }
               })
             })]
@@ -2885,8 +2887,8 @@ void main() {
             views: t.page_views,
             containerBorderRadius: r.border_radius,
             isUnfold: w,
-            animationStartClass: i,
-            isTemplatePreview: n
+            animationStartClass: n,
+            isTemplatePreview: o
           })]
         })
       }
@@ -2927,15 +2929,15 @@ void main() {
         })
       };
 
-      function eF({
+      function e$({
         date: e,
         tz: t,
         faceStyle: r
       }) {
         let {
           h: s,
-          m: i,
-          s: o
+          m: n,
+          s: i
         } = (() => {
           try {
             let r = new Intl.DateTimeFormat("en-US", {
@@ -2958,7 +2960,7 @@ void main() {
               s: 0
             }
           }
-        })(), n = "dark" === r, l = n ? "#f0f0f0" : "#111111", c = n ? "#f04040" : "#cc2020", d = n ? "#555555" : "#999999", u = n ? "#2e2e2e" : "#cccccc", m = e => Number(e.toFixed(4)), f = (e, t) => {
+        })(), o = "dark" === r, l = o ? "#f0f0f0" : "#111111", c = o ? "#f04040" : "#cc2020", d = o ? "#555555" : "#999999", u = o ? "#2e2e2e" : "#cccccc", m = e => Number(e.toFixed(4)), f = (e, t) => {
           let r = Math.PI / 180 * (e - 90);
           return {
             x: m(35 + t * Math.cos(r)),
@@ -2976,19 +2978,19 @@ void main() {
             cx: "35",
             cy: "35",
             r: "33",
-            fill: n ? "#141414" : "#f0f0f0",
-            stroke: n ? "#303030" : "#c0c0c0",
+            fill: o ? "#141414" : "#f0f0f0",
+            stroke: o ? "#303030" : "#c0c0c0",
             strokeWidth: "1.5"
           }), [...Array(60)].map((e, t) => {
             let r = t / 60 * 360,
               s = t % 5 == 0,
-              i = f(r, 30),
-              o = f(r, s ? 23 : 27);
+              n = f(r, 30),
+              i = f(r, s ? 23 : 27);
             return (0, a.jsx)("line", {
-              x1: o.x,
-              y1: o.y,
-              x2: i.x,
-              y2: i.y,
+              x1: i.x,
+              y1: i.y,
+              x2: n.x,
+              y2: n.y,
               stroke: s ? d : u,
               strokeWidth: s ? 2 : 1,
               strokeLinecap: "round"
@@ -2996,7 +2998,7 @@ void main() {
           }), (0, a.jsxs)("g", {
             className: ek().clockHand,
             style: {
-              transform: `rotate(${s%12/12*360+i/60*30}deg)`,
+              transform: `rotate(${s%12/12*360+n/60*30}deg)`,
               transition: "transform 0.4s ease"
             },
             children: [(0, a.jsx)("line", {
@@ -3019,7 +3021,7 @@ void main() {
           }), (0, a.jsxs)("g", {
             className: ek().clockHand,
             style: {
-              transform: `rotate(${i/60*360+o/60*6}deg)`,
+              transform: `rotate(${n/60*360+i/60*6}deg)`,
               transition: "transform 0.3s ease"
             },
             children: [(0, a.jsx)("line", {
@@ -3042,8 +3044,8 @@ void main() {
           }), (0, a.jsxs)("g", {
             className: ek().clockHand,
             style: {
-              transform: `rotate(${o/60*360}deg)`,
-              transition: 0 === o ? "none" : "transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)"
+              transform: `rotate(${i/60*360}deg)`,
+              transition: 0 === i ? "none" : "transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)"
             },
             children: [(0, a.jsx)("line", {
               x1: "35",
@@ -3080,24 +3082,24 @@ void main() {
         config: e,
         premiumConfig: t
       }) {
-        var r, i, o;
-        let n, l, c, d, u, m, f = p({
+        var r, n, i;
+        let o, l, c, d, u, m, f = p({
             font: t.font,
             fontSize: t.font_size
           }),
           [h, g] = (0, s.useState)({}),
           [x, v] = (0, s.useState)({}),
-          [b, y] = (0, s.useState)({}),
+          [y, b] = (0, s.useState)({}),
           [_, j] = (0, s.useState)({}),
           [w, S] = (0, s.useState)({}),
           [N, C] = (0, s.useState)({}),
           [k, A] = (0, s.useState)(!0),
-          [F, T] = (0, s.useState)(null),
-          [$, P] = (0, s.useState)(null),
+          [$, T] = (0, s.useState)(null),
+          [P, U] = (0, s.useState)(null),
           E = (0, s.useRef)(null),
-          U = Object.keys(t.second_tab)[0],
-          z = !!t.second_tab_enabled && "enabled" !== e.presence,
-          B = async () => {
+          z = Object.keys(t.second_tab)[0],
+          M = !!t.second_tab_enabled && "enabled" !== e.presence,
+          I = async () => {
             try {
               let e = `https://discord.com/api/v9/invites/${G(t.second_tab.discord)}?with_counts=true`,
                 r = await fetch(e);
@@ -3116,11 +3118,11 @@ void main() {
               }
               let a = await r.json(),
                 s = a.guild.features.includes("VERIFIED"),
-                i = a.guild.features.includes("PARTNERED");
+                n = a.guild.features.includes("PARTNERED");
               g({
                 ...a,
                 isVerified: s,
-                isPartnered: i
+                isPartnered: n
               })
             } catch (e) {
               g({
@@ -3136,7 +3138,7 @@ void main() {
             } finally {
               A(!1)
             }
-          }, M = async () => {
+          }, B = async () => {
             let e = H(t.second_tab.github),
               r = await fetch(`https://api.github.com/users/${e}`);
             if (!r.ok) {
@@ -3153,7 +3155,7 @@ void main() {
               repositories: a.public_repos,
               error: !1
             }), A(!1)
-          }, I = async () => {
+          }, L = async () => {
             let e = O(t.second_tab.telegram),
               r = await fetch("https://guns.lol/api/service/telegram", {
                 method: "POST",
@@ -3166,19 +3168,19 @@ void main() {
               }),
               a = await r.json();
             if (!r.ok) {
-              y({
+              b({
                 error: !0
               }), A(!1);
               return
             }
-            y({
+            b({
               avatar: a.avatar,
               name: a.name,
               members: a.members,
               error: !1
             }), A(!1)
-          }, L = async () => {
-            let e = q(t.second_tab.youtube),
+          }, W = async () => {
+            let e = V(t.second_tab.youtube),
               r = await fetch("https://guns.lol/api/service/youtube", {
                 method: "POST",
                 headers: {
@@ -3227,8 +3229,8 @@ void main() {
               followers: a.followers,
               error: !1
             }), A(!1)
-          }, W = async () => {
-            let e = V(t.second_tab.lastfm),
+          }, F = async () => {
+            let e = q(t.second_tab.lastfm),
               r = await fetch("https://guns.lol/api/service/lastfm", {
                 method: "POST",
                 headers: {
@@ -3264,10 +3266,10 @@ void main() {
           }, O = e => {
             let t = e.match(/(?:t\.me\/)([a-zA-Z0-9-]+)/);
             return t ? t[1] : ""
-          }, q = e => {
+          }, V = e => {
             let t = e.match(/(?:youtube\.com\/(?:channel\/|user\/|c\/|@))([^/?]+)/);
             return t ? t[1] : ""
-          }, V = e => {
+          }, q = e => {
             let t = e.match(/(?:last\.fm\/user\/)([a-zA-Z0-9_-]+)/);
             return t ? t[1] : ""
           }, Y = (e, t) => {
@@ -3279,7 +3281,7 @@ void main() {
             })).getTime() - r) / 6e4)
           };
         (0, s.useEffect)(() => {
-          t.second_tab.discord && B(), t.second_tab.github && M(), t.second_tab.telegram && I(), t.second_tab.roblox && D(), t.second_tab.youtube && L(), t.second_tab.lastfm && W()
+          t.second_tab.discord && I(), t.second_tab.github && B(), t.second_tab.telegram && L(), t.second_tab.roblox && D(), t.second_tab.youtube && W(), t.second_tab.lastfm && F()
         }, [t.second_tab.discord, t.second_tab.github, t.second_tab.telegram, t.second_tab.roblox, t.second_tab.youtube, t.second_tab.lastfm]), (0, s.useEffect)(() => {
           if (t.second_tab.timezone) {
             try {
@@ -3288,16 +3290,16 @@ void main() {
                 a = new Date;
               T(a);
               let s = Y(e, a),
-                i = Y(r, a),
-                o = a.toLocaleTimeString("en-US", {
+                n = Y(r, a),
+                i = a.toLocaleTimeString("en-US", {
                   timeZone: r,
                   hour: "2-digit",
                   minute: "2-digit",
                   hour12: !1
                 });
-              P({
-                diffMinutes: s - i,
-                visitorTime: o
+              U({
+                diffMinutes: s - n,
+                visitorTime: i
               })
             } catch {}
             return E.current = setInterval(() => T(new Date), 1e3), () => {
@@ -3354,14 +3356,14 @@ void main() {
                     }), (0, a.jsxs)("span", {
                       children: [X.A.status, " ", h.approximate_member_count?.toLocaleString("en-US"), " Members"]
                     })]
-                  }), !z && (0, a.jsx)(en(), {
+                  }), !M && (0, a.jsx)(eo(), {
                     href: `https://discord.gg/${!h.error?G(t.second_tab.discord):""}`,
                     target: "_blank",
                     style: f.joinButton,
                     children: "Join"
                   })]
                 })]
-              }), z ? (0, a.jsx)(en(), {
+              }), M ? (0, a.jsx)(eo(), {
                 href: `https://discord.gg/${!h.error?G(t.second_tab.discord):""}`,
                 className: ek().joinButtonLarge,
                 target: "_blank",
@@ -3412,7 +3414,7 @@ void main() {
                         children: [X.A.repositories, " ", x.repositories?.toLocaleString("en-US"), " Repos"]
                       })]
                     })]
-                  }), (0, a.jsx)(en(), {
+                  }), (0, a.jsx)(eo(), {
                     href: `https://github.com/${x.username}`,
                     target: "_blank",
                     style: f.secondTabWidgetButton,
@@ -3460,7 +3462,7 @@ void main() {
                         children: [X.A.followers, " ", _.followers?.toLocaleString("en-US"), " Followers"]
                       })]
                     })]
-                  }), (0, a.jsx)(en(), {
+                  }), (0, a.jsx)(eo(), {
                     href: `https://roblox.com/users/${R(t.second_tab.roblox)}/profile`,
                     target: "_blank",
                     style: f.secondTabWidgetButton,
@@ -3477,19 +3479,19 @@ void main() {
                 className: ek().telegramInformationWrapper,
                 children: [(0, a.jsx)("div", {
                   className: ek().telegramIcon,
-                  children: b.error ? (0, a.jsx)("h1", {
+                  children: y.error ? (0, a.jsx)("h1", {
                     className: ek().missingIcon,
                     children: "!"
-                  }) : b.avatar ? (0, a.jsx)("img", {
-                    src: b.avatar,
+                  }) : y.avatar ? (0, a.jsx)("img", {
+                    src: y.avatar,
                     alt: "Telegram Avatar"
                   }) : (0, a.jsx)("h1", {
                     className: ek().missingIcon,
-                    children: b.name && b.name[0]
+                    children: y.name && y.name[0]
                   })
                 }), (0, a.jsxs)("div", {
                   className: ek().telegramInformation,
-                  children: [b.error ? (0, a.jsxs)(a.Fragment, {
+                  children: [y.error ? (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)("h1", {
                       style: f.secondTabWidgetHeading,
                       children: "Unknown"
@@ -3502,14 +3504,14 @@ void main() {
                   }) : (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)("h1", {
                       style: f.secondTabWidgetHeading,
-                      children: b.name
+                      children: y.name
                     }), (0, a.jsx)("h3", {
                       style: f.secondTabWidgetDescription,
                       children: (0, a.jsxs)("span", {
-                        children: [X.A.followers, " ", b.members?.toLocaleString("en-US"), " Subscribers"]
+                        children: [X.A.followers, " ", y.members?.toLocaleString("en-US"), " Subscribers"]
                       })
                     })]
-                  }), (0, a.jsx)(en(), {
+                  }), (0, a.jsx)(eo(), {
                     href: `https://t.me/${O(t.second_tab.telegram)}`,
                     target: "_blank",
                     style: f.secondTabWidgetButton,
@@ -3555,7 +3557,7 @@ void main() {
                         children: [X.A.followers, " ", (r = w.subscribers) >= 1e6 ? (r / 1e6).toFixed(1) + "M" : r >= 1e3 ? (r / 1e3).toFixed(1) + "K" : r, " Subscribers"]
                       })
                     })]
-                  }), (0, a.jsx)(en(), {
+                  }), (0, a.jsx)(eo(), {
                     href: `https://youtube.com/channel/${w.channelId}`,
                     target: "_blank",
                     style: f.secondTabWidgetButton,
@@ -3603,8 +3605,8 @@ void main() {
                         children: [X.A.artistCount, " ", Number(N.artistCount)?.toLocaleString("en-US"), " Artists"]
                       })]
                     })]
-                  }), (0, a.jsx)(en(), {
-                    href: `https://last.fm/user/${V(t.second_tab.lastfm)}`,
+                  }), (0, a.jsx)(eo(), {
+                    href: `https://last.fm/user/${q(t.second_tab.lastfm)}`,
                     target: "_blank",
                     style: f.secondTabWidgetButton,
                     children: "View Profile"
@@ -3622,8 +3624,8 @@ void main() {
                 pageTooltipStyles: !0,
                 children: (0, a.jsx)("div", {
                   className: ek().timezoneClockWrapper,
-                  children: (0, a.jsx)(eF, {
-                    date: F ?? new Date(0),
+                  children: (0, a.jsx)(e$, {
+                    date: $ ?? new Date(0),
                     tz: t.second_tab.timezone,
                     faceStyle: t.clock_face_style ?? "dark"
                   })
@@ -3635,9 +3637,9 @@ void main() {
                   style: f.secondTabWidgetHeading,
                   children: (() => {
                     let e;
-                    if (!F) return "--:--:--";
+                    if (!$) return "--:--:--";
                     let r = "12h" === t.clock_time_format,
-                      s = (e = t.second_tab.timezone, F.toLocaleTimeString("en-US", {
+                      s = (e = t.second_tab.timezone, $.toLocaleTimeString("en-US", {
                         timeZone: e,
                         hour: "2-digit",
                         minute: "2-digit",
@@ -3645,19 +3647,19 @@ void main() {
                         hour12: r
                       }));
                     if (!r) return s;
-                    let i = s.match(/^([\d:]+)\s*(AM|PM)$/i);
-                    return i ? (0, a.jsxs)(a.Fragment, {
-                      children: [i[1], (0, a.jsx)("span", {
+                    let n = s.match(/^([\d:]+)\s*(AM|PM)$/i);
+                    return n ? (0, a.jsxs)(a.Fragment, {
+                      children: [n[1], (0, a.jsx)("span", {
                         className: ek().timezoneAmPm,
-                        children: i[2]
+                        children: n[2]
                       })]
                     }) : s
                   })()
                 }), (0, a.jsxs)("h3", {
                   className: ek().timezoneMeta,
                   children: [(0, a.jsx)("span", {
-                    children: F ? (n = t.second_tab.timezone, F.toLocaleDateString("en-US", {
-                      timeZone: n,
+                    children: $ ? (o = t.second_tab.timezone, $.toLocaleDateString("en-US", {
+                      timeZone: o,
                       weekday: "short",
                       month: "short",
                       day: "numeric"
@@ -3666,17 +3668,17 @@ void main() {
                     className: ek().timezoneSeparator,
                     children: "\xb7"
                   }), (0, a.jsx)("span", {
-                    children: F ? (i = t.second_tab.timezone, l = new Intl.DateTimeFormat("en-US", {
-                      timeZone: i,
+                    children: $ ? (n = t.second_tab.timezone, l = new Intl.DateTimeFormat("en-US", {
+                      timeZone: n,
                       timeZoneName: "short"
-                    }).formatToParts(F), l.find(e => "timeZoneName" === e.type)?.value ?? i) : "--"
+                    }).formatToParts($), l.find(e => "timeZoneName" === e.type)?.value ?? n) : "--"
                   })]
-                }), null !== $ && (0, a.jsx)("div", {
+                }), null !== P && (0, a.jsx)("div", {
                   className: ek().timezoneVisitor,
-                  children: 0 === $.diffMinutes ? (0, a.jsx)("span", {
+                  children: 0 === P.diffMinutes ? (0, a.jsx)("span", {
                     children: "Same timezone as you"
                   }) : (0, a.jsxs)("span", {
-                    children: ["Your time: ", $.visitorTime, " (", (c = Math.abs(o = $.diffMinutes), d = o >= 0 ? "+" : "-", u = Math.floor(c / 60), 0 == (m = c % 60) ? `${d}${u}h` : 0 === u ? `${d}${m}m` : `${d}${u}h ${m}m`), ")"]
+                    children: ["Your time: ", P.visitorTime, " (", (c = Math.abs(i = P.diffMinutes), d = i >= 0 ? "+" : "-", u = Math.floor(c / 60), 0 == (m = c % 60) ? `${d}${u}h` : 0 === u ? `${d}${m}m` : `${d}${u}h ${m}m`), ")"]
                   })
                 })]
               }), (0, a.jsxs)("span", {
@@ -3685,19 +3687,19 @@ void main() {
               })]
             }) : (0, a.jsxs)("h1", {
               className: ek().loadingText,
-              children: [Z[U], " Loading Widget..."]
+              children: [Z[z], " Loading Widget..."]
             })
           })
         })
       }
 
-      function e$({
+      function eP({
         userData: e,
         config: t,
         premiumConfig: r,
         presenceInformation: s,
-        animationStartClass: i,
-        isTemplatePreview: n,
+        animationStartClass: n,
+        isTemplatePreview: o,
         discordLoading: l
       }) {
         let c = p({
@@ -3714,8 +3716,8 @@ void main() {
             display: "inherit!important"
           } : {},
           v = "" !== t.display_name ? t.display_name : e.username,
-          b = e.discord?.user_badges ? t.user_badges.includes("server_booster") || t.user_badges.find(e => "server_booster" === e.name) ? [...e.discord.user_badges, "Server Booster"] : e.discord.user_badges : [],
-          y = `
+          y = e.discord?.user_badges ? t.user_badges.includes("server_booster") || t.user_badges.find(e => "server_booster" === e.name) ? [...e.discord.user_badges, "Server Booster"] : e.discord.user_badges : [],
+          b = `
                     .${ek().widgetContainerWrapper} { 
                         margin-top: 27px;
                     } 
@@ -3728,30 +3730,30 @@ void main() {
           C = j.length > 0 && S || !S && j.some(e => !0 === e.enabled),
           k = r.typewriter_speed ?? 5,
           A = r.typewriter_delete_speed ?? 7,
-          F = t.location,
-          T = i === o().unfoldStart,
-          $ = !!(t.discord_avatar_decoration && u),
-          P = r.border_radius > 35 && .15 * r.border_radius,
+          $ = t.location,
+          T = n === i().unfoldStart,
+          P = !!(t.discord_avatar_decoration && u),
+          U = r.border_radius > 35 && .15 * r.border_radius,
           E = t.username_effects,
-          U = t.text_color,
-          z = r.links_position ?? "center",
-          B = !!("" !== t.avatar || t.use_discord_avatar && m),
-          M = Object.keys(r.second_tab).length,
-          I = r.second_tab_enabled,
-          L = t.discord_presence_settings || {
+          z = t.text_color,
+          M = r.links_position ?? "center",
+          I = !!("" !== t.avatar || t.use_discord_avatar && m),
+          B = Object.keys(r.second_tab).length,
+          L = r.second_tab_enabled,
+          W = t.discord_presence_settings || {
             show_badges: !0,
             show_guild_tag: !0,
             idle_text: ""
           };
         return (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsxs)("div", {
-            className: `${ek().userProfile} ${T&&i}`,
-            children: [B ? (0, a.jsxs)("div", {
-              className: o().avatarWrapper,
-              children: [$ && (0, a.jsx)("img", {
+            className: `${ek().userProfile} ${T&&n}`,
+            children: [I ? (0, a.jsxs)("div", {
+              className: i().avatarWrapper,
+              children: [P && (0, a.jsx)("img", {
                 src: u,
                 alt: "",
-                className: o().avatarDecorationLayout2
+                className: i().avatarDecorationLayout2
               }), (0, a.jsx)("img", {
                 src: f,
                 alt: "",
@@ -3787,7 +3789,7 @@ void main() {
                           wrapperClassName: ek().usernameStyles,
                           cursorClassName: ek().usernameCursor,
                           pauseFor: 1e3,
-                          stringSplitter: tM
+                          stringSplitter: tL
                         }
                       })
                     })]
@@ -3795,13 +3797,13 @@ void main() {
                     username: v,
                     usernameEffect: E,
                     fontSize: c.username.fontSize,
-                    textColor: U
+                    textColor: z
                   }) : (0, a.jsx)("h1", {
                     style: {
                       ...c.username,
                       lineHeight: "41px"
                     },
-                    className: `${"rgb"===t.username_effects&&o().rainbowName}`,
+                    className: `${"rgb"===t.username_effects&&i().rainbowName}`,
                     children: v
                   })
                 }), !(!N && !C) && (0, a.jsx)(es, {
@@ -3819,7 +3821,7 @@ void main() {
                     delay: 600 / k,
                     deleteSpeed: 600 / A,
                     pauseFor: 900,
-                    stringSplitter: tM
+                    stringSplitter: tL
                   }
                 }) : t.description
               }), "none" !== g && (0, a.jsxs)("h2", {
@@ -3864,68 +3866,68 @@ void main() {
             })]
           }), r.second_tab_enabled && "enabled" === t.presence ? (0, a.jsx)("style", {
             children: `
-                    .${o().discordPresenceContainer} {
+                    .${i().discordPresenceContainer} {
                         max-width: initial;
                     }
-                    .${o().highlight} {
+                    .${i().highlight} {
                         display: none;
                     }
-                    .${o().discordActivity} {
+                    .${i().discordActivity} {
                         justify-content: space-between;
                         width: 100%;
                     }
                     @media (max-width: 720px) {
-                        .${o().discordUser} {
+                        .${i().discordUser} {
                             max-width: 100%
                         }
-                        .${o().highlight} {
+                        .${i().highlight} {
                             display: inline;
                         }
-                        ${r.second_tab_enabled&&"enabled"!==t.presence?y:""}
+                        ${r.second_tab_enabled&&"enabled"!==t.presence?b:""}
 
                         .${ek().secondTab} {
                             margin-top: 0px!important;
                         }
                     }
                     @media (max-width: 430px) {
-                        .${o().userContainer} {
+                        .${i().userContainer} {
                             width: 100%!important;
                         }
-                        .${o().audioPlayer} {
+                        .${i().audioPlayer} {
                             width: 100%!important;
                         }
                     }
                     `
           }) : (0, a.jsx)("style", {
             children: `
-                    .${o().discordPresenceContainer} {
+                    .${i().discordPresenceContainer} {
                         max-width: initial;
                     }
-                    .${o().discordActivity} {
+                    .${i().discordActivity} {
                         justify-content: space-between;
                         width: 100%;
                     }
                     @media (max-width: 720px) {
-                        ${"enabled"!==t.presence&&y}
+                        ${"enabled"!==t.presence&&b}
                     }
                     `
           }), (0, a.jsx)("div", {
-            className: `${ek().widgetContainerWrapper} ${T&&i}`,
+            className: `${ek().widgetContainerWrapper} ${T&&n}`,
             style: x,
             children: (0, a.jsxs)("div", {
               className: ek().widgetContainer,
               style: x,
               children: ["enabled" === t.presence && (0, a.jsx)("div", {
                 className: ek().widgetContainerFlex,
-                children: (0, a.jsx)(ey, {
+                children: (0, a.jsx)(eb, {
                   loading: l,
                   presenceInformation: s,
                   font: r.font,
                   description: t.description,
                   discordData: e.discord,
-                  discordUserBadges: I && M >= 1 ? [] : b,
+                  discordUserBadges: L && B >= 1 ? [] : y,
                   fontSize: r.font_size,
-                  discordPresenceSettings: L
+                  discordPresenceSettings: W
                 })
               }), r.second_tab_enabled && Object.keys(r.second_tab).length > 0 && (0, a.jsx)("div", {
                 className: ek().widgetContainerFlex,
@@ -3937,9 +3939,9 @@ void main() {
               })]
             })
           }), t.socials.length > 0 && (0, a.jsx)("div", {
-            className: `${ek().socialsWrapper} ${T&&i}`,
+            className: `${ek().socialsWrapper} ${T&&n}`,
             style: {
-              marginBottom: F ? "35px" : "20px"
+              marginBottom: $ ? "35px" : "20px"
             },
             children: (0, a.jsx)(eh, {
               socials: t.socials,
@@ -3950,14 +3952,14 @@ void main() {
               username: e.username,
               fontSize: r.font_size,
               style: {
-                justifyContent: "left" === z ? "flex-start" : "right" === z ? "flex-end" : "center"
+                justifyContent: "left" === M ? "flex-start" : "right" === M ? "flex-end" : "center"
               }
             })
           }), (0, a.jsxs)("div", {
-            className: `${ek().bottomLeftWrapper} ${o().bottomLeftWrapperGlobal} ${F&&o().bottomLeftWrapperLocation} ${T&&i}`,
+            className: `${ek().bottomLeftWrapper} ${i().bottomLeftWrapperGlobal} ${$&&i().bottomLeftWrapperLocation} ${T&&n}`,
             style: {
-              bottom: P ? 12 + P : 13,
-              left: P ? 15 + P : 18
+              bottom: U ? 12 + U : 13,
+              left: U ? 15 + U : 18
             },
             children: [(0, a.jsx)(ew, {
               challengeData: e._gpp_ch,
@@ -3965,37 +3967,37 @@ void main() {
               premiumConfig: r,
               views: t.page_views,
               containerBorderRadius: null,
-              isUnfold: "" === F && T,
-              animationStartClass: i,
-              isTemplatePreview: n
-            }), F && (0, a.jsxs)(a.Fragment, {
+              isUnfold: "" === $ && T,
+              animationStartClass: n,
+              isTemplatePreview: o
+            }), $ && (0, a.jsxs)(a.Fragment, {
               children: [!r.hide_views && (0, a.jsx)("div", {
                 className: ek().bottomLeftDivider
               }), (0, a.jsx)(ea.A, {
                 content: "Location",
                 pageTooltipStyles: !0,
                 children: (0, a.jsxs)("span", {
-                  className: o().locationMarker,
+                  className: i().locationMarker,
                   style: c.locationMarker,
-                  children: [X.A.locationMarker, " ", F]
+                  children: [X.A.locationMarker, " ", $]
                 })
               })]
             })]
           })]
         })
       }
-      var eP = r(13653),
-        eE = r.n(eP),
-        eU = r(54834);
+      var eU = r(13653),
+        eE = r.n(eU),
+        ez = r(54834);
 
-      function ez({
+      function eM({
         buttons: e,
         showUrl: t,
         font: r,
         fontSize: s,
-        textAlign: i
+        textAlign: n
       }) {
-        let o = p({
+        let i = p({
           font: r,
           fontSize: s
         });
@@ -4006,7 +4008,7 @@ void main() {
             style: {
               height: t ? 65 : ""
             },
-            children: (0, a.jsxs)(en(), {
+            children: (0, a.jsxs)(eo(), {
               href: e.button_url,
               target: "_blank",
               children: ["" !== e.button_icon && (0, a.jsx)("div", {
@@ -4019,28 +4021,29 @@ void main() {
               }), (0, a.jsxs)("div", {
                 className: eE().buttonInformationWrapper,
                 style: {
-                  marginLeft: "" != e.button_icon && "left" === i ? 60 : ""
+                  marginLeft: "" != e.button_icon && "left" === n ? 60 : ""
                 },
                 children: [(0, a.jsx)("h1", {
-                  style: o.buttonText,
+                  style: i.buttonText,
                   children: e.button_title
                 }), t && (0, a.jsxs)("span", {
                   className: eE().buttonShowUrl,
-                  style: o.buttonUrl,
-                  children: [eU.A.link, " ", e.button_url]
+                  style: i.buttonUrl,
+                  children: [ez.A.link, " ", e.button_url]
                 })]
               })]
             })
           }, r))
         })
       }
+      var eI = r(55442);
       let eB = [0, 8, 17, 29, 44, 62, 84, 110, 140, 174],
-        eM = (e, t) => {
+        eL = (e, t) => {
           let r = Number.parseFloat(e);
           return Number.isFinite(r) ? r : t
         };
 
-      function eI({
+      function eW({
         effect: e = "shimmer"
       }) {
         let t = (0, s.useRef)(null),
@@ -4050,51 +4053,51 @@ void main() {
           let a = t.current,
             s = a?.parentElement;
           if (!a || !s || window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) return;
-          let i = 0,
-            o = !1,
-            n = 0,
+          let n = 0,
+            i = !1,
+            o = 0,
             l = 0,
             c = !0,
             d = !document.hidden,
             u = () => {
-              let e, t, a, i, o, n, l, c, d;
-              e = window.getComputedStyle(s), t = s.clientWidth, a = s.clientHeight, i = eM(e.getPropertyValue("--profileBorderWidth"), 2), o = eM(e.getPropertyValue("--containerRadius"), 25), n = Math.max(0, t - i), l = Math.max(0, a - i), c = Math.min(Math.max(0, o - i / 2), n / 2, l / 2), d = 2 * (n + l - 4 * c) + 2 * Math.PI * c, r.current = {
+              let e, t, a, n, i, o, l, c, d;
+              e = window.getComputedStyle(s), t = s.clientWidth, a = s.clientHeight, n = eL(e.getPropertyValue("--profileBorderWidth"), 2), i = eL(e.getPropertyValue("--containerRadius"), 25), o = Math.max(0, t - n), l = Math.max(0, a - n), c = Math.min(Math.max(0, i - n / 2), o / 2, l / 2), d = 2 * (o + l - 4 * c) + 2 * Math.PI * c, r.current = {
                 width: t,
                 height: a,
                 radius: c,
-                borderWidth: i,
+                borderWidth: n,
                 perimeter: d
               }
             },
             m = e => {
-              if (!o) return;
+              if (!i) return;
               let t = r.current;
               if (t && t.perimeter > 0) {
-                let r = n > 0 ? e - n : 0;
-                n = e, l += r / 1e3 * 210, eB.forEach((e, r) => {
+                let r = o > 0 ? e - o : 0;
+                o = e, l += r / 1e3 * 210, eB.forEach((e, r) => {
                   let s = ((e, t) => {
                     let {
                       width: r,
                       height: a,
                       radius: s,
-                      borderWidth: i,
-                      perimeter: o
-                    } = e, n = i / 2, l = r - n, c = a - n, d = Math.max(0, l - n - 2 * s), u = Math.max(0, c - n - 2 * s), m = (t % o + o) % o;
+                      borderWidth: n,
+                      perimeter: i
+                    } = e, o = n / 2, l = r - o, c = a - o, d = Math.max(0, l - o - 2 * s), u = Math.max(0, c - o - 2 * s), m = (t % i + i) % i;
                     if (m <= d) return {
-                      x: n + s + m,
-                      y: n
+                      x: o + s + m,
+                      y: o
                     };
                     let f = Math.PI * s / 2;
                     if ((m -= d) <= f && s > 0) {
                       let e = -Math.PI / 2 + m / s;
                       return {
                         x: l - s + Math.cos(e) * s,
-                        y: n + s + Math.sin(e) * s
+                        y: o + s + Math.sin(e) * s
                       }
                     }
                     if ((m -= f) <= u) return {
                       x: l,
-                      y: n + s + m
+                      y: o + s + m
                     };
                     if ((m -= u) <= f && s > 0) {
                       let e = m / s;
@@ -4110,31 +4113,31 @@ void main() {
                     if ((m -= d) <= f && s > 0) {
                       let e = Math.PI / 2 + m / s;
                       return {
-                        x: n + s + Math.cos(e) * s,
+                        x: o + s + Math.cos(e) * s,
                         y: c - s + Math.sin(e) * s
                       }
                     }
                     if ((m -= f) <= u) return {
-                      x: n,
+                      x: o,
                       y: c - s - m
                     };
                     m -= u;
                     let p = Math.PI + (s > 0 ? m / s : 0);
                     return {
-                      x: n + s + Math.cos(p) * s,
-                      y: n + s + Math.sin(p) * s
+                      x: o + s + Math.cos(p) * s,
+                      y: o + s + Math.sin(p) * s
                     }
                   })(t, l - e);
                   a.style.setProperty(`--profile-shimmer-x-${r}`, `${s.x}px`), a.style.setProperty(`--profile-shimmer-y-${r}`, `${s.y}px`)
                 })
               }
-              i = requestAnimationFrame(m)
+              n = requestAnimationFrame(m)
             },
             f = () => {
-              o = !1, n = 0, i && (cancelAnimationFrame(i), i = 0)
+              i = !1, o = 0, n && (cancelAnimationFrame(n), n = 0)
             },
             p = () => {
-              !o && c && d && (o = !0, i = requestAnimationFrame(m))
+              !i && c && d && (i = !0, n = requestAnimationFrame(m))
             },
             h = () => {
               (d = !document.hidden) ? p(): f()
@@ -4152,20 +4155,19 @@ void main() {
           }
         }, [e]), "pulse" === e) ? (0, a.jsx)("div", {
           ref: t,
-          className: `${o().profileBorderLayer} ${o().profilePulseBorderLayer}`
+          className: `${i().profileBorderLayer} ${i().profilePulseBorderLayer}`
         }) : (0, a.jsx)("div", {
           ref: t,
-          className: `${o().profileBorderLayer} ${o().profileShimmerBorderLayer}`
+          className: `${i().profileBorderLayer} ${i().profileShimmerBorderLayer}`
         })
       }
-      let eL = /\[(\d{1,2}):(\d{2})(?:\.(\d{1,3}))?\]/g;
 
       function eD({
         animationStartClass: e,
         audioPlayer: t,
         setAudioData: r,
-        audioData: i,
-        setAudioPlayer: n,
+        audioData: n,
+        setAudioPlayer: o,
         audioContainerRef: l,
         currentFont: c,
         audioList: d,
@@ -4177,22 +4179,23 @@ void main() {
         revealOrder: x = 1,
         lyricsConfig: v = null
       }) {
-        let b = e => {
+        let y = e => {
             if (isNaN(e) || e === 1 / 0) return "--:--";
             let t = Math.floor(e / 60),
               r = Math.floor(e % 60);
             return isNaN(t) || isNaN(r) ? "--:--" : `${t}:${r<10?`0${r}`:r}`
           },
-          y = p({
+          b = p({
             font: c,
             fontSize: m
           }),
-          _ = b(t.currentTime),
-          j = b(t.duration),
+          _ = y(t.currentTime),
+          j = y(t.duration),
           w = Number.isFinite(t.duration) && t.duration > 0 ? Math.min(Math.max(t.currentTime / t.duration * 100, 0), 100) : 0,
           S = (0, s.useRef)(!1),
-          N = g ? "" : e,
-          C = (e, t, r) => g ? {
+          [N, C] = (0, s.useState)(Number(t.currentTime || 0)),
+          k = g ? "" : e,
+          A = (e, t, r) => g ? {
             "data-reveal-part": e,
             style: {
               ...r,
@@ -4201,108 +4204,90 @@ void main() {
           } : r ? {
             style: r
           } : {},
-          k = (0, s.useRef)({
+          $ = (0, s.useRef)({
             activePointerId: null,
             wasPlaying: !1,
             barRect: null,
             lastClientX: null
           }),
-          A = v?.lyrics_track_map && "object" == typeof v.lyrics_track_map ? v.lyrics_track_map : {},
-          F = String(i?.id ?? ""),
-          T = Object.values(A).find(e => e?.track_url === i?.url),
-          $ = A[F] || A.__single__ || T || null,
-          P = (0, s.useMemo)(() => (function(e) {
-            if (!e) return [];
-            let t = e.split("\n"),
-              r = [];
-            for (let e of t) {
-              let t = e.trim();
-              if (!t) continue;
-              let a = Array.from(t.matchAll(eL));
-              if (0 === a.length) continue;
-              let s = t.replace(eL, "").trim();
-              for (let e of a) {
-                let t = Number(e[1] || 0),
-                  a = Number(e[2] || 0),
-                  i = Number(((e[3] || "0") + "00").slice(0, 3));
-                if (!Number.isFinite(t) || !Number.isFinite(a) || !Number.isFinite(i)) continue;
-                let o = (60 * t + a) * 1e3 + i;
-                r.push({
-                  timeMs: o,
-                  text: s || "..."
-                })
-              }
-            }
-            return r.sort((e, t) => e.timeMs - t.timeMs)
-          })(String($?.synced_lyrics || "")), [$?.synced_lyrics]),
-          E = (0, s.useMemo)(() => (function(e, t) {
-            if (0 === e.length || !Number.isFinite(t) || t < 0) return -1;
-            let r = 1e3 * t,
-              a = -1;
-            for (let t = 0; t < e.length; t++)
-              if (e[t].timeMs <= r) a = t;
-              else break;
-            return a
-          })(P, t.currentTime), [P, t.currentTime]),
-          U = E >= 0 ? E : 0,
-          z = g && v?.show_lyrics === !0,
-          B = e => {
+          T = v?.lyrics_track_map && "object" == typeof v.lyrics_track_map ? v.lyrics_track_map : {},
+          P = String(n?.id ?? ""),
+          U = Object.values(T).find(e => e?.track_url === n?.url),
+          E = T[P] || T.__single__ || U || null,
+          z = (0, s.useMemo)(() => (0, eI.O5)(String(E?.synced_lyrics || "")), [E?.synced_lyrics]),
+          M = (0, s.useMemo)(() => (0, eI.L$)(z, N + .045), [z, N]),
+          I = M >= 0 ? z[M] : null,
+          B = (0, s.useMemo)(() => (0, eI.r$)(I?.words, N + .045), [I?.words, N]),
+          L = M >= 0 ? M : 0,
+          W = g && v?.show_lyrics === !0;
+        (0, s.useEffect)(() => {
+          let e = t.ref;
+          if (!W || !e || !t.playing) return void C(Number(t.currentTime || e?.currentTime || 0));
+          let r = 0,
+            a = -1,
+            s = () => {
+              let t = Number(e.currentTime || 0);
+              Math.abs(t - a) >= .018 && (a = t, C(t)), r = requestAnimationFrame(s)
+            };
+          return s(), () => cancelAnimationFrame(r)
+        }, [t.currentTime, t.playing, t.ref, W]);
+        let D = e => {
             if (!e || "object" != typeof e) return !1;
-            let t = A[String(e.id ?? "")],
-              r = Object.values(A).find(t => t?.track_url === e?.url),
-              a = t || A.__single__ || r;
+            let t = T[String(e.id ?? "")],
+              r = Object.values(T).find(t => t?.track_url === e?.url),
+              a = t || T.__single__ || r;
             return "string" == typeof a?.synced_lyrics && a.synced_lyrics.trim().length > 0
           },
-          M = e => {
+          F = e => {
             if (!Array.isArray(d) || 0 === d.length) return null;
             let t = d.length,
-              r = d.findIndex(e => e.id === i.id),
-              a = r >= 0 ? r : d.findIndex(e => e.url === i.url),
+              r = d.findIndex(e => e.id === n.id),
+              a = r >= 0 ? r : d.findIndex(e => e.url === n.url),
               s = a >= 0 ? a : 0;
             for (let r = 1; r < t; r++) {
               let a = d[(s + e * r + t) % t];
-              if (B(a)) return a
+              if (D(a)) return a
             }
             return null
           },
-          I = e => {
+          R = e => {
             let r = t.ref,
               a = r?.duration || t.duration;
             if (!r || !Number.isFinite(a) || a <= 0) return;
             let s = Math.min(Math.max(e, 0), a);
-            r.currentTime = s, n(e => ({
+            r.currentTime = s, o(e => ({
               ...e,
               currentTime: s,
               duration: a,
               ref: r
             }))
           },
-          L = e => {
-            let r = k.current.barRect,
+          G = e => {
+            let r = $.current.barRect,
               a = t.ref?.duration || t.duration;
             if (!r || !Number.isFinite(a) || a <= 0) return;
             let s = r.width > 0 ? (e - r.left) / r.width : 0;
-            k.current.lastClientX = e, I(s * a)
+            $.current.lastClientX = e, R(s * a)
           },
-          D = (e, r = !0) => {
+          H = (e, r = !0) => {
             let a = t.ref,
-              s = k.current.activePointerId === e.pointerId && k.current.wasPlaying;
-            k.current.activePointerId === e.pointerId && (e.preventDefault(), L(r ? e.clientX : k.current.lastClientX ?? e.clientX)), e.currentTarget.hasPointerCapture(e.pointerId) && e.currentTarget.releasePointerCapture(e.pointerId), k.current = {
+              s = $.current.activePointerId === e.pointerId && $.current.wasPlaying;
+            $.current.activePointerId === e.pointerId && (e.preventDefault(), G(r ? e.clientX : $.current.lastClientX ?? e.clientX)), e.currentTarget.hasPointerCapture(e.pointerId) && e.currentTarget.releasePointerCapture(e.pointerId), $.current = {
               activePointerId: null,
               wasPlaying: !1,
               barRect: null,
               lastClientX: null
-            }, a && s && W(a).then(e => {
-              e && n(e => ({
+            }, a && s && O(a).then(e => {
+              e && o(e => ({
                 ...e,
                 playing: !0,
                 ref: a
               }))
             })
           },
-          W = e => {
+          O = e => {
             let t = e.play();
-            return t && "function" == typeof t.then ? t.then(() => !0).catch(t => (n(e => ({
+            return t && "function" == typeof t.then ? t.then(() => !0).catch(t => (o(e => ({
               ...e,
               playing: !1
             })), t?.name === "NotSupportedError" ? console.warn("Audio playback failed: unsupported source/codec.", {
@@ -4310,50 +4295,50 @@ void main() {
               error: t
             }) : console.warn("Audio playback failed.", t), !1)) : Promise.resolve(!0)
           },
-          R = () => {
+          V = () => {
             if (!t.ref || !Array.isArray(d) || 0 === d.length) return;
-            let e = d.findIndex(e => e.id === i.id);
+            let e = d.findIndex(e => e.id === n.id);
             if (1 === d.length) {
               t.ref.currentTime = 0;
               return
             }
-            if (z) {
-              let e = M(-1);
+            if (W) {
+              let e = F(-1);
               if (!e) return;
-              H(e);
+              Y(e);
               return
             }
-            H(0 === e ? d[d.length - 1] : d[e - 1])
+            Y(0 === e ? d[d.length - 1] : d[e - 1])
           },
-          G = () => {
+          q = () => {
             if (!t.ref || !Array.isArray(d) || 0 === d.length) return;
-            let e = d.findIndex(e => e.id === i.id);
+            let e = d.findIndex(e => e.id === n.id);
             if (1 === d.length) {
               t.ref.currentTime = 0;
               return
             }
-            if (z) {
-              let e = M(1);
+            if (W) {
+              let e = F(1);
               if (!e) return;
-              H(e);
+              Y(e);
               return
             }
-            H(e === d.length - 1 ? d[0] : d[e + 1])
+            Y(e === d.length - 1 ? d[0] : d[e + 1])
           },
-          H = e => {
+          Y = e => {
             let a = t.ref;
             if (!a) return;
             let s = () => {
-                n(e => ({
+                o(e => ({
                   ...e,
                   currentTime: a.currentTime,
                   duration: a.duration,
                   ref: a
                 }))
               },
-              i = () => {
-                W(a).then(e => {
-                  e && (n(e => ({
+              n = () => {
+                O(a).then(e => {
+                  e && (o(e => ({
                     ...e,
                     playing: !0,
                     ref: a
@@ -4361,75 +4346,75 @@ void main() {
                     muted: !1,
                     volume: 100
                   }), a.addEventListener("timeupdate", s))
-                }), a.removeEventListener("canplaythrough", i)
+                }), a.removeEventListener("canplaythrough", n)
               };
-            a.pause(), a.removeEventListener("timeupdate", s), a.removeEventListener("canplaythrough", i), a.src.includes(e.url) || (a.src = e.url), a.currentTime = 0, a.volume = .25, a.loop = !0, r({
+            a.pause(), a.removeEventListener("timeupdate", s), a.removeEventListener("canplaythrough", n), a.src.includes(e.url) || (a.src = e.url), a.currentTime = 0, a.volume = .25, a.loop = !0, r({
               ...e,
               url: e.url,
               title: e.title,
               cover: e.cover,
               id: e.id
-            }), n(e => ({
+            }), o(e => ({
               ...e,
               playing: !1,
               currentTime: 0,
               duration: 0,
               ref: a
-            })), a.readyState >= 3 ? i() : a.addEventListener("canplaythrough", i)
+            })), a.readyState >= 3 ? n() : a.addEventListener("canplaythrough", n)
           },
-          O = e => {
+          Z = e => {
             S.current || (S.current = !0, e(), setTimeout(() => {
               S.current = !1
             }, 250))
           };
         return (0, a.jsxs)("div", {
-          className: `${o().audioPlayer} ${N} ${f}`,
+          className: `${i().audioPlayer} ${k} ${f}`,
           ref: l,
-          children: [f && !z && (0, a.jsx)(eI, {
+          children: [f && !W && (0, a.jsx)(eW, {
             effect: h
-          }), z && (0, a.jsxs)("div", {
-            className: o().audioLyricsBackdropLayer,
-            children: [i.cover && (0, a.jsx)("div", {
-              className: o().audioLyricsCoverBackdrop,
+          }), W && (0, a.jsxs)("div", {
+            className: i().audioLyricsBackdropLayer,
+            children: [n.cover && (0, a.jsx)("div", {
+              className: i().audioLyricsCoverBackdrop,
               style: {
-                backgroundImage: `url("${i.cover}")`
+                backgroundImage: `url("${n.cover}")`
               }
             }), (0, a.jsx)("span", {
-              className: o().audioLyricsBlobPrimary
+              className: i().audioLyricsBlobPrimary
             }), (0, a.jsx)("span", {
-              className: o().audioLyricsBlobSecondary
+              className: i().audioLyricsBlobSecondary
             })]
           }), (0, a.jsxs)("div", {
-            className: o().audioPlayerInner,
-            children: [i.cover && "" !== i.cover ? (0, a.jsx)("img", {
-              src: i.cover,
-              ...C("audio-cover", 0, {
+            className: i().audioPlayerInner,
+            children: [n.cover && "" !== n.cover ? (0, a.jsx)("img", {
+              src: n.cover,
+              ...A("audio-cover", 0, {
                 borderRadius: "calc(var(--containerRadius) - 10px)"
               }),
               alt: "",
-              className: o().audioCover
+              className: i().audioCover
             }) : (0, a.jsx)("span", {
-              className: o().audioIcon,
-              ...C("audio-icon", 0, {
+              className: i().audioIcon,
+              ...A("audio-icon", 0, {
                 borderRadius: "calc(var(--containerRadius) - 10px)"
               }),
-              children: eU.A.audioIcon
+              children: ez.A.audioIcon
             }), (0, a.jsxs)("div", {
-              className: `${o().audioContainer}`,
-              ...C("audio-controls", 1),
+              className: `${i().audioContainer}`,
+              ...A("audio-controls", 1),
               children: [(0, a.jsx)("h1", {
-                className: o().audioTitle,
-                style: y.audioPlayerTitle,
-                children: i.title
+                className: i().audioTitle,
+                style: b.audioPlayerTitle,
+                children: n.title
               }), (0, a.jsxs)("div", {
-                className: o().audioControls,
+                className: i().audioControls,
                 children: [(0, a.jsxs)("div", {
-                  className: o().audioProgressBarWrapper,
+                  className: i().audioProgressBarWrapper,
                   children: [(0, a.jsx)("span", {
-                    style: y.audioPlayerControls,
+                    style: b.audioPlayerControls,
                     children: _
                   }), (0, a.jsx)("div", {
-                    className: o().audioProgressBar,
+                    className: i().audioProgressBar,
                     tabIndex: 0,
                     "aria-valuemin": 0,
                     "aria-valuemax": Math.round(t.duration || 0),
@@ -4439,7 +4424,7 @@ void main() {
                       if (!r) return;
                       e.preventDefault();
                       let a = e.currentTarget.getBoundingClientRect();
-                      k.current = {
+                      $.current = {
                         activePointerId: e.pointerId,
                         wasPlaying: !r.paused,
                         barRect: {
@@ -4447,110 +4432,129 @@ void main() {
                           width: a.width
                         },
                         lastClientX: e.clientX
-                      }, r.paused || (r.pause(), n(e => ({
+                      }, r.paused || (r.pause(), o(e => ({
                         ...e,
                         playing: !1,
                         ref: r
-                      }))), e.currentTarget.setPointerCapture(e.pointerId), L(e.clientX)
+                      }))), e.currentTarget.setPointerCapture(e.pointerId), G(e.clientX)
                     },
                     onPointerMove: e => {
-                      1 === e.buttons && k.current.activePointerId === e.pointerId && (e.preventDefault(), L(e.clientX))
+                      1 === e.buttons && $.current.activePointerId === e.pointerId && (e.preventDefault(), G(e.clientX))
                     },
-                    onPointerUp: e => D(e),
-                    onPointerCancel: e => D(e, !1),
-                    onLostPointerCapture: e => D(e, !1),
+                    onPointerUp: e => H(e),
+                    onPointerCancel: e => H(e, !1),
+                    onLostPointerCapture: e => H(e, !1),
                     onKeyDown: e => {
                       let r = t.ref?.duration || t.duration;
-                      Number.isFinite(r) && !(r <= 0) && ("ArrowLeft" === e.key || "ArrowDown" === e.key ? (e.preventDefault(), I(t.currentTime - 5)) : "ArrowRight" === e.key || "ArrowUp" === e.key ? (e.preventDefault(), I(t.currentTime + 5)) : "Home" === e.key ? (e.preventDefault(), I(0)) : "End" === e.key && (e.preventDefault(), I(r)))
+                      Number.isFinite(r) && !(r <= 0) && ("ArrowLeft" === e.key || "ArrowDown" === e.key ? (e.preventDefault(), R(t.currentTime - 5)) : "ArrowRight" === e.key || "ArrowUp" === e.key ? (e.preventDefault(), R(t.currentTime + 5)) : "Home" === e.key ? (e.preventDefault(), R(0)) : "End" === e.key && (e.preventDefault(), R(r)))
                     },
                     children: (0, a.jsxs)("div", {
-                      className: o().audioProgressTrack,
+                      className: i().audioProgressTrack,
                       children: [(0, a.jsx)("div", {
-                        className: o().audioProgress
+                        className: i().audioProgress
                       }), (0, a.jsx)("div", {
-                        className: o().audioProgressPlaying,
+                        className: i().audioProgressPlaying,
                         style: {
                           width: w + "%"
                         }
                       }), (0, a.jsx)("div", {
-                        className: o().audioProgressThumb,
+                        className: i().audioProgressThumb,
                         style: {
                           left: w + "%"
                         }
                       })]
                     })
                   }), (0, a.jsx)("span", {
-                    style: y.audioPlayerControls,
+                    style: b.audioPlayerControls,
                     children: j
                   })]
                 }), (0, a.jsxs)("div", {
-                  className: o().controlButtons,
+                  className: i().controlButtons,
                   children: [(0, a.jsx)("span", {
-                    className: o().sideControlButton,
-                    onClick: () => O(R),
-                    children: eU.A.skipBackward
+                    className: i().sideControlButton,
+                    onClick: () => Z(V),
+                    children: ez.A.skipBackward
                   }), (0, a.jsx)("span", {
-                    className: o().mainControlButton,
+                    className: i().mainControlButton,
                     onClick: () => {
                       let e = t.ref;
-                      e && (t.playing ? (e.pause(), n(e => ({
+                      e && (t.playing ? (e.pause(), o(e => ({
                         ...e,
                         playing: !1
-                      }))) : W(e).then(e => {
-                        e && n(e => ({
+                      }))) : O(e).then(e => {
+                        e && o(e => ({
                           ...e,
                           playing: !0
                         }))
                       }))
                     },
-                    children: t.playing ? eU.A.pause : eU.A.play
+                    children: t.playing ? ez.A.pause : ez.A.play
                   }), (0, a.jsx)("span", {
-                    className: o().sideControlButton,
-                    onClick: () => O(G),
-                    children: eU.A.skipForward
+                    className: i().sideControlButton,
+                    onClick: () => Z(q),
+                    children: ez.A.skipForward
                   })]
                 })]
               })]
             })]
-          }), z && (0, a.jsx)("div", {
-            className: o().audioLyricsShell,
-            ...C("audio-lyrics", 2),
-            children: P.length > 0 ? (0, a.jsx)("div", {
-              className: o().audioLyricsViewport,
-              children: P.map((e, t) => {
-                let r = t - U,
+          }), W && (0, a.jsx)("div", {
+            className: i().audioLyricsShell,
+            ...A("audio-lyrics", 2),
+            children: z.length > 0 ? (0, a.jsx)("div", {
+              className: i().audioLyricsViewport,
+              children: z.map((e, t) => {
+                let r = t - L,
                   s = Math.abs(r);
                 if (s > 8) return null;
-                let i = t === E,
-                  n = E >= 0 && t < E,
+                let n = t === M,
+                  o = M >= 0 && t < M,
                   l = {
                     "--lyrics-line-offset": String(r)
                   };
                 return (0, a.jsx)("p", {
                   "data-lyrics-line": t,
                   style: l,
-                  className: `${o().audioLyricsLine} ${i?o().audioLyricsLineActive:""} ${s<=1?o().audioLyricsLineNear:""} ${s>4?o().audioLyricsLineFaded:""} ${n?o().audioLyricsLinePast:""}`,
-                  children: (0, a.jsx)("span", {
-                    className: o().audioLyricsLineText,
+                  className: `${i().audioLyricsLine} ${n?i().audioLyricsLineActive:""} ${s<=1?i().audioLyricsLineNear:""} ${s>4?i().audioLyricsLineFaded:""} ${o?i().audioLyricsLinePast:""}`,
+                  children: e.words && e.words.length > 0 ? (0, a.jsx)("span", {
+                    className: `${i().audioLyricsLineText} ${i().audioLyricsLineTextEnhanced}`,
+                    children: e.words.map((e, t) => {
+                      var r;
+                      let s, o = n && t === B,
+                        l = n && B >= 0 && t < B,
+                        c = (s = String((r = e.text) || "").match(/^(\W*)(.*?)([\s.,!?;:)"'\]]*)$/), {
+                          prefix: s?.[1] || "",
+                          body: s?.[2] || r,
+                          suffix: s?.[3] || ""
+                        });
+                      return (0, a.jsxs)("span", {
+                        className: `${i().audioLyricsWord} ${o?i().audioLyricsWordActive:""} ${l?i().audioLyricsWordPast:""} ${n&&!l&&!o?i().audioLyricsWordUpcoming:""}`,
+                        children: [c.prefix, (0, a.jsx)("span", {
+                          className: i().audioLyricsWordBody,
+                          children: c.body
+                        }), c.suffix]
+                      }, `${e.timeMs}-${t}-${e.text}`)
+                    })
+                  }) : (0, a.jsx)("span", {
+                    className: i().audioLyricsLineText,
                     children: e.text
                   })
                 }, `${e.timeMs}-${t}`)
               })
             }) : (0, a.jsx)("p", {
-              className: o().audioLyricsEmpty,
+              className: i().audioLyricsEmpty,
               children: "No synced lyrics applied for this track yet."
             })
           })]
         })
       }
 
-      function eW({
+      function eF({
         userData: e,
         config: t,
         premiumConfig: r,
         presenceInformation: s,
-        animationStartClass: i,
-        setAudioData: n,
+        animationStartClass: n,
+        setAudioData: o,
         audioData: l,
         audioPlayer: c,
         setAudioPlayer: d,
@@ -4565,8 +4569,8 @@ void main() {
           }),
           x = ev(s),
           v = x.avatar || "",
-          b = t.use_discord_avatar && v ? v : t.avatar,
-          y = "" !== t.display_name ? t.display_name : e.username,
+          y = t.use_discord_avatar && v ? v : t.avatar,
+          b = "" !== t.display_name ? t.display_name : e.username,
           _ = x.avatarDecoration || "",
           j = t.user_badges,
           w = t.custom_badges,
@@ -4575,28 +4579,28 @@ void main() {
           C = j.length > 0 && S || !S && j.some(e => !0 === e.enabled),
           k = w.length > 0 && N || !N && w.some(e => !0 === e.enabled),
           A = r.typewriter_speed ?? 5,
-          F = r.typewriter_delete_speed ?? 7,
+          $ = r.typewriter_delete_speed ?? 7,
           T = !!(t.discord_avatar_decoration && _),
-          $ = i === o().unfoldStart,
-          P = t.username_effects,
+          P = n === i().unfoldStart,
+          U = t.username_effects,
           E = t.text_color,
-          U = !!("" !== t.avatar || t.use_discord_avatar && v);
+          z = !!("" !== t.avatar || t.use_discord_avatar && v);
         return (0, a.jsx)(a.Fragment, {
           children: (0, a.jsxs)("div", {
             className: eE().userInformation,
-            children: [U && (0, a.jsxs)("div", {
-              className: o().avatarWrapper,
+            children: [z && (0, a.jsxs)("div", {
+              className: i().avatarWrapper,
               children: [T && (0, a.jsx)("img", {
                 src: _,
                 alt: "",
-                className: o().avatarDecorationLayout3
+                className: i().avatarDecorationLayout3
               }), (0, a.jsx)("img", {
-                src: b,
+                src: y,
                 alt: "",
                 className: eE().avatar
               })]
             }), (0, a.jsxs)("div", {
-              className: `${eE().userDescription} ${$&&i}`,
+              className: `${eE().userDescription} ${P&&n}`,
               children: [(0, a.jsx)(ea.A, {
                 content: `UID ${e.uid.toLocaleString("en-US")}`,
                 offset: 0,
@@ -4613,26 +4617,26 @@ void main() {
                     className: "username-typewriter",
                     children: (0, a.jsx)(et(), {
                       options: {
-                        strings: [y],
+                        strings: [b],
                         autoStart: !0,
                         loop: !0,
                         wrapperClassName: eE().username,
                         cursorClassName: eE().usernameCursor,
                         pauseFor: 1e3,
-                        stringSplitter: tM
+                        stringSplitter: tL
                       }
                     })
                   })]
-                }) : "fuzzy" === P || "shuffle" === P ? (0, a.jsx)(eS.A, {
-                  username: y,
-                  usernameEffect: P,
+                }) : "fuzzy" === U || "shuffle" === U ? (0, a.jsx)(eS.A, {
+                  username: b,
+                  usernameEffect: U,
                   fontSize: g.username.fontSize,
                   textColor: E,
                   marginBottom: "7px"
                 }) : (0, a.jsx)("h1", {
-                  className: `${eE().username} ${"rgb"===t.username_effects&&o().rainbowName}`,
+                  className: `${eE().username} ${"rgb"===t.username_effects&&i().rainbowName}`,
                   style: g.username,
-                  children: y
+                  children: b
                 })
               }), !(!C && !k) && (0, a.jsx)("div", {
                 className: eE().badgeContainerWrapper,
@@ -4649,22 +4653,22 @@ void main() {
                     autoStart: !0,
                     loop: !0,
                     delay: 600 / A,
-                    deleteSpeed: 600 / F,
+                    deleteSpeed: 600 / $,
                     pauseFor: 900,
-                    stringSplitter: tM
+                    stringSplitter: tL
                   }
                 }) : t.description
               }), t.location && (0, a.jsx)(ea.A, {
                 content: "Location",
                 pageTooltipStyles: !0,
                 children: (0, a.jsxs)("span", {
-                  className: o().locationMarker,
+                  className: i().locationMarker,
                   style: g.locationMarker,
                   children: [X.A.locationMarker, " ", t.location]
                 })
               })]
             }), t.socials.length > 0 && (0, a.jsx)("div", {
-              className: `${eE().socialWrapper} ${$&&i}`,
+              className: `${eE().socialWrapper} ${P&&n}`,
               children: (0, a.jsx)(eh, {
                 socials: t.socials,
                 isMonochrome: t.monochrome,
@@ -4677,9 +4681,9 @@ void main() {
             }), t.audio_player && "" !== l.url && (0, a.jsx)("div", {
               className: eE().audioPlayerWrapper,
               children: (0, a.jsx)(eD, {
-                animationStartClass: i,
+                animationStartClass: n,
                 audioPlayer: c,
-                setAudioData: n,
+                setAudioData: o,
                 audioData: l,
                 setAudioPlayer: d,
                 audioContainerRef: u,
@@ -4691,8 +4695,8 @@ void main() {
                 profileBorderEffect: h
               })
             }), r.buttons.length > 0 && (0, a.jsx)("div", {
-              className: `${eE().buttonWrapper} ${$&&i}`,
-              children: (0, a.jsx)(ez, {
+              className: `${eE().buttonWrapper} ${P&&n}`,
+              children: (0, a.jsx)(eM, {
                 buttons: r.buttons,
                 showUrl: r.show_url,
                 font: r.font,
@@ -4707,19 +4711,19 @@ void main() {
         eG = r.n(eR),
         eH = r(98241),
         eO = r.n(eH),
-        eq = r(81934);
+        eV = r(81934);
 
-      function eV({
+      function eq({
         username: e,
         sessionData: t
       }) {
         let r = (0, ed.kj)(),
-          i = t?.session ?? null,
-          o = i?.username,
-          n = `https://guns.lol/${o?.endsWith(".")?o+"/":o}`,
+          n = t?.session ?? null,
+          i = n?.username,
+          o = `https://guns.lol/${i?.endsWith(".")?i+"/":i}`,
           [l, c] = (0, s.useState)(!1),
           d = async () => {
-            n && (await navigator.clipboard.writeText(n), c(!0), setTimeout(() => c(!1), 1e3))
+            o && (await navigator.clipboard.writeText(o), c(!0), setTimeout(() => c(!1), 1e3))
           };
         return (0, a.jsx)("div", {
           className: eO().containerWrapper,
@@ -4729,7 +4733,7 @@ void main() {
               className: `${eO().container} ${eO().card}`,
               children: [(0, a.jsx)("div", {
                 className: eO().headIcon,
-                children: eU.A.error
+                children: ez.A.error
               }), (0, a.jsx)("h1", {
                 className: eO().headline,
                 children: r("userpage.claim_user_page.title")
@@ -4738,42 +4742,42 @@ void main() {
                 children: r("userpage.claim_user_page.description")
               }), (0, a.jsxs)("div", {
                 className: eO().actionRow,
-                children: [(0, a.jsx)(eq.A, {
+                children: [(0, a.jsx)(eV.A, {
                   href: "/",
                   className: `${eO().button} ${eO().buttonSecondary}`,
                   children: r("userpage.claim_user_page.home_button")
-                }), (0, a.jsx)(eq.A, {
+                }), (0, a.jsx)(eV.A, {
                   href: `/register?claim=${e}&ref=claim_user_page`,
                   className: `${eO().button} ${eO().buttonPrimary}`,
                   children: r("userpage.claim_user_page.claim_button")
                 })]
               })]
-            }), o && (0, a.jsxs)("div", {
+            }), i && (0, a.jsxs)("div", {
               className: eO().loggedInContainer,
               children: [(0, a.jsxs)("div", {
                 className: eO().loggedLeft,
-                children: [eU.A.user, (0, a.jsx)("span", {
+                children: [ez.A.user, (0, a.jsx)("span", {
                   children: r("userpage.claim_user_page.logged_in_as", {
                     username: (0, a.jsxs)("b", {
-                      children: ["@", o]
+                      children: ["@", i]
                     })
                   })
                 })]
               }), (0, a.jsxs)("div", {
                 className: eO().loggedActions,
                 children: [(0, a.jsxs)("a", {
-                  href: `/${o}`,
+                  href: `/${i}`,
                   className: `${eO().button} ${eO().buttonSecondary}`,
-                  children: [eU.A.link, " ", r("userpage.claim_user_page.open_button")]
+                  children: [ez.A.link, " ", r("userpage.claim_user_page.open_button")]
                 }), (0, a.jsxs)("button", {
                   onClick: d,
                   className: `${eO().button} ${eO().buttonSecondary}`,
-                  children: [eU.A.copy, r(l ? "userpage.claim_user_page.copied_text" : "userpage.claim_user_page.copy_text")]
+                  children: [ez.A.copy, r(l ? "userpage.claim_user_page.copied_text" : "userpage.claim_user_page.copy_text")]
                 }), (0, a.jsxs)("a", {
                   href: "https://help.guns.lol/getting-started/share-profile#how-to-copy-your-gunslol-url--qr-code",
                   target: "_blank",
                   className: `${eO().button} ${eO().buttonSecondary}`,
-                  children: [eU.A.helpCenter, " ", r("userpage.claim_user_page.help_button")]
+                  children: [ez.A.helpCenter, " ", r("userpage.claim_user_page.help_button")]
                 })]
               })]
             })]
@@ -4787,16 +4791,16 @@ void main() {
           className: eO().containerWrapper,
           children: (0, a.jsxs)("div", {
             className: eO().container,
-            children: [eU.A.error, (0, a.jsx)("h1", {
+            children: [ez.A.error, (0, a.jsx)("h1", {
               children: e("userpage.username_error.title")
             }), (0, a.jsx)("h3", {
               children: e("userpage.username_error.description")
             }), (0, a.jsxs)("div", {
               className: eO().containerButtons,
-              children: [(0, a.jsx)(eq.A, {
+              children: [(0, a.jsx)(eV.A, {
                 href: "/",
                 children: e("userpage.username_error.home_button")
-              }), (0, a.jsx)(en(), {
+              }), (0, a.jsx)(eo(), {
                 href: "https://help.guns.lol/general/contact-us",
                 target: "_blank",
                 children: e("userpage.username_error.contact_button")
@@ -4814,9 +4818,9 @@ void main() {
           className: eO().containerWrapper,
           children: (0, a.jsxs)("div", {
             className: eO().container,
-            children: [eU.A.error, (0, a.jsx)("h1", {
+            children: [ez.A.error, (0, a.jsx)("h1", {
               children: t("userpage.username_ban.title", {
-                guns: (0, a.jsx)(eq.A, {
+                guns: (0, a.jsx)(eV.A, {
                   href: "/",
                   style: {
                     textDecoration: "none",
@@ -4831,10 +4835,10 @@ void main() {
               })
             }), (0, a.jsxs)("div", {
               className: eO().containerButtons,
-              children: [(0, a.jsx)(eq.A, {
+              children: [(0, a.jsx)(eV.A, {
                 href: "/",
                 children: t("userpage.username_ban.home_button")
-              }), (0, a.jsx)(en(), {
+              }), (0, a.jsx)(eo(), {
                 href: "https://help.guns.lol/general/contact-us",
                 target: "_blank",
                 children: t("userpage.username_ban.contact_button")
@@ -4850,16 +4854,16 @@ void main() {
           className: eO().containerWrapper,
           children: (0, a.jsxs)("div", {
             className: eO().container,
-            children: [eU.A.error, (0, a.jsx)("h1", {
+            children: [ez.A.error, (0, a.jsx)("h1", {
               children: e("userpage.username_unverified.title")
             }), (0, a.jsx)("h3", {
               children: e("userpage.username_unverified.description")
             }), (0, a.jsxs)("div", {
               className: eO().containerButtons,
-              children: [(0, a.jsx)(eq.A, {
+              children: [(0, a.jsx)(eV.A, {
                 href: "/",
                 children: e("userpage.username_unverified.home_button")
-              }), (0, a.jsx)(en(), {
+              }), (0, a.jsx)(eo(), {
                 href: "https://help.guns.lol/general/contact-us",
                 target: "_blank",
                 children: e("userpage.username_unverified.contact_button")
@@ -4875,16 +4879,16 @@ void main() {
           className: eO().containerWrapper,
           children: (0, a.jsxs)("div", {
             className: eO().container,
-            children: [eU.A.error, (0, a.jsx)("h1", {
+            children: [ez.A.error, (0, a.jsx)("h1", {
               children: e("userpage.username_pending_deletion.title")
             }), (0, a.jsx)("h3", {
               children: e("userpage.username_pending_deletion.description")
             }), (0, a.jsxs)("div", {
               className: `${eO().containerButtons} ${eO().inactiveAccountButtons}`,
-              children: [(0, a.jsx)(eq.A, {
+              children: [(0, a.jsx)(eV.A, {
                 href: "/",
                 children: e("userpage.username_pending_deletion.home_button")
-              }), (0, a.jsx)(en(), {
+              }), (0, a.jsx)(eo(), {
                 href: "https://help.guns.lol/general/contact-us",
                 target: "_blank",
                 children: e("userpage.username_pending_deletion.contact_button")
@@ -4903,8 +4907,8 @@ void main() {
         userData: e,
         config: t,
         premiumConfig: r,
-        presenceInformation: i,
-        animationStartClass: n,
+        presenceInformation: n,
+        animationStartClass: o,
         isTemplatePreview: l
       }) {
         let [c, d] = (0, s.useState)(0);
@@ -4914,7 +4918,7 @@ void main() {
           };
           return e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e)
         }, []);
-        let u = ev(i),
+        let u = ev(n),
           m = u.avatar || "",
           f = t.use_discord_avatar && m ? m : t.avatar,
           h = u.avatarDecoration || "",
@@ -4924,23 +4928,23 @@ void main() {
             fontSize: r.font_size
           }),
           v = t.user_badges,
-          b = t.custom_badges,
-          y = v.length > 0 && v[0] && "string" == typeof v[0],
-          _ = b.length > 0 && "string" == typeof b[0][0],
-          j = v.length > 0 && y || !y && v.some(e => !0 === e.enabled),
-          w = b.length > 0 && _ || !_ && b.some(e => !0 === e.enabled),
+          y = t.custom_badges,
+          b = v.length > 0 && v[0] && "string" == typeof v[0],
+          _ = y.length > 0 && "string" == typeof y[0][0],
+          j = v.length > 0 && b || !b && v.some(e => !0 === e.enabled),
+          w = y.length > 0 && _ || !_ && y.some(e => !0 === e.enabled),
           S = r.typewriter_speed ?? 5,
           N = r.typewriter_delete_speed ?? 7,
-          C = n === o().unfoldStart,
+          C = o === i().unfoldStart,
           k = "" !== t.display_name ? t.display_name : e.username,
           A = t.location,
-          F = r.border_radius > 35 && .15 * r.border_radius,
+          $ = r.border_radius > 35 && .15 * r.border_radius,
           T = !!("" !== t.avatar || t.use_discord_avatar && m),
-          $ = void 0 !== r.avatar_radius ? r.avatar_radius : 35,
-          P = t.username_effects,
+          P = void 0 !== r.avatar_radius ? r.avatar_radius : 35,
+          U = t.username_effects,
           E = t.text_color,
-          U = r.links_position ?? "center",
-          z = "" !== A || !1 === r.hide_views;
+          z = r.links_position ?? "center",
+          M = "" !== A || !1 === r.hide_views;
         return (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsxs)("div", {
             className: e2().userInformation,
@@ -4949,21 +4953,21 @@ void main() {
               marginBottom: 25 * (c <= 520 && 0 === t.socials.length)
             },
             children: [T && (0, a.jsxs)("div", {
-              className: `${o().avatarWrapper} ${e2().avatarWrapper}`,
+              className: `${i().avatarWrapper} ${e2().avatarWrapper}`,
               children: [g && (0, a.jsx)("img", {
                 src: h,
                 alt: "",
-                className: o().avatarDecorationLayout4
+                className: i().avatarDecorationLayout4
               }), (0, a.jsx)("img", {
                 src: f,
                 alt: "",
                 className: e2().avatar,
                 style: {
-                  borderRadius: `${$}px`
+                  borderRadius: `${P}px`
                 }
               })]
             }), (0, a.jsxs)("div", {
-              className: `${e2().userDescription} ${C&&n}`,
+              className: `${e2().userDescription} ${C&&o}`,
               children: [(0, a.jsxs)("div", {
                 className: e2().usernameWrapper,
                 children: [(0, a.jsx)(ea.A, {
@@ -4988,17 +4992,17 @@ void main() {
                           wrapperClassName: e2().userDescriptionUsername,
                           cursorClassName: e2().usernameCursor,
                           pauseFor: 1e3,
-                          stringSplitter: tM
+                          stringSplitter: tL
                         }
                       })
                     })]
-                  }) : "fuzzy" === P || "shuffle" === P ? (0, a.jsx)(eS.A, {
+                  }) : "fuzzy" === U || "shuffle" === U ? (0, a.jsx)(eS.A, {
                     username: k,
-                    usernameEffect: P,
+                    usernameEffect: U,
                     fontSize: x.username.fontSize,
                     textColor: E
                   }) : (0, a.jsx)("h1", {
-                    className: `${e2().userDescriptionUsername} ${"rgb"===t.username_effects&&o().rainbowName}`,
+                    className: `${e2().userDescriptionUsername} ${"rgb"===t.username_effects&&i().rainbowName}`,
                     style: x.username,
                     children: k
                   })
@@ -5017,19 +5021,19 @@ void main() {
                     delay: 600 / S,
                     deleteSpeed: 600 / N,
                     pauseFor: 900,
-                    stringSplitter: tM
+                    stringSplitter: tL
                   }
                 }) : t.description
               })]
             })]
           }), (0, a.jsxs)("div", {
-            className: `${e2().topRightWrapper} ${o().topRightWrapperGlobal} ${A&&o().topRightWrapperLocation} ${C&&n}`,
+            className: `${e2().topRightWrapper} ${i().topRightWrapperGlobal} ${A&&i().topRightWrapperLocation} ${C&&o}`,
             style: c > 520 ? {
-              top: F ? 15 + F : 13,
-              right: F ? 18 + F : 18
+              top: $ ? 15 + $ : 13,
+              right: $ ? 18 + $ : 18
             } : {
-              bottom: F ? 12 + F : 13,
-              left: F ? 15 + F : 18,
+              bottom: $ ? 12 + $ : 13,
+              left: $ ? 15 + $ : 18,
               top: "inherit",
               right: "inherit"
             },
@@ -5040,7 +5044,7 @@ void main() {
               views: t.page_views,
               containerBorderRadius: null,
               isUnfold: "" === A && C,
-              animationStartClass: n,
+              animationStartClass: o,
               isTemplatePreview: l
             }), A && (0, a.jsxs)(a.Fragment, {
               children: [!r.hide_views && (0, a.jsx)("div", {
@@ -5049,13 +5053,13 @@ void main() {
                 content: "Location",
                 pageTooltipStyles: !0,
                 children: (0, a.jsxs)("span", {
-                  className: o().locationMarker,
+                  className: i().locationMarker,
                   style: x.locationMarker,
                   children: [X.A.locationMarker, " ", A]
                 })
               })]
             })]
-          }), z && (0, a.jsx)("style", {
+          }), M && (0, a.jsx)("style", {
             children: `
                     @media (max-width: 520px) {
                         .${e2().socialsWrapper} {
@@ -5064,7 +5068,7 @@ void main() {
                     }
                     `
           }), t.socials.length > 0 && (0, a.jsx)("div", {
-            className: `${e2().socialsWrapper} ${C&&n}`,
+            className: `${e2().socialsWrapper} ${C&&o}`,
             children: (0, a.jsx)(eh, {
               socials: t.socials,
               isMonochrome: t.monochrome,
@@ -5074,7 +5078,7 @@ void main() {
               username: e.username,
               fontSize: r.font_size,
               style: {
-                justifyContent: "left" === U ? "flex-start" : "right" === U ? "flex-end" : "center"
+                justifyContent: "left" === z ? "flex-start" : "right" === z ? "flex-end" : "center"
               }
             })
           })]
@@ -5084,8 +5088,8 @@ void main() {
         e3 = r(18310),
         e6 = r(27212),
         e8 = r.n(e6),
-        e7 = r(77599),
-        e9 = r(17440);
+        e9 = r(77599),
+        e7 = r(17440);
       let te = {
           transitionSpeed: 700,
           perspective: 1e3,
@@ -5096,8 +5100,8 @@ void main() {
         tr = "data-user-page-enter-transition",
         ta = new Set(["r2.guns.lol", "pub-154e894c099540f58a9780bd0f621198.r2.dev"]),
         ts = new Set(["youtube", "spotify", "discord", "telegram", "roblox", "github", "lastfm", "timezone"]),
-        ti = new Set(["hero", "about", "projects", "custom", "audio", "skills"]),
-        to = [{
+        tn = new Set(["hero", "about", "projects", "custom", "audio", "skills"]),
+        ti = [{
           id: "portfolio-top-hero",
           type: "hero",
           visible: !0,
@@ -5107,22 +5111,22 @@ void main() {
             show_buttons: !0
           }
         }],
-        tn = (e, t) => {
+        to = (e, t) => {
           if (!e || "object" != typeof e) return !1;
           let r = e.lyrics_track_map && "object" == typeof e.lyrics_track_map && !Array.isArray(e.lyrics_track_map) ? e.lyrics_track_map : {},
             a = r[String(t?.id || "")],
             s = Object.values(r).find(e => e?.track_url && t?.url && String(e.track_url) === String(t.url)),
-            i = a || s;
-          return "string" == typeof i?.synced_lyrics && i.synced_lyrics.trim().length > 0
+            n = a || s;
+          return "string" == typeof n?.synced_lyrics && n.synced_lyrics.trim().length > 0
         };
 
       function tl({
         userData: e,
         config: t,
         premiumConfig: r,
-        presenceInformation: i,
-        animationStartClass: o,
-        isTemplatePreview: n,
+        presenceInformation: n,
+        animationStartClass: i,
+        isTemplatePreview: o,
         discordLoading: l,
         discordBadges: c,
         profileBorderClass: d,
@@ -5135,16 +5139,16 @@ void main() {
         audioContainerRef: x,
         setVolume: v
       }) {
-        let b = ((e = [], t) => {
-            let r = (Array.isArray(e) && e.length > 0 ? e : to).filter(e => ti.has(e?.type)),
+        let y = ((e = [], t) => {
+            let r = (Array.isArray(e) && e.length > 0 ? e : ti).filter(e => tn.has(e?.type)),
               a = !!t?.url;
-            return r.filter((e, r) => !!e && !1 !== e.visible && ("audio" === e.type ? a && tn(e.settings, t) : 0 === r ? "hero" === e.type : "hero" !== e.type))
+            return r.filter((e, r) => !!e && !1 !== e.visible && ("audio" === e.type ? a && to(e.settings, t) : 0 === r ? "hero" === e.type : "hero" !== e.type))
           })(r.portfolio_modules, h),
-          y = (0, s.useRef)(null),
+          b = (0, s.useRef)(null),
           _ = (0, s.useRef)(-1),
           j = (0, s.useRef)(!0),
           [w, S] = (0, s.useState)(0),
-          [N, C] = (0, s.useState)(b.length > 1),
+          [N, C] = (0, s.useState)(y.length > 1),
           k = t.discord_presence_settings || {
             show_badges: !0,
             show_guild_tag: !0,
@@ -5194,16 +5198,16 @@ void main() {
             window.cancelAnimationFrame(r), window.removeEventListener("pageshow", t), window.history.scrollRestoration = e
           }
         }, []);
-        let F = (s, b, y = !1, _ = !1) => {
+        let $ = (s, y, b = !1, _ = !1) => {
           let j = (0, a.jsx)(tc, {
             module: s,
-            index: b,
+            index: y,
             userData: e,
             config: t,
             premiumConfig: r,
-            presenceInformation: i,
-            animationStartClass: o,
-            isTemplatePreview: n,
+            presenceInformation: n,
+            animationStartClass: i,
+            isTemplatePreview: o,
             discordLoading: l,
             discordBadges: c,
             discordPresenceSettings: k,
@@ -5216,32 +5220,32 @@ void main() {
             setAudioPlayer: g,
             audioContainerRef: x,
             setVolume: v,
-            showScrollIndicator: y,
+            showScrollIndicator: b,
             scrollIndicatorVisible: _
           });
           return (0, a.jsx)(tm, {
-            index: b,
+            index: y,
             animation: r.animation,
-            animationStartClass: o,
+            animationStartClass: i,
             children: j
           }, s.id)
         };
         return (0, s.useEffect)(() => {
-          if (!y.current) return;
-          let e = Array.from(y.current.querySelectorAll(`.${e8().portfolioReveal}`));
+          if (!b.current) return;
+          let e = Array.from(b.current.querySelectorAll(`.${e8().portfolioReveal}`));
           if (e.length <= 1) return;
           let t = window.matchMedia?.("(pointer: coarse)").matches === !0,
             r = null,
             a = null,
             s = !1,
-            i = 0,
-            o = null,
-            n = (t = window.scrollY + .5 * (window.innerHeight || 0)) => {
+            n = 0,
+            i = null,
+            o = (t = window.scrollY + .5 * (window.innerHeight || 0)) => {
               let r = 0,
                 a = 1 / 0;
               for (let s = 0; s < e.length; s++) {
-                let i = Math.abs(e[s].offsetTop + .5 * e[s].offsetHeight - t);
-                i < a && (a = i, r = s)
+                let n = Math.abs(e[s].offsetTop + .5 * e[s].offsetHeight - t);
+                n < a && (a = n, r = s)
               }
               return r
             },
@@ -5250,8 +5254,8 @@ void main() {
               let a = Math.max(window.innerHeight || 1, 1),
                 s = Math.max(document.documentElement.scrollHeight - a, 1);
               t = Math.min(Math.max(window.scrollY / s, 0), 1), .003 > Math.abs(_.current - t) || (_.current = t, S(t));
-              let i = Math.min((e[1]?.offsetTop ?? 1 / 0) - Math.max(12, .04 * a), Math.max(24, .16 * a));
-              r = window.scrollY < i, j.current !== r && (j.current = r, C(r))
+              let n = Math.min((e[1]?.offsetTop ?? 1 / 0) - Math.max(12, .04 * a), Math.max(24, .16 * a));
+              r = window.scrollY < n, j.current !== r && (j.current = r, C(r))
             },
             c = e => {
               if (!e) return !0;
@@ -5260,13 +5264,13 @@ void main() {
             },
             d = t => {
               let r = Math.max(0, Math.min(e.length - 1, t)),
-                i = e[r].offsetTop,
-                o = window.scrollY,
-                n = i - o;
-              if (2 > Math.abs(n)) return;
+                n = e[r].offsetTop,
+                i = window.scrollY,
+                o = n - i;
+              if (2 > Math.abs(o)) return;
               a && (a.stop(), a = null), s = !0;
-              let c = Math.min(2.1, Math.max(1.1, 1.1 + .18 * Math.min(Math.abs(n) / Math.max(window.innerHeight || 1, 1), 2.4)));
-              a = (0, e4.i)(o, i, {
+              let c = Math.min(2.1, Math.max(1.1, 1.1 + .18 * Math.min(Math.abs(o) / Math.max(window.innerHeight || 1, 1), 2.4)));
+              a = (0, e4.i)(i, n, {
                 duration: c,
                 ease: [.16, 1, .3, 1],
                 onUpdate: e => {
@@ -5283,26 +5287,26 @@ void main() {
             u = () => {
               l(), null !== r && window.clearTimeout(r), r = window.setTimeout(() => {
                 if (s) return;
-                let t = n();
+                let t = o();
                 if (!c(e[t])) return;
                 let r = e[t]?.offsetTop ?? window.scrollY;
                 Math.abs(window.scrollY - r) <= Math.max(20, Math.round(.03 * (window.innerHeight || 0))) || d(t)
               }, 150)
             },
             m = t => {
-              if (7 > Math.abs(t.deltaY) || (i += t.deltaY, null !== o && window.clearTimeout(o), o = window.setTimeout(() => {
-                  i = 0
-                }, 150), 72 > Math.abs(i))) return;
-              let r = n();
+              if (7 > Math.abs(t.deltaY) || (n += t.deltaY, null !== i && window.clearTimeout(i), i = window.setTimeout(() => {
+                  n = 0
+                }, 150), 72 > Math.abs(n))) return;
+              let r = o();
               if (!c(e[r])) {
-                i = 0;
+                n = 0;
                 return
               }
-              let l = i > 0 ? 1 : -1;
-              i = 0, t.preventDefault(), a && (a.stop(), a = null, s = !1), d(r + l)
+              let l = n > 0 ? 1 : -1;
+              n = 0, t.preventDefault(), a && (a.stop(), a = null, s = !1), d(r + l)
             },
             f = () => {
-              l(), s || d(n())
+              l(), s || d(o())
             },
             p = e => {
               d("number" == typeof e.detail?.targetIndex ? e.detail.targetIndex : 1)
@@ -5316,21 +5320,21 @@ void main() {
           }), window.addEventListener("wheel", m, {
             passive: !1
           }), window.addEventListener("resize", f), window.addEventListener(tt, p), () => {
-            window.removeEventListener("scroll", u), window.removeEventListener("wheel", m), window.removeEventListener("resize", f), window.removeEventListener(tt, p), null !== r && (window.clearTimeout(r), r = null), null !== o && (window.clearTimeout(o), o = null), a && (a.stop(), a = null)
+            window.removeEventListener("scroll", u), window.removeEventListener("wheel", m), window.removeEventListener("resize", f), window.removeEventListener(tt, p), null !== r && (window.clearTimeout(r), r = null), null !== i && (window.clearTimeout(i), i = null), a && (a.stop(), a = null)
           })
-        }, [b.length]), (0, a.jsxs)("div", {
-          ref: y,
+        }, [y.length]), (0, a.jsxs)("div", {
+          ref: b,
           className: e8().portfolioPage,
           "data-compact-top-audio": "false",
           style: A,
           children: [(0, a.jsx)(tN, {
             mode: "dots",
-            sectionCount: b.length,
+            sectionCount: y.length,
             progress: w
-          }), b[0] && F(b[0], 0, b.length > 1, N), b.length > 1 && (0, a.jsx)("div", {
+          }), y[0] && $(y[0], 0, y.length > 1, N), y.length > 1 && (0, a.jsx)("div", {
             className: e8().portfolioSections,
-            children: b.slice(1).map((e, t) => (0, a.jsx)(s.Fragment, {
-              children: F(e, t + 1)
+            children: y.slice(1).map((e, t) => (0, a.jsx)(s.Fragment, {
+              children: $(e, t + 1)
             }, e.id))
           })]
         })
@@ -5341,9 +5345,9 @@ void main() {
         index: t,
         userData: r,
         config: s,
-        premiumConfig: i,
-        presenceInformation: o,
-        animationStartClass: n,
+        premiumConfig: n,
+        presenceInformation: i,
+        animationStartClass: o,
         isTemplatePreview: l,
         discordLoading: c,
         discordBadges: d,
@@ -5355,8 +5359,8 @@ void main() {
         setAudioData: g,
         audioData: x,
         setAudioPlayer: v,
-        audioContainerRef: b,
-        setVolume: y,
+        audioContainerRef: y,
+        setVolume: b,
         showScrollIndicator: _,
         scrollIndicatorVisible: j
       }) {
@@ -5364,8 +5368,8 @@ void main() {
           module: e,
           userData: r,
           config: s,
-          premiumConfig: i,
-          presenceInformation: o,
+          premiumConfig: n,
+          presenceInformation: i,
           isTemplatePreview: l,
           showScrollIndicator: _,
           scrollIndicatorVisible: j
@@ -5376,8 +5380,8 @@ void main() {
           children: (0, a.jsx)(tv, {
             module: e,
             config: s,
-            premiumConfig: i,
-            presenceInformation: o,
+            premiumConfig: n,
+            presenceInformation: i,
             userData: r,
             discordBadges: d,
             discordPresenceSettings: u,
@@ -5397,14 +5401,14 @@ void main() {
           })
         }) : "skills" === e.type ? (0, a.jsx)("div", {
           className: w,
-          children: (0, a.jsx)(tb, {
+          children: (0, a.jsx)(ty, {
             module: e,
             config: s,
             profileBorderClass: m,
             profileBorderEffect: f,
             profileBorderEffectEnabled: p
           })
-        }) : "audio" === e.type ? x.url && tn(e.settings, x) ? (0, a.jsx)("div", {
+        }) : "audio" === e.type ? x.url && to(e.settings, x) ? (0, a.jsx)("div", {
           className: e8().audioModule,
           children: (0, a.jsx)(eD, {
             animationStartClass: "",
@@ -5412,11 +5416,11 @@ void main() {
             setAudioData: g,
             audioData: x,
             setAudioPlayer: v,
-            audioContainerRef: b,
-            currentFont: i.font,
+            audioContainerRef: y,
+            currentFont: n.font,
             audioList: s.audio,
-            setVolume: y,
-            fontSize: i.font_size,
+            setVolume: b,
+            fontSize: n.font_size,
             profileBorderClass: m,
             profileBorderEffect: f,
             revealContent: !0,
@@ -5427,7 +5431,7 @@ void main() {
           className: w,
           children: (0, a.jsx)(tw, {
             module: e,
-            animation: i.animation,
+            animation: n.animation,
             profileBorderClass: m,
             profileBorderEffect: f,
             profileBorderEffectEnabled: p
@@ -5440,21 +5444,21 @@ void main() {
         className: t,
         profileBorderClass: r,
         profileBorderEffect: s,
-        profileBorderEffectEnabled: i,
-        children: o,
-        style: n,
+        profileBorderEffectEnabled: n,
+        children: i,
+        style: o,
         ...l
       }) {
         return (0, a.jsxs)(e, {
           className: `${t} ${r}`,
           style: {
-            ...n,
-            position: i ? "relative" : n?.position
+            ...o,
+            position: n ? "relative" : o?.position
           },
           ...l,
-          children: [i && s && (0, a.jsx)(eI, {
+          children: [n && s && (0, a.jsx)(eW, {
             effect: s
-          }), o]
+          }), i]
         })
       }
       let tu = e => ({
@@ -5465,20 +5469,20 @@ void main() {
         children: e,
         index: t,
         animation: r,
-        animationStartClass: i
+        animationStartClass: n
       }) {
-        let o = (0, s.useRef)(null),
-          n = (0, s.useRef)([]),
+        let i = (0, s.useRef)(null),
+          o = (0, s.useRef)([]),
           l = (0, s.useRef)(null),
           c = (0, s.useRef)(!1),
           d = (0, e3.I)(),
           u = "unfold" === r || "pop" === r || "fade" === r ? r : "fade",
-          m = !!i?.includes("unfoldStart"),
-          f = !!i?.includes("scaleFadeStart"),
+          m = !!n?.includes("unfoldStart"),
+          f = !!n?.includes("scaleFadeStart"),
           p = m ? .12 : f ? .08 : .06,
           h = m ? .04 : f ? .03 : .02;
         return (0, s.useEffect)(() => {
-          let e = o.current;
+          let e = i.current;
           if (!e) return;
           let r = () => "active" === document.documentElement.getAttribute(tr),
             a = () => Array.from(e.querySelectorAll("[data-reveal-part]"));
@@ -5487,9 +5491,9 @@ void main() {
             return
           }
           let s = () => {
-              null !== l.current && (window.clearTimeout(l.current), l.current = null), n.current.forEach(e => e.stop()), n.current = []
+              null !== l.current && (window.clearTimeout(l.current), l.current = null), o.current.forEach(e => e.stop()), o.current = []
             },
-            i = () => {
+            n = () => {
               for (let t of (s(), e.dataset.revealActive = "false", e.dataset.revealDone = "false", a())) t.style.opacity = "0.001", t.style.pointerEvents = "none", t.style.transformOrigin = "unfold" === u ? "center top" : "", t.style.transform = "pop" === u ? "scale(0.78)" : "unfold" === u ? "translateY(-80px)" : "translateY(34px)"
             },
             m = () => {
@@ -5508,7 +5512,7 @@ void main() {
               e.disconnect(), s()
             }
           }
-          i(), c.current = !1;
+          n(), c.current = !1;
           let f = e => {
               let t = Number.parseFloat(window.getComputedStyle(e).getPropertyValue("--portfolioRevealOrder"));
               return Number.isFinite(t) ? Math.max(1, t) : 1
@@ -5544,29 +5548,29 @@ void main() {
             },
             x = (d, m, x) => {
               let v = window.innerHeight || 1,
-                b = Math.abs(x.top + .5 * x.height - .5 * v);
-              !r() && (m && (d >= .42 || b <= .19 * v) && (() => {
+                y = Math.abs(x.top + .5 * x.height - .5 * v);
+              !r() && (m && (d >= .42 || y <= .19 * v) && (() => {
                 if (c.current) return;
                 s(), e.dataset.revealActive = "true", e.dataset.revealDone = "false";
                 let {
                   keyframes: r,
-                  options: i
-                } = g(), d = 0, m = i.duration;
+                  options: n
+                } = g(), d = 0, m = n.duration;
                 for (let e of a()) {
                   e.style.pointerEvents = "none", e.style.transformOrigin = "unfold" === u ? "center top" : "";
                   let a = p + Math.min(t, 4) * h + ("unfold" === u ? .092 : "pop" === u ? .048 : .052) * (f(e) - 1);
-                  d = Math.max(d, a), m = Math.max(m, i.duration), n.current.push((0, e4.i)(e, r, {
-                    ...i,
+                  d = Math.max(d, a), m = Math.max(m, n.duration), o.current.push((0, e4.i)(e, r, {
+                    ...n,
                     delay: a
                   }))
                 }
                 l.current = window.setTimeout(() => {
-                  if (o.current && c.current) {
+                  if (i.current && c.current) {
                     for (let t of (e.dataset.revealDone = "true", a())) t.style.pointerEvents = "", t.style.transformOrigin = "";
                     l.current = null
                   }
                 }, (d + m) * 1e3 + 40), c.current = !0
-              })(), d < .08 && b > .62 * v && c.current && (c.current = !1, i()))
+              })(), d < .08 && y > .62 * v && c.current && (c.current = !1, n()))
             },
             v = e => {
               if (!c.current || r() || !e.isConnected || "true" === e.getAttribute("data-reveal-late-animated")) return;
@@ -5575,20 +5579,20 @@ void main() {
                 keyframes: t,
                 options: a
               } = g(), s = Math.min(.2, .03 + ("unfold" === u ? .092 : "pop" === u ? .048 : .052) * Math.max(0, f(e) - 1));
-              e.style.opacity = "0.001", e.style.pointerEvents = "none", e.style.transformOrigin = "unfold" === u ? "center top" : "", e.style.transform = "pop" === u ? "scale(0.78)" : "unfold" === u ? "translateY(-80px)" : "translateY(34px)", n.current.push((0, e4.i)(e, t, {
+              e.style.opacity = "0.001", e.style.pointerEvents = "none", e.style.transformOrigin = "unfold" === u ? "center top" : "", e.style.transform = "pop" === u ? "scale(0.78)" : "unfold" === u ? "translateY(-80px)" : "translateY(34px)", o.current.push((0, e4.i)(e, t, {
                 ...a,
                 delay: s
               })), window.setTimeout(() => {
                 e.isConnected && (e.style.pointerEvents = "", e.style.transformOrigin = "", e.style.opacity = "1", e.style.transform = "none")
               }, (s + a.duration) * 1e3 + 40)
             },
-            b = new IntersectionObserver(e => {
+            y = new IntersectionObserver(e => {
               let t = e[0];
               t && x(t.intersectionRatio, t.isIntersecting, t.boundingClientRect)
             }, {
               threshold: [0, .08, .18, .42, .7]
             }),
-            y = new MutationObserver(e => {
+            b = new MutationObserver(e => {
               for (let t of e) "childList" === t.type && 0 !== t.addedNodes.length && t.addedNodes.forEach(e => {
                 e instanceof HTMLElement && (e.matches("[data-reveal-part]") && v(e), e.querySelectorAll?.("[data-reveal-part]").forEach(e => {
                   e instanceof HTMLElement && v(e)
@@ -5596,20 +5600,20 @@ void main() {
               })
             }),
             _ = new MutationObserver(() => {
-              let t, a, s, i;
-              r() || (t = e.getBoundingClientRect(), a = window.innerHeight || 1, s = Math.max(t.top, 0), i = Math.max(0, Math.min(t.bottom, a) - s), x(t.height > 0 ? Math.min(1, i / t.height) : 0, i > 0, t))
+              let t, a, s, n;
+              r() || (t = e.getBoundingClientRect(), a = window.innerHeight || 1, s = Math.max(t.top, 0), n = Math.max(0, Math.min(t.bottom, a) - s), x(t.height > 0 ? Math.min(1, n / t.height) : 0, n > 0, t))
             });
           return _.observe(document.documentElement, {
             attributes: !0,
             attributeFilter: [tr]
-          }), b.observe(e), y.observe(e, {
+          }), y.observe(e), b.observe(e, {
             childList: !0,
             subtree: !0
           }), () => {
-            b.disconnect(), y.disconnect(), _.disconnect(), s()
+            y.disconnect(), b.disconnect(), _.disconnect(), s()
           }
         }, [p, t, d, u, h]), (0, a.jsx)("div", {
-          ref: o,
+          ref: i,
           className: e8().portfolioReveal,
           "data-animation": u,
           "data-reveal-active": "false",
@@ -5624,12 +5628,12 @@ void main() {
         revealOrder: r,
         revealPart: s = "skill-pill"
       }) {
-        let i = (0, e7.RU)(e),
-          o = (0, e9.h)(i ?? e),
-          n = null;
-        if (o) {
-          let e = t ? "currentColor" : `#${o.hex}`;
-          n = (0, a.jsx)("svg", {
+        let n = (0, e9.RU)(e),
+          i = (0, e7.h)(n ?? e),
+          o = null;
+        if (i) {
+          let e = t ? "currentColor" : `#${i.hex}`;
+          o = (0, a.jsx)("svg", {
             className: e8().skillPillIcon,
             role: "img",
             viewBox: "0 0 24 24",
@@ -5638,20 +5642,20 @@ void main() {
               fill: e
             },
             children: (0, a.jsx)("path", {
-              d: o.path
+              d: i.path
             })
           })
-        } else i && (n = (0, a.jsx)("span", {
+        } else n && (o = (0, a.jsx)("span", {
           className: e8().skillPillDot,
           style: {
-            background: t ? "currentColor" : i.color
+            background: t ? "currentColor" : n.color
           }
         }));
         return (0, a.jsxs)("span", {
           className: e8().skillPill,
           "data-reveal-part": s,
           style: "number" == typeof r ? tu(r) : void 0,
-          children: [n, e]
+          children: [o, e]
         })
       }
       let tp = {
@@ -5673,15 +5677,15 @@ void main() {
         tag: e,
         isMonochrome: t
       }) {
-        let r = (0, e7.RU)(e),
-          s = (0, e9.h)(r ?? e),
-          i = t ? "currentColor" : s ? `#${s.hex}` : r?.color ?? "currentColor";
+        let r = (0, e9.RU)(e),
+          s = (0, e7.h)(r ?? e),
+          n = t ? "currentColor" : s ? `#${s.hex}` : r?.color ?? "currentColor";
         return s ? (0, a.jsx)("svg", {
           className: e8().projectTagIcon,
           viewBox: "0 0 24 24",
           xmlns: "http://www.w3.org/2000/svg",
           style: {
-            fill: i
+            fill: n
           },
           children: (0, a.jsx)("path", {
             d: s.path
@@ -5689,7 +5693,7 @@ void main() {
         }) : (0, a.jsx)("span", {
           className: e8().projectTagDot,
           style: {
-            background: i
+            background: n
           }
         })
       }
@@ -5699,8 +5703,8 @@ void main() {
         userData: t,
         config: r,
         premiumConfig: s,
-        presenceInformation: i,
-        isTemplatePreview: n,
+        presenceInformation: n,
+        isTemplatePreview: o,
         showScrollIndicator: l,
         scrollIndicatorVisible: c
       }) {
@@ -5711,12 +5715,12 @@ void main() {
             fontSize: s.font_size
           }),
           f = "" !== r.display_name ? r.display_name : t.username,
-          h = ev(i),
+          h = ev(n),
           g = h.avatar || "",
           x = h.avatarDecoration || "",
           v = r.use_discord_avatar && g ? g : r.avatar,
-          b = !!(r.discord_avatar_decoration && x),
-          y = !1 !== d.show_avatar && v,
+          y = !!(r.discord_avatar_decoration && x),
+          b = !1 !== d.show_avatar && v,
           _ = !1 !== d.show_buttons && r.socials.length > 0,
           j = "" !== r.description || 0 !== s.typewriter.length,
           w = !!r.location,
@@ -5725,36 +5729,36 @@ void main() {
           C = "number" == typeof t.uid ? `UID ${t.uid.toLocaleString("en-US")}` : "UID unavailable",
           k = r.user_badges,
           A = r.custom_badges,
-          F = k.length > 0 && k[0] && "string" == typeof k[0],
+          $ = k.length > 0 && k[0] && "string" == typeof k[0],
           T = A.length > 0 && "string" == typeof A[0][0],
-          $ = k.length > 0 && F || !F && k.some(e => !0 === e.enabled),
-          P = A.length > 0 && T || !T && A.some(e => !0 === e.enabled),
-          E = $ || P,
-          U = s.typewriter_speed ?? 5,
-          z = s.typewriter_delete_speed ?? 7,
-          B = "unfold" === s.animation || "pop" === s.animation || "fade" === s.animation ? s.animation : "fade",
-          M = {
+          P = k.length > 0 && $ || !$ && k.some(e => !0 === e.enabled),
+          U = A.length > 0 && T || !T && A.some(e => !0 === e.enabled),
+          E = P || U,
+          z = s.typewriter_speed ?? 5,
+          M = s.typewriter_delete_speed ?? 7,
+          I = "unfold" === s.animation || "pop" === s.animation || "fade" === s.animation ? s.animation : "fade",
+          B = {
             ...m.username,
             fontSize: m.username.fontSize,
             fontWeight: 700
           },
-          I = window.matchMedia?.("(pointer: coarse)").matches,
-          L = r.username_effects,
-          D = "rgb" === L || "rainbow" === L,
-          W = !!L && !D && !["none", "typewriter", "fuzzy", "shuffle"].includes(L),
+          L = window.matchMedia?.("(pointer: coarse)").matches,
+          W = r.username_effects,
+          D = "rgb" === W || "rainbow" === W,
+          F = !!W && !D && !["none", "typewriter", "fuzzy", "shuffle"].includes(W),
           R = e8().heroTitlePanel,
           G = (0, a.jsxs)("div", {
-            className: `${e8().heroStage} ${!y?e8().heroStageSolo:""}`,
-            children: [y && (0, a.jsx)("div", {
+            className: `${e8().heroStage} ${!b?e8().heroStageSolo:""}`,
+            children: [b && (0, a.jsx)("div", {
               className: e8().heroIdentity,
               "data-reveal-part": "hero-identity",
               style: tu(2),
               children: (0, a.jsxs)("div", {
-                className: o().avatarWrapper,
-                children: [b && (0, a.jsx)("img", {
+                className: i().avatarWrapper,
+                children: [y && (0, a.jsx)("img", {
                   src: x,
                   alt: "",
-                  className: o().avatarDecorationLayout4
+                  className: i().avatarDecorationLayout4
                 }), (0, a.jsx)("div", {
                   className: e8().heroAvatarFrame,
                   "data-reveal-part": "hero-avatar",
@@ -5780,9 +5784,9 @@ void main() {
                       content: C,
                       offset: 0,
                       pageTooltipStyles: !0,
-                      children: "typewriter" === L ? (0, a.jsxs)(a.Fragment, {
+                      children: "typewriter" === W ? (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsx)("style", {
-                          children: `.hero-tw-${u} .Typewriter { font-size: ${M.fontSize}; font-weight: ${M.fontWeight??700}; font-family: ${M.fontFamily??"inherit"}; color: var(--textColor); text-shadow: var(--colorUsernameGlow); }`
+                          children: `.hero-tw-${u} .Typewriter { font-size: ${B.fontSize}; font-weight: ${B.fontWeight??700}; font-family: ${B.fontFamily??"inherit"}; color: var(--textColor); text-shadow: var(--colorUsernameGlow); }`
                         }), (0, a.jsx)("div", {
                           className: `hero-tw-${u}`,
                           children: (0, a.jsx)(et(), {
@@ -5794,14 +5798,14 @@ void main() {
                             }
                           })
                         })]
-                      }) : "fuzzy" === L || "shuffle" === L ? (0, a.jsx)(eS.A, {
+                      }) : "fuzzy" === W || "shuffle" === W ? (0, a.jsx)(eS.A, {
                         username: f,
-                        usernameEffect: L,
-                        fontSize: M.fontSize,
+                        usernameEffect: W,
+                        fontSize: B.fontSize,
                         textColor: r.text_color
                       }) : (0, a.jsx)("h1", {
-                        className: D ? o().rainbowName : W ? e8().heroTitleEffects : void 0,
-                        style: M,
+                        className: D ? i().rainbowName : F ? e8().heroTitleEffects : void 0,
+                        style: B,
                         children: f
                       })
                     }), E && "classic" === u && (0, a.jsx)("div", {
@@ -5819,7 +5823,11 @@ void main() {
                     className: e8().heroBadgeContainerCentered,
                     children: (0, a.jsx)(es, {
                       config: r,
-                      premiumConfig: s
+                      premiumConfig: s,
+                      className: e8().heroBadgeRail,
+                      carousel: !0,
+                      trackClassName: e8().heroBadgeTrack,
+                      groupClassName: e8().heroBadgeGroup
                     })
                   })]
                 })
@@ -5835,8 +5843,8 @@ void main() {
                     strings: s.typewriter,
                     autoStart: !0,
                     loop: !0,
-                    delay: 600 / U,
-                    deleteSpeed: 600 / z,
+                    delay: 600 / z,
+                    deleteSpeed: 600 / M,
                     pauseFor: 900
                   }
                 }) : r.description
@@ -5855,7 +5863,9 @@ void main() {
                   style: {
                     justifyContent: "classic" === u ? "left" : "center",
                     alignItems: "classic" === u ? "flex-start" : "center",
-                    marginTop: "classic" === u ? "0" : "30px"
+                    marginTop: "classic" === u ? "0" : "30px",
+                    width: "classic" === u ? "fit-content" : "100%",
+                    maxWidth: "100%"
                   }
                 })
               })]
@@ -5863,9 +5873,9 @@ void main() {
           });
         return (0, a.jsxs)("div", {
           className: `${e8().heroModule} ${e8().portfolioTopSection}`,
-          "data-animation": B,
+          "data-animation": I,
           "data-hero-style": u,
-          children: [s.parallax_animation && !I ? (0, a.jsx)(eK.A, {
+          children: [s.parallax_animation && !L ? (0, a.jsx)(eK.A, {
             ...te,
             tiltEnable: !0,
             style: {
@@ -5885,7 +5895,7 @@ void main() {
                 containerBorderRadius: null,
                 isUnfold: !1,
                 animationStartClass: "",
-                isTemplatePreview: n,
+                isTemplatePreview: o,
                 inline: !0
               })
             }), S && w && (0, a.jsx)("span", {
@@ -5907,8 +5917,8 @@ void main() {
         config: t,
         premiumConfig: r,
         presenceInformation: s,
-        userData: i,
-        discordBadges: n,
+        userData: n,
+        discordBadges: o,
         discordPresenceSettings: l,
         discordLoading: c,
         profileBorderClass: d,
@@ -5935,7 +5945,7 @@ void main() {
             }), f.description && (0, a.jsx)("p", {
               children: f.description
             })]
-          }), g && (0, a.jsx)(tA, {
+          }), g && (0, a.jsx)(t$, {
             children: (0, a.jsx)(td, {
               className: e8().textCard,
               profileBorderClass: d,
@@ -5948,7 +5958,7 @@ void main() {
                 "data-align": "left",
                 "data-link-style": "underline",
                 "data-collapsed": "false",
-                children: tT(g)
+                children: tP(g)
               })
             })
           }), p.length > 0 && (0, a.jsx)("div", {
@@ -5963,24 +5973,24 @@ void main() {
                 className: e8().aboutCardContent,
                 "data-reveal-part": "about-card-content",
                 style: tu(4 + f),
-                children: "second_tab" === e.type ? (0, a.jsx)(ty, {
+                children: "second_tab" === e.type ? (0, a.jsx)(tb, {
                   card: e,
                   config: t,
                   premiumConfig: r
                 }) : (0, a.jsxs)(a.Fragment, {
                   children: [(0, a.jsx)("style", {
                     children: `
-                                            .${o().discordActivity} {
+                                            .${i().discordActivity} {
                                                 width: 100%;
                                                 justify-content: space-between;
                                             }`
-                  }), (0, a.jsx)(ey, {
+                  }), (0, a.jsx)(eb, {
                     loading: c,
                     presenceInformation: s,
                     font: r.font,
                     description: t.description,
-                    discordUserBadges: n,
-                    discordData: i.discord,
+                    discordUserBadges: o,
+                    discordData: n.discord,
                     fontSize: r.font_size,
                     discordPresenceSettings: l
                   })]
@@ -6001,43 +6011,43 @@ void main() {
         })
       }
 
-      function tb({
+      function ty({
         module: e,
         config: t,
         profileBorderClass: r,
         profileBorderEffect: s,
-        profileBorderEffectEnabled: i
+        profileBorderEffectEnabled: n
       }) {
-        let o = e.settings || {},
-          n = Array.isArray(o.skills) ? o.skills.filter(e => "string" == typeof e && e.trim()) : [];
-        if (!o.title && 0 === n.length) return null;
+        let i = e.settings || {},
+          o = Array.isArray(i.skills) ? i.skills.filter(e => "string" == typeof e && e.trim()) : [];
+        if (!i.title && 0 === o.length) return null;
         let l = Object.keys(tp).map(e => ({
           category: e,
           label: tp[e] || e,
-          skills: n.filter(t => {
+          skills: o.filter(t => {
             let r, a;
-            return r = (0, e7.RU)(t), a = r?.id || t.toLowerCase(), (Object.keys(th).find(e => th[e].includes(a)) || "tools") === e
+            return r = (0, e9.RU)(t), a = r?.id || t.toLowerCase(), (Object.keys(th).find(e => th[e].includes(a)) || "tools") === e
           })
         })).filter(e => e.skills.length > 0);
         return (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)("div", {
             "data-reveal-part": "skills-root",
             style: tu(1),
-            children: (o.title || o.description) && (0, a.jsxs)("div", {
+            children: (i.title || i.description) && (0, a.jsxs)("div", {
               className: e8().sectionHeading,
               "data-reveal-part": "skills-heading",
               style: tu(1),
-              children: [o.title && (0, a.jsx)("h1", {
-                children: o.title
-              }), o.description && (0, a.jsx)("p", {
-                children: o.description
+              children: [i.title && (0, a.jsx)("h1", {
+                children: i.title
+              }), i.description && (0, a.jsx)("p", {
+                children: i.description
               })]
             })
-          }), n.length > 0 && (0, a.jsx)(td, {
+          }), o.length > 0 && (0, a.jsx)(td, {
             className: e8().textCard,
             profileBorderClass: r,
             profileBorderEffect: s,
-            profileBorderEffectEnabled: i,
+            profileBorderEffectEnabled: n,
             "data-reveal-part": "skills-card",
             style: tu(2),
             children: (0, a.jsx)("div", {
@@ -6066,7 +6076,7 @@ void main() {
         })
       }
 
-      function ty({
+      function tb({
         card: e,
         config: t,
         premiumConfig: r
@@ -6124,25 +6134,25 @@ void main() {
         config: t,
         profileBorderClass: r,
         profileBorderEffect: s,
-        profileBorderEffectEnabled: i
+        profileBorderEffectEnabled: n
       }) {
-        let o = e.settings || {},
-          n = (Array.isArray(o.projects) ? o.projects : []).filter(e => e.name).slice(0, 4);
-        return 0 === n.length ? null : (0, a.jsxs)(a.Fragment, {
+        let i = e.settings || {},
+          o = (Array.isArray(i.projects) ? i.projects : []).filter(e => e.name).slice(0, 4);
+        return 0 === o.length ? null : (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)("div", {
             className: e8().sectionHeading,
             "data-reveal-part": "projects-root",
             style: tu(1),
             children: (0, a.jsx)("h1", {
-              children: o.title || "Featured projects"
+              children: i.title || "Featured projects"
             })
           }), (0, a.jsx)("div", {
             className: e8().projectGrid,
-            "data-count": n.length,
+            "data-count": o.length,
             "data-reveal-part": "projects-grid",
             style: tu(2),
-            children: n.map((e, o) => {
-              let n = tC(e.link),
+            children: o.map((e, i) => {
+              let o = tC(e.link),
                 l = function(e) {
                   let t = tC(e);
                   if (!t) return "";
@@ -6153,7 +6163,7 @@ void main() {
                     return ""
                   }
                 }(e.image),
-                c = !!n,
+                c = !!o,
                 d = (0, a.jsxs)(a.Fragment, {
                   children: [l && (0, a.jsx)("div", {
                     className: e8().projectImage,
@@ -6183,25 +6193,25 @@ void main() {
                     children: "Visit"
                   })]
                 });
-              return (0, a.jsx)(tA, {
+              return (0, a.jsx)(t$, {
                 children: (0, a.jsx)(td, {
                   as: c ? "a" : "div",
                   className: e8().projectCard,
-                  href: n || void 0,
+                  href: o || void 0,
                   target: c ? "_blank" : void 0,
                   rel: c ? "noreferrer noopener" : void 0,
-                  "data-project-index": o,
+                  "data-project-index": i,
                   "data-tag-position": "top_left",
                   "data-text-align": "bottom_left",
                   "data-hover": "visit_overlay",
                   "data-reveal-part": "project-card-item",
                   profileBorderClass: r,
                   profileBorderEffect: s,
-                  profileBorderEffectEnabled: i,
-                  style: tu(3 + o),
+                  profileBorderEffectEnabled: n,
+                  style: tu(3 + i),
                   children: d
                 })
-              }, o)
+              }, i)
             })
           })]
         })
@@ -6211,19 +6221,19 @@ void main() {
         module: e,
         animation: t,
         profileBorderClass: r,
-        profileBorderEffect: i,
-        profileBorderEffectEnabled: o
+        profileBorderEffect: n,
+        profileBorderEffectEnabled: i
       }) {
-        let n = e.settings || {},
+        let o = e.settings || {},
           [l, c] = (0, s.useState)(!1),
           [d, u] = (0, s.useState)(!1),
           [m, f] = (0, s.useState)(!1),
           [p, h] = (0, s.useState)(0),
           [g, x] = (0, s.useState)(0),
           v = (0, s.useRef)(null),
-          b = (0, s.useRef)(null),
-          y = "string" == typeof n.content ? n.content : "",
-          _ = ["center", "right"].includes(n.text_alignment) ? n.text_alignment : "left",
+          y = (0, s.useRef)(null),
+          b = "string" == typeof o.content ? o.content : "",
+          _ = ["center", "right"].includes(o.text_alignment) ? o.text_alignment : "left",
           j = "unfold" === t || "pop" === t || "fade" === t ? t : "fade";
         if ((0, s.useEffect)(() => {
             if (!v.current) {
@@ -6242,25 +6252,25 @@ void main() {
             return r.observe(e), window.addEventListener("resize", t), () => {
               r.disconnect(), window.removeEventListener("resize", t)
             }
-          }, [y, _]), (0, s.useEffect)(() => () => {
-            null !== b.current && (window.clearTimeout(b.current), b.current = null)
-          }, []), !n.title && !y) return null;
+          }, [b, _]), (0, s.useEffect)(() => () => {
+            null !== y.current && (window.clearTimeout(y.current), y.current = null)
+          }, []), !o.title && !b) return null;
         let w = Math.max(g, p + 1),
           S = m ? l ? w : p : void 0;
         return (0, a.jsxs)(a.Fragment, {
-          children: [n.title && (0, a.jsx)("div", {
+          children: [o.title && (0, a.jsx)("div", {
             className: e8().sectionHeading,
             "data-reveal-part": "custom-root",
             style: tu(1),
-            children: n.title && (0, a.jsx)("h1", {
-              children: n.title
+            children: o.title && (0, a.jsx)("h1", {
+              children: o.title
             })
-          }), y && (0, a.jsx)(tA, {
+          }), b && (0, a.jsx)(t$, {
             children: (0, a.jsxs)(td, {
               className: e8().textCard,
               profileBorderClass: r,
-              profileBorderEffect: i,
-              profileBorderEffectEnabled: o,
+              profileBorderEffect: n,
+              profileBorderEffectEnabled: i,
               "data-reveal-part": "custom-body",
               style: tu(2),
               children: [(0, a.jsx)("div", {
@@ -6279,14 +6289,14 @@ void main() {
                     "--customContentMaxHeight": `${S}px`
                   } : {}
                 },
-                children: tT(y)
+                children: tP(b)
               }), m && (0, a.jsx)("button", {
                 type: "button",
                 className: e8().readMoreButton,
                 onClick: () => {
                   c(e => !e), u(!1), window.requestAnimationFrame(() => {
-                    u(!0), null !== b.current && window.clearTimeout(b.current), b.current = window.setTimeout(() => {
-                      u(!1), b.current = null
+                    u(!0), null !== y.current && window.clearTimeout(y.current), y.current = window.setTimeout(() => {
+                      u(!1), y.current = null
                     }, "unfold" === j ? 700 : "pop" === j ? 520 : 560)
                   })
                 },
@@ -6360,41 +6370,54 @@ void main() {
         }
       }
 
-      function tk({
+      function tk(e) {
+        if ("string" != typeof e || !e.trim()) return "";
+        try {
+          let t = new URL(e.trim());
+          return "http:" === t.protocol || "https:" === t.protocol || "mailto:" === t.protocol ? t.href : ""
+        } catch {
+          return ""
+        }
+      }
+
+      function tA({
         url: e,
-        onClose: t
+        type: t = "link",
+        onClose: r
       }) {
+        let s = "email" === t,
+          n = s ? e.replace(/^mailto:/i, "") : e;
         return (0, a.jsx)(em.A, {
           opened: !0,
-          title: "Leaving guns.lol",
-          onClose: t,
+          title: s ? "Open email app" : "Leaving guns.lol",
+          onClose: r,
           centered: !0,
           size: "380px",
           children: (0, a.jsxs)("div", {
-            className: o().customUrlWarning,
+            className: i().customUrlWarning,
             children: [(0, a.jsx)("h1", {
-              children: "External link"
+              children: s ? "Email address" : "External link"
             }), (0, a.jsx)("span", {
-              children: e
+              children: n
             }), (0, a.jsxs)("div", {
-              className: o().modalButtons,
+              className: i().modalButtons,
               children: [(0, a.jsx)("button", {
                 type: "button",
-                onClick: t,
+                onClick: r,
                 children: "Cancel"
               }), (0, a.jsx)("a", {
                 href: e,
-                target: "_blank",
-                rel: "noreferrer noopener",
-                onClick: t,
-                children: "Visit"
+                target: s ? void 0 : "_blank",
+                rel: s ? void 0 : "noreferrer noopener",
+                onClick: r,
+                children: s ? "Email" : "Visit"
               })]
             })]
           })
         })
       }
 
-      function tA({
+      function t$({
         children: e
       }) {
         let [t, r] = (0, s.useState)(null);
@@ -6402,76 +6425,116 @@ void main() {
           onClick: e => {
             let t = e.target.closest("a[href]");
             if (!t) return;
-            let a = tC(t.getAttribute("href") || "");
-            a && (e.preventDefault(), e.stopPropagation(), r(a))
+            let a = tk(t.getAttribute("href") || "");
+            if (!a) {
+              e.preventDefault(), e.stopPropagation();
+              return
+            }
+            if (a.startsWith("mailto:")) {
+              e.preventDefault(), e.stopPropagation(), r({
+                url: a,
+                type: "email"
+              });
+              return
+            }
+            let s = tC(a);
+            s && (e.preventDefault(), e.stopPropagation(), r({
+              url: s,
+              type: "link"
+            }))
           },
           style: {
             display: "contents"
           },
-          children: [e, t && (0, a.jsx)(tk, {
-            url: t,
+          children: [e, t && (0, a.jsx)(tA, {
+            url: t.url,
+            type: t.type,
             onClose: () => r(null)
           })]
         })
       }
 
-      function tF(e) {
+      function tT(e) {
         let t, r = [],
-          s = /(\[([^\]]+)\]\((https?:\/\/[^\s<>")]+)\)|\*\*(.+?)\*\*|\*(.+?)\*|`([^`]+)`|(https?:\/\/[^\s<>"]+))/g,
-          i = 0;
-        for (; null !== (t = s.exec(e));) t.index > i && r.push(e.slice(i, t.index)), void 0 !== t[2] && void 0 !== t[3] ? r.push((0, a.jsx)("a", {
-          href: tC(t[3]),
-          target: "_blank",
-          rel: "noreferrer noopener",
-          children: t[2]
-        }, t.index)) : void 0 !== t[4] ? r.push((0, a.jsx)("strong", {
-          children: t[4]
-        }, t.index)) : void 0 !== t[5] ? r.push((0, a.jsx)("em", {
-          children: t[5]
-        }, t.index)) : void 0 !== t[6] ? r.push((0, a.jsx)("code", {
-          children: t[6]
-        }, t.index)) : void 0 !== t[7] && r.push((0, a.jsx)("a", {
-          href: tC(t[7]),
-          target: "_blank",
-          rel: "noreferrer noopener",
-          children: t[7]
-        }, t.index)), i = t.index + t[0].length;
-        return i < e.length && r.push(e.slice(i)), r.length > 0 ? r : [e]
+          s = /(\[([^\]]+)\]\(([^\s<>")]+)\)|\*\*(.+?)\*\*|\*(.+?)\*|`([^`]+)`|(https?:\/\/[^\s<>"]+)|(mailto:[^\s<>"]+)|([A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}))/gi,
+          n = 0;
+        for (; null !== (t = s.exec(e));) {
+          if (t.index > n && r.push(e.slice(n, t.index)), void 0 !== t[2] && void 0 !== t[3]) {
+            let e = tk(t[3]),
+              s = e.startsWith("http://") || e.startsWith("https://");
+            r.push((0, a.jsx)("a", {
+              href: e,
+              target: s ? "_blank" : void 0,
+              rel: s ? "noreferrer noopener" : void 0,
+              children: t[2]
+            }, t.index))
+          } else if (void 0 !== t[4]) r.push((0, a.jsx)("strong", {
+            children: t[4]
+          }, t.index));
+          else if (void 0 !== t[5]) r.push((0, a.jsx)("em", {
+            children: t[5]
+          }, t.index));
+          else if (void 0 !== t[6]) r.push((0, a.jsx)("code", {
+            children: t[6]
+          }, t.index));
+          else if (void 0 !== t[7]) r.push((0, a.jsx)("a", {
+            href: tC(t[7]),
+            target: "_blank",
+            rel: "noreferrer noopener",
+            children: t[7]
+          }, t.index));
+          else if (void 0 !== t[8]) {
+            let e = tk(t[8]);
+            r.push((0, a.jsx)("a", {
+              href: e,
+              children: e.replace(/^mailto:/i, "")
+            }, t.index))
+          } else if (void 0 !== t[9]) {
+            let e = t[9],
+              s = tk(`mailto:${e}`);
+            r.push((0, a.jsx)("a", {
+              href: s,
+              children: e
+            }, t.index))
+          }
+          n = t.index + t[0].length
+        }
+        return n < e.length && r.push(e.slice(n)), r.length > 0 ? r : [e]
       }
 
-      function tT(e) {
+      function tP(e) {
         let t = e.split("\n"),
           r = [],
           s = [],
-          i = e => {
+          n = e => {
             0 !== s.length && (r.push((0, a.jsx)("ul", {
               children: s.map((e, t) => (0, a.jsx)("li", {
-                children: tF(e)
+                children: tT(e)
               }, t))
             }, e)), s = [])
           };
         return t.forEach((e, t) => {
-          e.startsWith("- ") || e.startsWith("• ") ? s.push(e.slice(2)) : (i(`list-${t}`), e.startsWith("### ")) ? r.push((0, a.jsx)("h3", {
-            children: tF(e.slice(4))
+          e.startsWith("- ") || e.startsWith("• ") ? s.push(e.slice(2)) : (n(`list-${t}`), e.startsWith("### ")) ? r.push((0, a.jsx)("h3", {
+            children: tT(e.slice(4))
           }, t)) : e.startsWith("## ") ? r.push((0, a.jsx)("h2", {
-            children: tF(e.slice(3))
+            children: tT(e.slice(3))
           }, t)) : e.startsWith("# ") ? r.push((0, a.jsx)("h1", {
-            children: tF(e.slice(2))
+            children: tT(e.slice(2))
           }, t)) : e.startsWith("> ") ? r.push((0, a.jsx)("blockquote", {
-            children: tF(e.slice(2))
+            children: tT(e.slice(2))
           }, t)) : "" === e.trim() ? r.push((0, a.jsx)("br", {}, t)) : r.push((0, a.jsx)("p", {
-            children: tF(e)
+            children: tT(e)
           }, t))
-        }), i("list-end"), r
+        }), n("list-end"), r
       }
 
-      function t$({
+      function tU({
         presenceInformation: e,
         font: t,
         fontSize: r,
-        discordUserBadges: i,
-        discordData: o,
-        discordPresenceSettings: n,
+        discordUserBadges: n,
+        discordData: i,
+        discordPresenceSettings: o,
         animationStartClass: l,
         discordWidgetRef: c,
         loading: d,
@@ -6487,8 +6550,8 @@ void main() {
           },
           h = e.activities || [],
           [g, x] = (0, s.useState)(0),
-          [v, b] = (0, s.useState)(null),
-          [y, _] = (0, s.useState)(!1),
+          [v, y] = (0, s.useState)(null),
+          [b, _] = (0, s.useState)(!1),
           j = h[g] || h[0],
           w = p({
             font: t,
@@ -6504,28 +6567,29 @@ void main() {
             hasGuildTag: !1
           },
           A = C.avatar,
-          F = C.displayName,
+          $ = C.displayName,
           T = e.status || "unknown",
-          $ = "unknown" === T ? "offline" : T;
+          P = "unknown" === T ? "offline" : T,
+          U = "not_in_guild" === e.unavailableReason;
         (0, s.useEffect)(() => {
-          x(e => e >= h.length ? 0 : e), b(null), _(!1)
+          x(e => e >= h.length ? 0 : e), y(null), _(!1)
         }, [h.length]), (0, s.useEffect)(() => {
           if (h.length <= 1) return;
           let e = window.setInterval(() => {
             x(e => {
               let t = (e + 1) % h.length;
-              return b(h[e] || h[0]), _(!0), t
+              return y(h[e] || h[0]), _(!0), t
             })
           }, 15e3);
           return () => window.clearInterval(e)
         }, [h.length, g]), (0, s.useEffect)(() => {
-          if (!y) return;
+          if (!b) return;
           let e = window.setTimeout(() => {
-            b(null), _(!1)
+            y(null), _(!1)
           }, 360);
           return () => window.clearTimeout(e)
-        }, [y, g]);
-        let P = e => {
+        }, [b, g]);
+        let E = e => {
             if (!e) return null;
             let t = "Spotify" === e.name,
               r = "string" == typeof e.emoji ? e.emoji : "";
@@ -6561,7 +6625,7 @@ void main() {
               })]
             })
           },
-          E = e => {
+          z = e => {
             if (!e || 4 === e.type || !e.image || "{}" === JSON.stringify(e.image)) return null;
             let t = "Spotify" === e.name ? `Listening to ${e.details}${e.state?` by ${e.state.replace(/;/g,",")}`:""}` : `${f[e.type]} ${e.name}`;
             return (0, a.jsx)(ea.A, {
@@ -6577,9 +6641,9 @@ void main() {
           children: (0, a.jsxs)("div", {
             className: `${e2().discordPresenceWidget} ${l} ${u}`,
             ref: c,
-            children: [u && (0, a.jsx)(eI, {
+            children: [u && (0, a.jsx)(eW, {
               effect: m
-            }), e.success && j && !d ? (0, a.jsxs)("div", {
+            }), e.success && !U && j && !d ? (0, a.jsxs)("div", {
               className: e2().discordUserInformation,
               children: [(0, a.jsx)("div", {
                 className: e2().discordAvatar,
@@ -6589,7 +6653,7 @@ void main() {
                     src: A,
                     alt: "Discord Avatar"
                   }), (0, a.jsx)("img", {
-                    src: `https://assets.guns.lol/${$}.png`,
+                    src: `https://assets.guns.lol/${P}.png`,
                     className: e2().discordStatusIcon,
                     alt: ""
                   })]
@@ -6600,10 +6664,10 @@ void main() {
                   className: e2().discordUser,
                   children: [(0, a.jsxs)("div", {
                     className: e2().discordUserDiv,
-                    children: [F && (0, a.jsx)("span", {
+                    children: [$ && (0, a.jsx)("span", {
                       style: w.discordUsername,
-                      children: F
-                    }), n.show_guild_tag && k?.hasGuildTag && (0, a.jsxs)("div", {
+                      children: $
+                    }), o.show_guild_tag && k?.hasGuildTag && (0, a.jsxs)("div", {
                       className: e2().guildTag,
                       children: [(0, a.jsx)("img", {
                         src: k?.iconUrl,
@@ -6611,15 +6675,15 @@ void main() {
                       }), " ", (0, a.jsx)("span", {
                         children: k?.tag
                       })]
-                    }), n.show_badges && (0, a.jsx)("div", {
+                    }), o.show_badges && (0, a.jsx)("div", {
                       className: e2().discordUserBadges,
-                      children: i.map((e, t) => (0, a.jsx)(ea.A, {
+                      children: n.map((e, t) => (0, a.jsx)(ea.A, {
                         content: e,
                         pageTooltipStyles: !0,
                         children: (0, a.jsx)("div", {
                           className: e2().discordBadge,
                           children: (0, a.jsx)("img", {
-                            src: tW[e],
+                            src: tR[e],
                             alt: "Discord Badge"
                           })
                         }, t)
@@ -6627,31 +6691,31 @@ void main() {
                     })]
                   }), (0, a.jsxs)("div", {
                     className: e2().discordActivityTextStack,
-                    children: [v && y && (0, a.jsx)("h3", {
+                    children: [v && b && (0, a.jsx)("h3", {
                       className: `${e2().discordActivityTextLayer} ${e2().discordActivityExit}`,
                       style: w.discordStatus,
-                      children: P(v)
+                      children: E(v)
                     }), (0, a.jsx)("h3", {
-                      className: `${e2().discordActivityTextLayer} ${y?e2().discordActivityEnter:""}`,
+                      className: `${e2().discordActivityTextLayer} ${b?e2().discordActivityEnter:""}`,
                       style: w.discordStatus,
-                      children: P(j)
+                      children: E(j)
                     }, `activity-text-${g}`)]
                   })]
                 }), (0, a.jsx)("div", {
                   className: e2().activityImage,
                   children: (0, a.jsxs)("div", {
                     className: e2().discordActivityImageStack,
-                    children: [v && y && (0, a.jsx)("span", {
+                    children: [v && b && (0, a.jsx)("span", {
                       className: `${e2().discordActivityImageLayer} ${e2().discordActivityExit}`,
-                      children: E(v)
+                      children: z(v)
                     }), (0, a.jsx)("span", {
-                      className: `${e2().discordActivityImageLayer} ${y?e2().discordActivityEnter:""}`,
-                      children: E(j)
+                      className: `${e2().discordActivityImageLayer} ${b?e2().discordActivityEnter:""}`,
+                      children: z(j)
                     }, `activity-image-${g}`)]
                   })
                 })]
               })]
-            }) : !e.success || j || d ? d ? (0, a.jsx)("div", {
+            }) : !e.success || U || j || d ? d ? (0, a.jsx)("div", {
               className: e2().discordLoading,
               children: (0, a.jsxs)("h1", {
                 children: [X.A.discord, " Loading Discord Presence..."]
@@ -6661,16 +6725,16 @@ void main() {
               children: [(0, a.jsxs)("h1", {
                 style: w.discordUsername,
                 children: [X.A.userNotFound, " User Not found"]
-              }), o ? (0, a.jsxs)("h3", {
+              }), i || U ? (0, a.jsxs)("h3", {
                 style: w.discordStatus,
-                children: ["Join ", (0, a.jsx)(en(), {
+                children: ["Join ", (0, a.jsx)(eo(), {
                   href: "https://discord.gg/guns",
                   target: "_blank",
                   children: "discord.gg/guns"
                 }), " to display your Discord presence"]
               }) : (0, a.jsxs)("h3", {
                 style: w.discordStatus,
-                children: ["Please ", (0, a.jsx)(en(), {
+                children: ["Please ", (0, a.jsx)(eo(), {
                   href: "https://guns.lol/account",
                   target: "_blank",
                   children: "connect"
@@ -6686,7 +6750,7 @@ void main() {
                     src: A,
                     alt: "Discord Avatar"
                   }), (0, a.jsx)("img", {
-                    src: `https://assets.guns.lol/${$}.png`,
+                    src: `https://assets.guns.lol/${P}.png`,
                     className: e2().discordStatusIcon,
                     alt: ""
                   })]
@@ -6697,10 +6761,10 @@ void main() {
                   className: e2().discordUser,
                   children: [(0, a.jsxs)("div", {
                     className: e2().discordUserDiv,
-                    children: [F && (0, a.jsx)("span", {
+                    children: [$ && (0, a.jsx)("span", {
                       style: w.discordUsername,
-                      children: F
-                    }), n.show_guild_tag && k?.hasGuildTag && (0, a.jsxs)("div", {
+                      children: $
+                    }), o.show_guild_tag && k?.hasGuildTag && (0, a.jsxs)("div", {
                       className: e2().guildTag,
                       children: [(0, a.jsx)("img", {
                         src: k?.iconUrl,
@@ -6708,15 +6772,15 @@ void main() {
                       }), " ", (0, a.jsx)("span", {
                         children: k?.tag
                       })]
-                    }), n.show_badges && (0, a.jsx)("div", {
+                    }), o.show_badges && (0, a.jsx)("div", {
                       className: e2().discordUserBadges,
-                      children: i.map((e, t) => (0, a.jsx)(ea.A, {
+                      children: n.map((e, t) => (0, a.jsx)(ea.A, {
                         content: e,
                         pageTooltipStyles: !0,
                         children: (0, a.jsx)("div", {
                           className: e2().discordBadge,
                           children: (0, a.jsx)("img", {
-                            src: tW[e],
+                            src: tR[e],
                             alt: "Discord Badge"
                           })
                         }, t)
@@ -6731,7 +6795,7 @@ void main() {
                       contentClassName: e2().offlineText,
                       children: ["last seen ", e.lastSeen ? (0, eg.m)(new Date(1e3 * e.lastSeen)).replace("about ", "") + " ago" : "unknown"]
                     }) : (0, a.jsx)(ex.A, {
-                      children: n.idle_text || "currently doing nothing"
+                      children: o.idle_text || "currently doing nothing"
                     })
                   })]
                 }), (0, a.jsx)("div", {
@@ -6743,11 +6807,11 @@ void main() {
         })
       }
 
-      function tP() {
+      function tE() {
         let e = (0, ed.kj)(),
           t = "guns_promo_seen_v1",
-          [r, i] = (0, s.useState)(!1),
-          [n, l] = (0, s.useState)(!1),
+          [r, n] = (0, s.useState)(!1),
+          [o, l] = (0, s.useState)(!1),
           [c, d] = (0, s.useState)(!1),
           u = (0, s.useRef)(null),
           m = (0, s.useRef)(null);
@@ -6775,123 +6839,123 @@ void main() {
                 return !1
               }
             })()) return u.current = window.setTimeout(() => {
-            i(!0), m.current = window.setTimeout(() => p(), 15e3)
+            n(!0), m.current = window.setTimeout(() => p(), 15e3)
           }, 2500), () => {
             u.current && clearTimeout(u.current), m.current && clearTimeout(m.current)
           }
         }, []);
         let p = () => {
-          n || (l(!0), f(), setTimeout(() => {
-            i(!1), l(!1)
+          o || (l(!0), f(), setTimeout(() => {
+            n(!1), l(!1)
           }, 300))
         };
-        return r || n ? (0, a.jsxs)(a.Fragment, {
+        return r || o ? (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)("div", {
-            className: `${o().promoOverlay} ${n?o().fadeOut:""}`
+            className: `${i().promoOverlay} ${o?i().fadeOut:""}`
           }), (0, a.jsxs)("div", {
-            className: `${o().promoBubble} ${n?o().bubbleOut:""}`,
+            className: `${i().promoBubble} ${o?i().bubbleOut:""}`,
             children: [(0, a.jsx)("img", {
               src: "https://assets.guns.lol/guns_logo_no_background_cropped.png",
-              className: o().promoLogo
+              className: i().promoLogo
             }), (0, a.jsxs)("a", {
               href: "https://guns.lol/register?ref=promo_bubble",
               target: "_blank",
               onClick: f,
-              className: o().promoLink,
+              className: i().promoLink,
               children: [(0, a.jsx)("span", {
-                className: o().promoTitle,
+                className: i().promoTitle,
                 children: e("userpage.promo_bubble.title")
               }), (0, a.jsx)("span", {
-                className: o().promoSub,
+                className: i().promoSub,
                 children: e(c ? "userpage.promo_bubble.cta.mobile" : "userpage.promo_bubble.cta.desktop")
               })]
             }), (0, a.jsx)("button", {
-              className: o().promoClose,
+              className: i().promoClose,
               onClick: p,
               children: "✕"
             })]
           })]
         }) : null
       }
-      var tE = r(45941);
+      var tz = r(45941);
 
-      function tU({
+      function tM({
         templateInfo: e,
         templateAuthorName: t,
         templateData: r,
         textColor: s
       }) {
-        let i = (0, ed.kj)(),
-          n = i("userpage.template_preview.login_to_preview");
+        let n = (0, ed.kj)(),
+          o = n("userpage.template_preview.login_to_preview");
         return (0, a.jsxs)("div", {
-          className: o().templatePreviewContainer,
+          className: i().templatePreviewContainer,
           style: {
             backgroundColor: "var(--templatePreviewContainerBackground)"
           },
           children: [(0, a.jsx)("style", {
             children: `
                     @media (max-width: 600px) {
-                        .${o().volumeButton} {
+                        .${i().volumeButton} {
                             display: none;
                         }
                     }
                 `
           }), r.error ? (0, a.jsx)("span", {
-            className: o().templatePreviewMessage,
+            className: i().templatePreviewMessage,
             style: {
               color: s
             },
-            children: r.error.toLowerCase().includes("unauthorized") ? n : r.error
+            children: r.error.toLowerCase().includes("unauthorized") ? o : r.error
           }) : e ? (0, a.jsxs)(a.Fragment, {
             children: [e.image && (0, a.jsx)("img", {
-              className: o().templatePreviewImage,
+              className: i().templatePreviewImage,
               src: e.image,
               alt: "Preview",
               loading: "lazy"
             }), (0, a.jsxs)("div", {
-              className: o().templatePreviewDetails,
+              className: i().templatePreviewDetails,
               children: [(0, a.jsx)("span", {
-                className: o().templatePreviewLabel,
-                children: i("userpage.template_preview.template_preview")
+                className: i().templatePreviewLabel,
+                children: n("userpage.template_preview.template_preview")
               }), (0, a.jsx)("span", {
-                className: o().templatePreviewName,
+                className: i().templatePreviewName,
                 children: e.name
               }), t && (0, a.jsx)("span", {
-                className: o().templatePreviewAuthor,
-                children: i("userpage.template_preview.template_author", {
+                className: i().templatePreviewAuthor,
+                children: n("userpage.template_preview.template_author", {
                   author: t
                 })
               })]
             }), (0, a.jsx)("a", {
-              className: o().templatePreviewLink,
+              className: i().templatePreviewLink,
               href: `/templates/${r.isUnlisted?"u/":""}${r.templateId}`,
               target: "_blank",
               rel: "noreferrer",
-              children: i("userpage.template_preview.show_template")
+              children: n("userpage.template_preview.show_template")
             })]
           }) : (0, a.jsx)("span", {
-            className: o().templatePreviewMessage,
+            className: i().templatePreviewMessage,
             style: {
               color: s
             },
-            children: i("userpage.template_preview.loading_template")
+            children: n("userpage.template_preview.loading_template")
           })]
         })
       }
-      var tz = r(51047),
-        tB = r.n(tz);
-      let tM = e => new(eG())().splitGraphemes(e),
-        tI = (e, t) => {
+      var tI = r(51047),
+        tB = r.n(tI);
+      let tL = e => new(eG())().splitGraphemes(e),
+        tW = (e, t) => {
           let r = parseInt(e = e.replace(/^#/, ""), 16),
             a = Math.max(0, Math.min(1, t));
           return `rgba(${r>>16&255}, ${r>>8&255}, ${255&r}, ${a})`
         };
 
-      function tL() {
+      function tD() {
         let e = navigator.userAgent.toLowerCase();
         return /mobile|iphone|ipod|android.*mobile/.test(e) ? "mobile" : /ipad|tablet|android(?!.*mobile)/.test(e) ? "tablet" : "desktop"
       }
-      async function tD(e, t, r, a) {
+      async function tF(e, t, r, a) {
         if (a) return;
         let s = await fetch("https://guns.lol/api/analytics/record", {
             method: "POST",
@@ -6903,13 +6967,13 @@ void main() {
               event: r,
               linkId: t,
               referrer: document.referrer,
-              deviceType: tL()
+              deviceType: tD()
             })
           }),
-          i = await s.json();
-        i.error && console.error("Error recording analytics:", i.error)
+          n = await s.json();
+        n.error && console.error("Error recording analytics:", n.error)
       }
-      let tW = {
+      let tR = {
         "Discord Staff": "https://cdn.discordapp.com/badge-icons/5e74e9b61934fc1f67c65515d1f7e60d.png",
         "Partnered Server Owner": "https://cdn.discordapp.com/badge-icons/3f9748e53446a137a052f3454e2de41e.png",
         "Moderator Programs Alumni": "https://cdn.discordapp.com/badge-icons/fee1624003e2fee35cb398e125dc479b.png",
@@ -6927,12 +6991,12 @@ void main() {
         "Server Booster": "https://cdn.discordapp.com/badge-icons/72bed924410c304dbe3d00a6e593ff59.png"
       };
 
-      function tR({
+      function tG({
         data: e
       }) {
         let t = (0, eQ.useRouter)(),
           r = (0, eQ.useSearchParams)(),
-          [i, l] = (0, s.useState)({
+          [n, l] = (0, s.useState)({
             templatePreview: !1,
             templateId: "",
             error: null,
@@ -6944,51 +7008,51 @@ void main() {
           h = !!(e?.deletion?.scheduledForDeletion && !e?.deletion?.banDeletion),
           g = decodeURIComponent((0, eQ.useParams)().username),
           [x, v] = (0, s.useState)(!1),
-          [b, y] = (0, s.useState)({
+          [y, b] = (0, s.useState)({
             volume: 100,
             muted: !1
           }),
           _ = e.config?.premium?.metadata?.favicon;
         e.alias && e.redirect && (0, eQ.redirect)(e.redirect);
-        let [j, w] = (0, s.useState)(e.config ?? tE.hR), [S, N] = (0, s.useState)(j.premium), [C, k] = (0, s.useState)({
+        let [j, w] = (0, s.useState)(e.config ?? tz.hR), [S, N] = (0, s.useState)(j.premium), [C, k] = (0, s.useState)({
           playing: !1,
           currentTime: 0,
           duration: 0,
           ref: null
-        }), [A, F] = (0, s.useState)({
+        }), [A, $] = (0, s.useState)({
           url: "",
           title: "",
           cover: "",
           id: ""
-        }), T = (0, s.useRef)(null), $ = (0, s.useRef)(null), P = (0, s.useRef)(null), E = (0, s.useRef)(null), U = (0, s.useRef)(null), z = p({
+        }), T = (0, s.useRef)(null), P = (0, s.useRef)(null), U = (0, s.useRef)(null), E = (0, s.useRef)(null), z = (0, s.useRef)(null), M = p({
           font: S.font,
           fontSize: S.font_size
-        }), B = j.user_badges, M = e.discord?.user_badges ? B.includes("server_booster") || B.find(e => "server_booster" === e.name) ? [...e.discord.user_badges, "Server Booster"] : e.discord.user_badges : [], I = j.discord_presence_settings || {
+        }), I = j.user_badges, B = e.discord?.user_badges ? I.includes("server_booster") || I.find(e => "server_booster" === e.name) ? [...e.discord.user_badges, "Server Booster"] : e.discord.user_badges : [], L = j.discord_presence_settings || {
           show_badges: !0,
           show_guild_tag: !0,
           idle_text: ""
-        }, L = e.discord ? {
-          id: eb(e.discord.id),
+        }, W = e.discord ? {
+          id: ey(e.discord.id),
           username: e.discord.username,
           user_badges: e.discord.user_badges || []
-        } : null, D = j.text_color, W = S.border_opacity ?? .3, R = tI(S.border_color, W), G = S.border_style ?? "static", H = "dashed" === G ? "dashed" : "solid", O = `${S.border_width}px ${H} ${R}`, q = `2px solid ${tI(S.border_color,W)}`, V = ["shimmer", "pulse"].includes(G) ? G : null, Y = S.border_enabled && !!V, Q = Y ? o().shimmerProfileBorder : "", K = ev(d), ee = j.use_discord_avatar && e.discord ? K.avatar : j.avatar, et = "simplistic" === S.layout ? {
+        } : null, D = j.text_color, F = S.border_opacity ?? .3, R = tW(S.border_color, F), G = S.border_style ?? "static", H = "dashed" === G ? "dashed" : "solid", O = `${S.border_width}px ${H} ${R}`, V = `2px solid ${tW(S.border_color,F)}`, q = ["shimmer", "pulse"].includes(G) ? G : null, Y = S.border_enabled && !!q, Q = Y ? i().shimmerProfileBorder : "", K = ev(d), ee = j.use_discord_avatar && e.discord ? K.avatar : j.avatar, et = "simplistic" === S.layout ? {
           justifyContent: "initial"
         } : "sleek" === S.layout && ee ? {
           paddingTop: "100px"
         } : {}, er = "portfolio" === S.layout ? S.portfolio_border_radius ?? S.border_radius : S.border_radius, ea = {
           "--presenceUsernameColor": D,
-          "--presenceStatusColor": tI(D, .7),
-          "--presenceContainerBackground": j.swap_colors ? tI(j.color, .2) : tI(D, .07),
-          "--presenceContainerBorder": j.swap_colors ? `2px solid ${tI(j.color,.1)}` : `2px solid ${tI(D,.05)}`,
-          "--discordServerMembers": tI(D, .6),
-          "--secondTabBackground": j.swap_colors ? tI(j.color, .2) : tI(D, .07),
-          "--secondTabBorder": j.swap_colors ? `2px solid ${tI(j.color,.1)}` : `2px solid ${tI(D,.05)}`,
-          "--discordMissingIcon": tI(D, .25),
-          "--modernLayoutSeperator": tI(D, .12),
-          "--modernLayoutSeperatorBorder": tI(D, .12),
-          "--discordAvatarBorder": `2px solid ${tI(j.color,.15)}`,
-          "--badgeContainerBackground": j.swap_colors ? tI(j.color, .2) : tI(D, .08),
-          "--badgeContainerBorder": `2px solid ${tI(j.swap_colors?j.color:D,.04)}`,
+          "--presenceStatusColor": tW(D, .7),
+          "--presenceContainerBackground": j.swap_colors ? tW(j.color, .2) : tW(D, .07),
+          "--presenceContainerBorder": j.swap_colors ? `2px solid ${tW(j.color,.1)}` : `2px solid ${tW(D,.05)}`,
+          "--discordServerMembers": tW(D, .6),
+          "--secondTabBackground": j.swap_colors ? tW(j.color, .2) : tW(D, .07),
+          "--secondTabBorder": j.swap_colors ? `2px solid ${tW(j.color,.1)}` : `2px solid ${tW(D,.05)}`,
+          "--discordMissingIcon": tW(D, .25),
+          "--modernLayoutSeperator": tW(D, .12),
+          "--modernLayoutSeperatorBorder": tW(D, .12),
+          "--discordAvatarBorder": `2px solid ${tW(j.color,.15)}`,
+          "--badgeContainerBackground": j.swap_colors ? tW(j.color, .2) : tW(D, .08),
+          "--badgeContainerBorder": `2px solid ${tW(j.swap_colors?j.color:D,.04)}`,
           "--userBadge": {
             default: "20.5px",
             modern: "18px",
@@ -6997,16 +7061,16 @@ void main() {
             portfolio: "20px"
           } [S.layout],
           "--textColor": D,
-          "--textColorDarker": tI(D, .5),
+          "--textColorDarker": tW(D, .5),
           "--iconColor": j.icon_color,
           "--backgroundColor": j.bg_color,
-          "--joinStatus": tI(D, .65),
-          "--audioPlayerBar": tI(D, .35),
-          "--avatarBorder": S.border_enabled ? q : `2px solid ${tI(j.color,.4)}`,
-          "--containerColor": tI(j.color, j.opacity),
+          "--joinStatus": tW(D, .65),
+          "--audioPlayerBar": tW(D, .35),
+          "--avatarBorder": S.border_enabled ? V : `2px solid ${tW(j.color,.4)}`,
+          "--containerColor": tW(j.color, j.opacity),
           "--containerBlur": `${j.blur}px`,
-          "--containerGradient": j.profile_gradient && `linear-gradient(25deg, ${tI(j.gradient_1,j.opacity)}, ${tI(j.gradient_2,j.opacity)})`,
-          "--containerBackgroundImage": j.profile_gradient && `linear-gradient(25deg, ${tI(j.gradient_1,j.opacity)}, ${tI(j.gradient_2,j.opacity)})`,
+          "--containerGradient": j.profile_gradient && `linear-gradient(25deg, ${tW(j.gradient_1,j.opacity)}, ${tW(j.gradient_2,j.opacity)})`,
+          "--containerBackgroundImage": j.profile_gradient && `linear-gradient(25deg, ${tW(j.gradient_1,j.opacity)}, ${tW(j.gradient_2,j.opacity)})`,
           "--containerBorder": S.border_enabled && (Y ? "none" : O),
           "--containerBackgroundClip": "border-box",
           "--containerBackgroundOrigin": "border-box",
@@ -7027,40 +7091,40 @@ void main() {
             sleek: "25px",
             portfolio: "26px"
           } [S.layout],
-          "--volumeBackgroundcolor": tI(j.color, 0 !== j.opacity ? j.opacity : .2),
-          "--volumeBorder": `2px solid ${tI(j.color,0!==j.opacity?j.opacity-.1*j.opacity:.05)}`,
+          "--volumeBackgroundcolor": tW(j.color, 0 !== j.opacity ? j.opacity : .2),
+          "--volumeBorder": `2px solid ${tW(j.color,0!==j.opacity?j.opacity-.1*j.opacity:.05)}`,
           "--colorUsernameGlow": j.username_glow && `0px 0px 16.5px ${D}`,
           "--usernameEffects": (() => {
             let e = j.username_effects;
             if (!(!e || ["rgb", "rainbow", "none", "typewriter", "fuzzy", "shuffle"].includes(e))) return `url(https://assets.guns.lol/${e.startsWith("sparkle_")?e:`sparkle_${e}`}.gif)`
           })(),
-          "--buttonBackground": tI(D, .22),
-          "--buttonBorder": `2px solid ${tI(D,.12)}`,
+          "--buttonBackground": tW(D, .22),
+          "--buttonBorder": `2px solid ${tW(D,.12)}`,
           "--buttonRadius": `${S.button_border_radius}px`,
           "--buttonAlign": S.text_align,
-          "--buttonBackgroundHover": tI(D, .32),
-          "--buttonBorderHover": `2px solid ${tI(D,.25)}`,
-          "--buttonUrlColor": tI(D, .65),
-          "--buttonShadow": S.button_shadow && `${tI(D,.22)} 0px 0px 15px`,
+          "--buttonBackgroundHover": tW(D, .32),
+          "--buttonBorderHover": `2px solid ${tW(D,.25)}`,
+          "--buttonUrlColor": tW(D, .65),
+          "--buttonShadow": S.button_shadow && `${tW(D,.22)} 0px 0px 15px`,
           "--profileViewsContainerBorder": `2px solid ${R}`,
-          "--templatePreviewContainerBackground": tI(j.color, .4),
-          "--platformTextColor": tI(D, .4),
-          "--secondTabWidgetDescription": tI(D, .6),
-          "--audioIconBackground": tI(D, .2),
-          "--progessBarFull": tI(D, .3),
+          "--templatePreviewContainerBackground": tW(j.color, .4),
+          "--platformTextColor": tW(D, .4),
+          "--secondTabWidgetDescription": tW(D, .6),
+          "--audioIconBackground": tW(D, .2),
+          "--progessBarFull": tW(D, .3),
           "--progessBarPlaying": D,
-          "--controlButtonsOther": tI(D, .5),
+          "--controlButtonsOther": tW(D, .5),
           "--controlButtonPlaying": D,
-          "--controlTextColor": tI(D, .7),
-          "--modernLayoutBottomLeftDivider": tI(D, .14),
-          "--sleekLayoutTopRightDivider": tI(D, .14)
-        }, es = e.premium ? "unfold" === S.animation ? o().unfoldStart : "fade" === S.animation ? o().fadeUpStart : "pop" === S.animation ? o().scaleFadeStart : o().fadeUpStart : o().fadeUpStart, ei = e.premium ? "unfold" === S.animation ? o().unfold : "fade" === S.animation ? o().fadeUp : "pop" === S.animation ? o().scaleFade : o().fadeUp : o().fadeUp, eo = {
-          modern: `${o().userContainer} ${es} ${Q}`,
-          default: `${o().userContainer} ${es} ${Q}`,
-          simplistic: `${o().userContainerLayout3} ${es}`,
-          sleek: `${o().userContainerLayout4} ${es} ${Q}`,
-          portfolio: `${o().userContainer} ${es} ${Q}`
-        }, en = i.templateInfo, el = en?.user_information?.username;
+          "--controlTextColor": tW(D, .7),
+          "--modernLayoutBottomLeftDivider": tW(D, .14),
+          "--sleekLayoutTopRightDivider": tW(D, .14)
+        }, es = e.premium ? "unfold" === S.animation ? i().unfoldStart : "fade" === S.animation ? i().fadeUpStart : "pop" === S.animation ? i().scaleFadeStart : i().fadeUpStart : i().fadeUpStart, en = e.premium ? "unfold" === S.animation ? i().unfold : "fade" === S.animation ? i().fadeUp : "pop" === S.animation ? i().scaleFade : i().fadeUp : i().fadeUp, ei = {
+          modern: `${i().userContainer} ${es} ${Q}`,
+          default: `${i().userContainer} ${es} ${Q}`,
+          simplistic: `${i().userContainerLayout3} ${es}`,
+          sleek: `${i().userContainerLayout4} ${es} ${Q}`,
+          portfolio: `${i().userContainer} ${es} ${Q}`
+        }, eo = n.templateInfo, el = eo?.user_information?.username;
         (0, s.useEffect)(() => {
           var t;
           let r, a;
@@ -7068,14 +7132,14 @@ void main() {
             r === t.length && (a = !1), 0 === r && (a = !0);
             let e = 0 === (r = a ? r + 1 : r - 1) ? "" : t.slice(0, r);
             document.title = "@" + e
-          }, 380)), ed || ef(j.url) || (ei === o().fadeUp ? setTimeout(function() {
-            P.current && P.current.classList.add(o().fadeUp), E.current && E.current?.classList.add(o().fadeUp), U.current && U.current?.classList.add(o().fadeUp)
-          }, 350) : ei === o().unfold ? document.querySelectorAll(`.${o().unfoldStart}`).forEach((e, t) => {
+          }, 380)), ed || ef(j.url) || (en === i().fadeUp ? setTimeout(function() {
+            U.current && U.current.classList.add(i().fadeUp), E.current && E.current?.classList.add(i().fadeUp), z.current && z.current?.classList.add(i().fadeUp)
+          }, 350) : en === i().unfold ? document.querySelectorAll(`.${i().unfoldStart}`).forEach((e, t) => {
             setTimeout(() => {
-              e.classList.add(o().unfold)
+              e.classList.add(i().unfold)
             }, 300 * t)
-          }) : ei === o().scaleFade && setTimeout(function() {
-            P.current && P.current.classList.add(o().scaleFade), E.current && E.current?.classList.add(o().scaleFade), U.current && U.current?.classList.add(o().scaleFade)
+          }) : en === i().scaleFade && setTimeout(function() {
+            U.current && U.current.classList.add(i().scaleFade), E.current && E.current?.classList.add(i().scaleFade), z.current && z.current?.classList.add(i().scaleFade)
           }, 350))
         }, [r, j]), (0, s.useEffect)(() => {
           let e = navigator.userAgent.toLowerCase();
@@ -7084,16 +7148,16 @@ void main() {
         let ec = "string" == typeof j.audio,
           [ed, eu] = (0, s.useState)(ec ? "" !== j.audio : j.audio.length > 0),
           em = () => {
-            let e = !b.muted,
+            let e = !y.muted,
               t = C.ref;
-            0 === b.volume && b.muted ? (y({
-              ...b,
+            0 === y.volume && y.muted ? (b({
+              ...y,
               muted: !1,
               volume: 100
-            }), t && (t.muted = !1, t.volume = .25), !ed && T.current && (T.current.muted = !1, T.current.volume = .25)) : (y({
-              ...b,
+            }), t && (t.muted = !1, t.volume = .25), !ed && T.current && (T.current.muted = !1, T.current.volume = .25)) : (b({
+              ...y,
               muted: e
-            }), t && (t.muted = e, e || (t.volume = b.volume / 100 * .25)), !ed && T.current && (T.current.muted = e, e || (T.current.volume = b.volume / 100 * .25)))
+            }), t && (t.muted = e, e || (t.volume = y.volume / 100 * .25)), !ed && T.current && (T.current.muted = e, e || (T.current.volume = y.volume / 100 * .25)))
           },
           ef = e => {
             for (let t of [".mp4", ".mov", ".avi", ".m4v", ".webm", ".mkv"])
@@ -7103,10 +7167,10 @@ void main() {
         return (0, s.useEffect)(() => {
           let a = r.get("templatePreview"),
             s = r.get("unlisted") || "false",
-            i = r.get("templateId");
-          a && !i || !a && i ? t.push(`/${g}`) : "true" === a && i ? (async () => {
+            n = r.get("templateId");
+          a && !n || !a && n ? t.push(`/${g}`) : "true" === a && n ? (async () => {
             try {
-              let t = await fetch(`https://guns.lol/api/users/templatePreview/${i}?unlisted=${s}`, {
+              let t = await fetch(`https://guns.lol/api/users/templatePreview/${n}?unlisted=${s}`, {
                   method: "POST"
                 }),
                 r = await t.json(),
@@ -7123,26 +7187,26 @@ void main() {
                 };
               if (l({
                   templatePreview: !0,
-                  templateId: String(i),
+                  templateId: String(n),
                   error: r.error ?? null,
                   isUnlisted: "true" === s,
                   templateInfo: a
                 }), r.error) return;
-              let o = r.config || {},
-                n = r.premium || {};
+              let i = r.config || {},
+                o = r.premium || {};
               w(e => ({
                 ...e,
-                ...o
-              })), e.premium && Object.keys(n).length > 0 && N(e => ({
+                ...i
+              })), e.premium && Object.keys(o).length > 0 && N(e => ({
                 ...e,
-                ...n
+                ...o
               }));
-              let c = o?.audio;
+              let c = i?.audio;
               "string" == typeof c ? eu("" !== c) : Array.isArray(c) && eu(c.length > 0)
             } catch (e) {
               console.error("Error fetching template preview:", e), l({
                 templatePreview: !0,
-                templateId: i || "",
+                templateId: n || "",
                 error: "Unable to load template preview.",
                 isUnlisted: "true" === s,
                 templateInfo: null
@@ -7157,7 +7221,7 @@ void main() {
           } : e)
         }, [r, t, g, e.premium]), (0, s.useEffect)(() => {
           let t = async t => {
-            let r = eb(e.discord.id);
+            let r = ey(e.discord.id);
             if (!r) return void f(!1);
             let a = await fetch("https://guns.lol/api/service/discord", {
                 method: "POST",
@@ -7167,7 +7231,7 @@ void main() {
                 body: JSON.stringify({
                   type: t,
                   discordId: r,
-                  fallbackIdentity: L
+                  fallbackIdentity: W
                 })
               }),
               s = await a.json();
@@ -7186,24 +7250,24 @@ void main() {
             href: _,
             sizes: "any"
           }), e.success && !e.ban && e.verified && !h ? (0, a.jsxs)(a.Fragment, {
-            children: [!e.premium && !i.templatePreview && (0, a.jsx)(tP, {}), (0, a.jsx)(n, {
+            children: [!e.premium && !n.templatePreview && (0, a.jsx)(tE, {}), (0, a.jsx)(o, {
               backgroundUrl: j.url,
               audio: j.audio,
               shuffleAudios: j.shuffle_audios,
               videoTagRef: T,
-              audioTagRef: $,
+              audioTagRef: P,
               audioData: A,
-              setAudioData: F
+              setAudioData: $
             }), (ed || ef(j.url)) && (0, a.jsx)(c, {
               videoTagRef: T,
-              audioTagRef: $,
+              audioTagRef: P,
               clickToEnterText: "" === S.page_enter_text ? "click to enter..." : S.page_enter_text,
-              userFont: z,
-              userContainerRef: P,
-              animationClass: ei,
+              userFont: M,
+              userContainerRef: U,
+              animationClass: en,
               setAudioPlayer: k,
               audioContainerRef: E,
-              discordWidgetRef: U
+              discordWidgetRef: z
             }), (0, a.jsx)(Z, {
               backgroundEffects: j.background_effects,
               backgroundEffectsColor: j.background_effects_color,
@@ -7216,25 +7280,25 @@ void main() {
               font: S.font,
               letterSpacing: S.font_letter_spacing
             }), (0, a.jsx)("div", {
-              className: o().backgroundColor,
+              className: i().backgroundColor,
               style: {
                 backgroundColor: j.bg_color
               }
             }), (0, a.jsxs)("div", {
               style: ea,
               children: [j.volume_control && (ef(j.url) || ed) && !x && (0, a.jsxs)("div", {
-                className: o().volumeButton,
+                className: i().volumeButton,
                 style: {
                   zIndex: "portfolio" === S.layout ? "2" : "1"
                 },
-                children: [b.muted ? (0, a.jsx)("span", {
+                children: [y.muted ? (0, a.jsx)("span", {
                   onClick: em,
                   children: X.A.muted
                 }) : (0, a.jsx)("span", {
                   onClick: em,
                   children: X.A.unmuted
                 }), (0, a.jsxs)("div", {
-                  className: o().volumeSlider,
+                  className: i().volumeSlider,
                   children: [(0, a.jsx)("style", {
                     children: `
                                         .${tB().tooltip} {
@@ -7255,11 +7319,11 @@ void main() {
                                         }
                                         `
                   }), (0, a.jsx)(e0.A, {
-                    value: b.muted ? 0 : Math.round(b.volume),
+                    value: y.muted ? 0 : Math.round(y.volume),
                     onChangeFunction: e => {
                       let t = 0 === e,
                         r = C.ref;
-                      y({
+                      b({
                         volume: e,
                         muted: t
                       }), r && (r.volume = e / 100 * .25, r.muted = t), !ed && T.current && (T.current.volume = e / 100 * .25, T.current.muted = t)
@@ -7271,13 +7335,13 @@ void main() {
                 })]
               }), (0, a.jsx)(eS.A, {
                 username: e.username
-              }), i.templatePreview && (0, a.jsx)(tU, {
-                templateInfo: i.templateInfo,
+              }), n.templatePreview && (0, a.jsx)(tM, {
+                templateInfo: n.templateInfo,
                 templateAuthorName: el || "Unknown",
-                templateData: i,
+                templateData: n,
                 textColor: S.text_color
               }), (0, a.jsx)("div", {
-                className: o().mainContainer,
+                className: i().mainContainer,
                 children: "portfolio" === S.layout ? (0, a.jsxs)(a.Fragment, {
                   children: [(0, a.jsx)(tl, {
                     userData: e,
@@ -7285,18 +7349,18 @@ void main() {
                     premiumConfig: S,
                     presenceInformation: d,
                     animationStartClass: es,
-                    isTemplatePreview: i.templatePreview,
+                    isTemplatePreview: n.templatePreview,
                     discordLoading: m,
-                    discordBadges: M,
+                    discordBadges: B,
                     profileBorderClass: Q,
-                    profileBorderEffect: V,
+                    profileBorderEffect: q,
                     profileBorderEffectEnabled: Y,
                     audioPlayer: C,
-                    setAudioData: F,
+                    setAudioData: $,
                     audioData: A,
                     setAudioPlayer: k,
                     audioContainerRef: E,
-                    setVolume: y
+                    setVolume: b
                   }), (0, a.jsx)("style", {
                     children: `
                                             body, html {
@@ -7311,19 +7375,19 @@ void main() {
                                         `
                   })]
                 }) : (0, a.jsxs)("div", {
-                  className: o().userContainerWrapper,
+                  className: i().userContainerWrapper,
                   style: et,
                   children: ["simplistic" === S.layout && (0, a.jsx)("div", {
-                    className: o().profileViewsContainer,
+                    className: i().profileViewsContainer,
                     children: (0, a.jsx)(ew, {
                       challengeData: e._gpp_ch,
                       username: e.username,
                       premiumConfig: S,
                       views: j.page_views,
                       containerBorderRadius: S.border_radius,
-                      isUnfold: es === o().unfoldStart,
+                      isUnfold: es === i().unfoldStart,
                       animationStartClass: es,
-                      isTemplatePreview: i.templatePreview
+                      isTemplatePreview: n.templatePreview
                     })
                   }), S.parallax_animation ? (0, a.jsxs)(eK.A, {
                     ...{
@@ -7345,277 +7409,163 @@ void main() {
                       zIndex: 1
                     },
                     children: [(0, a.jsxs)("div", {
-                      className: eo[S.layout],
+                      className: ei[S.layout],
                       style: {
                         position: Y ? "relative" : "initial"
                       },
-                      ref: P,
-                      children: [Y && V && (0, a.jsx)(eI, {
-                        effect: V
+                      ref: U,
+                      children: [Y && q && (0, a.jsx)(eW, {
+                        effect: q
                       }), "default" === S.layout ? (0, a.jsx)(eN, {
                         userData: e,
                         config: j,
                         premiumConfig: S,
                         presenceInformation: d,
                         animationStartClass: es,
-                        isTemplatePreview: i.templatePreview,
+                        isTemplatePreview: n.templatePreview,
                         discordLoading: m
-                      }) : "modern" === S.layout ? (0, a.jsx)(e$, {
+                      }) : "modern" === S.layout ? (0, a.jsx)(eP, {
                         userData: e,
                         config: j,
                         premiumConfig: S,
                         presenceInformation: d,
                         animationStartClass: es,
-                        isTemplatePreview: i.templatePreview,
+                        isTemplatePreview: n.templatePreview,
                         discordLoading: m
-                      }) : "simplistic" === S.layout ? (0, a.jsx)(eW, {
+                      }) : "simplistic" === S.layout ? (0, a.jsx)(eF, {
                         userData: e,
                         config: j,
                         premiumConfig: S,
                         presenceInformation: d,
                         animationStartClass: es,
-                        setAudioData: F,
+                        setAudioData: $,
                         audioData: A,
                         audioPlayer: C,
                         setAudioPlayer: k,
                         audioContainerRef: E,
-                        setVolume: y,
+                        setVolume: b,
                         profileBorderClass: Q,
-                        profileBorderEffect: V
+                        profileBorderEffect: q
                       }) : (0, a.jsx)(e5, {
                         userData: e,
                         config: j,
                         premiumConfig: S,
                         presenceInformation: d,
                         animationStartClass: es,
-                        isTemplatePreview: i.templatePreview
+                        isTemplatePreview: n.templatePreview
                       })]
-                    }), "enabled" === j.presence && "sleek" === S.layout && (0, a.jsx)(t$, {
+                    }), "enabled" === j.presence && "sleek" === S.layout && (0, a.jsx)(tU, {
                       loading: m,
                       presenceInformation: d,
                       font: S.font,
-                      discordUserBadges: M,
+                      discordUserBadges: B,
                       discordData: e.discord,
                       fontSize: S.font_size,
                       animationStartClass: es,
-                      discordWidgetRef: U,
-                      discordPresenceSettings: I,
+                      discordWidgetRef: z,
+                      discordPresenceSettings: L,
                       profileBorderClass: Q,
-                      profileBorderEffect: V
+                      profileBorderEffect: q
                     }), j.audio_player && "" !== A.url && "simplistic" !== S.layout && (0, a.jsx)(eD, {
                       animationStartClass: es,
                       audioPlayer: C,
-                      setAudioData: F,
+                      setAudioData: $,
                       audioData: A,
                       setAudioPlayer: k,
                       audioContainerRef: E,
                       currentFont: S.font,
                       audioList: j.audio,
-                      setVolume: y,
+                      setVolume: b,
                       fontSize: S.font_size,
                       profileBorderClass: Q,
-                      profileBorderEffect: V
+                      profileBorderEffect: q
                     })]
                   }) : (0, a.jsxs)("div", {
-                    className: o().usernameContainerFlex,
+                    className: i().usernameContainerFlex,
                     style: {
                       position: "relative",
                       zIndex: 1
                     },
                     children: [(0, a.jsxs)("div", {
-                      className: eo[S.layout],
-                      ref: P,
-                      children: [Y && V && (0, a.jsx)(eI, {
-                        effect: V
+                      className: ei[S.layout],
+                      ref: U,
+                      children: [Y && q && (0, a.jsx)(eW, {
+                        effect: q
                       }), "default" === S.layout ? (0, a.jsx)(eN, {
                         userData: e,
                         config: j,
                         premiumConfig: S,
                         presenceInformation: d,
                         animationStartClass: es,
-                        isTemplatePreview: i.templatePreview,
+                        isTemplatePreview: n.templatePreview,
                         discordLoading: m
-                      }) : "modern" === S.layout ? (0, a.jsx)(e$, {
+                      }) : "modern" === S.layout ? (0, a.jsx)(eP, {
                         userData: e,
                         config: j,
                         premiumConfig: S,
                         presenceInformation: d,
                         animationStartClass: es,
-                        isTemplatePreview: i.templatePreview,
+                        isTemplatePreview: n.templatePreview,
                         discordLoading: m
-                      }) : "simplistic" === S.layout ? (0, a.jsx)(eW, {
+                      }) : "simplistic" === S.layout ? (0, a.jsx)(eF, {
                         userData: e,
                         config: j,
                         premiumConfig: S,
                         presenceInformation: d,
                         animationStartClass: es,
-                        setAudioData: F,
+                        setAudioData: $,
                         audioData: A,
                         audioPlayer: C,
                         setAudioPlayer: k,
                         audioContainerRef: E,
-                        setVolume: y,
+                        setVolume: b,
                         profileBorderClass: Q,
-                        profileBorderEffect: V
+                        profileBorderEffect: q
                       }) : (0, a.jsx)(e5, {
                         userData: e,
                         config: j,
                         premiumConfig: S,
                         presenceInformation: d,
                         animationStartClass: es,
-                        isTemplatePreview: i.templatePreview
+                        isTemplatePreview: n.templatePreview
                       })]
-                    }), "enabled" === j.presence && "sleek" === S.layout && (0, a.jsx)(t$, {
+                    }), "enabled" === j.presence && "sleek" === S.layout && (0, a.jsx)(tU, {
                       loading: m,
                       presenceInformation: d,
                       font: S.font,
-                      discordUserBadges: M,
+                      discordUserBadges: B,
                       discordData: e.discord,
                       fontSize: S.font_size,
                       animationStartClass: es,
-                      discordWidgetRef: U,
-                      discordPresenceSettings: I,
+                      discordWidgetRef: z,
+                      discordPresenceSettings: L,
                       profileBorderClass: Q,
-                      profileBorderEffect: V
+                      profileBorderEffect: q
                     }), j.audio_player && "" !== A.url && "simplistic" !== S.layout && (0, a.jsx)(eD, {
                       animationStartClass: es,
                       audioPlayer: C,
-                      setAudioData: F,
+                      setAudioData: $,
                       audioData: A,
                       setAudioPlayer: k,
                       audioContainerRef: E,
                       currentFont: S.font,
                       audioList: j.audio,
-                      setVolume: y,
+                      setVolume: b,
                       fontSize: S.font_size,
                       profileBorderClass: Q,
-                      profileBorderEffect: V
+                      profileBorderEffect: q
                     })]
                   })]
                 })
               })]
             })]
-          }) : e.error?.toLowerCase() === "user not found" ? (0, a.jsx)(eV, {
+          }) : e.error?.toLowerCase() === "user not found" ? (0, a.jsx)(eq, {
             username: g,
             sessionData: e.session
           }) : h ? (0, a.jsx)(eJ, {}) : e.error ? (0, a.jsx)(eY, {}) : !0 === e.ban ? (0, a.jsx)(eZ, {
             reason: e.ban_reason
           }) : !e.verified && (0, a.jsx)(eX, {})]
         })
-      }
-    },
-    17440: (e, t, r) => {
-      "use strict";
-      r.d(t, {
-        h: () => n
-      });
-      var a = r(71558),
-        s = r(77599);
-      let i = e => ({
-          hex: e.hex,
-          path: e.path
-        }),
-        o = {
-          python: i(a.FRF),
-          javascript: i(a.wAf),
-          typescript: i(a.k8A),
-          rust: i(a.XSi),
-          go: i(a.LGf),
-          java: i(a.cbE),
-          kotlin: i(a.OOE),
-          swift: i(a.CiU),
-          csharp: i(a.$ae),
-          cpp: i(a.ocb),
-          c: i(a.yx7),
-          ruby: i(a.hsX),
-          php: i(a.zyD),
-          elixir: i(a.kK$),
-          haskell: i(a.hR5),
-          scala: i(a.NMs),
-          dart: i(a.SaL),
-          lua: i(a.Bge),
-          r: i(a.Fcj),
-          julia: i(a.oYk),
-          clojure: i(a.N9z),
-          zig: i(a.PLb),
-          react: i(a.usQ),
-          nextjs: i(a.iaw),
-          vue: i(a.psU),
-          nuxt: i(a.yA),
-          svelte: i(a.eLf),
-          angular: i(a.HXh),
-          solid: i(a.S29),
-          remix: i(a.YkN),
-          astro: i(a.uIm),
-          qwik: i(a.H5N),
-          htmx: i(a.kf7),
-          nodejs: i(a.jCk),
-          express: i(a.but),
-          fastapi: i(a.HVU),
-          django: i(a.EO7),
-          flask: i(a.ovN),
-          rails: i(a.Xrq),
-          laravel: i(a.cqm),
-          nestjs: i(a.Alo),
-          hono: i(a.F7v),
-          bun: i(a.qVm),
-          deno: i(a.xiE),
-          spring: i(a.ATT),
-          actix: i(a.IOj),
-          gin: i(a.HPo),
-          postgresql: i(a.$Gx),
-          mysql: i(a.FUg),
-          mongodb: i(a.jHD),
-          redis: i(a.Oic),
-          sqlite: i(a.dm5),
-          supabase: i(a.lvA),
-          firebase: i(a.Ep6),
-          planetscale: i(a.vKd),
-          turso: i(a.IKK),
-          cassandra: i(a.VLf),
-          clickhouse: i(a.FO9),
-          docker: i(a.bJP),
-          kubernetes: i(a.Ze),
-          gcp: i(a.vGL),
-          vercel: i(a.gc9),
-          cloudflare: i(a.abC),
-          terraform: i(a.Bn8),
-          "github-actions": i(a.DVO),
-          linux: i(a.Z0w),
-          tailwind: i(a.AN7),
-          css: i(a.QBF),
-          sass: i(a.$EC),
-          shadcn: i(a.__M),
-          "framer-motion": i(a.W4B),
-          three: i(a.HVl),
-          pytorch: i(a.glI),
-          tensorflow: i(a.Md3),
-          langchain: i(a.G9w),
-          pandas: i(a.OUC),
-          numpy: i(a.GUw),
-          graphql: i(a.WhL),
-          trpc: i(a._RX),
-          prisma: i(a.fJ3),
-          drizzle: i(a.nLA),
-          git: i(a.HkF),
-          figma: i(a.ZBL),
-          blender: i(a.JL2),
-          unity: i(a.CX9),
-          unreal: i(a.ABy),
-          flutter: i(a.PL5),
-          "react-native": i(a.usQ),
-          tauri: i(a.KGs),
-          electron: i(a.zwX),
-          wasm: i(a.bnX),
-          kafka: i(a.l11),
-          rabbitmq: i(a.Ztf),
-          nginx: i(a.h$_),
-          neovim: i(a.T84)
-        };
-
-      function n(e) {
-        let t = "string" == typeof e ? (0, s.RU)(e) : e;
-        return t ? o[t.id] : void 0
       }
     },
     27212: e => {
@@ -7628,7 +7578,6 @@ void main() {
         heroModule: "GUNS__07-9f3b6c9b-13597119-0404b65e",
         portfolioSection: "GUNS__04-48c26bc6-e5a19dc2-c8288809",
         heroStage: "GUNS__18-7c2472f2-6a2c59bb-c9c39e70",
-        hero: "GUNS__5e-03d67501-99b05a72-6f0bdfb3",
         heroStageSolo: "GUNS__35-08e74f4d-3c49b19d-e4ff0f76",
         heroIdentity: "GUNS__74-a07b26e4-6436fb8c-6bb9433f",
         heroAvatarFrame: "GUNS__60-f6e4b357-041933b3-bab21af8",
@@ -7642,6 +7591,7 @@ void main() {
         heroBadgeRail: "GUNS__a2-b2b4814e-6b1224a6-275d5630",
         heroBadgeTrack: "GUNS__f7-a57a2f04-fa294a61-f4d92e2e",
         heroBadgeGroup: "GUNS__f5-a3fa5675-121435b7-c6f8a1c8",
+        heroBadgeRailLoop: "GUNS__bc-99dedf07-89eeb7e7-cff34073",
         heroBadgeContainerCentered: "GUNS__fa-9eb5df22-bc7e6d38-f7b031fa",
         heroActions: "GUNS__20-140cbab4-d4407d14-80413a1e",
         heroBottomMeta: "GUNS__38-301bcaaf-9d61b88f-afdbaa22",
@@ -7679,17 +7629,16 @@ void main() {
         scrollProgressDots: "GUNS__91-10a31676-9447bfb7-f8a8c061",
         customEmbed: "GUNS__41-53148273-a1978857-81e3d5dd",
         scrollIndicator: "GUNS__1c-b0f698f7-d1505db6-7276de7d",
-        portfolioScrollCue: "GUNS__c2-b14692e0-1b9b0b73-8aa64360",
-        heroBadgeRailLoop: "GUNS__bc-99dedf07-89eeb7e7-cff34073"
+        portfolioScrollCue: "GUNS__c2-b14692e0-1b9b0b73-8aa64360"
       }
     },
     28485: (e, t, r) => {
       "use strict";
       r.d(t, {
-        Fb: () => n,
-        Uy: () => o,
+        Fb: () => o,
+        Uy: () => i,
         V$: () => a,
-        vp: () => i
+        vp: () => n
       });
       let a = {
           snapchat: "Snapchat",
@@ -7748,14 +7697,14 @@ void main() {
           }
         };
 
-      function i(e, t) {
+      function n(e, t) {
         let r = s[e];
         if (!r) return "...";
         let a = t(r.key),
-          i = "string" == typeof a ? a : r.fallback;
-        return i === r.key ? r.fallback : i
+          n = "string" == typeof a ? a : r.fallback;
+        return n === r.key ? r.fallback : n
       }
-      let o = {
+      let i = {
           snapchat: "snapchat.com/add/",
           gitlab: "gitlab.com/",
           patreon: "patreon.com/",
@@ -7802,7 +7751,7 @@ void main() {
           tellonym: "tellonym.me/",
           bluesky: "bsky.app/profile/"
         },
-        n = {
+        o = {
           snapchat: 178,
           gitlab: 120,
           patreon: 136,
@@ -7854,19 +7803,19 @@ void main() {
     50703: (e, t, r) => {
       "use strict";
       r.d(t, {
-        A: () => n
+        A: () => o
       });
       var a = r(95155),
         s = r(12115),
-        i = r(5684),
-        o = r.n(i);
+        n = r(5684),
+        i = r.n(n);
 
-      function n({
+      function o({
         as: e = "span",
         className: t,
         contentClassName: r,
-        children: i,
-        style: n,
+        children: n,
+        style: o,
         title: l
       }) {
         let c = (0, s.useRef)(null),
@@ -7886,25 +7835,25 @@ void main() {
               })
             };
           s();
-          let i = "undefined" != typeof ResizeObserver ? new ResizeObserver(s) : null;
-          return i?.observe(e), i?.observe(t), window.addEventListener("resize", s), document.fonts?.ready.then(s), () => {
-            a = !1, cancelAnimationFrame(r), i?.disconnect(), window.removeEventListener("resize", s)
+          let n = "undefined" != typeof ResizeObserver ? new ResizeObserver(s) : null;
+          return n?.observe(e), n?.observe(t), window.addEventListener("resize", s), document.fonts?.ready.then(s), () => {
+            a = !1, cancelAnimationFrame(r), n?.disconnect(), window.removeEventListener("resize", s)
           }
-        }, [i, n]);
+        }, [n, o]);
         let f = u > 0 ? {
           "--overflow-text-distance": `-${u}px`,
           "--overflow-text-duration": `${Math.min(Math.max(u/24+4.5,5.5),12)}s`
         } : void 0;
         return (0, a.jsx)(e, {
           ref: c,
-          className: `${o().overflowText}${t?` ${t}`:""}`,
-          style: n,
+          className: `${i().overflowText}${t?` ${t}`:""}`,
+          style: o,
           title: l,
           children: (0, a.jsx)("span", {
             ref: d,
-            className: `${o().overflowTextContent}${u>0?` ${o().isScrollable}`:""}${r?` ${r}`:""}`,
+            className: `${i().overflowTextContent}${u>0?` ${i().isScrollable}`:""}${r?` ${r}`:""}`,
             style: f,
-            children: i
+            children: n
           })
         })
       }
@@ -7916,13 +7865,13 @@ void main() {
       });
       var a = r(95155),
         s = r(12115);
-      let i = ({
+      let n = ({
         children: e,
         fontSize: t = "clamp(2rem, 8vw, 8rem)",
         fontWeight: r = 500,
-        fontFamily: i = "inherit",
-        color: o = "#fff",
-        enableHover: n = !0,
+        fontFamily: n = "inherit",
+        color: i = "#fff",
+        enableHover: o = !0,
         baseIntensity: l = .18,
         hoverIntensity: c = .5,
         marginBottom: d = "0px"
@@ -7936,7 +7885,7 @@ void main() {
             if (document.fonts?.ready && await document.fonts.ready, m) return;
             let p = f.getContext("2d");
             if (!p) return;
-            let h = "inherit" === i ? window.getComputedStyle(f).fontFamily || "sans-serif" : i,
+            let h = "inherit" === n ? window.getComputedStyle(f).fontFamily || "sans-serif" : n,
               g = "number" == typeof t ? `${t}px` : t;
             if ("number" == typeof t) u = t;
             else {
@@ -7945,76 +7894,76 @@ void main() {
             }
             let x = s.Children.toArray(e).join(""),
               v = document.createElement("canvas"),
-              b = v.getContext("2d");
-            if (!b) return;
-            b.font = `${r} ${g} ${h}`, b.textBaseline = "alphabetic";
-            let y = b.measureText(x),
-              _ = y.actualBoundingBoxLeft ?? 0,
-              j = y.actualBoundingBoxRight ?? y.width,
-              w = y.actualBoundingBoxAscent ?? u,
-              S = y.actualBoundingBoxDescent ?? .2 * u,
+              y = v.getContext("2d");
+            if (!y) return;
+            y.font = `${r} ${g} ${h}`, y.textBaseline = "alphabetic";
+            let b = y.measureText(x),
+              _ = b.actualBoundingBoxLeft ?? 0,
+              j = b.actualBoundingBoxRight ?? b.width,
+              w = b.actualBoundingBoxAscent ?? u,
+              S = b.actualBoundingBoxDescent ?? .2 * u,
               N = Math.ceil(_ + j),
               C = Math.ceil(w + S),
               k = N + 10;
             v.width = k, v.height = C;
-            b.font = `${r} ${g} ${h}`, b.textBaseline = "alphabetic", b.fillStyle = o, b.fillText(x, 5 - _, w), f.width = k + 0, f.height = C + 0, f.style.marginLeft = "-5px", f.style.marginBottom = d, p.translate(0, 0);
+            y.font = `${r} ${g} ${h}`, y.textBaseline = "alphabetic", y.fillStyle = i, y.fillText(x, 5 - _, w), f.width = k + 0, f.height = C + 0, f.style.marginLeft = "-5px", f.style.marginBottom = d, p.translate(0, 0);
             let A = 5,
-              F = 5 + N,
+              $ = 5 + N,
               T = 0 + C,
-              $ = !1,
-              P = () => {
+              P = !1,
+              U = () => {
                 if (m) return;
                 p.clearRect(-30, -30, k + 60, C + 60);
-                let e = $ ? c : l;
+                let e = P ? c : l;
                 for (let t = 0; t < C; t++) {
                   let r = Math.floor(e * (Math.random() - .5) * 30);
                   p.drawImage(v, 0, t, k, 1, r, t, k, 1)
                 }
-                a = window.requestAnimationFrame(P)
+                a = window.requestAnimationFrame(U)
               };
-            P();
-            let E = (e, t) => e >= A && e <= F && t >= 0 && t <= T,
-              U = e => {
-                if (!n) return;
+            U();
+            let E = (e, t) => e >= A && e <= $ && t >= 0 && t <= T,
+              z = e => {
+                if (!o) return;
                 let t = f.getBoundingClientRect();
-                $ = E(e.clientX - t.left, e.clientY - t.top)
+                P = E(e.clientX - t.left, e.clientY - t.top)
               },
-              z = () => {
-                $ = !1
+              M = () => {
+                P = !1
               },
-              B = e => {
-                if (!n) return;
+              I = e => {
+                if (!o) return;
                 e.preventDefault();
                 let t = f.getBoundingClientRect(),
                   r = e.touches[0];
-                $ = E(r.clientX - t.left, r.clientY - t.top)
+                P = E(r.clientX - t.left, r.clientY - t.top)
               },
-              M = () => {
-                $ = !1
+              B = () => {
+                P = !1
               };
-            n && (f.addEventListener("mousemove", U), f.addEventListener("mouseleave", z), f.addEventListener("touchmove", B, {
+            o && (f.addEventListener("mousemove", z), f.addEventListener("mouseleave", M), f.addEventListener("touchmove", I, {
               passive: !1
-            }), f.addEventListener("touchend", M)), f.cleanupFuzzyText = () => {
-              window.cancelAnimationFrame(a), n && (f.removeEventListener("mousemove", U), f.removeEventListener("mouseleave", z), f.removeEventListener("touchmove", B), f.removeEventListener("touchend", M))
+            }), f.addEventListener("touchend", B)), f.cleanupFuzzyText = () => {
+              window.cancelAnimationFrame(a), o && (f.removeEventListener("mousemove", z), f.removeEventListener("mouseleave", M), f.removeEventListener("touchmove", I), f.removeEventListener("touchend", B))
             }
           })(), () => {
             m = !0, window.cancelAnimationFrame(a), f && f.cleanupFuzzyText && f.cleanupFuzzyText()
           }
-        }, [e, t, r, i, o, n, l, c]), (0, a.jsx)("canvas", {
+        }, [e, t, r, n, i, o, l, c]), (0, a.jsx)("canvas", {
           ref: u
         })
       };
-      var o = r(45911),
-        n = r(63018),
+      var i = r(45911),
+        o = r(63018),
         l = r(68014),
         c = r(98638);
-      r(78881), o.os.registerPlugin(n.u, l.A, c.L);
+      r(78881), i.os.registerPlugin(o.u, l.A, c.L);
       let d = ({
         text: e,
         className: t = "",
         style: r = {},
         shuffleDirection: a = "right",
-        duration: i = .35,
+        duration: n = .35,
         maxDelay: d = 0,
         ease: u = "power3.out",
         threshold: m = .1,
@@ -8024,8 +7973,8 @@ void main() {
         onShuffleComplete: g,
         shuffleTimes: x = 1,
         animationMode: v = "evenodd",
-        loop: b = !1,
-        loopDelay: y = 0,
+        loop: y = !1,
+        loopDelay: b = 0,
         stagger: _ = .03,
         scrambleCharset: j = "",
         colorFrom: w,
@@ -8035,17 +7984,17 @@ void main() {
         triggerOnHover: k = !0
       }) => {
         let A = (0, s.useRef)(null),
-          [F, T] = (0, s.useState)(!1),
-          [$, P] = (0, s.useState)(!1),
+          [$, T] = (0, s.useState)(!1),
+          [P, U] = (0, s.useState)(!1),
           E = (0, s.useRef)(null),
-          U = (0, s.useRef)([]),
-          z = (0, s.useRef)(null),
-          B = (0, s.useRef)(!1),
-          M = (0, s.useRef)(null);
+          z = (0, s.useRef)([]),
+          M = (0, s.useRef)(null),
+          I = (0, s.useRef)(!1),
+          B = (0, s.useRef)(null);
         (0, s.useEffect)(() => {
           "fonts" in document ? "loaded" === document.fonts.status ? T(!0) : document.fonts.ready.then(() => T(!0)) : T(!0)
         }, []), (0, c.L)(() => {
-          if (!A.current || !e || !F) return;
+          if (!A.current || !e || !$) return;
           if (C && window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return void g?.();
           let t = A.current,
             r = /^(-?\d+(?:\.\d+)?)(px|em|rem|%)?$/.exec(f || ""),
@@ -8054,21 +8003,21 @@ void main() {
             p = 0 === s ? "" : s < 0 ? `-=${Math.abs(s)}${c}` : `+=${s}${c}`,
             h = `top ${(1-m)*100}%${p}`,
             T = () => {
-              M.current && A.current && (A.current.removeEventListener("mouseenter", M.current), M.current = null)
+              B.current && A.current && (A.current.removeEventListener("mouseenter", B.current), B.current = null)
             },
-            $ = () => {
-              z.current && (z.current.kill(), z.current = null), U.current.length && (U.current.forEach(e => {
+            P = () => {
+              M.current && (M.current.kill(), M.current = null), z.current.length && (z.current.forEach(e => {
                 let t = e.firstElementChild,
                   r = t?.querySelector('[data-orig="1"]');
                 r && e.parentNode && e.parentNode.replaceChild(r, e)
-              }), U.current = []);
+              }), z.current = []);
               try {
                 E.current?.revert()
               } catch {}
-              E.current = null, B.current = !1
+              E.current = null, I.current = !1
             },
-            I = () => {
-              $(), E.current = new l.A(t, {
+            L = () => {
+              P(), E.current = new l.A(t, {
                 type: "chars",
                 charsClass: "shuffle-char",
                 wordsClass: "shuffle-word",
@@ -8077,19 +8026,19 @@ void main() {
                 reduceWhiteSpace: !1
               });
               let e = E.current.chars || [];
-              U.current = [];
+              z.current = [];
               let r = Math.max(1, Math.floor(x)),
                 s = e => e.charAt(Math.floor(Math.random() * e.length)) || "";
               e.forEach(e => {
                 let t = e.parentElement;
                 if (!t) return;
-                var i = e.getBoundingClientRect().width;
-                if (!(i += Math.floor((parseFloat(getComputedStyle(e).fontSize) - 20) / 2))) return;
-                let n = document.createElement("span");
-                Object.assign(n.style, {
+                var n = e.getBoundingClientRect().width;
+                if (!(n += Math.floor((parseFloat(getComputedStyle(e).fontSize) - 20) / 2))) return;
+                let o = document.createElement("span");
+                Object.assign(o.style, {
                   display: "inline-block",
                   overflow: "hidden",
-                  width: i + "px",
+                  width: n + "px",
                   verticalAlign: "baseline"
                 });
                 let l = document.createElement("span");
@@ -8097,42 +8046,42 @@ void main() {
                   display: "inline-block",
                   whiteSpace: "nowrap",
                   willChange: "transform"
-                }), t.insertBefore(n, e), n.appendChild(l);
+                }), t.insertBefore(o, e), o.appendChild(l);
                 let c = e.cloneNode(!0);
                 Object.assign(c.style, {
                   display: "inline-block",
-                  width: i + "px",
+                  width: n + "px",
                   textAlign: "center"
                 }), e.setAttribute("data-orig", "1"), Object.assign(e.style, {
                   display: "inline-block",
-                  width: i + "px",
+                  width: n + "px",
                   textAlign: "center"
                 }), l.appendChild(c);
                 for (let t = 0; t < r; t++) {
                   let t = e.cloneNode(!0);
                   j && (t.textContent = s(j)), Object.assign(t.style, {
                     display: "inline-block",
-                    width: i + "px",
+                    width: n + "px",
                     textAlign: "center"
                   }), l.appendChild(t)
                 }
                 l.appendChild(e);
                 let d = r + 1,
                   u = 0,
-                  m = -d * i;
+                  m = -d * n;
                 if ("right" === a) {
                   let e = l.firstElementChild,
                     t = l.lastElementChild;
-                  t && l.insertBefore(t, l.firstChild), e && l.appendChild(e), u = -d * i, m = 0
+                  t && l.insertBefore(t, l.firstChild), e && l.appendChild(e), u = -d * n, m = 0
                 }
-                o.os.set(l, {
+                i.os.set(l, {
                   x: u,
                   force3D: !0
-                }), w && (l.style.color = w), l.setAttribute("data-final-x", String(m)), l.setAttribute("data-start-x", String(u)), U.current.push(n)
+                }), w && (l.style.color = w), l.setAttribute("data-final-x", String(m)), l.setAttribute("data-start-x", String(u)), z.current.push(o)
               })
             },
-            L = () => {
-              j && U.current.forEach(e => {
+            W = () => {
+              j && z.current.forEach(e => {
                 let t = e.firstElementChild;
                 if (!t) return;
                 let r = Array.from(t.children);
@@ -8140,97 +8089,97 @@ void main() {
               })
             },
             D = () => {
-              let e = U.current.map(e => e.firstElementChild);
+              let e = z.current.map(e => e.firstElementChild);
               if (!e.length) return;
-              B.current = !0;
-              let t = o.os.timeline({
+              I.current = !0;
+              let t = i.os.timeline({
                   smoothChildTiming: !0,
-                  repeat: b ? -1 : 0,
-                  repeatDelay: b ? y : 0,
+                  repeat: y ? -1 : 0,
+                  repeatDelay: y ? b : 0,
                   onRepeat: () => {
-                    j && L(), o.os.set(e, {
+                    j && W(), i.os.set(e, {
                       x: (e, t) => parseFloat(t.getAttribute("data-start-x") || "0")
                     }), g?.()
                   },
                   onComplete: () => {
-                    B.current = !1, b || (U.current.forEach(e => {
+                    I.current = !1, y || (z.current.forEach(e => {
                       let t = e.firstElementChild;
                       if (!t) return;
                       let r = t.querySelector('[data-orig="1"]');
                       r && (t.replaceChildren(r), t.style.transform = "none", t.style.willChange = "auto")
-                    }), S && o.os.set(e, {
+                    }), S && i.os.set(e, {
                       color: S
-                    }), g?.(), W())
+                    }), g?.(), F())
                   }
                 }),
                 r = (e, r) => {
                   t.to(e, {
                     x: (e, t) => parseFloat(t.getAttribute("data-final-x") || "0"),
-                    duration: i,
+                    duration: n,
                     ease: u,
                     force3D: !0,
                     stagger: "evenodd" === v ? _ : 0
                   }, r), w && S && t.to(e, {
                     color: S,
-                    duration: i,
+                    duration: n,
                     ease: u
                   }, r)
                 };
               if ("evenodd" === v) {
                 let t = e.filter((e, t) => t % 2 == 1),
                   a = e.filter((e, t) => t % 2 == 0),
-                  s = i + Math.max(0, t.length - 1) * _,
-                  o = t.length ? .7 * s : 0;
-                t.length && r(t, 0), a.length && r(a, o)
+                  s = n + Math.max(0, t.length - 1) * _,
+                  i = t.length ? .7 * s : 0;
+                t.length && r(t, 0), a.length && r(a, i)
               } else e.forEach(e => {
                 let r = Math.random() * d;
                 t.to(e, {
                   x: parseFloat(e.getAttribute("data-final-x") || "0"),
-                  duration: i,
+                  duration: n,
                   ease: u,
                   force3D: !0
                 }, r), w && S && t.fromTo(e, {
                   color: w
                 }, {
                   color: S,
-                  duration: i,
+                  duration: n,
                   ease: u
                 }, r)
               });
-              z.current = t
+              M.current = t
             },
-            W = () => {
+            F = () => {
               if (!k || !A.current) return;
               T();
               let e = () => {
-                B.current || (I(), j && L(), D())
+                I.current || (L(), j && W(), D())
               };
-              M.current = e, A.current.addEventListener("mouseenter", e)
+              B.current = e, A.current.addEventListener("mouseenter", e)
             },
-            R = n.u.create({
+            R = o.u.create({
               trigger: t,
               start: h,
               once: N,
               onEnter: () => {
-                I(), j && L(), D(), W(), P(!0)
+                L(), j && W(), D(), F(), U(!0)
               }
             });
           return () => {
-            R.kill(), T(), $(), P(!1)
+            R.kill(), T(), P(), U(!1)
           }
         }, {
-          dependencies: [e, i, d, u, m, f, F, a, x, v, b, y, _, j, w, S, N, C, k],
+          dependencies: [e, n, d, u, m, f, $, a, x, v, y, b, _, j, w, S, N, C, k],
           scope: A
         });
-        let I = {
+        let L = {
             textAlign: h,
             ...r
           },
-          L = `shuffle-parent ${$?"is-ready":""} ${t}`;
+          W = `shuffle-parent ${P?"is-ready":""} ${t}`;
         return s.createElement(p || "p", {
           ref: A,
-          className: L,
-          style: I
+          className: W,
+          style: L
         }, e)
       };
 
@@ -8239,15 +8188,15 @@ void main() {
         usernameEffect: t,
         textColor: r,
         fontSize: s,
-        marginBottom: o
+        marginBottom: i
       }) {
         return (0, a.jsx)(a.Fragment, {
-          children: "fuzzy" === t ? (0, a.jsx)(i, {
+          children: "fuzzy" === t ? (0, a.jsx)(n, {
             baseIntensity: .15,
             enableHover: !1,
             color: r,
             fontSize: s || "25px",
-            marginBottom: o,
+            marginBottom: i,
             children: e
           }) : "shuffle" === t && (0, a.jsx)(d, {
             style: {
@@ -8255,7 +8204,7 @@ void main() {
               fontSize: s || "25px",
               textTransform: "none",
               margin: 0,
-              marginBottom: o || 0
+              marginBottom: i || 0
             },
             tag: "p",
             text: e,
@@ -8334,480 +8283,11 @@ void main() {
         guildTag: "GUNS__6b-803f0b11-5d4ab606-7374015f"
       }
     },
-    77599: (e, t, r) => {
-      "use strict";
-      r.d(t, {
-        Nl: () => i,
-        RU: () => s
-      });
-      let a = [{
-        id: "python",
-        name: "Python",
-        color: "#3776AB",
-        aliases: ["py", "python3"]
-      }, {
-        id: "javascript",
-        name: "JavaScript",
-        color: "#F7DF1E",
-        aliases: ["js", "es6", "es2015"]
-      }, {
-        id: "typescript",
-        name: "TypeScript",
-        color: "#3178C6",
-        aliases: ["ts"]
-      }, {
-        id: "rust",
-        name: "Rust",
-        color: "#CE422B",
-        aliases: ["rs"]
-      }, {
-        id: "go",
-        name: "Go",
-        color: "#00ADD8",
-        aliases: ["golang"]
-      }, {
-        id: "java",
-        name: "Java",
-        color: "#ED8B00"
-      }, {
-        id: "kotlin",
-        name: "Kotlin",
-        color: "#7F52FF",
-        aliases: ["kt"]
-      }, {
-        id: "swift",
-        name: "Swift",
-        color: "#FA7343"
-      }, {
-        id: "csharp",
-        name: "C#",
-        color: "#239120",
-        aliases: ["cs", "dotnet", "c#"]
-      }, {
-        id: "cpp",
-        name: "C++",
-        color: "#00599C",
-        aliases: ["c++", "cplusplus"]
-      }, {
-        id: "c",
-        name: "C",
-        color: "#A8B9CC"
-      }, {
-        id: "ruby",
-        name: "Ruby",
-        color: "#CC342D",
-        aliases: ["rb"]
-      }, {
-        id: "php",
-        name: "PHP",
-        color: "#777BB4"
-      }, {
-        id: "elixir",
-        name: "Elixir",
-        color: "#6E4A7E",
-        aliases: ["ex"]
-      }, {
-        id: "haskell",
-        name: "Haskell",
-        color: "#5D4F85",
-        aliases: ["hs"]
-      }, {
-        id: "scala",
-        name: "Scala",
-        color: "#DC322F"
-      }, {
-        id: "dart",
-        name: "Dart",
-        color: "#0175C2"
-      }, {
-        id: "lua",
-        name: "Lua",
-        color: "#2C2D72"
-      }, {
-        id: "r",
-        name: "R",
-        color: "#276DC3"
-      }, {
-        id: "julia",
-        name: "Julia",
-        color: "#9558B2"
-      }, {
-        id: "clojure",
-        name: "Clojure",
-        color: "#5881D8"
-      }, {
-        id: "zig",
-        name: "Zig",
-        color: "#F7A41D"
-      }, {
-        id: "react",
-        name: "React",
-        color: "#61DAFB",
-        aliases: ["reactjs", "react.js"]
-      }, {
-        id: "nextjs",
-        name: "Next.js",
-        color: "#FFFFFF",
-        aliases: ["next", "nextjs"]
-      }, {
-        id: "vue",
-        name: "Vue.js",
-        color: "#4FC08D",
-        aliases: ["vuejs", "vue3"]
-      }, {
-        id: "nuxt",
-        name: "Nuxt.js",
-        color: "#00C58E",
-        aliases: ["nuxtjs"]
-      }, {
-        id: "svelte",
-        name: "Svelte",
-        color: "#FF3E00"
-      }, {
-        id: "angular",
-        name: "Angular",
-        color: "#DD0031"
-      }, {
-        id: "solid",
-        name: "SolidJS",
-        color: "#2C4F7C",
-        aliases: ["solid.js", "solidjs"]
-      }, {
-        id: "remix",
-        name: "Remix",
-        color: "#FFFFFF"
-      }, {
-        id: "astro",
-        name: "Astro",
-        color: "#FF5D01"
-      }, {
-        id: "qwik",
-        name: "Qwik",
-        color: "#18B6F6"
-      }, {
-        id: "htmx",
-        name: "htmx",
-        color: "#3465A4"
-      }, {
-        id: "nodejs",
-        name: "Node.js",
-        color: "#5FA04E",
-        aliases: ["node", "nodejs"]
-      }, {
-        id: "express",
-        name: "Express",
-        color: "#FFFFFF",
-        aliases: ["expressjs"]
-      }, {
-        id: "fastapi",
-        name: "FastAPI",
-        color: "#009688"
-      }, {
-        id: "django",
-        name: "Django",
-        color: "#092E20"
-      }, {
-        id: "flask",
-        name: "Flask",
-        color: "#FFFFFF"
-      }, {
-        id: "rails",
-        name: "Rails",
-        color: "#CC0000",
-        aliases: ["ruby on rails", "ror"]
-      }, {
-        id: "laravel",
-        name: "Laravel",
-        color: "#FF2D20"
-      }, {
-        id: "nestjs",
-        name: "NestJS",
-        color: "#E0234E",
-        aliases: ["nest"]
-      }, {
-        id: "hono",
-        name: "Hono",
-        color: "#E36002"
-      }, {
-        id: "bun",
-        name: "Bun",
-        color: "#FBF0DF"
-      }, {
-        id: "deno",
-        name: "Deno",
-        color: "#FFFFFF"
-      }, {
-        id: "spring",
-        name: "Spring",
-        color: "#6DB33F",
-        aliases: ["spring boot"]
-      }, {
-        id: "actix",
-        name: "Actix",
-        color: "#CE422B"
-      }, {
-        id: "gin",
-        name: "Gin",
-        color: "#00ADD8"
-      }, {
-        id: "postgresql",
-        name: "PostgreSQL",
-        color: "#4169E1",
-        aliases: ["postgres", "pg"]
-      }, {
-        id: "mysql",
-        name: "MySQL",
-        color: "#4479A1"
-      }, {
-        id: "mongodb",
-        name: "MongoDB",
-        color: "#47A248",
-        aliases: ["mongo"]
-      }, {
-        id: "redis",
-        name: "Redis",
-        color: "#FF4438"
-      }, {
-        id: "sqlite",
-        name: "SQLite",
-        color: "#003B57"
-      }, {
-        id: "supabase",
-        name: "Supabase",
-        color: "#3ECF8E"
-      }, {
-        id: "firebase",
-        name: "Firebase",
-        color: "#FFCA28"
-      }, {
-        id: "planetscale",
-        name: "PlanetScale",
-        color: "#FFFFFF"
-      }, {
-        id: "turso",
-        name: "Turso",
-        color: "#4FF8D2"
-      }, {
-        id: "cassandra",
-        name: "Cassandra",
-        color: "#1287B1"
-      }, {
-        id: "clickhouse",
-        name: "ClickHouse",
-        color: "#FFCC02"
-      }, {
-        id: "docker",
-        name: "Docker",
-        color: "#2496ED"
-      }, {
-        id: "kubernetes",
-        name: "Kubernetes",
-        color: "#326CE5",
-        aliases: ["k8s"]
-      }, {
-        id: "aws",
-        name: "AWS",
-        color: "#FF9900",
-        aliases: ["amazon web services"]
-      }, {
-        id: "gcp",
-        name: "GCP",
-        color: "#4285F4",
-        aliases: ["google cloud"]
-      }, {
-        id: "azure",
-        name: "Azure",
-        color: "#0078D4"
-      }, {
-        id: "vercel",
-        name: "Vercel",
-        color: "#FFFFFF"
-      }, {
-        id: "cloudflare",
-        name: "Cloudflare",
-        color: "#F38020"
-      }, {
-        id: "terraform",
-        name: "Terraform",
-        color: "#844FBA"
-      }, {
-        id: "github-actions",
-        name: "GitHub Actions",
-        color: "#2088FF",
-        aliases: ["gha", "github actions"]
-      }, {
-        id: "linux",
-        name: "Linux",
-        color: "#FCC624"
-      }, {
-        id: "tailwind",
-        name: "Tailwind CSS",
-        color: "#38BDF8",
-        aliases: ["tailwindcss", "tailwind css"]
-      }, {
-        id: "css",
-        name: "CSS",
-        color: "#1572B6"
-      }, {
-        id: "sass",
-        name: "Sass",
-        color: "#CC6699",
-        aliases: ["scss"]
-      }, {
-        id: "shadcn",
-        name: "shadcn/ui",
-        color: "#FFFFFF",
-        aliases: ["shadcn", "shadcn ui"]
-      }, {
-        id: "framer-motion",
-        name: "Framer Motion",
-        color: "#0055FF",
-        aliases: ["framer"]
-      }, {
-        id: "three",
-        name: "Three.js",
-        color: "#FFFFFF",
-        aliases: ["threejs", "three.js", "webgl"]
-      }, {
-        id: "pytorch",
-        name: "PyTorch",
-        color: "#EE4C2C"
-      }, {
-        id: "tensorflow",
-        name: "TensorFlow",
-        color: "#FF6F00",
-        aliases: ["tf"]
-      }, {
-        id: "langchain",
-        name: "LangChain",
-        color: "#1C3C3C"
-      }, {
-        id: "openai",
-        name: "OpenAI",
-        color: "#FFFFFF"
-      }, {
-        id: "pandas",
-        name: "Pandas",
-        color: "#150458"
-      }, {
-        id: "numpy",
-        name: "NumPy",
-        color: "#4DABCF"
-      }, {
-        id: "graphql",
-        name: "GraphQL",
-        color: "#E10098"
-      }, {
-        id: "grpc",
-        name: "gRPC",
-        color: "#244C5A"
-      }, {
-        id: "trpc",
-        name: "tRPC",
-        color: "#2596BE"
-      }, {
-        id: "prisma",
-        name: "Prisma",
-        color: "#5A67D8"
-      }, {
-        id: "drizzle",
-        name: "Drizzle ORM",
-        color: "#C5F74F",
-        aliases: ["drizzle"]
-      }, {
-        id: "git",
-        name: "Git",
-        color: "#F05032"
-      }, {
-        id: "figma",
-        name: "Figma",
-        color: "#F24E1E"
-      }, {
-        id: "blender",
-        name: "Blender",
-        color: "#F5792A"
-      }, {
-        id: "unity",
-        name: "Unity",
-        color: "#FFFFFF"
-      }, {
-        id: "unreal",
-        name: "Unreal Engine",
-        color: "#313131",
-        aliases: ["ue5", "unreal engine"]
-      }, {
-        id: "flutter",
-        name: "Flutter",
-        color: "#02569B"
-      }, {
-        id: "react-native",
-        name: "React Native",
-        color: "#61DAFB",
-        aliases: ["rn", "react native"]
-      }, {
-        id: "tauri",
-        name: "Tauri",
-        color: "#24C8DB"
-      }, {
-        id: "electron",
-        name: "Electron",
-        color: "#47848F"
-      }, {
-        id: "wasm",
-        name: "WebAssembly",
-        color: "#654FF0",
-        aliases: ["webassembly"]
-      }, {
-        id: "kafka",
-        name: "Kafka",
-        color: "#231F20"
-      }, {
-        id: "rabbitmq",
-        name: "RabbitMQ",
-        color: "#FF6600"
-      }, {
-        id: "nginx",
-        name: "Nginx",
-        color: "#009639"
-      }, {
-        id: "neovim",
-        name: "Neovim",
-        color: "#57A143",
-        aliases: ["nvim", "vim"]
-      }];
-
-      function s(e) {
-        let t = e.trim().toLowerCase();
-        return a.find(e => e.name.toLowerCase() === t || e.id === t || e.aliases?.some(e => e.toLowerCase() === t))
-      }
-
-      function i(e, t = 8) {
-        if (!e.trim()) return [];
-        let r = e.trim().toLowerCase(),
-          s = a.map(e => e.name.toLowerCase() === r || e.id === r ? {
-            s: e,
-            score: 3
-          } : e.name.toLowerCase().startsWith(r) || e.id.startsWith(r) ? {
-            s: e,
-            score: 2
-          } : e.aliases?.some(e => e.toLowerCase().startsWith(r)) ? {
-            s: e,
-            score: 1.5
-          } : e.name.toLowerCase().includes(r) || e.aliases?.some(e => e.toLowerCase().includes(r)) ? {
-            s: e,
-            score: 1
-          } : {
-            s: e,
-            score: 0
-          }).filter(e => e.score > 0);
-        return s.sort((e, t) => t.score - e.score), s.slice(0, t).map(e => e.s)
-      }
-    },
     78881: () => {},
     82413: (e, t, r) => {
       "use strict";
       r.d(t, {
-        A: () => i,
+        A: () => n,
         k: () => s
       });
       var a = r(12115);
@@ -8827,7 +8307,7 @@ void main() {
         parkinsans: "'Parkinsans', serif"
       };
 
-      function i({
+      function n({
         font: e,
         letterSpacing: t
       }) {
@@ -8850,8 +8330,8 @@ void main() {
 
                     }
                 `, a.appendChild(s);
-              let i = t ? r[t] : null;
-              i && (document.body.style.letterSpacing = i)
+              let n = t ? r[t] : null;
+              n && (document.body.style.letterSpacing = n)
             }).catch(e => {
               console.error("Failed to load font:", e)
             })

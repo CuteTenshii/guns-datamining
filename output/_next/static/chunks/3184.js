@@ -18,8 +18,8 @@
         p = o(66609),
         h = o(60141),
         b = o(74564),
-        g = o(96351),
-        _ = o(57776),
+        _ = o(96351),
+        g = o(57776),
         y = o(57157),
         f = o(38414),
         x = o(20248),
@@ -38,100 +38,100 @@
         setBorderRadius: l,
         borderWidth: A,
         setBorderWidth: S,
-        borderStyle: F,
-        setBorderStyle: L,
-        borderOpacity: B,
-        setBorderOpacity: T,
-        joinDate: R,
-        setJoinDate: D,
-        linksPosition: M,
-        setLinksPosition: E,
-        secondTab: $,
+        borderStyle: B,
+        setBorderStyle: T,
+        borderOpacity: L,
+        setBorderOpacity: R,
+        joinDate: F,
+        setJoinDate: M,
+        linksPosition: D,
+        setLinksPosition: $,
+        secondTab: O,
         secondTabEnabled: z,
-        clockFaceStyle: O,
-        clockHidden: I,
+        clockFaceStyle: I,
+        clockHidden: E,
         clockTimeFormat: P,
-        userJoinDate: H
+        userJoinDate: U
       }) => {
-        let U = (0, g.kj)(),
-          W = (0, g.useLang)(),
-          q = [{
+        let H = (0, _.kj)(),
+          W = (0, _.useLang)(),
+          V = [{
             value: 20,
-            label: U("dashboard.premium.layout.modern_settings.border_radius.marks.twenty")
+            label: H("dashboard.premium.layout.modern_settings.border_radius.marks.twenty")
           }, {
             value: 50,
-            label: U("dashboard.premium.layout.modern_settings.border_radius.marks.fifty")
+            label: H("dashboard.premium.layout.modern_settings.border_radius.marks.fifty")
           }, {
             value: 80,
-            label: U("dashboard.premium.layout.modern_settings.border_radius.marks.eighty")
-          }],
-          G = [{
-            value: 2,
-            label: U("dashboard.premium.layout.modern_settings.border_width.marks.two")
-          }, {
-            value: 5,
-            label: U("dashboard.premium.layout.modern_settings.border_width.marks.five")
-          }, {
-            value: 8,
-            label: U("dashboard.premium.layout.modern_settings.border_width.marks.eight")
-          }],
-          V = [{
-            value: "center",
-            label: U("dashboard.premium.layout.links_alignment.center")
-          }, {
-            value: "left",
-            label: U("dashboard.premium.layout.links_alignment.left")
-          }, {
-            value: "right",
-            label: U("dashboard.premium.layout.links_alignment.right")
+            label: H("dashboard.premium.layout.modern_settings.border_radius.marks.eighty")
           }],
           J = [{
-            value: "static",
-            label: U("dashboard.premium.layout.border_style.static")
+            value: 2,
+            label: H("dashboard.premium.layout.modern_settings.border_width.marks.two")
           }, {
-            value: "dashed",
-            label: U("dashboard.premium.layout.border_style.dashed")
+            value: 5,
+            label: H("dashboard.premium.layout.modern_settings.border_width.marks.five")
           }, {
-            value: "shimmer",
-            label: U("dashboard.premium.layout.border_style.shimmer")
+            value: 8,
+            label: H("dashboard.premium.layout.modern_settings.border_width.marks.eight")
+          }],
+          G = [{
+            value: "center",
+            label: H("dashboard.premium.layout.links_alignment.center")
           }, {
-            value: "pulse",
-            label: U("dashboard.premium.layout.border_style.pulse")
+            value: "left",
+            label: H("dashboard.premium.layout.links_alignment.left")
+          }, {
+            value: "right",
+            label: H("dashboard.premium.layout.links_alignment.right")
           }],
           K = [{
+            value: "static",
+            label: H("dashboard.premium.layout.border_style.static")
+          }, {
+            value: "dashed",
+            label: H("dashboard.premium.layout.border_style.dashed")
+          }, {
+            value: "shimmer",
+            label: H("dashboard.premium.layout.border_style.shimmer")
+          }, {
+            value: "pulse",
+            label: H("dashboard.premium.layout.border_style.pulse")
+          }],
+          q = [{
             name: "YouTube",
             icon: u.A.youtube,
-            placeholder: U("dashboard.premium.layout.modern_settings.second_tab.placeholders.youtube")
+            placeholder: H("dashboard.premium.layout.modern_settings.second_tab.placeholders.youtube")
           }, {
             name: "Spotify",
             icon: u.A.spotify,
-            placeholder: U("dashboard.premium.layout.modern_settings.second_tab.placeholders.spotify")
+            placeholder: H("dashboard.premium.layout.modern_settings.second_tab.placeholders.spotify")
           }, {
             name: "Discord",
             icon: u.A.discord,
-            placeholder: U("dashboard.premium.layout.modern_settings.second_tab.placeholders.discord")
+            placeholder: H("dashboard.premium.layout.modern_settings.second_tab.placeholders.discord")
           }, {
             name: "Telegram",
             icon: u.A.telegram,
-            placeholder: U("dashboard.premium.layout.modern_settings.second_tab.placeholders.telegram")
+            placeholder: H("dashboard.premium.layout.modern_settings.second_tab.placeholders.telegram")
           }, {
             name: "Roblox",
             icon: u.A.roblox,
-            placeholder: U("dashboard.premium.layout.modern_settings.second_tab.placeholders.roblox")
+            placeholder: H("dashboard.premium.layout.modern_settings.second_tab.placeholders.roblox")
           }, {
             name: "GitHub",
             icon: u.A.github,
-            placeholder: U("dashboard.premium.layout.modern_settings.second_tab.placeholders.github")
+            placeholder: H("dashboard.premium.layout.modern_settings.second_tab.placeholders.github")
           }, {
             name: "LastFM",
             icon: u.A.lastfm,
-            placeholder: U("dashboard.premium.layout.modern_settings.second_tab.placeholders.lastfm")
+            placeholder: H("dashboard.premium.layout.modern_settings.second_tab.placeholders.lastfm")
           }, {
             name: "Timezone",
             icon: u.A.timezone,
-            placeholder: U("dashboard.premium.layout.modern_settings.second_tab.timezone.select_placeholder")
+            placeholder: H("dashboard.premium.layout.modern_settings.second_tab.timezone.select_placeholder")
           }],
-          Q = {
+          Y = {
             en: f.c,
             es: x.es,
             pt: j.F,
@@ -142,22 +142,22 @@
             ar: w.ar
           },
           Z = e ? n().buttonEnabled : n().buttonDisabled,
-          X = async () => {
+          Q = async () => {
             (await fetch("https://guns.lol/api/dashboard/premium/secondTab", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json"
               },
               body: JSON.stringify({
-                second_tab_enabled: !Y
+                second_tab_enabled: !X
               })
-            })).ok ? (ee(!Y), p.oR.success(U("dashboard.premium.layout.modern_settings.second_tab.toggle_success", {
-              state: Y ? U("dashboard.premium.layout.modern_settings.second_tab.states.disabled") : U("dashboard.premium.layout.modern_settings.second_tab.states.enabled")
-            }))) : p.oR.error(U("dashboard.premium.layout.modern_settings.second_tab.toggle_error"))
-          }, [Y, ee] = (0, s.useState)(z), [et, eo] = (0, s.useState)(!1), [ea, es] = (0, s.useState)(Object.keys($)[0]), [er, ei] = (0, s.useState)($[ea]), [el, en] = (0, s.useState)("timezone" === Object.keys($)[0] && $[Object.keys($)[0]] || ""), [ed, ec] = (0, s.useState)(!1), [eu, em] = (0, s.useState)(O ?? "dark"), [ep, eh] = (0, s.useState)(I ?? !1), [eb, eg] = (0, s.useState)(P ?? "24h"), e_ = "undefined" != typeof Intl && "supportedValuesOf" in Intl ? Intl.supportedValuesOf("timeZone") : ["America/New_York", "America/Chicago", "America/Denver", "America/Los_Angeles", "America/Sao_Paulo", "Europe/London", "Europe/Paris", "Europe/Berlin", "Europe/Moscow", "Asia/Dubai", "Asia/Kolkata", "Asia/Tokyo", "Asia/Shanghai", "Australia/Sydney", "Pacific/Auckland", "Africa/Cairo", "Africa/Lagos"], ey = el.replace(/_/g, " ").toLowerCase(), ef = e_.filter(e => e.replace(/_/g, " ").toLowerCase().includes(ey)).slice(0, 80).map(e => ({
+            })).ok ? (ee(!X), p.oR.success(H("dashboard.premium.layout.modern_settings.second_tab.toggle_success", {
+              state: X ? H("dashboard.premium.layout.modern_settings.second_tab.states.disabled") : H("dashboard.premium.layout.modern_settings.second_tab.states.enabled")
+            }))) : p.oR.error(H("dashboard.premium.layout.modern_settings.second_tab.toggle_error"))
+          }, [X, ee] = (0, s.useState)(z), [et, eo] = (0, s.useState)(!1), [ea, es] = (0, s.useState)(Object.keys(O)[0]), [er, ei] = (0, s.useState)(O[ea]), [el, en] = (0, s.useState)("timezone" === Object.keys(O)[0] && O[Object.keys(O)[0]] || ""), [ed, ec] = (0, s.useState)(!1), [eu, em] = (0, s.useState)(I ?? "dark"), [ep, eh] = (0, s.useState)(E ?? !1), [eb, e_] = (0, s.useState)(P ?? "24h"), eg = "undefined" != typeof Intl && "supportedValuesOf" in Intl ? Intl.supportedValuesOf("timeZone") : ["America/New_York", "America/Chicago", "America/Denver", "America/Los_Angeles", "America/Sao_Paulo", "Europe/London", "Europe/Paris", "Europe/Berlin", "Europe/Moscow", "Asia/Dubai", "Asia/Kolkata", "Asia/Tokyo", "Asia/Shanghai", "Australia/Sydney", "Pacific/Auckland", "Africa/Cairo", "Africa/Lagos"], ey = el.replace(/_/g, " ").toLowerCase(), ef = eg.filter(e => e.replace(/_/g, " ").toLowerCase().includes(ey)).slice(0, 80).map(e => ({
             value: e,
             label: e.replace(/_/g, " ")
-          })), ex = K.find(e => e.name.toLowerCase() === ea)?.placeholder, ej = K.find(e => e.name.toLowerCase() === ea)?.icon, ev = Y ? n().buttonEnabled : n().buttonDisabled, ek = async () => {
+          })), ex = q.find(e => e.name.toLowerCase() === ea)?.placeholder, ej = q.find(e => e.name.toLowerCase() === ea)?.icon, ev = X ? n().buttonEnabled : n().buttonDisabled, ek = async () => {
             let e = await fetch("https://guns.lol/api/dashboard/premium/secondTab", {
                 method: "POST",
                 headers: {
@@ -176,22 +176,22 @@
                 })
               }),
               t = await e.json();
-            e.ok ? p.oR.success(U("dashboard.premium.layout.modern_settings.second_tab.save_success")) : p.oR.error(t.error)
-          }, eN = new Date(1e3 * H), eC = [{
+            e.ok ? p.oR.success(H("dashboard.premium.layout.modern_settings.second_tab.save_success")) : p.oR.error(t.error)
+          }, eN = new Date(1e3 * U), eC = [{
             value: "none",
-            label: U("dashboard.premium.layout.modern_settings.join_date.none")
+            label: H("dashboard.premium.layout.modern_settings.join_date.none")
           }, {
             value: "relative",
-            label: U("dashboard.premium.layout.modern_settings.join_date.relative", {
+            label: H("dashboard.premium.layout.modern_settings.join_date.relative", {
               value: (0, b.m)(eN, {
                 addSuffix: !0,
-                locale: Q[W]
+                locale: Y[W]
               })
             })
           }, {
             value: "absolute",
-            label: U("dashboard.premium.layout.modern_settings.join_date.absolute", {
-              value: new Date(1e3 * H).toLocaleDateString(W, {
+            label: H("dashboard.premium.layout.modern_settings.join_date.absolute", {
+              value: new Date(1e3 * U).toLocaleDateString(W, {
                 year: "numeric",
                 month: "long",
                 day: "numeric"
@@ -199,12 +199,12 @@
             })
           }, {
             value: "short",
-            label: U("dashboard.premium.layout.modern_settings.join_date.short", {
+            label: H("dashboard.premium.layout.modern_settings.join_date.short", {
               value: eN.toLocaleDateString(W)
             })
           }, {
             value: "long",
-            label: U("dashboard.premium.layout.modern_settings.join_date.long", {
+            label: H("dashboard.premium.layout.modern_settings.join_date.long", {
               value: eN.toLocaleDateString(W, {
                 weekday: "long",
                 year: "numeric",
@@ -214,7 +214,7 @@
             })
           }, {
             value: "month_year",
-            label: U("dashboard.premium.layout.modern_settings.join_date.month_year", {
+            label: H("dashboard.premium.layout.modern_settings.join_date.month_year", {
               value: eN.toLocaleDateString(W, {
                 year: "numeric",
                 month: "long"
@@ -222,12 +222,12 @@
             })
           }, {
             value: "year_only",
-            label: U("dashboard.premium.layout.modern_settings.join_date.year_only", {
+            label: H("dashboard.premium.layout.modern_settings.join_date.year_only", {
               value: eN.getFullYear()
             })
           }, {
             value: "compact",
-            label: U("dashboard.premium.layout.modern_settings.join_date.compact", {
+            label: H("dashboard.premium.layout.modern_settings.join_date.compact", {
               value: eN.toLocaleDateString(W, {
                 day: "numeric",
                 month: "short",
@@ -236,25 +236,25 @@
             })
           }];
         return (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsxs)(_.A, {
+          children: [(0, a.jsxs)(g.A, {
             opened: et,
             onClose: () => eo(!1),
-            title: U("dashboard.premium.layout.modern_settings.second_tab.modal_title"),
+            title: H("dashboard.premium.layout.modern_settings.second_tab.modal_title"),
             centered: !0,
             size: "550px",
             children: [(0, a.jsx)("span", {
               className: ev,
-              onClick: X,
-              children: Y ? U("dashboard.premium.layout.modern_settings.second_tab.disable_button") : U("dashboard.premium.layout.modern_settings.second_tab.enable_button")
-            }), Y && (0, a.jsxs)(a.Fragment, {
+              onClick: Q,
+              children: X ? H("dashboard.premium.layout.modern_settings.second_tab.disable_button") : H("dashboard.premium.layout.modern_settings.second_tab.enable_button")
+            }), X && (0, a.jsxs)(a.Fragment, {
               children: [(0, a.jsx)("div", {
                 className: n().secondTabOptions,
-                children: K.map((e, t) => (0, a.jsxs)("div", {
+                children: q.map((e, t) => (0, a.jsxs)("div", {
                   className: `${n().secondTabOption} ${ea===e.name.toLowerCase()?n().selected:""}`,
                   onClick: () => (e => {
                     if (ea !== e) {
-                      if (e === Object.keys($)[0]) {
-                        es(e), ei($[e]), en("timezone" === e ? ($[e] || "").replace(/_/g, " ") : ""), ec(!1);
+                      if (e === Object.keys(O)[0]) {
+                        es(e), ei(O[e]), en("timezone" === e ? (O[e] || "").replace(/_/g, " ") : ""), ec(!1);
                         return
                       }
                       es(e), ei(""), en(""), ec(!1)
@@ -275,7 +275,7 @@
                       children: [(0, a.jsx)("input", {
                         type: "text",
                         className: n().timezoneComboboxInput,
-                        placeholder: U("dashboard.premium.layout.modern_settings.second_tab.timezone.search_placeholder"),
+                        placeholder: H("dashboard.premium.layout.modern_settings.second_tab.timezone.search_placeholder"),
                         value: el,
                         onChange: e => {
                           en(e.target.value), ei(""), ec(!0)
@@ -305,7 +305,7 @@
                           ei(e), en(e.replace(/_/g, " ")), ec(!1)
                         } catch {}
                       },
-                      children: [u.A.timezone, " ", U("dashboard.premium.layout.modern_settings.second_tab.timezone.use_my_timezone")]
+                      children: [u.A.timezone, " ", H("dashboard.premium.layout.modern_settings.second_tab.timezone.use_my_timezone")]
                     })]
                   }), (0, a.jsxs)("div", {
                     className: n().clockSettingsGroup,
@@ -314,7 +314,7 @@
                       children: [(0, a.jsx)("div", {
                         className: n().clockSettingLabel,
                         children: (0, a.jsx)("span", {
-                          children: U("dashboard.premium.layout.modern_settings.second_tab.timezone.clock_face")
+                          children: H("dashboard.premium.layout.modern_settings.second_tab.timezone.clock_face")
                         })
                       }), (0, a.jsxs)("div", {
                         className: n().segmentControl,
@@ -322,12 +322,12 @@
                           type: "button",
                           className: `${n().segmentBtn} ${"dark"===eu?n().segmentActive:""}`,
                           onClick: () => em("dark"),
-                          children: U("dashboard.premium.layout.modern_settings.second_tab.timezone.clock_dark")
+                          children: H("dashboard.premium.layout.modern_settings.second_tab.timezone.clock_dark")
                         }), (0, a.jsx)("button", {
                           type: "button",
                           className: `${n().segmentBtn} ${"light"===eu?n().segmentActive:""}`,
                           onClick: () => em("light"),
-                          children: U("dashboard.premium.layout.modern_settings.second_tab.timezone.clock_light")
+                          children: H("dashboard.premium.layout.modern_settings.second_tab.timezone.clock_light")
                         })]
                       })]
                     }), (0, a.jsx)("div", {
@@ -337,7 +337,7 @@
                       children: [(0, a.jsx)("div", {
                         className: n().clockSettingLabel,
                         children: (0, a.jsx)("span", {
-                          children: U("dashboard.premium.layout.modern_settings.second_tab.timezone.clock_visibility")
+                          children: H("dashboard.premium.layout.modern_settings.second_tab.timezone.clock_visibility")
                         })
                       }), (0, a.jsxs)("div", {
                         className: n().segmentControl,
@@ -345,12 +345,12 @@
                           type: "button",
                           className: `${n().segmentBtn} ${!ep?n().segmentActive:""}`,
                           onClick: () => eh(!1),
-                          children: U("dashboard.premium.layout.modern_settings.second_tab.timezone.clock_show")
+                          children: H("dashboard.premium.layout.modern_settings.second_tab.timezone.clock_show")
                         }), (0, a.jsx)("button", {
                           type: "button",
                           className: `${n().segmentBtn} ${ep?n().segmentActive:""}`,
                           onClick: () => eh(!0),
-                          children: U("dashboard.premium.layout.modern_settings.second_tab.timezone.clock_hide")
+                          children: H("dashboard.premium.layout.modern_settings.second_tab.timezone.clock_hide")
                         })]
                       })]
                     }), (0, a.jsx)("div", {
@@ -360,26 +360,26 @@
                       children: [(0, a.jsx)("div", {
                         className: n().clockSettingLabel,
                         children: (0, a.jsx)("span", {
-                          children: U("dashboard.premium.layout.modern_settings.second_tab.timezone.time_format")
+                          children: H("dashboard.premium.layout.modern_settings.second_tab.timezone.time_format")
                         })
                       }), (0, a.jsxs)("div", {
                         className: n().segmentControl,
                         children: [(0, a.jsx)("button", {
                           type: "button",
                           className: `${n().segmentBtn} ${"24h"===eb?n().segmentActive:""}`,
-                          onClick: () => eg("24h"),
-                          children: U("dashboard.premium.layout.modern_settings.second_tab.timezone.time_format_24h")
+                          onClick: () => e_("24h"),
+                          children: H("dashboard.premium.layout.modern_settings.second_tab.timezone.time_format_24h")
                         }), (0, a.jsx)("button", {
                           type: "button",
                           className: `${n().segmentBtn} ${"12h"===eb?n().segmentActive:""}`,
-                          onClick: () => eg("12h"),
-                          children: U("dashboard.premium.layout.modern_settings.second_tab.timezone.time_format_12h")
+                          onClick: () => e_("12h"),
+                          children: H("dashboard.premium.layout.modern_settings.second_tab.timezone.time_format_12h")
                         })]
                       })]
                     })]
                   })]
                 }) : (0, a.jsx)(m.A, {
-                  featureName: U("dashboard.premium.layout.modern_settings.second_tab.input_label"),
+                  featureName: H("dashboard.premium.layout.modern_settings.second_tab.input_label"),
                   placeholder: ex,
                   icon: ej,
                   value: er,
@@ -389,7 +389,7 @@
                 }), (0, a.jsx)("span", {
                   className: n().saveSecondTabButton,
                   onClick: ek,
-                  children: U("dashboard.premium.layout.modern_settings.second_tab.save_button")
+                  children: H("dashboard.premium.layout.modern_settings.second_tab.save_button")
                 })]
               })]
             })]
@@ -402,7 +402,7 @@
                 children: (0, a.jsxs)("span", {
                   className: n().secondTabButton,
                   onClick: () => eo(!0),
-                  children: [u.A.secondTab, " ", U("dashboard.premium.layout.modern_settings.second_tab.manage_button")]
+                  children: [u.A.secondTab, " ", H("dashboard.premium.layout.modern_settings.second_tab.manage_button")]
                 })
               }), (0, a.jsxs)("div", {
                 className: n().featureRow,
@@ -413,37 +413,37 @@
                 children: [(0, a.jsx)("span", {
                   className: Z,
                   onClick: () => t(!e),
-                  children: e ? U("dashboard.premium.layout.modern_settings.border.disable_button") : U("dashboard.premium.layout.modern_settings.border.enable_button")
+                  children: e ? H("dashboard.premium.layout.modern_settings.border.disable_button") : H("dashboard.premium.layout.modern_settings.border.enable_button")
                 }), e && (0, a.jsxs)("div", {
                   className: n().borderDiv,
                   children: [(0, a.jsxs)("div", {
                     className: n().borderControlsRow,
                     children: [(0, a.jsx)(d.A, {
-                      featureName: U("dashboard.premium.layout.modern_settings.border.color_label"),
+                      featureName: H("dashboard.premium.layout.modern_settings.border.color_label"),
                       onChangeFunction: r,
                       value: o
                     }), (0, a.jsx)(h.A, {
-                      featureName: U("dashboard.premium.layout.border_style.label"),
-                      data: J,
-                      value: F ?? "static",
-                      onChangeFunction: L,
+                      featureName: H("dashboard.premium.layout.border_style.label"),
+                      data: K,
+                      value: B ?? "static",
+                      onChangeFunction: T,
                       icon: u.A.layout
                     })]
                   }), (0, a.jsxs)("div", {
                     className: n().borderControlsRow,
                     children: [(0, a.jsx)(c.A, {
-                      featureName: U("dashboard.premium.layout.modern_settings.border.width_label"),
+                      featureName: H("dashboard.premium.layout.modern_settings.border.width_label"),
                       onChangeFunction: S,
                       value: A,
                       min: 1,
                       max: 10,
                       step: 1,
                       label: e => `${e} px`,
-                      marks: G
+                      marks: J
                     }), (0, a.jsx)(c.A, {
-                      featureName: U("dashboard.premium.layout.border_opacity.label"),
-                      onChangeFunction: T,
-                      value: B,
+                      featureName: H("dashboard.premium.layout.border_opacity.label"),
+                      onChangeFunction: R,
+                      value: L,
                       min: 0,
                       max: 1,
                       step: .01,
@@ -467,31 +467,31 @@
               children: (0, a.jsxs)("div", {
                 className: n().layoutControlsStack,
                 children: [(0, a.jsx)(c.A, {
-                  featureName: U("dashboard.premium.layout.modern_settings.border_radius.label"),
+                  featureName: H("dashboard.premium.layout.modern_settings.border_radius.label"),
                   onChangeFunction: l,
                   value: i,
                   min: 0,
                   max: 100,
                   step: 1,
                   label: e => `${e} px`,
-                  marks: q
+                  marks: V
                 }), (0, a.jsxs)("div", {
                   className: n().layoutDropdownRow,
                   children: [(0, a.jsx)(h.A, {
-                    featureName: U("dashboard.premium.layout.modern_settings.join_date.label"),
+                    featureName: H("dashboard.premium.layout.modern_settings.join_date.label"),
                     data: eC,
-                    value: R,
-                    onChangeFunction: D,
+                    value: F,
+                    onChangeFunction: M,
                     icon: u.A.joinDate,
-                    placeholder: U("dashboard.premium.layout.modern_settings.join_date.placeholder")
+                    placeholder: H("dashboard.premium.layout.modern_settings.join_date.placeholder")
                   }), (0, a.jsx)(y.A, {
-                    featureName: U("dashboard.premium.layout.links_alignment.label"),
-                    helpDescription: U("dashboard.premium.layout.links_alignment.description"),
+                    featureName: H("dashboard.premium.layout.links_alignment.label"),
+                    helpDescription: H("dashboard.premium.layout.links_alignment.description"),
                     element: (0, a.jsx)(h.A, {
-                      value: M,
-                      onChangeFunction: E,
+                      value: D,
+                      onChangeFunction: $,
                       icon: u.A.layout,
-                      data: V
+                      data: G
                     })
                   })]
                 })]
@@ -501,8 +501,8 @@
         })
       };
       var S = o(31887),
-        F = o.n(S);
-      async function L(e, t) {
+        B = o.n(S);
+      async function T(e, t) {
         let o = new FormData;
         o.append("banner", e);
         let a = await fetch("/api/dashboard/premium/upload/banner", {
@@ -512,7 +512,7 @@
           s = await a.json();
         return a.ok ? (p.oR.success(t("dashboard.premium.layout.default_settings.banner.upload_success")), s.url) : (p.oR.error(s.error), console.error("Failed to upload file:", a.statusText), null)
       }
-      async function B() {
+      async function L() {
         try {
           let e = await fetch("https://guns.lol/api/dashboard/premium/remove/banner", {
             method: "POST"
@@ -523,9 +523,9 @@
           return p.oR.error("Failed to remove banner."), console.error("Error removing file:", e), null
         }
       }
-      var T = o(39818),
-        R = o(12521);
-      let D = ({
+      var R = o(39818),
+        F = o(12521);
+      let M = ({
         isBorderEnabled: e,
         setIsBorderEnabled: t,
         borderColor: o,
@@ -535,7 +535,7 @@
         borderWidth: m,
         setBorderWidth: p,
         borderStyle: b,
-        setBorderStyle: _,
+        setBorderStyle: g,
         borderOpacity: f,
         setBorderOpacity: x,
         setBanner: j,
@@ -543,7 +543,7 @@
         linksPosition: k,
         setLinksPosition: N
       }) => {
-        let C = (0, g.kj)(),
+        let C = (0, _.kj)(),
           w = [{
             value: 20,
             label: C("dashboard.premium.layout.default_settings.border_radius.marks.twenty")
@@ -574,7 +574,7 @@
             value: "right",
             label: C("dashboard.premium.layout.links_alignment.right")
           }],
-          D = [{
+          M = [{
             value: "static",
             label: C("dashboard.premium.layout.border_style.static")
           }, {
@@ -587,18 +587,18 @@
             value: "pulse",
             label: C("dashboard.premium.layout.border_style.pulse")
           }],
-          M = e ? n().buttonEnabled : n().buttonDisabled,
-          [E, $] = (0, s.useState)(!1),
+          D = e ? n().buttonEnabled : n().buttonDisabled,
+          [$, O] = (0, s.useState)(!1),
           z = async e => {
-            $(!0);
+            O(!0);
             let t = e.target.files?.[0];
             if (e.target.disabled = !0, t) {
-              if (!(0, T.vH)(t, "banner")) {
-                e.target.value = "", e.target.disabled = !1, $(!1);
+              if (!(0, R.vH)(t, "banner")) {
+                e.target.value = "", e.target.disabled = !1, O(!1);
                 return
               }
-              let o = await L(t, C);
-              e.target.disabled = !1, $(!1), o ? j(o) : (e.target.value = "", e.target.disabled = !1, $(!1))
+              let o = await T(t, C);
+              e.target.disabled = !1, O(!1), o ? j(o) : (e.target.value = "", e.target.disabled = !1, O(!1))
             }
           };
         return (0, a.jsx)(a.Fragment, {
@@ -616,7 +616,7 @@
                   gap: "10px"
                 },
                 children: [(0, a.jsx)("span", {
-                  className: M,
+                  className: D,
                   onClick: () => t(!e),
                   children: e ? C("dashboard.premium.layout.default_settings.border.disable_button") : C("dashboard.premium.layout.default_settings.border.enable_button")
                 }), e && (0, a.jsxs)("div", {
@@ -629,9 +629,9 @@
                       value: o
                     }), (0, a.jsx)(h.A, {
                       featureName: C("dashboard.premium.layout.border_style.label"),
-                      data: D,
+                      data: M,
                       value: b ?? "static",
-                      onChangeFunction: _,
+                      onChangeFunction: g,
                       icon: u.A.layout
                     })]
                   }), (0, a.jsxs)("div", {
@@ -666,7 +666,7 @@
                     })]
                   })]
                 }), (0, a.jsxs)("div", {
-                  className: F().uploadCardWrapper,
+                  className: B().uploadCardWrapper,
                   style: {
                     marginTop: 10,
                     padding: 3,
@@ -675,42 +675,42 @@
                   children: [(0, a.jsx)("span", {
                     children: C("dashboard.premium.layout.default_settings.banner.label")
                   }), (0, a.jsx)("div", {
-                    className: F().uploadCard,
+                    className: B().uploadCard,
                     children: "" === v ? (0, a.jsxs)(a.Fragment, {
-                      children: [E ? (0, a.jsxs)("div", {
-                        className: F().uploaderMessage,
+                      children: [$ ? (0, a.jsxs)("div", {
+                        className: B().uploaderMessage,
                         children: [(0, a.jsx)("span", {
                           children: u.A.loading
                         }), (0, a.jsx)("h1", {
                           children: C("dashboard.premium.layout.default_settings.banner.uploading")
                         })]
                       }) : (0, a.jsxs)("div", {
-                        className: F().uploadCardText,
+                        className: B().uploadCardText,
                         children: [u.A.image, (0, a.jsx)("h1", {
                           children: C("dashboard.premium.layout.default_settings.banner.upload_prompt")
                         })]
                       }), (0, a.jsx)("input", {
                         type: "file",
-                        accept: R.vJ.banner.map(e => e).join(", "),
+                        accept: F.vJ.banner.map(e => e).join(", "),
                         onChange: e => {
                           z(e)
                         }
                       })]
                     }) : (0, a.jsxs)(a.Fragment, {
                       children: [(0, a.jsxs)("div", {
-                        className: F().fileBadge,
+                        className: B().fileBadge,
                         children: [(0, a.jsx)("span", {
                           children: ("." + v.substring(v.lastIndexOf(".") + 1)).toUpperCase()
                         }), (0, a.jsx)("span", {
                           onClick: function() {
-                            null !== B() && j("")
+                            null !== L() && j("")
                           },
                           children: u.A.deleteFile
                         })]
                       }), (0, a.jsx)("img", {
                         src: v,
                         alt: "Banner",
-                        className: F().uploadCardImage
+                        className: B().uploadCardImage
                       })]
                     })
                   })]
@@ -747,8 +747,8 @@
           })
         })
       };
-      var M = o(81469);
-      async function E(e, t, o, a, s) {
+      var D = o(81469);
+      async function $(e, t, o, a, s) {
         try {
           let r = new FormData;
           a(!0), r.append("button_title", e), r.append("button_url", t.startsWith("https://") ? t : `https://${t}`), o && r.append("icon", o);
@@ -768,7 +768,7 @@
           a(!1)
         }
       }
-      async function $(e, t, o, a, s, r, i) {
+      async function O(e, t, o, a, s, r, i) {
         try {
           let i = new FormData;
           r(!0), i.append("button_title", e), i.append("button_url", t.startsWith("https://") ? t : `https://${t}`), i.append("id", a), o && i.append("icon", o);
@@ -800,9 +800,9 @@
           return p.oR.error(o("common.unsaved_changes.unknown_error")), console.error(e.message), null
         }
       }
-      var O = o(45941);
+      var I = o(45941);
 
-      function I({
+      function E({
         buttonTitle: e,
         buttonUrl: t,
         buttonIcon: o,
@@ -810,22 +810,22 @@
         modalClose: i,
         setButtons: l
       }) {
-        let d = (0, g.kj)(),
+        let d = (0, _.kj)(),
           [c, h] = (0, s.useState)(e),
-          [b, _] = (0, s.useState)(t),
+          [b, g] = (0, s.useState)(t),
           [y, f] = (0, s.useState)(o),
           [x, j] = (0, s.useState)(""),
           [v, k] = (0, s.useState)(!1),
           N = b.replace("https://", ""),
           C = async e => {
-            await $(c, b, x || y, r, l, k, d) && (p.oR.success(d("dashboard.premium.layout.simplistic_settings.button_modal.edit_success")), i())
+            await O(c, b, x || y, r, l, k, d) && (p.oR.success(d("dashboard.premium.layout.simplistic_settings.button_modal.edit_success")), i())
           }, w = async e => {
             var t;
             let o;
             e.target.disabled = !0;
             let a = e.target.files?.[0];
             if (!a) return;
-            let s = O.nB.icon,
+            let s = I.nB.icon,
               r = A(a.name).toLowerCase();
             if (!s.includes(r)) {
               p.oR.error(d("dashboard.premium.layout.simplistic_settings.button_modal.invalid_file")), e.target.disabled = !1, e.target.value = "";
@@ -855,7 +855,7 @@
             icon: u.A.url,
             featureName: d("dashboard.premium.layout.simplistic_settings.button_modal.url_label"),
             onChangeFunction: e => {
-              _(e.target.value)
+              g(e.target.value)
             },
             value: N,
             placeholder: "..."
@@ -874,7 +874,7 @@
                   })]
                 }), (0, a.jsx)("input", {
                   type: "file",
-                  accept: R.vJ.icon.map(e => e).join(", "),
+                  accept: F.vJ.icon.map(e => e).join(", "),
                   onChange: e => {
                     w(e)
                   }
@@ -913,12 +913,12 @@
         setButtons: i,
         modalClose: l
       }) {
-        let d = (0, g.kj)(),
+        let d = (0, _.kj)(),
           [c, h] = (0, s.useState)(),
-          [b, _] = (0, s.useState)(!1),
+          [b, g] = (0, s.useState)(!1),
           [y, f] = (0, s.useState)(""),
           x = async () => {
-            let a = await E(e, t, c, _, d);
+            let a = await $(e, t, c, g, d);
             a && a.success && (i(a.buttons), o(""), r(""), l())
           }, j = async e => {
             var t;
@@ -926,7 +926,7 @@
             e.target.disabled = !0;
             let a = e.target.files?.[0];
             if (!a) return;
-            let s = O.nB.icon,
+            let s = I.nB.icon,
               r = v(a.name).toLowerCase();
             if (!s.includes(r)) {
               p.oR.error(d("dashboard.premium.layout.simplistic_settings.button_modal.invalid_file")), e.target.disabled = !1, e.target.value = "";
@@ -975,7 +975,7 @@
                   })]
                 }), (0, a.jsx)("input", {
                   type: "file",
-                  accept: R.vJ.icon.map(e => e).join(", "),
+                  accept: F.vJ.icon.map(e => e).join(", "),
                   onChange: e => {
                     j(e)
                   }
@@ -1005,17 +1005,17 @@
           })]
         })
       }
-      var H = o(44923),
-        U = o(87256),
+      var U = o(44923),
+        H = o(87256),
         W = o(39768);
 
-      function q({
+      function V({
         buttons: e,
         setButtons: t,
         openModal: o,
         setCurrentModal: r
       }) {
-        let i = (0, g.kj)(),
+        let i = (0, _.kj)(),
           [l, d] = (0, s.useState)(e),
           [c, u] = (0, s.useState)(null),
           [m, h] = (0, s.useState)(!1);
@@ -1024,12 +1024,12 @@
         }, []), (0, s.useEffect)(() => {
           d(e)
         }, [e]);
-        let b = (0, H.FR)((0, H.MS)(H.AN, {
+        let b = (0, U.FR)((0, U.MS)(U.AN, {
             activationConstraint: {
               distance: 10
             }
           })),
-          _ = async e => {
+          g = async e => {
             u(null);
             let {
               active: o,
@@ -1039,7 +1039,7 @@
             let s = l.findIndex(e => e.id === o.id),
               r = l.findIndex(e => e.id === a.id);
             if (r === s) return;
-            let n = (0, U.VE)(l, s, r),
+            let n = (0, H.VE)(l, s, r),
               c = n.map(e => ({
                 id: e.id
               })); - 1 !== s && -1 !== r && (d(n), t(n)), (await fetch("https://guns.lol/api/dashboard/premium/buttons/order", {
@@ -1052,30 +1052,30 @@
               })
             })).ok || p.oR.error(i("dashboard.premium.layout.simplistic_settings.button_list.order_error"))
           };
-        return m ? (0, a.jsxs)(H.Mp, {
+        return m ? (0, a.jsxs)(U.Mp, {
           sensors: b,
-          collisionDetection: H.fp,
+          collisionDetection: U.fp,
           onDragStart: e => {
             let {
               active: t
             } = e, o = l.find(e => e.id === t.id);
             o && u(o)
           },
-          onDragEnd: _,
-          children: [(0, a.jsx)(U.gB, {
+          onDragEnd: g,
+          children: [(0, a.jsx)(H.gB, {
             items: l.map(e => e.id),
-            strategy: U.vl,
+            strategy: H.vl,
             children: (0, a.jsx)("div", {
               className: n().buttons,
-              children: l.map(e => (0, a.jsx)(G, {
+              children: l.map(e => (0, a.jsx)(J, {
                 item: e,
                 setButtons: t,
                 openModal: o,
                 setCurrentModal: r
               }, e.id))
             })
-          }), (0, a.jsx)(H.Hd, {
-            children: c && (0, a.jsx)(G, {
+          }), (0, a.jsx)(U.Hd, {
+            children: c && (0, a.jsx)(J, {
               item: c,
               setButtons: t,
               openModal: o,
@@ -1086,14 +1086,14 @@
         }) : null
       }
 
-      function G({
+      function J({
         item: e,
         setButtons: t,
         openModal: o,
         setCurrentModal: s,
         isOverlay: r = !1
       }) {
-        let i = (0, g.kj)(),
+        let i = (0, _.kj)(),
           {
             attributes: l,
             listeners: d,
@@ -1101,18 +1101,18 @@
             transform: p,
             transition: h,
             isDragging: b
-          } = (0, U.gl)({
+          } = (0, H.gl)({
             id: e.id,
             animateLayoutChanges: () => !1
           }),
-          _ = {
+          g = {
             transform: W.Ks.Transform.toString(p),
             transition: h,
             opacity: +!b
           };
         return (0, a.jsxs)("div", {
           ref: c,
-          style: _,
+          style: g,
           className: n().buttonContainer,
           children: [(0, a.jsx)("div", {
             className: n().dragHandleContainer,
@@ -1170,7 +1170,7 @@
           })]
         })
       }
-      let V = ({
+      let G = ({
         buttonBorderRadius: e,
         setButtonBorderRadius: t,
         buttonShadow: o,
@@ -1182,7 +1182,7 @@
         buttons: p,
         setButtons: b
       }) => {
-        let y = (0, g.kj)(),
+        let y = (0, _.kj)(),
           [f, x] = (0, s.useState)(!1),
           [j, v] = (0, s.useState)(""),
           [k, N] = (0, s.useState)(""),
@@ -1205,7 +1205,7 @@
             value: 30,
             label: y("dashboard.premium.layout.simplistic_settings.button_radius.marks.thirty")
           }],
-          F = [{
+          B = [{
             value: "center",
             label: y("dashboard.premium.layout.simplistic_settings.text_align.center")
           }, {
@@ -1216,7 +1216,7 @@
             label: y("dashboard.premium.layout.simplistic_settings.text_align.left")
           }];
         return (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(_.A, {
+          children: [(0, a.jsx)(g.A, {
             opened: f,
             onClose: () => x(!1),
             centered: !0,
@@ -1229,7 +1229,7 @@
               setButtonUrl: N,
               setButtons: b,
               modalClose: () => x(!1)
-            }) : "edit" === C.category && (0, a.jsx)(I, {
+            }) : "edit" === C.category && (0, a.jsx)(E, {
               buttonTitle: C.buttonTitle,
               buttonUrl: C.buttonUrl,
               buttonIcon: C.buttonIcon,
@@ -1258,7 +1258,7 @@
                   },
                   children: [u.A.addButton, " ", y("dashboard.premium.layout.simplistic_settings.button_editor.add_button")]
                 })]
-              }), (0, a.jsx)(q, {
+              }), (0, a.jsx)(V, {
                 buttons: p,
                 setButtons: b,
                 openModal: () => x(!0),
@@ -1280,12 +1280,12 @@
                     l(e)
                   },
                   icon: u.A.title,
-                  data: F
-                }), (0, a.jsx)(M.A, {
+                  data: B
+                }), (0, a.jsx)(D.A, {
                   featureName: y("dashboard.premium.layout.simplistic_settings.show_url"),
                   checked: d,
                   onChangeFunction: e => m(e.currentTarget.checked)
-                }), (0, a.jsx)(M.A, {
+                }), (0, a.jsx)(D.A, {
                   featureName: y("dashboard.premium.layout.simplistic_settings.button_shadow"),
                   checked: o,
                   onChangeFunction: e => r(e.currentTarget.checked)
@@ -1305,11 +1305,11 @@
           })]
         })
       };
-      var J = o(9992),
-        K = o(54834);
-      async function Q(e, t, o, a, s, r) {
+      var K = o(9992),
+        q = o(54834);
+      async function Y(e, t, o, a, s, r) {
         try {
-          t(K.A.loading);
+          t(q.A.loading);
           let i = await fetch("https://guns.lol/api/dashboard/premium/layout", {
               method: "POST",
               body: JSON.stringify({
@@ -1363,14 +1363,14 @@
         setAvatarRadius: m,
         borderWidth: p,
         setBorderWidth: b,
-        borderStyle: _,
+        borderStyle: g,
         setBorderStyle: f,
         borderOpacity: x,
         setBorderOpacity: j,
         linksPosition: v,
         setLinksPosition: k
       }) => {
-        let N = (0, g.kj)(),
+        let N = (0, _.kj)(),
           C = [{
             value: 20,
             label: N("dashboard.premium.layout.sleek_settings.border_radius.marks.twenty")
@@ -1414,7 +1414,7 @@
             value: "right",
             label: N("dashboard.premium.layout.links_alignment.right")
           }],
-          F = [{
+          B = [{
             value: "static",
             label: N("dashboard.premium.layout.border_style.static")
           }, {
@@ -1427,7 +1427,7 @@
             value: "pulse",
             label: N("dashboard.premium.layout.border_style.pulse")
           }],
-          L = e ? n().buttonEnabled : n().buttonDisabled;
+          T = e ? n().buttonEnabled : n().buttonDisabled;
         return (0, a.jsx)(a.Fragment, {
           children: (0, a.jsxs)("div", {
             className: `${n().generalComponentContainer} ${n().modernLayoutComponentLeft}`,
@@ -1443,7 +1443,7 @@
                   gap: "10px"
                 },
                 children: [(0, a.jsx)("span", {
-                  className: L,
+                  className: T,
                   onClick: () => t(!e),
                   children: N(e ? "dashboard.premium.layout.sleek_settings.border.disable_button" : "dashboard.premium.layout.sleek_settings.border.enable_button")
                 }), e && (0, a.jsxs)("div", {
@@ -1456,8 +1456,8 @@
                       value: o
                     }), (0, a.jsx)(h.A, {
                       featureName: N("dashboard.premium.layout.border_style.label"),
-                      data: F,
-                      value: _ ?? "static",
+                      data: B,
+                      value: g ?? "static",
                       onChangeFunction: f,
                       icon: u.A.layout
                     })]
@@ -1534,8 +1534,8 @@
           })
         })
       };
-      var X = o(47650),
-        Y = o(77599),
+      var Q = o(47650),
+        X = o(77599),
         ee = o(17440),
         et = o(58295);
       let eo = {
@@ -1582,11 +1582,12 @@
           })
         })
       };
-      var ea = o(52131);
-      let es = ["hero"],
-        er = ["about", "projects", "skills", "custom", "audio"],
-        ei = ["hero", "about", "projects", "custom", "audio", "skills"],
-        el = {
+      var ea = o(52131),
+        es = o(55442);
+      let er = ["hero"],
+        ei = ["about", "projects", "skills", "custom", "audio"],
+        el = ["hero", "about", "projects", "custom", "audio", "skills"],
+        en = {
           hero: "dashboard.premium.layout.portfolio_settings.modules.hero.label",
           about: "dashboard.premium.layout.portfolio_settings.modules.about.label",
           projects: "dashboard.premium.layout.portfolio_settings.modules.projects.label",
@@ -1594,7 +1595,7 @@
           audio: "dashboard.premium.layout.portfolio_settings.modules.audio.label",
           skills: "dashboard.premium.layout.portfolio_settings.modules.skills.label"
         },
-        en = {
+        ed = {
           hero: "dashboard.premium.layout.portfolio_settings.modules.hero.description",
           about: "dashboard.premium.layout.portfolio_settings.modules.about.description",
           projects: "dashboard.premium.layout.portfolio_settings.modules.projects.description",
@@ -1602,13 +1603,13 @@
           audio: "dashboard.premium.layout.portfolio_settings.modules.audio.description",
           skills: "dashboard.premium.layout.portfolio_settings.modules.skills.description"
         },
-        ed = e => "audio" === e || "skills" === e ? 1 : 2,
-        ec = () => `portfolio-${Date.now()}-${Math.random().toString(36).slice(2,8)}`,
-        eu = "undefined" != typeof Intl && "supportedValuesOf" in Intl ? Intl.supportedValuesOf("timeZone") : ["America/New_York", "America/Chicago", "America/Denver", "America/Los_Angeles", "America/Sao_Paulo", "Europe/London", "Europe/Paris", "Europe/Berlin", "Europe/Moscow", "Asia/Dubai", "Asia/Kolkata", "Asia/Tokyo", "Asia/Shanghai", "Australia/Sydney", "Pacific/Auckland", "Africa/Cairo", "Africa/Lagos"],
-        em = (e, t) => e(el[t]),
+        ec = e => "audio" === e || "skills" === e ? 1 : 2,
+        eu = () => `portfolio-${Date.now()}-${Math.random().toString(36).slice(2,8)}`,
+        em = "undefined" != typeof Intl && "supportedValuesOf" in Intl ? Intl.supportedValuesOf("timeZone") : ["America/New_York", "America/Chicago", "America/Denver", "America/Los_Angeles", "America/Sao_Paulo", "Europe/London", "Europe/Paris", "Europe/Berlin", "Europe/Moscow", "Asia/Dubai", "Asia/Kolkata", "Asia/Tokyo", "Asia/Shanghai", "Australia/Sydney", "Pacific/Auckland", "Africa/Cairo", "Africa/Lagos"],
         ep = (e, t) => e(en[t]),
-        eh = (e, t) => e(0 === t ? "dashboard.premium.layout.portfolio_settings.about.cards.left" : 1 === t ? "dashboard.premium.layout.portfolio_settings.about.cards.right" : "dashboard.premium.layout.portfolio_settings.about.cards.portfolio"),
-        eb = (e, t) => "hero" === e ? {
+        eh = (e, t) => e(ed[t]),
+        eb = (e, t) => e(0 === t ? "dashboard.premium.layout.portfolio_settings.about.cards.left" : 1 === t ? "dashboard.premium.layout.portfolio_settings.about.cards.right" : "dashboard.premium.layout.portfolio_settings.about.cards.portfolio"),
+        e_ = (e, t) => "hero" === e ? {
           show_avatar: !0,
           show_buttons: !0,
           hero_style: "classic"
@@ -1643,31 +1644,31 @@
               id: "portfolio-top-hero",
               type: "hero",
               visible: !0,
-              settings: eb("hero", t)
+              settings: e_("hero", t)
             }],
-            a = (Array.isArray(e) && e.length > 0 ? e.filter(e => ei.includes(e?.type)) : o).map((e, o) => {
-              let a, s = ei.includes(e.type) ? e.type : "about",
-                r = 0 !== o || es.includes(s) ? s : "hero";
+            a = (Array.isArray(e) && e.length > 0 ? e.filter(e => el.includes(e?.type)) : o).map((e, o) => {
+              let a, s = el.includes(e.type) ? e.type : "about",
+                r = 0 !== o || er.includes(s) ? s : "hero";
               return {
-                id: e.id || ec(),
+                id: e.id || eu(),
                 type: r,
                 visible: !1 !== e.visible,
                 settings: (a = {
-                  ...eb(r, t),
+                  ...e_(r, t),
                   ...e.settings || {}
                 }, "hero" === r && (a.hero_style = "centered" === a.hero_style ? "centered" : "classic"), a)
               }
             });
-          return 0 === a.length && (a = o), es.includes(a[0].type) || (a[0] = {
+          return 0 === a.length && (a = o), er.includes(a[0].type) || (a[0] = {
             id: a[0].id,
             type: "hero",
             visible: !0,
-            settings: eb("hero", t)
-          }), a = a.filter((e, t) => 0 === t || !es.includes(e.type))
+            settings: e_("hero", t)
+          }), a = a.filter((e, t) => 0 === t || !er.includes(e.type))
         };
 
-      function e_(e) {
-        let t = (0, g.kj)(),
+      function ey(e) {
+        let t = (0, _.kj)(),
           {
             modules: o,
             setModules: r
@@ -1676,7 +1677,7 @@
           [d, c] = (0, s.useState)(null),
           [m, p] = (0, s.useState)(!1),
           [h, b] = (0, s.useState)(null),
-          y = (0, H.FR)((0, H.MS)(H.AN, {
+          y = (0, U.FR)((0, U.MS)(U.AN, {
             activationConstraint: {
               distance: 10
             }
@@ -1701,7 +1702,7 @@
           };
         return (0, a.jsxs)("div", {
           className: n().portfolioSettings,
-          children: [(0, a.jsx)(_.A, {
+          children: [(0, a.jsx)(g.A, {
             opened: m,
             onClose: () => p(!1),
             title: t("dashboard.premium.layout.portfolio_settings.add_module.title"),
@@ -1709,21 +1710,21 @@
             size: "650px",
             children: (0, a.jsx)("div", {
               className: n().portfolioAddModuleGrid,
-              children: er.map(e => {
+              children: ei.map(e => {
                 let o = v[e] || 0,
-                  s = ed(e),
+                  s = ec(e),
                   r = o >= s;
                 return (0, a.jsxs)("button", {
                   type: "button",
                   className: n().portfolioAddModuleOption,
                   disabled: r,
                   onClick: () => (e => {
-                    if ((v[e] || 0) >= ed(e)) return;
+                    if ((v[e] || 0) >= ec(e)) return;
                     let o = {
-                      id: ec(),
+                      id: eu(),
                       type: e,
                       visible: !0,
-                      settings: eb(e, t)
+                      settings: e_(e, t)
                     };
                     f([...i, o]), b("audio" === e ? null : o.id), p(!1)
                   })(e),
@@ -1733,11 +1734,11 @@
                   }), (0, a.jsxs)("div", {
                     className: n().portfolioAddModuleText,
                     children: [(0, a.jsx)("h2", {
-                      children: em(t, e)
+                      children: ep(t, e)
                     }), (0, a.jsx)("p", {
                       children: r ? t("dashboard.premium.layout.portfolio_settings.add_module.limit_reached", {
                         limit: s
-                      }) : ep(t, e)
+                      }) : eh(t, e)
                     })]
                   }), !r && (0, a.jsx)("span", {
                     className: n().portfolioAddModuleArrow,
@@ -1746,7 +1747,7 @@
                 }, e)
               })
             })
-          }), (0, a.jsx)(ey, {
+          }), (0, a.jsx)(ef, {
             ...e,
             module: x,
             updateSettings: N
@@ -1769,9 +1770,9 @@
                   children: [u.A.addTag, " ", t("dashboard.premium.layout.portfolio_settings.add_module.button")]
                 })
               })]
-            }), (0, a.jsxs)(H.Mp, {
+            }), (0, a.jsxs)(U.Mp, {
               sensors: y,
-              collisionDetection: H.fp,
+              collisionDetection: U.fp,
               onDragStart: e => {
                 let t = j.find(t => t.id === e.active.id);
                 t && c(t)
@@ -1785,14 +1786,14 @@
                 if (!o || t.id === o.id) return;
                 let a = j.findIndex(e => e.id === t.id),
                   s = j.findIndex(e => e.id === o.id);
-                a < 0 || s < 0 || f([x, ...(0, U.be)(j, a, s)])
+                a < 0 || s < 0 || f([x, ...(0, H.be)(j, a, s)])
               },
-              children: [(0, a.jsx)(U.gB, {
+              children: [(0, a.jsx)(H.gB, {
                 items: j.map(e => e.id),
-                strategy: U._G,
+                strategy: H._G,
                 children: (0, a.jsx)("div", {
                   className: n().portfolioModuleList,
-                  children: j.map(t => (0, a.jsx)(ej, {
+                  children: j.map(t => (0, a.jsx)(ev, {
                     module: t,
                     updateModule: k,
                     updateSettings: N,
@@ -1806,8 +1807,8 @@
                     audioList: e.audioList
                   }, t.id))
                 })
-              }), (0, a.jsx)(H.Hd, {
-                children: d && (0, a.jsx)(ef, {
+              }), (0, a.jsx)(U.Hd, {
+                children: d && (0, a.jsx)(ex, {
                   module: d,
                   isOverlay: !0
                 })
@@ -1817,8 +1818,8 @@
         })
       }
 
-      function ey(e) {
-        let t = (0, g.kj)(),
+      function ef(e) {
+        let t = (0, _.kj)(),
           {
             module: o,
             updateSettings: s
@@ -1834,20 +1835,30 @@
                 children: t("dashboard.premium.layout.portfolio_settings.hero.description")
               })]
             })
-          }), (0, a.jsx)(eF, {
+          }), (0, a.jsx)(eB, {
             module: o,
             updateSettings: s,
+            isBorderEnabled: e.isBorderEnabled,
+            setIsBorderEnabled: e.setIsBorderEnabled,
+            borderColor: e.borderColor,
+            setBorderColor: e.setBorderColor,
+            borderWidth: e.borderWidth,
+            setBorderWidth: e.setBorderWidth,
+            borderStyle: e.borderStyle,
+            setBorderStyle: e.setBorderStyle,
+            borderOpacity: e.borderOpacity,
+            setBorderOpacity: e.setBorderOpacity,
             portfolioBorderRadius: e.portfolioBorderRadius,
             setPortfolioBorderRadius: e.setPortfolioBorderRadius
           })]
         })
       }
 
-      function ef({
+      function ex({
         module: e,
         isOverlay: t = !1
       }) {
-        let o = (0, g.kj)();
+        let o = (0, _.kj)();
         return (0, a.jsxs)("div", {
           className: `${n().portfolioModuleItem} ${t?n().portfolioModuleOverlay:""}`,
           children: [(0, a.jsx)("div", {
@@ -1864,9 +1875,9 @@
                   children: eo[e.type]
                 }), (0, a.jsxs)("div", {
                   children: [(0, a.jsx)("h1", {
-                    children: em(o, e.type)
-                  }), (0, a.jsx)("h3", {
                     children: ep(o, e.type)
+                  }), (0, a.jsx)("h3", {
+                    children: eh(o, e.type)
                   })]
                 })]
               })
@@ -1875,11 +1886,11 @@
         })
       }
 
-      function ex({
+      function ej({
         onSave: e,
         saveButtonText: t
       }) {
-        let o = (0, g.kj)();
+        let o = (0, _.kj)();
         return e ? (0, a.jsx)("span", {
           className: n().saveSecondTabButton,
           role: "button",
@@ -1892,7 +1903,7 @@
         }) : null
       }
 
-      function ej({
+      function ev({
         module: e,
         updateModule: t,
         updateSettings: o,
@@ -1905,25 +1916,25 @@
         isMonochromeIcons: m,
         audioList: p
       }) {
-        let h = (0, g.kj)(),
+        let h = (0, _.kj)(),
           {
             listeners: b,
-            setNodeRef: _,
+            setNodeRef: g,
             transform: y,
             transition: f,
             isDragging: x
-          } = (0, U.gl)({
+          } = (0, H.gl)({
             id: e.id,
             animateLayoutChanges: () => !1
           }),
-          j = ep(h, e.type),
+          j = eh(h, e.type),
           v = {
             transform: W.Ks.Transform.toString(y),
             transition: f,
             opacity: +!x
           };
         return (0, a.jsxs)("div", {
-          ref: _,
+          ref: g,
           style: v,
           className: `${n().portfolioModuleItem} ${r&&r!==e.id?n().portfolioModuleItemCollapsed:""}`,
           children: [(0, a.jsx)("div", {
@@ -1950,7 +1961,7 @@
                   children: eo[e.type]
                 }), (0, a.jsxs)("div", {
                   children: [(0, a.jsx)("h1", {
-                    children: em(h, e.type)
+                    children: ep(h, e.type)
                   }), (0, a.jsx)("h3", {
                     children: j
                   })]
@@ -1975,7 +1986,7 @@
                   children: u.A.deleteButton
                 })]
               })]
-            }), i && (0, a.jsx)(eN, {
+            }), i && (0, a.jsx)(eC, {
               module: e,
               updateSettings: o,
               onSave: d,
@@ -1987,7 +1998,7 @@
         })
       }
 
-      function ev(e, t, o) {
+      function ek(e, t, o) {
         return (a, s = "", r = "text") => {
           let i = e.current,
             l = t();
@@ -2001,11 +2012,11 @@
         }
       }
 
-      function ek({
+      function eN({
         insert: e,
         onOptions: t
       }) {
-        let o = (0, g.kj)();
+        let o = (0, _.kj)();
         return (0, a.jsxs)("div", {
           className: n().portfolioMarkdownToolbar,
           role: "toolbar",
@@ -2186,7 +2197,7 @@
         })
       }
 
-      function eN({
+      function eC({
         module: e,
         updateSettings: t,
         onSave: o,
@@ -2194,10 +2205,10 @@
         isMonochromeIcons: i,
         audioList: l
       }) {
-        let d = (0, g.kj)(),
+        let d = (0, _.kj)(),
           c = e.settings || {},
           p = (0, s.useRef)(null);
-        if ("about" === e.type) return (0, a.jsx)(eB, {
+        if ("about" === e.type) return (0, a.jsx)(eL, {
           module: e,
           settings: c,
           updateSettings: t,
@@ -2205,7 +2216,7 @@
           saveButtonText: r,
           isMonochromeIcons: i
         });
-        if ("projects" === e.type) return (0, a.jsx)(e$, {
+        if ("projects" === e.type) return (0, a.jsx)(eO, {
           module: e,
           settings: c,
           updateSettings: t,
@@ -2213,7 +2224,7 @@
           saveButtonText: r,
           isMonochromeIcons: i
         });
-        if ("skills" === e.type) return (0, a.jsx)(eT, {
+        if ("skills" === e.type) return (0, a.jsx)(eR, {
           module: e,
           settings: c,
           updateSettings: t,
@@ -2227,7 +2238,7 @@
           updateSettings: t,
           audioList: l
         });
-        let b = ev(p, () => c.content || "", o => t(e.id, {
+        let b = ek(p, () => c.content || "", o => t(e.id, {
           content: o
         }));
         return (0, a.jsxs)("div", {
@@ -2258,7 +2269,7 @@
             icon: u.A.layout
           }), (0, a.jsxs)("div", {
             className: n().portfolioEditorBox,
-            children: [(0, a.jsx)(ek, {
+            children: [(0, a.jsx)(eN, {
               insert: b
             }), (0, a.jsx)("textarea", {
               ref: p,
@@ -2272,7 +2283,6 @@
           })]
         })
       }
-      let eC = /\[(\d{1,2}):(\d{2})(?:\.(\d{1,3}))?\]/g;
 
       function ew({
         module: e,
@@ -2280,7 +2290,7 @@
         updateSettings: o,
         audioList: r
       }) {
-        let i = (0, g.kj)(),
+        let i = (0, _.kj)(),
           l = (0, s.useMemo)(() => {
             var e;
             return (e = r) ? "string" == typeof e ? e ? [{
@@ -2311,15 +2321,15 @@
           [v, k] = (0, s.useState)(!1),
           [N, C] = (0, s.useState)([]),
           [w, A] = (0, s.useState)(""),
-          [S, L] = (0, s.useState)(!1),
-          B = (0, s.useRef)(null),
-          T = (0, s.useMemo)(() => l.find(e => e.id === c) || l[0] || null, [l, c]),
-          R = T ? d[T.id] : null;
+          [S, T] = (0, s.useState)(!1),
+          L = (0, s.useRef)(null),
+          R = (0, s.useMemo)(() => l.find(e => e.id === c) || l[0] || null, [l, c]),
+          F = R ? d[R.id] : null;
         (0, s.useEffect)(() => {
           !c && l[0]?.id && b(l[0].id)
         }, [l, c]), (0, s.useEffect)(() => {
-          f(""), j(""), C([]), A(""), L(!1)
-        }, [T?.id]), (0, s.useEffect)(() => {
+          f(""), j(""), C([]), A(""), T(!1)
+        }, [R?.id]), (0, s.useEffect)(() => {
           let t = d && "object" == typeof d ? d : {},
             a = Object.entries(t);
           if (0 === a.length) return;
@@ -2344,7 +2354,7 @@
             lyrics_track_map: i
           })
         }, [d, l, e.id, o]);
-        let D = (t, a, s) => {
+        let M = (t, a, s) => {
             let r = {
               ...d
             };
@@ -2355,12 +2365,12 @@
               show_lyrics: "boolean" == typeof s ? s : i
             })
           },
-          M = async () => {
-            if (!T) return;
+          D = async () => {
+            if (!R) return;
             let e = y.trim(),
               t = x.trim();
             if (!e) return void p.oR.error(i("dashboard.premium.layout.portfolio_settings.lyrics_editor.errors.track_required"));
-            k(!0), C([]), A(""), L(!0);
+            k(!0), C([]), A(""), T(!0);
             try {
               let o = await fetch("https://guns.lol/api/dashboard/premium/lyrics/search", {
                   method: "POST",
@@ -2370,7 +2380,7 @@
                   body: JSON.stringify({
                     track_name: e,
                     artist_name: t,
-                    duration: T.duration && T.duration > 0 ? T.duration : void 0
+                    duration: R.duration && R.duration > 0 ? R.duration : void 0
                   })
                 }),
                 a = [];
@@ -2385,75 +2395,45 @@
             } finally {
               k(!1)
             }
-          }, E = async e => {
+          }, $ = async e => {
             let t = e.target.files?.[0];
-            if (e.target.value = "", T && t) {
-              if (!String(t.name || "").toLowerCase().endsWith(".lrc")) return void p.oR.error(i("dashboard.premium.layout.portfolio_settings.lyrics_editor.errors.lrc_required"));
-              if (t.size > 358400) return void p.oR.error(i("dashboard.premium.layout.portfolio_settings.lyrics_editor.errors.lrc_too_large"));
-              try {
-                let e = await t.text(),
-                  o = function(e) {
-                    let t = String(e || "").split(/\r?\n/),
-                      o = [];
-                    for (let e of t) {
-                      let t = e.trim();
-                      if (!t) continue;
-                      let a = Array.from(t.matchAll(eC));
-                      if (0 === a.length) continue;
-                      let s = t.replace(eC, "").trim() || "...";
-                      for (let e of a) {
-                        let t = Number(e[1] || 0),
-                          a = Number(e[2] || 0),
-                          r = Number((String(e[3] || "0") + "00").slice(0, 3));
-                        if (!Number.isFinite(t) || !Number.isFinite(a) || !Number.isFinite(r)) continue;
-                        let i = Math.max(0, (60 * t + a) * 1e3 + r);
-                        o.push({
-                          timeMs: i,
-                          text: s
-                        })
-                      }
-                    }
-                    let a = o.sort((e, t) => e.timeMs - t.timeMs);
-                    return 0 === a.length ? null : {
-                      syncedLyrics: a.map(e => {
-                        let t, o, a;
-                        return `${t=Math.max(0,Math.floor(e.timeMs)),o=Math.floor(t/6e4),a=Math.floor(t%6e4/1e3),`[${String(o).padStart(2,"0")}:${String(a).padStart(2,"0")}.${String(t%1e3).padStart(3,"0")}]`} ${e.text}`
-                      }).join("\n"),
-                      plainLyrics: a.map(e => e.text).join("\n"),
-                      lineCount: a.length
-                    }
-                  }(e);
-                if (!o) return void p.oR.error(i("dashboard.premium.layout.portfolio_settings.lyrics_editor.errors.no_timed_lines"));
-                D(T.id, {
-                  track_id: T.id,
-                  track_url: T.url,
-                  track_title: T.title,
-                  track_name: y.trim() || T.title,
-                  artist_name: x.trim(),
-                  album_name: "",
-                  duration: Number(T.duration || 0) || 0,
-                  synced_lyrics: o.syncedLyrics,
-                  plain_lyrics: o.plainLyrics
-                }, !0), C([]), A(""), p.oR.success(i(1 === o.lineCount ? "dashboard.premium.layout.portfolio_settings.lyrics_editor.messages.import_success_one" : "dashboard.premium.layout.portfolio_settings.lyrics_editor.messages.import_success_other", {
-                  count: o.lineCount
-                }))
-              } catch (e) {
-                console.error(e), p.oR.error(i("dashboard.premium.layout.portfolio_settings.lyrics_editor.errors.lrc_read_failed"))
-              }
+            if (e.target.value = "", !R || !t) return;
+            let o = String(t.name || "").toLowerCase();
+            if (!o.endsWith(".lrc") && !o.endsWith(".elrc")) return void p.oR.error(i("dashboard.premium.layout.portfolio_settings.lyrics_editor.errors.lrc_required"));
+            if (t.size > 358400) return void p.oR.error(i("dashboard.premium.layout.portfolio_settings.lyrics_editor.errors.lrc_too_large"));
+            try {
+              let e = await t.text(),
+                o = (0, es.h6)(e);
+              if (!o) return void p.oR.error(i("dashboard.premium.layout.portfolio_settings.lyrics_editor.errors.no_timed_lines"));
+              M(R.id, {
+                track_id: R.id,
+                track_url: R.url,
+                track_title: R.title,
+                track_name: y.trim() || R.title,
+                artist_name: x.trim(),
+                album_name: "",
+                duration: Number(R.duration || 0) || 0,
+                synced_lyrics: o.syncedLyrics,
+                plain_lyrics: o.plainLyrics
+              }, !0), C([]), A(""), p.oR.success(i(1 === o.lineCount ? "dashboard.premium.layout.portfolio_settings.lyrics_editor.messages.import_success_one" : "dashboard.premium.layout.portfolio_settings.lyrics_editor.messages.import_success_other", {
+                count: o.lineCount
+              }))
+            } catch (e) {
+              console.error(e), p.oR.error(i("dashboard.premium.layout.portfolio_settings.lyrics_editor.errors.lrc_read_failed"))
             }
           };
         return (0, a.jsxs)("div", {
           className: n().portfolioFieldStack,
-          children: [(0, a.jsx)(_.A, {
+          children: [(0, a.jsx)(g.A, {
             opened: S,
-            onClose: () => L(!1),
+            onClose: () => T(!1),
             title: i("dashboard.premium.layout.portfolio_settings.lyrics_editor.modal.title"),
             centered: !0,
             size: "560px",
             children: (0, a.jsx)("div", {
               className: n().portfolioFieldStack,
               children: v ? (0, a.jsxs)("div", {
-                className: F().uploaderMessage,
+                className: B().uploaderMessage,
                 children: [(0, a.jsx)("span", {
                   children: u.A.loading
                 }), (0, a.jsx)("h1", {
@@ -2469,24 +2449,24 @@
                     type: "button",
                     className: n().portfolioLyricsResult,
                     onClick: () => {
-                      if (!T) return void p.oR.error(i("dashboard.premium.layout.portfolio_settings.lyrics_editor.errors.select_track_first"));
+                      if (!R) return void p.oR.error(i("dashboard.premium.layout.portfolio_settings.lyrics_editor.errors.select_track_first"));
                       let a = String(e.syncedLyrics || "").trim();
-                      a ? (D(T.id, {
-                        track_id: T.id,
-                        track_url: T.url,
-                        track_title: T.title,
-                        track_name: t || y.trim() || T.title,
+                      a ? (M(R.id, {
+                        track_id: R.id,
+                        track_url: R.url,
+                        track_title: R.title,
+                        track_name: t || y.trim() || R.title,
                         artist_name: o || x.trim(),
                         album_name: String(e.albumName || "").trim(),
-                        duration: Number(e.duration || T?.duration || 0) || 0,
+                        duration: Number(e.duration || R?.duration || 0) || 0,
                         synced_lyrics: a,
                         plain_lyrics: String(e.plainLyrics || "")
-                      }, !0), C([]), A(""), L(!1), p.oR.success(i("dashboard.premium.layout.portfolio_settings.lyrics_editor.messages.applied"))) : p.oR.error(i("dashboard.premium.layout.portfolio_settings.lyrics_editor.errors.result_missing_synced"))
+                      }, !0), C([]), A(""), T(!1), p.oR.success(i("dashboard.premium.layout.portfolio_settings.lyrics_editor.messages.applied"))) : p.oR.error(i("dashboard.premium.layout.portfolio_settings.lyrics_editor.errors.result_missing_synced"))
                     },
                     children: [(0, a.jsxs)("div", {
                       className: n().portfolioLyricsResultMeta,
                       children: [(0, a.jsx)("h2", {
-                        children: t || T?.title || i("dashboard.premium.layout.portfolio_settings.lyrics_editor.modal.selected_track")
+                        children: t || R?.title || i("dashboard.premium.layout.portfolio_settings.lyrics_editor.modal.selected_track")
                       }), (0, a.jsx)("p", {
                         children: [o, e.albumName].filter(Boolean).join(" • ") || i("dashboard.premium.layout.portfolio_settings.lyrics_editor.modal.result_fallback")
                       })]
@@ -2506,7 +2486,7 @@
           }) : (0, a.jsxs)(a.Fragment, {
             children: [(0, a.jsx)(h.A, {
               featureName: i("dashboard.premium.layout.portfolio_settings.lyrics_editor.fields.audio_track"),
-              value: T?.id || "",
+              value: R?.id || "",
               data: l.map((e, t) => ({
                 value: e.id,
                 label: e.title || i("dashboard.premium.layout.portfolio_settings.lyrics_editor.fields.audio_track_fallback", {
@@ -2515,13 +2495,13 @@
               })),
               onChangeFunction: e => b(String(e || "")),
               icon: eo.audio
-            }), R?.synced_lyrics ? (0, a.jsx)("div", {
+            }), F?.synced_lyrics ? (0, a.jsx)("div", {
               className: n().portfolioAudioLyricsActions,
               children: (0, a.jsxs)("button", {
                 type: "button",
                 className: n().portfolioInlineButton,
                 onClick: () => {
-                  D(T.id, null)
+                  M(R.id, null)
                 },
                 children: [u.A.deleteButton, " ", i("dashboard.premium.layout.portfolio_settings.lyrics_editor.actions.remove_lyrics")]
               })
@@ -2544,19 +2524,19 @@
                   type: "button",
                   className: n().portfolioInlineButton,
                   disabled: v,
-                  onClick: M,
+                  onClick: D,
                   children: [v ? u.A.loading : eo.audio, v ? i("dashboard.premium.layout.portfolio_settings.lyrics_editor.actions.searching") : i("dashboard.premium.layout.portfolio_settings.lyrics_editor.actions.search")]
                 }), (0, a.jsxs)("button", {
                   type: "button",
                   className: n().portfolioInlineButton,
-                  onClick: () => B.current?.click(),
+                  onClick: () => L.current?.click(),
                   children: [u.A.upload || u.A.addTag || eo.audio, " ", i("dashboard.premium.layout.portfolio_settings.lyrics_editor.actions.import_lrc")]
                 })]
               }), (0, a.jsx)("input", {
-                ref: B,
+                ref: L,
                 type: "file",
-                accept: ".lrc,text/plain",
-                onChange: E,
+                accept: ".lrc,.elrc,text/plain",
+                onChange: $,
                 style: {
                   display: "none"
                 }
@@ -2655,7 +2635,7 @@
         value: e,
         onChange: t
       }) {
-        let o = (0, g.kj)();
+        let o = (0, _.kj)();
         return (0, a.jsx)("div", {
           className: n().heroStylePicker,
           children: eA.map(s => (0, a.jsxs)("button", {
@@ -2673,27 +2653,61 @@
         })
       }
 
-      function eF({
+      function eB({
         module: e,
         updateSettings: t,
-        portfolioBorderRadius: o,
-        setPortfolioBorderRadius: s
+        isBorderEnabled: o,
+        setIsBorderEnabled: s,
+        borderColor: r,
+        setBorderColor: i,
+        borderWidth: l,
+        setBorderWidth: m,
+        borderStyle: p,
+        setBorderStyle: b,
+        borderOpacity: g,
+        setBorderOpacity: y,
+        portfolioBorderRadius: f,
+        setPortfolioBorderRadius: x
       }) {
-        let r = (0, g.kj)(),
-          i = e.settings || {},
-          l = [{
+        let j = (0, _.kj)(),
+          v = e.settings || {},
+          k = [{
             value: 20,
-            label: r("dashboard.premium.layout.default_settings.border_radius.marks.twenty")
+            label: j("dashboard.premium.layout.default_settings.border_radius.marks.twenty")
           }, {
             value: 50,
-            label: r("dashboard.premium.layout.default_settings.border_radius.marks.fifty")
+            label: j("dashboard.premium.layout.default_settings.border_radius.marks.fifty")
           }, {
             value: 80,
-            label: r("dashboard.premium.layout.default_settings.border_radius.marks.eighty")
+            label: j("dashboard.premium.layout.default_settings.border_radius.marks.eighty")
           }],
-          d = [
-            ["show_avatar", r("dashboard.premium.layout.portfolio_settings.hero.toggles.profile_picture")],
-            ["show_buttons", r("dashboard.premium.layout.portfolio_settings.hero.toggles.socials")]
+          N = [{
+            value: 2,
+            label: j("dashboard.premium.layout.default_settings.border_width.marks.two")
+          }, {
+            value: 5,
+            label: j("dashboard.premium.layout.default_settings.border_width.marks.five")
+          }, {
+            value: 8,
+            label: j("dashboard.premium.layout.default_settings.border_width.marks.eight")
+          }],
+          C = [{
+            value: "static",
+            label: j("dashboard.premium.layout.border_style.static")
+          }, {
+            value: "dashed",
+            label: j("dashboard.premium.layout.border_style.dashed")
+          }, {
+            value: "shimmer",
+            label: j("dashboard.premium.layout.border_style.shimmer")
+          }, {
+            value: "pulse",
+            label: j("dashboard.premium.layout.border_style.pulse")
+          }],
+          w = o ? n().buttonEnabled : n().buttonDisabled,
+          A = [
+            ["show_avatar", j("dashboard.premium.layout.portfolio_settings.hero.toggles.profile_picture")],
+            ["show_buttons", j("dashboard.premium.layout.portfolio_settings.hero.toggles.socials")]
           ];
         return (0, a.jsxs)("div", {
           className: n().portfolioFieldStack,
@@ -2701,9 +2715,9 @@
             className: n().heroStyleSection,
             children: [(0, a.jsx)("span", {
               className: n().portfolioFieldLabel,
-              children: r("dashboard.premium.layout.portfolio_settings.hero.style.label")
+              children: j("dashboard.premium.layout.portfolio_settings.hero.style.label")
             }), (0, a.jsx)(eS, {
-              value: i.hero_style || "classic",
+              value: v.hero_style || "classic",
               onChange: o => t(e.id, {
                 hero_style: o
               })
@@ -2712,41 +2726,94 @@
             className: n().heroToggleSection,
             children: [(0, a.jsx)("h1", {
               className: n().heroToggleLabel,
-              children: r("dashboard.premium.layout.portfolio_settings.hero.elements_label")
+              children: j("dashboard.premium.layout.portfolio_settings.hero.elements_label")
             }), (0, a.jsxs)("div", {
               className: n().heroElementsPanel,
               children: [(0, a.jsxs)("div", {
+                className: n().heroRadiusBlock,
+                children: [(0, a.jsx)("span", {
+                  className: w,
+                  onClick: () => s(!o),
+                  children: j(o ? "dashboard.premium.layout.default_settings.border.disable_button" : "dashboard.premium.layout.default_settings.border.enable_button")
+                }), o && (0, a.jsxs)("div", {
+                  className: n().borderDiv,
+                  children: [(0, a.jsxs)("div", {
+                    className: n().borderControlsRow,
+                    children: [(0, a.jsx)(d.A, {
+                      featureName: j("dashboard.premium.layout.default_settings.border.color_label"),
+                      onChangeFunction: i,
+                      value: r
+                    }), (0, a.jsx)(h.A, {
+                      featureName: j("dashboard.premium.layout.border_style.label"),
+                      data: C,
+                      value: p ?? "static",
+                      onChangeFunction: b,
+                      icon: u.A.layout
+                    })]
+                  }), (0, a.jsxs)("div", {
+                    className: n().borderControlsRow,
+                    children: [(0, a.jsx)(c.A, {
+                      featureName: j("dashboard.premium.layout.default_settings.border.width_label"),
+                      onChangeFunction: m,
+                      value: l,
+                      min: 1,
+                      max: 10,
+                      step: 1,
+                      label: e => `${e}px`,
+                      marks: N
+                    }), (0, a.jsx)(c.A, {
+                      featureName: j("dashboard.premium.layout.border_opacity.label"),
+                      onChangeFunction: y,
+                      value: g,
+                      min: 0,
+                      max: 1,
+                      step: .01,
+                      label: e => `${Math.floor(100*e)}%`,
+                      marks: [{
+                        value: .2,
+                        label: "20%"
+                      }, {
+                        value: .5,
+                        label: "50%"
+                      }, {
+                        value: .8,
+                        label: "80%"
+                      }]
+                    })]
+                  })]
+                })]
+              }), (0, a.jsxs)("div", {
                 className: n().heroRadiusBlock,
                 children: [(0, a.jsx)("div", {
                   className: n().heroRadiusHeader,
                   children: (0, a.jsx)("span", {
                     className: n().heroVisibilityRowLabel,
-                    children: r("dashboard.premium.layout.portfolio_settings.hero.border_radius_label")
+                    children: j("dashboard.premium.layout.portfolio_settings.hero.border_radius_label")
                   })
                 }), (0, a.jsx)("div", {
                   className: n().heroRadiusSliderWrap,
                   children: (0, a.jsx)(c.A, {
-                    onChangeFunction: s,
-                    value: o,
+                    onChangeFunction: x,
+                    value: f,
                     min: 0,
                     max: 100,
                     step: 1,
                     label: e => `${e}px`,
-                    marks: l,
+                    marks: k,
                     className: n().heroRadiusSliderCard
                   })
                 })]
               }), (0, a.jsx)("div", {
                 className: n().heroVisibilityList,
-                children: d.map(([o, s]) => (0, a.jsxs)("div", {
+                children: A.map(([o, s]) => (0, a.jsxs)("div", {
                   className: n().heroVisibilityRow,
                   children: [(0, a.jsx)("span", {
                     className: n().heroVisibilityRowLabel,
                     children: s
                   }), (0, a.jsx)("div", {
                     className: n().heroVisibilitySwitchCell,
-                    children: (0, a.jsx)(M.A, {
-                      checked: !1 !== i[o],
+                    children: (0, a.jsx)(D.A, {
+                      checked: !1 !== v[o],
                       onChange: a => t(e.id, {
                         [o]: a.target.checked
                       })
@@ -2759,7 +2826,7 @@
         })
       }
 
-      function eL({
+      function eT({
         opened: e,
         onClose: t,
         card: o,
@@ -2768,7 +2835,7 @@
         onCardUpdate: l,
         onSave: d
       }) {
-        let c = (0, g.kj)(),
+        let c = (0, _.kj)(),
           h = [{
             value: "discord_presence",
             name: "Discord Presence",
@@ -2815,30 +2882,30 @@
             icon: u.A.timezone,
             placeholder: void 0
           }],
-          b = eD(o),
+          b = eM(o),
           [y, f] = (0, s.useState)("empty" !== b),
           [x, j] = (0, s.useState)("empty" !== b ? b : "youtube"),
-          [v, k] = (0, s.useState)(eM(o)),
+          [v, k] = (0, s.useState)(eD(o)),
           [N, C] = (0, s.useState)(o.second_tab_config?.clock_face_style ?? "dark"),
           [w, A] = (0, s.useState)(o.second_tab_config?.clock_hidden ?? !1),
-          [S, F] = (0, s.useState)(o.second_tab_config?.clock_time_format ?? "24h"),
-          [L, B] = (0, s.useState)("timezone" === b ? eM(o).replace(/_/g, " ") : ""),
-          [T, R] = (0, s.useState)(!1);
+          [S, B] = (0, s.useState)(o.second_tab_config?.clock_time_format ?? "24h"),
+          [T, L] = (0, s.useState)("timezone" === b ? eD(o).replace(/_/g, " ") : ""),
+          [R, F] = (0, s.useState)(!1);
         (0, s.useEffect)(() => {
           if (!e) return;
-          let t = eD(o),
-            a = eM(o);
-          f(!0), j("empty" !== t ? t : "youtube"), k(a), B("timezone" === t ? a.replace(/_/g, " ") : ""), R(!1), C(o.second_tab_config?.clock_face_style ?? "dark"), A(o.second_tab_config?.clock_hidden ?? !1), F(o.second_tab_config?.clock_time_format ?? "24h")
+          let t = eM(o),
+            a = eD(o);
+          f(!0), j("empty" !== t ? t : "youtube"), k(a), L("timezone" === t ? a.replace(/_/g, " ") : ""), F(!1), C(o.second_tab_config?.clock_face_style ?? "dark"), A(o.second_tab_config?.clock_hidden ?? !1), B(o.second_tab_config?.clock_time_format ?? "24h")
         }, [e]);
-        let D = L.replace(/_/g, " ").toLowerCase(),
-          M = eu.filter(e => e.replace(/_/g, " ").toLowerCase().includes(D)).slice(0, 80).map(e => ({
+        let M = T.replace(/_/g, " ").toLowerCase(),
+          D = em.filter(e => e.replace(/_/g, " ").toLowerCase().includes(M)).slice(0, 80).map(e => ({
             value: e,
             label: e.replace(/_/g, " ")
           })),
-          E = h.find(e => e.value === x),
-          $ = h[0],
+          $ = h.find(e => e.value === x),
+          O = h[0],
           z = h.slice(1);
-        return (0, a.jsxs)(_.A, {
+        return (0, a.jsxs)(g.A, {
           opened: e,
           onClose: t,
           title: r,
@@ -2862,17 +2929,17 @@
               children: [(0, a.jsxs)("div", {
                 className: `${n().secondTabOption} ${n().cardOptionDiscordPresence} ${"discord_presence"===x?n().selected:""} ${i?n().secondTabOptionDisabled:""}`,
                 onClick: () => {
-                  i || ("discord_presence" !== x && (k(""), B("")), j("discord_presence"))
+                  i || ("discord_presence" !== x && (k(""), L("")), j("discord_presence"))
                 },
-                children: [$.icon, (0, a.jsx)("h1", {
-                  children: $.name
+                children: [O.icon, (0, a.jsx)("h1", {
+                  children: O.name
                 })]
               }), (0, a.jsx)("div", {
                 className: n().secondTabOptions,
                 children: z.map(e => (0, a.jsxs)("div", {
                   className: `${n().secondTabOption} ${x===e.value?n().selected:""}`,
                   onClick: () => {
-                    e.value !== x && (k(""), B("")), j(e.value)
+                    e.value !== x && (k(""), L("")), j(e.value)
                   },
                   children: [e.icon, (0, a.jsx)("h1", {
                     children: e.name
@@ -2891,21 +2958,21 @@
                       type: "text",
                       className: n().timezoneComboboxInput,
                       placeholder: c("dashboard.premium.layout.modern_settings.second_tab.timezone.search_placeholder"),
-                      value: L,
+                      value: T,
                       onChange: e => {
-                        B(e.target.value), k(""), R(!0)
+                        L(e.target.value), k(""), F(!0)
                       },
-                      onFocus: () => R(!0),
-                      onBlur: () => setTimeout(() => R(!1), 150)
-                    }), T && M.length > 0 && (0, a.jsx)("div", {
+                      onFocus: () => F(!0),
+                      onBlur: () => setTimeout(() => F(!1), 150)
+                    }), R && D.length > 0 && (0, a.jsx)("div", {
                       className: n().timezoneDropdown,
                       children: (0, a.jsx)("ul", {
                         className: n().timezoneDropdownList,
-                        children: M.map(e => (0, a.jsx)("li", {
+                        children: D.map(e => (0, a.jsx)("li", {
                           className: `${n().timezoneDropdownItem} ${e.value===v?n().timezoneDropdownSelected:""}`,
                           onMouseDown: e => e.preventDefault(),
                           onClick: () => {
-                            k(e.value), B(e.label), R(!1)
+                            k(e.value), L(e.label), F(!1)
                           },
                           children: e.label
                         }, e.value))
@@ -2917,7 +2984,7 @@
                     onClick: () => {
                       try {
                         let e = Intl.DateTimeFormat().resolvedOptions().timeZone;
-                        k(e), B(e.replace(/_/g, " ")), R(!1)
+                        k(e), L(e.replace(/_/g, " ")), F(!1)
                       } catch {}
                     },
                     children: [u.A.timezone, " ", c("dashboard.premium.layout.modern_settings.second_tab.timezone.use_my_timezone")]
@@ -2982,12 +3049,12 @@
                       children: [(0, a.jsx)("button", {
                         type: "button",
                         className: `${n().segmentBtn} ${"24h"===S?n().segmentActive:""}`,
-                        onClick: () => F("24h"),
+                        onClick: () => B("24h"),
                         children: c("dashboard.premium.layout.modern_settings.second_tab.timezone.time_format_24h")
                       }), (0, a.jsx)("button", {
                         type: "button",
                         className: `${n().segmentBtn} ${"12h"===S?n().segmentActive:""}`,
-                        onClick: () => F("12h"),
+                        onClick: () => B("12h"),
                         children: c("dashboard.premium.layout.modern_settings.second_tab.timezone.time_format_12h")
                       })]
                     })]
@@ -2995,8 +3062,8 @@
                 })]
               }) : "discord_presence" !== x ? (0, a.jsx)(m.A, {
                 featureName: r,
-                placeholder: E?.placeholder,
-                icon: E?.icon,
+                placeholder: $?.placeholder,
+                icon: $?.icon,
                 value: v,
                 onChangeFunction: e => k(e.target.value)
               }) : null, (0, a.jsx)("span", {
@@ -3006,10 +3073,10 @@
                     type: "discord_presence"
                   } : {
                     type: "second_tab",
-                    second_tab_config: eE({
+                    second_tab_config: e$({
                       second_tab_enabled: !0,
                       second_tab: {
-                        [x]: "timezone" === x ? v || L.replace(/ /g, "_") : v
+                        [x]: "timezone" === x ? v || T.replace(/ /g, "_") : v
                       },
                       clock_face_style: N,
                       clock_hidden: w,
@@ -3029,7 +3096,7 @@
         })
       }
 
-      function eB({
+      function eL({
         module: e,
         settings: t,
         updateSettings: o,
@@ -3037,9 +3104,9 @@
         saveButtonText: i,
         isMonochromeIcons: l
       }) {
-        let d = (0, g.kj)(),
+        let d = (0, _.kj)(),
           [c, h] = (0, s.useState)(null),
-          [b, _] = (0, s.useState)(""),
+          [b, g] = (0, s.useState)(""),
           y = (0, s.useRef)(null),
           f = function(e) {
             let t = Array.isArray(e) ? e.slice(0, 2) : [];
@@ -3049,28 +3116,28 @@
             return t.map(e => ({
               type: e?.type === "discord_presence" ? "discord_presence" : e?.type === "second_tab" ? "second_tab" : "empty",
               ...e?.type === "second_tab" ? {
-                second_tab_config: eE(e.second_tab_config)
+                second_tab_config: e$(e.second_tab_config)
               } : {}
             }))
           }(t.cards),
-          x = eK(t.tags),
+          x = eq(t.tags),
           j = t => {
-            let a = eJ(t ?? b);
+            let a = eK(t ?? b);
             if (a) {
               if (x.length >= 24) return void p.oR.error(d("dashboard.premium.layout.portfolio_settings.skills.max_tags_error"));
               if (x.some(e => e.toLowerCase() === a.toLowerCase())) return void p.oR.error(d("dashboard.premium.layout.portfolio_settings.skills.duplicate_tag_error"));
               o(e.id, {
                 tags: [...x, a]
-              }), _("")
+              }), g("")
             }
           };
         return (0, a.jsxs)("div", {
           className: n().portfolioFieldStack,
-          children: [null !== c && (0, a.jsx)(eL, {
+          children: [null !== c && (0, a.jsx)(eT, {
             opened: null !== c,
             onClose: () => h(null),
             card: f[c],
-            cardLabel: eh(d, c),
+            cardLabel: eb(d, c),
             hasOtherDiscordPresence: f.some((e, t) => t !== c && "discord_presence" === e.type),
             onCardUpdate: t => {
               let a;
@@ -3099,8 +3166,8 @@
               children: d("dashboard.premium.layout.portfolio_settings.about.bio_label")
             }), (0, a.jsxs)("div", {
               className: n().portfolioEditorBox,
-              children: [(0, a.jsx)(ek, {
-                insert: ev(y, () => t.secondary_description || "", t => o(e.id, {
+              children: [(0, a.jsx)(eN, {
+                insert: ek(y, () => t.secondary_description || "", t => o(e.id, {
                   secondary_description: t
                 }))
               }), (0, a.jsx)("textarea", {
@@ -3122,7 +3189,7 @@
               className: n().portfolioTagList,
               children: x.map(t => (0, a.jsxs)("div", {
                 className: n().portfolioProjectTag,
-                children: [(0, a.jsx)(eG, {
+                children: [(0, a.jsx)(eJ, {
                   skill: t,
                   isMonochrome: l
                 }), (0, a.jsx)("span", {
@@ -3138,9 +3205,9 @@
               }, t))
             }), (0, a.jsxs)("div", {
               className: n().portfolioTagInputRow,
-              children: [(0, a.jsx)(eV, {
+              children: [(0, a.jsx)(eG, {
                 value: b,
-                onChange: _,
+                onChange: g,
                 onCommit: e => j(e),
                 placeholder: d("dashboard.premium.layout.portfolio_settings.about.skill_placeholder"),
                 disabled: x.length >= 24,
@@ -3148,13 +3215,13 @@
               }), (0, a.jsx)("button", {
                 type: "button",
                 className: n().portfolioTagAddButton,
-                disabled: x.length >= 24 || !eJ(b),
+                disabled: x.length >= 24 || !eK(b),
                 onClick: () => j(),
                 children: u.A.addTag
               })]
             })]
           }), f.map((e, t) => {
-            let o = eD(e),
+            let o = eM(e),
               s = {
                 discord_presence: u.A.discord,
                 youtube: u.A.youtube,
@@ -3172,7 +3239,7 @@
                 className: n().portfolioCardTriggerInfo,
                 children: [(0, a.jsx)("span", {
                   className: n().portfolioCardTriggerLabel,
-                  children: eh(d, t)
+                  children: eb(d, t)
                 }), (0, a.jsxs)("span", {
                   className: `${n().portfolioCardTriggerCurrent} ${"empty"===o?n().portfolioCardTriggerDisabled:""}`,
                   children: ["empty" !== o && (0, a.jsx)("span", {
@@ -3200,7 +3267,7 @@
         })
       }
 
-      function eT({
+      function eR({
         module: e,
         settings: t,
         updateSettings: o,
@@ -3208,16 +3275,16 @@
         saveButtonText: i,
         isMonochromeIcons: l
       }) {
-        let d = (0, g.kj)(),
+        let d = (0, _.kj)(),
           [c, h] = (0, s.useState)(""),
-          b = eK(t.skills),
-          _ = (0, H.FR)((0, H.MS)(H.AN, {
+          b = eq(t.skills),
+          g = (0, U.FR)((0, U.MS)(U.AN, {
             activationConstraint: {
               distance: 6
             }
           })),
           y = t => {
-            let a = eJ(t ?? c);
+            let a = eK(t ?? c);
             if (a) {
               if (b.length >= 24) return void p.oR.error(d("dashboard.premium.layout.portfolio_settings.skills.max_skills_error"));
               if (b.some(e => e.toLowerCase() === a.toLowerCase())) return void p.oR.error(d("dashboard.premium.layout.portfolio_settings.skills.duplicate_skill_error"));
@@ -3250,9 +3317,9 @@
                 className: n().portfolioFieldCount,
                 children: [b.length, "/24"]
               })]
-            }), b.length > 0 && (0, a.jsx)(H.Mp, {
-              sensors: _,
-              collisionDetection: H.fp,
+            }), b.length > 0 && (0, a.jsx)(U.Mp, {
+              sensors: g,
+              collisionDetection: U.fp,
               onDragEnd: t => {
                 let {
                   active: a,
@@ -3262,15 +3329,15 @@
                 let r = b.findIndex(e => e === a.id),
                   i = b.findIndex(e => e === s.id);
                 r < 0 || i < 0 || o(e.id, {
-                  skills: (0, U.be)(b, r, i)
+                  skills: (0, H.be)(b, r, i)
                 })
               },
-              children: (0, a.jsx)(U.gB, {
+              children: (0, a.jsx)(H.gB, {
                 items: b,
-                strategy: U.m$,
+                strategy: H.m$,
                 children: (0, a.jsx)("div", {
                   className: n().portfolioTagList,
-                  children: b.map(t => (0, a.jsx)(eR, {
+                  children: b.map(t => (0, a.jsx)(eF, {
                     tag: t,
                     onRemove: () => o(e.id, {
                       skills: b.filter(e => e !== t)
@@ -3281,7 +3348,7 @@
               })
             }), (0, a.jsxs)("div", {
               className: n().portfolioTagInputRow,
-              children: [(0, a.jsx)(eV, {
+              children: [(0, a.jsx)(eG, {
                 value: c,
                 onChange: h,
                 onCommit: e => y(e),
@@ -3291,7 +3358,7 @@
               }), (0, a.jsx)("button", {
                 type: "button",
                 className: n().portfolioTagAddButton,
-                disabled: b.length >= 24 || !eJ(c),
+                disabled: b.length >= 24 || !eK(c),
                 onClick: () => y(),
                 children: u.A.addTag
               })]
@@ -3300,7 +3367,7 @@
         })
       }
 
-      function eR({
+      function eF({
         tag: e,
         onRemove: t,
         isMonochrome: o
@@ -3311,7 +3378,7 @@
           transform: i,
           transition: l,
           isDragging: d
-        } = (0, U.gl)({
+        } = (0, H.gl)({
           id: e
         }), c = {
           transform: W.Ks.Transform.toString(i),
@@ -3326,7 +3393,7 @@
             className: n().portfolioProjectTagHandle,
             ...s,
             children: u.A.dragHandle
-          }), (0, a.jsx)(eG, {
+          }), (0, a.jsx)(eJ, {
             skill: e,
             isMonochrome: o
           }), (0, a.jsx)("span", {
@@ -3340,14 +3407,14 @@
         })
       }
 
-      function eD(e) {
+      function eM(e) {
         if ("empty" === e.type) return "empty";
         if ("discord_presence" === e.type) return "discord_presence";
         let t = e.second_tab_config?.second_tab;
         return (t && "object" == typeof t ? Object.keys(t)[0] : null) || "youtube"
       }
 
-      function eM(e) {
+      function eD(e) {
         if ("second_tab" !== e.type) return "";
         let t = e.second_tab_config?.second_tab;
         if (!t || "object" != typeof t) return "";
@@ -3355,7 +3422,7 @@
         return o && t[o] || ""
       }
 
-      function eE(e) {
+      function e$(e) {
         let t = e?.second_tab && "object" == typeof e.second_tab ? e.second_tab : {},
           o = Object.keys(t)[0];
         return {
@@ -3369,7 +3436,7 @@
         }
       }
 
-      function e$({
+      function eO({
         module: e,
         settings: t,
         updateSettings: o,
@@ -3378,18 +3445,18 @@
         isMonochromeIcons: l
       }) {
         var d;
-        let c = (0, g.kj)(),
+        let c = (0, _.kj)(),
           p = (Array.isArray(d = t.projects) ? d : []).slice(0, 4).map((e, t) => ({
             id: e.id || `project-${t}`,
             name: e.name || "",
             description: e.description || "",
             image: e.image || "",
             link: e.link || "",
-            tags: eq(e.tags)
+            tags: eV(e.tags)
           })),
           [h, b] = (0, s.useState)(null),
-          [_, y] = (0, s.useState)(null),
-          f = (0, H.FR)((0, H.MS)(H.AN, {
+          [g, y] = (0, s.useState)(null),
+          f = (0, U.FR)((0, U.MS)(U.AN, {
             activationConstraint: {
               distance: 8
             }
@@ -3399,12 +3466,12 @@
               projects: t
             })
           },
-          j = p.find(e => e.id === _) ?? null,
-          v = p.findIndex(e => e.id === _);
+          j = p.find(e => e.id === g) ?? null,
+          v = p.findIndex(e => e.id === g);
         return (0, a.jsxs)("div", {
           className: n().portfolioFieldStack,
-          children: [j && (0, a.jsx)(eI, {
-            opened: !!_,
+          children: [j && (0, a.jsx)(eE, {
+            opened: !!g,
             onClose: () => y(null),
             moduleId: e.id,
             project: j,
@@ -3428,7 +3495,7 @@
             onClick: () => {
               if (p.length >= 4) return;
               let e = {
-                id: ec(),
+                id: eu(),
                 name: "",
                 description: "",
                 image: "",
@@ -3441,9 +3508,9 @@
               className: n().portfolioInlineCount,
               children: [p.length, "/4"]
             })]
-          }), (0, a.jsxs)(H.Mp, {
+          }), (0, a.jsxs)(U.Mp, {
             sensors: f,
-            collisionDetection: H.fp,
+            collisionDetection: U.fp,
             onDragStart: e => {
               let t = p.find(t => t.id === e.active.id);
               t && b(t)
@@ -3457,21 +3524,21 @@
               if (!o || t.id === o.id) return;
               let a = p.findIndex(e => e.id === t.id),
                 s = p.findIndex(e => e.id === o.id);
-              a < 0 || s < 0 || x((0, U.be)(p, a, s))
+              a < 0 || s < 0 || x((0, H.be)(p, a, s))
             },
-            children: [(0, a.jsx)(U.gB, {
+            children: [(0, a.jsx)(H.gB, {
               items: p.map(e => e.id),
-              strategy: U._G,
+              strategy: H._G,
               children: (0, a.jsx)("div", {
                 className: n().portfolioProjectList,
-                children: p.map((e, t) => (0, a.jsx)(eO, {
+                children: p.map((e, t) => (0, a.jsx)(eI, {
                   project: e,
                   index: t,
                   onEdit: () => y(e.id),
                   onDelete: () => x(p.filter((e, o) => o !== t))
                 }, e.id))
               })
-            }), (0, a.jsx)(H.Hd, {
+            }), (0, a.jsx)(U.Hd, {
               children: h && (0, a.jsx)(ez, {
                 project: h,
                 index: p.findIndex(e => e.id === h.id),
@@ -3487,7 +3554,7 @@
         index: t,
         isOverlay: o = !1
       }) {
-        let s = (0, g.kj)();
+        let s = (0, _.kj)();
         return (0, a.jsxs)("div", {
           className: `${n().portfolioProjectEditor} ${o?n().portfolioModuleOverlay:""}`,
           children: [(0, a.jsx)("div", {
@@ -3514,20 +3581,20 @@
         })
       }
 
-      function eO({
+      function eI({
         project: e,
         index: t,
         onEdit: o,
         onDelete: s
       }) {
-        let r = (0, g.kj)(),
+        let r = (0, _.kj)(),
           {
             listeners: i,
             setNodeRef: l,
             transform: d,
             transition: c,
             isDragging: m
-          } = (0, U.gl)({
+          } = (0, H.gl)({
             id: e.id,
             animateLayoutChanges: () => !1
           }),
@@ -3598,7 +3665,7 @@
         })
       }
 
-      function eI({
+      function eE({
         opened: e,
         onClose: t,
         moduleId: o,
@@ -3610,36 +3677,36 @@
         onSave: h,
         saveButtonText: b
       }) {
-        let y = (0, g.kj)(),
+        let y = (0, _.kj)(),
           [f, x] = (0, s.useState)(!1),
           [j, v] = (0, s.useState)(""),
           [k, N] = (0, s.useState)(null),
           [C, w] = (0, s.useState)(""),
           [A, S] = (0, s.useState)(!1),
-          F = (0, H.FR)((0, H.MS)(H.AN, {
+          B = (0, U.FR)((0, U.MS)(U.AN, {
             activationConstraint: {
               distance: 6
             }
           })),
-          L = eq(r.tags),
-          B = C || (A ? "" : r.image || "");
+          T = eV(r.tags),
+          L = C || (A ? "" : r.image || "");
         (0, s.useEffect)(() => () => {
           C && URL.revokeObjectURL(C)
         }, [C]);
-        let R = e => {
-            eU(o, d, i, l, {
-              tags: eq(e)
+        let F = e => {
+            eH(o, d, i, l, {
+              tags: eV(e)
             })
           },
-          D = e => {
+          M = e => {
             let t = eW(e ?? j);
             if (t) {
-              if (L.length >= 4) return void p.oR.error(y("dashboard.premium.layout.portfolio_settings.projects.max_tags_error"));
-              if (L.some(e => e.toLowerCase() === t.toLowerCase())) return void p.oR.error(y("dashboard.premium.layout.portfolio_settings.projects.duplicate_tag_error"));
-              R([...L, t]), v("")
+              if (T.length >= 4) return void p.oR.error(y("dashboard.premium.layout.portfolio_settings.projects.max_tags_error"));
+              if (T.some(e => e.toLowerCase() === t.toLowerCase())) return void p.oR.error(y("dashboard.premium.layout.portfolio_settings.projects.duplicate_tag_error"));
+              F([...T, t]), v("")
             }
           },
-          M = async () => {
+          D = async () => {
             if (f) return;
             let e = A ? "" : r.image || "",
               t = null;
@@ -3672,15 +3739,15 @@
             }), C && URL.revokeObjectURL(C), w(""), N(null), S(!1), h?.({
               portfolio_modules: a
             })
-          }, E = r.name || y("dashboard.premium.layout.portfolio_settings.projects.fallback_title", {
+          }, $ = r.name || y("dashboard.premium.layout.portfolio_settings.projects.fallback_title", {
             number: l + 1
           });
-        return (0, a.jsx)(_.A, {
+        return (0, a.jsx)(g.A, {
           opened: e,
           onClose: () => {
             C && URL.revokeObjectURL(C), w(""), N(null), S(!1), t()
           },
-          title: E,
+          title: $,
           centered: !0,
           size: "540px",
           children: (0, a.jsxs)("div", {
@@ -3689,7 +3756,7 @@
               featureName: y("dashboard.premium.layout.portfolio_settings.projects.name_label"),
               placeholder: y("dashboard.premium.layout.portfolio_settings.projects.name_placeholder"),
               value: r.name || "",
-              onChangeFunction: e => eU(o, d, i, l, {
+              onChangeFunction: e => eH(o, d, i, l, {
                 name: e.target.value
               }),
               icon: u.A.layout
@@ -3697,17 +3764,17 @@
               featureName: y("dashboard.premium.layout.portfolio_settings.fields.description"),
               placeholder: y("dashboard.premium.layout.portfolio_settings.projects.description_placeholder"),
               value: r.description || "",
-              onChangeFunction: e => eU(o, d, i, l, {
+              onChangeFunction: e => eH(o, d, i, l, {
                 description: e.target.value
               })
-            }), (0, a.jsx)(eH, {
-              image: B,
+            }), (0, a.jsx)(eU, {
+              image: L,
               previewFileName: k?.name || "",
               loading: f,
               onFileChange: e => {
                 let t = e.target.files?.[0];
                 if (t) {
-                  if (!(0, T.vH)(t, "cover")) {
+                  if (!(0, R.vH)(t, "cover")) {
                     e.target.value = "";
                     return
                   }
@@ -3721,7 +3788,7 @@
               featureName: y("dashboard.premium.layout.portfolio_settings.projects.link_label"),
               value: r.link || "",
               placeholder: y("dashboard.premium.layout.portfolio_settings.projects.link_placeholder"),
-              onChangeFunction: e => eU(o, d, i, l, {
+              onChangeFunction: e => eH(o, d, i, l, {
                 link: e.target.value
               }),
               icon: u.A.url
@@ -3729,52 +3796,52 @@
               className: n().portfolioTagEditor,
               children: [(0, a.jsxs)("div", {
                 className: n().portfolioTagInputRow,
-                children: [(0, a.jsx)(eV, {
+                children: [(0, a.jsx)(eG, {
                   value: j,
                   placeholder: y("dashboard.premium.layout.portfolio_settings.projects.tag_placeholder"),
                   onChange: v,
-                  onCommit: e => D(e),
-                  disabled: L.length >= 4,
+                  onCommit: e => M(e),
+                  disabled: T.length >= 4,
                   isMonochrome: c,
                   showFeatureName: !0
                 }), (0, a.jsx)("button", {
                   type: "button",
                   className: n().portfolioTagAddButton,
-                  disabled: L.length >= 4 || !eW(j),
-                  onClick: () => D(),
+                  disabled: T.length >= 4 || !eW(j),
+                  onClick: () => M(),
                   children: u.A.addTag
                 })]
-              }), L.length > 0 && (0, a.jsx)(H.Mp, {
-                sensors: F,
-                collisionDetection: H.fp,
+              }), T.length > 0 && (0, a.jsx)(U.Mp, {
+                sensors: B,
+                collisionDetection: U.fp,
                 onDragEnd: e => {
                   let {
                     active: t,
                     over: o
                   } = e;
                   if (!o || t.id === o.id) return;
-                  let a = L.findIndex(e => e === t.id),
-                    s = L.findIndex(e => e === o.id);
-                  a < 0 || s < 0 || R((0, U.be)(L, a, s))
+                  let a = T.findIndex(e => e === t.id),
+                    s = T.findIndex(e => e === o.id);
+                  a < 0 || s < 0 || F((0, H.be)(T, a, s))
                 },
-                children: (0, a.jsx)(U.gB, {
-                  items: L,
-                  strategy: U.m$,
+                children: (0, a.jsx)(H.gB, {
+                  items: T,
+                  strategy: H.m$,
                   children: (0, a.jsx)("div", {
                     className: n().portfolioTagList,
                     style: {
                       marginTop: 0
                     },
-                    children: L.map(e => (0, a.jsx)(eP, {
+                    children: T.map(e => (0, a.jsx)(eP, {
                       tag: e,
-                      onRemove: () => R(L.filter(t => t !== e)),
+                      onRemove: () => F(T.filter(t => t !== e)),
                       isMonochrome: c
                     }, e))
                   })
                 })
               })]
-            }), (0, a.jsx)(ex, {
-              onSave: M,
+            }), (0, a.jsx)(ej, {
+              onSave: D,
               saveButtonText: b
             })]
           })
@@ -3792,7 +3859,7 @@
           transform: i,
           transition: l,
           isDragging: d
-        } = (0, U.gl)({
+        } = (0, H.gl)({
           id: e
         }), c = {
           transform: W.Ks.Transform.toString(i),
@@ -3807,7 +3874,7 @@
             className: n().portfolioProjectTagHandle,
             ...s,
             children: u.A.dragHandle
-          }), (0, a.jsx)(eG, {
+          }), (0, a.jsx)(eJ, {
             skill: e,
             isMonochrome: o
           }), (0, a.jsx)("span", {
@@ -3821,16 +3888,16 @@
         })
       }
 
-      function eH({
+      function eU({
         image: e,
         previewFileName: t,
         loading: o,
         onFileChange: s,
         onClear: r
       }) {
-        let i = (0, g.kj)();
+        let i = (0, _.kj)();
         return (0, a.jsxs)("div", {
-          className: F().uploadCardWrapper,
+          className: B().uploadCardWrapper,
           style: {
             padding: 0,
             width: "100%"
@@ -3839,10 +3906,10 @@
             className: n().portfolioProjectUploadCardTitle,
             children: i("dashboard.premium.layout.portfolio_settings.projects.cover_image")
           }), (0, a.jsx)("div", {
-            className: `${F().uploadCard} ${n().portfolioProjectUploadCard}`,
+            className: `${B().uploadCard} ${n().portfolioProjectUploadCard}`,
             children: e ? (0, a.jsxs)(a.Fragment, {
               children: [(0, a.jsxs)("div", {
-                className: F().fileBadge,
+                className: B().fileBadge,
                 children: [(0, a.jsx)("span", {
                   children: ((e, t = "") => {
                     let o = t || e || "",
@@ -3862,24 +3929,24 @@
               }), (0, a.jsx)("img", {
                 src: e,
                 alt: i("dashboard.premium.layout.portfolio_settings.projects.image_alt"),
-                className: F().uploadCardImage
+                className: B().uploadCardImage
               })]
             }) : (0, a.jsxs)(a.Fragment, {
               children: [o ? (0, a.jsxs)("div", {
-                className: F().uploaderMessage,
+                className: B().uploaderMessage,
                 children: [(0, a.jsx)("span", {
                   children: u.A.loading
                 }), (0, a.jsx)("h1", {
                   children: i("dashboard.premium.layout.portfolio_settings.projects.uploading")
                 })]
               }) : (0, a.jsxs)("div", {
-                className: F().uploadCardText,
+                className: B().uploadCardText,
                 children: [u.A.image, (0, a.jsx)("h1", {
                   children: i("dashboard.premium.layout.portfolio_settings.projects.upload_prompt")
                 })]
               }), (0, a.jsx)("input", {
                 type: "file",
-                accept: R.vJ.cover.join(", "),
+                accept: F.vJ.cover.join(", "),
                 onChange: s,
                 disabled: o
               })]
@@ -3888,7 +3955,7 @@
         })
       }
 
-      function eU(e, t, o, a, s) {
+      function eH(e, t, o, a, s) {
         let r = [...o];
         return r[a] = {
           ...r[a],
@@ -3902,19 +3969,19 @@
         return "string" == typeof e ? e.replace(/,/g, " ").replace(/\s+/g, " ").trim().slice(0, 28) : ""
       }
 
-      function eq(e) {
+      function eV(e) {
         return (Array.isArray(e) ? e : "string" == typeof e ? e.split(",") : []).reduce((e, t) => {
           let o = eW(t);
           return o && !e.some(e => e.toLowerCase() === o.toLowerCase()) && e.length < 4 && e.push(o), e
         }, [])
       }
 
-      function eG({
+      function eJ({
         skill: e,
         isMonochrome: t
       }) {
         let o = (0, ee.h)(e),
-          s = "string" == typeof e ? (0, Y.RU)(e) : e,
+          s = "string" == typeof e ? (0, X.RU)(e) : e,
           r = t ? "currentColor" : o ? `#${o.hex}` : s?.color ?? "currentColor";
         return o ? (0, a.jsx)("svg", {
           className: n().skillAutocompleteIcon,
@@ -3934,7 +4001,7 @@
         })
       }
 
-      function eV({
+      function eG({
         value: e,
         onChange: t,
         onCommit: o,
@@ -3943,14 +4010,14 @@
         isMonochrome: l,
         showFeatureName: d
       }) {
-        let c = (0, g.kj)(),
+        let c = (0, _.kj)(),
           [p, h] = (0, s.useState)(!1),
-          [b, _] = (0, s.useState)(0),
+          [b, g] = (0, s.useState)(0),
           [y, f] = (0, s.useState)(null),
           x = (0, s.useRef)(null),
-          j = (0, s.useMemo)(() => (0, Y.Nl)(e, 7), [e]);
+          j = (0, s.useMemo)(() => (0, X.Nl)(e, 7), [e]);
         (0, s.useEffect)(() => {
-          _(0)
+          g(0)
         }, [e]), (0, s.useEffect)(() => {
           let e = e => {
             x.current && !x.current.contains(e.target) && h(!1)
@@ -3997,13 +4064,13 @@
                 ("Enter" === t.key || "," === t.key) && e.trim() && (t.preventDefault(), v(e.trim()));
                 return
               }
-              "ArrowDown" === t.key ? (t.preventDefault(), _(e => Math.min(e + 1, j.length - 1))) : "ArrowUp" === t.key ? (t.preventDefault(), _(e => Math.max(e - 1, 0))) : "Enter" === t.key || "," === t.key ? (t.preventDefault(), v(j[b].name)) : "Escape" === t.key && h(!1)
+              "ArrowDown" === t.key ? (t.preventDefault(), g(e => Math.min(e + 1, j.length - 1))) : "ArrowUp" === t.key ? (t.preventDefault(), g(e => Math.max(e - 1, 0))) : "Enter" === t.key || "," === t.key ? (t.preventDefault(), v(j[b].name)) : "Escape" === t.key && h(!1)
             },
             onFocus: () => {
               e.trim() && h(!0)
             },
             icon: u.A.addTag
-          }), p && j.length > 0 && y && "undefined" != typeof document && (0, X.createPortal)((0, a.jsx)("div", {
+          }), p && j.length > 0 && y && "undefined" != typeof document && (0, Q.createPortal)((0, a.jsx)("div", {
             className: n().skillAutocompleteDropdown,
             style: {
               position: "fixed",
@@ -4019,8 +4086,8 @@
               onMouseDown: t => {
                 t.preventDefault(), v(e.name)
               },
-              onMouseEnter: () => _(t),
-              children: [(0, a.jsx)(eG, {
+              onMouseEnter: () => g(t),
+              children: [(0, a.jsx)(eJ, {
                 skill: e,
                 isMonochrome: l
               }), (0, a.jsx)("span", {
@@ -4031,20 +4098,20 @@
         })
       }
 
-      function eJ(e) {
+      function eK(e) {
         return "string" == typeof e ? e.replace(/,/g, " ").replace(/\s+/g, " ").trim().slice(0, 32) : ""
       }
 
-      function eK(e) {
+      function eq(e) {
         return (Array.isArray(e) ? e : []).reduce((e, t) => {
-          let o = eJ(t);
+          let o = eK(t);
           return o && !e.some(e => e.toLowerCase() === o.toLowerCase()) && e.length < 24 && e.push(o), e
         }, [])
       }
-      var eQ = o(98241),
-        eZ = o.n(eQ);
-      let eX = e => Array.isArray(e) ? e.map(eX) : e && "object" == typeof e ? Object.keys(e).sort().reduce((t, o) => (t[o] = eX(e[o]), t), {}) : e,
-        eY = e => JSON.stringify(eX(e)),
+      var eY = o(98241),
+        eZ = o.n(eY);
+      let eQ = e => Array.isArray(e) ? e.map(eQ) : e && "object" == typeof e ? Object.keys(e).sort().reduce((t, o) => (t[o] = eQ(e[o]), t), {}) : e,
+        eX = e => JSON.stringify(eQ(e)),
         e0 = {
           hero: {
             hero_style: "classic",
@@ -4077,7 +4144,7 @@
                   } : {},
                   a = e0[e] || {};
                 if (Object.keys(a).forEach(e => {
-                    void 0 !== o[e] && eY(o[e]) === eY(a[e]) && delete o[e]
+                    void 0 !== o[e] && eX(o[e]) === eX(a[e]) && delete o[e]
                   }), "audio" === e) {
                   let e = Object.entries(o.lyrics_track_map && "object" == typeof o.lyrics_track_map && !Array.isArray(o.lyrics_track_map) ? o.lyrics_track_map : {}).reduce((e, [t, o]) => (o && "object" == typeof o && ("string" == typeof o.synced_lyrics ? o.synced_lyrics.trim() : "") && (e[t] = o), e), {});
                   Object.keys(e).length > 0 ? o.lyrics_track_map = e : delete o.lyrics_track_map, !0 !== o.show_lyrics && delete o.show_lyrics
@@ -4092,7 +4159,7 @@
         e2 = ({
           data: e
         }) => {
-          let t = (0, g.kj)(),
+          let t = (0, _.kj)(),
             o = e.config,
             l = o.premium,
             d = l.layout,
@@ -4116,13 +4183,13 @@
               portfolio_modules: l.portfolio_modules ?? []
             }),
             [h, b] = (0, s.useState)(l.banner),
-            [_, y] = (0, s.useState)(l.buttons),
+            [g, y] = (0, s.useState)(l.buttons),
             [f, x] = (0, s.useState)(u),
             [j, v] = (0, s.useState)(!1),
             k = t("common.unsaved_changes.save_button"),
             [N, C] = (0, s.useState)(k);
           (0, s.useEffect)(() => {
-            v(eY(e1(f)) !== eY(e1(u)))
+            v(eX(e1(f)) !== eX(e1(u)))
           }, [f, u]);
           let w = e => t => {
               x(o => ({
@@ -4131,7 +4198,7 @@
               }))
             },
             S = (e = {}) => {
-              Q(Object.keys(e).length > 0 ? {
+              Y(Object.keys(e).length > 0 ? {
                 ...f,
                 ...e
               } : f, C, v, m, t, x)
@@ -4143,7 +4210,7 @@
               theme: "dark",
               className: eZ().toasterStyles,
               icons: {
-                success: K.A.successToast
+                success: q.A.successToast
               },
               visibleToasts: 2
             }), (0, a.jsx)(r.N, {
@@ -4194,7 +4261,7 @@
               })
             }), (0, a.jsx)("div", {
               className: n().featureGap,
-              children: "modern" === d ? (0, a.jsx)(J.A, {
+              children: "modern" === d ? (0, a.jsx)(K.A, {
                 featureName: t("dashboard.premium.layout.modern"),
                 children: (0, a.jsx)(A, {
                   isBorderEnabled: f.border_enabled,
@@ -4220,9 +4287,9 @@
                   clockTimeFormat: l.clock_time_format ?? "24h",
                   userJoinDate: c
                 })
-              }) : "default" === d ? (0, a.jsx)(J.A, {
+              }) : "default" === d ? (0, a.jsx)(K.A, {
                 featureName: t("dashboard.premium.layout.default"),
-                children: (0, a.jsx)(D, {
+                children: (0, a.jsx)(M, {
                   isBorderEnabled: f.border_enabled,
                   setIsBorderEnabled: w("border_enabled"),
                   borderColor: f.border_color,
@@ -4240,10 +4307,10 @@
                   linksPosition: f.links_position,
                   setLinksPosition: w("links_position")
                 })
-              }) : "simplistic" === d ? (0, a.jsx)(J.A, {
+              }) : "simplistic" === d ? (0, a.jsx)(K.A, {
                 featureName: t("dashboard.premium.layout.simplistic"),
                 transparent: !0,
-                children: (0, a.jsx)(V, {
+                children: (0, a.jsx)(G, {
                   buttonBorderRadius: f.button_border_radius,
                   setButtonBorderRadius: w("button_border_radius"),
                   buttonShadow: f.button_shadow,
@@ -4252,10 +4319,10 @@
                   setTextAlign: w("text_align"),
                   showUrl: f.show_url,
                   setShowUrl: w("show_url"),
-                  buttons: _,
+                  buttons: g,
                   setButtons: y
                 })
-              }) : "sleek" === d ? (0, a.jsx)(J.A, {
+              }) : "sleek" === d ? (0, a.jsx)(K.A, {
                 featureName: t("dashboard.premium.layout.sleek"),
                 children: (0, a.jsx)(Z, {
                   isBorderEnabled: f.border_enabled,
@@ -4275,11 +4342,21 @@
                   linksPosition: f.links_position,
                   setLinksPosition: w("links_position")
                 })
-              }) : "portfolio" === d && (0, a.jsx)(J.A, {
+              }) : "portfolio" === d && (0, a.jsx)(K.A, {
                 featureName: t("dashboard.premium.layout.portfolio"),
-                children: (0, a.jsx)(e_, {
+                children: (0, a.jsx)(ey, {
                   modules: f.portfolio_modules,
                   setModules: w("portfolio_modules"),
+                  isBorderEnabled: f.border_enabled,
+                  setIsBorderEnabled: w("border_enabled"),
+                  borderColor: f.border_color,
+                  setBorderColor: w("border_color"),
+                  borderWidth: f.border_width,
+                  setBorderWidth: w("border_width"),
+                  borderStyle: f.border_style,
+                  setBorderStyle: w("border_style"),
+                  borderOpacity: f.border_opacity,
+                  setBorderOpacity: w("border_opacity"),
                   portfolioBorderRadius: f.portfolio_border_radius,
                   setPortfolioBorderRadius: w("portfolio_border_radius"),
                   onSave: S,
@@ -4291,587 +4368,6 @@
             })]
           })
         }
-    },
-    17440: (e, t, o) => {
-      o.d(t, {
-        h: () => l
-      });
-      var a = o(71558),
-        s = o(77599);
-      let r = e => ({
-          hex: e.hex,
-          path: e.path
-        }),
-        i = {
-          python: r(a.FRF),
-          javascript: r(a.wAf),
-          typescript: r(a.k8A),
-          rust: r(a.XSi),
-          go: r(a.LGf),
-          java: r(a.cbE),
-          kotlin: r(a.OOE),
-          swift: r(a.CiU),
-          csharp: r(a.$ae),
-          cpp: r(a.ocb),
-          c: r(a.yx7),
-          ruby: r(a.hsX),
-          php: r(a.zyD),
-          elixir: r(a.kK$),
-          haskell: r(a.hR5),
-          scala: r(a.NMs),
-          dart: r(a.SaL),
-          lua: r(a.Bge),
-          r: r(a.Fcj),
-          julia: r(a.oYk),
-          clojure: r(a.N9z),
-          zig: r(a.PLb),
-          react: r(a.usQ),
-          nextjs: r(a.iaw),
-          vue: r(a.psU),
-          nuxt: r(a.yA),
-          svelte: r(a.eLf),
-          angular: r(a.HXh),
-          solid: r(a.S29),
-          remix: r(a.YkN),
-          astro: r(a.uIm),
-          qwik: r(a.H5N),
-          htmx: r(a.kf7),
-          nodejs: r(a.jCk),
-          express: r(a.but),
-          fastapi: r(a.HVU),
-          django: r(a.EO7),
-          flask: r(a.ovN),
-          rails: r(a.Xrq),
-          laravel: r(a.cqm),
-          nestjs: r(a.Alo),
-          hono: r(a.F7v),
-          bun: r(a.qVm),
-          deno: r(a.xiE),
-          spring: r(a.ATT),
-          actix: r(a.IOj),
-          gin: r(a.HPo),
-          postgresql: r(a.$Gx),
-          mysql: r(a.FUg),
-          mongodb: r(a.jHD),
-          redis: r(a.Oic),
-          sqlite: r(a.dm5),
-          supabase: r(a.lvA),
-          firebase: r(a.Ep6),
-          planetscale: r(a.vKd),
-          turso: r(a.IKK),
-          cassandra: r(a.VLf),
-          clickhouse: r(a.FO9),
-          docker: r(a.bJP),
-          kubernetes: r(a.Ze),
-          gcp: r(a.vGL),
-          vercel: r(a.gc9),
-          cloudflare: r(a.abC),
-          terraform: r(a.Bn8),
-          "github-actions": r(a.DVO),
-          linux: r(a.Z0w),
-          tailwind: r(a.AN7),
-          css: r(a.QBF),
-          sass: r(a.$EC),
-          shadcn: r(a.__M),
-          "framer-motion": r(a.W4B),
-          three: r(a.HVl),
-          pytorch: r(a.glI),
-          tensorflow: r(a.Md3),
-          langchain: r(a.G9w),
-          pandas: r(a.OUC),
-          numpy: r(a.GUw),
-          graphql: r(a.WhL),
-          trpc: r(a._RX),
-          prisma: r(a.fJ3),
-          drizzle: r(a.nLA),
-          git: r(a.HkF),
-          figma: r(a.ZBL),
-          blender: r(a.JL2),
-          unity: r(a.CX9),
-          unreal: r(a.ABy),
-          flutter: r(a.PL5),
-          "react-native": r(a.usQ),
-          tauri: r(a.KGs),
-          electron: r(a.zwX),
-          wasm: r(a.bnX),
-          kafka: r(a.l11),
-          rabbitmq: r(a.Ztf),
-          nginx: r(a.h$_),
-          neovim: r(a.T84)
-        };
-
-      function l(e) {
-        let t = "string" == typeof e ? (0, s.RU)(e) : e;
-        return t ? i[t.id] : void 0
-      }
-    },
-    77599: (e, t, o) => {
-      o.d(t, {
-        Nl: () => r,
-        RU: () => s
-      });
-      let a = [{
-        id: "python",
-        name: "Python",
-        color: "#3776AB",
-        aliases: ["py", "python3"]
-      }, {
-        id: "javascript",
-        name: "JavaScript",
-        color: "#F7DF1E",
-        aliases: ["js", "es6", "es2015"]
-      }, {
-        id: "typescript",
-        name: "TypeScript",
-        color: "#3178C6",
-        aliases: ["ts"]
-      }, {
-        id: "rust",
-        name: "Rust",
-        color: "#CE422B",
-        aliases: ["rs"]
-      }, {
-        id: "go",
-        name: "Go",
-        color: "#00ADD8",
-        aliases: ["golang"]
-      }, {
-        id: "java",
-        name: "Java",
-        color: "#ED8B00"
-      }, {
-        id: "kotlin",
-        name: "Kotlin",
-        color: "#7F52FF",
-        aliases: ["kt"]
-      }, {
-        id: "swift",
-        name: "Swift",
-        color: "#FA7343"
-      }, {
-        id: "csharp",
-        name: "C#",
-        color: "#239120",
-        aliases: ["cs", "dotnet", "c#"]
-      }, {
-        id: "cpp",
-        name: "C++",
-        color: "#00599C",
-        aliases: ["c++", "cplusplus"]
-      }, {
-        id: "c",
-        name: "C",
-        color: "#A8B9CC"
-      }, {
-        id: "ruby",
-        name: "Ruby",
-        color: "#CC342D",
-        aliases: ["rb"]
-      }, {
-        id: "php",
-        name: "PHP",
-        color: "#777BB4"
-      }, {
-        id: "elixir",
-        name: "Elixir",
-        color: "#6E4A7E",
-        aliases: ["ex"]
-      }, {
-        id: "haskell",
-        name: "Haskell",
-        color: "#5D4F85",
-        aliases: ["hs"]
-      }, {
-        id: "scala",
-        name: "Scala",
-        color: "#DC322F"
-      }, {
-        id: "dart",
-        name: "Dart",
-        color: "#0175C2"
-      }, {
-        id: "lua",
-        name: "Lua",
-        color: "#2C2D72"
-      }, {
-        id: "r",
-        name: "R",
-        color: "#276DC3"
-      }, {
-        id: "julia",
-        name: "Julia",
-        color: "#9558B2"
-      }, {
-        id: "clojure",
-        name: "Clojure",
-        color: "#5881D8"
-      }, {
-        id: "zig",
-        name: "Zig",
-        color: "#F7A41D"
-      }, {
-        id: "react",
-        name: "React",
-        color: "#61DAFB",
-        aliases: ["reactjs", "react.js"]
-      }, {
-        id: "nextjs",
-        name: "Next.js",
-        color: "#FFFFFF",
-        aliases: ["next", "nextjs"]
-      }, {
-        id: "vue",
-        name: "Vue.js",
-        color: "#4FC08D",
-        aliases: ["vuejs", "vue3"]
-      }, {
-        id: "nuxt",
-        name: "Nuxt.js",
-        color: "#00C58E",
-        aliases: ["nuxtjs"]
-      }, {
-        id: "svelte",
-        name: "Svelte",
-        color: "#FF3E00"
-      }, {
-        id: "angular",
-        name: "Angular",
-        color: "#DD0031"
-      }, {
-        id: "solid",
-        name: "SolidJS",
-        color: "#2C4F7C",
-        aliases: ["solid.js", "solidjs"]
-      }, {
-        id: "remix",
-        name: "Remix",
-        color: "#FFFFFF"
-      }, {
-        id: "astro",
-        name: "Astro",
-        color: "#FF5D01"
-      }, {
-        id: "qwik",
-        name: "Qwik",
-        color: "#18B6F6"
-      }, {
-        id: "htmx",
-        name: "htmx",
-        color: "#3465A4"
-      }, {
-        id: "nodejs",
-        name: "Node.js",
-        color: "#5FA04E",
-        aliases: ["node", "nodejs"]
-      }, {
-        id: "express",
-        name: "Express",
-        color: "#FFFFFF",
-        aliases: ["expressjs"]
-      }, {
-        id: "fastapi",
-        name: "FastAPI",
-        color: "#009688"
-      }, {
-        id: "django",
-        name: "Django",
-        color: "#092E20"
-      }, {
-        id: "flask",
-        name: "Flask",
-        color: "#FFFFFF"
-      }, {
-        id: "rails",
-        name: "Rails",
-        color: "#CC0000",
-        aliases: ["ruby on rails", "ror"]
-      }, {
-        id: "laravel",
-        name: "Laravel",
-        color: "#FF2D20"
-      }, {
-        id: "nestjs",
-        name: "NestJS",
-        color: "#E0234E",
-        aliases: ["nest"]
-      }, {
-        id: "hono",
-        name: "Hono",
-        color: "#E36002"
-      }, {
-        id: "bun",
-        name: "Bun",
-        color: "#FBF0DF"
-      }, {
-        id: "deno",
-        name: "Deno",
-        color: "#FFFFFF"
-      }, {
-        id: "spring",
-        name: "Spring",
-        color: "#6DB33F",
-        aliases: ["spring boot"]
-      }, {
-        id: "actix",
-        name: "Actix",
-        color: "#CE422B"
-      }, {
-        id: "gin",
-        name: "Gin",
-        color: "#00ADD8"
-      }, {
-        id: "postgresql",
-        name: "PostgreSQL",
-        color: "#4169E1",
-        aliases: ["postgres", "pg"]
-      }, {
-        id: "mysql",
-        name: "MySQL",
-        color: "#4479A1"
-      }, {
-        id: "mongodb",
-        name: "MongoDB",
-        color: "#47A248",
-        aliases: ["mongo"]
-      }, {
-        id: "redis",
-        name: "Redis",
-        color: "#FF4438"
-      }, {
-        id: "sqlite",
-        name: "SQLite",
-        color: "#003B57"
-      }, {
-        id: "supabase",
-        name: "Supabase",
-        color: "#3ECF8E"
-      }, {
-        id: "firebase",
-        name: "Firebase",
-        color: "#FFCA28"
-      }, {
-        id: "planetscale",
-        name: "PlanetScale",
-        color: "#FFFFFF"
-      }, {
-        id: "turso",
-        name: "Turso",
-        color: "#4FF8D2"
-      }, {
-        id: "cassandra",
-        name: "Cassandra",
-        color: "#1287B1"
-      }, {
-        id: "clickhouse",
-        name: "ClickHouse",
-        color: "#FFCC02"
-      }, {
-        id: "docker",
-        name: "Docker",
-        color: "#2496ED"
-      }, {
-        id: "kubernetes",
-        name: "Kubernetes",
-        color: "#326CE5",
-        aliases: ["k8s"]
-      }, {
-        id: "aws",
-        name: "AWS",
-        color: "#FF9900",
-        aliases: ["amazon web services"]
-      }, {
-        id: "gcp",
-        name: "GCP",
-        color: "#4285F4",
-        aliases: ["google cloud"]
-      }, {
-        id: "azure",
-        name: "Azure",
-        color: "#0078D4"
-      }, {
-        id: "vercel",
-        name: "Vercel",
-        color: "#FFFFFF"
-      }, {
-        id: "cloudflare",
-        name: "Cloudflare",
-        color: "#F38020"
-      }, {
-        id: "terraform",
-        name: "Terraform",
-        color: "#844FBA"
-      }, {
-        id: "github-actions",
-        name: "GitHub Actions",
-        color: "#2088FF",
-        aliases: ["gha", "github actions"]
-      }, {
-        id: "linux",
-        name: "Linux",
-        color: "#FCC624"
-      }, {
-        id: "tailwind",
-        name: "Tailwind CSS",
-        color: "#38BDF8",
-        aliases: ["tailwindcss", "tailwind css"]
-      }, {
-        id: "css",
-        name: "CSS",
-        color: "#1572B6"
-      }, {
-        id: "sass",
-        name: "Sass",
-        color: "#CC6699",
-        aliases: ["scss"]
-      }, {
-        id: "shadcn",
-        name: "shadcn/ui",
-        color: "#FFFFFF",
-        aliases: ["shadcn", "shadcn ui"]
-      }, {
-        id: "framer-motion",
-        name: "Framer Motion",
-        color: "#0055FF",
-        aliases: ["framer"]
-      }, {
-        id: "three",
-        name: "Three.js",
-        color: "#FFFFFF",
-        aliases: ["threejs", "three.js", "webgl"]
-      }, {
-        id: "pytorch",
-        name: "PyTorch",
-        color: "#EE4C2C"
-      }, {
-        id: "tensorflow",
-        name: "TensorFlow",
-        color: "#FF6F00",
-        aliases: ["tf"]
-      }, {
-        id: "langchain",
-        name: "LangChain",
-        color: "#1C3C3C"
-      }, {
-        id: "openai",
-        name: "OpenAI",
-        color: "#FFFFFF"
-      }, {
-        id: "pandas",
-        name: "Pandas",
-        color: "#150458"
-      }, {
-        id: "numpy",
-        name: "NumPy",
-        color: "#4DABCF"
-      }, {
-        id: "graphql",
-        name: "GraphQL",
-        color: "#E10098"
-      }, {
-        id: "grpc",
-        name: "gRPC",
-        color: "#244C5A"
-      }, {
-        id: "trpc",
-        name: "tRPC",
-        color: "#2596BE"
-      }, {
-        id: "prisma",
-        name: "Prisma",
-        color: "#5A67D8"
-      }, {
-        id: "drizzle",
-        name: "Drizzle ORM",
-        color: "#C5F74F",
-        aliases: ["drizzle"]
-      }, {
-        id: "git",
-        name: "Git",
-        color: "#F05032"
-      }, {
-        id: "figma",
-        name: "Figma",
-        color: "#F24E1E"
-      }, {
-        id: "blender",
-        name: "Blender",
-        color: "#F5792A"
-      }, {
-        id: "unity",
-        name: "Unity",
-        color: "#FFFFFF"
-      }, {
-        id: "unreal",
-        name: "Unreal Engine",
-        color: "#313131",
-        aliases: ["ue5", "unreal engine"]
-      }, {
-        id: "flutter",
-        name: "Flutter",
-        color: "#02569B"
-      }, {
-        id: "react-native",
-        name: "React Native",
-        color: "#61DAFB",
-        aliases: ["rn", "react native"]
-      }, {
-        id: "tauri",
-        name: "Tauri",
-        color: "#24C8DB"
-      }, {
-        id: "electron",
-        name: "Electron",
-        color: "#47848F"
-      }, {
-        id: "wasm",
-        name: "WebAssembly",
-        color: "#654FF0",
-        aliases: ["webassembly"]
-      }, {
-        id: "kafka",
-        name: "Kafka",
-        color: "#231F20"
-      }, {
-        id: "rabbitmq",
-        name: "RabbitMQ",
-        color: "#FF6600"
-      }, {
-        id: "nginx",
-        name: "Nginx",
-        color: "#009639"
-      }, {
-        id: "neovim",
-        name: "Neovim",
-        color: "#57A143",
-        aliases: ["nvim", "vim"]
-      }];
-
-      function s(e) {
-        let t = e.trim().toLowerCase();
-        return a.find(e => e.name.toLowerCase() === t || e.id === t || e.aliases?.some(e => e.toLowerCase() === t))
-      }
-
-      function r(e, t = 8) {
-        if (!e.trim()) return [];
-        let o = e.trim().toLowerCase(),
-          s = a.map(e => e.name.toLowerCase() === o || e.id === o ? {
-            s: e,
-            score: 3
-          } : e.name.toLowerCase().startsWith(o) || e.id.startsWith(o) ? {
-            s: e,
-            score: 2
-          } : e.aliases?.some(e => e.toLowerCase().startsWith(o)) ? {
-            s: e,
-            score: 1.5
-          } : e.name.toLowerCase().includes(o) || e.aliases?.some(e => e.toLowerCase().includes(o)) ? {
-            s: e,
-            score: 1
-          } : {
-            s: e,
-            score: 0
-          }).filter(e => e.score > 0);
-        return s.sort((e, t) => t.score - e.score), s.slice(0, t).map(e => e.s)
-      }
     }
   }
 ]);
