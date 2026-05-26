@@ -514,14 +514,15 @@
     },
     94345: (e, t, a) => {
       "use strict";
+      let r;
       a.d(t, {
         KM: () => d,
         qC: () => o,
         xS: () => h
       });
-      var r = a(95155),
-        l = a(12115);
-      class c {
+      var l = a(95155),
+        c = a(12115);
+      class i {
         constructor(e = !1) {
           this.hydrateOnCreate = e, this.language = "en", this.supportedLocales = ["en"], this.dictionaries = {}, this.hydratedFromWindow = !1, e && this.hydrateFromWindow()
         }
@@ -537,24 +538,24 @@
           return this.supportedLocales
         }
         tr(e, t, a) {
-          var c, i;
+          var r, i;
           let n = this.isSupportedLocale(a) ? a : this.language,
             s = this.getTemplate(e, n);
           return t && 0 !== Object.keys(t).length ? Object.values(t).some(e => null != e && "string" != typeof e && "number" != typeof e) ? function(e, t) {
-            let a, c = [],
+            let a, r = [],
               i = /\{(\w+)\}/g,
               n = 0;
             for (; null !== (a = i.exec(e));) {
-              a.index > n && c.push(e.slice(n, a.index));
-              let r = t[a[1]];
-              null == r ? c.push("") : c.push(r), n = i.lastIndex
+              a.index > n && r.push(e.slice(n, a.index));
+              let l = t[a[1]];
+              null == l ? r.push("") : r.push(l), n = i.lastIndex
             }
-            return (n < e.length && c.push(e.slice(n)), 1 === c.length) ? c[0] : c.map((e, t) => l.isValidElement(e) ? l.cloneElement(e, {
+            return (n < e.length && r.push(e.slice(n)), 1 === r.length) ? r[0] : r.map((e, t) => c.isValidElement(e) ? c.cloneElement(e, {
               key: e.key ?? `part-${t}`
-            }) : "string" == typeof e || "number" == typeof e ? e : (0, r.jsxs)(l.Fragment, {
+            }) : "string" == typeof e || "number" == typeof e ? e : (0, l.jsxs)(c.Fragment, {
               children: [" ", e, " "]
             }, `part-${t}`))
-          }(s, t) : (c = s, i = t, c.replace(/\{(\w+)\}/g, (e, t) => String(i[t] ?? ""))) : s
+          }(s, t) : (r = s, i = t, r.replace(/\{(\w+)\}/g, (e, t) => String(i[t] ?? ""))) : s
         }
         localeHref(e, t) {
           let a = t || this.language;
@@ -580,8 +581,7 @@
           return void 0 !== o ? o : s(c, i) ?? e
         }
       }
-      let i = new c(!0),
-        n = e => e.split(/\.(.+)/);
+      let n = e => e.split(/\.(.+)/);
 
       function s(e, t) {
         let a = e;
@@ -594,7 +594,7 @@
       }
 
       function o() {
-        return new c(!0)
+        return new i(!0)
       }
 
       function d(e, t) {
@@ -623,7 +623,8 @@
           let e = window;
           if (e.z___GUNS_AVAILABLE_LOCALES__?.length) return e.z___GUNS_AVAILABLE_LOCALES__
         }
-        return i.getSupportedLocales()
+        let t = (r || (r = new i(!0)), r);
+        return t ? t.getSupportedLocales() : ["en"]
       }
     },
     96351: (e, t, a) => {

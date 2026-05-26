@@ -116,7 +116,7 @@
         }, [S]), (0, t.jsxs)("div", {
           className: s().inputContainerWrapper,
           "data-dashboard-feature-label": "string" == typeof e ? e : void 0,
-          children: [(0, t.jsx)("h1", {
+          children: [e && (0, t.jsx)("h1", {
             className: s().featureName,
             children: e
           }), (0, t.jsxs)("div", {

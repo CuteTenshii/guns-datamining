@@ -248,7 +248,8 @@
 }
 
 .GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__a2-b2b4814e-6b1224a6-275d5630[data-carousel-active=true] .GUNS__f5-a3fa5675-121435b7-c6f8a1c8 {
-  flex: 0 0 auto
+  flex: 0 0 auto;
+  padding-right: 5.5px
 }
 
 .GUNS__fa-9eb5df22-bc7e6d38-f7b031fa {
@@ -296,7 +297,8 @@
 }
 
 .GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=centered] .GUNS__a2-b2b4814e-6b1224a6-275d5630[data-carousel-active=true] .GUNS__f5-a3fa5675-121435b7-c6f8a1c8 {
-  flex: 0 0 auto
+  flex: 0 0 auto;
+  padding-right: 5.5px
 }
 
 .GUNS__81-7438d2df-c0161f48-3f3200e7 {
@@ -1515,11 +1517,11 @@
 
 @keyframes GUNS__bc-99dedf07-89eeb7e7-cff34073 {
   0% {
-    transform: translateX(-50%)
+    transform: translateZ(0)
   }
 
   to {
-    transform: translateX(0)
+    transform: translate3d(-50%, 0, 0)
   }
 }
 

@@ -5901,10 +5901,13 @@ void main() {
             }), S && w && (0, a.jsx)("span", {
               className: e8().heroBottomMetaSep,
               children: "|"
-            }), w && (0, a.jsxs)("span", {
-              className: e8().heroBottomMetaItem,
-              title: r.location,
-              children: [X.A.locationMarker, " ", r.location]
+            }), w && (0, a.jsx)(ea.A, {
+              content: "Location",
+              pageTooltipStyles: !0,
+              children: (0, a.jsxs)("span", {
+                className: e8().heroBottomMetaItem,
+                children: [X.A.locationMarker, " ", r.location]
+              })
             })]
           }), l && (0, a.jsx)(tS, {
             visible: c
