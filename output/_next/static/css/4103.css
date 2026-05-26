@@ -4671,6 +4671,45 @@ html.rtl .GUNS__2e-5078a647-ccf30d6a-b9e99984:not(.GUNS__3d-c99d9760-e9b16879-56
   }
 }
 
+.GUNS__8e-d5676189-4c68cc64-f0362297 {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center
+}
+
+.GUNS__8e-d5676189-4c68cc64-f0362297 * {
+  outline: none
+}
+
+.GUNS__f2-36e50cca-29761462-dd21271f {
+  position: fixed;
+  z-index: 999999999;
+  background-color: #111;
+  border: 2px solid #161616;
+  border-radius: 17px;
+  padding: 13px;
+  width: max-content;
+  max-width: min(90vw, 420px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, .45);
+  color: inherit;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .18s cubic-bezier(.25, .9, .35, 1), transform .22s cubic-bezier(.2, .85, .25, 1);
+  will-change: opacity, transform;
+  box-sizing: border-box
+}
+
+.GUNS__f2-36e50cca-29761462-dd21271f[data-visible=true] {
+  opacity: 1;
+  pointer-events: auto
+}
+
+.GUNS__f2-36e50cca-29761462-dd21271f:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, .35);
+  outline-offset: 4px
+}
+
 .GUNS__e1-f8f642a4-f6d47d23-fb654296 {
   position: relative;
   width: 100%
@@ -4851,43 +4890,4 @@ html.rtl .GUNS__2e-5078a647-ccf30d6a-b9e99984:not(.GUNS__3d-c99d9760-e9b16879-56
   background: #111;
   box-shadow: 0 0 6px rgba(0, 0, 0, .5);
   cursor: pointer
-}
-
-.GUNS__8e-d5676189-4c68cc64-f0362297 {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center
-}
-
-.GUNS__8e-d5676189-4c68cc64-f0362297 * {
-  outline: none
-}
-
-.GUNS__f2-36e50cca-29761462-dd21271f {
-  position: fixed;
-  z-index: 999999999;
-  background-color: #111;
-  border: 2px solid #161616;
-  border-radius: 17px;
-  padding: 13px;
-  width: max-content;
-  max-width: min(90vw, 420px);
-  box-shadow: 0 18px 45px rgba(0, 0, 0, .45);
-  color: inherit;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .18s cubic-bezier(.25, .9, .35, 1), transform .22s cubic-bezier(.2, .85, .25, 1);
-  will-change: opacity, transform;
-  box-sizing: border-box
-}
-
-.GUNS__f2-36e50cca-29761462-dd21271f[data-visible=true] {
-  opacity: 1;
-  pointer-events: auto
-}
-
-.GUNS__f2-36e50cca-29761462-dd21271f:focus-visible {
-  outline: 2px solid rgba(255, 255, 255, .35);
-  outline-offset: 4px
 }
