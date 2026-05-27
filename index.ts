@@ -139,7 +139,7 @@ async function main() {
   const paths = [
     '/', '/tenshii', '/pricing', '/leaderboard', '/login', '/register', '/reset', '/terms', '/privacy',
     '/terms/copyright', '/sent', '/reset', '/logout', '/verify/a', '/reset/a', '/password/success', '/recovery',
-    '/recovery/start',
+    '/recovery/start', '/recovery/finalize', '/recovery/cancel',
   ];
   for (const path of paths) {
     await processPage(path, seen);
