@@ -336,17 +336,17 @@
     45941: (e, a, c) => {
       "use strict";
       c.d(a, {
-        nB: () => l,
+        nB: () => r,
         $h: () => o,
         hR: () => t,
-        o2: () => r
+        o2: () => l
       });
       var d = c(12521);
-      let i = JSON.parse('{"n":{"socials":[],"user_badges":[],"custom_badges":[],"color":"#1b1b1b","text_color":"#ffffff","icon_color":"#ffffff","bg_color":"#080808","gradient_1":"#881c9c","gradient_2":"#0d0d0d","profile_gradient":false,"use_discord_avatar":false,"volume_control":false,"badge_glow":true,"social_glow":true,"username_glow":true,"swap_colors":false,"monochrome":true,"animated_title":false,"shuffle_audios":false,"audio_player":false,"location":"","discord_avatar_decoration":true,"page_views":0,"blur":10,"opacity":0.5,"url":"","audio":[],"avatar":"","custom_cursor":"","description":"","presence":"","discord_presence_settings":{"show_badges":true,"show_guild_tag":true,"idle_text":""},"display_name":"","background_effects":"","background_effects_color":"#000000","username_effects":"","premium":{"effects_color":"#ffffff","badge_color":"#ffffff","border_color":"#ffffff","typewriter_enabled":false,"typewriter_speed":5,"typewriter_delete_speed":7,"typewriter":[],"hide_views":false,"border_enabled":false,"border_style":"static","border_opacity":0.3,"second_tab_enabled":false,"monochrome_badges":false,"animation":"fade","parallax_animation":false,"join_date":"relative","border_width":2,"border_radius":20,"avatar_radius":35,"links_position":"center","portfolio_border_radius":20,"second_tab":{},"cursor_effects":"","font":"satoshi","page_enter_text":"","layout":"default","portfolio_modules":[{"id":"portfolio-about","type":"about","visible":true,"settings":{"title":"About me","description":"","secondary_description":"","cards":[]}},{"id":"portfolio-projects","type":"projects","visible":true,"settings":{"title":"Featured projects","projects":[]}}],"portfolio_audio_hidden":false,"banner":"","buttons":[],"show_url":false,"text_align":"center","button_shadow":false,"button_border_radius":12,"metadata":{"title":"","description":"","image":"","favicon":"","information_overlay":false}}}}'),
+      let i = JSON.parse('{"n":{"socials":[],"user_badges":[],"custom_badges":[],"color":"#1b1b1b","text_color":"#ffffff","icon_color":"#ffffff","bg_color":"#080808","gradient_1":"#881c9c","gradient_2":"#0d0d0d","profile_gradient":false,"use_discord_avatar":false,"volume_control":false,"badge_glow":true,"social_glow":true,"username_glow":true,"swap_colors":false,"monochrome":true,"animated_title":false,"shuffle_audios":false,"audio_player":false,"location":"","discord_avatar_decoration":true,"page_views":0,"blur":10,"opacity":0.5,"url":"","audio":[],"avatar":"","custom_cursor":"","description":"","presence":"","discord_presence_settings":{"show_badges":true,"show_guild_tag":true,"idle_text":""},"display_name":"","background_effects":"","background_effects_color":"#000000","username_effects":"","premium":{"effects_color":"#ffffff","badge_color":"#ffffff","border_color":"#ffffff","typewriter_enabled":false,"typewriter_speed":5,"typewriter_delete_speed":7,"typewriter":[],"hide_views":false,"border_enabled":false,"border_style":"static","border_opacity":0.3,"second_tab_enabled":false,"monochrome_badges":false,"animation":"fade","parallax_animation":false,"join_date":"relative","border_width":2,"border_radius":20,"avatar_radius":35,"links_position":"center","portfolio_border_radius":20,"second_tab":{},"cursor_effects":"","font":"satoshi","page_enter_text":"","layout":"default","portfolio_modules":[{"id":"portfolio-top-hero","type":"hero","visible":true,"settings":{"hero_style":"classic","show_avatar":true,"show_buttons":true}},{"id":"portfolio-about","type":"about","visible":true,"settings":{"title":"About me","description":"","secondary_description":"","cards":[]}},{"id":"portfolio-projects","type":"projects","visible":true,"settings":{"title":"Featured projects","projects":[]}}],"portfolio_audio_hidden":false,"banner":"","buttons":[],"show_url":false,"text_align":"center","button_shadow":false,"button_border_radius":12,"metadata":{"title":"","description":"","image":"","favicon":"","information_overlay":false}}}}'),
         t = i.n,
         o = i.n.premium,
-        l = d.vJ,
-        r = d.dO
+        r = d.vJ,
+        l = d.dO
     },
     79153: e => {
       e.exports = {
@@ -577,7 +577,7 @@
         spanClassName: t,
         opts: o
       }) {
-        let [l, r] = (0, i.useState)(!1), f = (0, i.useRef)(null);
+        let [r, l] = (0, i.useState)(!1), f = (0, i.useRef)(null);
         (0, i.useEffect)(() => () => {
           f.current && clearTimeout(f.current)
         }, []);
@@ -600,7 +600,7 @@
             return await _()
           }, [_, !0, s, e]),
           m = (0, i.useCallback)(async () => {
-            await b() && (r(!0), f.current && clearTimeout(f.current), f.current = setTimeout(() => r(!1), a))
+            await b() && (l(!0), f.current && clearTimeout(f.current), f.current = setTimeout(() => l(!1), a))
           }, [b, a]),
           n = (0, d.jsx)("span", {
             onClick: () => {
@@ -611,11 +611,11 @@
             onKeyDown: e => {
               ("Enter" === e.key || " " === e.key) && (e.preventDefault(), m())
             },
-            children: l ? o?.copiedIcon ?? o?.copiedText ?? "Copied" : o?.copyIcon ?? o?.copyText ?? "Copy"
+            children: r ? o?.copiedIcon ?? o?.copiedText ?? "Copied" : o?.copyIcon ?? o?.copyText ?? "Copy"
           });
         return "function" == typeof c ? (0, d.jsx)(d.Fragment, {
           children: c({
-            copied: l,
+            copied: r,
             copy: m,
             isSupported: s
           })

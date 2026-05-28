@@ -66,13 +66,13 @@
         viewPassword: l,
         onKeyPress: u,
         isImageUrl: m,
-        ..._
+        type: _ = "text",
+        ...b
       }) {
-        let b = (0, n.useRef)(null),
-          [p, h] = (0, n.useState)(l);
+        let [p, h] = (0, n.useState)(!!l);
         return (0, n.useEffect)(() => {
-          b.current && (b.current.type = p ? "password" : "text")
-        }, [p]), (0, r.jsxs)("div", {
+          h(!!l)
+        }, [l]), (0, r.jsxs)("div", {
           className: i().inputContainerWrapper,
           "data-dashboard-feature-label": "string" == typeof e ? e : void 0,
           children: [e && (0, r.jsx)("h1", {
@@ -99,7 +99,7 @@
               children: p ? c.A.hidePassword : c.A.views
             }), (0, r.jsx)("input", {
               autoCorrect: "false",
-              type: p ? "password" : "text",
+              type: l ? p ? "password" : "text" : _,
               onKeyDown: u,
               value: t,
               style: {
@@ -109,8 +109,7 @@
               placeholder: o,
               className: i().inputWrapperInput,
               onChange: a,
-              ..._,
-              ref: b
+              ...b
             })]
           })]
         })

@@ -1,75 +1,74 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [6390], {
-    33237: (e, s, r) => {
-      Promise.resolve().then(r.bind(r, 79488))
+    33237: (e, s, t) => {
+      Promise.resolve().then(t.bind(t, 79488))
     },
-    37897: (e, s, r) => {
+    37897: (e, s, t) => {
       "use strict";
-      r.d(s, {
+      t.d(s, {
         A: () => d
       });
-      var t = r(95155),
-        a = r(12115),
-        n = r(98241),
-        i = r.n(n),
-        c = r(54834);
+      var r = t(95155),
+        a = t(12115),
+        n = t(98241),
+        i = t.n(n),
+        c = t(54834);
 
       function d({
         featureName: e,
         onChangeFunction: s,
-        value: r,
+        value: t,
         placeholder: n,
         icon: d,
-        prefix: u,
-        prefixLength: o,
+        prefix: o,
+        prefixLength: u,
         viewPassword: l,
         onKeyPress: h,
         isImageUrl: p,
-        ...m
+        type: m = "text",
+        ..._
       }) {
-        let f = (0, a.useRef)(null),
-          [_, j] = (0, a.useState)(l);
+        let [f, j] = (0, a.useState)(!!l);
         return (0, a.useEffect)(() => {
-          f.current && (f.current.type = _ ? "password" : "text")
-        }, [_]), (0, t.jsxs)("div", {
+          j(!!l)
+        }, [l]), (0, r.jsxs)("div", {
           className: i().inputContainerWrapper,
           "data-dashboard-feature-label": "string" == typeof e ? e : void 0,
-          children: [e && (0, t.jsx)("h1", {
+          children: [e && (0, r.jsx)("h1", {
             className: i().featureName,
             children: e
-          }), (0, t.jsxs)("div", {
-            className: `${i().inputWrapperDiv} ${u&&i().inputWrapperURL}`,
-            children: [(0, t.jsxs)("span", {
+          }), (0, r.jsxs)("div", {
+            className: `${i().inputWrapperDiv} ${o&&i().inputWrapperURL}`,
+            children: [(0, r.jsxs)("span", {
               className: i().inputWrapperSpan,
               style: {
-                position: u ? "absolute" : "static"
+                position: o ? "absolute" : "static"
               },
-              children: [p ? (0, t.jsx)("img", {
+              children: [p ? (0, r.jsx)("img", {
                 src: d,
                 alt: "icon",
                 className: i().inputWrapperIconImage
-              }) : d, u && (0, t.jsx)("h1", {
-                children: u
+              }) : d, o && (0, r.jsx)("h1", {
+                children: o
               })]
-            }), l && (0, t.jsx)("p", {
+            }), l && (0, r.jsx)("p", {
               onClick: () => {
-                j(!_)
+                j(!f)
               },
-              children: _ ? c.A.hidePassword : c.A.views
-            }), (0, t.jsx)("input", {
+              children: f ? c.A.hidePassword : c.A.views
+            }), (0, r.jsx)("input", {
               autoCorrect: "false",
-              type: _ ? "password" : "text",
+              type: l ? f ? "password" : "text" : m,
               onKeyDown: h,
-              value: r,
+              value: t,
               style: {
-                paddingLeft: u ? o : "",
+                paddingLeft: o ? u : "",
                 paddingRight: l ? 47 : ""
               },
               placeholder: n,
               className: i().inputWrapperInput,
               onChange: s,
-              ...m,
-              ref: f
+              ..._
             })]
           })]
         })
@@ -84,115 +83,115 @@
         submitButton: "GUNS__45-09662aac-e027c7cd-9f159553"
       }
     },
-    73321: (e, s, r) => {
+    73321: (e, s, t) => {
       "use strict";
-      var t = r(74645);
-      r.o(t, "redirect") && r.d(s, {
+      var r = t(74645);
+      t.o(r, "redirect") && t.d(s, {
         redirect: function() {
-          return t.redirect
+          return r.redirect
         }
-      }), r.o(t, "useParams") && r.d(s, {
+      }), t.o(r, "useParams") && t.d(s, {
         useParams: function() {
-          return t.useParams
+          return r.useParams
         }
-      }), r.o(t, "usePathname") && r.d(s, {
+      }), t.o(r, "usePathname") && t.d(s, {
         usePathname: function() {
-          return t.usePathname
+          return r.usePathname
         }
-      }), r.o(t, "useRouter") && r.d(s, {
+      }), t.o(r, "useRouter") && t.d(s, {
         useRouter: function() {
-          return t.useRouter
+          return r.useRouter
         }
-      }), r.o(t, "useSearchParams") && r.d(s, {
+      }), t.o(r, "useSearchParams") && t.d(s, {
         useSearchParams: function() {
-          return t.useSearchParams
+          return r.useSearchParams
         }
       })
     },
-    79488: (e, s, r) => {
+    79488: (e, s, t) => {
       "use strict";
-      r.d(s, {
+      t.d(s, {
         default: () => j
       });
-      var t = r(95155),
-        a = r(12115),
-        n = r(98241),
-        i = r.n(n),
-        c = r(41804),
-        d = r.n(c),
-        u = r(37897),
-        o = r(54834),
-        l = r(73321),
-        h = r(96351);
+      var r = t(95155),
+        a = t(12115),
+        n = t(98241),
+        i = t.n(n),
+        c = t(41804),
+        d = t.n(c),
+        o = t(37897),
+        u = t(54834),
+        l = t(73321),
+        h = t(96351);
 
       function p() {
         let e = (0, h.kj)(),
           s = (0, h.VJ)(),
-          r = (0, l.useRouter)(),
+          t = (0, l.useRouter)(),
           [n, c] = (0, a.useState)(""),
           [p, m] = (0, a.useState)(""),
-          [f, _] = (0, a.useState)(""),
+          [_, f] = (0, a.useState)(""),
           j = e("auth.reset.change_password"),
-          [x, w] = (0, a.useState)(j),
-          v = (0, l.useParams)().reset,
+          [x, v] = (0, a.useState)(j),
+          w = (0, l.useParams)().reset,
           N = async () => {
             try {
-              w(o.A.loading), _("");
+              v(u.A.loading), f("");
               let e = JSON.stringify({
-                  token: v,
+                  token: w,
                   password: n,
                   passwordReenter: p
                 }),
-                t = await fetch("https://guns.lol/api/reset/password", {
+                r = await fetch("https://guns.lol/api/reset/password", {
                   method: "POST",
                   body: e
                 }),
-                a = await t.json();
-              t.ok ? r.push(s("/password/success")) : (_(a.error), w(j))
+                a = await r.json();
+              r.ok ? t.push(s("/password/success")) : (f(a.error), v(j))
             } catch (e) {
               return console.error(e.message), !1
             } finally {
-              w(j)
+              v(j)
             }
           };
-        return (0, t.jsx)(t.Fragment, {
-          children: (0, t.jsx)("div", {
+        return (0, r.jsx)(r.Fragment, {
+          children: (0, r.jsx)("div", {
             className: d().containerWrapper,
-            children: (0, t.jsxs)("div", {
+            children: (0, r.jsxs)("div", {
               className: d().container,
-              children: [(0, t.jsx)("h1", {
+              children: [(0, r.jsx)("h1", {
                 children: e("auth.reset.reset_password_title")
-              }), (0, t.jsx)("h3", {
+              }), (0, r.jsx)("h3", {
                 children: e("auth.reset.reset_password_description")
-              }), (0, t.jsxs)("div", {
+              }), (0, r.jsxs)("div", {
                 className: d().passwordGap,
-                children: [(0, t.jsx)(u.A, {
+                children: [(0, r.jsx)(o.A, {
                   featureName: e("auth.reset.reset_inputs.new_password"),
                   placeholder: e("auth.reset.reset_inputs.new_password"),
-                  icon: o.A.password,
+                  icon: u.A.password,
                   value: n,
                   onChangeFunction: e => {
                     c(e.target.value)
                   },
                   viewPassword: !0
-                }), (0, t.jsx)(u.A, {
+                }), (0, r.jsx)(o.A, {
                   type: "password",
                   featureName: e("auth.reset.reset_inputs.confirm_password"),
                   placeholder: e("auth.reset.reset_inputs.confirm_password"),
-                  icon: o.A.password,
+                  icon: u.A.password,
                   value: p,
                   onChangeFunction: e => {
                     m(e.target.value)
                   }
                 })]
-              }), (0, t.jsxs)("div", {
+              }), (0, r.jsxs)("div", {
                 className: d().containerButtons,
-                children: ["" !== f && (0, t.jsx)("div", {
+                children: ["" !== _ && (0, r.jsx)("div", {
                   className: i().errorContainer,
-                  children: (0, t.jsx)("span", {
-                    children: f
+                  children: (0, r.jsx)("span", {
+                    children: _
                   })
-                }), (0, t.jsx)("span", {
+                }), (0, r.jsx)("span", {
                   className: d().submitButton,
                   onClick: N,
                   children: x
@@ -202,31 +201,31 @@
           })
         })
       }
-      var m = r(98500),
-        f = r.n(m),
-        _ = r(81934);
+      var m = t(98500),
+        _ = t.n(m),
+        f = t(81934);
 
       function j({
         resetData: e
       }) {
         let s = (0, h.kj)(),
-          r = e?.message === "Success";
-        return (0, t.jsx)(t.Fragment, {
-          children: (0, t.jsx)("div", {
-            children: r ? (0, t.jsx)(p, {}) : (0, t.jsx)("div", {
+          t = e?.message === "Success";
+        return (0, r.jsx)(r.Fragment, {
+          children: (0, r.jsx)("div", {
+            children: t ? (0, r.jsx)(p, {}) : (0, r.jsx)("div", {
               className: i().containerWrapper,
-              children: (0, t.jsxs)("div", {
+              children: (0, r.jsxs)("div", {
                 className: i().container,
-                children: [o.A.error, (0, t.jsx)("h1", {
+                children: [u.A.error, (0, r.jsx)("h1", {
                   children: s("auth.reset.invalid_reset_link_title")
-                }), (0, t.jsx)("h3", {
+                }), (0, r.jsx)("h3", {
                   children: s("auth.reset.invalid_reset_link_description")
-                }), (0, t.jsxs)("div", {
+                }), (0, r.jsxs)("div", {
                   className: i().containerButtons,
-                  children: [(0, t.jsx)(_.A, {
+                  children: [(0, r.jsx)(f.A, {
                     href: "/",
                     children: s("auth.reset.reset_link_buttons.home")
-                  }), (0, t.jsx)(f(), {
+                  }), (0, r.jsx)(_(), {
                     href: "https://discord.gg/guns",
                     target: "_blank",
                     children: s("auth.reset.reset_link_buttons.discord")
@@ -238,40 +237,40 @@
         })
       }
     },
-    81934: (e, s, r) => {
+    81934: (e, s, t) => {
       "use strict";
-      r.d(s, {
+      t.d(s, {
         A: () => c
       });
-      var t = r(95155),
-        a = r(98500),
-        n = r.n(a),
-        i = r(96351);
+      var r = t(95155),
+        a = t(98500),
+        n = t.n(a),
+        i = t(96351);
 
       function c({
         href: e,
         asTag: s,
-        locale: r,
+        locale: t,
         children: a,
         ...c
       }) {
-        let d = r || (0, i.useLang)();
-        if (e.startsWith("http://") || e.startsWith("https://") || e.startsWith("mailto:") || e.startsWith("tel:")) return s ? (0, t.jsx)("a", {
+        let d = t || (0, i.useLang)();
+        if (e.startsWith("http://") || e.startsWith("https://") || e.startsWith("mailto:") || e.startsWith("tel:")) return s ? (0, r.jsx)("a", {
           href: e,
           ...c,
           children: a
-        }) : (0, t.jsx)(n(), {
+        }) : (0, r.jsx)(n(), {
           href: e,
           ...c,
           children: a
         });
-        let u = "en" == d ? `${e.startsWith("/")?"":"/"}${e}` : `/${d}${e.startsWith("/")?"":"/"}${e}`;
-        return s ? (0, t.jsx)("a", {
-          href: u,
+        let o = "en" == d ? `${e.startsWith("/")?"":"/"}${e}` : `/${d}${e.startsWith("/")?"":"/"}${e}`;
+        return s ? (0, r.jsx)("a", {
+          href: o,
           ...c,
           children: a
-        }) : (0, t.jsx)(n(), {
-          href: u,
+        }) : (0, r.jsx)(n(), {
+          href: o,
           ...c,
           children: a
         })

@@ -88,7 +88,7 @@
     37897: (e, a, c) => {
       "use strict";
       c.d(a, {
-        A: () => n
+        A: () => _
       });
       var t = c(95155),
         d = c(12115),
@@ -96,42 +96,42 @@
         s = c.n(r),
         f = c(54834);
 
-      function n({
+      function _({
         featureName: e,
         onChangeFunction: a,
         value: c,
         placeholder: r,
-        icon: n,
-        prefix: _,
+        icon: _,
+        prefix: n,
         prefixLength: i,
         viewPassword: b,
         onKeyPress: o,
         isImageUrl: l,
-        ...u
+        type: u = "text",
+        ...N
       }) {
-        let N = (0, d.useRef)(null),
-          [S, U] = (0, d.useState)(b);
+        let [S, U] = (0, d.useState)(!!b);
         return (0, d.useEffect)(() => {
-          N.current && (N.current.type = S ? "password" : "text")
-        }, [S]), (0, t.jsxs)("div", {
+          U(!!b)
+        }, [b]), (0, t.jsxs)("div", {
           className: s().inputContainerWrapper,
           "data-dashboard-feature-label": "string" == typeof e ? e : void 0,
           children: [e && (0, t.jsx)("h1", {
             className: s().featureName,
             children: e
           }), (0, t.jsxs)("div", {
-            className: `${s().inputWrapperDiv} ${_&&s().inputWrapperURL}`,
+            className: `${s().inputWrapperDiv} ${n&&s().inputWrapperURL}`,
             children: [(0, t.jsxs)("span", {
               className: s().inputWrapperSpan,
               style: {
-                position: _ ? "absolute" : "static"
+                position: n ? "absolute" : "static"
               },
               children: [l ? (0, t.jsx)("img", {
-                src: n,
+                src: _,
                 alt: "icon",
                 className: s().inputWrapperIconImage
-              }) : n, _ && (0, t.jsx)("h1", {
-                children: _
+              }) : _, n && (0, t.jsx)("h1", {
+                children: n
               })]
             }), b && (0, t.jsx)("p", {
               onClick: () => {
@@ -140,18 +140,17 @@
               children: S ? f.A.hidePassword : f.A.views
             }), (0, t.jsx)("input", {
               autoCorrect: "false",
-              type: S ? "password" : "text",
+              type: b ? S ? "password" : "text" : u,
               onKeyDown: o,
               value: c,
               style: {
-                paddingLeft: _ ? i : "",
+                paddingLeft: n ? i : "",
                 paddingRight: b ? 47 : ""
               },
               placeholder: r,
               className: s().inputWrapperInput,
               onChange: a,
-              ...u,
-              ref: N
+              ...N
             })]
           })]
         })
@@ -231,7 +230,7 @@
         headerAction: c,
         children: r,
         footer: f,
-        legal: n
+        legal: _
       }) {
         return (0, t.jsx)("div", {
           className: s().page,
@@ -266,9 +265,9 @@
             }), f && (0, t.jsx)("div", {
               className: s().footer,
               children: f
-            }), n && (0, t.jsx)("div", {
+            }), _ && (0, t.jsx)("div", {
               className: s().legal,
-              children: n
+              children: _
             })]
           })
         })
@@ -291,7 +290,7 @@
         children: d,
         ...f
       }) {
-        let n = c || (0, s.useLang)();
+        let _ = c || (0, s.useLang)();
         if (e.startsWith("http://") || e.startsWith("https://") || e.startsWith("mailto:") || e.startsWith("tel:")) return a ? (0, t.jsx)("a", {
           href: e,
           ...f,
@@ -301,13 +300,13 @@
           ...f,
           children: d
         });
-        let _ = "en" == n ? `${e.startsWith("/")?"":"/"}${e}` : `/${n}${e.startsWith("/")?"":"/"}${e}`;
+        let n = "en" == _ ? `${e.startsWith("/")?"":"/"}${e}` : `/${_}${e.startsWith("/")?"":"/"}${e}`;
         return a ? (0, t.jsx)("a", {
-          href: _,
+          href: n,
           ...f,
           children: d
         }) : (0, t.jsx)(r(), {
-          href: _,
+          href: n,
           ...f,
           children: d
         })
@@ -323,15 +322,15 @@
         r = c(73321),
         s = c(77570),
         f = c(37897),
-        n = c(96351),
-        _ = c(54834),
+        _ = c(96351),
+        n = c(54834),
         i = c(18943),
         b = c.n(i),
         o = c(49982),
         l = c.n(o);
 
       function u() {
-        let e = (0, n.kj)(),
+        let e = (0, _.kj)(),
           a = (0, r.useRouter)(),
           c = (0, r.useSearchParams)().get("type") || "lost_2fa_device",
           [i, o] = (0, d.useState)(""),
@@ -373,7 +372,7 @@
               value: i,
               onChangeFunction: e => o(e.target.value),
               placeholder: e("auth.recovery.start.identifier_placeholder"),
-              icon: _.A.user
+              icon: n.A.user
             }), (0, t.jsx)("div", {
               className: l().recoveryHelper,
               children: (0, t.jsx)("h1", {

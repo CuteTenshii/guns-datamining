@@ -722,6 +722,7 @@
         heroToggleLabel: "GUNS__90-25f6b44c-12daf1b1-e16e612a",
         heroElementsPanel: "GUNS__70-63b502e7-58a8b271-20e8eb93",
         heroRadiusBlock: "GUNS__c6-1b3827be-287abcb5-cbb51542",
+        borderToggleRow: "GUNS__b7-bb8988c8-eac91e31-da3f75d9",
         heroRadiusHeader: "GUNS__94-a8edbc9d-35b61b3e-c8a5268c",
         heroRadiusInlineValue: "GUNS__26-1401fbf3-29d657a9-95bf7ce9",
         heroRadiusSliderWrap: "GUNS__97-3805bfe2-6ba76d44-17c6271a",
@@ -789,7 +790,7 @@
     81469: (e, t, a) => {
       "use strict";
       a.d(t, {
-        A: () => n
+        A: () => b
       });
       var o = a(95155),
         c = a(29722),
@@ -798,22 +799,22 @@
         l = a.n(r),
         i = a(73728),
         f = a.n(i),
-        s = a(96351);
-      let _ = ["ar", "he", "fa", "ur"];
+        _ = a(96351);
+      let s = ["ar", "he", "fa", "ur"];
 
-      function n({
+      function b({
         featureName: e,
         onChangeFunction: t,
         className: a,
         id: r,
         onChange: i,
-        defaultChecked: n,
-        disabled: b,
+        defaultChecked: b,
+        disabled: n,
         ...h
       }) {
-        let p = (0, s.useLang)(),
+        let p = (0, _.useLang)(),
           S = (0, d.useId)(),
-          m = _.includes(p) ? "rtl" : "ltr",
+          m = s.includes(p) ? "rtl" : "ltr",
           w = "string" == typeof e ? e : void 0;
         return (0, o.jsxs)("div", {
           className: l().inputContainerWrapper,
@@ -828,15 +829,15 @@
             },
             children: (0, o.jsxs)("label", {
               className: (0, c.A)(f().switch, a),
-              "data-disabled": b,
+              "data-disabled": n,
               "data-direction": m,
               children: [(0, o.jsx)("input", {
                 ...h,
                 id: r ?? S,
                 type: "checkbox",
                 className: f().input,
-                defaultChecked: n,
-                disabled: b,
+                defaultChecked: b,
+                disabled: n,
                 onChange: e => {
                   i?.(e), t?.(e)
                 }

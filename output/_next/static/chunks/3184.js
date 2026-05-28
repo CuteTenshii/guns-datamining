@@ -2704,8 +2704,7 @@
             value: "pulse",
             label: j("dashboard.premium.layout.border_style.pulse")
           }],
-          w = o ? n().buttonEnabled : n().buttonDisabled,
-          A = [
+          w = [
             ["show_avatar", j("dashboard.premium.layout.portfolio_settings.hero.toggles.profile_picture")],
             ["show_buttons", j("dashboard.premium.layout.portfolio_settings.hero.toggles.socials")]
           ];
@@ -2731,10 +2730,18 @@
               className: n().heroElementsPanel,
               children: [(0, a.jsxs)("div", {
                 className: n().heroRadiusBlock,
-                children: [(0, a.jsx)("span", {
-                  className: w,
-                  onClick: () => s(!o),
-                  children: j(o ? "dashboard.premium.layout.default_settings.border.disable_button" : "dashboard.premium.layout.default_settings.border.enable_button")
+                children: [(0, a.jsxs)("div", {
+                  className: n().borderToggleRow,
+                  children: [(0, a.jsx)("span", {
+                    className: n().heroVisibilityRowLabel,
+                    children: j(o ? "dashboard.premium.layout.default_settings.border.disable_button" : "dashboard.premium.layout.default_settings.border.enable_button")
+                  }), (0, a.jsx)("div", {
+                    className: n().heroVisibilitySwitchCell,
+                    children: (0, a.jsx)(D.A, {
+                      checked: o,
+                      onChange: e => s(e.target.checked)
+                    })
+                  })]
                 }), o && (0, a.jsxs)("div", {
                   className: n().borderDiv,
                   children: [(0, a.jsxs)("div", {
@@ -2805,7 +2812,7 @@
                 })]
               }), (0, a.jsx)("div", {
                 className: n().heroVisibilityList,
-                children: A.map(([o, s]) => (0, a.jsxs)("div", {
+                children: w.map(([o, s]) => (0, a.jsxs)("div", {
                   className: n().heroVisibilityRow,
                   children: [(0, a.jsx)("span", {
                     className: n().heroVisibilityRowLabel,

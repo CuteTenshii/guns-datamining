@@ -153,7 +153,8 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  width: 100%
+  width: 100%;
+  padding-top: 4px
 }
 
 .GUNS__4a-e4f66c0a-4a85a784-209d8397 {
@@ -3003,6 +3004,14 @@
   gap: 8px;
   padding: 11px 13px 10px;
   border-bottom: 1px solid #181818
+}
+
+.GUNS__b7-bb8988c8-eac91e31-da3f75d9 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 44px
 }
 
 .GUNS__94-a8edbc9d-35b61b3e-c8a5268c {

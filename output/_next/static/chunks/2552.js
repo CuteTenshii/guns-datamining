@@ -49,8 +49,8 @@
         let _ = (0, l.kj)(),
           [h, b] = (0, r.useState)(null),
           [m, p] = (0, r.useState)(null),
-          [N, w] = (0, r.useState)(""),
-          g = {
+          [N, g] = (0, r.useState)(""),
+          w = {
             google: {
               continue: _("auth.social.continue_with_google"),
               signup: _("auth.social.signup_with_google"),
@@ -60,7 +60,7 @@
         (0, r.useEffect)(() => {
           let e = window.localStorage.getItem(i),
             a = Number(window.localStorage.getItem(f) || "0");
-          "google" === e && a > 0 && (p("google"), w(_("auth.social.last_used")))
+          "google" === e && a > 0 && (p("google"), g(_("auth.social.last_used")))
         }, []);
         let S = async t => {
           try {
@@ -86,7 +86,7 @@
         return (0, c.jsx)("div", {
           className: d().socialButtons,
           children: ["google"].map(e => {
-            let a = g[e],
+            let a = w[e],
               r = h === e;
             return (0, c.jsxs)("button", {
               type: "button",
@@ -338,13 +338,13 @@
         viewPassword: f,
         onKeyPress: u,
         isImageUrl: _,
-        ...h
+        type: h = "text",
+        ...b
       }) {
-        let b = (0, r.useRef)(null),
-          [m, p] = (0, r.useState)(f);
+        let [m, p] = (0, r.useState)(!!f);
         return (0, r.useEffect)(() => {
-          b.current && (b.current.type = m ? "password" : "text")
-        }, [m]), (0, c.jsxs)("div", {
+          p(!!f)
+        }, [f]), (0, c.jsxs)("div", {
           className: d().inputContainerWrapper,
           "data-dashboard-feature-label": "string" == typeof e ? e : void 0,
           children: [e && (0, c.jsx)("h1", {
@@ -371,7 +371,7 @@
               children: m ? n.A.hidePassword : n.A.views
             }), (0, c.jsx)("input", {
               autoCorrect: "false",
-              type: m ? "password" : "text",
+              type: f ? m ? "password" : "text" : h,
               onKeyDown: u,
               value: t,
               style: {
@@ -381,8 +381,7 @@
               placeholder: s,
               className: d().inputWrapperInput,
               onChange: a,
-              ...h,
-              ref: b
+              ...b
             })]
           })]
         })
@@ -415,7 +414,7 @@
         bodyClassName: m,
         children: p
       }) {
-        let [N, w] = (0, r.useState)(e), [g, S] = (0, r.useState)(!1), [v, U] = (0, r.useState)(null), x = (0, r.useRef)(null), G = (0, r.useRef)(null), j = (0, r.useRef)(null), y = (0, r.useRef)(!1), C = e => {
+        let [N, g] = (0, r.useState)(e), [w, S] = (0, r.useState)(!1), [v, U] = (0, r.useState)(null), x = (0, r.useRef)(null), G = (0, r.useRef)(null), j = (0, r.useRef)(null), y = (0, r.useRef)(!1), C = e => {
           if (!e) return !1;
           let a = window.getComputedStyle(e).overflowY;
           return e.scrollHeight > e.clientHeight + 1 && ("auto" === a || "scroll" === a)
@@ -431,11 +430,11 @@
         }, k = (e, a) => a < 0 ? e.scrollTop > 0 : !(a > 0) || e.scrollTop + e.clientHeight < e.scrollHeight;
         if ((0, r.useEffect)(() => {
             if (e) {
-              w(!0), S(!1);
+              g(!0), S(!1);
               return
             }
             return S(!0), x.current = setTimeout(() => {
-              w(!1), S(!1)
+              g(!1), S(!1)
             }, 180), () => {
               x.current && (clearTimeout(x.current), x.current = null)
             }
@@ -492,7 +491,7 @@
         let B = "number" == typeof f ? `${f}px` : f,
           L = {};
         B && "auto" !== B ? L.maxWidth = B : (L.width = "fit-content", L.maxWidth = "clamp(100%, 100%, 850px)", L.boxSizing = "border-box");
-        let q = g ? "closing" : "open",
+        let q = w ? "closing" : "open",
           E = (0, c.jsx)("div", {
             className: n().overlay,
             "data-centered": i,
