@@ -1,1108 +1,1184 @@
-.GUNS__46-85dd92a2-f2354121-569442c3 {
+.authExperience-module__Zt0w7q__page {
+  box-sizing: border-box;
+  background: #0a0a0a;
+  justify-content: center;
+  align-items: center;
   height: 100svh;
   min-height: 100svh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 35px 20px;
-  box-sizing: border-box;
+  display: flex;
   position: relative;
-  overflow: hidden;
-  background: #0a0a0a
+  overflow: hidden
 }
 
-.GUNS__7b-a367b144-ef9b1f6d-e8949708 {
-  position: relative;
+.authExperience-module__Zt0w7q__panel {
   z-index: 1;
+  box-sizing: border-box;
   width: 100%;
   max-width: 448px;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 20px;
-  background-color: #121212;
-  border: 2px solid #191919;
-  border-radius: 26px;
-  padding: 28px;
-  box-sizing: border-box;
   max-height: calc(100svh - 40px);
   box-shadow: none;
   -webkit-backdrop-filter: none;
-  backdrop-filter: none
-}
-
-.GUNS__f3-4ad71b9f-2dac4266-0398c8d4 {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin-bottom: -6px
-}
-
-.GUNS__c3-0509edcf-2b9ff916-f83c6df9 {
-  display: flex;
+  backdrop-filter: none;
+  background-color: #121212;
+  border: 2px solid #191919;
+  border-radius: 26px;
   flex-direction: column;
-  gap: 15px
+  align-items: stretch;
+  gap: 20px;
+  padding: 28px;
+  display: flex;
+  position: relative
 }
 
-.GUNS__3c-c4bb5e38-d1897d45-fde07dac {
-  display: inline-flex;
-  width: fit-content
+.authExperience-module__Zt0w7q__panelHeaderAction {
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: -6px;
+  display: flex
 }
 
-.GUNS__5c-ad0583a9-794a70e9-ece4e7a7 {
-  height: 52px;
+.authExperience-module__Zt0w7q__brand {
+  flex-direction: column;
+  gap: 15px;
+  display: flex
+}
+
+.authExperience-module__Zt0w7q__brandLink {
+  width: fit-content;
+  display: inline-flex
+}
+
+.authExperience-module__Zt0w7q__brandLogo {
+  object-fit: contain;
   width: auto;
-  object-fit: contain
+  height: 52px
 }
 
-.GUNS__00-7f909a44-f8066d24-d9f24204 {
-  margin: 0;
+.authExperience-module__Zt0w7q__title {
   color: #fafafa;
+  margin: 0;
   font-size: 22.5px;
   font-weight: 600
 }
 
-.GUNS__54-c6de9bab-e78ba7fe-aceedc06 {
-  margin: 0;
+.authExperience-module__Zt0w7q__subtitle {
   color: #c4c4c4;
-  font-size: 15px;
-  max-width: 33rem
+  max-width: 33rem;
+  margin: 0;
+  font-size: 15px
 }
 
-.GUNS__d4-d66c56ff-06ff9469-1291adca {
-  display: flex;
+.authExperience-module__Zt0w7q__brandText {
   flex-direction: column;
-  gap: 9px
+  gap: 9px;
+  display: flex
 }
 
-.GUNS__0c-256622b4-d9ab2c31-9607b2f5 {
-  display: flex;
+.authExperience-module__Zt0w7q__body {
   flex-direction: column;
-  gap: 15px
+  gap: 15px;
+  display: flex
 }
 
-.GUNS__4e-bbba0bbb-47ed6541-61af55e9 {
-  display: flex;
+.authExperience-module__Zt0w7q__section {
   flex-direction: column;
-  gap: 12px
+  gap: 12px;
+  display: flex
 }
 
-.GUNS__c9-e0ad0ea0-4819e34d-15ea86aa {
-  display: flex;
-  flex-direction: column
+.authExperience-module__Zt0w7q__credentialsStack {
+  flex-direction: column;
+  display: flex
 }
 
-.GUNS__f8-1a70b4d3-f8ea8fab-0d3089cf {
+.authExperience-module__Zt0w7q__emailSection {
   gap: 6px
 }
 
-.GUNS__2b-8130d4b6-1af76d1e-5c67477d {
-  display: flex;
+.authExperience-module__Zt0w7q__field {
   flex-direction: column;
   gap: 8px;
-  width: 100%
+  width: 100%;
+  display: flex
 }
 
-.GUNS__97-8184030f-a0be19bb-358f6a39 {
+.authExperience-module__Zt0w7q__fieldLabel {
   color: #fafafa;
   font-size: 15px;
   font-weight: 500
 }
 
-.GUNS__c5-5957cdf8-37311b9b-8d90f3f8 {
-  position: relative;
-  width: 100%
-}
-
-.GUNS__41-3784a145-ff7d1e0b-75f09ae3 {
+.authExperience-module__Zt0w7q__fieldShell {
   width: 100%;
-  box-sizing: border-box;
-  border-radius: 17px;
-  border: 2px solid #171717;
-  background: #101010;
-  color: #fafafa;
-  font-size: 16px;
-  padding: 14px 16px;
-  outline: none;
-  transition: border-color .25s ease, box-shadow .25s ease, background-color .25s ease
+  position: relative
 }
 
-.GUNS__41-3784a145-ff7d1e0b-75f09ae3::placeholder {
+.authExperience-module__Zt0w7q__fieldInput {
+  box-sizing: border-box;
+  color: #fafafa;
+  background: #101010;
+  border: 2px solid #171717;
+  border-radius: 17px;
+  outline: none;
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 16px;
+  transition: border-color .25s, box-shadow .25s, background-color .25s
+}
+
+.authExperience-module__Zt0w7q__fieldInput::placeholder {
   color: #8d8d8d
 }
 
-.GUNS__41-3784a145-ff7d1e0b-75f09ae3:focus,
-.GUNS__41-3784a145-ff7d1e0b-75f09ae3:hover {
-  border-color: #191919;
+.authExperience-module__Zt0w7q__fieldInput:hover,
+.authExperience-module__Zt0w7q__fieldInput:focus {
   box-shadow: none;
-  background: #121212
+  background: #121212;
+  border-color: #191919
 }
 
-.GUNS__41-3784a145-ff7d1e0b-75f09ae3:disabled {
+.authExperience-module__Zt0w7q__fieldInput:disabled {
   opacity: .9
 }
 
-.GUNS__90-a6491d0f-1643e71d-dbaf468e {
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
+.authExperience-module__Zt0w7q__fieldPrefix {
   color: #777;
+  pointer-events: none;
   font-size: 15px;
-  pointer-events: none
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%)
 }
 
-.GUNS__fd-588f5ac1-50574dca-ebe0da3f {
+.authExperience-module__Zt0w7q__fieldInputWithPrefix {
   padding-left: 96px
 }
 
-.GUNS__2e-5b411be9-27d87dee-82941852 {
+.authExperience-module__Zt0w7q__fieldRight {
+  align-items: center;
+  display: flex;
   position: absolute;
   top: 50%;
   right: 16px;
-  transform: translateY(-50%);
-  display: flex;
-  align-items: center
+  transform: translateY(-50%)
 }
 
-.GUNS__5a-47f1bd63-9b6e5205-2fa1ab63 {
-  border: none;
-  background: transparent;
+.authExperience-module__Zt0w7q__passwordToggle {
   color: #bcbcbc;
+  cursor: pointer;
+  background: 0 0;
+  border: none;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  min-width: 34px;
+  min-height: 34px;
+  padding: 6px;
   font-size: 22px;
   line-height: 0;
-  cursor: pointer;
-  padding: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  transition: .3s;
-  min-width: 34px;
-  min-height: 34px
+  transition: all .3s;
+  display: flex
 }
 
-.GUNS__5a-47f1bd63-9b6e5205-2fa1ab63:hover {
+.authExperience-module__Zt0w7q__passwordToggle:hover {
   color: #fafafa;
   background-color: #fafafa23
 }
 
-.GUNS__23-642a4d40-40fa70cf-c0a02fb9 {
-  display: flex;
+.authExperience-module__Zt0w7q__passwordReveal {
+  opacity: 0;
+  pointer-events: none;
+  transform-origin: top;
   flex-direction: column;
   gap: 6px;
-  margin-top: 0;
-  overflow: hidden;
   max-height: 0;
-  opacity: 0;
-  transform: translateY(-14px) scale(.98);
-  pointer-events: none;
-  transform-origin: top center;
-  transition: max-height .78s cubic-bezier(.16, 1, .3, 1), opacity .55s ease, transform .72s cubic-bezier(.16, 1, .3, 1), margin-top .72s cubic-bezier(.16, 1, .3, 1)
+  margin-top: 0;
+  transition: max-height .78s cubic-bezier(.16, 1, .3, 1), opacity .55s, transform .72s cubic-bezier(.16, 1, .3, 1), margin-top .72s cubic-bezier(.16, 1, .3, 1);
+  display: flex;
+  overflow: hidden;
+  transform: translateY(-14px)scale(.98)
 }
 
-.GUNS__c7-17500567-6217f716-7a97ee3b {
-  margin-top: 12px;
-  max-height: 260px;
+.authExperience-module__Zt0w7q__passwordRevealOpen {
   opacity: 1;
-  transform: translateY(0) scale(1);
-  pointer-events: auto
+  pointer-events: auto;
+  max-height: 260px;
+  margin-top: 12px;
+  transform: translateY(0)scale(1)
 }
 
-.GUNS__23-642a4d40-40fa70cf-c0a02fb9>:first-child,
-.GUNS__23-642a4d40-40fa70cf-c0a02fb9>:last-child {
-  transition: opacity .5s ease, transform .64s cubic-bezier(.16, 1, .3, 1)
+.authExperience-module__Zt0w7q__passwordReveal>:first-child,
+.authExperience-module__Zt0w7q__passwordReveal>:last-child {
+  transition: opacity .5s, transform .64s cubic-bezier(.16, 1, .3, 1)
 }
 
-.GUNS__23-642a4d40-40fa70cf-c0a02fb9>:first-child {
+.authExperience-module__Zt0w7q__passwordReveal>:first-child {
   opacity: 0;
   transform: translateY(-8px)
 }
 
-.GUNS__23-642a4d40-40fa70cf-c0a02fb9>:last-child {
+.authExperience-module__Zt0w7q__passwordReveal>:last-child {
   opacity: 0;
   transform: translateY(-4px)
 }
 
-.GUNS__c7-17500567-6217f716-7a97ee3b>:first-child {
+.authExperience-module__Zt0w7q__passwordRevealOpen>:first-child {
   opacity: 1;
-  transform: translateY(0);
-  transition-delay: .08s
+  transition-delay: 80ms;
+  transform: translateY(0)
 }
 
-.GUNS__c7-17500567-6217f716-7a97ee3b>:last-child {
+.authExperience-module__Zt0w7q__passwordRevealOpen>:last-child {
   opacity: 1;
-  transform: translateY(0);
-  transition-delay: .28s
+  transition-delay: .28s;
+  transform: translateY(0)
 }
 
-.GUNS__45-266474b7-5a8780b5-04eefd97 {
-  margin: 0;
+.authExperience-module__Zt0w7q__passwordHint {
   color: #959595;
+  letter-spacing: -.01em;
+  margin: 0;
   font-size: 12px;
-  line-height: 1.35;
-  letter-spacing: -.01em
+  line-height: 1.35
 }
 
-.GUNS__0c-b21132d1-f45c588b-fe59563f {
-  display: flex;
+.authExperience-module__Zt0w7q__pwMeter {
   align-items: center;
   gap: 6px;
+  margin-top: 8px;
   padding: 0 4px;
-  margin-top: 8px
+  display: flex
 }
 
-.GUNS__6c-948d139c-06d7f063-4f5ed67b {
-  height: 6px;
-  flex: 1 1;
-  border-radius: 4px;
+.authExperience-module__Zt0w7q__pwBar {
   background: #2a2a2a;
+  border-radius: 4px;
+  flex: 1 1 0;
+  height: 6px;
   transition: background .2s
 }
 
-.GUNS__51-961e427c-0c27b812-a783c55d {
+.authExperience-module__Zt0w7q__pwOn {
   background: #1fb86b
 }
 
-.GUNS__40-f0a8ca94-bfe90b3e-1047e1a1 {
-  margin-left: 6px;
+.authExperience-module__Zt0w7q__pwLabel {
   color: #aaa;
+  white-space: nowrap;
+  margin-left: 6px;
   font-size: 14px;
-  font-weight: 500;
-  white-space: nowrap
+  font-weight: 500
 }
 
-.GUNS__69-98aee67d-d0acdc30-c06af962 {
-  margin: -2px 0 0;
+.authExperience-module__Zt0w7q__helperText {
   color: #a0a0a0;
+  margin: -2px 0 0;
   font-size: 13.5px;
   line-height: 1.5
 }
 
-.GUNS__f6-5b427ee7-5a76537b-e6dea46d {
-  display: inline-flex;
+.authExperience-module__Zt0w7q__usernameStatus {
+  color: #a7a7a7;
   align-items: center;
   gap: 5px;
+  margin: 0 0 5px 2px;
   font-size: 13.5px;
   font-weight: 500;
-  color: #a7a7a7;
-  margin: 0 0 5px 2px
+  display: inline-flex
 }
 
-.GUNS__e4-55475029-d829da22-7186cb26 {
+.authExperience-module__Zt0w7q__usernameStatusIcon {
   border-radius: 999px;
-  display: inline-flex;
-  align-items: center;
+  flex-shrink: 0;
   justify-content: center;
+  align-items: center;
   font-size: 17px;
-  flex-shrink: 0
+  display: inline-flex
 }
 
-.GUNS__2f-e1ae8fbb-f9d2da11-90916ae4 {
+.authExperience-module__Zt0w7q__usernameStatusSuccess {
   color: #5fda98
 }
 
-.GUNS__d9-12c8a415-6370ab3d-c61e57e3 {
+.authExperience-module__Zt0w7q__usernameStatusError {
   color: #ff7f7f
 }
 
-.GUNS__01-8bdf03da-e20dff75-b7c96152 {
-  border: none;
-  background: transparent;
+.authExperience-module__Zt0w7q__helperAction {
   color: #d4a7e4;
-  padding: 0;
   cursor: pointer;
-  font: inherit
+  font: inherit;
+  background: 0 0;
+  border: none;
+  padding: 0
 }
 
-.GUNS__01-8bdf03da-e20dff75-b7c96152:hover {
+.authExperience-module__Zt0w7q__helperAction:hover {
   color: #efc4ff
 }
 
-.GUNS__5a-a82dc899-d180ac69-24f39e38 {
+.authExperience-module__Zt0w7q__captchaWrapper {
+  justify-content: center;
   padding: 6px;
-  display: flex;
-  justify-content: center
+  display: flex
 }
 
-.GUNS__dc-7f2135d9-1eea7e1b-b51c7e91 {
-  display: flex;
+.authExperience-module__Zt0w7q__actions {
   flex-direction: column;
-  gap: 12px
+  gap: 12px;
+  display: flex
 }
 
-.GUNS__c8-96145e08-8d7f6703-0b6bf39f {
+.authExperience-module__Zt0w7q__registerButton {
   margin-top: 10px
 }
 
-.GUNS__10-6a2580d7-b98eee00-f385b67c,
-.GUNS__5a-d4078f9d-9f841810-20db6dc0,
-.GUNS__f6-66a2fa30-ce94b151-5bb7e563 {
-  width: 100%;
+.authExperience-module__Zt0w7q__primaryButton,
+.authExperience-module__Zt0w7q__secondaryButton,
+.authExperience-module__Zt0w7q__ghostButton {
   box-sizing: border-box;
+  cursor: pointer;
+  border: 1px solid #0000;
   border-radius: 20px;
+  width: 100%;
   padding: 9px 18px;
   font-size: 16px;
   font-weight: 450;
-  border: 1px solid transparent;
-  cursor: pointer;
-  transition: transform .2s ease, background-color .2s ease, border-color .2s ease, opacity .2s ease
+  transition: transform .2s, background-color .2s, border-color .2s, opacity .2s
 }
 
-.GUNS__10-6a2580d7-b98eee00-f385b67c {
+.authExperience-module__Zt0w7q__primaryButton {
+  color: #fff;
   background-color: #da69ff34;
-  color: #ffffff;
   border: 2px solid #7e3f9562
 }
 
-.GUNS__10-6a2580d7-b98eee00-f385b67c:hover:not(:disabled) {
+.authExperience-module__Zt0w7q__primaryButton:hover:not(:disabled) {
   background-color: #da69ff40;
   border-color: #8b49a383
 }
 
-.GUNS__f6-66a2fa30-ce94b151-5bb7e563 {
-  background: #171717;
+.authExperience-module__Zt0w7q__secondaryButton {
   color: #fafafa;
+  background: #171717;
   border: 2px solid #202020
 }
 
-.GUNS__f6-66a2fa30-ce94b151-5bb7e563:hover:not(:disabled) {
+.authExperience-module__Zt0w7q__secondaryButton:hover:not(:disabled) {
   background: #1d1d1d;
   border-color: #252525
 }
 
-.GUNS__5a-d4078f9d-9f841810-20db6dc0 {
-  padding: 0;
-  background: transparent;
+.authExperience-module__Zt0w7q__ghostButton {
   color: #9f9f9f;
+  background: 0 0;
   border: none;
-  width: fit-content
+  width: fit-content;
+  padding: 0
 }
 
-.GUNS__5a-d4078f9d-9f841810-20db6dc0:hover:not(:disabled) {
+.authExperience-module__Zt0w7q__ghostButton:hover:not(:disabled) {
   color: #eef2ff
 }
 
-.GUNS__10-6a2580d7-b98eee00-f385b67c:active:not(:disabled),
-.GUNS__f6-66a2fa30-ce94b151-5bb7e563:active:not(:disabled) {
+.authExperience-module__Zt0w7q__primaryButton:active:not(:disabled),
+.authExperience-module__Zt0w7q__secondaryButton:active:not(:disabled) {
   transform: translateY(2px)
 }
 
-.GUNS__10-6a2580d7-b98eee00-f385b67c:disabled,
-.GUNS__5a-d4078f9d-9f841810-20db6dc0:disabled,
-.GUNS__f6-66a2fa30-ce94b151-5bb7e563:disabled {
+.authExperience-module__Zt0w7q__primaryButton:disabled,
+.authExperience-module__Zt0w7q__secondaryButton:disabled,
+.authExperience-module__Zt0w7q__ghostButton:disabled {
   opacity: .72;
   cursor: default
 }
 
-.GUNS__b4-a2cbd7fc-66a2cd35-0960df23 {
-  display: flex;
+.authExperience-module__Zt0w7q__divider {
+  color: #818181;
+  text-transform: uppercase;
+  letter-spacing: .12em;
   align-items: center;
   gap: 14px;
-  color: #818181;
   font-size: 12px;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: .12em
+  display: flex
 }
 
-.GUNS__b4-a2cbd7fc-66a2cd35-0960df23:after,
-.GUNS__b4-a2cbd7fc-66a2cd35-0960df23:before {
+.authExperience-module__Zt0w7q__divider:before,
+.authExperience-module__Zt0w7q__divider:after {
   content: "";
-  flex: 1 1;
-  height: 1px;
-  background: #222222
+  background: #222;
+  flex: 1 1 0;
+  height: 1px
 }
 
-.GUNS__e6-75cdf462-19e99fde-0268b026 {
+.authExperience-module__Zt0w7q__inlineLink {
   color: #d4a7e4;
-  text-decoration: none;
   font-weight: 450;
-  transition: .25s
+  text-decoration: none;
+  transition: all .25s
 }
 
-.GUNS__e6-75cdf462-19e99fde-0268b026:hover {
+.authExperience-module__Zt0w7q__inlineLink:hover {
   color: #e2b2f3
 }
 
-.GUNS__e4-6071c658-d2b0f2b7-e53e57b5 {
+.authExperience-module__Zt0w7q__footer {
   color: #dbdbdb;
   text-align: center;
   font-size: 15px
 }
 
-.GUNS__c6-87364632-9e6c7623-b96c1e71 {
+.authExperience-module__Zt0w7q__legal {
   color: #979797;
   text-align: left;
   font-size: 13px;
   line-height: 1.55
 }
 
-.GUNS__c6-87364632-9e6c7623-b96c1e71 a {
+.authExperience-module__Zt0w7q__legal a {
   color: #cfcfcf;
   text-decoration: none
 }
 
-.GUNS__2a-a7973ff3-7cbcb4d2-9e607fec {
-  background-color: rgba(255, 0, 0, .22);
-  border: 2px solid rgba(255, 0, 0, .144);
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-  border-radius: 15px;
+.authExperience-module__Zt0w7q__errorBanner {
   color: #fafafa;
-  width: 100%;
   box-sizing: border-box;
-  text-align: center
+  text-align: center;
+  background-color: #ff000038;
+  border: 2px solid #ff000025;
+  border-radius: 15px;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  display: flex
 }
 
-.GUNS__f7-b2506e9d-5ad54acc-a17de706 {
-  display: flex;
+.authExperience-module__Zt0w7q__agreementList {
   flex-direction: column;
-  gap: 12px
+  gap: 12px;
+  display: flex
 }
 
-.GUNS__7d-04109ec2-3718b181-c07a8ae6 {
-  display: flex;
-  gap: 11px;
-  align-items: flex-start;
+.authExperience-module__Zt0w7q__agreement {
   color: #d6d6d6;
+  align-items: flex-start;
+  gap: 11px;
   font-size: 15px;
-  line-height: 1.55
+  line-height: 1.55;
+  display: flex
 }
 
-.GUNS__7d-04109ec2-3718b181-c07a8ae6 a {
-  color: #999999;
+.authExperience-module__Zt0w7q__agreement a {
+  color: #999;
   text-decoration: none
 }
 
-.GUNS__7d-04109ec2-3718b181-c07a8ae6 h1 {
+.authExperience-module__Zt0w7q__agreement h1 {
+  color: inherit;
   margin: 0;
   font-size: 15px;
-  font-weight: 400;
-  color: inherit
+  font-weight: 400
 }
 
-.GUNS__1f-c77455b9-ac469be4-f87f6d43 {
-  display: flex;
+.authExperience-module__Zt0w7q__metaRow {
   justify-content: right;
   align-items: center;
-  gap: 8px
+  gap: 8px;
+  display: flex
 }
 
-.GUNS__00-d88c62d6-92f5f060-d1d481d8 {
+.authExperience-module__Zt0w7q__metaRowWrap {
   flex-wrap: wrap
 }
 
-.GUNS__3e-c2d572cb-58743bcb-2df8e4f5 {
+.authExperience-module__Zt0w7q__subtleText {
   color: #959595;
-  font-size: 12px;
-  line-height: 1.3;
   max-width: 255px;
-  margin: 0
-}
-
-.GUNS__a3-76a9fc98-97b5d80d-7d593425 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  text-align: center
-}
-
-.GUNS__43-90338eb0-a185e4f3-c6708f91 {
-  display: flex;
-  font-size: 36px;
-  color: #fafafa
-}
-
-.GUNS__b1-4991f7f7-2c10a839-835b671f {
   margin: 0;
+  font-size: 12px;
+  line-height: 1.3
+}
+
+.authExperience-module__Zt0w7q__centeredStack {
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  display: flex
+}
+
+.authExperience-module__Zt0w7q__loadingIcon {
+  color: #fafafa;
+  font-size: 36px;
+  display: flex
+}
+
+.authExperience-module__Zt0w7q__loadingMessage {
   color: #a8a8a8;
+  margin: 0;
   font-size: 14px
 }
 
-.GUNS__b0-1fa9e72c-ce09a97a-c9f5113e {
-  border: none;
-  background: transparent;
+.authExperience-module__Zt0w7q__footerButton {
   color: #9f9f9f;
   font: inherit;
   cursor: pointer;
+  background: 0 0;
+  border: none;
   padding: 0;
-  transition: color .2s ease, opacity .2s ease
+  transition: color .2s, opacity .2s
 }
 
-.GUNS__b0-1fa9e72c-ce09a97a-c9f5113e:hover:not(:disabled) {
+.authExperience-module__Zt0w7q__footerButton:hover:not(:disabled) {
   color: #efc4ff
 }
 
-.GUNS__b0-1fa9e72c-ce09a97a-c9f5113e:disabled {
+.authExperience-module__Zt0w7q__footerButton:disabled {
   opacity: .72;
   cursor: default
 }
 
-.GUNS__99-379e6dbe-fe588d17-fcdd703a {
-  display: flex;
+.authExperience-module__Zt0w7q__modalStack {
   flex-direction: column;
-  gap: 18px
+  gap: 18px;
+  display: flex
 }
 
-.GUNS__cd-07a99d77-549a643f-db49651b {
-  display: flex;
+.authExperience-module__Zt0w7q__modalTextBlock {
   flex-direction: column;
-  gap: 6px
+  gap: 6px;
+  display: flex
 }
 
-.GUNS__95-f530aba2-c320b062-f2c552e7 {
-  margin: 0;
+.authExperience-module__Zt0w7q__modalTitle {
   color: #fafafa;
+  margin: 0;
   font-size: 18px;
   font-weight: 600
 }
 
-.GUNS__42-a9143a80-c38e682b-0566da5c {
-  margin: 0;
+.authExperience-module__Zt0w7q__modalDescription {
   color: #a4a4a4;
+  margin: 0;
   font-size: 14px;
   line-height: 1.55
 }
 
-.GUNS__22-72e4f54d-28217121-a57c7370 {
-  width: 100%;
+.authExperience-module__Zt0w7q__socialButton {
+  color: #fafafa;
+  cursor: pointer;
+  background: #171717;
   border: 2px solid #1c1c1c;
   border-radius: 17px;
-  padding: 10px 16px;
-  display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 12px;
-  background: #171717;
-  color: #fafafa;
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 16px;
   font-size: 16px;
   font-weight: 450;
-  cursor: pointer;
-  min-height: 48px;
-  transition: transform .2s ease, border-color .2s ease, background-color .2s ease;
+  transition: transform .2s, border-color .2s, background-color .2s;
+  display: flex;
   position: relative
 }
 
-.GUNS__22-72e4f54d-28217121-a57c7370 svg {
+.authExperience-module__Zt0w7q__socialButton svg {
   font-size: 22px
 }
 
-.GUNS__22-72e4f54d-28217121-a57c7370:hover:not(:disabled) {
-  border-color: #232323;
-  background: #1c1c1c
+.authExperience-module__Zt0w7q__socialButton:hover:not(:disabled) {
+  background: #1c1c1c;
+  border-color: #232323
 }
 
-.GUNS__22-72e4f54d-28217121-a57c7370:active:not(:disabled) {
+.authExperience-module__Zt0w7q__socialButton:active:not(:disabled) {
   transform: translateY(2px)
 }
 
-.GUNS__22-72e4f54d-28217121-a57c7370:disabled {
+.authExperience-module__Zt0w7q__socialButton:disabled {
   opacity: .72;
   cursor: default
 }
 
-.GUNS__6e-c2d7ec2d-4a2d732f-27005715 {
-  position: absolute;
-  top: -12px;
-  right: -14px;
-  font-size: 11.5px;
+.authExperience-module__Zt0w7q__socialLastUsedBadge {
   color: #d5d5d5;
-  border: 2px solid #212121;
+  pointer-events: none;
   background-color: #1c1c1c;
+  border: 2px solid #212121;
   border-radius: 999px;
   padding: 4px 7px;
-  pointer-events: none
+  font-size: 11.5px;
+  position: absolute;
+  top: -12px;
+  right: -14px
 }
 
-.GUNS__2a-3577845c-bdff22dd-b868672c {
-  background-color: #111111;
+.authExperience-module__Zt0w7q__summaryCard {
+  background-color: #111;
   border: 2px solid #161616;
   border-radius: 20px;
   padding: 16px
 }
 
-.GUNS__94-7a8c75e6-69c9c8cc-768bc580 {
-  width: 100%;
+.authExperience-module__Zt0w7q__summaryCardButton {
   text-align: left;
   cursor: pointer;
-  transition: border-color .2s ease, background-color .2s ease, opacity .2s ease
+  width: 100%;
+  transition: border-color .2s, background-color .2s, opacity .2s
 }
 
-.GUNS__94-7a8c75e6-69c9c8cc-768bc580:hover:not(:disabled) {
+.authExperience-module__Zt0w7q__summaryCardButton:hover:not(:disabled) {
   background-color: #151515;
   border-color: #1f1f1f
 }
 
-.GUNS__94-7a8c75e6-69c9c8cc-768bc580:disabled {
+.authExperience-module__Zt0w7q__summaryCardButton:disabled {
   opacity: .72;
   cursor: default
 }
 
-.GUNS__25-bb6b5ef1-4b5586a0-05b41ca6 {
-  width: fit-content;
-  display: inline-flex;
-  align-items: center;
-  gap: 3px;
-  padding: 0;
-  margin: -2px 0 0;
-  border: none;
-  border-radius: 0;
-  background: transparent;
+.authExperience-module__Zt0w7q__stepBackButton {
   color: #a8a8a8;
-  font-size: 14px;
-  font-weight: 500;
   letter-spacing: .01em;
   cursor: pointer;
-  transition: color .2s ease, opacity .2s ease, transform .2s ease
+  background: 0 0;
+  border: none;
+  border-radius: 0;
+  align-items: center;
+  gap: 3px;
+  width: fit-content;
+  margin: -2px 0 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color .2s, opacity .2s, transform .2s;
+  display: inline-flex
 }
 
-.GUNS__25-bb6b5ef1-4b5586a0-05b41ca6:hover:not(:disabled) {
+.authExperience-module__Zt0w7q__stepBackButton:hover:not(:disabled) {
   color: #fafafa
 }
 
-.GUNS__25-bb6b5ef1-4b5586a0-05b41ca6:active:not(:disabled) {
+.authExperience-module__Zt0w7q__stepBackButton:active:not(:disabled) {
   transform: translateY(1px)
 }
 
-.GUNS__25-bb6b5ef1-4b5586a0-05b41ca6:disabled {
+.authExperience-module__Zt0w7q__stepBackButton:disabled {
   opacity: .72;
   cursor: default
 }
 
-.GUNS__6c-ab3996a5-b61a3a52-527ec341 {
-  width: 18px;
-  height: 18px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.authExperience-module__Zt0w7q__stepBackIcon {
   color: #b8b8b8;
   flex-shrink: 0;
-  transition: color .2s ease
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  transition: color .2s;
+  display: inline-flex
 }
 
-.GUNS__25-bb6b5ef1-4b5586a0-05b41ca6:hover:not(:disabled) .GUNS__6c-ab3996a5-b61a3a52-527ec341 {
+.authExperience-module__Zt0w7q__stepBackButton:hover:not(:disabled) .authExperience-module__Zt0w7q__stepBackIcon {
   color: #f1f1f1
 }
 
-.GUNS__6c-ab3996a5-b61a3a52-527ec341 svg {
+.authExperience-module__Zt0w7q__stepBackIcon svg {
   width: 16px;
   height: 16px;
   display: block
 }
 
-.GUNS__ff-703b7764-0486dad4-79567f96 {
-  display: flex;
+.authExperience-module__Zt0w7q__summaryGrid {
   flex-direction: column;
-  gap: 10px
+  gap: 10px;
+  display: flex
 }
 
-.GUNS__5d-a3873266-0472efe3-a0476bef {
-  display: flex;
+.authExperience-module__Zt0w7q__providerRow {
   align-items: center;
   gap: 12px;
-  padding-bottom: 2px
+  padding-bottom: 2px;
+  display: flex
 }
 
-.GUNS__b9-face83f1-28428d73-63bc927a {
-  display: flex;
+.authExperience-module__Zt0w7q__summaryInfoBlock {
   flex-direction: column;
   gap: 4px;
-  padding: 2px 2px 0
+  padding: 2px 2px 0;
+  display: flex
 }
 
-.GUNS__0e-bccaf896-7e4328c8-1ca95153 {
-  display: flex;
-  align-items: center;
+.authExperience-module__Zt0w7q__summaryHeader {
   justify-content: space-between;
-  gap: 12px
-}
-
-.GUNS__b7-30d67775-73d1fcb8-87ee4cef {
-  color: #8e8e8e;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: .01em
-}
-
-.GUNS__15-a8b85626-4d5a9bd5-8cdc23a3 {
-  color: #b6b6b6;
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: -.01em
-}
-
-.GUNS__ee-9bf8d738-891283cc-75aea248 {
-  color: #fafafa;
-  font-size: 16px;
-  font-weight: 500;
-  word-break: break-word
-}
-
-.GUNS__e4-ee6e9ce7-a80ed033-13a5116f {
-  display: inline-flex;
   align-items: center;
-  gap: 6px;
-  color: #8f8f8f;
-  font-size: 13px;
-  font-weight: 500;
-  flex-shrink: 0;
-  transition: color .2s ease
+  gap: 12px;
+  display: flex
 }
 
-.GUNS__e4-ee6e9ce7-a80ed033-13a5116f svg {
-  font-size: 14px
-}
-
-.GUNS__94-7a8c75e6-69c9c8cc-768bc580:hover:not(:disabled) .GUNS__e4-ee6e9ce7-a80ed033-13a5116f {
-  color: #d7d7d7
-}
-
-.GUNS__e9-eef25a6c-2cd3dce0-2e89e559 {
-  width: 42px;
-  height: 42px;
-  border-radius: 14px;
-  background: #171717;
-  border: 1px solid #232323;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0
-}
-
-.GUNS__e9-eef25a6c-2cd3dce0-2e89e559 span {
-  display: flex;
-  font-size: 20px;
-  color: #f3f3f3
-}
-
-.GUNS__da-188f5854-e797e0f5-2687bdfc {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  min-width: 0
-}
-
-.GUNS__55-ca973a89-e22aa71f-92108d22 {
+.authExperience-module__Zt0w7q__summaryLabel {
   color: #8e8e8e;
   letter-spacing: .01em;
   font-size: 12px;
   font-weight: 600
 }
 
-.GUNS__1a-2f6ae9b2-810babcb-1fcbf09f {
+.authExperience-module__Zt0w7q__summaryLabelPlain {
+  color: #b6b6b6;
+  letter-spacing: -.01em;
+  font-size: 15px;
+  font-weight: 500
+}
+
+.authExperience-module__Zt0w7q__summaryValue {
+  color: #fafafa;
+  word-break: break-word;
+  font-size: 16px;
+  font-weight: 500
+}
+
+.authExperience-module__Zt0w7q__summaryEditAction {
+  color: #8f8f8f;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: color .2s;
+  display: inline-flex
+}
+
+.authExperience-module__Zt0w7q__summaryEditAction svg {
+  font-size: 14px
+}
+
+.authExperience-module__Zt0w7q__summaryCardButton:hover:not(:disabled) .authExperience-module__Zt0w7q__summaryEditAction {
+  color: #d7d7d7
+}
+
+.authExperience-module__Zt0w7q__providerIconWrap {
+  background: #171717;
+  border: 1px solid #232323;
+  border-radius: 14px;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  display: inline-flex
+}
+
+.authExperience-module__Zt0w7q__providerIconWrap span {
+  color: #f3f3f3;
+  font-size: 20px;
+  display: flex
+}
+
+.authExperience-module__Zt0w7q__providerMeta {
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+  display: flex
+}
+
+.authExperience-module__Zt0w7q__providerEyebrow {
+  color: #8e8e8e;
+  letter-spacing: .01em;
+  font-size: 12px;
+  font-weight: 600
+}
+
+.authExperience-module__Zt0w7q__providerName {
   color: #fafafa;
   font-size: 15px;
   font-weight: 600
 }
 
 @media (max-width:560px) {
-  .GUNS__46-85dd92a2-f2354121-569442c3 {
+  .authExperience-module__Zt0w7q__page {
     height: auto;
     min-height: 100svh;
     padding: 35px 14px
   }
 
-  .GUNS__7b-a367b144-ef9b1f6d-e8949708 {
-    max-width: 100%;
+  .authExperience-module__Zt0w7q__panel {
     gap: 16px;
-    padding: 24px;
-    max-height: none
+    max-width: 100%;
+    max-height: none;
+    padding: 24px
   }
 
-  .GUNS__00-7f909a44-f8066d24-d9f24204 {
+  .authExperience-module__Zt0w7q__title {
     font-size: 20px
   }
 
-  .GUNS__54-c6de9bab-e78ba7fe-aceedc06 {
+  .authExperience-module__Zt0w7q__subtitle {
     font-size: 14px
   }
 
-  .GUNS__41-3784a145-ff7d1e0b-75f09ae3 {
-    font-size: 15px;
-    padding: 13px 14px
+  .authExperience-module__Zt0w7q__fieldInput {
+    padding: 13px 14px;
+    font-size: 15px
   }
 
-  .GUNS__fd-588f5ac1-50574dca-ebe0da3f {
+  .authExperience-module__Zt0w7q__fieldInputWithPrefix {
     padding-left: 88px
   }
 }
 
-.GUNS__8b-5ebd3e81-e7fd2212-221f8255 {
+.authExperience-module__Zt0w7q__usernameSection {
   gap: 7px
 }
 
-.GUNS__f5-85f750c2-b172755c-dfcf1f52 {
-  display: flex;
+.authExperience-module__Zt0w7q__footerContainer {
   flex-direction: column;
   align-items: center;
-  gap: 8px
+  gap: 8px;
+  display: flex
 }
 
-.GUNS__5e-0d557c88-14dbf77c-7c8b9b18 {
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 7px
+.authSocialButtons-module__w6Pl8G__socialButtons {
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  display: flex
 }
 
-.GUNS__9e-8c8ed7a0-91daed06-042363f1 {
+.authSocialButtons-module__w6Pl8G__compact {
+  gap: 11px
+}
+
+.authSocialButtons-module__w6Pl8G__socialButton {
+  color: #fafafa;
+  cursor: pointer;
+  background: #171717;
+  border: 2px solid #1c1c1c;
+  border-radius: 17px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: 450;
+  transition: transform .2s, border-color .2s, background-color .2s;
   display: flex;
+  position: relative
+}
+
+.authSocialButtons-module__w6Pl8G__socialButton:hover:not(:disabled) {
+  background: #1c1c1c;
+  border-color: #232323
+}
+
+.authSocialButtons-module__w6Pl8G__socialButton:active:not(:disabled) {
+  transform: translateY(2px)
+}
+
+.authSocialButtons-module__w6Pl8G__socialButton:disabled {
+  opacity: .72;
+  cursor: default
+}
+
+.authSocialButtons-module__w6Pl8G__icon {
+  color: #fff;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  display: flex
+}
+
+.authSocialButtons-module__w6Pl8G__icon svg {
+  display: block
+}
+
+.authSocialButtons-module__w6Pl8G__buttonText {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden
+}
+
+.authSocialButtons-module__w6Pl8G__lastUsedBadge {
+  color: #d5d5d5;
+  pointer-events: none;
+  background-color: #1c1c1c;
+  border: 2px solid #212121;
+  border-radius: 999px;
+  padding: 4px 7px;
+  font-size: 11.5px;
+  position: absolute;
+  top: -12px;
+  right: -14px
+}
+
+.recovery-module__0x6wWq__recoveryCards {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 7px;
+  display: grid
+}
+
+.recovery-module__0x6wWq__recoveryCard {
+  background: #171717;
+  border: 2px solid #1c1c1c;
+  border-radius: 17px;
   align-items: center;
   gap: 10px;
   padding: 11px;
-  border: 2px solid #1c1c1c;
-  border-radius: 17px;
-  background: #171717;
   text-decoration: none;
-  transition: border-color .22s ease, transform .22s ease, background-color .22s ease
+  transition: border-color .22s, transform .22s, background-color .22s;
+  display: flex
 }
 
-.GUNS__9e-8c8ed7a0-91daed06-042363f1:hover {
+.recovery-module__0x6wWq__recoveryCard:hover {
+  background: #1c1c1c;
   border-color: #232323;
-  transform: translateY(-1px);
-  background: #1c1c1c
+  transform: translateY(-1px)
 }
 
-.GUNS__fa-870888a3-41ced431-69976c61 {
-  display: inline-flex;
-  align-items: center;
+.recovery-module__0x6wWq__cardIcon {
+  color: #cfcfcf;
+  background-color: #141414;
+  border-radius: 8px;
   justify-content: center;
+  align-items: center;
   width: 28px;
   height: 28px;
-  border-radius: 8px;
-  background-color: #141414;
-  color: #cfcfcf
+  display: inline-flex
 }
 
-.GUNS__fa-870888a3-41ced431-69976c61 svg {
+.recovery-module__0x6wWq__cardIcon svg {
   width: 16px;
   height: 16px
 }
 
-.GUNS__9e-8c8ed7a0-91daed06-042363f1 h2 {
-  margin: 0;
+.recovery-module__0x6wWq__recoveryCard h2 {
   color: #f4f4f4;
+  margin: 0;
   font-size: 14px;
   font-weight: 550
 }
 
-.GUNS__5b-761a0f57-0a72a245-a5e5862d {
-  display: flex;
+.recovery-module__0x6wWq__startContainer {
   flex-direction: column;
-  gap: 15px
+  gap: 15px;
+  display: flex
 }
 
-.GUNS__5f-c11e9e70-ea9f1f93-c52fcac0 {
-  margin: 0;
+.recovery-module__0x6wWq__helper {
   color: #a5a5a5;
+  margin: 0;
   font-size: 14px
 }
 
-.GUNS__b3-5cfe527f-09a26f8a-f0ec6c79 {
-  display: flex;
+.recovery-module__0x6wWq__startForm {
   flex-direction: column;
-  gap: 12px
+  gap: 12px;
+  display: flex
 }
 
-.GUNS__45-5784a138-6fe270ee-e343f6b4 {
-  display: flex;
+.recovery-module__0x6wWq__checklist {
   flex-direction: column;
   gap: 8px;
-  margin-top: 4px
+  margin-top: 4px;
+  display: flex
 }
 
-.GUNS__46-63ee2a12-ff58e5db-11bce2b8 {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
+.recovery-module__0x6wWq__checklistItem {
+  color: #ddd;
+  background-color: #151515;
   border: 2px solid #1a1a1a;
   border-radius: 15px;
+  justify-content: space-between;
+  gap: 10px;
   padding: 10px 12px;
-  background-color: #151515;
-  color: #dddddd;
-  font-size: 14px
+  font-size: 14px;
+  display: flex
 }
 
-.GUNS__49-1a6948fa-d82bdf5c-8402712f {
+.recovery-module__0x6wWq__checkStatus {
   color: #969696;
   text-transform: capitalize
 }
 
-.GUNS__9e-2c55b8fb-1dc10264-aa77dc4f {
+.recovery-module__0x6wWq__checkStatusPass {
   color: #93d8a3
 }
 
-.GUNS__4b-cd81bbff-2989e18b-5b9e71f9 {
-  display: grid;
+.recovery-module__0x6wWq__evidenceGrid {
   grid-template-columns: 1fr;
-  gap: 10px
+  gap: 10px;
+  display: grid
 }
 
-.GUNS__f5-0d50b4ab-01b24d47-e574ae4f {
+.recovery-module__0x6wWq__messageBox {
+  color: #dadada;
+  background-color: #151515;
   border: 2px solid #1b1b1b;
   border-radius: 15px;
-  background-color: #151515;
-  color: #dadada;
   padding: 11px 12px;
   font-size: 14px;
   line-height: 1.45
 }
 
-.GUNS__b1-0f468169-94496de0-7c6ff945 {
-  display: grid;
+.recovery-module__0x6wWq__wizardActions {
   grid-template-columns: 1fr 1fr;
-  gap: 10px
+  gap: 10px;
+  display: grid
 }
 
-.GUNS__01-e71f52ef-fbee82c6-1d2aeef2 {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.recovery-module__0x6wWq__resultContainer {
+  background: #151515;
   border: 2px solid #1a1a1a;
   border-radius: 16px;
-  background: #151515;
-  padding: 14px
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px;
+  display: flex
 }
 
-.GUNS__3d-08fdbffa-110c55c5-8fbe9390 {
-  margin: 0;
+.recovery-module__0x6wWq__resultTitle {
   color: #f2f2f2;
+  margin: 0;
   font-size: 16px;
   font-weight: 580
 }
 
-.GUNS__3d-0ba865cd-642c9fd3-12030801 {
-  margin: 0;
+.recovery-module__0x6wWq__resultBody {
   color: #bcbcbc;
+  margin: 0;
   font-size: 14px;
   line-height: 1.5
 }
 
-.GUNS__29-1973ca05-a4da642b-543c63ee {
-  margin: 0;
+.recovery-module__0x6wWq__resultMeta {
   color: #9c9c9c;
+  margin: 0;
   font-size: 13px
 }
 
-.GUNS__b7-3b22f219-221eddcb-8f7ee495 {
-  display: grid;
+.recovery-module__0x6wWq__resultActions {
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-  margin-top: 4px
+  margin-top: 4px;
+  display: grid
 }
 
 @media (max-width:500px) {
-  .GUNS__9e-8c8ed7a0-91daed06-042363f1 {
+  .recovery-module__0x6wWq__recoveryCard {
     padding: 9px 11px
   }
 }
 
-.GUNS__c7-bc3b8b45-b7d9da39-153ca154 {
-  text-decoration: none;
-  text-align: center
+.recovery-module__0x6wWq__contactSupportButton {
+  text-align: center;
+  text-decoration: none
 }
 
-.GUNS__db-c1663c2f-5f435fa0-95665a7c {
-  display: flex;
+.recovery-module__0x6wWq__oauthButton {
+  justify-content: center;
   align-items: center;
   gap: 7px;
-  justify-content: center
+  display: flex
 }
 
-.GUNS__b9-0f02e1f1-aed2f6d3-ac115989 {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+.recovery-module__0x6wWq__oauthInformation {
+  background-color: #151515;
   border: 2px solid #1a1a1a;
   border-radius: 15px;
-  background-color: #151515;
-  padding: 12px
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px;
+  display: flex
 }
 
-.GUNS__b9-0f02e1f1-aed2f6d3-ac115989 h1 {
-  margin: 0;
+.recovery-module__0x6wWq__oauthInformation h1 {
   color: #f4f4f4;
+  margin: 0;
   font-size: 16.5px;
   font-weight: 600
 }
 
-.GUNS__b9-0f02e1f1-aed2f6d3-ac115989 h3 {
-  margin: 0;
+.recovery-module__0x6wWq__oauthInformation h3 {
   color: #a5a5a5;
+  margin: 0;
   font-size: 13px;
   font-weight: 500
 }
 
-.GUNS__9b-69a82901-05de711d-a828b6fc {
-  margin-top: 10px;
+.recovery-module__0x6wWq__recoveryHelper {
+  background-color: #151515;
   border: 2px solid #1b1b1b;
   border-radius: 15px;
-  background-color: #151515;
+  margin-top: 10px;
   padding: 11px 12px
 }
 
-.GUNS__9b-69a82901-05de711d-a828b6fc h1 {
-  margin: 0;
+.recovery-module__0x6wWq__recoveryHelper h1 {
   color: #f2f2f2;
+  margin: 0;
   font-size: 14px;
   font-weight: 450
 }
 
-.GUNS__0b-f161207f-83247a2c-b8b11e9e {
+.recovery-module__0x6wWq__finalizeChangesPanel {
+  background: linear-gradient(#161616 0%, #141414 100%);
   border: 2px solid #1b1b1b;
   border-radius: 18px;
-  background: linear-gradient(180deg, #161616, #141414);
   padding: 12px
 }
 
-.GUNS__c1-05cea06d-d9937a86-20e7bd9b {
-  margin: 0;
+.recovery-module__0x6wWq__finalizeChangesTitle {
   color: #f1f1f1;
+  letter-spacing: -.01em;
+  margin: 0;
   font-size: 18px;
-  font-weight: 600;
-  letter-spacing: -.01em
+  font-weight: 600
 }
 
-.GUNS__29-fa41f9c4-1d789709-0230cd43 {
-  margin: 10px 0 0;
+.recovery-module__0x6wWq__finalizeChangesLoading {
   color: #a8a8a8;
+  margin: 10px 0 0;
   font-size: 14px
 }
 
-.GUNS__57-7eb3557c-7df3f6b1-dd8aa5a1 {
-  list-style: none;
+.recovery-module__0x6wWq__finalizeChangesList {
+  flex-direction: column;
+  gap: 8px;
   margin: 11px 0 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px
+  list-style: none;
+  display: flex
 }
 
-.GUNS__2e-1a67a3d9-3c6f81c2-ede6f7ef {
-  display: flex;
+.recovery-module__0x6wWq__finalizeChangesItem {
+  color: #e2e2e2;
   align-items: flex-start;
   gap: 10px;
-  color: #e2e2e2;
-  font-size: 14px
+  font-size: 14px;
+  display: flex
 }
 
-.GUNS__93-5ee561b7-7dc20d7c-9af3a106 {
+.recovery-module__0x6wWq__finalizeChangesDot {
   color: #fafafa;
   font-size: 16px;
   line-height: 1.2;
   transform: translateY(-1px)
 }
 
-.GUNS__d4-0f2b7dc1-d271521b-9c261c3b {
+.recovery-module__0x6wWq__inlineActionLink {
   color: #d8befa;
-  text-decoration: underline;
   text-underline-offset: 2px;
-  font-weight: 520
+  font-weight: 520;
+  text-decoration: underline
 }
 
-.GUNS__d4-0f2b7dc1-d271521b-9c261c3b:hover {
+.recovery-module__0x6wWq__inlineActionLink:hover {
   color: #e5d2ff
 }

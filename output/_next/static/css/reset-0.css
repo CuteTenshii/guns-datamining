@@ -1,98 +1,98 @@
-.GUNS__2d-fc4d7f33-97c9e6f2-2dbaa40b {
-  display: flex;
+.resetPassword-module__DrY0uW__containerWrapper {
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  height: 100vh
+  height: 100vh;
+  display: flex
 }
 
-.GUNS__af-d5284ea4-8478140e-84d3ba2d {
+.resetPassword-module__DrY0uW__container {
+  box-sizing: border-box;
   background-color: #101010;
   border: 2px solid #161616;
-  padding: 25px;
-  display: flex;
+  border-radius: 15px;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  border-radius: 15px;
-  box-sizing: border-box;
   width: 100%;
-  max-width: 500px
+  max-width: 500px;
+  padding: 25px;
+  display: flex
 }
 
-.GUNS__af-d5284ea4-8478140e-84d3ba2d h1:not(.GUNS__49-c99ec0a0-9fa2db3f-89ea2104 h1),
-.GUNS__af-d5284ea4-8478140e-84d3ba2d h3 {
+.resetPassword-module__DrY0uW__container h1:not(.resetPassword-module__DrY0uW__emailGap h1),
+.resetPassword-module__DrY0uW__container h3 {
   margin: 0
 }
 
-.GUNS__af-d5284ea4-8478140e-84d3ba2d h1:not(.GUNS__49-c99ec0a0-9fa2db3f-89ea2104 h1) {
+.resetPassword-module__DrY0uW__container h1:not(.resetPassword-module__DrY0uW__emailGap h1) {
+  color: #fafafa;
   font-size: 23px;
-  font-weight: 500;
-  color: #fafafa
+  font-weight: 500
 }
 
-.GUNS__af-d5284ea4-8478140e-84d3ba2d h3 {
-  margin-top: 4px !important;
+.resetPassword-module__DrY0uW__container h3 {
+  color: #939393;
   font-size: 16px;
   font-weight: 450;
-  color: #939393
+  margin-top: 4px !important
 }
 
-.GUNS__c6-ce568b28-6ae1dc8a-d08c7d46 {
+.resetPassword-module__DrY0uW__containerButtons {
+  flex-direction: column;
   margin-top: 20px;
-  display: flex;
-  flex-direction: column
+  display: flex
 }
 
-.GUNS__95-2322eb3d-769bc203-766b4197 {
-  width: fit-content;
+.resetPassword-module__DrY0uW__submitButton {
   color: #fafafa;
-  text-decoration: none;
-  padding: 7px 15px;
-  border: 2px solid #191919;
-  background-color: #151515;
-  border-radius: 12px;
-  transition: .2s;
   cursor: pointer;
-  display: flex;
-  align-items: center
+  background-color: #151515;
+  border: 2px solid #191919;
+  border-radius: 12px;
+  align-items: center;
+  width: fit-content;
+  padding: 7px 15px;
+  text-decoration: none;
+  transition: all .2s;
+  display: flex
 }
 
-.GUNS__95-2322eb3d-769bc203-766b4197 svg {
+.resetPassword-module__DrY0uW__submitButton svg {
   font-size: 23px
 }
 
-.GUNS__95-2322eb3d-769bc203-766b4197:active {
+.resetPassword-module__DrY0uW__submitButton:active {
   transform: translateY(4px)
 }
 
-.GUNS__95-2322eb3d-769bc203-766b4197:hover {
-  border: 2px solid #222222;
-  background-color: #181818
+.resetPassword-module__DrY0uW__submitButton:hover {
+  background-color: #181818;
+  border: 2px solid #222
 }
 
-.GUNS__49-c99ec0a0-9fa2db3f-89ea2104 {
-  width: 100%;
+.resetPassword-module__DrY0uW__emailGap {
   box-sizing: border-box;
-  margin-top: 15px;
-  display: flex;
   flex-direction: column;
-  gap: 13px
+  gap: 13px;
+  width: 100%;
+  margin-top: 15px;
+  display: flex
 }
 
-.GUNS__49-c99ec0a0-9fa2db3f-89ea2104 input {
+.resetPassword-module__DrY0uW__emailGap input {
   direction: ltr !important
 }
 
-@media(max-width:560px) {
-  .GUNS__af-d5284ea4-8478140e-84d3ba2d {
-    width: 93%;
-    box-sizing: border-box
+@media (max-width:560px) {
+  .resetPassword-module__DrY0uW__container {
+    box-sizing: border-box;
+    width: 93%
   }
 }
 
-.GUNS__15-788219d7-e3bdaaf7-4d183137 {
+.resetPassword-module__DrY0uW__captchaWrapper {
+  justify-content: center;
   width: 100%;
-  display: flex;
-  justify-content: center
+  display: flex
 }
