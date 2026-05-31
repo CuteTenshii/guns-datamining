@@ -1,88 +1,88 @@
-.resetPasswordComponent-module__ocwg3G__containerWrapper {
-  flex-direction: column;
+.resetPasswordComponent_containerWrapper__cYt6e {
+  display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  display: flex
+  flex-direction: column;
+  height: 100vh
 }
 
-.resetPasswordComponent-module__ocwg3G__container {
-  box-sizing: border-box;
+.resetPasswordComponent_container__PWplD {
   background-color: #101010;
   border: 2px solid #161616;
-  border-radius: 15px;
+  padding: 25px;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  border-radius: 15px;
+  box-sizing: border-box;
   width: 100%;
-  max-width: 500px;
-  padding: 25px;
-  display: flex
+  max-width: 500px
 }
 
-.resetPasswordComponent-module__ocwg3G__container h1:not(.resetPasswordComponent-module__ocwg3G__passwordGap h1),
-.resetPasswordComponent-module__ocwg3G__container h3 {
+.resetPasswordComponent_container__PWplD h1:not(.resetPasswordComponent_passwordGap__9o5Ge h1),
+.resetPasswordComponent_container__PWplD h3 {
   margin: 0
 }
 
-.resetPasswordComponent-module__ocwg3G__container h1:not(.resetPasswordComponent-module__ocwg3G__passwordGap h1) {
-  color: #fafafa;
+.resetPasswordComponent_container__PWplD h1:not(.resetPasswordComponent_passwordGap__9o5Ge h1) {
   font-size: 23px;
-  font-weight: 500
+  font-weight: 500;
+  color: #fafafa
 }
 
-.resetPasswordComponent-module__ocwg3G__container h3 {
-  color: #939393;
+.resetPasswordComponent_container__PWplD h3 {
+  margin-top: 4px !important;
   font-size: 16px;
   font-weight: 450;
-  margin-top: 4px !important
+  color: #939393
 }
 
-.resetPasswordComponent-module__ocwg3G__containerButtons {
-  flex-direction: column;
+.resetPasswordComponent_containerButtons__8LJKP {
   margin-top: 10px;
-  display: flex
+  display: flex;
+  flex-direction: column
 }
 
-.resetPasswordComponent-module__ocwg3G__submitButton {
-  color: #fafafa;
-  cursor: pointer;
-  background-color: #151515;
-  border: 2px solid #191919;
-  border-radius: 12px;
-  align-items: center;
+.resetPasswordComponent_submitButton__Ydzuq {
   width: fit-content;
-  padding: 7px 15px;
+  color: #fafafa;
   text-decoration: none;
-  transition: all .2s;
-  display: flex
+  padding: 7px 15px;
+  border: 2px solid #191919;
+  background-color: #151515;
+  border-radius: 12px;
+  transition: .2s;
+  cursor: pointer;
+  display: flex;
+  align-items: center
 }
 
-.resetPasswordComponent-module__ocwg3G__submitButton svg {
+.resetPasswordComponent_submitButton__Ydzuq svg {
   font-size: 23px
 }
 
-.resetPasswordComponent-module__ocwg3G__submitButton:active {
+.resetPasswordComponent_submitButton__Ydzuq:active {
   transform: translateY(4px)
 }
 
-.resetPasswordComponent-module__ocwg3G__submitButton:hover {
-  background-color: #181818;
-  border: 2px solid #222
+.resetPasswordComponent_submitButton__Ydzuq:hover {
+  border: 2px solid #222222;
+  background-color: #181818
 }
 
-.resetPasswordComponent-module__ocwg3G__passwordGap {
-  box-sizing: border-box;
-  flex-direction: column;
-  gap: 13px;
+.resetPasswordComponent_passwordGap__9o5Ge {
   width: 100%;
+  box-sizing: border-box;
   margin-top: 15px;
-  display: flex
+  display: flex;
+  flex-direction: column;
+  gap: 13px
 }
 
-@media (max-width:560px) {
-  .resetPasswordComponent-module__ocwg3G__container {
-    box-sizing: border-box;
-    width: 93%
+@media(max-width:560px) {
+  .resetPasswordComponent_container__PWplD {
+    width: 93%;
+    box-sizing: border-box
   }
 }

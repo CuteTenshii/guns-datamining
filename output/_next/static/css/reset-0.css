@@ -1,98 +1,98 @@
-.resetPassword-module__DrY0uW__containerWrapper {
-  flex-direction: column;
+.resetPassword_containerWrapper__aeL4w {
+  display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  display: flex
+  flex-direction: column;
+  height: 100vh
 }
 
-.resetPassword-module__DrY0uW__container {
-  box-sizing: border-box;
+.resetPassword_container__XGqBp {
   background-color: #101010;
   border: 2px solid #161616;
-  border-radius: 15px;
+  padding: 25px;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  border-radius: 15px;
+  box-sizing: border-box;
   width: 100%;
-  max-width: 500px;
-  padding: 25px;
-  display: flex
+  max-width: 500px
 }
 
-.resetPassword-module__DrY0uW__container h1:not(.resetPassword-module__DrY0uW__emailGap h1),
-.resetPassword-module__DrY0uW__container h3 {
+.resetPassword_container__XGqBp h1:not(.resetPassword_emailGap__IkVbR h1),
+.resetPassword_container__XGqBp h3 {
   margin: 0
 }
 
-.resetPassword-module__DrY0uW__container h1:not(.resetPassword-module__DrY0uW__emailGap h1) {
-  color: #fafafa;
+.resetPassword_container__XGqBp h1:not(.resetPassword_emailGap__IkVbR h1) {
   font-size: 23px;
-  font-weight: 500
+  font-weight: 500;
+  color: #fafafa
 }
 
-.resetPassword-module__DrY0uW__container h3 {
-  color: #939393;
+.resetPassword_container__XGqBp h3 {
+  margin-top: 4px !important;
   font-size: 16px;
   font-weight: 450;
-  margin-top: 4px !important
+  color: #939393
 }
 
-.resetPassword-module__DrY0uW__containerButtons {
-  flex-direction: column;
+.resetPassword_containerButtons__XkX_q {
   margin-top: 20px;
-  display: flex
+  display: flex;
+  flex-direction: column
 }
 
-.resetPassword-module__DrY0uW__submitButton {
-  color: #fafafa;
-  cursor: pointer;
-  background-color: #151515;
-  border: 2px solid #191919;
-  border-radius: 12px;
-  align-items: center;
+.resetPassword_submitButton__5aVY2 {
   width: fit-content;
-  padding: 7px 15px;
+  color: #fafafa;
   text-decoration: none;
-  transition: all .2s;
-  display: flex
+  padding: 7px 15px;
+  border: 2px solid #191919;
+  background-color: #151515;
+  border-radius: 12px;
+  transition: .2s;
+  cursor: pointer;
+  display: flex;
+  align-items: center
 }
 
-.resetPassword-module__DrY0uW__submitButton svg {
+.resetPassword_submitButton__5aVY2 svg {
   font-size: 23px
 }
 
-.resetPassword-module__DrY0uW__submitButton:active {
+.resetPassword_submitButton__5aVY2:active {
   transform: translateY(4px)
 }
 
-.resetPassword-module__DrY0uW__submitButton:hover {
-  background-color: #181818;
-  border: 2px solid #222
+.resetPassword_submitButton__5aVY2:hover {
+  border: 2px solid #222222;
+  background-color: #181818
 }
 
-.resetPassword-module__DrY0uW__emailGap {
-  box-sizing: border-box;
-  flex-direction: column;
-  gap: 13px;
+.resetPassword_emailGap__IkVbR {
   width: 100%;
+  box-sizing: border-box;
   margin-top: 15px;
-  display: flex
+  display: flex;
+  flex-direction: column;
+  gap: 13px
 }
 
-.resetPassword-module__DrY0uW__emailGap input {
+.resetPassword_emailGap__IkVbR input {
   direction: ltr !important
 }
 
-@media (max-width:560px) {
-  .resetPassword-module__DrY0uW__container {
-    box-sizing: border-box;
-    width: 93%
+@media(max-width:560px) {
+  .resetPassword_container__XGqBp {
+    width: 93%;
+    box-sizing: border-box
   }
 }
 
-.resetPassword-module__DrY0uW__captchaWrapper {
-  justify-content: center;
+.resetPassword_captchaWrapper__ab2iA {
   width: 100%;
-  display: flex
+  display: flex;
+  justify-content: center
 }

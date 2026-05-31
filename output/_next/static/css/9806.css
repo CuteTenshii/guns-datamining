@@ -1,0 +1,722 @@
+.linksTab_socialSelection__jhONb {
+  background-color: #111111;
+  padding: 25px;
+  border-radius: 15px
+}
+
+.linksTab_socialSelectionDescription__UcjKP h1,
+.linksTab_socialSelectionDescription__UcjKP h3 {
+  margin: 0;
+  display: flex;
+  align-items: center
+}
+
+.linksTab_socialSelectionDescription__UcjKP h1 {
+  font-size: 23px;
+  color: #e7e7e7;
+  font-weight: 550
+}
+
+.linksTab_socialSelectionDescription__UcjKP h1 svg {
+  margin-right: 6px;
+  font-size: 25px;
+  min-width: 25px
+}
+
+.linksTab_socialSelectionDescription__UcjKP h3 {
+  margin-top: 4px;
+  font-size: 15.5px;
+  color: #838383;
+  font-weight: 500
+}
+
+.linksTab_socialSelectionContainer__UiSU3 {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  row-gap: 12px
+}
+
+.linksTab_socialLink__xjnfg {
+  cursor: pointer;
+  transition: .15s
+}
+
+.linksTab_socialLink__xjnfg:active {
+  transform: translateY(-4px) scale(1.05)
+}
+
+.linksTab_socialLink__xjnfg svg {
+  padding: 13px;
+  font-size: 32px;
+  background-color: #151515;
+  border: 2px solid #191919;
+  border-radius: 20px;
+  transition: .2s
+}
+
+.linksTab_socialLink__xjnfg svg:hover {
+  border: 2px solid #242424
+}
+
+.linksTab_youtubeCard__LdXXz svg,
+.linksTab_youtubeModalSocial__skDD6 svg,
+.linksTab_youtube__UVum5 {
+  color: #ff0000 !important
+}
+
+.linksTab_discordCard__InqVi svg,
+.linksTab_discordModalSocial__UiRxU svg,
+.linksTab_discord__oW2Gr {
+  color: #5865f2 !important
+}
+
+.linksTab_spotifyCard__rbiz7 svg,
+.linksTab_spotifyModalSocial__ljVZb svg,
+.linksTab_spotify__0xM0Q {
+  color: #1ed760 !important
+}
+
+.linksTab_instagramCard__j3UIe svg,
+.linksTab_instagramModalSocial__jOcCC svg,
+.linksTab_instagram__8W4gt {
+  color: #d62976 !important
+}
+
+.linksTab_xCard__HBc5t svg,
+.linksTab_xModalSocial__5c9Np svg,
+.linksTab_x__fFtP_ {
+  color: #292929 !important
+}
+
+.linksTab_buymeacoffeeCard__eSU8q svg,
+.linksTab_buymeacoffeeModalSocial__8y_aJ svg,
+.linksTab_buymeacoffee__qPux2 {
+  color: #FFDD00 !important
+}
+
+.linksTab_namemcModalSocial__EK5Q9 svg {
+  border-radius: 5px !important
+}
+
+.linksTab_namemcCard__9uW6C svg,
+.linksTab_namemcModalSocial__EK5Q9 svg,
+.linksTab_namemc__8JttQ {
+  color: #080808 !important
+}
+
+.linksTab_ko-fiCard__RwRxu svg,
+.linksTab_ko-fiModalSocial__26Krq svg,
+.linksTab_ko-fi__eRtlU {
+  color: #fafafa !important
+}
+
+.linksTab_onlyfansCard__fSJnD svg,
+.linksTab_onlyfansModalSocial__PAKdK svg,
+.linksTab_onlyfans__MO8FA {
+  color: #00AEEF !important
+}
+
+.linksTab_emailCard__keM2l svg,
+.linksTab_emailModalSocial__in2Q_ svg,
+.linksTab_email__TEZcI {
+  color: #e0e0e0 !important
+}
+
+.linksTab_tiktokCard__gLgLD svg,
+.linksTab_tiktokModalSocial__4Aci8 svg,
+.linksTab_tiktok__eY1tc {
+  color: #f7f7f7 !important
+}
+
+.linksTab_telegramCard__riXQV svg,
+.linksTab_telegramModalSocial__kF9zT svg,
+.linksTab_telegram__L7YmW {
+  color: #2aabee !important
+}
+
+.linksTab_soundcloudCard___mBNB svg,
+.linksTab_soundcloudModalSocial__jVaPF svg,
+.linksTab_soundcloud__v0duS {
+  color: #ff4700 !important
+}
+
+.linksTab_paypalCard__sSgGj svg,
+.linksTab_paypalModalSocial__7H_Fm svg,
+.linksTab_paypal__LtAnz {
+  color: #003087 !important
+}
+
+.linksTab_githubCard__27ogd svg,
+.linksTab_githubModalSocial__ohIYG svg,
+.linksTab_github__3LEwJ {
+  color: #fafafa !important
+}
+
+.linksTab_robloxCard__1NueF svg,
+.linksTab_robloxModalSocial__wXGul svg,
+.linksTab_roblox__LIpvD {
+  color: #97a6b4 !important
+}
+
+.linksTab_cashappCard__zMUQL svg,
+.linksTab_cashappModalSocial__mK7Po svg,
+.linksTab_cashapp__RMbUL {
+  color: #00c846 !important
+}
+
+.linksTab_twitchCard__PP5bC svg,
+.linksTab_twitchModalSocial__eS9WV svg,
+.linksTab_twitch__mAR3c {
+  color: #9448ff !important
+}
+
+.linksTab_redditCard__gr1gw svg,
+.linksTab_redditModalSocial__Ogv80 svg,
+.linksTab_reddit__tqINY {
+  color: #fe4000 !important
+}
+
+.linksTab_applemusicCard__4EJxx svg,
+.linksTab_applemusicModalSocial__3f8Ml svg,
+.linksTab_applemusic__K59tl {
+  color: #FB3F59 !important
+}
+
+.linksTab_steamCard__ckFSP svg,
+.linksTab_steamModalSocial__ifvUz svg,
+.linksTab_steam__Al9pY {
+  color: #ebebeb !important
+}
+
+.linksTab_kickCard__CzS23 svg,
+.linksTab_kickModalSocial__Lb_uH svg,
+.linksTab_kick__yVyej {
+  color: #52fa17 !important
+}
+
+.linksTab_pinterestCard__FQzGM svg,
+.linksTab_pinterestModalSocial__MnN0n svg,
+.linksTab_pinterest__8fCKQ {
+  color: #e4001c !important
+}
+
+.linksTab_lastfmCard__JZ_OC svg,
+.linksTab_lastfmModalSocial__KE8o7 svg,
+.linksTab_lastfm__UkAup {
+  color: #b90000 !important
+}
+
+.linksTab_facebookCard__bJnfc svg,
+.linksTab_facebookModalSocial__OuEB4 svg,
+.linksTab_facebook__I0lHJ {
+  color: #206be2 !important
+}
+
+.linksTab_payhipCard__JnR23 svg,
+.linksTab_payhipModalSocial__o6Gog svg,
+.linksTab_payhip__Qz1Eo {
+  color: #4491DA !important
+}
+
+.linksTab_signalCard__nCCXt svg,
+.linksTab_signalModalSocial___y_Ou svg,
+.linksTab_signal___Okds {
+  color: #3B45FD !important
+}
+
+.linksTab_linkedinCard__HEHgQ svg,
+.linksTab_linkedinModalSocial__neDWm svg,
+.linksTab_linkedin__jFw4N {
+  color: #0a66c2 !important
+}
+
+.linksTab_snapchatCard__E3bTM svg,
+.linksTab_snapchatModalSocial__b4Iqo svg,
+.linksTab_snapchat__xi_tF {
+  color: #FFFC00 !important
+}
+
+.linksTab_bitcoinCard__0LdBx svg,
+.linksTab_bitcoinModalSocial__v2g2u svg,
+.linksTab_bitcoin__uONl2 {
+  color: #ef8e19 !important
+}
+
+.linksTab_litecoin__yFyXB,
+.linksTab_ltcCard__QFZhc svg,
+.linksTab_ltcModalSocial__Ryerd svg {
+  color: #315d9e !important
+}
+
+.linksTab_solanaCard__yRAAf svg,
+.linksTab_solanaModalSocial__EBm81 svg,
+.linksTab_solana__0O2r1 {
+  color: #9945FF !important
+}
+
+.linksTab_xrpCard__4eCpz svg,
+.linksTab_xrpModalSocial__9f0QB svg,
+.linksTab_xrp__JZCFr {
+  color: #4b6cb7 !important
+}
+
+.linksTab_ethCard__wF1nw svg,
+.linksTab_ethModalSocial__B5I5q svg,
+.linksTab_ethereum__k9KPV {
+  color: #686868 !important
+}
+
+.linksTab_moneroCard__VbRHr svg,
+.linksTab_moneroModalSocial__PHPDw svg,
+.linksTab_monero__QMbgQ {
+  color: #ea6521 !important
+}
+
+.linksTab_gitlabCard__WNAWO svg,
+.linksTab_gitlabModalSocial__pzkYd svg,
+.linksTab_gitlab__D8iTf {
+  color: #db4128 !important
+}
+
+.linksTab_patreonCard__AwT6C svg,
+.linksTab_patreonModalSocial__br6YK svg,
+.linksTab_patreon__w8f8Q {
+  color: #FF424E !important
+}
+
+.linksTab_threadsCard__t9LH4 svg,
+.linksTab_threadsModalSocial__vaNHc svg,
+.linksTab_threads__Y3QqW {
+  color: #FFFFFF !important
+}
+
+.linksTab_vkCard__yMjH7 svg,
+.linksTab_vkModalSocial__zpf0O svg,
+.linksTab_vk__sgdUJ {
+  color: #0076FE !important
+}
+
+.linksTab_venmoCard__5yPnT svg,
+.linksTab_venmoModalSocial__c2l9x svg,
+.linksTab_venmo__BCwwy {
+  color: #008CFF !important
+}
+
+.linksTab_playstationCard__vpr80 svg,
+.linksTab_playstationModalSocial__dn3HH svg,
+.linksTab_playstation__B0ZlO {
+  color: #006FCD !important
+}
+
+.linksTab_xboxCard__fRfhq svg,
+.linksTab_xboxModalSocial__imI3l svg,
+.linksTab_xbox__lPRsW {
+  color: #107C10 !important
+}
+
+.linksTab_tellonymCard__yMkSC svg,
+.linksTab_tellonymModalSocial__uXDI_ svg,
+.linksTab_tellonym__Ft44O {
+  color: #ff6f2d !important
+}
+
+.linksTab_blueskyCard__kyZzb svg,
+.linksTab_blueskyModalSocial__yDLD2 svg,
+.linksTab_bluesky__3Gwqa {
+  color: #1185fe !important
+}
+
+.linksTab_customUrlCard___1UpE svg,
+.linksTab_customUrl__2TldQ,
+.linksTab_custom_urlModalSocial__TNxuv svg {
+  color: #a3a3a3 !important
+}
+
+.linksTab_custom_urlModalSocial__TNxuv {
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}
+
+.linksTab_displaySocials__vzMNf {
+  margin-top: 5px;
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
+  gap: .8rem
+}
+
+.linksTab_displaySocialsWrapper__zBhfp {
+  margin-top: 40px
+}
+
+.linksTab_displaySocialsWrapper__zBhfp>span:first-child {
+  display: flex;
+  align-items: center;
+  border: 2px solid #202020;
+  background-color: #181818;
+  color: #fafafafa;
+  width: fit-content;
+  cursor: pointer;
+  text-align: center;
+  padding: 10px;
+  margin-left: 2px;
+  border-radius: 15px;
+  font-size: 16px;
+  transition: .25s
+}
+
+.linksTab_displaySocialsWrapper__zBhfp span svg {
+  margin-right: 4px;
+  font-size: 21.5px
+}
+
+.linksTab_socialCard__Sj8d_ {
+  padding: 15px;
+  border-radius: 15px;
+  background-color: #111111;
+  border: 2px solid #141414;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  direction: ltr
+}
+
+.linksTab_socialCard__Sj8d_ span {
+  display: flex;
+  align-items: center;
+  z-index: 1
+}
+
+.linksTab_buttonDiv__C8Xqt {
+  display: flex;
+  position: absolute;
+  top: 9.5px;
+  right: 12.5px;
+  gap: 2.5px;
+  z-index: 99
+}
+
+.linksTab_deleteButton__nqY0J svg,
+.linksTab_editButton__ojN4p svg,
+.linksTab_visibilityButton__XtIiU svg {
+  background-color: #fafafa0a;
+  border-radius: 9px;
+  font-size: 19px !important;
+  cursor: pointer;
+  transition: .35s
+}
+
+.linksTab_deleteButton__nqY0J svg:hover,
+.linksTab_editButton__ojN4p svg:hover,
+.linksTab_visibilityButton__XtIiU svg:hover {
+  transform: scale(1.15)
+}
+
+.linksTab_editButton__ojN4p svg {
+  padding: 3px;
+  color: #636363fa
+}
+
+.linksTab_deleteButton__nqY0J svg {
+  padding: 3px;
+  color: #c42626fa
+}
+
+.linksTab_visibilityButton__XtIiU svg {
+  padding: 3px;
+  color: #636363fa
+}
+
+.linksTab_socialCardHidden__pF0Nv {
+  opacity: .5;
+  filter: grayscale(.75) saturate(1)
+}
+
+.linksTab_socialOrder__BMspQ {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  left: 0 !important
+}
+
+.linksTab_socialOrder__BMspQ svg {
+  font-size: 35px
+}
+
+.linksTab_socialSaveButtonWrapper__FRry2 {
+  margin-top: 25px;
+  margin-left: 2px;
+  display: flex;
+  align-items: center;
+  gap: 8px
+}
+
+.linksTab_socialSaveButtonWrapper__FRry2 a {
+  text-decoration: none;
+  font-size: 14.5px;
+  color: #999999
+}
+
+.linksTab_socialSaveButton___6ncX {
+  height: 25px;
+  background-color: #202020;
+  border: 2px solid #272727;
+  padding: 5px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .25s;
+  display: flex;
+  align-items: center;
+  gap: 7px
+}
+
+.linksTab_socialSaveButton___6ncX svg {
+  width: 23px
+}
+
+.linksTab_socialSaveButton___6ncX:active {
+  transform: translateY(3px)
+}
+
+.linksTab_emptySocials__TOaBa {
+  font-size: 20px;
+  margin-left: 4px;
+  display: flex;
+  flex-direction: column;
+  color: #838383;
+  font-weight: 500
+}
+
+.linksTab_emptySocials__TOaBa svg {
+  margin-bottom: 7px;
+  font-size: 3.5em;
+  color: #999999
+}
+
+.linksTab_iconUpload__3JAHt {
+  background-color: #0f0f0f;
+  border: 2px solid #181818;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  border-radius: 10px;
+  position: relative;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none
+}
+
+.linksTab_uploadCardText__7OXO5 {
+  padding: 0 5px
+}
+
+.linksTab_uploadCardText__7OXO5 h1 {
+  font-size: 14.5px;
+  color: #797979;
+  font-weight: 450;
+  margin: 2px 0 0
+}
+
+.linksTab_uploadCardText__7OXO5 svg {
+  font-size: 42px;
+  color: #fafafafa !important
+}
+
+.linksTab_uploaderMessage___2c7_ h1 {
+  margin: 2px 0 0;
+  font-size: 15.5px;
+  color: #a8a8a8
+}
+
+.linksTab_iconUpload__3JAHt input[type=file] {
+  opacity: 0;
+  cursor: pointer
+}
+
+.linksTab_iconUpload__3JAHt input[type=file],
+.linksTab_uploadCardImage__m6BQ2 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  object-fit: cover
+}
+
+.linksTab_uploaderHeadingText__XigBJ {
+  font-size: 16px;
+  font-weight: 500;
+  color: #dddddd;
+  margin: 0 0 5.5px 3px
+}
+
+.linksTab_iconUploadWrapper__Y_k6D {
+  display: flex;
+  flex-direction: column
+}
+
+.linksTab_fileBadge__kL6jr {
+  z-index: 999;
+  position: absolute;
+  top: 9px;
+  right: 11px;
+  display: flex;
+  gap: 7px
+}
+
+.linksTab_fileBadge__kL6jr span {
+  background-color: #18181875;
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+  border-radius: 10px;
+  font-size: 13px;
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  transition: .35s
+}
+
+.linksTab_fileBadge__kL6jr span:first-child {
+  padding: 7px 10px !important
+}
+
+.linksTab_fileBadge__kL6jr span:nth-child(2) {
+  cursor: pointer
+}
+
+.linksTab_fileBadge__kL6jr span:nth-child(2):hover {
+  background-color: #181818d8
+}
+
+.linksTab_fileBadge__kL6jr span svg {
+  font-size: 22px;
+  color: rgb(241, 46, 46) !important
+}
+
+.linksTab_socialContainer___6ABM {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  background-color: #161616;
+  border-left: 2px solid #191919;
+  padding-left: 2px;
+  gap: 2px;
+  border-radius: 15px
+}
+
+.linksTab_dragHandleContainer__dinda svg {
+  color: #656565
+}
+
+.linksTab_dragHandleContainer__dinda {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+  touch-action: none
+}
+
+.linksTab_socialModeSelection__Ykjy_ {
+  margin-top: 6px;
+  gap: 10px;
+  padding: 6px;
+  background-color: #1b1b1b;
+  border: 2px solid #212121;
+  border-radius: 25px
+}
+
+.linksTab_socialModeSelection__Ykjy_,
+.linksTab_socialModeSelection__Ykjy_ span {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: center
+}
+
+.linksTab_socialModeSelection__Ykjy_ span {
+  font-size: 14.5px;
+  color: #b9b9b9;
+  gap: 3px;
+  padding: 5px 0;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: .2s
+}
+
+.linksTab_socialModeSelection__Ykjy_ span svg {
+  font-size: 19px;
+  color: #b9b9b9 !important
+}
+
+.linksTab_socialInputWrapper__KAo6I {
+  margin-top: 7px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px
+}
+
+.linksTab_socialModeSelection__Ykjy_ span.linksTab_active__jG7tq {
+  color: #fafafa;
+  background-color: #272727;
+  border: 2px solid #2e2e2e
+}
+
+@media (max-width:420px) {
+  .linksTab_displaySocials__vzMNf {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+  }
+}
+
+.linksTab_customUrlDescription__r_gFn {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: center;
+  padding: 2px 15px
+}
+
+.linksTab_customUrlDescription__r_gFn h1 {
+  font-size: 15.5px;
+  color: #e7e7e7;
+  font-weight: 500;
+  margin: 0;
+  text-align: left;
+  width: 100%
+}
+
+.linksTab_customUrlDescription__r_gFn h3 {
+  font-size: 14px;
+  color: #838383;
+  font-weight: 450;
+  margin: 0;
+  text-align: left
+}
+
+.linksTab_customUrlDescriptionWrapper__FLeC_ {
+  display: flex;
+  align-items: center;
+  background-color: #131313;
+  border: 2px solid #191919;
+  border-radius: 22px
+}
+
+.linksTab_customUrlDescriptionWrapper__FLeC_ svg {
+  border: none !important;
+  min-width: 33px
+}
