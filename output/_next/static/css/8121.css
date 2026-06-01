@@ -1,4 +1,4 @@
-.paymentPage_paymentPageWrapper__KYl50 {
+.redeemPage_redeemPageWrapper__nfBWZ {
   width: 100%;
   display: flex;
   align-items: center;
@@ -6,7 +6,7 @@
   height: 100%
 }
 
-.paymentPage_paymentContainer__O5i3K {
+.redeemPage_redeemContainer__eXByj {
   background-color: #101010;
   border: 2px solid #161616;
   padding: 25px;
@@ -21,7 +21,7 @@
   margin: 0 10px
 }
 
-.paymentPage_paymentContainerDescription__bLVTw {
+.redeemPage_redeemContainerDescription__xPzPu {
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -30,7 +30,7 @@
   margin-bottom: 12px
 }
 
-.paymentPage_paymentContainerDescription__bLVTw h1 {
+.redeemPage_redeemContainerDescription__xPzPu h1 {
   font-size: 22px;
   font-weight: 500;
   color: #fafafa;
@@ -39,18 +39,18 @@
   gap: 7px
 }
 
-.paymentPage_paymentContainerDescription__bLVTw h3 {
+.redeemPage_redeemContainerDescription__xPzPu h3 {
   font-size: 16px;
   font-weight: 450;
   color: #939393
 }
 
-.paymentPage_paymentContainerDescription__bLVTw h1,
-.paymentPage_paymentContainerDescription__bLVTw h3 {
+.redeemPage_redeemContainerDescription__xPzPu h1,
+.redeemPage_redeemContainerDescription__xPzPu h3 {
   margin: 0
 }
 
-.paymentPage_payButton__O4eAt {
+.redeemPage_redeemButton__c2O8g {
   background-color: #7e2c8b63;
   border: 2px solid #7e2c8b7c;
   border-radius: 20px;
@@ -66,19 +66,19 @@
   height: 45px
 }
 
-.paymentPage_payButton__O4eAt:hover {
+.redeemPage_redeemButton__c2O8g:hover {
   background-color: #7e2c8b76
 }
 
-.paymentPage_payButton__O4eAt:active {
+.redeemPage_redeemButton__c2O8g:active {
   transform: translateY(4px)
 }
 
-.paymentPage_payButton__O4eAt svg {
+.redeemPage_redeemButton__c2O8g svg {
   font-size: 25px
 }
 
-.paymentPage_errorContainer__jLbMJ {
+.redeemPage_errorContainer__FAIiv {
   margin-top: 15px;
   background-color: rgba(255, 0, 0, .24);
   border: 2px solid rgba(255, 0, 0, .144);
@@ -92,75 +92,55 @@
   text-align: center
 }
 
-.paymentPage_inputContainer__PC8d4 {
-  width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  gap: 10px
+.redeemPage_productSelection__xM0Sp {
+  border-radius: 50px;
+  border: 2px solid #181818;
+  padding: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: .25s;
+  background-color: #141414
 }
 
-.paymentPage_paymentMethodWrapper__ZTXY0 {
-  margin-top: 10px;
-  width: 100%;
-  box-sizing: border-box;
+.redeemPage_productSelection__xM0Sp,
+.redeemPage_selection__XSd_S {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 5px
-}
-
-.paymentPage_paymentMethodText__TUSIF {
-  font-size: 16px;
-  font-weight: 500;
-  color: #dddddd;
-  margin: 0 0 5.5px 3px
-}
-
-.paymentPage_paymentMethodContainer__Xucyo {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center
-}
-
-.paymentPage_creditCard__0DoDd,
-.paymentPage_crypto__j4pWm {
-  display: flex;
-  gap: 10px;
   align-items: center;
   justify-content: center;
   width: 100%;
-  box-sizing: border-box;
-  padding: 13px;
-  border-radius: 15px;
-  background-color: #151515;
-  border: 2px solid #1b1b1b;
-  cursor: pointer;
-  transition: .25s
+  box-sizing: border-box
 }
 
-.paymentPage_creditCard__0DoDd h1,
-.paymentPage_crypto__j4pWm h1 {
-  margin: 0;
-  font-size: 17px;
-  font-weight: 500;
-  color: #fafafa
+.redeemPage_selection__XSd_S {
+  gap: 7px;
+  border: 2px solid transparent;
+  padding: 6px 0;
+  transition: .2s
 }
 
-.paymentPage_creditCard__0DoDd svg,
-.paymentPage_crypto__j4pWm svg {
-  font-size: 25px
-}
-
-.paymentPage_crypto__j4pWm span {
-  color: #858585;
+.redeemPage_selection__XSd_S h1 {
   font-size: 15px;
-  margin-left: -4px
+  font-weight: 500;
+  color: #fafafa;
+  margin: 0
 }
 
-.paymentPage_selectedMethod__LyWTm {
-  background-color: #7e2c8b34;
-  border: 2px solid #7e2c8b9c
+.redeemPage_selection__XSd_S img {
+  width: 25px;
+  height: 25px
+}
+
+.redeemPage_selection__XSd_S.redeemPage_selected____j2P {
+  border-radius: 50px;
+  border: 2px solid #252525;
+  background-color: #202020
+}
+
+@media (max-width:515px) {
+  .redeemPage_productSelection__xM0Sp {
+    border-radius: 25px;
+    flex-direction: column
+  }
 }
 
 .accordion_accordion__N17UW {

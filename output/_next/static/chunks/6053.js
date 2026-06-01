@@ -2659,12 +2659,11 @@ void main() {
             font: r.font,
             fontSize: r.font_size
           }),
-          N = !!n && n > 25 && .12 * n,
-          k = !0 === r.suppress_views_tracking;
-        async function P(e) {
+          N = !!n && n > 25 && .12 * n;
+        async function k(e) {
           j(e)
         }
-        async function L(e) {
+        async function P(e) {
           ! function(e, t, r) {
             var o;
             let s, a, [i, n] = Object.entries(r)[1],
@@ -2674,8 +2673,8 @@ void main() {
         }
         return (0, s.useEffect)(() => {
           Object.assign(window, {
-            getToken: P,
-            getResult: L
+            getToken: k,
+            getResult: P
           });
           let e = setInterval(() => {
             y && "" !== b && !u && (fetch("https://guns.lol/api/analytics/record", {
@@ -2693,13 +2692,13 @@ void main() {
             }), clearInterval(e))
           }, 200)
         }, [y, b, w]), (0, o.jsxs)(o.Fragment, {
-          children: [!k && (0, o.jsx)(eb, {
+          children: [(0, o.jsx)(eb, {
             challengeData: e
-          }), !k && (0, o.jsx)(h.default, {
+          }), (0, o.jsx)(h.default, {
             strategy: "afterInteractive",
             src: "https://challenges.cloudflare.com/turnstile/v0/api.js",
             id: "_turnstile"
-          }), !k && (0, o.jsx)("div", {
+          }), (0, o.jsx)("div", {
             className: "cf-turnstile",
             style: {
               display: "none"
@@ -5899,8 +5898,11 @@ void main() {
             children: O
           }) : O, C && (0, o.jsxs)("div", {
             className: e8().heroBottomMeta,
-            children: [S && (0, o.jsx)("div", {
+            children: [(0, o.jsx)("div", {
               className: e8().heroBottomMetaItem,
+              style: {
+                display: S ? "inline-flex" : "none"
+              },
               children: (0, o.jsx)(ew, {
                 challengeData: t._gpp_ch,
                 username: t.username,
