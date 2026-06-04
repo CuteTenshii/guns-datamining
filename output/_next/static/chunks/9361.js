@@ -2086,7 +2086,7 @@
                 description: e.description,
                 presence: e.presence,
                 background_effects: e.background_effects,
-                background_effects_color: i ? e.background_effects_color : "#000000",
+                background_effects_color: i ? e.background_effects_color : e.text_color,
                 opacity: e.opacity,
                 blur: e.blur,
                 username_glow: e.username_glow,
@@ -2258,7 +2258,7 @@
                 setIconColor: b("icon_color"),
                 iconColor: u.icon_color,
                 backgroundEffects: u.background_effects,
-                backgroundEffectsColor: u.background_effects_color || "#000000",
+                backgroundEffectsColor: u.background_effects_color || u.text_color,
                 setBackgroundEffectsColor: b("background_effects_color")
               })
             }), (0, r.jsx)(F.A, {
