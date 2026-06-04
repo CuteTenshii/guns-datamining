@@ -2,116 +2,116 @@
   [7667], {
     39866: e => {
       e.exports = {
-        templateWrapper: "templateTab_templateWrapper__4_4zG",
-        templatePreview: "templateTab_templatePreview__Sk_VF",
-        templateOverlay: "templateTab_templateOverlay__FvJFr",
-        premiumOnly: "templateTab_premiumOnly__ntkQ_",
-        privateTemplate: "templateTab_privateTemplate__3RpjX",
-        unlistedTemplate: "templateTab_unlistedTemplate__NLKll",
-        template: "templateTab_template__cLgim",
-        templateAuthor: "templateTab_templateAuthor__5IfJp",
-        templateAuthorDescription: "templateTab_templateAuthorDescription__4f4T7",
-        templateStatistics: "templateTab_templateStatistics__jQyfV",
-        templateTags: "templateTab_templateTags__1T7Wi",
-        templateInformation: "templateTab_templateInformation__8vBrI",
-        templateSearchInformation: "templateTab_templateSearchInformation__3V8SQ",
-        templateStat: "templateTab_templateStat__P7g9K",
-        useTemplateButton: "templateTab_useTemplateButton__4LAV2",
-        templateButtonWrapper: "templateTab_templateButtonWrapper__d0u1D",
-        templateInformationWrapper: "templateTab_templateInformationWrapper__nXvF5",
-        templateInformationDescription: "templateTab_templateInformationDescription__mh2lE",
-        searchBar: "templateTab_searchBar__meICt",
-        searchInput: "templateTab_searchInput__4rL_D",
-        searchInputWrapper: "templateTab_searchInputWrapper__zSx6M",
-        searchButton: "templateTab_searchButton__FkovK",
-        searchInputContainer: "templateTab_searchInputContainer__5RCeM",
-        removeSearchButton: "templateTab_removeSearchButton__UGly1",
-        templateTabs: "templateTab_templateTabs__xNtfI",
-        unselected: "templateTab_unselected__WyVDL",
-        tabUnderlineContainer: "templateTab_tabUnderlineContainer__rOcYX",
-        tabUnderline: "templateTab_tabUnderline__pOqBa",
-        templateTabsWrapper: "templateTab_templateTabsWrapper___5H8l",
-        createTemplateButton: "templateTab_createTemplateButton__P7b1H",
-        templateLibrary: "templateTab_templateLibrary__rL1qg",
-        previewUpload: "templateTab_previewUpload__x9Ypc",
-        uploadCardText: "templateTab_uploadCardText__kwc6n",
-        uploaderMessage: "templateTab_uploaderMessage__a8UFQ",
-        uploadCardImage: "templateTab_uploadCardImage___GUtu",
-        previewHeadingText: "templateTab_previewHeadingText__8erhR",
-        previewUploadWrapper: "templateTab_previewUploadWrapper__kAHUk",
-        fileBadge: "templateTab_fileBadge__ekFCA",
-        createTemplateContainerWrapper: "templateTab_createTemplateContainerWrapper__B92IH",
-        createTemplateText: "templateTab_createTemplateText__wVuU7",
-        createTemplateContainer: "templateTab_createTemplateContainer__1f4V7",
-        templateTagsText: "templateTab_templateTagsText__mg_CR",
-        templateTagsContainerWrapper: "templateTab_templateTagsContainerWrapper__8V7_0",
-        templateTagsContainer: "templateTab_templateTagsContainer__8ADVJ",
-        templateInputWrapper: "templateTab_templateInputWrapper__QVNeh",
-        addTag: "templateTab_addTag__A_1_5",
-        templateTagsList: "templateTab_templateTagsList__iwVjk",
-        tag: "templateTab_tag__iRDJs",
-        tagName: "templateTab_tagName__JXPGl",
-        removeTag: "templateTab_removeTag__lPbkz",
-        premiumOnlyTemplate: "templateTab_premiumOnlyTemplate__WhJw3",
-        premiumOnlyText: "templateTab_premiumOnlyText__gSA5A",
-        removePremiumSettings: "templateTab_removePremiumSettings__nnDvH",
-        premiumOnlyTemplateWrapper: "templateTab_premiumOnlyTemplateWrapper__OMOEh",
-        uploadedTemplates: "templateTab_uploadedTemplates__WAfI0",
-        uploadedTemplatesWrapper: "templateTab_uploadedTemplatesWrapper__S5ZLG",
-        uploadedTemplatesHeader: "templateTab_uploadedTemplatesHeader__cYrBX",
-        deleteTemplate: "templateTab_deleteTemplate__e9LKf",
-        confirmationMessage: "templateTab_confirmationMessage__bbybL",
-        confirmationContainer: "templateTab_confirmationContainer__W9TZT",
-        noTemplates: "templateTab_noTemplates__EQF1I",
-        loadingContainer: "templateTab_loadingContainer__Q1wcX",
-        favoriteTemplate: "templateTab_favoriteTemplate__zPggG",
-        templateViewContainerWrapper: "templateTab_templateViewContainerWrapper__UpSLF",
-        templateViewContainer: "templateTab_templateViewContainer__8F1_b",
-        templateContainer: "templateTab_templateContainer__kz8L2",
-        singleTemplateWidth: "templateTab_singleTemplateWidth__VuUot",
-        useTemplateModal: "templateTab_useTemplateModal__YxmOD",
-        useTemplateModalInformationWrapper: "templateTab_useTemplateModalInformationWrapper__8As2U",
-        useTemplateModalInformation: "templateTab_useTemplateModalInformation__b8r6_",
-        templateApplyModeContainer: "templateTab_templateApplyModeContainer__nd2wc",
-        templateApplyAssetsContainer: "templateTab_templateApplyAssetsContainer__rVgE7",
-        templateApplySectionLabel: "templateTab_templateApplySectionLabel__ur_Dq",
-        templateApplyModeGrid: "templateTab_templateApplyModeGrid__2V2NI",
-        templateApplyAssetsGrid: "templateTab_templateApplyAssetsGrid__HSv9k",
-        templateApplyModeButton: "templateTab_templateApplyModeButton__Dk5Vg",
-        templateApplyAssetButton: "templateTab_templateApplyAssetButton__eCG8f",
-        templateApplyModeButtonActive: "templateTab_templateApplyModeButtonActive__LaeP2",
-        templateApplyAssetButtonActive: "templateTab_templateApplyAssetButtonActive__mds91",
-        useTemplateModalButton: "templateTab_useTemplateModalButton__IXCjr",
-        requiredAge: "templateTab_requiredAge__4KbEI",
-        templateVisibility: "templateTab_templateVisibility__GoDiD",
-        loadMoreContainer: "templateTab_loadMoreContainer__3a6tQ",
-        loadMore: "templateTab_loadMore__MnM__",
-        goBackButton: "templateTab_goBackButton__PX_vU",
-        previewTemplateButton: "templateTab_previewTemplateButton__Q2vzP",
-        applyTemplateModalButtonContainer: "templateTab_applyTemplateModalButtonContainer__F1yfg",
-        userFilter: "templateTab_userFilter__GKOGw",
-        authorFilterContainer: "templateTab_authorFilterContainer__lsyjd",
-        authorFilterContainerButton: "templateTab_authorFilterContainerButton__al_LG",
-        templateAuthorFilterInformation: "templateTab_templateAuthorFilterInformation__wOGUS",
-        templateAuthorFilterInformationText: "templateTab_templateAuthorFilterInformationText__Rg1_9",
-        templateAuthorFilterInformationContainer: "templateTab_templateAuthorFilterInformationContainer__0j6fp",
-        authorFilterContainerButtonClose: "templateTab_authorFilterContainerButtonClose__UGaOL",
-        authorFilterContainerButtonContainer: "templateTab_authorFilterContainerButtonContainer__sPwme",
-        filterWrapper: "templateTab_filterWrapper__FxIZ8",
-        visibilityContainer: "templateTab_visibilityContainer__4QHsx",
-        visibilityDescription: "templateTab_visibilityDescription__SDoBf",
-        visibilityButton: "templateTab_visibilityButton__n2mtS",
-        visibilityCurrentValue: "templateTab_visibilityCurrentValue__IRu4P",
-        visibilityCurrentValueWrapper: "templateTab_visibilityCurrentValueWrapper__a5dNe",
-        unlistedLinkContainer: "templateTab_unlistedLinkContainer__zEBqL",
-        unlistedLinkText: "templateTab_unlistedLinkText__8OmN3",
-        unlistedLink: "templateTab_unlistedLink__PNzl2",
-        unlistedLinkBox: "templateTab_unlistedLinkBox__0Ss_1",
-        copyButton: "templateTab_copyButton__XT1g3",
-        unlistedTemplateContainer: "templateTab_unlistedTemplateContainer__quq1J",
-        unlistedTemplateText: "templateTab_unlistedTemplateText__Fuwql",
-        unlistedTemplateButton: "templateTab_unlistedTemplateButton__66ELt",
-        filterSelectInput: "templateTab_filterSelectInput__TkrtW"
+        templateWrapper: "GUNS__66-7ef0f0ed-f9eb3f5b-a53eea3c",
+        templatePreview: "GUNS__27-af04d4ee-32c80a74-6f8ed8cf",
+        templateOverlay: "GUNS__1a-7cea6a05-df483ea9-5be14f11",
+        premiumOnly: "GUNS__41-4d974d7f-f6bcc0da-595e700d",
+        privateTemplate: "GUNS__1e-80651d27-5b82f66c-2582918e",
+        unlistedTemplate: "GUNS__e4-d7555841-43dae59c-7a6b0c65",
+        template: "GUNS__45-672d8498-beda4d92-8301b62a",
+        templateAuthor: "GUNS__a5-9b9b1cb4-6d26d2a9-0bde1478",
+        templateAuthorDescription: "GUNS__ad-c3efd264-88a24f7e-4ffab8b8",
+        templateStatistics: "GUNS__9a-0f829069-839c53c7-8111e981",
+        templateTags: "GUNS__5f-b3bea48e-20b64290-a45dec98",
+        templateInformation: "GUNS__8a-17902368-c5bf6992-3f8aafb8",
+        templateSearchInformation: "GUNS__06-8f819782-a86c7627-cb7560b8",
+        templateStat: "GUNS__14-66c7b048-338771de-bb28be07",
+        useTemplateButton: "GUNS__08-c1c89baa-6ecd63d9-9736a255",
+        templateButtonWrapper: "GUNS__db-1829090f-5e810d14-bd687199",
+        templateInformationWrapper: "GUNS__49-3b545e90-c9746d27-beb50269",
+        templateInformationDescription: "GUNS__82-7bab0274-6b298ded-a57e3637",
+        searchBar: "GUNS__dc-adf26bdf-3c854edf-b9c42e36",
+        searchInput: "GUNS__be-48dc20a9-94cca41f-6c9816b4",
+        searchInputWrapper: "GUNS__75-286940a5-992ca20a-ddd59b02",
+        searchButton: "GUNS__4f-18887f2b-ba91db8a-b091d909",
+        searchInputContainer: "GUNS__f8-bf3de1b6-c832a62a-bbe0404b",
+        removeSearchButton: "GUNS__f7-531d9467-4cdcda4f-78da4451",
+        templateTabs: "GUNS__19-7b6cea15-0eccca45-159b7f05",
+        unselected: "GUNS__e4-ea094baf-a003b93d-6d4582d6",
+        tabUnderlineContainer: "GUNS__28-abcf5470-8df0215c-5faba13a",
+        tabUnderline: "GUNS__0c-526c47bf-d1e628a2-e65b2f61",
+        templateTabsWrapper: "GUNS__d4-a4cea6fe-f647574f-5e2850c8",
+        createTemplateButton: "GUNS__e6-57915d04-d461c4bf-cb62d27e",
+        templateLibrary: "GUNS__a1-711d1fcb-9db4497c-74eaa2b8",
+        previewUpload: "GUNS__db-61156e75-0b04c9b3-b442bc80",
+        uploadCardText: "GUNS__ad-c4e3ffe0-aa1bb050-e57671e6",
+        uploaderMessage: "GUNS__b5-8fe29071-69d9b7a0-1993b729",
+        uploadCardImage: "GUNS__c2-307a5308-5caf7e1f-851c1222",
+        previewHeadingText: "GUNS__39-bb595b97-4bf8d244-994a0a49",
+        previewUploadWrapper: "GUNS__4f-b46b4c27-9dfffcec-74372636",
+        fileBadge: "GUNS__10-719e1efb-f1b951c5-939a883c",
+        createTemplateContainerWrapper: "GUNS__c1-ebdb7207-1f4a0b1e-d030e5a9",
+        createTemplateText: "GUNS__b7-92781319-65f60ffb-fe3fbd87",
+        createTemplateContainer: "GUNS__1e-2a4b7e82-0614a565-2f5e60e3",
+        templateTagsText: "GUNS__45-6ccefceb-eab756f0-6c7f1708",
+        templateTagsContainerWrapper: "GUNS__28-137f0b2d-5d8da53a-43f37a3c",
+        templateTagsContainer: "GUNS__6d-316467af-8f7aaa4d-9f6b7000",
+        templateInputWrapper: "GUNS__20-b2bbb5be-72ed4991-f44c4e7d",
+        addTag: "GUNS__65-8da3c010-76ccf23d-38f730e8",
+        templateTagsList: "GUNS__85-9a56b981-573731af-592d64a9",
+        tag: "GUNS__d8-293c7a15-f6ac7e7b-e45c5085",
+        tagName: "GUNS__b8-d8b6e960-808efff4-bbee98a9",
+        removeTag: "GUNS__10-48631489-a5bd9d10-70cb404f",
+        premiumOnlyTemplate: "GUNS__94-82975da4-fb5e3c00-989ce666",
+        premiumOnlyText: "GUNS__9b-4d2fb0de-54f97cdf-33930366",
+        removePremiumSettings: "GUNS__6e-2673e831-950f8c4f-97f50a55",
+        premiumOnlyTemplateWrapper: "GUNS__22-3583039e-75b76836-ed5f1719",
+        uploadedTemplates: "GUNS__79-11fe58bc-d7203e8d-e0f0d7a6",
+        uploadedTemplatesWrapper: "GUNS__f9-e316df9d-fd857788-e23398de",
+        uploadedTemplatesHeader: "GUNS__a7-8e09cba9-52c0b1bc-8454bfde",
+        deleteTemplate: "GUNS__64-d15fe759-b653ec53-e8fda631",
+        confirmationMessage: "GUNS__5a-99217956-6ecf88b9-11395ffb",
+        confirmationContainer: "GUNS__20-a4a1008d-9ceca9b0-ef026502",
+        noTemplates: "GUNS__05-4cd13ca8-5f451158-e3aa0a9a",
+        loadingContainer: "GUNS__1e-41d75a25-de73633c-bb964de5",
+        favoriteTemplate: "GUNS__50-182e9a40-148f4a0b-354121b2",
+        templateViewContainerWrapper: "GUNS__49-45813fec-ebffc737-0c4c49ea",
+        templateViewContainer: "GUNS__30-202df567-ddaee3b7-579a2bb5",
+        templateContainer: "GUNS__b2-f57e8f12-26120c7e-7bc402f8",
+        singleTemplateWidth: "GUNS__31-7ebb3003-ee007e98-dc6b9b78",
+        useTemplateModal: "GUNS__3c-dff8dcc1-3988a1fc-6039f628",
+        useTemplateModalInformationWrapper: "GUNS__c8-d42acb91-7c42f0ca-a5f3901f",
+        useTemplateModalInformation: "GUNS__3e-1f848a6c-e7e06022-8237c99b",
+        templateApplyModeContainer: "GUNS__52-1fde0504-3f91e35e-568cf78d",
+        templateApplyAssetsContainer: "GUNS__14-556125fa-8cf64d72-2ccdea32",
+        templateApplySectionLabel: "GUNS__46-65d3719e-5be92bd5-7842488a",
+        templateApplyModeGrid: "GUNS__c1-d4267a8a-f0e8b07b-a41084e5",
+        templateApplyAssetsGrid: "GUNS__5b-d8d3fb86-a7353d72-d4ac4d7a",
+        templateApplyModeButton: "GUNS__c8-656c5f08-f3b81c0d-0c202e41",
+        templateApplyAssetButton: "GUNS__d5-a7c05a36-73c1127e-156709ab",
+        templateApplyModeButtonActive: "GUNS__a5-c27f34de-790c3626-24d098d8",
+        templateApplyAssetButtonActive: "GUNS__ec-f18bf9d7-341cd145-c1ca0973",
+        useTemplateModalButton: "GUNS__88-6114308f-95ee4385-718432a2",
+        requiredAge: "GUNS__27-f9865e61-0c5f50ec-bdd35712",
+        templateVisibility: "GUNS__27-b62be788-f6a97525-7863635c",
+        loadMoreContainer: "GUNS__65-33b711b5-c522c9c7-0f844109",
+        loadMore: "GUNS__05-cea475c5-4d1c5577-3a501b38",
+        goBackButton: "GUNS__ee-79299a25-4d631a07-f3773bc7",
+        previewTemplateButton: "GUNS__88-aff7738c-b01f44c4-d5605678",
+        applyTemplateModalButtonContainer: "GUNS__16-30d54a12-c5928f8e-720f2fc2",
+        userFilter: "GUNS__25-81c8f255-30105c6e-d6bcbccf",
+        authorFilterContainer: "GUNS__0d-65b8cf93-6cea510b-f947fe53",
+        authorFilterContainerButton: "GUNS__c2-2b6d71ca-eb9836fc-d0eb9234",
+        templateAuthorFilterInformation: "GUNS__a4-e7af3072-521dfb11-2694b760",
+        templateAuthorFilterInformationText: "GUNS__e7-0f64af09-1a7d8f00-bf4ecdc3",
+        templateAuthorFilterInformationContainer: "GUNS__1b-d40aa4af-6db51ca0-0b33bc98",
+        authorFilterContainerButtonClose: "GUNS__36-a21fb2aa-e7c53274-df103a69",
+        authorFilterContainerButtonContainer: "GUNS__d0-cd918501-0b27feec-35395175",
+        filterWrapper: "GUNS__4f-feaffa24-44e740df-e7810f03",
+        visibilityContainer: "GUNS__c1-32627b27-5311e3b8-1c3f91bd",
+        visibilityDescription: "GUNS__3a-d07d4370-7ab31ffa-bbe8e57a",
+        visibilityButton: "GUNS__07-c538f5e3-d5a33cb6-d0556e80",
+        visibilityCurrentValue: "GUNS__c1-9a47aa67-e82cae3a-c3d7a74c",
+        visibilityCurrentValueWrapper: "GUNS__01-98fd7656-9bebd553-3eb049b7",
+        unlistedLinkContainer: "GUNS__be-ec9cfa12-fd1d980f-920d1c6b",
+        unlistedLinkText: "GUNS__6b-84511c00-49f84208-4182990d",
+        unlistedLink: "GUNS__76-24970276-14ecd5af-46463679",
+        unlistedLinkBox: "GUNS__ea-cd948218-e0a0f12e-4af79379",
+        copyButton: "GUNS__9a-7a19767a-fad663ec-8559d7d2",
+        unlistedTemplateContainer: "GUNS__76-40de5724-546b280b-bccbe3eb",
+        unlistedTemplateText: "GUNS__fd-7b58e2e4-cc9b655d-d185d547",
+        unlistedTemplateButton: "GUNS__cd-de45ae1a-b12df76a-4d0c021f",
+        filterSelectInput: "GUNS__49-5ebbf13e-2ad12624-9864aad8"
       }
     },
     45687: (e, t, a) => {
@@ -122,76 +122,76 @@
     67421: (e, t, a) => {
       "use strict";
       a.d(t, {
-        A: () => h
+        A: () => p
       });
       var l = a(95155),
         r = a(12115),
-        p = a(74364),
-        i = a(39866),
-        s = a.n(i),
-        m = a(33029),
-        o = a(66609),
+        s = a(74364),
+        d = a(39866),
+        i = a.n(d),
+        o = a(33029),
+        c = a(66609),
         n = a(38256);
 
-      function h({
+      function p({
         selectedTemplate: e,
         userDetails: t,
         closeModal: a
       }) {
-        let i = (0, n.kj)(),
-          h = t.username,
-          _ = new Date().getTime(),
-          d = e.isUnlisted || !1,
-          [T, u] = (0, r.useState)("full"),
-          [c, w] = (0, r.useState)(!1),
-          [v, g] = (0, r.useState)({
+        let d = (0, n.kj)(),
+          p = t.username,
+          m = new Date().getTime(),
+          h = e.isUnlisted || !1,
+          [f, b] = (0, r.useState)("full"),
+          [_, w] = (0, r.useState)(!1),
+          [u, v] = (0, r.useState)({
             background: !1,
             audio: !1,
             avatar: !1,
             cursor: !1
           }),
-          x = (0, r.useMemo)(() => Object.values(v).some(Boolean), [v]),
-          b = e => {
-            g(t => ({
+          x = (0, r.useMemo)(() => Object.values(u).some(Boolean), [u]),
+          g = e => {
+            v(t => ({
               ...t,
               [e]: !t[e]
             }))
           },
-          C = async () => {
-            if (!c) {
-              if ("custom" === T && !x) return void o.oR.error(i("dashboard.templates.apply.at_least_one_asset"));
+          T = async () => {
+            if (!_) {
+              if ("custom" === f && !x) return void c.oR.error(d("dashboard.templates.apply.at_least_one_asset"));
               w(!0);
               try {
-                let t = await fetch(`https://guns.lol/api/dashboard/templates/apply?unlisted=${d}`, {
+                let t = await fetch(`https://guns.lol/api/dashboard/templates/apply?unlisted=${h}`, {
                     method: "POST",
                     headers: {
                       "Content-Type": "application/json"
                     },
                     body: JSON.stringify({
                       templateId: e.id,
-                      applyMode: T,
-                      selections: "custom" === T ? v : void 0
+                      applyMode: f,
+                      selections: "custom" === f ? u : void 0
                     })
                   }),
                   l = await t.json();
-                t.ok ? (o.oR.success(l.message), a()) : o.oR.error(l.error)
+                t.ok ? (c.oR.success(l.message), a()) : c.oR.error(l.error)
               } finally {
                 w(!1)
               }
             }
           };
-        return e.premiumOnly && !t.premium ? (0, l.jsx)(m.A, {}) : (0, l.jsxs)("div", {
-          className: s().useTemplateModal,
+        return e.premiumOnly && !t.premium ? (0, l.jsx)(o.A, {}) : (0, l.jsxs)("div", {
+          className: i().useTemplateModal,
           children: [(0, l.jsx)("img", {
             src: e.templatePreview,
             alt: ""
           }), (0, l.jsxs)("div", {
-            className: s().useTemplateModalInformationWrapper,
+            className: i().useTemplateModalInformationWrapper,
             children: ["" !== e.templateAuthor.avatar ? (0, l.jsx)("img", {
               src: e.templateAuthor.avatar,
               alt: "User Avatar"
-            }) : p.A.defaultAvatar, (0, l.jsxs)("div", {
-              className: s().useTemplateModalInformation,
+            }) : s.A.defaultAvatar, (0, l.jsxs)("div", {
+              className: i().useTemplateModalInformation,
               children: [(0, l.jsx)("h1", {
                 children: e.name
               }), (0, l.jsx)("a", {
@@ -203,74 +203,74 @@
               })]
             })]
           }), (0, l.jsxs)("div", {
-            className: s().templateApplyModeContainer,
+            className: i().templateApplyModeContainer,
             children: [(0, l.jsx)("span", {
-              className: s().templateApplySectionLabel,
-              children: i("dashboard.templates.apply.mode_label")
+              className: i().templateApplySectionLabel,
+              children: d("dashboard.templates.apply.mode_label")
             }), (0, l.jsxs)("div", {
-              className: s().templateApplyModeGrid,
+              className: i().templateApplyModeGrid,
               children: [(0, l.jsxs)("button", {
                 type: "button",
-                className: `${s().templateApplyModeButton} ${"full"===T?s().templateApplyModeButtonActive:""}`,
-                onClick: () => u("full"),
+                className: `${i().templateApplyModeButton} ${"full"===f?i().templateApplyModeButtonActive:""}`,
+                onClick: () => b("full"),
                 children: [(0, l.jsx)("span", {
-                  children: i("dashboard.templates.apply.mode_full")
+                  children: d("dashboard.templates.apply.mode_full")
                 }), (0, l.jsx)("small", {
-                  children: i("dashboard.templates.apply.mode_full_description")
+                  children: d("dashboard.templates.apply.mode_full_description")
                 })]
               }), (0, l.jsxs)("button", {
                 type: "button",
-                className: `${s().templateApplyModeButton} ${"custom"===T?s().templateApplyModeButtonActive:""}`,
-                onClick: () => u("custom"),
+                className: `${i().templateApplyModeButton} ${"custom"===f?i().templateApplyModeButtonActive:""}`,
+                onClick: () => b("custom"),
                 children: [(0, l.jsx)("span", {
-                  children: i("dashboard.templates.apply.mode_custom")
+                  children: d("dashboard.templates.apply.mode_custom")
                 }), (0, l.jsx)("small", {
-                  children: i("dashboard.templates.apply.mode_custom_description")
+                  children: d("dashboard.templates.apply.mode_custom_description")
                 })]
               })]
             })]
-          }), "custom" === T && (0, l.jsxs)("div", {
-            className: s().templateApplyAssetsContainer,
+          }), "custom" === f && (0, l.jsxs)("div", {
+            className: i().templateApplyAssetsContainer,
             children: [(0, l.jsx)("span", {
-              className: s().templateApplySectionLabel,
-              children: i("dashboard.templates.apply.assets_label")
+              className: i().templateApplySectionLabel,
+              children: d("dashboard.templates.apply.assets_label")
             }), (0, l.jsxs)("div", {
-              className: s().templateApplyAssetsGrid,
+              className: i().templateApplyAssetsGrid,
               children: [(0, l.jsx)("button", {
                 type: "button",
-                className: `${s().templateApplyAssetButton} ${v.background?s().templateApplyAssetButtonActive:""}`,
-                onClick: () => b("background"),
-                children: i("dashboard.templates.apply.asset_background")
+                className: `${i().templateApplyAssetButton} ${u.background?i().templateApplyAssetButtonActive:""}`,
+                onClick: () => g("background"),
+                children: d("dashboard.templates.apply.asset_background")
               }), (0, l.jsx)("button", {
                 type: "button",
-                className: `${s().templateApplyAssetButton} ${v.audio?s().templateApplyAssetButtonActive:""}`,
-                onClick: () => b("audio"),
-                children: i("dashboard.templates.apply.asset_audio")
+                className: `${i().templateApplyAssetButton} ${u.audio?i().templateApplyAssetButtonActive:""}`,
+                onClick: () => g("audio"),
+                children: d("dashboard.templates.apply.asset_audio")
               }), (0, l.jsx)("button", {
                 type: "button",
-                className: `${s().templateApplyAssetButton} ${v.avatar?s().templateApplyAssetButtonActive:""}`,
-                onClick: () => b("avatar"),
-                children: i("dashboard.templates.apply.asset_avatar")
+                className: `${i().templateApplyAssetButton} ${u.avatar?i().templateApplyAssetButtonActive:""}`,
+                onClick: () => g("avatar"),
+                children: d("dashboard.templates.apply.asset_avatar")
               }), (0, l.jsx)("button", {
                 type: "button",
-                className: `${s().templateApplyAssetButton} ${v.cursor?s().templateApplyAssetButtonActive:""}`,
-                onClick: () => b("cursor"),
-                children: i("dashboard.templates.apply.asset_cursor")
+                className: `${i().templateApplyAssetButton} ${u.cursor?i().templateApplyAssetButtonActive:""}`,
+                onClick: () => g("cursor"),
+                children: d("dashboard.templates.apply.asset_cursor")
               })]
             })]
           }), (0, l.jsxs)("div", {
-            className: s().applyTemplateModalButtonContainer,
+            className: i().applyTemplateModalButtonContainer,
             children: [(0, l.jsxs)("a", {
-              className: s().previewTemplateButton,
-              href: `/${h}?templatePreview=true&templateId=${e.id}&t=${_}${d?"&unlisted=true":""}`,
+              className: i().previewTemplateButton,
+              href: `/${p}?templatePreview=true&templateId=${e.id}&t=${m}${h?"&unlisted=true":""}`,
               target: "_blank",
-              children: [p.A.previewEye, " ", i("dashboard.templates.apply.preview_button")]
+              children: [s.A.previewEye, " ", d("dashboard.templates.apply.preview_button")]
             }), (0, l.jsx)("button", {
               type: "button",
-              className: s().useTemplateModalButton,
-              onClick: C,
-              disabled: c || "custom" === T && !x,
-              children: c ? p.A.loading : "custom" === T ? i("dashboard.templates.apply.apply_selected_button") : i("dashboard.templates.apply.apply_button")
+              className: i().useTemplateModalButton,
+              onClick: T,
+              disabled: _ || "custom" === f && !x,
+              children: _ ? s.A.loading : "custom" === f ? d("dashboard.templates.apply.apply_selected_button") : d("dashboard.templates.apply.apply_button")
             })]
           })]
         })

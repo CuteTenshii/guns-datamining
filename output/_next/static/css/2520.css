@@ -1,18 +1,18 @@
-.userLayout1_userInformation__GMpFu {
+.GUNS__57-c12fccd9-3488c534-0a01443d {
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column
 }
 
-.userLayout1_avatar__qnP1r {
+.GUNS__bc-b037f226-4c8a0b03-ded38864 {
   height: 118px;
   width: 118px;
   object-fit: cover;
   border-radius: 50%
 }
 
-.userLayout1_userDescription__ZjN4w {
+.GUNS__de-fbf4b626-483ff799-fceaf9a2 {
   margin-top: 7px;
   max-width: 27rem;
   justify-content: center;
@@ -22,36 +22,36 @@
   text-align: center
 }
 
-.userLayout1_userDescriptionText__grrjO,
-.userLayout1_userDescriptionUsername__ynCxB,
-.userLayout1_usernameCursor__Iwq_D {
+.GUNS__23-fe6fb6eb-31ca6bbc-d0ffa62c,
+.GUNS__75-c400ab93-21112063-78dac97f,
+.GUNS__cb-2a5fa4af-ea9d31e0-31de7bdb {
   margin: 0;
   color: var(--textColor)
 }
 
-.userLayout1_userDescriptionText__grrjO {
+.GUNS__75-c400ab93-21112063-78dac97f {
   margin-top: 5px
 }
 
-.userLayout1_userDescriptionUsername__ynCxB,
-.userLayout1_usernameCursor__Iwq_D {
+.GUNS__23-fe6fb6eb-31ca6bbc-d0ffa62c,
+.GUNS__cb-2a5fa4af-ea9d31e0-31de7bdb {
   text-shadow: var(--colorUsernameGlow);
   width: fit-content;
   background-image: var(--usernameEffects)
 }
 
-.userLayout1_usernameCursor__Iwq_D {
+.GUNS__cb-2a5fa4af-ea9d31e0-31de7bdb {
   font-weight: 400 !important
 }
 
-.userLayout1_badgeContainerWrapper__MV2I1 {
+.GUNS__9e-35c1a1d5-dab8c907-5fd2e2c7 {
   width: 100%;
   justify-content: center;
   display: flex;
   margin-bottom: 14px
 }
 
-.userLayout1_banner__gDnXO {
+.GUNS__06-91018b04-486e3614-b4c4b411 {
   height: 150px;
   width: 100%;
   object-fit: cover;
@@ -61,20 +61,20 @@
   border-top-right-radius: calc(var(--containerRadius) - 2px)
 }
 
-.userLayout1_adjustBanner__ZkAJ8 {
+.GUNS__ca-c821543d-0fad07ea-9d85efa6 {
   margin-top: 50px;
   z-index: 1;
   border: var(--avatarBorder)
 }
 
-.userLayout1_avatar__qnP1r,
-.userLayout1_banner__gDnXO {
+.GUNS__06-91018b04-486e3614-b4c4b411,
+.GUNS__bc-b037f226-4c8a0b03-ded38864 {
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none
 }
 
-.userLayout1_socialsWrapper__9yWdO {
+.GUNS__56-acb6b997-e8798c63-db22b3f0 {
   padding: 0 15px;
   margin-bottom: 7px
 }

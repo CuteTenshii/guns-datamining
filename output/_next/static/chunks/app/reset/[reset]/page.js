@@ -6,31 +6,31 @@
     37897: (e, s, t) => {
       "use strict";
       t.d(s, {
-        A: () => c
+        A: () => d
       });
       var r = t(95155),
         a = t(12115),
         n = t(98241),
         i = t.n(n),
-        o = t(54834);
+        c = t(54834);
 
-      function c({
+      function d({
         featureName: e,
         onChangeFunction: s,
         value: t,
         placeholder: n,
-        icon: c,
-        prefix: u,
-        prefixLength: d,
+        icon: d,
+        prefix: o,
+        prefixLength: u,
         viewPassword: l,
         onKeyPress: h,
         isImageUrl: p,
         type: m = "text",
         ..._
       }) {
-        let [j, x] = (0, a.useState)(!!l);
+        let [f, j] = (0, a.useState)(!!l);
         return (0, a.useEffect)(() => {
-          x(!!l)
+          j(!!l)
         }, [l]), (0, r.jsxs)("div", {
           className: i().inputContainerWrapper,
           "data-dashboard-feature-label": "string" == typeof e ? e : void 0,
@@ -38,31 +38,31 @@
             className: i().featureName,
             children: e
           }), (0, r.jsxs)("div", {
-            className: `${i().inputWrapperDiv} ${u&&i().inputWrapperURL}`,
+            className: `${i().inputWrapperDiv} ${o&&i().inputWrapperURL}`,
             children: [(0, r.jsxs)("span", {
               className: i().inputWrapperSpan,
               style: {
-                position: u ? "absolute" : "static"
+                position: o ? "absolute" : "static"
               },
               children: [p ? (0, r.jsx)("img", {
-                src: c,
+                src: d,
                 alt: "icon",
                 className: i().inputWrapperIconImage
-              }) : c, u && (0, r.jsx)("h1", {
-                children: u
+              }) : d, o && (0, r.jsx)("h1", {
+                children: o
               })]
             }), l && (0, r.jsx)("p", {
               onClick: () => {
-                x(!j)
+                j(!f)
               },
-              children: j ? o.A.hidePassword : o.A.views
+              children: f ? c.A.hidePassword : c.A.views
             }), (0, r.jsx)("input", {
               autoCorrect: "false",
-              type: l ? j ? "password" : "text" : m,
+              type: l ? f ? "password" : "text" : m,
               onKeyDown: h,
               value: t,
               style: {
-                paddingLeft: u ? d : "",
+                paddingLeft: o ? u : "",
                 paddingRight: l ? 47 : ""
               },
               placeholder: n,
@@ -76,11 +76,11 @@
     },
     41804: e => {
       e.exports = {
-        containerWrapper: "resetPasswordComponent_containerWrapper__cYt6e",
-        container: "resetPasswordComponent_container__PWplD",
-        passwordGap: "resetPasswordComponent_passwordGap__9o5Ge",
-        containerButtons: "resetPasswordComponent_containerButtons__8LJKP",
-        submitButton: "resetPasswordComponent_submitButton__Ydzuq"
+        containerWrapper: "GUNS__7d-a387b0d0-ec1769a0-bb642590",
+        container: "GUNS__dc-f67e46db-fd5a2a6e-abd7d0d9",
+        passwordGap: "GUNS__c6-a74ffb16-b3ec7790-97176c27",
+        containerButtons: "GUNS__68-39de63c3-e71175e6-30d1f88a",
+        submitButton: "GUNS__45-09662aac-e027c7cd-9f159553"
       }
     },
     73321: (e, s, t) => {
@@ -111,16 +111,16 @@
     79488: (e, s, t) => {
       "use strict";
       t.d(s, {
-        default: () => x
+        default: () => j
       });
       var r = t(95155),
         a = t(12115),
         n = t(98241),
         i = t.n(n),
-        o = t(41804),
-        c = t.n(o),
-        u = t(37897),
-        d = t(54834),
+        c = t(41804),
+        d = t.n(c),
+        o = t(37897),
+        u = t(54834),
         l = t(73321),
         h = t(38256);
 
@@ -128,17 +128,17 @@
         let e = (0, h.kj)(),
           s = (0, h.VJ)(),
           t = (0, l.useRouter)(),
-          [n, o] = (0, a.useState)(""),
+          [n, c] = (0, a.useState)(""),
           [p, m] = (0, a.useState)(""),
-          [_, j] = (0, a.useState)(""),
-          x = e("auth.reset.change_password"),
-          [w, f] = (0, a.useState)(x),
-          v = (0, l.useParams)().reset,
-          g = async () => {
+          [_, f] = (0, a.useState)(""),
+          j = e("auth.reset.change_password"),
+          [x, v] = (0, a.useState)(j),
+          w = (0, l.useParams)().reset,
+          N = async () => {
             try {
-              f(d.A.loading), j("");
+              v(u.A.loading), f("");
               let e = JSON.stringify({
-                  token: v,
+                  token: w,
                   password: n,
                   passwordReenter: p
                 }),
@@ -147,54 +147,54 @@
                   body: e
                 }),
                 a = await r.json();
-              r.ok ? t.push(s("/password/success")) : (j(a.error), f(x))
+              r.ok ? t.push(s("/password/success")) : (f(a.error), v(j))
             } catch (e) {
               return console.error(e.message), !1
             } finally {
-              f(x)
+              v(j)
             }
           };
         return (0, r.jsx)(r.Fragment, {
           children: (0, r.jsx)("div", {
-            className: c().containerWrapper,
+            className: d().containerWrapper,
             children: (0, r.jsxs)("div", {
-              className: c().container,
+              className: d().container,
               children: [(0, r.jsx)("h1", {
                 children: e("auth.reset.reset_password_title")
               }), (0, r.jsx)("h3", {
                 children: e("auth.reset.reset_password_description")
               }), (0, r.jsxs)("div", {
-                className: c().passwordGap,
-                children: [(0, r.jsx)(u.A, {
+                className: d().passwordGap,
+                children: [(0, r.jsx)(o.A, {
                   featureName: e("auth.reset.reset_inputs.new_password"),
                   placeholder: e("auth.reset.reset_inputs.new_password"),
-                  icon: d.A.password,
+                  icon: u.A.password,
                   value: n,
                   onChangeFunction: e => {
-                    o(e.target.value)
+                    c(e.target.value)
                   },
                   viewPassword: !0
-                }), (0, r.jsx)(u.A, {
+                }), (0, r.jsx)(o.A, {
                   type: "password",
                   featureName: e("auth.reset.reset_inputs.confirm_password"),
                   placeholder: e("auth.reset.reset_inputs.confirm_password"),
-                  icon: d.A.password,
+                  icon: u.A.password,
                   value: p,
                   onChangeFunction: e => {
                     m(e.target.value)
                   }
                 })]
               }), (0, r.jsxs)("div", {
-                className: c().containerButtons,
+                className: d().containerButtons,
                 children: ["" !== _ && (0, r.jsx)("div", {
                   className: i().errorContainer,
                   children: (0, r.jsx)("span", {
                     children: _
                   })
                 }), (0, r.jsx)("span", {
-                  className: c().submitButton,
-                  onClick: g,
-                  children: w
+                  className: d().submitButton,
+                  onClick: N,
+                  children: x
                 })]
               })]
             })
@@ -203,9 +203,9 @@
       }
       var m = t(98500),
         _ = t.n(m),
-        j = t(81934);
+        f = t(81934);
 
-      function x({
+      function j({
         resetData: e
       }) {
         let s = (0, h.kj)(),
@@ -216,13 +216,13 @@
               className: i().containerWrapper,
               children: (0, r.jsxs)("div", {
                 className: i().container,
-                children: [d.A.error, (0, r.jsx)("h1", {
+                children: [u.A.error, (0, r.jsx)("h1", {
                   children: s("auth.reset.invalid_reset_link_title")
                 }), (0, r.jsx)("h3", {
                   children: s("auth.reset.invalid_reset_link_description")
                 }), (0, r.jsxs)("div", {
                   className: i().containerButtons,
-                  children: [(0, r.jsx)(j.A, {
+                  children: [(0, r.jsx)(f.A, {
                     href: "/",
                     children: s("auth.reset.reset_link_buttons.home")
                   }), (0, r.jsx)(_(), {
@@ -240,44 +240,44 @@
     81934: (e, s, t) => {
       "use strict";
       t.d(s, {
-        A: () => o
+        A: () => c
       });
       var r = t(95155),
         a = t(98500),
         n = t.n(a),
         i = t(38256);
 
-      function o({
+      function c({
         href: e,
         asTag: s,
         locale: t,
         children: a,
-        ...o
+        ...c
       }) {
-        let c = t || (0, i.useLang)();
+        let d = t || (0, i.useLang)();
         if (e.startsWith("http://") || e.startsWith("https://") || e.startsWith("mailto:") || e.startsWith("tel:")) return s ? (0, r.jsx)("a", {
           href: e,
-          ...o,
+          ...c,
           children: a
         }) : (0, r.jsx)(n(), {
           href: e,
-          ...o,
+          ...c,
           children: a
         });
-        let u = "en" == c ? `${e.startsWith("/")?"":"/"}${e}` : `/${c}${e.startsWith("/")?"":"/"}${e}`;
+        let o = "en" == d ? `${e.startsWith("/")?"":"/"}${e}` : `/${d}${e.startsWith("/")?"":"/"}${e}`;
         return s ? (0, r.jsx)("a", {
-          href: u,
-          ...o,
+          href: o,
+          ...c,
           children: a
         }) : (0, r.jsx)(n(), {
-          href: u,
-          ...o,
+          href: o,
+          ...c,
           children: a
         })
       }
     }
   },
   e => {
-    e.O(0, [8121, 5439, 8500, 8256, 5886, 8441, 3794, 7358], () => e(e.s = 33237)), _N_E = e.O()
+    e.O(0, [4103, 5439, 8500, 8256, 5886, 8441, 3794, 7358], () => e(e.s = 33237)), _N_E = e.O()
   }
 ]);

@@ -3,67 +3,67 @@
     30803: (e, a, t) => {
       "use strict";
       t.r(a), t.d(a, {
-        default: () => S
+        default: () => j
       });
-      var r = t(95155),
-        s = t(12115),
-        i = t(43477),
-        o = t.n(i),
+      var d = t(95155),
+        r = t(12115),
+        s = t(43477),
+        i = t.n(s),
         n = t(12555),
-        d = t(37897),
-        c = t(58295),
-        u = t(31887),
-        l = t.n(u),
-        m = t(66609);
-      async function p(e) {
+        c = t(37897),
+        o = t(58295),
+        l = t(31887),
+        f = t.n(l),
+        p = t(66609);
+      async function m(e) {
         return new Promise((a, t) => {
-          let r = new Image,
-            s = new FileReader;
-          s.onload = e => {
-            r.src = e.target.result
-          }, r.onload = () => {
-            let t = r.width,
-              s = r.height;
-            if (t > 45 || s > 45) {
+          let d = new Image,
+            r = new FileReader;
+          r.onload = e => {
+            d.src = e.target.result
+          }, d.onload = () => {
+            let t = d.width,
+              r = d.height;
+            if (t > 45 || r > 45) {
               let t = document.createElement("canvas"),
-                s = t.getContext("2d");
-              t.width = 32, t.height = 32, s.drawImage(r, 0, 0, 32, 32), t.toBlob(t => {
+                r = t.getContext("2d");
+              t.width = 32, t.height = 32, r.drawImage(d, 0, 0, 32, 32), t.toBlob(t => {
                 a(new File([t], e.name, {
                   type: e.type
                 }))
               }, e.type)
             } else a(e)
-          }, r.onerror = e => t(e), s.onerror = e => t(e), s.readAsDataURL(e)
+          }, d.onerror = e => t(e), r.onerror = e => t(e), r.readAsDataURL(e)
         })
       }
-      async function _(e, a) {
-        if (!(!(e.size / 1e6 > 10) || (m.oR.error("Could not upload file. Max file size is 10MB"), 0))) return null;
-        "favicon" === a && (e = await p(e));
+      async function u(e, a) {
+        if (!(!(e.size / 1e6 > 10) || (p.oR.error("Could not upload file. Max file size is 10MB"), 0))) return null;
+        "favicon" === a && (e = await m(e));
         let t = new FormData;
         t.append(a, e);
-        let r = await fetch(`/api/dashboard/premium/upload/metadata/${a}`, {
+        let d = await fetch(`/api/dashboard/premium/upload/metadata/${a}`, {
             body: t,
             method: "POST"
           }),
-          s = await r.json();
-        return r.ok ? (m.oR.success(`Successfully uploaded ${a}.`), s.url) : (m.oR.error(s.error), console.error("Failed to upload file:", r.statusText), null)
+          r = await d.json();
+        return d.ok ? (p.oR.success(`Successfully uploaded ${a}.`), r.url) : (p.oR.error(r.error), console.error("Failed to upload file:", d.statusText), null)
       }
-      async function f(e) {
+      async function _(e) {
         try {
           let a = await fetch(`https://guns.lol/api/dashboard/premium/remove/metadata/${e}`, {
             method: "POST"
           });
-          if (a.ok) return m.oR.success(`Successfully removed ${e}.`), "success";
-          return m.oR.error(`Failed to remove ${e}.`), console.error("Failed to remove file:", a.statusText), null
+          if (a.ok) return p.oR.success(`Successfully removed ${e}.`), "success";
+          return p.oR.error(`Failed to remove ${e}.`), console.error("Failed to remove file:", a.statusText), null
         } catch (a) {
-          return m.oR.error(`Failed to remove ${e}.`), console.error("Error removing file:", a), null
+          return p.oR.error(`Failed to remove ${e}.`), console.error("Error removing file:", a), null
         }
       }
-      var h = t(54834);
-      async function g(e, a, t, r, s) {
+      var b = t(54834);
+      async function h(e, a, t, d, r) {
         try {
-          a(h.A.loading);
-          let i = await fetch("https://guns.lol/api/dashboard/premium/metadata", {
+          a(b.A.loading);
+          let s = await fetch("https://guns.lol/api/dashboard/premium/metadata", {
               method: "POST",
               body: JSON.stringify({
                 title: e.title,
@@ -71,100 +71,100 @@
                 information_overlay: e.informationOverlay
               })
             }),
-            o = await i.json();
-          i.ok ? (m.oR.success(s("dashboard.premium.metadata.update_success")), setTimeout(() => {
-            r(e), t(!1)
-          }, 500)) : m.oR.error(o.error)
+            i = await s.json();
+          s.ok ? (p.oR.success(r("dashboard.premium.metadata.update_success")), setTimeout(() => {
+            d(e), t(!1)
+          }, 500)) : p.oR.error(i.error)
         } catch (e) {
-          m.oR.error(s("common.unsaved_changes.unknown_error")), console.error(e.message)
+          p.oR.error(r("common.unsaved_changes.unknown_error")), console.error(e.message)
         } finally {
           setTimeout(() => {
-            a(s("common.unsaved_changes.save_button"))
+            a(r("common.unsaved_changes.save_button"))
           }, 500)
         }
       }
-      var b = t(81469),
-        v = t(57157),
-        T = t(98241),
-        C = t.n(T),
-        z = t(39449),
-        x = t(60884),
-        j = t(45941),
-        y = t(38256);
-      let S = ({
+      var N = t(81469),
+        g = t(57157),
+        S = t(98241),
+        v = t.n(S),
+        U = t(39449),
+        G = t(60884),
+        x = t(45941),
+        C = t(38256);
+      let j = ({
         data: e
       }) => {
-        let a = (0, y.kj)(),
+        let a = (0, C.kj)(),
           t = e.config.premium,
-          i = t?.metadata,
-          u = e.premium && t.typewriter.length > 0 && t.typewriter_enabled ? t.typewriter[0] : e.config.description,
-          p = "" !== e.config.display_name ? e.config.display_name : e.username,
-          [T, S] = (0, s.useState)(!1),
-          [w, E] = (0, s.useState)(!1),
-          [B, N] = (0, s.useState)(i?.image ?? ""),
-          [P, M] = (0, s.useState)(i?.favicon ?? ""),
-          W = a("dashboard.premium.metadata.default_description"),
-          A = "" !== u ? u : W,
-          [R, I] = (0, s.useState)({
-            title: i?.title ?? "@" + p,
-            description: i?.description ?? A,
-            informationOverlay: i?.information_overlay ?? !1
+          s = t?.metadata,
+          l = e.premium && t.typewriter.length > 0 && t.typewriter_enabled ? t.typewriter[0] : e.config.description,
+          m = "" !== e.config.display_name ? e.config.display_name : e.username,
+          [S, j] = (0, r.useState)(!1),
+          [y, w] = (0, r.useState)(!1),
+          [E, B] = (0, r.useState)(s?.image ?? ""),
+          [P, A] = (0, r.useState)(s?.favicon ?? ""),
+          M = a("dashboard.premium.metadata.default_description"),
+          R = "" !== l ? l : M,
+          [T, k] = (0, r.useState)({
+            title: s?.title ?? "@" + m,
+            description: s?.description ?? R,
+            informationOverlay: s?.information_overlay ?? !1
           }),
-          [k, D] = (0, s.useState)(R),
-          [F, O] = (0, s.useState)(!1),
-          L = a("common.unsaved_changes.save_button"),
-          [U, H] = (0, s.useState)(L);
-        (0, s.useEffect)(() => {
-          O(JSON.stringify(k) !== JSON.stringify(R))
-        }, [k, R]);
-        let $ = e => a => {
-            D(t => ({
+          [W, I] = (0, r.useState)(T),
+          [F, $] = (0, r.useState)(!1),
+          D = a("common.unsaved_changes.save_button"),
+          [O, L] = (0, r.useState)(D);
+        (0, r.useEffect)(() => {
+          $(JSON.stringify(W) !== JSON.stringify(T))
+        }, [W, T]);
+        let z = e => a => {
+            I(t => ({
               ...t,
               [e]: a
             }))
           },
-          G = async (e, t) => {
-            "favicon" === t ? S(!0) : E(!0);
+          H = async (e, t) => {
+            "favicon" === t ? j(!0) : w(!0);
             try {
-              let r = e.target.files?.[0];
-              if (e.target.disabled = !0, !r) return;
-              let s = "image" === t ? [".gif", ".png", ".jpeg", ".jpg"] : j.nB.metadata,
-                i = Y(r.name).toLowerCase();
-              if (!s.includes(i)) {
-                m.oR.error(a("dashboard.premium.metadata.invalid_file")), e.target.disabled = !1, e.target.value = "";
+              let d = e.target.files?.[0];
+              if (e.target.disabled = !0, !d) return;
+              let r = "image" === t ? [".gif", ".png", ".jpeg", ".jpg"] : x.nB.metadata,
+                s = Q(d.name).toLowerCase();
+              if (!r.includes(s)) {
+                p.oR.error(a("dashboard.premium.metadata.invalid_file")), e.target.disabled = !1, e.target.value = "";
                 return
               }
-              let o = await _(r, t);
-              e.target.disabled = !1, o ? "favicon" === t ? M(o) : N(o) : (e.target.value = "", e.target.disabled = !1)
+              let i = await u(d, t);
+              e.target.disabled = !1, i ? "favicon" === t ? A(i) : B(i) : (e.target.value = "", e.target.disabled = !1)
             } finally {
-              "favicon" === t ? S(!1) : E(!1)
+              "favicon" === t ? j(!1) : w(!1)
             }
-          }, V = e => {
-            null !== f(e) && ("favicon" === e ? M("") : N(""))
-          }, Y = e => "." + e.substring(e.lastIndexOf(".") + 1), q = "" !== B ? (0, r.jsx)(b.A, {
-            checked: k.informationOverlay,
-            onChangeFunction: e => $("informationOverlay")(e.currentTarget.checked)
-          }) : (0, r.jsx)("div", {
-            className: o().userInformationOverlayText,
-            children: (0, r.jsxs)("h1", {
+          }, J = e => {
+            null !== _(e) && ("favicon" === e ? A("") : B(""))
+          }, Q = e => "." + e.substring(e.lastIndexOf(".") + 1), V = "" !== E ? (0, d.jsx)(N.A, {
+            checked: W.informationOverlay,
+            onChangeFunction: e => z("informationOverlay")(e.currentTarget.checked)
+          }) : (0, d.jsx)("div", {
+            className: i().userInformationOverlayText,
+            children: (0, d.jsxs)("h1", {
               children: [n.A.image, " ", a("dashboard.premium.metadata.info_overlay.missing_image")]
             })
           });
-        return (0, r.jsxs)(r.Fragment, {
-          children: [(0, r.jsx)(m.l$, {
+        return (0, d.jsxs)(d.Fragment, {
+          children: [(0, d.jsx)(p.l$, {
             richColors: !0,
             position: "top-center",
             theme: "dark",
-            className: C().toasterStyles,
+            className: v().toasterStyles,
             icons: {
-              success: h.A.successToast
+              success: b.A.successToast
             },
             visibleToasts: 2
-          }), (0, r.jsx)(z.N, {
-            children: F && (0, r.jsx)("div", {
-              className: C().unsavedChangesWrapper,
-              children: (0, r.jsxs)(x.P.div, {
-                className: C().unsavedChangesBar,
+          }), (0, d.jsx)(U.N, {
+            children: F && (0, d.jsx)("div", {
+              className: v().unsavedChangesWrapper,
+              children: (0, d.jsxs)(G.P.div, {
+                className: v().unsavedChangesBar,
                 initial: {
                   opacity: 0,
                   y: 40,
@@ -185,192 +185,192 @@
                   stiffness: 300,
                   damping: 20
                 },
-                children: [(0, r.jsx)("h1", {
+                children: [(0, d.jsx)("h1", {
                   children: a("common.unsaved_changes.title")
-                }), (0, r.jsx)("h1", {
-                  className: C().compactText,
+                }), (0, d.jsx)("h1", {
+                  className: v().compactText,
                   children: a("common.unsaved_changes.compact")
-                }), (0, r.jsxs)("div", {
-                  className: C().unsavedChangesButtons,
-                  children: [(0, r.jsx)("span", {
-                    className: C().resetButton,
+                }), (0, d.jsxs)("div", {
+                  className: v().unsavedChangesButtons,
+                  children: [(0, d.jsx)("span", {
+                    className: v().resetButton,
                     onClick: () => {
-                      D(R), O(!1)
+                      I(T), $(!1)
                     },
                     children: a("common.unsaved_changes.reset")
-                  }), (0, r.jsx)("span", {
-                    className: C().saveButton,
+                  }), (0, d.jsx)("span", {
+                    className: v().saveButton,
                     onClick: () => {
-                      g(k, H, O, I, a)
+                      h(W, L, $, k, a)
                     },
-                    children: U
+                    children: O
                   })]
                 })]
               })
             })
-          }), (0, r.jsx)("div", {
-            className: o().metadataContainerWrapper,
-            children: (0, r.jsxs)("div", {
-              className: o().metadataContainer,
-              children: [(0, r.jsxs)("div", {
-                className: o().metadataContainerDescription,
-                children: [(0, r.jsxs)("h1", {
+          }), (0, d.jsx)("div", {
+            className: i().metadataContainerWrapper,
+            children: (0, d.jsxs)("div", {
+              className: i().metadataContainer,
+              children: [(0, d.jsxs)("div", {
+                className: i().metadataContainerDescription,
+                children: [(0, d.jsxs)("h1", {
                   children: [n.A.metadata, " ", a("dashboard.premium.metadata.section.title")]
-                }), (0, r.jsx)("h3", {
+                }), (0, d.jsx)("h3", {
                   children: a("dashboard.premium.metadata.section.description")
                 })]
-              }), (0, r.jsxs)("div", {
-                className: o().metadataCustomizationWrapper,
-                children: [(0, r.jsxs)("div", {
-                  className: o().metadataCustomization,
-                  children: [(0, r.jsx)(d.A, {
+              }), (0, d.jsxs)("div", {
+                className: i().metadataCustomizationWrapper,
+                children: [(0, d.jsxs)("div", {
+                  className: i().metadataCustomization,
+                  children: [(0, d.jsx)(c.A, {
                     featureName: a("dashboard.premium.metadata.fields.title.label"),
                     icon: n.A.title,
                     placeholder: a("dashboard.premium.metadata.fields.title.placeholder", {
-                      handle: `@${p}`
+                      handle: `@${m}`
                     }),
-                    value: k.title,
+                    value: W.title,
                     onChangeFunction: e => {
-                      $("title")(e.target.value)
+                      z("title")(e.target.value)
                     },
                     maxLength: 50
-                  }), (0, r.jsx)(c.A, {
+                  }), (0, d.jsx)(o.A, {
                     featureName: a("dashboard.premium.metadata.fields.description.label"),
-                    placeholder: "" !== u ? u : W,
-                    value: k.description,
+                    placeholder: "" !== l ? l : M,
+                    value: W.description,
                     onChangeFunction: e => {
-                      $("description")(e.target.value)
+                      z("description")(e.target.value)
                     },
                     maxLength: 150
-                  }), (0, r.jsxs)("div", {
-                    className: o().imageWrapper,
-                    children: [(0, r.jsxs)("div", {
-                      className: l().uploadCardWrapper,
+                  }), (0, d.jsxs)("div", {
+                    className: i().imageWrapper,
+                    children: [(0, d.jsxs)("div", {
+                      className: f().uploadCardWrapper,
                       style: {
                         padding: 3,
                         width: "100%"
                       },
-                      children: [(0, r.jsx)("h1", {
-                        className: o().websiteImageText,
+                      children: [(0, d.jsx)("h1", {
+                        className: i().websiteImageText,
                         children: a("dashboard.premium.metadata.image.title")
-                      }), (0, r.jsx)("div", {
-                        className: l().uploadCard,
-                        children: "" === B ? w ? (0, r.jsxs)("div", {
-                          className: l().uploaderMessage,
-                          children: [(0, r.jsx)("span", {
+                      }), (0, d.jsx)("div", {
+                        className: f().uploadCard,
+                        children: "" === E ? y ? (0, d.jsxs)("div", {
+                          className: f().uploaderMessage,
+                          children: [(0, d.jsx)("span", {
                             children: n.A.loading
-                          }), (0, r.jsx)("h1", {
+                          }), (0, d.jsx)("h1", {
                             children: a("dashboard.premium.metadata.image.uploading")
                           })]
-                        }) : (0, r.jsxs)(r.Fragment, {
-                          children: [(0, r.jsxs)("div", {
-                            className: l().uploadCardText,
-                            children: [n.A.image, (0, r.jsx)("h1", {
+                        }) : (0, d.jsxs)(d.Fragment, {
+                          children: [(0, d.jsxs)("div", {
+                            className: f().uploadCardText,
+                            children: [n.A.image, (0, d.jsx)("h1", {
                               children: a("dashboard.premium.metadata.image.upload_prompt")
                             })]
-                          }), (0, r.jsx)("input", {
-                            className: o().fileInputStyle,
+                          }), (0, d.jsx)("input", {
+                            className: i().fileInputStyle,
                             type: "file",
                             accept: ".png, .jpeg, .jpg, .gif",
-                            onChange: e => G(e, "image")
+                            onChange: e => H(e, "image")
                           })]
-                        }) : (0, r.jsxs)(r.Fragment, {
-                          children: [(0, r.jsxs)("div", {
-                            className: l().fileBadge,
-                            children: [(0, r.jsx)("span", {
-                              children: Y(B).toUpperCase()
-                            }), (0, r.jsx)("span", {
-                              onClick: () => V("image"),
+                        }) : (0, d.jsxs)(d.Fragment, {
+                          children: [(0, d.jsxs)("div", {
+                            className: f().fileBadge,
+                            children: [(0, d.jsx)("span", {
+                              children: Q(E).toUpperCase()
+                            }), (0, d.jsx)("span", {
+                              onClick: () => J("image"),
                               children: n.A.deleteFile
                             })]
-                          }), (0, r.jsx)("img", {
-                            src: B,
+                          }), (0, d.jsx)("img", {
+                            src: E,
                             alt: "Image",
-                            className: l().uploadCardImage
+                            className: f().uploadCardImage
                           })]
                         })
                       })]
-                    }), (0, r.jsxs)("div", {
-                      className: l().uploadCardWrapper,
+                    }), (0, d.jsxs)("div", {
+                      className: f().uploadCardWrapper,
                       style: {
                         padding: 3,
                         width: "100%"
                       },
-                      children: [(0, r.jsx)("h1", {
-                        className: o().websiteImageText,
+                      children: [(0, d.jsx)("h1", {
+                        className: i().websiteImageText,
                         children: a("dashboard.premium.metadata.favicon.title")
-                      }), (0, r.jsx)("div", {
-                        className: l().uploadCard,
-                        children: "" === P ? T ? (0, r.jsxs)("div", {
-                          className: l().uploaderMessage,
-                          children: [(0, r.jsx)("span", {
+                      }), (0, d.jsx)("div", {
+                        className: f().uploadCard,
+                        children: "" === P ? S ? (0, d.jsxs)("div", {
+                          className: f().uploaderMessage,
+                          children: [(0, d.jsx)("span", {
                             children: n.A.loading
-                          }), (0, r.jsx)("h1", {
+                          }), (0, d.jsx)("h1", {
                             children: a("dashboard.premium.metadata.favicon.uploading")
                           })]
-                        }) : (0, r.jsxs)(r.Fragment, {
-                          children: [(0, r.jsxs)("div", {
-                            className: l().uploadCardText,
-                            children: [n.A.image, (0, r.jsx)("h1", {
+                        }) : (0, d.jsxs)(d.Fragment, {
+                          children: [(0, d.jsxs)("div", {
+                            className: f().uploadCardText,
+                            children: [n.A.image, (0, d.jsx)("h1", {
                               children: a("dashboard.premium.metadata.favicon.upload_prompt")
                             })]
-                          }), (0, r.jsx)("input", {
-                            className: o().fileInputStyle,
+                          }), (0, d.jsx)("input", {
+                            className: i().fileInputStyle,
                             type: "file",
                             accept: ".png, .jpeg, .jpg, .ico",
-                            onChange: e => G(e, "favicon")
+                            onChange: e => H(e, "favicon")
                           })]
-                        }) : (0, r.jsxs)(r.Fragment, {
-                          children: [(0, r.jsxs)("div", {
-                            className: l().fileBadge,
-                            children: [(0, r.jsx)("span", {
-                              children: Y(P).toUpperCase()
-                            }), (0, r.jsx)("span", {
-                              onClick: () => V("favicon"),
+                        }) : (0, d.jsxs)(d.Fragment, {
+                          children: [(0, d.jsxs)("div", {
+                            className: f().fileBadge,
+                            children: [(0, d.jsx)("span", {
+                              children: Q(P).toUpperCase()
+                            }), (0, d.jsx)("span", {
+                              onClick: () => J("favicon"),
                               children: n.A.deleteFile
                             })]
-                          }), (0, r.jsx)("img", {
+                          }), (0, d.jsx)("img", {
                             src: P,
                             alt: "Favicon",
-                            className: l().uploadCardImage
+                            className: f().uploadCardImage
                           })]
                         })
                       })]
                     })]
-                  }), (0, r.jsx)("div", {
-                    className: o().switchWrapper,
-                    children: (0, r.jsx)(v.A, {
+                  }), (0, d.jsx)("div", {
+                    className: i().switchWrapper,
+                    children: (0, d.jsx)(g.A, {
                       featureName: a("dashboard.premium.metadata.info_overlay.label"),
                       helpDescription: a("dashboard.premium.metadata.info_overlay.description"),
-                      element: q
+                      element: V
                     })
                   })]
-                }), (0, r.jsxs)("div", {
-                  className: o().metadataPreview,
-                  children: [(0, r.jsx)("h1", {
-                    className: o().metadataPreviewText,
+                }), (0, d.jsxs)("div", {
+                  className: i().metadataPreview,
+                  children: [(0, d.jsx)("h1", {
+                    className: i().metadataPreviewText,
                     children: a("dashboard.premium.metadata.preview.title")
-                  }), (0, r.jsx)("span", {
-                    className: o().metadataNotification,
+                  }), (0, d.jsx)("span", {
+                    className: i().metadataNotification,
                     children: a("dashboard.premium.metadata.preview.notice")
-                  }), (0, r.jsxs)("div", {
-                    className: o().preview,
-                    children: [(0, r.jsxs)("div", {
-                      className: o().previewDescription,
-                      children: [(0, r.jsx)("h1", {
+                  }), (0, d.jsxs)("div", {
+                    className: i().preview,
+                    children: [(0, d.jsxs)("div", {
+                      className: i().previewDescription,
+                      children: [(0, d.jsx)("h1", {
                         children: a("dashboard.premium.metadata.preview.title_format", {
-                          title: "" !== k.title ? k.title : `@${p}`
+                          title: "" !== W.title ? W.title : `@${m}`
                         })
-                      }), (0, r.jsx)("span", {
-                        children: "" !== k.description ? k.description : A
+                      }), (0, d.jsx)("span", {
+                        children: "" !== W.description ? W.description : R
                       })]
-                    }), B ? k.informationOverlay ? (0, r.jsx)("img", {
-                      src: `https://og.guns.lol/api/og?username=${e.username}&background=${B}`,
+                    }), E ? W.informationOverlay ? (0, d.jsx)("img", {
+                      src: `https://og.guns.lol/api/og?username=${e.username}&background=${E}`,
                       alt: ""
-                    }) : (0, r.jsx)("img", {
-                      src: B,
+                    }) : (0, d.jsx)("img", {
+                      src: E,
                       alt: ""
-                    }) : (0, r.jsx)("img", {
+                    }) : (0, d.jsx)("img", {
                       src: `https://og.guns.lol/api/og?username=${e.username}`,
                       alt: ""
                     })]
@@ -384,125 +384,125 @@
     },
     31887: e => {
       e.exports = {
-        uploadCardWrapper: "customizeTab_uploadCardWrapper__NjzQ_",
-        uploadCard: "customizeTab_uploadCard__iGa_h",
-        uploadCardText: "customizeTab_uploadCardText__pxh1_",
-        featureContainerSpan: "customizeTab_featureContainerSpan__lBVPQ",
-        uploadCardImage: "customizeTab_uploadCardImage__4VFCa",
-        fileBadge: "customizeTab_fileBadge__OHzzo",
-        audioPlaying: "customizeTab_audioPlaying__D51EJ",
-        uploaderMessage: "customizeTab_uploaderMessage__fcBRY",
-        featureGap: "customizeTab_featureGap__ZcdL2",
-        generalComponentRight: "customizeTab_generalComponentRight__mZ7Ss",
-        generalComponentLeft: "customizeTab_generalComponentLeft__prGNi",
-        otherComponent: "customizeTab_otherComponent__hInaL",
-        generalComponentContainer: "customizeTab_generalComponentContainer__YLMjd",
-        sliderDiv: "customizeTab_sliderDiv__ewWcg",
-        featureRow: "customizeTab_featureRow__MH40h",
-        gradientButtonDisabled: "customizeTab_gradientButtonDisabled__ReVll",
-        gradientButtonEnabled: "customizeTab_gradientButtonEnabled__nTy_T",
-        otherComponentWrapper: "customizeTab_otherComponentWrapper__BGjok",
-        premiumAd: "customizeTab_premiumAd__frnuz",
-        discordPresence: "customizeTab_discordPresence__E_qVe",
-        description: "customizeTab_description__OkOR5",
-        discordPresenceWrapper: "customizeTab_discordPresenceWrapper___gCQ6",
-        descriptionWrapper: "customizeTab_descriptionWrapper__9FGY3",
-        discordPresenceConnect: "customizeTab_discordPresenceConnect__quUfE",
-        descriptionText: "customizeTab_descriptionText__HlPUa",
-        usernameEffectsButton: "customizeTab_usernameEffectsButton__ijnhF",
-        usernameEffectsText: "customizeTab_usernameEffectsText__6UvYw",
-        usernameEffectsWrapper: "customizeTab_usernameEffectsWrapper__6gIdI",
-        usernameEffectsModalBody: "customizeTab_usernameEffectsModalBody__t2iSd",
-        usernameEffectsModalContent: "customizeTab_usernameEffectsModalContent__Lyiiv",
-        usernameEffectsModalFooter: "customizeTab_usernameEffectsModalFooter___m4zk",
-        usernameEffects: "customizeTab_usernameEffects__31nNg",
-        usernameEffectsSelection: "customizeTab_usernameEffectsSelection__u6Y5H",
-        usernameEffect: "customizeTab_usernameEffect__4zTCb",
-        userBackground: "customizeTab_userBackground__hCXpa",
-        usernameEffectsPreview: "customizeTab_usernameEffectsPreview__Xt3Ol",
-        usernameEffectSelected: "customizeTab_usernameEffectSelected__B0taN",
-        usernameEffectPreviewTitle: "customizeTab_usernameEffectPreviewTitle__VXMGC",
-        selectedEffect: "customizeTab_selectedEffect__ljmuD",
-        usernameEffectsPreviewInnerWrapper: "customizeTab_usernameEffectsPreviewInnerWrapper__ksWpp",
-        saveButtonUsernameEffects: "customizeTab_saveButtonUsernameEffects__UHGfu",
-        usernameEffectsButtons: "customizeTab_usernameEffectsButtons__O2kY3",
-        premiumOnly: "customizeTab_premiumOnly__p0LCM",
-        premiumTextGradient: "customizeTab_premiumTextGradient__xPCWM",
-        usernameEffectsButtonsMobile: "customizeTab_usernameEffectsButtonsMobile__grBcx",
-        rainbowName: "customizeTab_rainbowName___x3ul",
-        rainbowAnimation: "customizeTab_rainbowAnimation__1RvHA",
-        noUsernameEffect: "customizeTab_noUsernameEffect__7dXYJ",
-        audioManager: "customizeTab_audioManager__jetrM",
-        audioManagerBottomWrapper: "customizeTab_audioManagerBottomWrapper__8x7yE",
-        addAudioButton: "customizeTab_addAudioButton__RVX_I",
-        noAudios: "customizeTab_noAudios__ww7vy",
-        audioInput: "customizeTab_audioInput__3V3WP",
-        addAudio: "customizeTab_addAudio__Tha9m",
-        addAudioWrapper: "customizeTab_addAudioWrapper__4Javj",
-        audioContainer: "customizeTab_audioContainer__qqPmL",
-        audioDescription: "customizeTab_audioDescription__yehzK",
-        buttonDiv: "customizeTab_buttonDiv__lRyjY",
-        audios: "customizeTab_audios___tTe3",
-        editButton: "customizeTab_editButton__pm0iQ",
-        deleteButton: "customizeTab_deleteButton__mY2U1",
-        audiosWrapper: "customizeTab_audiosWrapper__ORu1_",
-        audioAmount: "customizeTab_audioAmount__eh3Q5",
-        activeAudio: "customizeTab_activeAudio__MMmKJ",
-        audioManagerDescription: "customizeTab_audioManagerDescription__pkp7u",
-        shuffleSongs: "customizeTab_shuffleSongs__ajcRm",
-        shuffleSongsDescription: "customizeTab_shuffleSongsDescription__56qxu",
-        audioContainerWrapper: "customizeTab_audioContainerWrapper__4TZNt",
-        audioPlayer: "customizeTab_audioPlayer__VqTza",
-        audioPlayerDescription: "customizeTab_audioPlayerDescription__efgRg",
-        audioManagerSettings: "customizeTab_audioManagerSettings__dAboX",
-        audioUploadCardWrapper: "customizeTab_audioUploadCardWrapper__rsWIA",
-        audioCover: "customizeTab_audioCover__IaUjp",
-        glowSettings: "customizeTab_glowSettings__2HlC2",
-        glowSettingsInner: "customizeTab_glowSettingsInner__NYmTd",
-        glowSetting: "customizeTab_glowSetting__EuUPa",
-        glowSettingEnabled: "customizeTab_glowSettingEnabled__4ibLi",
-        unsavedChangesWrapper: "customizeTab_unsavedChangesWrapper__hssE_",
-        unsavedChangesBar: "customizeTab_unsavedChangesBar__voa9M",
-        unsavedChangesButtons: "customizeTab_unsavedChangesButtons___uDBb",
-        discordPresenceSelectWrapper: "customizeTab_discordPresenceSelectWrapper__gVHz0",
-        discordPresenceSettings: "customizeTab_discordPresenceSettings__eP7DM",
-        discordPresenceSettingsContainer: "customizeTab_discordPresenceSettingsContainer__2BH7O",
-        discordPresenceSettingsSwitchWrapperContainer: "customizeTab_discordPresenceSettingsSwitchWrapperContainer__iyRA9",
-        saveDiscordPresenceSettingsButton: "customizeTab_saveDiscordPresenceSettingsButton__v7S3b",
-        discordPresenceSettingsDisabled: "customizeTab_discordPresenceSettingsDisabled___2jbk",
-        avatarCropperModal: "customizeTab_avatarCropperModal__XVA9D",
-        avatarCropperStage: "customizeTab_avatarCropperStage__vUsv9",
-        avatarCropperImage: "customizeTab_avatarCropperImage__m8Rck",
-        avatarCropperGrid: "customizeTab_avatarCropperGrid__2C5q3",
-        avatarCropperMask: "customizeTab_avatarCropperMask__m8HI_",
-        avatarCropperBottom: "customizeTab_avatarCropperBottom__1LXxP",
-        avatarCropperModalBody: "customizeTab_avatarCropperModalBody__5ovtp",
-        avatarCropperHint: "customizeTab_avatarCropperHint__brko2",
-        avatarCropperHintDesktop: "customizeTab_avatarCropperHintDesktop__Ep39L",
-        avatarCropperHintMobile: "customizeTab_avatarCropperHintMobile__j1Tea",
-        avatarCropperSliderGroup: "customizeTab_avatarCropperSliderGroup__1i5xI",
-        avatarCropperSliderLabel: "customizeTab_avatarCropperSliderLabel__8GbpZ",
-        avatarCropperSliderMeta: "customizeTab_avatarCropperSliderMeta__e6ZDu",
-        avatarCropperInlineReset: "customizeTab_avatarCropperInlineReset__VwQiI",
-        avatarCropperActions: "customizeTab_avatarCropperActions__nbTtn",
-        avatarCropperSecondaryButton: "customizeTab_avatarCropperSecondaryButton__PxCU_",
-        avatarCropperPrimaryButton: "customizeTab_avatarCropperPrimaryButton__b_3u1",
-        avatarCropperRotationSlider: "customizeTab_avatarCropperRotationSlider__J_6cZ",
-        avatarCropperZoomSlider: "customizeTab_avatarCropperZoomSlider__V_zqH"
+        uploadCardWrapper: "GUNS__78-b9db2395-e999a0a0-201d4aa3",
+        uploadCard: "GUNS__ff-9901d788-c95dcffe-fe863c5c",
+        uploadCardText: "GUNS__94-2218c5f6-b05d1ac2-16f9d47f",
+        featureContainerSpan: "GUNS__56-02ad2192-57b9a714-e8269bf5",
+        uploadCardImage: "GUNS__ab-10afa642-b9972fef-28a18010",
+        fileBadge: "GUNS__b9-5c7ea78c-91625765-16a0f9e6",
+        audioPlaying: "GUNS__a7-dc193273-1388d40c-7993c1bb",
+        uploaderMessage: "GUNS__13-54dd360c-58493b80-7dcfd4c2",
+        featureGap: "GUNS__5c-70334c7d-c4d6d87e-fea893f3",
+        generalComponentRight: "GUNS__6b-850887ac-56317e05-1ce5efed",
+        generalComponentLeft: "GUNS__cb-d2a408af-2c7de1ee-ace681e2",
+        otherComponent: "GUNS__54-d0c36670-3fce8ea5-b9e39f6b",
+        generalComponentContainer: "GUNS__b2-05d0e083-46fa21ae-13553283",
+        sliderDiv: "GUNS__77-e3a9df1f-cc21fb9f-98ccb3af",
+        featureRow: "GUNS__e7-30583c2a-35ba5761-8c9a2b59",
+        gradientButtonDisabled: "GUNS__95-d1787b8e-e0736f98-60aeaa8e",
+        gradientButtonEnabled: "GUNS__91-3fd49e2b-cffcf2cf-b15e9bb1",
+        otherComponentWrapper: "GUNS__2c-ac92991e-8dc5807d-6080a581",
+        premiumAd: "GUNS__e2-998b3ddd-1c3b8384-21d9fe8c",
+        discordPresence: "GUNS__27-f4f04853-d29471d2-7529b92a",
+        description: "GUNS__1d-04a18444-ded8b911-719ca707",
+        discordPresenceWrapper: "GUNS__6c-d6cca5f9-97dae699-debd9451",
+        descriptionWrapper: "GUNS__de-4dd9b461-5233d28b-6671745a",
+        discordPresenceConnect: "GUNS__8e-30ee97b4-4909c413-a65ac464",
+        descriptionText: "GUNS__30-e319d536-b6df15e4-2a1d7e3b",
+        usernameEffectsButton: "GUNS__f2-7221abdd-bc6adfef-13518631",
+        usernameEffectsText: "GUNS__ff-e8072cb0-ab18ba1a-e16abd39",
+        usernameEffectsWrapper: "GUNS__c9-bfd13da0-5d7075d4-d7783a8d",
+        usernameEffectsModalBody: "GUNS__95-0e7b3761-d35b8724-88023ca9",
+        usernameEffectsModalContent: "GUNS__5a-ec34bbf8-12942231-96adc5fb",
+        usernameEffectsModalFooter: "GUNS__36-3a0b80e6-b1cc8686-0d7972c8",
+        usernameEffects: "GUNS__e1-3c6e9427-fdcdfa23-315581e4",
+        usernameEffectsSelection: "GUNS__83-34e383c4-9ec61eda-c2166b4a",
+        usernameEffect: "GUNS__6f-e338cd68-b8a831a2-707f1185",
+        userBackground: "GUNS__1b-a406d6d9-09098974-fa701f72",
+        usernameEffectsPreview: "GUNS__0d-8e65c78d-38c264d9-1c9094cb",
+        usernameEffectSelected: "GUNS__5d-7d172db9-b5f3d0fa-ea56fc8b",
+        usernameEffectPreviewTitle: "GUNS__70-514f1f26-31de8fd9-7fe32d54",
+        selectedEffect: "GUNS__be-47dc343d-71803c93-10fe152e",
+        usernameEffectsPreviewInnerWrapper: "GUNS__c6-a334ff05-74b39924-f7d662c0",
+        saveButtonUsernameEffects: "GUNS__8a-5dce6898-30600ca8-5fc8bfc5",
+        usernameEffectsButtons: "GUNS__e4-d5600f65-1c2daa31-532e7a92",
+        premiumOnly: "GUNS__2c-d216b41f-f6ae9671-d65f25fa",
+        premiumTextGradient: "GUNS__45-20371e10-c33df5fd-8382801e",
+        usernameEffectsButtonsMobile: "GUNS__eb-2974526d-bcd697df-3637e16e",
+        rainbowName: "GUNS__40-ef129a61-3f6dd938-a53a57fc",
+        rainbowAnimation: "GUNS__f9-2567f84c-2a4ec79f-1dd67555",
+        noUsernameEffect: "GUNS__61-5d9e53dd-df17dccc-a2ae0e82",
+        audioManager: "GUNS__82-2060732d-3d5eba93-808c0c15",
+        audioManagerBottomWrapper: "GUNS__c8-f348dbe0-a9fbaa30-05997679",
+        addAudioButton: "GUNS__13-f50d2abf-247a256d-e92b4702",
+        noAudios: "GUNS__87-0b436e52-21a20a44-ee9a8e2e",
+        audioInput: "GUNS__75-0f828c81-f95f6d9c-e047dd55",
+        addAudio: "GUNS__d6-75e259d9-625adb4b-4043156d",
+        addAudioWrapper: "GUNS__ad-48fc1f8f-f811be47-e8658309",
+        audioContainer: "GUNS__ac-c23fa93b-263de919-49f1cd68",
+        audioDescription: "GUNS__95-914ff56d-46575c58-bc767286",
+        buttonDiv: "GUNS__23-673ca874-e6737c50-94f4b051",
+        audios: "GUNS__ef-cc9b0310-b7334299-4a87ea94",
+        editButton: "GUNS__96-7eaefbdc-5d1cfa2f-6ccbb392",
+        deleteButton: "GUNS__2e-559d778e-462b5f2a-f361cb26",
+        audiosWrapper: "GUNS__63-00ac4d64-af8286ba-02d5aeda",
+        audioAmount: "GUNS__ae-d3e72c10-0711931c-7a045502",
+        activeAudio: "GUNS__f7-958deb9e-00cd1a23-f89bf2c7",
+        audioManagerDescription: "GUNS__99-17603627-b78f78f8-b58b1b4d",
+        shuffleSongs: "GUNS__79-523a508d-15a8b3dc-978d6a62",
+        shuffleSongsDescription: "GUNS__4d-e5101e9b-3af9bc94-b5525692",
+        audioContainerWrapper: "GUNS__0d-80943a29-f12eea2e-bc71828e",
+        audioPlayer: "GUNS__1f-5420ad77-2f552473-d84ba07f",
+        audioPlayerDescription: "GUNS__9e-dd2826da-0c1d0558-636784e8",
+        audioManagerSettings: "GUNS__69-42fd3e9c-db3280c7-c932e68e",
+        audioUploadCardWrapper: "GUNS__80-a08259eb-84c72b21-27e9492f",
+        audioCover: "GUNS__4d-26ec9e41-095f5932-45b7a255",
+        glowSettings: "GUNS__d4-94ed6e31-f0762014-575da6dc",
+        glowSettingsInner: "GUNS__5b-bc0e78a7-34d1a115-4e74d662",
+        glowSetting: "GUNS__df-598036df-66e81bb2-50ac36ba",
+        glowSettingEnabled: "GUNS__d3-36b7b7ea-e509628d-53e7c140",
+        unsavedChangesWrapper: "GUNS__ff-42097a0b-a7866a1f-f69fee32",
+        unsavedChangesBar: "GUNS__9b-37b85aeb-2826d13a-3aec7653",
+        unsavedChangesButtons: "GUNS__19-8fed3817-56cd3ee3-4021370c",
+        discordPresenceSelectWrapper: "GUNS__b3-8ad5e462-8326065f-efda7a7a",
+        discordPresenceSettings: "GUNS__ef-001fddd4-d9bd3e1a-78044514",
+        discordPresenceSettingsContainer: "GUNS__3e-df8c8265-6a1d7faa-d1a6a41c",
+        discordPresenceSettingsSwitchWrapperContainer: "GUNS__c6-cce87869-e9aca86f-843cad86",
+        saveDiscordPresenceSettingsButton: "GUNS__84-914b4607-67b5c29a-0755b8a7",
+        discordPresenceSettingsDisabled: "GUNS__e0-18d4e26f-e0026206-e4ae06f7",
+        avatarCropperModal: "GUNS__f2-a74f4ff7-df77df3e-a3660b12",
+        avatarCropperStage: "GUNS__4f-744742ac-d3af0698-69324ee6",
+        avatarCropperImage: "GUNS__a1-1f5ad2ee-fc579d78-6799222b",
+        avatarCropperGrid: "GUNS__8d-92ba729d-ccdd8272-55b95f5a",
+        avatarCropperMask: "GUNS__fb-4bd3a547-085dc552-07c96151",
+        avatarCropperBottom: "GUNS__ed-003d3da7-f54e36be-331eb751",
+        avatarCropperModalBody: "GUNS__fc-f3c9e8e4-4c92e337-aa4a808e",
+        avatarCropperHint: "GUNS__53-8e667406-c8ac4ae7-93ea8dd3",
+        avatarCropperHintDesktop: "GUNS__0c-1b2eac35-81221dda-5c38ec9f",
+        avatarCropperHintMobile: "GUNS__39-3253d6ab-5ec8b33e-282d4d05",
+        avatarCropperSliderGroup: "GUNS__b7-1b323e38-2baae0d0-6bba990f",
+        avatarCropperSliderLabel: "GUNS__99-daad1c6f-66420603-3d216fca",
+        avatarCropperSliderMeta: "GUNS__c3-b5d6f531-dd9bbcde-5b980600",
+        avatarCropperInlineReset: "GUNS__54-a94fbe86-3264a227-fab873bb",
+        avatarCropperActions: "GUNS__b1-7b1ad7bf-2d2ce580-2c01cf52",
+        avatarCropperSecondaryButton: "GUNS__ae-5649c567-28b4fce4-bed14fe8",
+        avatarCropperPrimaryButton: "GUNS__70-7eddbe33-4eb66fea-6217cd6d",
+        avatarCropperRotationSlider: "GUNS__28-f18162cc-aba4f872-00ae8eb7",
+        avatarCropperZoomSlider: "GUNS__77-b500e5ba-1ca6a830-9dea4897"
       }
     },
     39449: (e, a, t) => {
       "use strict";
       t.d(a, {
-        N: () => g
+        N: () => h
       });
-      var r = t(95155),
-        s = t(12115),
-        i = t(39551),
-        o = t(28819),
+      var d = t(95155),
+        r = t(12115),
+        s = t(39551),
+        i = t(28819),
         n = t(15131),
-        d = t(24866);
-      class c extends s.Component {
+        c = t(24866);
+      class o extends r.Component {
         getSnapshotBeforeUpdate(e) {
           let a = this.props.childRef.current;
           if (a && e.isPresent && !this.props.isPresent) {
@@ -517,13 +517,13 @@
         }
       }
 
-      function u({
+      function l({
         children: e,
         isPresent: a
       }) {
-        let t = (0, s.useId)(),
-          i = (0, s.useRef)(null),
-          o = (0, s.useRef)({
+        let t = (0, r.useId)(),
+          s = (0, r.useRef)(null),
+          i = (0, r.useRef)({
             width: 0,
             height: 0,
             top: 0,
@@ -531,138 +531,138 @@
           }),
           {
             nonce: n
-          } = (0, s.useContext)(d.Q);
-        return (0, s.useInsertionEffect)(() => {
+          } = (0, r.useContext)(c.Q);
+        return (0, r.useInsertionEffect)(() => {
           let {
             width: e,
-            height: r,
-            top: s,
-            left: d
-          } = o.current;
-          if (a || !i.current || !e || !r) return;
-          i.current.dataset.motionPopId = t;
-          let c = document.createElement("style");
-          return n && (c.nonce = n), document.head.appendChild(c), c.sheet && c.sheet.insertRule(`
+            height: d,
+            top: r,
+            left: c
+          } = i.current;
+          if (a || !s.current || !e || !d) return;
+          s.current.dataset.motionPopId = t;
+          let o = document.createElement("style");
+          return n && (o.nonce = n), document.head.appendChild(o), o.sheet && o.sheet.insertRule(`
           [data-motion-pop-id="${t}"] {
             position: absolute !important;
             width: ${e}px !important;
-            height: ${r}px !important;
-            top: ${s}px !important;
-            left: ${d}px !important;
+            height: ${d}px !important;
+            top: ${r}px !important;
+            left: ${c}px !important;
           }
         `), () => {
-            document.head.removeChild(c)
+            document.head.removeChild(o)
           }
-        }, [a]), (0, r.jsx)(c, {
+        }, [a]), (0, d.jsx)(o, {
           isPresent: a,
-          childRef: i,
-          sizeRef: o,
-          children: s.cloneElement(e, {
-            ref: i
+          childRef: s,
+          sizeRef: i,
+          children: r.cloneElement(e, {
+            ref: s
           })
         })
       }
-      let l = ({
+      let f = ({
         children: e,
         initial: a,
         isPresent: t,
-        onExitComplete: i,
-        custom: d,
-        presenceAffectsLayout: c,
-        mode: l
+        onExitComplete: s,
+        custom: c,
+        presenceAffectsLayout: o,
+        mode: f
       }) => {
-        let p = (0, o.M)(m),
-          _ = (0, s.useId)(),
-          f = (0, s.useCallback)(e => {
-            for (let a of (p.set(e, !0), p.values()))
+        let m = (0, i.M)(p),
+          u = (0, r.useId)(),
+          _ = (0, r.useCallback)(e => {
+            for (let a of (m.set(e, !0), m.values()))
               if (!a) return;
-            i && i()
-          }, [p, i]),
-          h = (0, s.useMemo)(() => ({
-            id: _,
+            s && s()
+          }, [m, s]),
+          b = (0, r.useMemo)(() => ({
+            id: u,
             initial: a,
             isPresent: t,
-            custom: d,
-            onExitComplete: f,
-            register: e => (p.set(e, !1), () => p.delete(e))
-          }), c ? [Math.random(), f] : [t, f]);
-        return (0, s.useMemo)(() => {
-          p.forEach((e, a) => p.set(a, !1))
-        }, [t]), s.useEffect(() => {
-          t || p.size || !i || i()
-        }, [t]), "popLayout" === l && (e = (0, r.jsx)(u, {
+            custom: c,
+            onExitComplete: _,
+            register: e => (m.set(e, !1), () => m.delete(e))
+          }), o ? [Math.random(), _] : [t, _]);
+        return (0, r.useMemo)(() => {
+          m.forEach((e, a) => m.set(a, !1))
+        }, [t]), r.useEffect(() => {
+          t || m.size || !s || s()
+        }, [t]), "popLayout" === f && (e = (0, d.jsx)(l, {
           isPresent: t,
           children: e
-        })), (0, r.jsx)(n.t.Provider, {
-          value: h,
+        })), (0, d.jsx)(n.t.Provider, {
+          value: b,
           children: e
         })
       };
 
-      function m() {
+      function p() {
         return new Map
       }
-      var p = t(79196);
-      let _ = e => e.key || "";
+      var m = t(79196);
+      let u = e => e.key || "";
 
-      function f(e) {
+      function _(e) {
         let a = [];
-        return s.Children.forEach(e, e => {
-          (0, s.isValidElement)(e) && a.push(e)
+        return r.Children.forEach(e, e => {
+          (0, r.isValidElement)(e) && a.push(e)
         }), a
       }
-      var h = t(4524);
-      let g = ({
+      var b = t(4524);
+      let h = ({
         children: e,
         custom: a,
         initial: t = !0,
         onExitComplete: n,
-        presenceAffectsLayout: d = !0,
-        mode: c = "sync",
-        propagate: u = !1
+        presenceAffectsLayout: c = !0,
+        mode: o = "sync",
+        propagate: l = !1
       }) => {
-        let [m, g] = (0, p.xQ)(u), b = (0, s.useMemo)(() => f(e), [e]), v = u && !m ? [] : b.map(_), T = (0, s.useRef)(!0), C = (0, s.useRef)(b), z = (0, o.M)(() => new Map), [x, j] = (0, s.useState)(b), [y, S] = (0, s.useState)(b);
-        (0, h.E)(() => {
-          T.current = !1, C.current = b;
-          for (let e = 0; e < y.length; e++) {
-            let a = _(y[e]);
-            v.includes(a) ? z.delete(a) : !0 !== z.get(a) && z.set(a, !1)
+        let [p, h] = (0, m.xQ)(l), N = (0, r.useMemo)(() => _(e), [e]), g = l && !p ? [] : N.map(u), S = (0, r.useRef)(!0), v = (0, r.useRef)(N), U = (0, i.M)(() => new Map), [G, x] = (0, r.useState)(N), [C, j] = (0, r.useState)(N);
+        (0, b.E)(() => {
+          S.current = !1, v.current = N;
+          for (let e = 0; e < C.length; e++) {
+            let a = u(C[e]);
+            g.includes(a) ? U.delete(a) : !0 !== U.get(a) && U.set(a, !1)
           }
-        }, [y, v.length, v.join("-")]);
-        let w = [];
-        if (b !== x) {
-          let e = [...b];
-          for (let a = 0; a < y.length; a++) {
-            let t = y[a],
-              r = _(t);
-            v.includes(r) || (e.splice(a, 0, t), w.push(t))
+        }, [C, g.length, g.join("-")]);
+        let y = [];
+        if (N !== G) {
+          let e = [...N];
+          for (let a = 0; a < C.length; a++) {
+            let t = C[a],
+              d = u(t);
+            g.includes(d) || (e.splice(a, 0, t), y.push(t))
           }
-          "wait" === c && w.length && (e = w), S(f(e)), j(b);
+          "wait" === o && y.length && (e = y), j(_(e)), x(N);
           return
         }
         let {
-          forceRender: E
-        } = (0, s.useContext)(i.L);
-        return (0, r.jsx)(r.Fragment, {
-          children: y.map(e => {
-            let s = _(e),
-              i = (!u || !!m) && (b === y || v.includes(s));
-            return (0, r.jsx)(l, {
-              isPresent: i,
-              initial: (!T.current || !!t) && void 0,
-              custom: i ? void 0 : a,
-              presenceAffectsLayout: d,
-              mode: c,
-              onExitComplete: i ? void 0 : () => {
-                if (!z.has(s)) return;
-                z.set(s, !0);
+          forceRender: w
+        } = (0, r.useContext)(s.L);
+        return (0, d.jsx)(d.Fragment, {
+          children: C.map(e => {
+            let r = u(e),
+              s = (!l || !!p) && (N === C || g.includes(r));
+            return (0, d.jsx)(f, {
+              isPresent: s,
+              initial: (!S.current || !!t) && void 0,
+              custom: s ? void 0 : a,
+              presenceAffectsLayout: c,
+              mode: o,
+              onExitComplete: s ? void 0 : () => {
+                if (!U.has(r)) return;
+                U.set(r, !0);
                 let e = !0;
-                z.forEach(a => {
+                U.forEach(a => {
                   a || (e = !1)
-                }), e && (null == E || E(), S(C.current), u && (null == g || g()), n && n())
+                }), e && (null == w || w(), j(v.current), l && (null == h || h()), n && n())
               },
               children: e
-            }, s)
+            }, r)
           })
         })
       }

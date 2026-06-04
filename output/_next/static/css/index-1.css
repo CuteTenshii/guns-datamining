@@ -1,4 +1,4 @@
-.pageLayoutComponents_headerWrapper__PEl5_ {
+.GUNS__38-5d3fa968-2ce64d52-d526449a {
   margin-top: 25px;
   width: 100%;
   box-sizing: border-box;
@@ -10,7 +10,7 @@
   transition: height .5s
 }
 
-.pageLayoutComponents_header__fG_oc {
+.GUNS__af-a106523e-287d77ac-0e406c17 {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -25,31 +25,31 @@
   transition: height .3s
 }
 
-.pageLayoutComponents_leftSideHeader__2XrWi {
+.GUNS__ca-1679a7b3-5422ffe1-40b2cef9 {
   text-decoration: none;
   display: flex;
   align-items: center;
   gap: 35px
 }
 
-.pageLayoutComponents_logo__EjkW_ {
+.GUNS__eb-9c636590-d1a33ddd-df821e1a {
   display: flex;
   align-items: center;
   direction: ltr
 }
 
-.pageLayoutComponents_logo__EjkW_ h1 {
+.GUNS__eb-9c636590-d1a33ddd-df821e1a h1 {
   margin: 0;
   color: #fafafa;
   font-weight: 550;
   font-size: 28px
 }
 
-.pageLayoutComponents_logo__EjkW_ h1 span {
+.GUNS__eb-9c636590-d1a33ddd-df821e1a h1 span {
   color: #c265e0
 }
 
-.pageLayoutComponents_logo__EjkW_ img {
+.GUNS__eb-9c636590-d1a33ddd-df821e1a img {
   height: 36px;
   width: 36px;
   margin-right: 12px;
@@ -57,16 +57,16 @@
   object-fit: contain
 }
 
-.pageLayoutComponents_desktopNavExpanded__fSHjS,
-.pageLayoutComponents_desktopNav__bupx5 {
+.GUNS__36-ebbde89e-3b82e7dd-dac3e187,
+.GUNS__9c-1b110717-08d59f07-19dfc81c {
   display: flex;
   align-items: center;
   gap: 15px;
   direction: ltr
 }
 
-.pageLayoutComponents_desktopNavExpanded__fSHjS a,
-.pageLayoutComponents_desktopNav__bupx5 a {
+.GUNS__36-ebbde89e-3b82e7dd-dac3e187 a,
+.GUNS__9c-1b110717-08d59f07-19dfc81c a {
   border: 2px solid transparent;
   display: flex;
   align-items: center;
@@ -80,7 +80,7 @@
   height: 40px
 }
 
-.pageLayoutComponents_highlightedLink__KRSlq {
+.GUNS__c7-17b55098-2139b184-17b416ab {
   margin-left: 5px;
   border-radius: 9999px !important;
   font-weight: 500 !important;
@@ -88,104 +88,104 @@
   border: 2px solid #854a995d !important
 }
 
-.pageLayoutComponents_desktopNavExpanded__fSHjS a.pageLayoutComponents_highlightedLink__KRSlq,
-.pageLayoutComponents_desktopNav__bupx5 a.pageLayoutComponents_highlightedLink__KRSlq {
+.GUNS__36-ebbde89e-3b82e7dd-dac3e187 a.GUNS__c7-17b55098-2139b184-17b416ab,
+.GUNS__9c-1b110717-08d59f07-19dfc81c a.GUNS__c7-17b55098-2139b184-17b416ab {
   padding: 0 18px !important
 }
 
-.pageLayoutComponents_desktopNavExpanded__fSHjS a:hover:not(.pageLayoutComponents_highlightedLink__KRSlq),
-.pageLayoutComponents_desktopNav__bupx5 a:hover:not(.pageLayoutComponents_highlightedLink__KRSlq) {
+.GUNS__36-ebbde89e-3b82e7dd-dac3e187 a:hover:not(.GUNS__c7-17b55098-2139b184-17b416ab),
+.GUNS__9c-1b110717-08d59f07-19dfc81c a:hover:not(.GUNS__c7-17b55098-2139b184-17b416ab) {
   background-color: #202020
 }
 
-.pageLayoutComponents_desktopNavExpanded__fSHjS a:hover.pageLayoutComponents_highlightedLink__KRSlq,
-.pageLayoutComponents_desktopNav__bupx5 a:hover.pageLayoutComponents_highlightedLink__KRSlq {
+.GUNS__36-ebbde89e-3b82e7dd-dac3e187 a:hover.GUNS__c7-17b55098-2139b184-17b416ab,
+.GUNS__9c-1b110717-08d59f07-19dfc81c a:hover.GUNS__c7-17b55098-2139b184-17b416ab {
   background-color: #854a9986;
   box-shadow: 0 2px 16px #da69ff4f
 }
 
-.pageLayoutComponents_desktopNavExpanded__fSHjS a:hover,
-.pageLayoutComponents_desktopNav__bupx5 a:hover {
+.GUNS__36-ebbde89e-3b82e7dd-dac3e187 a:hover,
+.GUNS__9c-1b110717-08d59f07-19dfc81c a:hover {
   background-color: #ffffff11
 }
 
-.pageLayoutComponents_mobileMenuButton__isPqj {
+.GUNS__23-59a63120-8128ba23-43435f8e {
   display: none;
   margin-right: 10px
 }
 
-.pageLayoutComponents_mobileMenuButton__isPqj svg {
+.GUNS__23-59a63120-8128ba23-43435f8e svg {
   font-size: 43px;
   color: #7e3e94
 }
 
-.pageLayoutComponents_forceMobileNav__KqaIE .pageLayoutComponents_desktopNavExpanded__fSHjS,
-.pageLayoutComponents_forceMobileNav__KqaIE .pageLayoutComponents_desktopNav__bupx5 {
+.GUNS__6e-eb80bb0e-5e5cc83d-92ecfc6c .GUNS__36-ebbde89e-3b82e7dd-dac3e187,
+.GUNS__6e-eb80bb0e-5e5cc83d-92ecfc6c .GUNS__9c-1b110717-08d59f07-19dfc81c {
   opacity: 0;
   visibility: hidden;
   pointer-events: none
 }
 
-.pageLayoutComponents_forceMobileNav__KqaIE .pageLayoutComponents_mobileMenuButton__isPqj {
+.GUNS__6e-eb80bb0e-5e5cc83d-92ecfc6c .GUNS__23-59a63120-8128ba23-43435f8e {
   display: flex !important
 }
 
 @media (max-width:850px) {
-  .pageLayoutComponents_desktopNavExpanded__fSHjS a {
+  .GUNS__36-ebbde89e-3b82e7dd-dac3e187 a {
     padding: 0 13px
   }
 }
 
 @media(max-width:800px) {
-  .pageLayoutComponents_desktopNav__bupx5 a {
+  .GUNS__9c-1b110717-08d59f07-19dfc81c a {
     padding: 0 13px
   }
 
-  .pageLayoutComponents_desktopNavExpanded__fSHjS a {
+  .GUNS__36-ebbde89e-3b82e7dd-dac3e187 a {
     padding: 0 11px
   }
 }
 
 @media(max-width:770px) {
-  .pageLayoutComponents_desktopNavExpanded__fSHjS {
+  .GUNS__36-ebbde89e-3b82e7dd-dac3e187 {
     display: none
   }
 
-  body:has(.pageLayoutComponents_desktopNavExpanded__fSHjS) .pageLayoutComponents_mobileMenuButton__isPqj {
+  body:has(.GUNS__36-ebbde89e-3b82e7dd-dac3e187) .GUNS__23-59a63120-8128ba23-43435f8e {
     display: flex
   }
 }
 
 @media(max-width:710px) {
-  .pageLayoutComponents_desktopNav__bupx5 a {
+  .GUNS__9c-1b110717-08d59f07-19dfc81c a {
     padding: 0 10px
   }
 }
 
 @media(max-width:665px) {
-  .pageLayoutComponents_desktopNav__bupx5 {
+  .GUNS__9c-1b110717-08d59f07-19dfc81c {
     display: none
   }
 
-  .pageLayoutComponents_mobileMenuButton__isPqj {
+  .GUNS__23-59a63120-8128ba23-43435f8e {
     display: flex
   }
 }
 
 @media(max-width:575px) {
-  .pageLayoutComponents_header__fG_oc {
+  .GUNS__af-a106523e-287d77ac-0e406c17 {
     margin: 0 18px;
     background-color: #111111ea
   }
 }
 
 @media(max-width:470px) {
-  .pageLayoutComponents_header__fG_oc {
+  .GUNS__af-a106523e-287d77ac-0e406c17 {
     margin: 0 12px
   }
 }
 
-.pageLayoutComponents_footerWrapper__D48Wh {
+.GUNS__8a-55f36e8c-7ff850f4-1f55d9aa {
   margin-top: 28rem;
   display: flex;
   flex-direction: column;
@@ -199,7 +199,7 @@
   box-sizing: border-box
 }
 
-.pageLayoutComponents_footer__QaXMw {
+.GUNS__97-b19370ee-b69a4c19-255d0865 {
   width: 100%;
   max-width: 78rem;
   margin: 60px 25px;
@@ -211,79 +211,79 @@
   gap: 45px
 }
 
-.pageLayoutComponents_footerLeft__qC_6L {
+.GUNS__41-a32dc57e-e091933f-76f0f1ce {
   display: flex;
   flex-direction: column;
   gap: 20px
 }
 
-.pageLayoutComponents_serviceWrapper__yIm4X {
+.GUNS__aa-e53f651a-eb9b1ea1-29039421 {
   display: flex;
   flex-direction: column;
   gap: 15px
 }
 
-.pageLayoutComponents_serviceWrapper__yIm4X img {
+.GUNS__aa-e53f651a-eb9b1ea1-29039421 img {
   height: 34px;
   width: 34px
 }
 
-.pageLayoutComponents_serviceWrapper__yIm4X span {
+.GUNS__aa-e53f651a-eb9b1ea1-29039421 span {
   color: #cfcece;
   font-weight: 400;
   font-size: 16px;
   max-width: 350px
 }
 
-.pageLayoutComponents_logoWrapper__4c3tI {
+.GUNS__6c-420db65d-0054a2ae-73822791 {
   gap: 8px;
   display: flex;
   align-items: center
 }
 
-.pageLayoutComponents_logoWrapper__4c3tI a {
+.GUNS__6c-420db65d-0054a2ae-73822791 a {
   text-decoration: none
 }
 
-.pageLayoutComponents_logoFooter__kEHja {
+.GUNS__f4-86eb2e6a-e0b46a70-b4c7f202 {
   display: flex;
   align-items: center;
   direction: ltr;
   gap: 8px
 }
 
-.pageLayoutComponents_logoWrapper__4c3tI h1 {
+.GUNS__6c-420db65d-0054a2ae-73822791 h1 {
   margin: 0;
   font-weight: 500;
   font-size: 24px;
   color: #fafafa
 }
 
-.pageLayoutComponents_logoWrapper__4c3tI h1 span {
+.GUNS__6c-420db65d-0054a2ae-73822791 h1 span {
   color: #c265e0
 }
 
-.pageLayoutComponents_footerRight__6X2Yr {
+.GUNS__a4-25d570f3-ffaa8215-bcd782d8 {
   display: flex;
   gap: 55px;
   flex-wrap: wrap
 }
 
-.pageLayoutComponents_linkCategory__0ZpNI h1 {
+.GUNS__de-81cf4df6-bab4f1f9-6aadcf86 h1 {
   margin: 0;
   font-weight: 450;
   font-size: 22px;
   color: #fafafa
 }
 
-.pageLayoutComponents_links__oVOSE {
+.GUNS__04-bc0fa69c-b64129e9-6114031a {
   margin-top: 12px;
   display: flex;
   flex-direction: column;
   gap: 7px
 }
 
-.pageLayoutComponents_links__oVOSE a {
+.GUNS__04-bc0fa69c-b64129e9-6114031a a {
   font-size: 16px;
   text-decoration: none;
   color: #aaa8a8;
@@ -291,49 +291,49 @@
   white-space: nowrap
 }
 
-.pageLayoutComponents_links__oVOSE a:hover {
+.GUNS__04-bc0fa69c-b64129e9-6114031a a:hover {
   color: #cccccc
 }
 
 @media (max-width:750px) {
-  .pageLayoutComponents_serviceWrapper__yIm4X span {
+  .GUNS__aa-e53f651a-eb9b1ea1-29039421 span {
     max-width: 270px
   }
 }
 
 @media (max-width:690px) {
-  .pageLayoutComponents_footer__QaXMw {
+  .GUNS__97-b19370ee-b69a4c19-255d0865 {
     flex-direction: column-reverse;
     align-items: baseline
   }
 }
 
-.pageLayoutComponents_header__fG_oc.pageLayoutComponents_active__azh89 {
+.GUNS__af-a106523e-287d77ac-0e406c17.GUNS__cb-eb13a7c7-03f2a036-b293b10b {
   border-radius: 43px;
   flex-direction: column;
   height: calc(100% - 60px)
 }
 
-.pageLayoutComponents_leftSideHeader__2XrWi {
+.GUNS__ca-1679a7b3-5422ffe1-40b2cef9 {
   position: absolute;
   top: 20px;
   left: 25px
 }
 
-.pageLayoutComponents_mobileMenuButton__isPqj {
+.GUNS__23-59a63120-8128ba23-43435f8e {
   position: absolute;
   top: 20px;
   right: 25px
 }
 
-.pageLayoutComponents_desktopNavExpanded__fSHjS,
-.pageLayoutComponents_desktopNav__bupx5 {
+.GUNS__36-ebbde89e-3b82e7dd-dac3e187,
+.GUNS__9c-1b110717-08d59f07-19dfc81c {
   position: absolute;
   top: 17px;
   right: 25px
 }
 
-.pageLayoutComponents_mobileNavigation__MVxK2 {
+.GUNS__19-a56973e4-616b3edb-a6855eea {
   position: absolute;
   top: 85px;
   display: flex;
@@ -349,13 +349,13 @@
   pointer-events: none
 }
 
-.pageLayoutComponents_mobileNavigationOpen__4Igcc {
+.GUNS__3f-f498f077-023f4c88-b5b794a6 {
   opacity: 1;
   overflow: visible;
   pointer-events: auto
 }
 
-.pageLayoutComponents_mobileNavigation__MVxK2 a {
+.GUNS__19-a56973e4-616b3edb-a6855eea a {
   text-decoration: none;
   border: 2px solid #3535362f;
   background-color: #2222223b;
@@ -365,34 +365,34 @@
   transition: .3s
 }
 
-.pageLayoutComponents_mobileNavigation__MVxK2 a:hover {
+.GUNS__19-a56973e4-616b3edb-a6855eea a:hover {
   border: 2px solid #3535364f;
   background-color: #222222bb
 }
 
-.pageLayoutComponents_mobileNavigation__MVxK2 a.pageLayoutComponents_highlightedLink__KRSlq {
+.GUNS__19-a56973e4-616b3edb-a6855eea a.GUNS__c7-17b55098-2139b184-17b416ab {
   border: 2px solid #cb72e921;
   background-color: #c165e02f
 }
 
-.pageLayoutComponents_mobileNavigation__MVxK2 a.pageLayoutComponents_highlightedLink__KRSlq:hover {
+.GUNS__19-a56973e4-616b3edb-a6855eea a.GUNS__c7-17b55098-2139b184-17b416ab:hover {
   border: 2px solid #cb72e94b !important;
   background-color: #c165e05e !important
 }
 
-.pageLayoutComponents_mobileNavGroup__eCTCr {
+.GUNS__2c-faa1674c-b6a68ac8-3271b2d6 {
   display: flex;
   flex-direction: column;
   gap: 10px
 }
 
-.pageLayoutComponents_mobileNavLanguage__6765i {
+.GUNS__19-31507ed5-da71c665-cd3529bd {
   padding-bottom: 16px;
   border-bottom: 2px solid rgba(255, 255, 255, .03);
   margin-bottom: 6px
 }
 
-.pageLayoutComponents_blurBackground__IPc1g {
+.GUNS__0a-cf4f17a0-69e001e3-b019eb5d {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   z-index: -1;
@@ -404,26 +404,26 @@
   border-radius: 50px
 }
 
-.pageLayoutComponents_header__fG_oc.pageLayoutComponents_active__azh89 .pageLayoutComponents_mobileMenuButton__isPqj svg path:first-child {
+.GUNS__af-a106523e-287d77ac-0e406c17.GUNS__cb-eb13a7c7-03f2a036-b293b10b .GUNS__23-59a63120-8128ba23-43435f8e svg path:first-child {
   transform: translateY(5.5px) rotate(45deg);
   transform-origin: 50% 50%
 }
 
-.pageLayoutComponents_header__fG_oc.pageLayoutComponents_active__azh89 .pageLayoutComponents_mobileMenuButton__isPqj svg path:nth-child(2) {
+.GUNS__af-a106523e-287d77ac-0e406c17.GUNS__cb-eb13a7c7-03f2a036-b293b10b .GUNS__23-59a63120-8128ba23-43435f8e svg path:nth-child(2) {
   opacity: 0
 }
 
-.pageLayoutComponents_header__fG_oc.pageLayoutComponents_active__azh89 .pageLayoutComponents_mobileMenuButton__isPqj svg path:nth-child(3) {
+.GUNS__af-a106523e-287d77ac-0e406c17.GUNS__cb-eb13a7c7-03f2a036-b293b10b .GUNS__23-59a63120-8128ba23-43435f8e svg path:nth-child(3) {
   transform: translateY(-3px) rotate(-45deg);
   transform-origin: 50% 50%
 }
 
-.pageLayoutComponents_mobileMenuButton__isPqj svg,
-.pageLayoutComponents_mobileMenuButton__isPqj svg path {
+.GUNS__23-59a63120-8128ba23-43435f8e svg,
+.GUNS__23-59a63120-8128ba23-43435f8e svg path {
   transition: .2s
 }
 
-.pageLayoutComponents_gunsBanner__yNZ2x {
+.GUNS__17-7c3870b1-1fb5ab50-6b7cc3e8 {
   width: 100%;
   max-width: 80rem;
   height: auto;
@@ -435,38 +435,38 @@
   padding: 60px
 }
 
-.pageLayoutComponents_gunsBannerDescription__9WjRU {
+.GUNS__37-74524680-bffdad29-8c45dd4e {
   display: flex;
   flex-direction: column;
   gap: 7px
 }
 
-.pageLayoutComponents_gunsBannerDescription__9WjRU h1:not(.pageLayoutComponents_gunsBannerButtons__icKl7 h1),
-.pageLayoutComponents_gunsBannerDescription__9WjRU h3 {
+.GUNS__37-74524680-bffdad29-8c45dd4e h1:not(.GUNS__d0-88fdb836-47f9d8a9-aa9f219a h1),
+.GUNS__37-74524680-bffdad29-8c45dd4e h3 {
   margin: 0
 }
 
-.pageLayoutComponents_gunsBannerDescription__9WjRU h1:not(.pageLayoutComponents_gunsBannerButtons__icKl7 h1) {
+.GUNS__37-74524680-bffdad29-8c45dd4e h1:not(.GUNS__d0-88fdb836-47f9d8a9-aa9f219a h1) {
   font-size: 45px;
   font-weight: 500;
   color: #fafafa
 }
 
-.pageLayoutComponents_gunsBannerDescription__9WjRU h3 {
+.GUNS__37-74524680-bffdad29-8c45dd4e h3 {
   font-weight: 400;
   color: #bfbfbf;
   font-size: 22px;
   max-width: 550px
 }
 
-.pageLayoutComponents_gunsBannerButtons__icKl7 {
+.GUNS__d0-88fdb836-47f9d8a9-aa9f219a {
   margin-top: 40px;
   display: flex;
   gap: 10px;
   align-items: center
 }
 
-.pageLayoutComponents_gunsBannerWrapper__1Ukav {
+.GUNS__e4-e7f4d400-aa05a41b-02b1b309 {
   margin-top: -230px;
   position: relative;
   width: 100%;
@@ -475,38 +475,38 @@
 }
 
 @media (max-width:825px) {
-  .pageLayoutComponents_gunsBanner__yNZ2x {
+  .GUNS__17-7c3870b1-1fb5ab50-6b7cc3e8 {
     padding: 40px
   }
 }
 
 @media (max-width:700px) {
-  .pageLayoutComponents_gunsBannerDescription__9WjRU h1:not(.pageLayoutComponents_gunsBannerButtons__icKl7 h1) {
+  .GUNS__37-74524680-bffdad29-8c45dd4e h1:not(.GUNS__d0-88fdb836-47f9d8a9-aa9f219a h1) {
     font-size: 41px
   }
 
-  .pageLayoutComponents_gunsBannerDescription__9WjRU h3 {
+  .GUNS__37-74524680-bffdad29-8c45dd4e h3 {
     font-size: 21px
   }
 }
 
 @media (max-width:530px) {
-  .pageLayoutComponents_gunsBannerDescription__9WjRU h1:not(.pageLayoutComponents_gunsBannerButtons__icKl7 h1) {
+  .GUNS__37-74524680-bffdad29-8c45dd4e h1:not(.GUNS__d0-88fdb836-47f9d8a9-aa9f219a h1) {
     font-size: 38px
   }
 
-  .pageLayoutComponents_gunsBannerDescription__9WjRU h3 {
+  .GUNS__37-74524680-bffdad29-8c45dd4e h3 {
     font-size: 19.5px
   }
 }
 
 @media (max-width:465px) {
-  .pageLayoutComponents_gunsBannerButtons__icKl7 {
+  .GUNS__d0-88fdb836-47f9d8a9-aa9f219a {
     flex-direction: column
   }
 
-  .pageLayoutComponents_gunsBannerButtons__icKl7 a,
-  .pageLayoutComponents_gunsBannerButtons__icKl7>div {
+  .GUNS__d0-88fdb836-47f9d8a9-aa9f219a a,
+  .GUNS__d0-88fdb836-47f9d8a9-aa9f219a>div {
     width: 100%;
     max-width: 100% !important;
     box-sizing: border-box
@@ -514,19 +514,19 @@
 }
 
 @media (max-width:1115px) {
-  .pageLayoutComponents_footer__QaXMw {
+  .GUNS__97-b19370ee-b69a4c19-255d0865 {
     flex-direction: column-reverse;
     align-items: self-start
   }
 }
 
 @media (max-width:670px) {
-  .pageLayoutComponents_footerRight__6X2Yr {
+  .GUNS__a4-25d570f3-ffaa8215-bcd782d8 {
     flex-direction: column
   }
 }
 
-.pageLayoutComponents_faq__rxsWU {
+.GUNS__93-bd16e883-d42b7b7b-fd516c06 {
   text-align: center;
   width: 100%;
   max-width: 70rem;
@@ -537,45 +537,45 @@
   padding: 0 30px
 }
 
-.pageLayoutComponents_faqText__U8r2d {
+.GUNS__3b-ebaa9c2f-bb706f43-a5431d04 {
   margin: 0 0 40px;
   font-weight: 450;
   color: #fafafa;
   font-size: 27.5px
 }
 
-.pageLayoutComponents_headerWrapperActive__ZjZrr {
+.GUNS__10-39bb07cc-1ef0c2e5-44a95bca {
   height: 100%
 }
 
-.pageLayoutComponents_categorySeperator__Fzy2v {
+.GUNS__bf-6b94d4bf-2c5eca12-e0fc1228 {
   display: flex;
   gap: 55px;
   flex-wrap: wrap
 }
 
-.pageLayoutComponents_footerSocials__KgUSW {
+.GUNS__cd-2951c2e5-634ecad7-8afcf563 {
   display: flex;
   align-items: center;
   gap: 8px
 }
 
-.pageLayoutComponents_footerSocials__KgUSW a {
+.GUNS__cd-2951c2e5-634ecad7-8afcf563 a {
   text-decoration: none;
   color: #a0a0a0;
   font-size: 27px;
   transition: .3s
 }
 
-.pageLayoutComponents_footerSocials__KgUSW a:hover {
+.GUNS__cd-2951c2e5-634ecad7-8afcf563 a:hover {
   color: #fafafa
 }
 
-.pageLayoutComponents_footerSocials__KgUSW a:nth-child(3) {
+.GUNS__cd-2951c2e5-634ecad7-8afcf563 a:nth-child(3) {
   font-size: 22px
 }
 
-.pageLayoutComponents_statusUp__ZWKB5 svg {
+.GUNS__4b-a67aeee3-4047507f-663ccc93 svg {
   width: 15px;
   height: 15px;
   color: #5cb85c;
@@ -586,7 +586,7 @@
   display: flex
 }
 
-.pageLayoutComponents_statusPartial__Hw8Q2 svg {
+.GUNS__e6-e17a5101-49c343d4-3075640e svg {
   width: 15px;
   height: 15px;
   color: #ceaa1d;
@@ -597,7 +597,7 @@
   display: flex
 }
 
-.pageLayoutComponents_statusDown__dj1L7 svg {
+.GUNS__86-afd20e36-279cefc7-f7a2f2a6 svg {
   width: 15px;
   height: 15px;
   color: #d9534f;
@@ -608,7 +608,7 @@
   display: flex
 }
 
-.pageLayoutComponents_systemStatus__wgSea {
+.GUNS__51-c6858169-8884f695-81758366 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -624,7 +624,7 @@
   white-space: nowrap
 }
 
-.pageLayoutComponents_footerContainer__Rv8a3 {
+.GUNS__a6-da1a4f8d-f9eade62-e58b2344 {
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -633,7 +633,7 @@
   align-items: center
 }
 
-.pageLayoutComponents_footerBottom__2hLZW {
+.GUNS__a4-848f4ece-469843aa-4700df45 {
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -643,7 +643,7 @@
   max-width: 78rem
 }
 
-.pageLayoutComponents_footerBottomWrapper__omqYa {
+.GUNS__a4-461c2d60-cf5e8598-6930d1ba {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -652,7 +652,7 @@
   width: 100%
 }
 
-.pageLayoutComponents_footerDivider__yo5_9 {
+.GUNS__79-bd7e6acf-9cd4e050-f9022817 {
   width: 100%;
   height: 1.5px;
   background-color: #101010;
@@ -663,35 +663,35 @@
   margin: 0 auto
 }
 
-.pageLayoutComponents_footerCopyright__rgLlT {
+.GUNS__b6-08d7cd10-a2fd0de0-165c066e {
   color: #aaa8a8;
   font-size: 15.5px;
   text-align: center
 }
 
 @media (max-width:600px) {
-  .pageLayoutComponents_footerBottom__2hLZW {
+  .GUNS__a4-848f4ece-469843aa-4700df45 {
     flex-direction: column;
     gap: 15px
   }
 }
 
-.pageLayoutComponents_languageSelectionFooter___K3ym {
+.GUNS__46-41e5fc94-95caf663-509d03de {
   max-width: 260px
 }
 
-.landingPage_landingPage__bg2l6 {
+.GUNS__a9-c4ff899b-ec232488-04a0c694 {
   display: flex;
   justify-content: center;
   width: 100%
 }
 
-.landingPage_heroButtons__RjWmN,
-.landingPage_heroContent__bMbQp {
+.GUNS__a8-f3bf4be9-d0fcb4c6-7152aa2d,
+.GUNS__af-c9560e3d-71deecca-34b2caea {
   z-index: 99999
 }
 
-.landingPage_heroContent__bMbQp {
+.GUNS__a8-f3bf4be9-d0fcb4c6-7152aa2d {
   padding: 195px 25px 0;
   display: flex;
   flex-direction: column;
@@ -700,24 +700,24 @@
   gap: 12px
 }
 
-.landingPage_heroContent__bMbQp h1,
-.landingPage_heroContent__bMbQp p {
+.GUNS__a8-f3bf4be9-d0fcb4c6-7152aa2d h1,
+.GUNS__a8-f3bf4be9-d0fcb4c6-7152aa2d p {
   margin: 0
 }
 
-.landingPage_heroContent__bMbQp h1 {
+.GUNS__a8-f3bf4be9-d0fcb4c6-7152aa2d h1 {
   font-weight: 600;
   color: #fafafa;
   font-size: 47px
 }
 
-.landingPage_heroContent__bMbQp p {
+.GUNS__a8-f3bf4be9-d0fcb4c6-7152aa2d p {
   font-size: 21px;
   font-weight: 400;
   color: #dddddd
 }
 
-.landingPage_heroWrapper__unxy2 {
+.GUNS__fe-43b97cb0-57020f0a-e333363b {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -725,7 +725,7 @@
   box-sizing: border-box
 }
 
-.landingPage_heroButtons__RjWmN {
+.GUNS__af-c9560e3d-71deecca-34b2caea {
   margin: 27px 25px 0;
   display: flex;
   align-items: center;
@@ -735,7 +735,7 @@
   justify-content: center
 }
 
-.landingPage_registerButton__DEeTm {
+.GUNS__a1-a0da96e6-1bb95ea0-3b2fcc28 {
   text-decoration: none;
   padding: 11px 17px;
   display: flex;
@@ -751,15 +751,15 @@
   box-shadow: 0 0 15px #7e3f9580
 }
 
-.landingPage_registerButton__DEeTm:hover {
+.GUNS__a1-a0da96e6-1bb95ea0-3b2fcc28:hover {
   box-shadow: 0 2px 16px #da69ff4f
 }
 
-.landingPage_registerButton__DEeTm:active {
+.GUNS__a1-a0da96e6-1bb95ea0-3b2fcc28:active {
   transform: translateY(4px)
 }
 
-.landingPage_pricingButton__7d0tA {
+.GUNS__3e-36f9269e-57691655-3fc6482a {
   text-decoration: none;
   padding: 12px 17px;
   display: flex;
@@ -774,16 +774,16 @@
   transition: .25s
 }
 
-.landingPage_pricingButton__7d0tA:hover {
+.GUNS__3e-36f9269e-57691655-3fc6482a:hover {
   background: #1d1d1d;
   border-color: #252525
 }
 
-.landingPage_pricingButton__7d0tA:active {
+.GUNS__3e-36f9269e-57691655-3fc6482a:active {
   transform: translateY(4px)
 }
 
-.landingPage_claimNow__sCAwZ {
+.GUNS__c3-e4082905-8e87558d-1780b1d2 {
   text-decoration: none;
   padding: 0 17px;
   height: 45px;
@@ -800,18 +800,18 @@
   text-wrap: nowrap
 }
 
-.landingPage_claimNow__sCAwZ:hover {
+.GUNS__c3-e4082905-8e87558d-1780b1d2:hover {
   box-shadow: 0 2px 16px #da69ff4f
 }
 
-.landingPage_inputWrapperDiv__gYRU2 {
+.GUNS__22-360abaec-dbac2644-b552cc35 {
   display: flex;
   align-items: center;
   border-radius: .5rem;
   position: relative
 }
 
-.landingPage_inputWrapperSpan__fPb3C {
+.GUNS__cb-1d3ba140-c368c53f-01467a29 {
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -827,18 +827,18 @@
   position: absolute
 }
 
-.landingPage_inputWrapperSpan__fPb3C h1 {
+.GUNS__cb-1d3ba140-c368c53f-01467a29 h1 {
   font-weight: 400 !important;
   color: #cfcfcf !important
 }
 
-.landingPage_inputWrapperSpan__fPb3C svg {
+.GUNS__cb-1d3ba140-c368c53f-01467a29 svg {
   padding: 0 5px;
   font-size: 21.5px;
   color: #666666
 }
 
-.landingPage_inputWrapperInput__dPAKy {
+.GUNS__d3-0cdd311d-448398a2-9b728453 {
   background-color: #111111;
   border: 2px solid transparent;
   font-family: Satoshi, sans-serif;
@@ -855,50 +855,50 @@
   width: 100%
 }
 
-html.rtl .landingPage_inputWrapperInput__dPAKy {
+html.rtl .GUNS__d3-0cdd311d-448398a2-9b728453 {
   padding-left: 12px;
   padding-right: 78px
 }
 
-html.rtl .landingPage_inputWrapperSpan__fPb3C {
+html.rtl .GUNS__cb-1d3ba140-c368c53f-01467a29 {
   margin-right: 0
 }
 
-.landingPage_inputWrapperInput__dPAKy:focus,
-.landingPage_inputWrapperInput__dPAKy:hover {
+.GUNS__d3-0cdd311d-448398a2-9b728453:focus,
+.GUNS__d3-0cdd311d-448398a2-9b728453:hover {
   border: 2px solid #663c735e
 }
 
-.landingPage_inputContainerWrapper__uz1Pw {
+.GUNS__e5-60788d2a-27a2a622-aa903f43 {
   width: 100%;
   max-width: 270px
 }
 
-.landingPage_inputContainerWrapper__uz1Pw input {
+.GUNS__e5-60788d2a-27a2a622-aa903f43 input {
   padding-left: 83px !important
 }
 
-.landingPage_inputContainerWrapper__uz1Pw h1 {
+.GUNS__e5-60788d2a-27a2a622-aa903f43 h1 {
   font-size: 18px;
   font-weight: 500;
   color: #dddddd;
   margin: 0 0 0 7.5px
 }
 
-.landingPage_expandAnimation__AHRmj {
+.GUNS__9f-d713adb4-179d8819-18266e08 {
   opacity: 1 !important;
   transform: scale(1) !important;
   bottom: 0 !important
 }
 
-.landingPage_elementAnimation__ZWrRR {
+.GUNS__a8-dc35fb56-a410df80-36817d04 {
   opacity: 0;
   transform: scale(.8);
   bottom: -30px;
   transition: all .4s
 }
 
-.landingPage_gunsGradient__ciQdS {
+.GUNS__2f-0545ff07-ec5fdbff-7c3dd198 {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -909,7 +909,7 @@ html.rtl .landingPage_inputWrapperSpan__fPb3C {
   z-index: -1
 }
 
-.landingPage_heroShowcase__tvd02 {
+.GUNS__8b-a1bf407c-1c514470-ba38463f {
   z-index: 9;
   display: flex;
   flex-wrap: wrap;
@@ -926,21 +926,21 @@ html.rtl .landingPage_inputWrapperSpan__fPb3C {
   direction: ltr
 }
 
-.landingPage_heroShowcase__tvd02 img {
+.GUNS__8b-a1bf407c-1c514470-ba38463f img {
   height: auto;
   border-radius: 26px;
   transition: transform .35s ease;
   width: 100%
 }
 
-.landingPage_heroShowcase__tvd02 img:first-child {
+.GUNS__8b-a1bf407c-1c514470-ba38463f img:first-child {
   flex: 1 1 48%;
   min-width: 360px;
   max-width: 980px;
   width: clamp(360px, 48vw, 1100px)
 }
 
-.landingPage_heroShowcase__tvd02 img:nth-child(2) {
+.GUNS__8b-a1bf407c-1c514470-ba38463f img:nth-child(2) {
   flex: 1 1 48%;
   min-width: 360px;
   max-width: 780px;
@@ -950,16 +950,16 @@ html.rtl .landingPage_inputWrapperSpan__fPb3C {
 }
 
 @media (max-width:1100px) {
-  .landingPage_heroShowcase__tvd02 {
+  .GUNS__8b-a1bf407c-1c514470-ba38463f {
     width: 80%;
     padding: 0 12px
   }
 
-  .landingPage_heroShowcase__tvd02 img:first-child {
+  .GUNS__8b-a1bf407c-1c514470-ba38463f img:first-child {
     display: none
   }
 
-  .landingPage_heroShowcase__tvd02 img:nth-child(2) {
+  .GUNS__8b-a1bf407c-1c514470-ba38463f img:nth-child(2) {
     max-height: none;
     min-width: unset;
     width: clamp(260px, 70vw, 600px)
@@ -967,12 +967,12 @@ html.rtl .landingPage_inputWrapperSpan__fPb3C {
 }
 
 @media (max-width:700px) {
-  .landingPage_heroShowcase__tvd02 {
+  .GUNS__8b-a1bf407c-1c514470-ba38463f {
     width: 100%
   }
 }
 
-.landingPage_heroContentWrapper__QJIV_ {
+.GUNS__9d-4020a1d8-66af330b-c514dde1 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -980,68 +980,68 @@ html.rtl .landingPage_inputWrapperSpan__fPb3C {
 }
 
 @media (max-width:740px) {
-  .landingPage_heroContent__bMbQp h1 {
+  .GUNS__a8-f3bf4be9-d0fcb4c6-7152aa2d h1 {
     font-size: 44px
   }
 
-  .landingPage_heroContent__bMbQp p {
+  .GUNS__a8-f3bf4be9-d0fcb4c6-7152aa2d p {
     font-size: 19px
   }
 }
 
 @media (max-width:510px) {
-  .landingPage_heroContent__bMbQp p {
+  .GUNS__a8-f3bf4be9-d0fcb4c6-7152aa2d p {
     line-height: 29px
   }
 }
 
 @media (max-height:1560px) {
-  .landingPage_inputWrapperInput__dPAKy {
+  .GUNS__d3-0cdd311d-448398a2-9b728453 {
     border: 2px solid #171717
   }
 }
 
 @media (max-width:380px) {
-  .landingPage_heroContent__bMbQp h1 {
+  .GUNS__a8-f3bf4be9-d0fcb4c6-7152aa2d h1 {
     font-size: 40px
   }
 
-  .landingPage_heroContent__bMbQp p {
+  .GUNS__a8-f3bf4be9-d0fcb4c6-7152aa2d p {
     font-size: 18px;
     line-height: 27px
   }
 }
 
 @media (max-width:600px) {
-  .landingPage_heroContent__bMbQp {
+  .GUNS__a8-f3bf4be9-d0fcb4c6-7152aa2d {
     padding-top: 165px
   }
 }
 
 @media (max-width:361px) {
-  .landingPage_heroButtons__RjWmN {
+  .GUNS__af-c9560e3d-71deecca-34b2caea {
     margin-top: 10px
   }
 }
 
 @media (max-width:348px) {
-  .landingPage_heroContent__bMbQp h1 {
+  .GUNS__a8-f3bf4be9-d0fcb4c6-7152aa2d h1 {
     font-size: 37px
   }
 
-  .landingPage_heroContent__bMbQp {
+  .GUNS__a8-f3bf4be9-d0fcb4c6-7152aa2d {
     padding-left: 15px;
     padding-right: 15px
   }
 }
 
 @media (max-width:361px) {
-  .landingPage_heroButtons__RjWmN {
+  .GUNS__af-c9560e3d-71deecca-34b2caea {
     margin-top: 15px
   }
 }
 
-.landingPage_statisticsShowcase__N7jpz {
+.GUNS__47-34fa97da-5143157a-99be0600 {
   margin-top: 13rem;
   display: flex;
   flex-direction: column;
@@ -1051,27 +1051,27 @@ html.rtl .landingPage_inputWrapperSpan__fPb3C {
   padding: 0 30px
 }
 
-.landingPage_statisticsDescription__9AIOq {
+.GUNS__02-7def0db9-93c742e3-cc509b33 {
   display: flex;
   flex-direction: column;
   gap: 10px
 }
 
-.landingPage_statisticsDescription__9AIOq h1 {
+.GUNS__02-7def0db9-93c742e3-cc509b33 h1 {
   margin: 0;
   color: #fafafa;
   font-weight: 500;
   font-size: 33px
 }
 
-.landingPage_statisticsDescription__9AIOq h3 {
+.GUNS__02-7def0db9-93c742e3-cc509b33 h3 {
   margin: 0;
   font-weight: 400;
   font-size: 20px;
   color: #cecece
 }
 
-.landingPage_statisticsDescription__9AIOq h1 span {
+.GUNS__02-7def0db9-93c742e3-cc509b33 h1 span {
   font-weight: 700;
   background: linear-gradient(270deg, #d283eb, #a367b6);
   background-clip: text;
@@ -1082,7 +1082,7 @@ html.rtl .landingPage_inputWrapperSpan__fPb3C {
   -webkit-user-select: none
 }
 
-.landingPage_userMarqueeWrapper__epP7I {
+.GUNS__f7-876cf7a0-164a7568-272a8566 {
   margin-top: 25px;
   width: 100%;
   box-sizing: border-box;
@@ -1090,14 +1090,14 @@ html.rtl .landingPage_inputWrapperSpan__fPb3C {
   justify-content: center
 }
 
-.landingPage_userMarquee__uC2vt {
+.GUNS__09-bc3542f7-49639c4f-3e8b849b {
   display: flex;
   flex-direction: column;
   gap: 15px;
   max-width: 78rem
 }
 
-.landingPage_userProfile__quSIz {
+.GUNS__e8-717f5d75-315bb849-c9b8f462 {
   padding: 15px;
   background-color: #121212;
   width: 240px;
@@ -1108,7 +1108,7 @@ html.rtl .landingPage_inputWrapperSpan__fPb3C {
   align-items: center
 }
 
-.landingPage_userDescription__WtKKd {
+.GUNS__7b-bf456b41-61548770-cfefc794 {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -1117,19 +1117,19 @@ html.rtl .landingPage_inputWrapperSpan__fPb3C {
   gap: 2px
 }
 
-.landingPage_userDescription__WtKKd h1 {
+.GUNS__7b-bf456b41-61548770-cfefc794 h1 {
   margin: 0;
   font-size: 22px;
   font-weight: 500;
   color: #fafafa
 }
 
-.landingPage_userDescription__WtKKd span {
+.GUNS__7b-bf456b41-61548770-cfefc794 span {
   text-decoration: none;
   color: #aaa8a8
 }
 
-.landingPage_userProfile__quSIz img {
+.GUNS__e8-717f5d75-315bb849-c9b8f462 img {
   height: 65px;
   min-width: 65px;
   width: 65px;
@@ -1137,7 +1137,7 @@ html.rtl .landingPage_inputWrapperSpan__fPb3C {
   border-radius: 50%
 }
 
-.landingPage_statisticBoxWrapper__0CxBG {
+.GUNS__1c-78d8c28c-dd069b10-a9f7bb62 {
   gap: 15px;
   margin-top: 25px;
   justify-content: center;
@@ -1145,7 +1145,7 @@ html.rtl .landingPage_inputWrapperSpan__fPb3C {
   flex-wrap: wrap
 }
 
-.landingPage_statisticBox__K0UHU {
+.GUNS__47-c6345d93-91a0fed8-693657bd {
   display: flex;
   justify-content: space-between;
   width: 250px;
@@ -1157,35 +1157,35 @@ html.rtl .landingPage_inputWrapperSpan__fPb3C {
   flex: 1 1 auto
 }
 
-.landingPage_statisticBox__K0UHU:hover {
+.GUNS__47-c6345d93-91a0fed8-693657bd:hover {
   cursor: pointer;
   border: 2px solid #9f53b43a
 }
 
-.landingPage_boxWrapper__XdEPT h1 {
+.GUNS__93-0dcd29d2-914a6f77-4b952b45 h1 {
   font-size: 32px;
   font-weight: 550;
   margin: 0
 }
 
-.landingPage_boxWrapper__XdEPT span {
+.GUNS__93-0dcd29d2-914a6f77-4b952b45 span {
   color: #b6b6b6;
   font-size: 18px
 }
 
-.landingPage_statisticBox__K0UHU svg {
+.GUNS__47-c6345d93-91a0fed8-693657bd svg {
   font-size: 25px;
   color: #9f53b4
 }
 
-.landingPage_boxWrapper__XdEPT {
+.GUNS__93-0dcd29d2-914a6f77-4b952b45 {
   display: flex;
   flex-direction: column;
   gap: 2px;
   text-align: left
 }
 
-.landingPage_premiumShowcase__X8D4A {
+.GUNS__3d-3e4d1acf-93b52f18-d85b6acb {
   margin-top: 12rem;
   display: flex;
   flex-direction: column;
@@ -1196,14 +1196,14 @@ html.rtl .landingPage_inputWrapperSpan__fPb3C {
   gap: 35px
 }
 
-.landingPage_premiumHeadingText__9aGfe {
+.GUNS__3a-84736de4-835a7198-eb304980 {
   margin: 0;
   color: #fafafa;
   font-weight: 500;
   font-size: 35px
 }
 
-.landingPage_premiumHeadingText__9aGfe span {
+.GUNS__3a-84736de4-835a7198-eb304980 span {
   font-weight: 700;
   background: linear-gradient(90deg, #d283eb, #a367b6);
   background-clip: text;
@@ -1214,7 +1214,7 @@ html.rtl .landingPage_inputWrapperSpan__fPb3C {
   -webkit-user-select: none
 }
 
-.landingPage_lifetimeText__lYrml {
+.GUNS__95-13c6f6f2-63d08707-3593bd0e {
   font-size: 15.5px;
   color: #e3a6eb;
   font-weight: 400;
@@ -1225,19 +1225,19 @@ html.rtl .landingPage_inputWrapperSpan__fPb3C {
 }
 
 @media (max-width:383px) {
-  .landingPage_premiumShowcase__X8D4A {
+  .GUNS__3d-3e4d1acf-93b52f18-d85b6acb {
     padding-bottom: 10rem
   }
 }
 
-.landingPage_claimProfileWrapper__g_Fbe {
+.GUNS__92-082b721a-fd3d4ca3-8430337f {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 64px
 }
 
-.landingPage_claimProfileText__Q2_7m {
+.GUNS__2d-da8b047c-8651e0f1-bcfefd46 {
   font-weight: 400;
   margin: 0 0 8px;
   color: #fafafa;
@@ -1245,25 +1245,25 @@ html.rtl .landingPage_inputWrapperSpan__fPb3C {
   text-align: center
 }
 
-.landingPage_claimProfileBox__yAW9m {
+.GUNS__73-c1fc5bbd-2ecf6cf0-642ab41e {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-top: 4px
 }
 
-.landingPage_claimProfileBox__yAW9m input {
+.GUNS__73-c1fc5bbd-2ecf6cf0-642ab41e input {
   padding-left: 83px !important
 }
 
-.pricingPage_pricingPage__eJNCO {
+.GUNS__c6-e065363c-9ee19f9c-6ec3f15e {
   display: flex;
   justify-content: center;
   width: 100%;
   box-sizing: border-box
 }
 
-.pricingPage_pricingHero__fj55o {
+.GUNS__2f-adb27b21-fe77f6d6-c90d30a7 {
   padding: 195px 35px 0;
   display: flex;
   flex-direction: column;
@@ -1273,7 +1273,7 @@ html.rtl .landingPage_inputWrapperSpan__fPb3C {
 }
 
 @media (max-width:915px) {
-  .pricingPage_pricingHero__fj55o {
+  .GUNS__2f-adb27b21-fe77f6d6-c90d30a7 {
     flex-direction: column;
     text-align: center;
     gap: 35px;
@@ -1282,12 +1282,12 @@ html.rtl .landingPage_inputWrapperSpan__fPb3C {
   }
 }
 
-.pricingPage_heroDescription__YDafE h1,
-.pricingPage_heroDescription__YDafE h3 {
+.GUNS__8c-123a7e76-34b14509-233ded39 h1,
+.GUNS__8c-123a7e76-34b14509-233ded39 h3 {
   margin: 0
 }
 
-.pricingPage_heroDescription__YDafE {
+.GUNS__8c-123a7e76-34b14509-233ded39 {
   display: flex;
   align-items: center;
   text-align: center;
@@ -1295,30 +1295,30 @@ html.rtl .landingPage_inputWrapperSpan__fPb3C {
   gap: 10px
 }
 
-.pricingPage_heroDescription__YDafE h1 {
+.GUNS__8c-123a7e76-34b14509-233ded39 h1 {
   font-size: 40px;
   color: #fafafa;
   font-weight: 550
 }
 
-.pricingPage_heroDescription__YDafE h3 {
+.GUNS__8c-123a7e76-34b14509-233ded39 h3 {
   color: #d6d6d6;
   font-weight: 450;
   font-size: 22px
 }
 
-.pricingPage_price__D8tCh {
+.GUNS__50-000b99f1-2d098815-7370452f {
   margin: 25px 0 0;
   color: #fafafa
 }
 
-.pricingPage_price__D8tCh h1 s {
+.GUNS__50-000b99f1-2d098815-7370452f h1 s {
   font-size: 19px;
   font-weight: 450;
   color: #d8d8d8
 }
 
-.pricingPage_price__D8tCh h1 {
+.GUNS__50-000b99f1-2d098815-7370452f h1 {
   font-weight: 500;
   font-size: 30px;
   display: flex;
@@ -1326,13 +1326,13 @@ html.rtl .landingPage_inputWrapperSpan__fPb3C {
   align-items: center
 }
 
-.pricingPage_price__D8tCh span:not(.pricingPage_lifetimeText__pV8hw) {
+.GUNS__50-000b99f1-2d098815-7370452f span:not(.GUNS__3f-c44b7aa9-edf99732-59d4cc00) {
   color: #cacaca;
   font-weight: 400;
   font-size: 17px
 }
 
-.pricingPage_allFeatures__VmKMR {
+.GUNS__d6-ebf59996-ed75f47e-0de3bb34 {
   margin-top: 9rem;
   display: flex;
   flex-direction: column;
@@ -1343,13 +1343,13 @@ html.rtl .landingPage_inputWrapperSpan__fPb3C {
   padding: 0 30px
 }
 
-.pricingPage_allFeatures__VmKMR h1 {
+.GUNS__d6-ebf59996-ed75f47e-0de3bb34 h1 {
   font-size: 40px;
   color: #fafafa;
   font-weight: 550
 }
 
-.pricingPage_featuresTable__5dE2H {
+.GUNS__cb-04b79771-58031162-3547812b {
   border-radius: 15px;
   border-top-right-radius: 0;
   box-sizing: border-box;
@@ -1358,17 +1358,17 @@ html.rtl .landingPage_inputWrapperSpan__fPb3C {
   flex-direction: column
 }
 
-.pricingPage_featureLeftWrapper__fnICb {
+.GUNS__5f-af25557c-f0f12d4d-12ac1009 {
   border-bottom: 1px solid #181818;
   width: calc(100% - 380px);
   box-sizing: border-box
 }
 
-.pricingPage_freeFeature__m8cKm {
+.GUNS__39-e91d1b5a-85362707-f262180e {
   border-bottom: 1px solid #181818
 }
 
-.pricingPage_feature__hiMxo {
+.GUNS__ea-ace03238-28e544b5-b1c20b15 {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1377,66 +1377,66 @@ html.rtl .landingPage_inputWrapperSpan__fPb3C {
   direction: ltr
 }
 
-.pricingPage_featureLeft__6KBTH {
+.GUNS__83-321be104-3d75dc75-d487cb5c {
   padding: 17px 20px
 }
 
-.pricingPage_featuresTable__5dE2H .pricingPage_feature__hiMxo:last-child .pricingPage_featureLeftWrapper__fnICb,
-.pricingPage_featuresTable__5dE2H .pricingPage_feature__hiMxo:last-child .pricingPage_freeFeature__m8cKm,
-.pricingPage_featuresTable__5dE2H .pricingPage_feature__hiMxo:last-child .pricingPage_premiumFeature__g0BSl {
+.GUNS__cb-04b79771-58031162-3547812b .GUNS__ea-ace03238-28e544b5-b1c20b15:last-child .GUNS__39-e91d1b5a-85362707-f262180e,
+.GUNS__cb-04b79771-58031162-3547812b .GUNS__ea-ace03238-28e544b5-b1c20b15:last-child .GUNS__5f-af25557c-f0f12d4d-12ac1009,
+.GUNS__cb-04b79771-58031162-3547812b .GUNS__ea-ace03238-28e544b5-b1c20b15:last-child .GUNS__c0-a42b14b9-fa628610-f38c0656 {
   border: none
 }
 
-.pricingPage_featureRight__3D0eg {
+.GUNS__bb-3abd9453-665d35da-e89517b0 {
   display: flex;
   position: absolute;
   right: 0;
   height: 100%
 }
 
-.pricingPage_freeFeature__m8cKm,
-.pricingPage_premiumFeature__g0BSl {
+.GUNS__39-e91d1b5a-85362707-f262180e,
+.GUNS__c0-a42b14b9-fa628610-f38c0656 {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 190px
 }
 
-.pricingPage_freeFeature__m8cKm svg,
-.pricingPage_premiumFeature__g0BSl svg {
+.GUNS__39-e91d1b5a-85362707-f262180e svg,
+.GUNS__c0-a42b14b9-fa628610-f38c0656 svg {
   font-size: 27px
 }
 
-.pricingPage_featureLeft__6KBTH h1 {
+.GUNS__83-321be104-3d75dc75-d487cb5c h1 {
   margin: 0;
   font-size: 18px;
   font-weight: 400;
   color: #fafafa
 }
 
-html.rtl .pricingPage_featureDescription__m4WgW,
-html.rtl .pricingPage_featureLeft__6KBTH h1 {
+html.rtl .GUNS__83-321be104-3d75dc75-d487cb5c h1,
+html.rtl .GUNS__a5-73d85197-b965d6a2-c9e5d7b6 {
   direction: rtl
 }
 
-.pricingPage_featureLeft__6KBTH {
+.GUNS__83-321be104-3d75dc75-d487cb5c {
   display: flex;
   align-items: center;
   gap: 10px
 }
 
-.pricingPage_featureLeft__6KBTH svg {
+.GUNS__83-321be104-3d75dc75-d487cb5c svg {
   color: #fafafa;
   font-size: 25px;
   min-width: 25px
 }
 
-.pricingPage_premiumFeature__g0BSl {
+.GUNS__c0-a42b14b9-fa628610-f38c0656 {
   background-color: #682872;
   border-bottom: 1px solid #7f2c8b
 }
 
-.pricingPage_tableWrapper__XobS3 {
+.GUNS__c6-f7171496-11de5ed2-273f24f7 {
   margin-top: 50px;
   width: 95%;
   max-width: 1200px;
@@ -1446,7 +1446,7 @@ html.rtl .pricingPage_featureLeft__6KBTH h1 {
   --matrix-premium-tint: #2a1830
 }
 
-.pricingPage_matrixShell__X_QAD {
+.GUNS__ef-f6a16aab-164257a6-2906b6b6 {
   border-radius: 16px;
   border-top-right-radius: 0;
   border-top-left-radius: 16px;
@@ -1456,7 +1456,7 @@ html.rtl .pricingPage_featureLeft__6KBTH h1 {
   position: relative
 }
 
-.pricingPage_matrixHeader__xA7C_ {
+.GUNS__71-b226d930-2a8835c1-7c4f73ac {
   display: grid;
   grid-template-columns: minmax(0, 1fr) var(--matrix-plan-col) var(--matrix-plan-col);
   gap: 0;
@@ -1467,7 +1467,7 @@ html.rtl .pricingPage_featureLeft__6KBTH h1 {
   width: auto
 }
 
-.pricingPage_matrixPlanCard__PQyYW {
+.GUNS__50-55b8ce63-d0ac347a-8054c5bb {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1478,31 +1478,31 @@ html.rtl .pricingPage_featureLeft__6KBTH h1 {
   border: none
 }
 
-.pricingPage_matrixHeader__xA7C_ .pricingPage_matrixPlanCard__PQyYW:first-child {
+.GUNS__71-b226d930-2a8835c1-7c4f73ac .GUNS__50-55b8ce63-d0ac347a-8054c5bb:first-child {
   grid-column: 2;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
   border-right: none
 }
 
-.pricingPage_matrixHeader__xA7C_ .pricingPage_matrixPlanCard__PQyYW:last-child {
+.GUNS__71-b226d930-2a8835c1-7c4f73ac .GUNS__50-55b8ce63-d0ac347a-8054c5bb:last-child {
   grid-column: 3;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
   border-left: 1px solid var(--matrix-separator)
 }
 
-.pricingPage_matrixPlanCard__PQyYW h1 {
+.GUNS__50-55b8ce63-d0ac347a-8054c5bb h1 {
   margin: 0
 }
 
-.pricingPage_matrixPlanCard__PQyYW h1:first-child {
+.GUNS__50-55b8ce63-d0ac347a-8054c5bb h1:first-child {
   font-size: 25px;
   font-weight: 600;
   color: #fafafa
 }
 
-.pricingPage_matrixPlanCard__PQyYW h1:nth-child(2) {
+.GUNS__50-55b8ce63-d0ac347a-8054c5bb h1:nth-child(2) {
   margin-top: 3px;
   display: flex;
   align-items: center;
@@ -1512,14 +1512,14 @@ html.rtl .pricingPage_featureLeft__6KBTH h1 {
   color: #fafafa
 }
 
-.pricingPage_matrixPlanCard__PQyYW h1:nth-child(2) span {
+.GUNS__50-55b8ce63-d0ac347a-8054c5bb h1:nth-child(2) span {
   color: #c9c9c9;
   font-size: 16px;
   font-weight: 400
 }
 
-.pricingPage_matrixPlanCard__PQyYW a,
-.pricingPage_matrixPlanCard__PQyYW>span {
+.GUNS__50-55b8ce63-d0ac347a-8054c5bb a,
+.GUNS__50-55b8ce63-d0ac347a-8054c5bb>span {
   margin-top: 12px;
   width: 100%;
   box-sizing: border-box;
@@ -1537,22 +1537,22 @@ html.rtl .pricingPage_featureLeft__6KBTH h1 {
   align-items: center
 }
 
-.pricingPage_matrixPlanCardPremium__fnvUE {
+.GUNS__c2-56c90cee-f19fdffd-7d3b37ba {
   background-color: var(--matrix-premium-tint);
   box-shadow: inset 2px 0 0 #551f5f73, inset -2px 0 0 #551f5f73, inset 0 2px 0 #551f5f73
 }
 
-.pricingPage_matrixPlanCardFree__ZDldz {
+.GUNS__ff-d6380642-f7dda425-056f8f8d {
   background-color: #121212
 }
 
-.pricingPage_featuresMatrix__Vejmu {
+.GUNS__3f-4d52b01c-3ee1eb12-0f1c02ac {
   background-color: transparent;
   position: relative
 }
 
-.pricingPage_featuresMatrix__Vejmu:after,
-.pricingPage_featuresMatrix__Vejmu:before {
+.GUNS__3f-4d52b01c-3ee1eb12-0f1c02ac:after,
+.GUNS__3f-4d52b01c-3ee1eb12-0f1c02ac:before {
   content: "";
   position: absolute;
   top: 0;
@@ -1562,15 +1562,15 @@ html.rtl .pricingPage_featureLeft__6KBTH h1 {
   pointer-events: none
 }
 
-.pricingPage_featuresMatrix__Vejmu:before {
+.GUNS__3f-4d52b01c-3ee1eb12-0f1c02ac:before {
   display: none
 }
 
-.pricingPage_featuresMatrix__Vejmu:after {
+.GUNS__3f-4d52b01c-3ee1eb12-0f1c02ac:after {
   left: calc(100% - var(--matrix-plan-col))
 }
 
-.pricingPage_matrixRow__ogg_e {
+.GUNS__65-2700ca3d-d625f36d-a512e365 {
   display: grid;
   grid-template-columns: minmax(0, 1fr) var(--matrix-plan-col) var(--matrix-plan-col);
   align-items: stretch;
@@ -1580,47 +1580,47 @@ html.rtl .pricingPage_featureLeft__6KBTH h1 {
   background-color: #101010
 }
 
-.pricingPage_matrixRow__ogg_e:hover {
+.GUNS__65-2700ca3d-d625f36d-a512e365:hover {
   background-color: #151515
 }
 
-.pricingPage_matrixRowExpanded__vGUke {
+.GUNS__34-145edb7a-d2e12c68-5a315c6c {
   background-color: #161616
 }
 
-.pricingPage_matrixRowExpanded__vGUke .pricingPage_matrixFeatureContent__a3lKK {
+.GUNS__34-145edb7a-d2e12c68-5a315c6c .GUNS__b0-3fa2a373-8b6c5a82-e9882687 {
   justify-content: flex-start
 }
 
-.pricingPage_matrixRow__ogg_e:focus-visible {
+.GUNS__65-2700ca3d-d625f36d-a512e365:focus-visible {
   outline: 2px solid #7e2c8b80;
   outline-offset: -2px
 }
 
-.pricingPage_featuresMatrix__Vejmu .pricingPage_matrixRow__ogg_e:last-child {
+.GUNS__3f-4d52b01c-3ee1eb12-0f1c02ac .GUNS__65-2700ca3d-d625f36d-a512e365:last-child {
   border-bottom: none
 }
 
-.pricingPage_featuresMatrix__Vejmu .pricingPage_matrixRow__ogg_e:first-child {
+.GUNS__3f-4d52b01c-3ee1eb12-0f1c02ac .GUNS__65-2700ca3d-d625f36d-a512e365:first-child {
   border-top-left-radius: 16px;
   overflow: hidden
 }
 
-.pricingPage_matrixFeatureContent__a3lKK {
+.GUNS__b0-3fa2a373-8b6c5a82-e9882687 {
   padding: 17px 16px;
   display: flex;
   flex-direction: column;
   justify-content: center
 }
 
-.pricingPage_matrixFeatureTitle__PlU8x {
+.GUNS__0c-27fb0f98-e19269a5-ae835eff {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 9px
 }
 
-.pricingPage_matrixFeatureTitle__PlU8x h1 {
+.GUNS__0c-27fb0f98-e19269a5-ae835eff h1 {
   margin: 0;
   font-size: 16.5px;
   font-weight: 450;
@@ -1628,7 +1628,7 @@ html.rtl .pricingPage_featureLeft__6KBTH h1 {
   color: #fafafa
 }
 
-.pricingPage_matrixFeatureArrow__GdDkA {
+.GUNS__4c-6a477f39-25952106-b086c578 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1638,19 +1638,19 @@ html.rtl .pricingPage_featureLeft__6KBTH h1 {
   transition: transform .38s cubic-bezier(.22, 1, .36, 1), color .28s ease
 }
 
-.pricingPage_matrixFeatureArrow__GdDkA svg {
+.GUNS__4c-6a477f39-25952106-b086c578 svg {
   font-size: 22px
 }
 
-.pricingPage_matrixRowExpanded__vGUke .pricingPage_matrixFeatureArrow__GdDkA {
+.GUNS__34-145edb7a-d2e12c68-5a315c6c .GUNS__4c-6a477f39-25952106-b086c578 {
   color: #e7c5ee
 }
 
-.pricingPage_matrixFeatureArrowOpen__idTwv {
+.GUNS__53-aec34d83-60317d34-e79cc64d {
   transform: rotate(180deg)
 }
 
-.pricingPage_matrixFeatureDescription__aTIIw {
+.GUNS__72-fda5577b-e0653e71-216932bc {
   display: grid;
   grid-template-rows: 0fr;
   overflow: hidden;
@@ -1660,13 +1660,13 @@ html.rtl .pricingPage_featureLeft__6KBTH h1 {
   min-height: 0
 }
 
-.pricingPage_matrixFeatureDescriptionOpen__Ofjzb {
+.GUNS__9e-58e56380-d6fc0d83-9388c13d {
   grid-template-rows: 1fr;
   opacity: 1;
   transform: translateY(0)
 }
 
-.pricingPage_matrixFeatureDescription__aTIIw p {
+.GUNS__72-fda5577b-e0653e71-216932bc p {
   min-height: 0;
   margin: 0;
   color: #ababab;
@@ -1674,65 +1674,65 @@ html.rtl .pricingPage_featureLeft__6KBTH h1 {
   line-height: 1.5
 }
 
-.pricingPage_matrixFeatureDescriptionOpen__Ofjzb p {
+.GUNS__9e-58e56380-d6fc0d83-9388c13d p {
   margin-top: 8px
 }
 
-html.rtl .pricingPage_matrixFeatureContent__a3lKK {
+html.rtl .GUNS__b0-3fa2a373-8b6c5a82-e9882687 {
   direction: rtl
 }
 
-html.rtl .pricingPage_matrixFeatureArrow__GdDkA {
+html.rtl .GUNS__4c-6a477f39-25952106-b086c578 {
   transform: scaleX(-1)
 }
 
-html.rtl .pricingPage_matrixFeatureArrowOpen__idTwv {
+html.rtl .GUNS__53-aec34d83-60317d34-e79cc64d {
   transform: scaleX(-1) rotate(180deg)
 }
 
-.pricingPage_matrixAvailability__eZ8RM {
+.GUNS__50-fe407957-3f18ac58-ae8561dc {
   display: flex;
   justify-content: center;
   align-items: center;
   line-height: 1
 }
 
-.pricingPage_matrixAvailability__eZ8RM svg {
+.GUNS__50-fe407957-3f18ac58-ae8561dc svg {
   font-size: 22px;
   display: block;
   margin: 0 auto
 }
 
-.pricingPage_matrixAvailabilityPremium__itF60 {
+.GUNS__af-41d3b019-e454bfbe-858eb754 {
   background-color: var(--matrix-premium-tint);
   box-shadow: inset 2px 0 0 #551f5f73, inset -2px 0 0 #551f5f73
 }
 
-.pricingPage_matrixMobileAvailability__9nC48 {
+.GUNS__21-d9040764-33c9f3ec-59f57584 {
   display: none
 }
 
 @media (max-width:900px) {
-  .pricingPage_tableWrapper__XobS3 {
+  .GUNS__c6-f7171496-11de5ed2-273f24f7 {
     --matrix-plan-col: 150px
   }
 
-  .pricingPage_matrixHeader__xA7C_,
-  .pricingPage_matrixRow__ogg_e {
+  .GUNS__65-2700ca3d-d625f36d-a512e365,
+  .GUNS__71-b226d930-2a8835c1-7c4f73ac {
     grid-template-columns: minmax(0, 1fr) var(--matrix-plan-col) var(--matrix-plan-col)
   }
 
-  .pricingPage_matrixPlanCard__PQyYW h1:first-child {
+  .GUNS__50-55b8ce63-d0ac347a-8054c5bb h1:first-child {
     font-size: 22px
   }
 
-  .pricingPage_matrixPlanCard__PQyYW h1:nth-child(2) {
+  .GUNS__50-55b8ce63-d0ac347a-8054c5bb h1:nth-child(2) {
     font-size: 20px
   }
 }
 
 @media (max-width:640px) {
-  .pricingPage_matrixHeader__xA7C_ {
+  .GUNS__71-b226d930-2a8835c1-7c4f73ac {
     position: static;
     width: 100%;
     grid-template-columns: 1fr 1fr;
@@ -1740,19 +1740,19 @@ html.rtl .pricingPage_matrixFeatureArrowOpen__idTwv {
     margin-bottom: 8px
   }
 
-  .pricingPage_matrixHeader__xA7C_ .pricingPage_matrixPlanCard__PQyYW:first-child,
-  .pricingPage_matrixHeader__xA7C_ .pricingPage_matrixPlanCard__PQyYW:last-child {
+  .GUNS__71-b226d930-2a8835c1-7c4f73ac .GUNS__50-55b8ce63-d0ac347a-8054c5bb:first-child,
+  .GUNS__71-b226d930-2a8835c1-7c4f73ac .GUNS__50-55b8ce63-d0ac347a-8054c5bb:last-child {
     grid-column: auto;
     border-radius: 14px;
     border: 1px solid #1f1f1f;
     min-height: 104px
   }
 
-  .pricingPage_matrixHeader__xA7C_ .pricingPage_matrixPlanCard__PQyYW:last-child {
+  .GUNS__71-b226d930-2a8835c1-7c4f73ac .GUNS__50-55b8ce63-d0ac347a-8054c5bb:last-child {
     border-left: none
   }
 
-  .pricingPage_featuresMatrix__Vejmu {
+  .GUNS__3f-4d52b01c-3ee1eb12-0f1c02ac {
     display: block;
     background-color: #101010;
     border: 1px solid #1a1a1a;
@@ -1760,12 +1760,12 @@ html.rtl .pricingPage_matrixFeatureArrowOpen__idTwv {
     overflow: hidden
   }
 
-  .pricingPage_featuresMatrix__Vejmu:after,
-  .pricingPage_featuresMatrix__Vejmu:before {
+  .GUNS__3f-4d52b01c-3ee1eb12-0f1c02ac:after,
+  .GUNS__3f-4d52b01c-3ee1eb12-0f1c02ac:before {
     display: none
   }
 
-  .pricingPage_matrixRow__ogg_e {
+  .GUNS__65-2700ca3d-d625f36d-a512e365 {
     grid-template-columns: 1fr;
     border-radius: 0;
     border: none;
@@ -1775,29 +1775,29 @@ html.rtl .pricingPage_matrixFeatureArrowOpen__idTwv {
     background-color: transparent
   }
 
-  .pricingPage_featuresMatrix__Vejmu .pricingPage_matrixRow__ogg_e:first-child {
+  .GUNS__3f-4d52b01c-3ee1eb12-0f1c02ac .GUNS__65-2700ca3d-d625f36d-a512e365:first-child {
     border-top-left-radius: 14px
   }
 
-  .pricingPage_featuresMatrix__Vejmu .pricingPage_matrixRow__ogg_e:last-child {
+  .GUNS__3f-4d52b01c-3ee1eb12-0f1c02ac .GUNS__65-2700ca3d-d625f36d-a512e365:last-child {
     border-bottom: none
   }
 
-  .pricingPage_matrixFeatureContent__a3lKK {
+  .GUNS__b0-3fa2a373-8b6c5a82-e9882687 {
     padding: 0
   }
 
-  .pricingPage_matrixAvailability__eZ8RM {
+  .GUNS__50-fe407957-3f18ac58-ae8561dc {
     display: none
   }
 
-  .pricingPage_matrixMobileAvailability__9nC48 {
+  .GUNS__21-d9040764-33c9f3ec-59f57584 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px
   }
 
-  .pricingPage_matrixMobilePlan__holKt {
+  .GUNS__b8-a35906f1-063d8fcb-d587b33c {
     border: 2px solid #171717;
     background-color: #141414;
     border-radius: 9px;
@@ -1808,13 +1808,13 @@ html.rtl .pricingPage_matrixFeatureArrowOpen__idTwv {
     gap: 6px
   }
 
-  .pricingPage_matrixMobilePlan__holKt span {
+  .GUNS__b8-a35906f1-063d8fcb-d587b33c span {
     color: #d6d6d6;
     font-size: 12.5px;
     font-weight: 500
   }
 
-  .pricingPage_matrixMobilePlan__holKt .pricingPage_matrixAvailability__eZ8RM {
+  .GUNS__b8-a35906f1-063d8fcb-d587b33c .GUNS__50-fe407957-3f18ac58-ae8561dc {
     display: flex;
     min-height: 30px;
     width: 100%;
@@ -1823,22 +1823,22 @@ html.rtl .pricingPage_matrixFeatureArrowOpen__idTwv {
     border: 2px solid #171717
   }
 
-  .pricingPage_matrixMobilePlan__holKt .pricingPage_matrixAvailabilityPremium__itF60 {
+  .GUNS__b8-a35906f1-063d8fcb-d587b33c .GUNS__af-41d3b019-e454bfbe-858eb754 {
     box-shadow: none
   }
 }
 
 @media (max-width:460px) {
-  .pricingPage_matrixPlanCard__PQyYW {
+  .GUNS__50-55b8ce63-d0ac347a-8054c5bb {
     min-height: 108px;
     padding: 10px
   }
 
-  .pricingPage_matrixPlanCard__PQyYW h1:first-child {
+  .GUNS__50-55b8ce63-d0ac347a-8054c5bb h1:first-child {
     font-size: 20px
   }
 
-  .pricingPage_matrixPlanCard__PQyYW h1:nth-child(2) {
+  .GUNS__50-55b8ce63-d0ac347a-8054c5bb h1:nth-child(2) {
     display: flex;
     flex-wrap: nowrap;
     row-gap: 0;
@@ -1847,24 +1847,24 @@ html.rtl .pricingPage_matrixFeatureArrowOpen__idTwv {
     gap: 3px
   }
 
-  .pricingPage_matrixPlanCard__PQyYW h1:nth-child(2) span {
+  .GUNS__50-55b8ce63-d0ac347a-8054c5bb h1:nth-child(2) span {
     width: auto;
     white-space: nowrap;
     font-size: 14px
   }
 
-  .pricingPage_matrixPlanCard__PQyYW a,
-  .pricingPage_matrixPlanCard__PQyYW>span {
+  .GUNS__50-55b8ce63-d0ac347a-8054c5bb a,
+  .GUNS__50-55b8ce63-d0ac347a-8054c5bb>span {
     min-height: 36px;
     padding: 6px 8px
   }
 
-  .pricingPage_matrixFeatureTitle__PlU8x h1 {
+  .GUNS__0c-27fb0f98-e19269a5-ae835eff h1 {
     font-size: 17px
   }
 }
 
-.pricingPage_tablePlan__vggW2 {
+.GUNS__9b-29124633-9608d168-eb19fedc {
   display: flex;
   flex-direction: column;
   margin-left: auto;
@@ -1877,21 +1877,21 @@ html.rtl .pricingPage_matrixFeatureArrowOpen__idTwv {
   padding: 10px
 }
 
-html.rtl .pricingPage_tablePlan__vggW2 {
+html.rtl .GUNS__9b-29124633-9608d168-eb19fedc {
   direction: rtl
 }
 
-.pricingPage_tablePlan__vggW2 h1 {
+.GUNS__9b-29124633-9608d168-eb19fedc h1 {
   margin: 0;
   font-size: 20px
 }
 
-.pricingPage_tablePlan__vggW2 h1:first-child {
+.GUNS__9b-29124633-9608d168-eb19fedc h1:first-child {
   font-size: 28px;
   font-weight: 600
 }
 
-.pricingPage_tablePlan__vggW2 h1:nth-child(2) {
+.GUNS__9b-29124633-9608d168-eb19fedc h1:nth-child(2) {
   font-size: 21px;
   margin-top: 2px;
   display: flex;
@@ -1900,14 +1900,14 @@ html.rtl .pricingPage_tablePlan__vggW2 {
   font-weight: 500
 }
 
-.pricingPage_tablePlan__vggW2 h1:nth-child(2) span {
+.GUNS__9b-29124633-9608d168-eb19fedc h1:nth-child(2) span {
   font-size: 17px;
   color: #c9c9c9;
   font-weight: 400
 }
 
-.pricingPage_tablePlan__vggW2 a,
-.pricingPage_tablePlan__vggW2 span:not(.pricingPage_tablePlan__vggW2 h1:nth-child(2) span) {
+.GUNS__9b-29124633-9608d168-eb19fedc a,
+.GUNS__9b-29124633-9608d168-eb19fedc span:not(.GUNS__9b-29124633-9608d168-eb19fedc h1:nth-child(2) span) {
   margin-top: 10px;
   width: 100%;
   box-sizing: border-box;
@@ -1922,30 +1922,30 @@ html.rtl .pricingPage_tablePlan__vggW2 {
   text-decoration: none
 }
 
-.pricingPage_tablePlan__vggW2 a svg,
-.pricingPage_tablePlan__vggW2 span:not(.pricingPage_tablePlan__vggW2 h1:nth-child(2) span) svg {
+.GUNS__9b-29124633-9608d168-eb19fedc a svg,
+.GUNS__9b-29124633-9608d168-eb19fedc span:not(.GUNS__9b-29124633-9608d168-eb19fedc h1:nth-child(2) span) svg {
   font-size: 25px
 }
 
-.pricingPage_featureDescriptionWrapper__Og9wC {
+.GUNS__d0-0f843163-8a901201-ccaeb01f {
   overflow: hidden;
   transition: max-height .25s ease, opacity .3s ease, transform .35s ease
 }
 
-.pricingPage_featureDescriptionOpen__a2bJB {
+.GUNS__2f-52009570-ff2f693a-76cfe86d {
   max-height: 220px;
   opacity: 1;
   transform: translateY(0)
 }
 
-.pricingPage_featureDescriptionClosed__27DXF {
+.GUNS__9e-1b78a589-d28a0d1e-e76cb1ec {
   max-height: 0;
   opacity: 0;
   transform: translateY(-6px);
   pointer-events: none
 }
 
-.pricingPage_featureDescription__m4WgW {
+.GUNS__a5-73d85197-b965d6a2-c9e5d7b6 {
   padding: 0 20px 17px 54px;
   display: flex;
   color: #a9a9a9;
@@ -1955,66 +1955,66 @@ html.rtl .pricingPage_tablePlan__vggW2 {
 
 @media (max-width:830px) {
 
-  .pricingPage_freeFeature__m8cKm,
-  .pricingPage_premiumFeature__g0BSl {
+  .GUNS__39-e91d1b5a-85362707-f262180e,
+  .GUNS__c0-a42b14b9-fa628610-f38c0656 {
     width: 150px
   }
 
-  .pricingPage_featureLeftWrapper__fnICb {
+  .GUNS__5f-af25557c-f0f12d4d-12ac1009 {
     width: calc(100% - 300px)
   }
 
-  .pricingPage_tablePlan__vggW2 {
+  .GUNS__9b-29124633-9608d168-eb19fedc {
     margin-right: 150px;
     width: 130px
   }
 
-  .pricingPage_freeFeature__m8cKm,
-  .pricingPage_premiumFeature__g0BSl {
+  .GUNS__39-e91d1b5a-85362707-f262180e,
+  .GUNS__c0-a42b14b9-fa628610-f38c0656 {
     width: 120px
   }
 
-  .pricingPage_featureLeftWrapper__fnICb {
+  .GUNS__5f-af25557c-f0f12d4d-12ac1009 {
     width: calc(100% - 240px)
   }
 
-  .pricingPage_tablePlan__vggW2 {
+  .GUNS__9b-29124633-9608d168-eb19fedc {
     margin-right: 120px;
     width: 100px
   }
 
-  .pricingPage_tablePlan__vggW2 h1:first-child {
+  .GUNS__9b-29124633-9608d168-eb19fedc h1:first-child {
     font-size: 23px !important
   }
 
-  .pricingPage_tablePlan__vggW2 h1:nth-child(2) {
+  .GUNS__9b-29124633-9608d168-eb19fedc h1:nth-child(2) {
     font-size: 17px
   }
 
-  .pricingPage_tablePlan__vggW2 h1:nth-child(2) span {
+  .GUNS__9b-29124633-9608d168-eb19fedc h1:nth-child(2) span {
     font-size: 15px
   }
 
-  .pricingPage_tableWrapper__XobS3 {
+  .GUNS__c6-f7171496-11de5ed2-273f24f7 {
     width: 100%;
     box-sizing: border-box
   }
 }
 
 @media (max-width:550px) {
-  .pricingPage_featureLeft__6KBTH {
+  .GUNS__83-321be104-3d75dc75-d487cb5c {
     gap: 5px
   }
 
-  .pricingPage_featureLeft__6KBTH h1 {
+  .GUNS__83-321be104-3d75dc75-d487cb5c h1 {
     font-size: 15.5px
   }
 
-  .pricingPage_featureLeft__6KBTH svg {
+  .GUNS__83-321be104-3d75dc75-d487cb5c svg {
     font-size: 19.5px
   }
 
-  .pricingPage_featureDescription__m4WgW {
+  .GUNS__a5-73d85197-b965d6a2-c9e5d7b6 {
     padding: 0 20px 17px 48.5px;
     font-size: 14.8px
   }
@@ -2022,53 +2022,53 @@ html.rtl .pricingPage_tablePlan__vggW2 {
 
 @media (max-width:480px) {
 
-  .pricingPage_freeFeature__m8cKm,
-  .pricingPage_premiumFeature__g0BSl {
+  .GUNS__39-e91d1b5a-85362707-f262180e,
+  .GUNS__c0-a42b14b9-fa628610-f38c0656 {
     width: 100px
   }
 
-  .pricingPage_featureLeftWrapper__fnICb {
+  .GUNS__5f-af25557c-f0f12d4d-12ac1009 {
     width: calc(100% - 200px)
   }
 
-  .pricingPage_tablePlan__vggW2 {
+  .GUNS__9b-29124633-9608d168-eb19fedc {
     margin-right: 100px;
     width: 80px
   }
 
-  .pricingPage_tablePlan__vggW2 h1:first-child {
+  .GUNS__9b-29124633-9608d168-eb19fedc h1:first-child {
     font-size: 20px !important
   }
 
-  .pricingPage_tablePlan__vggW2 h1:nth-child(2) {
+  .GUNS__9b-29124633-9608d168-eb19fedc h1:nth-child(2) {
     font-size: 15px;
     gap: 2px
   }
 
-  .pricingPage_tablePlan__vggW2 h1:nth-child(2) span,
-  .pricingPage_tablePlan__vggW2 span:not(.pricingPage_tablePlan__vggW2 h1 span) {
+  .GUNS__9b-29124633-9608d168-eb19fedc h1:nth-child(2) span,
+  .GUNS__9b-29124633-9608d168-eb19fedc span:not(.GUNS__9b-29124633-9608d168-eb19fedc h1 span) {
     font-size: 14px
   }
 
-  .pricingPage_tableWrapper__XobS3 {
+  .GUNS__c6-f7171496-11de5ed2-273f24f7 {
     width: 100%;
     box-sizing: border-box
   }
 }
 
 @media (max-width:550px) {
-  .pricingPage_allFeatures__VmKMR {
+  .GUNS__d6-ebf59996-ed75f47e-0de3bb34 {
     padding: 0 20px
   }
 }
 
-.pricingPage_allFeaturesDescription__lBpJH h1 {
+.GUNS__5c-edcbf3c4-7f46d14c-4e9dac8d h1 {
   text-align: center;
   margin: 0 0 6px;
   font-size: 35px
 }
 
-.pricingPage_allFeaturesDescription__lBpJH h3 {
+.GUNS__5c-edcbf3c4-7f46d14c-4e9dac8d h3 {
   text-align: center;
   margin: 0;
   font-weight: 400;
@@ -2076,7 +2076,7 @@ html.rtl .pricingPage_tablePlan__vggW2 {
   color: #cecece
 }
 
-.pricingPage_premium__6Mm4M {
+.GUNS__20-b4c69e09-85d13d53-7e82c516 {
   background-image: url(https://assets.guns.lol/gradient_background.png);
   object-fit: cover;
   position: relative;
@@ -2085,8 +2085,8 @@ html.rtl .pricingPage_tablePlan__vggW2 {
   background-origin: border-box
 }
 
-.pricingPage_freePlan__JBEZr,
-.pricingPage_premium__6Mm4M {
+.GUNS__20-b4c69e09-85d13d53-7e82c516,
+.GUNS__7f-f4cb752e-c4bb8e42-6fbb65e6 {
   padding: 20px;
   background-color: #101010;
   width: 100%;
@@ -2094,18 +2094,18 @@ html.rtl .pricingPage_tablePlan__vggW2 {
   box-sizing: border-box
 }
 
-.pricingPage_freePlan__JBEZr {
+.GUNS__7f-f4cb752e-c4bb8e42-6fbb65e6 {
   border: 2px solid #141414;
   border-radius: 15px
 }
 
-.pricingPage_freePlan__JBEZr h1,
-.pricingPage_premium__6Mm4M h1 {
+.GUNS__20-b4c69e09-85d13d53-7e82c516 h1,
+.GUNS__7f-f4cb752e-c4bb8e42-6fbb65e6 h1 {
   margin: 0
 }
 
-.pricingPage_freePlanText__En_PA,
-.pricingPage_premiumText__Wn4a4 {
+.GUNS__6e-76fd822f-2c8a36b5-7008463d,
+.GUNS__75-552baace-81efb1fd-abcf4910 {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -2114,13 +2114,13 @@ html.rtl .pricingPage_tablePlan__vggW2 {
   font-size: 25px
 }
 
-.pricingPage_freePlanText__En_PA svg,
-.pricingPage_premiumText__Wn4a4 svg {
+.GUNS__6e-76fd822f-2c8a36b5-7008463d svg,
+.GUNS__75-552baace-81efb1fd-abcf4910 svg {
   font-size: 24px
 }
 
-.pricingPage_freePlan__JBEZr h3,
-.pricingPage_premium__6Mm4M h3 {
+.GUNS__20-b4c69e09-85d13d53-7e82c516 h3,
+.GUNS__7f-f4cb752e-c4bb8e42-6fbb65e6 h3 {
   margin: 10px 0 0;
   max-width: 300px;
   font-size: 16.5px;
@@ -2129,12 +2129,12 @@ html.rtl .pricingPage_tablePlan__vggW2 {
   text-align: left
 }
 
-html.rtl .pricingPage_freePlan__JBEZr h3,
-html.rtl .pricingPage_premium__6Mm4M h3 {
+html.rtl .GUNS__20-b4c69e09-85d13d53-7e82c516 h3,
+html.rtl .GUNS__7f-f4cb752e-c4bb8e42-6fbb65e6 h3 {
   text-align: right !important
 }
 
-.pricingPage_plans__f_ClM {
+.GUNS__84-0ee54816-0e884eb5-73130a4c {
   display: flex;
   justify-content: center;
   align-items: self-end;
@@ -2143,7 +2143,7 @@ html.rtl .pricingPage_premium__6Mm4M h3 {
   box-sizing: border-box
 }
 
-.pricingPage_features__dwapP {
+.GUNS__f8-56131356-52714b53-b7c81d2d {
   margin-top: 25px;
   display: flex;
   flex-direction: column;
@@ -2151,11 +2151,11 @@ html.rtl .pricingPage_premium__6Mm4M h3 {
   text-align: left
 }
 
-html.rtl .pricingPage_features__dwapP {
+html.rtl .GUNS__f8-56131356-52714b53-b7c81d2d {
   text-align: right
 }
 
-.pricingPage_features__dwapP span {
+.GUNS__f8-56131356-52714b53-b7c81d2d span {
   font-size: 17px;
   display: flex;
   align-items: center;
@@ -2163,17 +2163,17 @@ html.rtl .pricingPage_features__dwapP {
   color: #fafafa
 }
 
-.pricingPage_features__dwapP span svg {
+.GUNS__f8-56131356-52714b53-b7c81d2d span svg {
   margin-top: 2px;
   color: #a258b4;
   font-size: 15px
 }
 
-.pricingPage_purchaseButton__EnRIe:not(.pricingPage_premium__6Mm4M .pricingPage_purchaseButton__EnRIe) {
+.GUNS__ac-73a6afe9-4227bfff-1aca2d44:not(.GUNS__20-b4c69e09-85d13d53-7e82c516 .GUNS__ac-73a6afe9-4227bfff-1aca2d44) {
   margin-top: 60px
 }
 
-.pricingPage_purchaseButton__EnRIe {
+.GUNS__ac-73a6afe9-4227bfff-1aca2d44 {
   display: flex;
   justify-content: center;
   color: #fafafa;
@@ -2190,20 +2190,20 @@ html.rtl .pricingPage_features__dwapP {
   align-items: center
 }
 
-.pricingPage_purchaseButton__EnRIe svg {
+.GUNS__ac-73a6afe9-4227bfff-1aca2d44 svg {
   font-size: 26px
 }
 
-.pricingPage_purchaseButton__EnRIe:active {
+.GUNS__ac-73a6afe9-4227bfff-1aca2d44:active {
   transform: translateY(4px)
 }
 
-.pricingPage_purchaseButton__EnRIe:hover {
+.GUNS__ac-73a6afe9-4227bfff-1aca2d44:hover {
   background-color: #7e2c8b63;
   border: 2px solid #7e2c8b8c
 }
 
-.pricingPage_mostPopularWrapper__5v50J {
+.GUNS__14-8ce92d10-26d883a9-48f6a7ff {
   position: absolute;
   top: -15px;
   right: -15px;
@@ -2217,7 +2217,7 @@ html.rtl .pricingPage_features__dwapP {
   -webkit-user-select: none
 }
 
-.pricingPage_mostPopular__G4yw8 {
+.GUNS__e4-eb0c1c31-b6a7e61c-4ed07e72 {
   display: flex;
   font-size: 15px;
   justify-content: center;
@@ -2229,7 +2229,7 @@ html.rtl .pricingPage_features__dwapP {
   font-weight: 600
 }
 
-.pricingPage_plansWrapper__4GR2L {
+.GUNS__6f-c3b1dbb1-26579ec9-c3b13659 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2238,7 +2238,7 @@ html.rtl .pricingPage_features__dwapP {
   box-sizing: border-box
 }
 
-.pricingPage_plansWrapper__4GR2L span:not(.pricingPage_plans__f_ClM span) {
+.GUNS__6f-c3b1dbb1-26579ec9-c3b13659 span:not(.GUNS__84-0ee54816-0e884eb5-73130a4c span) {
   color: #fafafa;
   font-weight: 450;
   font-size: 20px;
@@ -2248,12 +2248,12 @@ html.rtl .pricingPage_features__dwapP {
   cursor: pointer
 }
 
-.pricingPage_plansWrapper__4GR2L span:not(.pricingPage_plans__f_ClM span) svg {
+.GUNS__6f-c3b1dbb1-26579ec9-c3b13659 span:not(.GUNS__84-0ee54816-0e884eb5-73130a4c span) svg {
   font-size: 26px;
-  animation: pricingPage_bounceUpAndDown__aX91M 1.2s infinite
+  animation: GUNS__bf-05da9a6b-b7f78444-52419d14 1.2s infinite
 }
 
-@keyframes pricingPage_bounceUpAndDown__aX91M {
+@keyframes GUNS__bf-05da9a6b-b7f78444-52419d14 {
   0% {
     transform: translateY(0)
   }
@@ -2267,7 +2267,7 @@ html.rtl .pricingPage_features__dwapP {
   }
 }
 
-.pricingPage_subscriptionType__FOijS {
+.GUNS__61-14169e6b-94a989ca-60f9a1f3 {
   margin-top: 15px;
   display: flex;
   background-color: #191919;
@@ -2276,7 +2276,7 @@ html.rtl .pricingPage_features__dwapP {
   color: #fafafa
 }
 
-.pricingPage_subscriptionType__FOijS span {
+.GUNS__61-14169e6b-94a989ca-60f9a1f3 span {
   padding: 7px;
   width: 57px;
   font-size: 15px;
@@ -2284,7 +2284,7 @@ html.rtl .pricingPage_features__dwapP {
   border: 2px solid transparent
 }
 
-.pricingPage_selected__sUrUT {
+.GUNS__bd-0af9192b-df7b0af5-c7ee2a2e {
   background-color: #7e2c8ba9;
   border: 2px solid #7e2c8b9c !important;
   box-shadow: 0 0 10px #7e2c8b9c;
@@ -2292,77 +2292,77 @@ html.rtl .pricingPage_features__dwapP {
 }
 
 @media (max-width:750px) {
-  .pricingPage_plans__f_ClM {
+  .GUNS__84-0ee54816-0e884eb5-73130a4c {
     flex-direction: column;
     align-items: center
   }
 
-  .pricingPage_freePlan__JBEZr,
-  .pricingPage_premium__6Mm4M {
+  .GUNS__20-b4c69e09-85d13d53-7e82c516,
+  .GUNS__7f-f4cb752e-c4bb8e42-6fbb65e6 {
     max-width: 420px
   }
 
-  .pricingPage_imagehostProduct__oL3j3,
-  .pricingPage_verifiedProduct__u_9_e {
+  .GUNS__3e-c7a6b39a-bd0a53a6-684f4105,
+  .GUNS__6d-770ec67e-9a5ec7f0-1df5ce1f {
     max-width: 420px !important
   }
 }
 
 @media (max-width:1010px) {
-  .pricingPage_products__jeGHG {
+  .GUNS__43-aeade17b-8298727a-61a48be1 {
     flex-direction: column;
     align-items: center
   }
 }
 
-.pricingPage_freeFeatureMobile__6jgR6,
-.pricingPage_premiumFeatureMobile__E1Cxv {
+.GUNS__8e-b26d1c0b-a24f194f-95c38775,
+.GUNS__b6-bf195bd4-e39a2e95-658b4ca8 {
   display: flex;
   flex-direction: column;
   align-items: center
 }
 
-.pricingPage_freeFeatureMobile__6jgR6 h1,
-.pricingPage_premiumFeatureMobile__E1Cxv h1 {
+.GUNS__8e-b26d1c0b-a24f194f-95c38775 h1,
+.GUNS__b6-bf195bd4-e39a2e95-658b4ca8 h1 {
   margin: 0;
   font-size: 19px;
   font-weight: 450
 }
 
-.pricingPage_freeFeatureChecked__8YYO1 svg,
-.pricingPage_premiumFeatureMobile__E1Cxv svg {
+.GUNS__5f-b6dbca2e-6348e1c9-79bf7c6a svg,
+.GUNS__8e-b26d1c0b-a24f194f-95c38775 svg {
   margin-top: 7px;
   padding: 10px;
   background-color: rgba(50, 187, 50, .445) !important;
   border-radius: 50%
 }
 
-.pricingPage_freeFeatureMobile__6jgR6 svg {
+.GUNS__b6-bf195bd4-e39a2e95-658b4ca8 svg {
   margin-top: 7px;
   padding: 10px;
   background-color: rgba(187, 50, 50, .445);
   border-radius: 50%
 }
 
-.pricingPage_featureMobile__NieJd {
+.GUNS__f8-9a4448c0-b2417d82-a0570af1 {
   flex-direction: column;
   border-bottom: 1px solid #181818
 }
 
-.pricingPage_featuresTable__5dE2H .pricingPage_featureMobile__NieJd:last-child {
+.GUNS__cb-04b79771-58031162-3547812b .GUNS__f8-9a4448c0-b2417d82-a0570af1:last-child {
   border-bottom: none
 }
 
-.pricingPage_featureMobile__NieJd .pricingPage_featureLeftWrapper__fnICb {
+.GUNS__f8-9a4448c0-b2417d82-a0570af1 .GUNS__5f-af25557c-f0f12d4d-12ac1009 {
   border-bottom: none;
   width: 100%
 }
 
-.pricingPage_featureMobile__NieJd .pricingPage_featureLeft__6KBTH {
+.GUNS__f8-9a4448c0-b2417d82-a0570af1 .GUNS__83-321be104-3d75dc75-d487cb5c {
   padding-bottom: 10px
 }
 
-.pricingPage_featureRightMobile__9xzL9 {
+.GUNS__79-d996d702-a9c8abf8-e931e5f2 {
   padding: 0 25px 15px;
   display: flex;
   justify-content: center;
@@ -2372,40 +2372,40 @@ html.rtl .pricingPage_features__dwapP {
 }
 
 @media (max-width:500px) {
-  .pricingPage_tablePlan__vggW2 {
+  .GUNS__9b-29124633-9608d168-eb19fedc {
     display: none
   }
 }
 
-.pricingPage_heroDescriptionInner__kaXtt {
+.GUNS__12-48c73ba4-bdf39284-55a11f02 {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 3px
 }
 
-.pricingPage_planButtons__BzQgp {
+.GUNS__0e-730a1e09-0e0bbb13-670f0eeb {
   margin-top: 30px;
   display: flex;
   gap: 10px;
   align-items: center
 }
 
-.pricingPage_tablePlanWrapper__IJZ2G {
+.GUNS__ae-e76d61c3-a83e61b3-6744b548 {
   display: flex;
   direction: ltr
 }
 
-.pricingPage_tablePlanWrapper__IJZ2G div {
+.GUNS__ae-e76d61c3-a83e61b3-6744b548 div {
   margin-right: 0
 }
 
-.pricingPage_tablePlanWrapper__IJZ2G div:nth-child(2) {
+.GUNS__ae-e76d61c3-a83e61b3-6744b548 div:nth-child(2) {
   margin: 0;
   background-color: #101010
 }
 
-.pricingPage_otherProducts__go9gO {
+.GUNS__04-8f339fee-cbed875c-66ed4cd2 {
   margin-top: 9rem;
   display: flex;
   flex-direction: column;
@@ -2416,7 +2416,7 @@ html.rtl .pricingPage_features__dwapP {
   padding: 0 30px
 }
 
-.pricingPage_otherProductsDescription__19c8y h1 {
+.GUNS__7d-3d489a2f-ffd15105-1c4e6ac6 h1 {
   text-align: center;
   margin: 0 0 6px;
   font-size: 35px;
@@ -2424,14 +2424,14 @@ html.rtl .pricingPage_features__dwapP {
   font-weight: 550
 }
 
-.pricingPage_products__jeGHG {
+.GUNS__43-aeade17b-8298727a-61a48be1 {
   margin-top: 35px;
   display: flex;
   gap: 28px;
   align-items: flex-end
 }
 
-.pricingPage_pricingProduct___33UC {
+.GUNS__bd-cb2a76b5-babb4383-30f2bcec {
   display: flex;
   flex-direction: column;
   height: fit-content;
@@ -2446,7 +2446,7 @@ html.rtl .pricingPage_features__dwapP {
   position: relative
 }
 
-.pricingPage_pricingProduct___33UC h3 {
+.GUNS__bd-cb2a76b5-babb4383-30f2bcec h3 {
   margin: 10px 0 0;
   max-width: 300px;
   font-size: 16.5px;
@@ -2455,7 +2455,7 @@ html.rtl .pricingPage_features__dwapP {
   width: fit-content
 }
 
-.pricingPage_pricingProduct___33UC h1:not(.pricingPage_price__D8tCh h1) {
+.GUNS__bd-cb2a76b5-babb4383-30f2bcec h1:not(.GUNS__50-000b99f1-2d098815-7370452f h1) {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -2465,26 +2465,26 @@ html.rtl .pricingPage_features__dwapP {
   margin: 0
 }
 
-.pricingPage_pricingProduct___33UC h1 svg {
+.GUNS__bd-cb2a76b5-babb4383-30f2bcec h1 svg {
   font-size: 23px
 }
 
-.pricingPage_productButtons__83uOm {
+.GUNS__ff-b4daf737-8f949ac1-cee0cf61 {
   display: flex;
   gap: 10px;
   align-items: center
 }
 
-.pricingPage_productButtons__83uOm a,
-.pricingPage_productButtons__83uOm span {
+.GUNS__ff-b4daf737-8f949ac1-cee0cf61 a,
+.GUNS__ff-b4daf737-8f949ac1-cee0cf61 span {
   margin-top: 0 !important
 }
 
-.pricingPage_price__D8tCh h1 {
+.GUNS__50-000b99f1-2d098815-7370452f h1 {
   margin: 0
 }
 
-.pricingPage_lifetimeText__pV8hw {
+.GUNS__3f-c44b7aa9-edf99732-59d4cc00 {
   font-size: 15.5px;
   color: #e3a6eb;
   font-weight: 400;
@@ -2495,22 +2495,22 @@ html.rtl .pricingPage_features__dwapP {
   width: fit-content
 }
 
-.pricingPage_products__jeGHG .pricingPage_pricingProduct___33UC:first-child,
-.pricingPage_products__jeGHG .pricingPage_pricingProduct___33UC:nth-child(3) {
+.GUNS__43-aeade17b-8298727a-61a48be1 .GUNS__bd-cb2a76b5-babb4383-30f2bcec:first-child,
+.GUNS__43-aeade17b-8298727a-61a48be1 .GUNS__bd-cb2a76b5-babb4383-30f2bcec:nth-child(3) {
   height: 465px
 }
 
-.pricingPage_products__jeGHG .pricingPage_pricingProduct___33UC:nth-child(2) {
+.GUNS__43-aeade17b-8298727a-61a48be1 .GUNS__bd-cb2a76b5-babb4383-30f2bcec:nth-child(2) {
   height: 550px
 }
 
 @media (max-width:400px) {
-  .pricingPage_products__jeGHG {
+  .GUNS__43-aeade17b-8298727a-61a48be1 {
     padding-bottom: 7rem
   }
 }
 
-.pricingPage_easterPromo__lLgrm {
+.GUNS__8f-881f3166-cb84f790-c4ed3bf9 {
   background-color: #da69ff3a;
   border: 2px solid #9c4fb880;
   border-radius: 25px;

@@ -1,4 +1,4 @@
-.localePreferenceNotice_wrapper__12vSs {
+.GUNS__9d-bbd9800a-24fb22e9-0aa96b14 {
   position: fixed;
   right: 1.5rem;
   bottom: 1.5rem;
@@ -18,7 +18,7 @@
 }
 
 @media (max-width:640px) {
-  .localePreferenceNotice_wrapper__12vSs {
+  .GUNS__9d-bbd9800a-24fb22e9-0aa96b14 {
     right: 1rem;
     bottom: 1rem;
     width: calc(100% - 2rem);
@@ -26,24 +26,24 @@
   }
 }
 
-.localePreferenceNotice_title__InKNY {
+.GUNS__e1-5167b4be-583367eb-28cf4318 {
   font-size: .95rem;
   font-weight: 600
 }
 
-.localePreferenceNotice_description__Iet5n {
+.GUNS__30-187b7e77-f8ea37de-b8af3d38 {
   font-size: 14px;
   line-height: 1.4;
   color: rgba(245, 242, 255, .85)
 }
 
-.localePreferenceNotice_actions__g7Txw {
+.GUNS__dc-0d65eb0f-32241080-f6e7600e {
   display: flex;
   flex-direction: column;
   gap: .5rem
 }
 
-.localePreferenceNotice_switchButton__E5C46 {
+.GUNS__07-6c21bcb1-3055e714-d57cb0e2 {
   border-radius: 20px;
   padding: 7px 15px;
   font-weight: 500;
@@ -55,11 +55,11 @@
   transition: .25s
 }
 
-.localePreferenceNotice_switchButton__E5C46:hover {
+.GUNS__07-6c21bcb1-3055e714-d57cb0e2:hover {
   background-color: #9c57b379
 }
 
-.localePreferenceNotice_useCurrentButton__xxV_r {
+.GUNS__2a-cb6fab95-d74c7e02-3f390d7b {
   border: 2px solid #1b1b1b;
   background-color: #131313;
   border-radius: 20px;
@@ -71,12 +71,12 @@
   transition: .25s
 }
 
-.localePreferenceNotice_useCurrentButton__xxV_r:hover {
+.GUNS__2a-cb6fab95-d74c7e02-3f390d7b:hover {
   background-color: #1b1b1b;
   color: #ffffff
 }
 
-.localePreferenceNotice_dismissButton__1tWCO {
+.GUNS__10-5a62d54e-f98a37f7-2f702e1d {
   margin-top: 2px;
   margin-left: 2px;
   border: none;
@@ -90,7 +90,7 @@
   transition: .25s
 }
 
-.localePreferenceNotice_dismissButton__1tWCO:hover {
+.GUNS__10-5a62d54e-f98a37f7-2f702e1d:hover {
   color: rgba(245, 242, 255, .95)
 }
 

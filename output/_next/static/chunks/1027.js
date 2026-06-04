@@ -527,18 +527,18 @@
     58295: (e, l, t) => {
       "use strict";
       t.d(l, {
-        A: () => r
+        A: () => i
       });
       var h = t(95155),
         a = t(98241),
         s = t.n(a);
 
-      function r({
+      function i({
         featureName: e,
         onChangeFunction: l,
         value: t,
         placeholder: a,
-        ...r
+        ...i
       }) {
         return (0, h.jsxs)("div", {
           className: s().inputContainerWrapper,
@@ -560,7 +560,7 @@
               placeholder: a,
               className: s().inputWrapperInput,
               onChange: l,
-              ...r
+              ...i
             })
           })]
         })
@@ -568,29 +568,29 @@
     },
     79999: e => {
       e.exports = {
-        container: "numberInputWrapper_container__EXzia",
-        label: "numberInputWrapper_label__cDBMX",
-        inputShell: "numberInputWrapper_inputShell__1PSdt",
-        iconSlot: "numberInputWrapper_iconSlot__2hMdz",
-        input: "numberInputWrapper_input__Stqxg",
-        inputWithIcon: "numberInputWrapper_inputWithIcon__RW0pK",
-        inputWithControls: "numberInputWrapper_inputWithControls__j2wWk",
-        controls: "numberInputWrapper_controls__9DMLN",
-        controlButton: "numberInputWrapper_controlButton__YR6y8",
-        errorText: "numberInputWrapper_errorText__pT5Z3"
+        container: "GUNS__4c-c51318d0-46d0ed4d-9b2e3887",
+        label: "GUNS__55-bb991050-88b45b6a-9431fba7",
+        inputShell: "GUNS__36-10c45de7-ccb332fc-2340524f",
+        iconSlot: "GUNS__88-5efabde1-ad003188-1d2567eb",
+        input: "GUNS__b9-3cd43098-f80d02a0-c2d9d1e4",
+        inputWithIcon: "GUNS__c6-69527599-81ad2694-5dd3c53a",
+        inputWithControls: "GUNS__40-1e810eb3-7a3be558-c15bccc4",
+        controls: "GUNS__f4-e4e6f8a5-af409fd0-7c13817e",
+        controlButton: "GUNS__09-9aa66952-f6ca361f-e5fbc0b1",
+        errorText: "GUNS__3a-e07473ff-77af25ce-33318629"
       }
     },
     97478: (e, l, t) => {
       "use strict";
       t.d(l, {
-        A: () => w
+        A: () => n
       });
       var h = t(95155),
         a = t(29722),
         s = t(12115),
-        r = t(79999),
-        i = t.n(r);
-      let c = (e, l, t) => {
+        i = t(79999),
+        c = t.n(i);
+      let r = (e, l, t) => {
           let h = e;
           return "number" == typeof l && (h = Math.max(h, l)), "number" == typeof t && (h = Math.min(h, t)), h
         },
@@ -599,28 +599,28 @@
           let t = 10 ** l;
           return Math.round(e * t) / t
         },
-        n = (e, l) => "" === e || null == e || "number" != typeof e || Number.isNaN(e) ? "" : "number" == typeof l ? e.toFixed(l) : `${e}`;
+        w = (e, l) => "" === e || null == e || "number" != typeof e || Number.isNaN(e) ? "" : "number" == typeof l ? e.toFixed(l) : `${e}`;
 
-      function w({
+      function n({
         featureName: e,
         icon: l,
         value: t,
-        placeholder: r,
-        min: w,
-        max: m,
-        step: v = 1,
+        placeholder: i,
+        min: n,
+        max: v,
+        step: m = 1,
         precision: d,
         hideControls: x = !1,
-        className: p,
+        className: f,
         inputClassName: g,
-        onChangeFunction: f,
+        onChangeFunction: p,
         onChange: u,
         onFocus: j,
         onBlur: q,
         onKeyDown: T,
         inputMode: M = "decimal",
-        disabled: z,
-        id: b,
+        disabled: b,
+        id: z,
         ...C
       }) {
         let L = "number" == typeof d ? d : (e => {
@@ -635,91 +635,91 @@
               t = e ? e.length : 0
             }
             return t > 0 ? t : void 0
-          })(v),
-          B = void 0 === r ? void 0 : String(r),
+          })(m),
+          B = void 0 === i ? void 0 : String(i),
           H = (0, s.useId)(),
-          V = b ?? H,
-          y = (0, s.useRef)(null),
-          [_, N] = (0, s.useState)(!1),
-          [A, k] = (0, s.useState)(() => n(t ?? "", L));
+          V = z ?? H,
+          N = (0, s.useRef)(null),
+          [y, A] = (0, s.useState)(!1),
+          [k, S] = (0, s.useState)(() => w(t ?? "", L));
         (0, s.useEffect)(() => {
-          _ || k(n(t ?? "", L))
-        }, [t, L, _]);
-        let W = (0, s.useCallback)(e => {
-            f?.(e), u?.(e)
-          }, [f, u]),
-          S = e => {
-            if (z) return;
+          y || S(w(t ?? "", L))
+        }, [t, L, y]);
+        let _ = (0, s.useCallback)(e => {
+            p?.(e), u?.(e)
+          }, [p, u]),
+          Z = e => {
+            if (b) return;
             let l = "number" == typeof t && Number.isFinite(t) ? t : void 0,
-              h = o(c("number" == typeof l ? l + e * v : 1 === e ? "number" == typeof w ? w : v : "number" == typeof m ? m : -v, w, m), L);
-            k(n(h, L)), W(h), y.current?.focus()
+              h = o(r("number" == typeof l ? l + e * m : 1 === e ? "number" == typeof n ? n : m : "number" == typeof v ? v : -m, n, v), L);
+            S(w(h, L)), _(h), N.current?.focus()
           },
-          I = !z && ("number" != typeof m || "number" != typeof t || t < m),
-          Z = !z && ("number" != typeof w || "number" != typeof t || t > w),
-          D = "string" == typeof e ? e : void 0;
+          U = !b && ("number" != typeof v || "number" != typeof t || t < v),
+          D = !b && ("number" != typeof n || "number" != typeof t || t > n),
+          G = "string" == typeof e ? e : void 0;
         return (0, h.jsxs)("div", {
-          className: (0, a.A)(i().container, p),
-          "data-dashboard-feature-label": D,
+          className: (0, a.A)(c().container, f),
+          "data-dashboard-feature-label": G,
           children: [e && (0, h.jsx)("label", {
             htmlFor: V,
-            className: i().label,
+            className: c().label,
             children: e
           }), (0, h.jsxs)("div", {
-            className: i().inputShell,
-            "data-focused": _,
-            "data-disabled": z,
+            className: c().inputShell,
+            "data-focused": y,
+            "data-disabled": b,
             children: [l && (0, h.jsx)("span", {
-              className: i().iconSlot,
+              className: c().iconSlot,
               children: l
             }), (0, h.jsx)("input", {
-              ref: y,
+              ref: N,
               id: V,
               type: "text",
               inputMode: M,
               autoComplete: "off",
               autoCorrect: "off",
               spellCheck: !1,
-              className: (0, a.A)(i().input, l && i().inputWithIcon, !x && i().inputWithControls, g),
-              value: A,
+              className: (0, a.A)(c().input, l && c().inputWithIcon, !x && c().inputWithControls, g),
+              value: k,
               placeholder: B,
-              min: w,
-              max: m,
-              step: v,
+              min: n,
+              max: v,
+              step: m,
               onChange: e => {
                 let l, t = e.currentTarget.value;
-                k(t);
+                S(t);
                 let h = t.replace(/,/g, ".");
-                if ("" === (l = h.trim()) || "-" === l || "+" === l || "." === l || "-." === l || "+." === l) return void W(0);
+                if ("" === (l = h.trim()) || "-" === l || "+" === l || "." === l || "-." === l || "+." === l) return void _(0);
                 let a = Number(h);
-                Number.isNaN(a) || W(o(c(a, w, m), L))
+                Number.isNaN(a) || _(o(r(a, n, v), L))
               },
               onFocus: e => {
-                N(!0), j?.(e)
+                A(!0), j?.(e)
               },
               onBlur: e => {
-                N(!1), k(n(t ?? "", L)), q?.(e)
+                A(!1), S(w(t ?? "", L)), q?.(e)
               },
               onKeyDown: e => {
-                "ArrowUp" === e.key ? (e.preventDefault(), S(1)) : "ArrowDown" === e.key && (e.preventDefault(), S(-1)), T?.(e)
+                "ArrowUp" === e.key ? (e.preventDefault(), Z(1)) : "ArrowDown" === e.key && (e.preventDefault(), Z(-1)), T?.(e)
               },
-              disabled: z,
+              disabled: b,
               ...C
             }), !x && (0, h.jsxs)("div", {
-              className: i().controls,
+              className: c().controls,
               children: [(0, h.jsx)("button", {
                 type: "button",
-                className: i().controlButton,
+                className: c().controlButton,
                 onMouseDown: e => e.preventDefault(),
-                onClick: () => S(1),
-                disabled: !I,
+                onClick: () => Z(1),
+                disabled: !U,
                 tabIndex: -1,
                 children: "▲"
               }), (0, h.jsx)("button", {
                 type: "button",
-                className: i().controlButton,
+                className: c().controlButton,
                 onMouseDown: e => e.preventDefault(),
-                onClick: () => S(-1),
-                disabled: !Z,
+                onClick: () => Z(-1),
+                disabled: !D,
                 tabIndex: -1,
                 children: "▼"
               })]

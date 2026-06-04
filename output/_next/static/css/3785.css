@@ -1,4 +1,4 @@
-.userLayout2_userProfile__NJZlA {
+.GUNS__68-654881f2-2d95c827-edc8d064 {
   display: flex;
   align-items: center;
   gap: 14px;
@@ -6,7 +6,7 @@
   padding-top: 10px
 }
 
-.userLayout2_avatar__Pqgcw {
+.GUNS__d0-a03a3017-5c7cd9d4-8198ae15 {
   height: 120px;
   width: 120px;
   min-width: 120px;
@@ -14,65 +14,65 @@
   border-radius: 50%
 }
 
-.userLayout2_userDescription__sYo_t h1,
-.userLayout2_userDescription__sYo_t h2,
-.userLayout2_userDescription__sYo_t h3,
-.userLayout2_usernameStyles__oqjz5 {
+.GUNS__20-cf1aa4f0-a3d1c36b-322555dc h1,
+.GUNS__20-cf1aa4f0-a3d1c36b-322555dc h2,
+.GUNS__20-cf1aa4f0-a3d1c36b-322555dc h3,
+.GUNS__bb-85e93c09-69e000af-268b7210 {
   margin: 0
 }
 
-.userLayout2_userDescription__sYo_t {
+.GUNS__20-cf1aa4f0-a3d1c36b-322555dc {
   display: flex;
   flex-direction: column;
   gap: 3px
 }
 
-.userLayout2_userDescription__sYo_t h1,
-.userLayout2_userDescription__sYo_t h3,
-.userLayout2_usernameCursor__4EKZt,
-.userLayout2_usernameStyles__oqjz5 {
+.GUNS__20-cf1aa4f0-a3d1c36b-322555dc h1,
+.GUNS__20-cf1aa4f0-a3d1c36b-322555dc h3,
+.GUNS__bb-85e93c09-69e000af-268b7210,
+.GUNS__e9-da24a107-9053aeea-3f133909 {
   color: var(--textColor)
 }
 
-.userLayout2_userDescription__sYo_t h3 {
+.GUNS__20-cf1aa4f0-a3d1c36b-322555dc h3 {
   white-space: normal;
   overflow: hidden;
   text-overflow: ellipsis
 }
 
-.userLayout2_userDescription__sYo_t h1,
-.userLayout2_usernameStyles__oqjz5 {
+.GUNS__20-cf1aa4f0-a3d1c36b-322555dc h1,
+.GUNS__bb-85e93c09-69e000af-268b7210 {
   text-shadow: var(--colorUsernameGlow)
 }
 
-.userLayout2_userDescription__sYo_t h2 {
+.GUNS__20-cf1aa4f0-a3d1c36b-322555dc h2 {
   color: var(--joinStatus)
 }
 
-.userLayout2_usernameWrapper__ndZQN {
+.GUNS__5b-5ccebcfd-dc33bdae-0206e64a {
   flex-wrap: wrap;
   display: flex;
   align-items: center
 }
 
-.userLayout2_usernameCursor__4EKZt,
-.userLayout2_usernameStyles__oqjz5,
-.userLayout2_usernameWrapper__ndZQN h1 {
+.GUNS__5b-5ccebcfd-dc33bdae-0206e64a h1,
+.GUNS__bb-85e93c09-69e000af-268b7210,
+.GUNS__e9-da24a107-9053aeea-3f133909 {
   text-shadow: var(--colorUsernameGlow);
   width: fit-content;
   background-image: var(--usernameEffects)
 }
 
-.userLayout2_usernameCursor__4EKZt {
+.GUNS__e9-da24a107-9053aeea-3f133909 {
   font-weight: 400 !important
 }
 
-.userLayout2_usernameWrapper__ndZQN>div:not(.userLayout2_usernameTypewriter__zdo6s) {
+.GUNS__5b-5ccebcfd-dc33bdae-0206e64a>div:not(.GUNS__7f-adb19ad7-5b1aa14b-352526b4) {
   height: 18px;
   margin-left: 5px
 }
 
-.userLayout2_widgetContainer__oNrZ7 {
+.GUNS__3e-d2630f2a-2f031ef0-e87676b0 {
   display: flex;
   flex-wrap: nowrap;
   gap: 10px;
@@ -80,7 +80,7 @@
   box-sizing: border-box
 }
 
-.userLayout2_widgetContainerFlex__Ju8_4 {
+.GUNS__cd-3193c8e5-8820fa55-78f07199 {
   box-sizing: border-box;
   width: 100%;
   text-overflow: ellipsis;
@@ -89,7 +89,7 @@
   display: flex
 }
 
-.userLayout2_secondTab__TnJGU {
+.GUNS__c4-f43c3818-a4559919-0525361e {
   margin-top: 20px;
   background-color: var(--secondTabBackground);
   border: var(--secondTabBorder);
@@ -101,24 +101,24 @@
   align-items: center
 }
 
-.userLayout2_widgetContainerWrapper__vtDOQ {
+.GUNS__c8-2ddcc21a-fe149540-a5a4fd1a {
   display: flex;
   margin-top: 10px;
   margin-bottom: 33px
 }
 
-.userLayout2_guildIcon__NFphk {
+.GUNS__8e-ee3cad17-089eeb69-d440231d {
   display: flex
 }
 
-.userLayout2_guildIcon__NFphk img {
+.GUNS__8e-ee3cad17-089eeb69-d440231d img {
   height: 70px;
   width: 70px;
   border-radius: 22px;
   object-fit: cover
 }
 
-.userLayout2_discordServer__ZTxRU {
+.GUNS__97-571fc87f-5c7e5c56-28ca4832 {
   display: flex;
   align-items: center;
   width: 100%;
@@ -126,18 +126,18 @@
   position: relative
 }
 
-.userLayout2_guildInformation__FiRVE {
+.GUNS__7a-b9ffd044-55306e91-bb58d672 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis
 }
 
-.userLayout2_guildInformation__FiRVE h1,
-.userLayout2_guildInformation__FiRVE h3 {
+.GUNS__7a-b9ffd044-55306e91-bb58d672 h1,
+.GUNS__7a-b9ffd044-55306e91-bb58d672 h3 {
   margin: 0
 }
 
-.userLayout2_guildInformation__FiRVE h1 {
+.GUNS__7a-b9ffd044-55306e91-bb58d672 h1 {
   color: var(--textColor);
   white-space: nowrap;
   overflow: hidden;
@@ -147,24 +147,24 @@
   gap: 6px
 }
 
-.userLayout2_verifiedGuild__bYk74 {
+.GUNS__de-4e3bdd2f-b3dee700-477c449f {
   color: #23A55A;
   filter: drop-shadow(0 0 3px #23a55959)
 }
 
-.userLayout2_partneredGuild__OZuoM {
+.GUNS__79-821755cb-62b1c266-7eea7f8c {
   color: #5865F2;
   filter: drop-shadow(0 0 3px #5865f260)
 }
 
-.userLayout2_guildInformation__FiRVE h3 {
+.GUNS__7a-b9ffd044-55306e91-bb58d672 h3 {
   color: var(--discordServerMembers);
   display: flex;
   gap: 5px;
   margin-top: 1px
 }
 
-.userLayout2_guildInformation__FiRVE h3 span {
+.GUNS__7a-b9ffd044-55306e91-bb58d672 h3 span {
   white-space: nowrap;
   text-wrap: nowrap;
   display: flex;
@@ -172,11 +172,11 @@
   gap: 2px
 }
 
-.userLayout2_guildInformation__FiRVE h3 span:first-child svg {
+.GUNS__7a-b9ffd044-55306e91-bb58d672 h3 span:first-child svg {
   color: #23A559
 }
 
-.userLayout2_guildInformation__FiRVE a {
+.GUNS__7a-b9ffd044-55306e91-bb58d672 a {
   background-color: #229150;
   padding: 1px 10px;
   text-decoration: none;
@@ -188,22 +188,22 @@
 }
 
 @media (max-width:720px) {
-  .userLayout2_widgetContainer__oNrZ7 {
+  .GUNS__3e-d2630f2a-2f031ef0-e87676b0 {
     flex-direction: column
   }
 
-  .userLayout2_widgetContainerWrapper__vtDOQ {
+  .GUNS__c8-2ddcc21a-fe149540-a5a4fd1a {
     display: block;
     width: 100%
   }
 
-  .userLayout2_widgetContainerFlex__Ju8_4 {
+  .GUNS__cd-3193c8e5-8820fa55-78f07199 {
     display: block;
     flex-basis: inherit
   }
 }
 
-.userLayout2_profileSeperator__kuDqS {
+.GUNS__a7-2d6070ff-19b4da8e-7f888c84 {
   margin-top: 30px;
   width: 94%;
   margin-left: auto;
@@ -213,12 +213,12 @@
   border: var(--modernLayoutSeperatorBorder)
 }
 
-.userLayout2_socialsWrapper__SOqg0 {
+.GUNS__cb-aac8fc7b-8bf66360-e777b6f4 {
   padding: 0 15px;
   margin-bottom: 13px
 }
 
-.userLayout2_discordInformationWrapper__hYFJt {
+.GUNS__65-724cd162-a057e9b9-d1debbc2 {
   flex-grow: 1;
   overflow: hidden;
   white-space: nowrap;
@@ -229,7 +229,7 @@
   justify-content: left
 }
 
-.userLayout2_joinButtonLarge__eo99Z {
+.GUNS__51-0f245fb0-5e6961b0-cb1c4b98 {
   background-color: #229150;
   padding: 10px 15px;
   text-decoration: none;
@@ -244,11 +244,11 @@
   justify-content: center
 }
 
-.userLayout2_widgetPlaceholder__WMAac {
+.GUNS__8a-920e400d-fc9f675e-835a3367 {
   width: 1px
 }
 
-.userLayout2_userProfileSvg__poFeq {
+.GUNS__a0-9e1d1233-66f4256e-b40ace81 {
   font-size: 5em;
   color: var(--textColor);
   margin-right: 10px;
@@ -257,7 +257,7 @@
   align-items: center
 }
 
-.userLayout2_missingIcon__yYJ4k {
+.GUNS__5b-325787ee-5c9c3622-2baee652 {
   background-color: var(--discordMissingIcon);
   border-radius: 15px;
   height: 60px;
@@ -267,20 +267,20 @@
   align-items: center
 }
 
-.userLayout2_missingIcon__yYJ4k h1 {
+.GUNS__5b-325787ee-5c9c3622-2baee652 h1 {
   margin: 0;
   color: var(--textColor);
   font-weight: 450
 }
 
-.userLayout2_githubWidget__rwQo8 {
+.GUNS__aa-4f007a31-138bb214-155bb1f7 {
   position: relative;
   display: flex;
   width: 100%;
   box-sizing: border-box
 }
 
-.userLayout2_githubInformationWrapper__pVgx_ {
+.GUNS__89-6b794447-5188d7f5-fab192e0 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -290,23 +290,23 @@
   text-overflow: ellipsis
 }
 
-.userLayout2_githubIcon__S7Vih {
+.GUNS__6f-c47f01b5-8f089855-34cf3f38 {
   display: flex
 }
 
-.userLayout2_githubIcon__S7Vih h1 {
+.GUNS__6f-c47f01b5-8f089855-34cf3f38 h1 {
   margin: 0;
   color: var(--textColor)
 }
 
-.userLayout2_githubIcon__S7Vih img {
+.GUNS__6f-c47f01b5-8f089855-34cf3f38 img {
   height: 70px;
   width: 70px;
   border-radius: 22px;
   object-fit: cover
 }
 
-.userLayout2_githubInformation___RC7o {
+.GUNS__2b-0827de00-9c2ffcbc-5dc6f779 {
   display: flex;
   flex-direction: column;
   white-space: nowrap;
@@ -314,7 +314,7 @@
   text-overflow: ellipsis
 }
 
-.userLayout2_githubInformation___RC7o h1 {
+.GUNS__2b-0827de00-9c2ffcbc-5dc6f779 h1 {
   margin: 0;
   color: var(--textColor);
   white-space: nowrap;
@@ -322,7 +322,7 @@
   text-overflow: ellipsis
 }
 
-.userLayout2_githubInformation___RC7o h3 {
+.GUNS__2b-0827de00-9c2ffcbc-5dc6f779 h3 {
   margin: 0;
   color: var(--secondTabWidgetDescription);
   display: flex;
@@ -330,17 +330,17 @@
   gap: 10px
 }
 
-.userLayout2_githubInformation___RC7o h3 span {
+.GUNS__2b-0827de00-9c2ffcbc-5dc6f779 h3 span {
   display: flex;
   align-items: center;
   gap: 5px
 }
 
-.userLayout2_githubInformation___RC7o h3 span svg {
+.GUNS__2b-0827de00-9c2ffcbc-5dc6f779 h3 span svg {
   font-size: 17px
 }
 
-.userLayout2_githubInformation___RC7o a {
+.GUNS__2b-0827de00-9c2ffcbc-5dc6f779 a {
   background-color: #229150;
   padding: 1px 10px;
   text-decoration: none;
@@ -351,7 +351,7 @@
   margin-top: 3px
 }
 
-.userLayout2_platform__t3b7h {
+.GUNS__f0-2b552e4b-07366c7d-67b4c447 {
   position: absolute;
   right: 2px;
   top: -2px;
@@ -364,12 +364,12 @@
   opacity: .4
 }
 
-.userLayout2_platform__t3b7h svg {
+.GUNS__f0-2b552e4b-07366c7d-67b4c447 svg {
   margin-bottom: 2px;
   font-size: 13.5px
 }
 
-.userLayout2_robloxWidget__gD_oL {
+.GUNS__de-489b93f4-4ae74b57-e0a5b6fe {
   display: flex;
   align-items: center;
   width: 100%;
@@ -377,7 +377,7 @@
   position: relative
 }
 
-.userLayout2_robloxInformationWrapper__5c52H {
+.GUNS__62-bb217b59-5f6de20f-7e30113f {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -387,23 +387,23 @@
   text-overflow: ellipsis
 }
 
-.userLayout2_robloxIcon__0c0Hs {
+.GUNS__fb-85b695c3-d01485b8-20cb584f {
   display: flex
 }
 
-.userLayout2_robloxIcon__0c0Hs h1 {
+.GUNS__fb-85b695c3-d01485b8-20cb584f h1 {
   margin: 0;
   color: var(--textColor)
 }
 
-.userLayout2_robloxIcon__0c0Hs img {
+.GUNS__fb-85b695c3-d01485b8-20cb584f img {
   height: 70px;
   width: 70px;
   border-radius: 22px;
   object-fit: cover
 }
 
-.userLayout2_robloxInformation__ZwFpr {
+.GUNS__47-03f45fcf-5d9e2810-7fedff3e {
   display: flex;
   flex-direction: column;
   white-space: nowrap;
@@ -411,7 +411,7 @@
   text-overflow: ellipsis
 }
 
-.userLayout2_robloxInformation__ZwFpr h1 {
+.GUNS__47-03f45fcf-5d9e2810-7fedff3e h1 {
   margin: 0;
   color: var(--textColor);
   white-space: nowrap;
@@ -419,7 +419,7 @@
   text-overflow: ellipsis
 }
 
-.userLayout2_robloxInformation__ZwFpr h3 {
+.GUNS__47-03f45fcf-5d9e2810-7fedff3e h3 {
   margin: 0;
   color: var(--secondTabWidgetDescription);
   display: flex;
@@ -427,17 +427,17 @@
   gap: 10px
 }
 
-.userLayout2_robloxInformation__ZwFpr h3 span {
+.GUNS__47-03f45fcf-5d9e2810-7fedff3e h3 span {
   display: flex;
   align-items: center;
   gap: 5px
 }
 
-.userLayout2_robloxInformation__ZwFpr h3 span svg {
+.GUNS__47-03f45fcf-5d9e2810-7fedff3e h3 span svg {
   font-size: 17px
 }
 
-.userLayout2_robloxInformation__ZwFpr a {
+.GUNS__47-03f45fcf-5d9e2810-7fedff3e a {
   background-color: #229150;
   padding: 1px 10px;
   text-decoration: none;
@@ -448,7 +448,7 @@
   margin-top: 3px
 }
 
-.userLayout2_telegramWidget__e_gSQ {
+.GUNS__d3-5d9b517e-6a5bc226-ede85043 {
   display: flex;
   align-items: center;
   width: 100%;
@@ -456,7 +456,7 @@
   position: relative
 }
 
-.userLayout2_telegramInformationWrapper__Ey8mo {
+.GUNS__fe-05dec240-0be0d4b6-2af3e22f {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -466,23 +466,23 @@
   text-overflow: ellipsis
 }
 
-.userLayout2_telegramIcon__O5tY_ {
+.GUNS__cd-7db475a2-1993d74e-229b9a62 {
   display: flex
 }
 
-.userLayout2_telegramIcon__O5tY_ h1 {
+.GUNS__cd-7db475a2-1993d74e-229b9a62 h1 {
   margin: 0;
   color: var(--textColor)
 }
 
-.userLayout2_telegramIcon__O5tY_ img {
+.GUNS__cd-7db475a2-1993d74e-229b9a62 img {
   height: 70px;
   width: 70px;
   border-radius: 22px;
   object-fit: cover
 }
 
-.userLayout2_telegramInformation__I6U_6 {
+.GUNS__66-09c80e18-82812b05-4e3618b5 {
   display: flex;
   flex-direction: column;
   white-space: nowrap;
@@ -490,7 +490,7 @@
   text-overflow: ellipsis
 }
 
-.userLayout2_telegramInformation__I6U_6 h1 {
+.GUNS__66-09c80e18-82812b05-4e3618b5 h1 {
   margin: 0;
   color: var(--textColor);
   white-space: nowrap;
@@ -498,7 +498,7 @@
   text-overflow: ellipsis
 }
 
-.userLayout2_telegramInformation__I6U_6 h3 {
+.GUNS__66-09c80e18-82812b05-4e3618b5 h3 {
   margin: 0;
   color: var(--secondTabWidgetDescription);
   display: flex;
@@ -506,17 +506,17 @@
   gap: 10px
 }
 
-.userLayout2_telegramInformation__I6U_6 h3 span {
+.GUNS__66-09c80e18-82812b05-4e3618b5 h3 span {
   display: flex;
   align-items: center;
   gap: 5px
 }
 
-.userLayout2_telegramInformation__I6U_6 h3 span svg {
+.GUNS__66-09c80e18-82812b05-4e3618b5 h3 span svg {
   font-size: 17px
 }
 
-.userLayout2_telegramInformation__I6U_6 a {
+.GUNS__66-09c80e18-82812b05-4e3618b5 a {
   background-color: #53a4dd;
   padding: 1px 10px;
   text-decoration: none;
@@ -527,7 +527,7 @@
   margin-top: 3px
 }
 
-.userLayout2_youtubeWidget__4vm0F {
+.GUNS__2d-8c7b4f53-f2480fa9-ebbbf9dd {
   display: flex;
   align-items: center;
   width: 100%;
@@ -535,7 +535,7 @@
   position: relative
 }
 
-.userLayout2_youtubeInformationWrapper__YcfXC {
+.GUNS__b8-4fac20d7-941fab1c-cb768875 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -545,23 +545,23 @@
   text-overflow: ellipsis
 }
 
-.userLayout2_youtubeIcon__e93Ya {
+.GUNS__4c-5d404e53-1c3e24aa-b1305aa2 {
   display: flex
 }
 
-.userLayout2_youtubeIcon__e93Ya h1 {
+.GUNS__4c-5d404e53-1c3e24aa-b1305aa2 h1 {
   margin: 0;
   color: var(--textColor)
 }
 
-.userLayout2_youtubeIcon__e93Ya img {
+.GUNS__4c-5d404e53-1c3e24aa-b1305aa2 img {
   height: 70px;
   width: 70px;
   border-radius: 22px;
   object-fit: cover
 }
 
-.userLayout2_youtubeInformation__QTkQ7 {
+.GUNS__82-a129a85a-7db2dc1a-09eae6a3 {
   display: flex;
   flex-direction: column;
   white-space: nowrap;
@@ -569,7 +569,7 @@
   text-overflow: ellipsis
 }
 
-.userLayout2_youtubeInformation__QTkQ7 h1 {
+.GUNS__82-a129a85a-7db2dc1a-09eae6a3 h1 {
   margin: 0;
   color: var(--textColor);
   white-space: nowrap;
@@ -577,7 +577,7 @@
   text-overflow: ellipsis
 }
 
-.userLayout2_youtubeInformation__QTkQ7 h3 {
+.GUNS__82-a129a85a-7db2dc1a-09eae6a3 h3 {
   margin: 0;
   color: var(--secondTabWidgetDescription);
   display: flex;
@@ -585,17 +585,17 @@
   gap: 10px
 }
 
-.userLayout2_youtubeInformation__QTkQ7 h3 span {
+.GUNS__82-a129a85a-7db2dc1a-09eae6a3 h3 span {
   display: flex;
   align-items: center;
   gap: 5px
 }
 
-.userLayout2_youtubeInformation__QTkQ7 h3 span svg {
+.GUNS__82-a129a85a-7db2dc1a-09eae6a3 h3 span svg {
   font-size: 17px
 }
 
-.userLayout2_youtubeInformation__QTkQ7 a {
+.GUNS__82-a129a85a-7db2dc1a-09eae6a3 a {
   background-color: #FF0033;
   padding: 1px 10px;
   text-decoration: none;
@@ -606,7 +606,7 @@
   margin-top: 3px
 }
 
-.userLayout2_lastFMWidget__YEPEA {
+.GUNS__bd-e92b00ca-9eb00356-5ce8a4c0 {
   display: flex;
   align-items: center;
   width: 100%;
@@ -614,7 +614,7 @@
   position: relative
 }
 
-.userLayout2_lastFMInformationWrapper__qee3x {
+.GUNS__97-630e62e1-fe1df78c-c81c0c80 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -624,23 +624,23 @@
   text-overflow: ellipsis
 }
 
-.userLayout2_lastFMIcon__Vp81P {
+.GUNS__85-56fa012e-1f3ed114-dcefa7ab {
   display: flex
 }
 
-.userLayout2_lastFMIcon__Vp81P h1 {
+.GUNS__85-56fa012e-1f3ed114-dcefa7ab h1 {
   margin: 0;
   color: var(--textColor)
 }
 
-.userLayout2_lastFMIcon__Vp81P img {
+.GUNS__85-56fa012e-1f3ed114-dcefa7ab img {
   height: 70px;
   width: 70px;
   border-radius: 50%;
   object-fit: cover
 }
 
-.userLayout2_lastFMInformation__N7rB6 {
+.GUNS__b7-e834c5b9-cbc48e44-8e62a7b5 {
   display: flex;
   flex-direction: column;
   white-space: nowrap;
@@ -648,7 +648,7 @@
   text-overflow: ellipsis
 }
 
-.userLayout2_lastFMInformation__N7rB6 h1 {
+.GUNS__b7-e834c5b9-cbc48e44-8e62a7b5 h1 {
   margin: 0;
   color: var(--textColor);
   white-space: nowrap;
@@ -656,7 +656,7 @@
   text-overflow: ellipsis
 }
 
-.userLayout2_lastFMInformation__N7rB6 h3 {
+.GUNS__b7-e834c5b9-cbc48e44-8e62a7b5 h3 {
   margin: 0;
   color: var(--secondTabWidgetDescription);
   display: flex;
@@ -664,17 +664,17 @@
   gap: 10px
 }
 
-.userLayout2_lastFMInformation__N7rB6 h3 span {
+.GUNS__b7-e834c5b9-cbc48e44-8e62a7b5 h3 span {
   display: flex;
   align-items: center;
   gap: 5px
 }
 
-.userLayout2_lastFMInformation__N7rB6 h3 span svg {
+.GUNS__b7-e834c5b9-cbc48e44-8e62a7b5 h3 span svg {
   font-size: 17px
 }
 
-.userLayout2_lastFMInformation__N7rB6 a {
+.GUNS__b7-e834c5b9-cbc48e44-8e62a7b5 a {
   background-color: #FF0033;
   padding: 1px 10px;
   text-decoration: none;
@@ -685,7 +685,7 @@
   margin-top: 3px
 }
 
-.userLayout2_bottomLeftWrapper__I2v_v {
+.GUNS__b5-2c1955de-c7c90dbe-7e692e06 {
   justify-content: left;
   display: flex;
   bottom: 12px;
@@ -695,7 +695,7 @@
   left: 3px
 }
 
-.userLayout2_bottomLeftDivider__cvsw_ {
+.GUNS__b4-cc604dc9-84b91bee-3249add0 {
   width: 2px;
   background: var(--modernLayoutBottomLeftDivider);
   height: 15px;
@@ -703,7 +703,7 @@
   margin-right: 2px
 }
 
-.userLayout2_loadingText__vjo6S {
+.GUNS__bd-8c5bb767-81b4ec00-2924d1e2 {
   color: var(--textColor);
   font-size: 17px;
   font-weight: 500;
@@ -714,13 +714,13 @@
   gap: 7px
 }
 
-.userLayout2_loadingText__vjo6S svg {
+.GUNS__bd-8c5bb767-81b4ec00-2924d1e2 svg {
   fill: var(--textColor);
   width: 22px;
   height: 22px
 }
 
-.userLayout2_timezoneWidget__JVOvt {
+.GUNS__ff-068e59b5-c326696e-2305f40a {
   display: flex;
   align-items: center;
   width: 100%;
@@ -728,12 +728,12 @@
   gap: 12px
 }
 
-.userLayout2_timezoneClockWrapper__wKW5j {
+.GUNS__e6-5d8f1c80-d1204ac5-e260ea3d {
   display: flex;
   flex-shrink: 0
 }
 
-.userLayout2_timezoneInfo__FjfQA {
+.GUNS__b8-54e72ad2-e1858671-fcdcdca9 {
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -741,7 +741,7 @@
   gap: 1px
 }
 
-.userLayout2_timezoneDigital__sDRiC {
+.GUNS__ce-0a5ba18b-76cb6152-03bb8e5f {
   margin: 0;
   color: var(--textColor);
   white-space: nowrap;
@@ -752,7 +752,7 @@
   letter-spacing: -.5px
 }
 
-.userLayout2_timezoneMeta__sHo1q {
+.GUNS__11-96f4e304-69317103-886b6d13 {
   margin: 0;
   color: var(--secondTabWidgetDescription);
   display: flex;
@@ -764,11 +764,11 @@
   text-overflow: ellipsis
 }
 
-.userLayout2_timezoneSeparator__4tmgk {
+.GUNS__64-e47e733a-15dbb969-59727756 {
   opacity: .5
 }
 
-.userLayout2_timezoneAmPm__Y196n {
+.GUNS__ac-6d99abd2-9163eea9-f407a0b2 {
   font-size: .55em;
   opacity: .6;
   margin-left: 4px;
@@ -776,7 +776,7 @@
   vertical-align: middle
 }
 
-.userLayout2_timezoneVisitor__maKBA {
+.GUNS__2d-3ed180da-8cae80a6-b7cbecb2 {
   display: flex;
   align-items: center;
   color: var(--platformTextColor);
@@ -788,7 +788,7 @@
   text-overflow: ellipsis
 }
 
-.userLayout2_clockHand__g1w03 {
+.GUNS__0f-eff9d74e-4a852b12-89c268b9 {
   transform-box: view-box;
   transform-origin: 50% 50%
 }

@@ -21,8 +21,8 @@
         className: d
       }) {
         let u = (0, t.useId)(),
-          h = c ?? u,
-          m = (0, r.jsx)("svg", {
+          m = c ?? u,
+          h = (0, r.jsx)("svg", {
             viewBox: "0 0 10 7",
             fill: "none",
             xmlns: "http://www.w3.org/2000/svg",
@@ -37,10 +37,10 @@
           className: `${o().checkboxWrapper} ${d??""}`,
           "data-disabled": n,
           "data-checked": e,
-          htmlFor: h,
+          htmlFor: m,
           children: [(0, r.jsx)("input", {
             type: "checkbox",
-            id: h,
+            id: m,
             name: l,
             checked: e,
             onChange: a,
@@ -49,7 +49,7 @@
             className: o().checkboxBox,
             children: (0, r.jsx)("span", {
               className: o().checkmark,
-              children: m
+              children: h
             })
           }), (s || i) && (0, r.jsxs)("span", {
             className: o().checkboxContent,
@@ -67,7 +67,7 @@
     49361: (e, a, s) => {
       "use strict";
       s.r(a), s.d(a, {
-        default: () => H
+        default: () => G
       });
       var r = s(95155),
         t = s(12115),
@@ -336,7 +336,7 @@
         })
       };
       var u = s(39818);
-      let h = ({
+      let m = ({
         assetURL: e,
         fileType: a,
         setAsset: s
@@ -360,7 +360,7 @@
           className: o().uploadCardImage
         })]
       });
-      var m = s(38256);
+      var h = s(38256);
       let p = ({
         label: e,
         value: a,
@@ -370,7 +370,7 @@
         fileType: n,
         setAsset: l
       }) => {
-        let c = (0, m.kj)();
+        let c = (0, h.kj)();
         return (0, r.jsxs)("div", {
           className: o().uploadCardWrapper,
           children: [(0, r.jsx)("span", {
@@ -395,7 +395,7 @@
                 accept: s,
                 onChange: i
               })]
-            }) : (0, r.jsx)(h, {
+            }) : (0, r.jsx)(m, {
               assetURL: a,
               fileType: n,
               setAsset: l
@@ -430,7 +430,7 @@
       let k = ({
         data: e
       }) => {
-        let a = (0, m.kj)(),
+        let a = (0, h.kj)(),
           s = e.config,
           [i, n] = (0, t.useState)({
             isLoading: !1,
@@ -440,26 +440,26 @@
             isLoading: !1,
             assetType: ""
           },
-          [h, k] = (0, t.useState)("" !== s.url ? s.url : ""),
+          [m, k] = (0, t.useState)("" !== s.url ? s.url : ""),
           [y, z] = (0, t.useState)("" !== s.avatar ? s.avatar : ""),
-          [C, A] = (0, t.useState)("" !== s.custom_cursor ? s.custom_cursor : ""),
-          [T, S] = (0, t.useState)(!1),
+          [C, S] = (0, t.useState)("" !== s.custom_cursor ? s.custom_cursor : ""),
+          [A, T] = (0, t.useState)(!1),
           [M, L] = (0, t.useState)(e.config.shuffle_audios ?? !1),
           [B, E] = (0, t.useState)(e.config.audio_player ?? !1),
           [R, F] = (0, t.useState)(""),
-          [q, W] = (0, t.useState)(s.audio),
-          [P, I] = (0, t.useState)(""),
-          [D, $] = (0, t.useState)({
+          [q, P] = (0, t.useState)(s.audio),
+          [D, I] = (0, t.useState)(""),
+          [W, $] = (0, t.useState)({
             id: "",
             currentTitle: ""
           }),
-          [O, U] = (0, t.useState)(),
-          H = (0, t.useRef)(null),
-          G = e.premium ? 4 : 2,
-          Y = "string" == typeof q && "" !== q,
-          J = (0, t.useMemo)(() => Y ? 1 : Array.isArray(q) ? q.length : 0, [q, Y]),
-          V = "audioManager" === R ? a("dashboard.customize.audio.modal.manager") : "addAudio" === R ? a("dashboard.customize.audio.modal.add") : "editAudioDetails" === R ? a("dashboard.customize.audio.modal.edit") : "",
-          [X, Z] = (0, t.useState)(""),
+          [U, O] = (0, t.useState)(),
+          G = (0, t.useRef)(null),
+          H = e.premium ? 4 : 2,
+          V = "string" == typeof q && "" !== q,
+          Y = (0, t.useMemo)(() => V ? 1 : Array.isArray(q) ? q.length : 0, [q, V]),
+          J = "audioManager" === R ? a("dashboard.customize.audio.modal.manager") : "addAudio" === R ? a("dashboard.customize.audio.modal.add") : "editAudioDetails" === R ? a("dashboard.customize.audio.modal.edit") : "",
+          [Z, X] = (0, t.useState)(""),
           [K, Q] = (0, t.useState)(null),
           [ee, ea] = (0, t.useState)(""),
           [es, er] = (0, t.useState)(null),
@@ -467,7 +467,7 @@
           [eo, en] = (0, t.useState)(!1),
           [el, ec] = (0, t.useState)(null),
           [ed, eu] = (0, t.useState)(!1),
-          [eh, em] = (0, t.useState)(1),
+          [em, eh] = (0, t.useState)(1),
           [ep, eg] = (0, t.useState)(0),
           [ef, ex] = (0, t.useState)({
             x: 0,
@@ -507,7 +507,7 @@
               c.oR.error(a("dashboard.customize.audio.errors.invalid_file")), e.target.value = "";
               return
             }
-            U(s)
+            O(s)
           };
 
         function ek(e) {
@@ -521,12 +521,12 @@
             return a
           },
           eC = (e, a) => Math.hypot(e.x - a.x, e.y - a.y),
-          eA = (e, a) => 180 * Math.atan2(a.y - e.y, a.x - e.x) / Math.PI,
-          eT = (e, a) => ({
+          eS = (e, a) => 180 * Math.atan2(a.y - e.y, a.x - e.x) / Math.PI,
+          eA = (e, a) => ({
             x: (e.x + a.x) / 2,
             y: (e.y + a.y) / 2
           }),
-          eS = (0, t.useCallback)((e, a, s, r) => {
+          eT = (0, t.useCallback)((e, a, s, r) => {
             if (!s) return {
               x: 0,
               y: 0
@@ -545,7 +545,7 @@
             }
           }, []),
           eM = (0, t.useCallback)(() => {
-            em(1), eg(0), ex({
+            eh(1), eg(0), ex({
               x: 0,
               y: 0
             }), ev(!1), e_.current = {}, ew.current.mode = "none"
@@ -596,9 +596,9 @@
               startY: 0,
               startOffset: ef,
               pinchDistance: eC(e[0], e[1]),
-              pinchAngle: eA(e[0], e[1]),
-              pinchCenter: eT(e[0], e[1]),
-              pinchStartZoom: eh,
+              pinchAngle: eS(e[0], e[1]),
+              pinchCenter: eA(e[0], e[1]),
+              pinchStartZoom: em,
               pinchStartRotation: ep,
               pinchStartOffset: ef
             })
@@ -619,14 +619,14 @@
                   x: 0,
                   y: 0
                 },
-                pinchStartZoom: eh,
+                pinchStartZoom: em,
                 pinchStartRotation: ep,
                 pinchStartOffset: ef
               };
               return
             }
             ew.current.mode = "none", ew.current.panPointerId = -1
-          }, eW = async () => {
+          }, eP = async () => {
             if (el && !eb) {
               ev(!0), n({
                 isLoading: !0,
@@ -641,14 +641,14 @@
                   t = r.getContext("2d");
                 if (!t) return void c.oR.error(a("dashboard.customize.assets.avatar_editor.errors.edit"));
                 let i = Math.max(340 / el.naturalWidth, 340 / el.naturalHeight),
-                  o = Math.floor(340 / (i * eh)),
+                  o = Math.floor(340 / (i * em)),
                   n = Math.min(512, Math.max(128, o)),
-                  l = i * eh,
+                  l = i * em,
                   d = n / 340,
-                  h = el.naturalWidth * l * d,
-                  m = el.naturalHeight * l * d,
+                  m = el.naturalWidth * l * d,
+                  h = el.naturalHeight * l * d,
                   p = ep * Math.PI / 180;
-                r.width = n, r.height = n, t.imageSmoothingEnabled = !0, t.imageSmoothingQuality = "high", t.clearRect(0, 0, n, n), t.save(), t.translate(n / 2 + ef.x * d, n / 2 + ef.y * d), t.rotate(p), t.drawImage(s, -h / 2, -m / 2, h, m), t.restore();
+                r.width = n, r.height = n, t.imageSmoothingEnabled = !0, t.imageSmoothingQuality = "high", t.clearRect(0, 0, n, n), t.save(), t.translate(n / 2 + ef.x * d, n / 2 + ef.y * d), t.rotate(p), t.drawImage(s, -m / 2, -h / 2, m, h), t.restore();
                 let g = await new Promise(e => {
                   r.toBlob(e, "image/png", .95)
                 });
@@ -667,40 +667,40 @@
             }
           };
         (0, t.useEffect)(() => {
-          el && ex(e => eS(e, eh, el, ep))
-        }, [el, eh, ep, eS]), (0, t.useEffect)(() => () => {
+          el && ex(e => eT(e, em, el, ep))
+        }, [el, em, ep, eT]), (0, t.useEffect)(() => () => {
           el && URL.revokeObjectURL(el.objectUrl)
         }, [el]);
-        let eP = (0, t.useMemo)(() => {
+        let eD = (0, t.useMemo)(() => {
           if (!el) return null;
-          let e = Math.max(340 / el.naturalWidth, 340 / el.naturalHeight) * eh;
+          let e = Math.max(340 / el.naturalWidth, 340 / el.naturalHeight) * em;
           return {
             widthRatio: el.naturalWidth * e / 340,
             heightRatio: el.naturalHeight * e / 340
           }
-        }, [el, eh]);
-        (0, t.useMemo)(() => (eh - 1) / 3 * 100, [eh]), (0, t.useMemo)(() => (ep - -180) / 360 * 100, [ep]);
-        let eI = (0, t.useMemo)(() => .001 > Math.abs(eh - 1), [eh]),
-          eD = (0, t.useMemo)(() => .1 > Math.abs(ep), [ep]),
+        }, [el, em]);
+        (0, t.useMemo)(() => (em - 1) / 3 * 100, [em]), (0, t.useMemo)(() => (ep - -180) / 360 * 100, [ep]);
+        let eI = (0, t.useMemo)(() => .001 > Math.abs(em - 1), [em]),
+          eW = (0, t.useMemo)(() => .1 > Math.abs(ep), [ep]),
           e$ = async () => {
-            et || (O ? (ei(!0), await (0, u.C9)(P, O, es, W) && (F("audioManager"), U(void 0), I(""), ea(""), er(null)), ei(!1)) : c.oR.error(a("dashboard.customize.audio.errors.select_file")))
-          }, eO = async (e, a) => {
+            et || (U ? (ei(!0), await (0, u.C9)(D, U, es, P) && (F("audioManager"), O(void 0), I(""), ea(""), er(null)), ei(!1)) : c.oR.error(a("dashboard.customize.audio.errors.select_file")))
+          }, eU = async (e, a) => {
             await (0, u.qc)(e, a)
-          }, eU = async () => {
-            eo || (en(!0), await (0, u.l4)(D.id, D.currentTitle, K ?? X, W) && (F("audioManager"), $({
+          }, eO = async () => {
+            eo || (en(!0), await (0, u.l4)(W.id, W.currentTitle, K ?? Z, P) && (F("audioManager"), $({
               id: "",
               currentTitle: ""
-            }), Z(""), Q(null)), en(!1))
-          }, eH = async e => {
-            let a = e.currentTarget.checked;
-            await (0, u.F_)(a, L)
+            }), X(""), Q(null)), en(!1))
           }, eG = async e => {
             let a = e.currentTarget.checked;
+            await (0, u.F_)(a, L)
+          }, eH = async e => {
+            let a = e.currentTarget.checked;
             await (0, u.I9)(a, E)
-          }, eY = async (e, a, s, r) => {
+          }, eV = async (e, a, s, r) => {
             let t = e.target;
             M || r || ["svg", "path", "span"].includes(t.nodeName.toLowerCase()) && "" === t.id || await (0, u.h3)(a, s)
-          }, eJ = async (e, s) => {
+          }, eY = async (e, s) => {
             let r = e.target.files?.[0];
             if (!r) {
               e.target.value = "";
@@ -712,15 +712,15 @@
             }), e.target.disabled = !0;
             try {
               let t = await (0, u.iN)(s, r, a);
-              t ? ("background" === s && k(t), "avatar" === s && z(t), "cursor" === s && A(t)) : e.target.value = ""
+              t ? ("background" === s && k(t), "avatar" === s && z(t), "cursor" === s && S(t)) : e.target.value = ""
             } finally {
               e.target.disabled = !1, n(l)
             }
-          }, eV = (0, t.useMemo)(() => ({
-            url: h,
+          }, eJ = (0, t.useMemo)(() => ({
+            url: m,
             avatar: y,
             custom_cursor: C
-          }), [h, y, C]), eX = async e => {
+          }), [m, y, C]), eZ = async e => {
             let s, r = e.target.files?.[0];
             if (!r) return;
             let t = f.nB.cover,
@@ -730,9 +730,9 @@
               return
             }
             Q(r), (s = new FileReader).onload = function(e) {
-              Z(e.target.result)
+              X(e.target.result)
             }, s.readAsDataURL(r)
-          }, eZ = async e => {
+          }, eX = async e => {
             let s, r = e.target.files?.[0];
             if (!r) return;
             let t = f.nB.cover,
@@ -747,14 +747,14 @@
           };
         return (0, r.jsxs)(r.Fragment, {
           children: [(0, r.jsx)(j.A, {
-            opened: T,
-            onClose: () => S(!1),
-            title: V,
+            opened: A,
+            onClose: () => T(!1),
+            title: J,
             size: "550px",
             centered: !0,
             children: "audioManager" === R ? (0, r.jsxs)("div", {
               className: o().audioManager,
-              children: [(Y || Array.isArray(q) && 0 !== q.length) && (0, r.jsx)("h3", {
+              children: [(V || Array.isArray(q) && 0 !== q.length) && (0, r.jsx)("h3", {
                 className: o().audioManagerDescription,
                 children: a("dashboard.customize.audio.manager.description")
               }), ("string" == typeof q && "" !== q || Array.isArray(q) && 0 !== q.length) && !e.premium && (0, r.jsx)("div", {
@@ -783,18 +783,18 @@
                 })
               }), (0, r.jsxs)("div", {
                 className: o().audiosWrapper,
-                children: [!Y && Array.isArray(q) && 0 === q.length || !Y && !Array.isArray(q) || "string" == typeof q && "" === q ? (0, r.jsx)("h1", {
+                children: [!V && Array.isArray(q) && 0 === q.length || !V && !Array.isArray(q) || "string" == typeof q && "" === q ? (0, r.jsx)("h1", {
                   className: o().noAudios,
                   children: a("dashboard.customize.audio.manager.empty")
                 }) : (0, r.jsx)("h1", {
                   className: o().audioAmount,
                   children: a("dashboard.customize.audio.manager.count", {
-                    current: J,
-                    total: G
+                    current: Y,
+                    total: H
                   })
                 }), (0, r.jsx)("div", {
                   className: o().audios,
-                  children: !Y && Array.isArray(q) && 0 === q.length || "string" == typeof q && "" === q ? null : Y ? (0, r.jsxs)("div", {
+                  children: !V && Array.isArray(q) && 0 === q.length || "string" == typeof q && "" === q ? null : V ? (0, r.jsxs)("div", {
                     className: o().audioContainer,
                     children: [(0, r.jsxs)("div", {
                       className: o().audioContainerWrapper,
@@ -813,7 +813,7 @@
                         children: a("dashboard.customize.audio.badges.active")
                       }), (0, r.jsx)("span", {
                         className: o().deleteButton,
-                        onClick: () => eO("", W),
+                        onClick: () => eU("", P),
                         children: d.deleteButton
                       })]
                     })]
@@ -823,7 +823,7 @@
                       hideTooltip: !!e.selected,
                       children: (0, r.jsxs)("div", {
                         className: o().audioContainer,
-                        onClick: a => eY(a, e.id, W, !!e.selected),
+                        onClick: a => eV(a, e.id, P, !!e.selected),
                         children: [(0, r.jsxs)("div", {
                           className: o().audioContainerWrapper,
                           children: [e.cover && "" !== e.cover ? (0, r.jsx)("img", {
@@ -849,12 +849,12 @@
                               F("editAudioDetails"), $({
                                 id: e.id,
                                 currentTitle: e.title
-                              }), Z(e.cover ?? "")
+                              }), X(e.cover ?? "")
                             },
                             children: d.editButton
                           }), (0, r.jsx)("span", {
                             className: o().deleteButton,
-                            onClick: () => eO(e.id, W),
+                            onClick: () => eU(e.id, P),
                             children: d.deleteButton
                           })]
                         })]
@@ -877,7 +877,7 @@
                       })]
                     }), (0, r.jsx)(_.A, {
                       checked: M,
-                      onChange: eH
+                      onChange: eG
                     })]
                   }), (0, r.jsxs)("div", {
                     className: o().audioPlayer,
@@ -890,7 +890,7 @@
                       })]
                     }), (0, r.jsx)(_.A, {
                       checked: B,
-                      onChange: eG
+                      onChange: eH
                     })]
                   })]
                 }), (0, r.jsxs)("span", {
@@ -914,14 +914,14 @@
                     },
                     children: [(0, r.jsx)("div", {
                       className: o().uploadCardText,
-                      children: O ? (0, r.jsxs)(r.Fragment, {
+                      children: U ? (0, r.jsxs)(r.Fragment, {
                         children: [d.audio, (0, r.jsxs)("div", {
                           className: o().fileBadge,
                           children: [(0, r.jsx)("span", {
-                            children: ek(O.name).toUpperCase()
+                            children: ek(U.name).toUpperCase()
                           }), (0, r.jsx)("span", {
                             onClick: function() {
-                              U(void 0), H.current && (H.current.value = "")
+                              O(void 0), G.current && (G.current.value = "")
                             },
                             children: d.deleteFile
                           })]
@@ -932,12 +932,12 @@
                         })]
                       })
                     }), (0, r.jsx)("input", {
-                      disabled: !!O,
+                      disabled: !!U,
                       className: o().audioInput,
                       type: "file",
                       accept: w.vJ.audio.map(e => e).join(", "),
                       onChange: eN,
-                      ref: H
+                      ref: G
                     })]
                   }), (0, r.jsx)("div", {
                     className: o().uploadCard,
@@ -961,7 +961,7 @@
                           type: "file",
                           accept: w.vJ.cover.map(e => e).join(", "),
                           onChange: e => {
-                            eZ(e)
+                            eX(e)
                           }
                         })]
                       }) : (0, r.jsxs)(r.Fragment, {
@@ -992,7 +992,7 @@
                   onChangeFunction: e => {
                     I(e.target.value)
                   },
-                  value: P,
+                  value: D,
                   placeholder: a("dashboard.customize.audio.add.title_placeholder"),
                   icon: d.audio
                 })]
@@ -1021,7 +1021,7 @@
                   },
                   children: (0, r.jsx)("div", {
                     className: o().uploadCardText,
-                    children: "" === X ? (0, r.jsxs)(r.Fragment, {
+                    children: "" === Z ? (0, r.jsxs)(r.Fragment, {
                       children: [(0, r.jsxs)("div", {
                         className: o().uploadCardText,
                         children: [d.image, (0, r.jsx)("h1", {
@@ -1036,22 +1036,22 @@
                         type: "file",
                         accept: w.vJ.cover.map(e => e).join(", "),
                         onChange: e => {
-                          eX(e)
+                          eZ(e)
                         }
                       })]
                     }) : (0, r.jsxs)(r.Fragment, {
                       children: [(0, r.jsxs)("div", {
                         className: o().fileBadge,
                         children: [(0, r.jsx)("span", {
-                          children: ek(K ? K.name : X).toUpperCase()
+                          children: ek(K ? K.name : Z).toUpperCase()
                         }), (0, r.jsx)("span", {
                           onClick: function() {
-                            Z(""), Q(null)
+                            X(""), Q(null)
                           },
                           children: d.deleteFile
                         })]
                       }), (0, r.jsx)("img", {
-                        src: X,
+                        src: Z,
                         alt: "Cover",
                         className: o().uploadCardImage,
                         style: {
@@ -1065,11 +1065,11 @@
                   featureName: a("dashboard.customize.audio.edit.title_label"),
                   onChangeFunction: e => {
                     $({
-                      id: D.id,
+                      id: W.id,
                       currentTitle: e.target.value
                     })
                   },
-                  value: D.currentTitle,
+                  value: W.currentTitle,
                   placeholder: a("dashboard.customize.audio.add.title_placeholder"),
                   icon: d.audio
                 })]
@@ -1084,7 +1084,7 @@
                   alignItems: "center",
                   gap: 8
                 },
-                onClick: eU,
+                onClick: eO,
                 children: [eo ? d.loading : null, eo ? a("dashboard.customize.audio.edit.loading") : a("dashboard.customize.audio.edit.button")]
               })]
             })
@@ -1116,7 +1116,7 @@
                       x: 0,
                       y: 0
                     },
-                    pinchStartZoom: eh,
+                    pinchStartZoom: em,
                     pinchStartRotation: ep,
                     pinchStartOffset: ef
                   })
@@ -1133,23 +1133,23 @@
                     "pinch" !== s.mode && eF();
                     let r = ew.current,
                       t = eC(a[0], a[1]),
-                      i = eA(a[0], a[1]),
-                      o = eT(a[0], a[1]),
+                      i = eS(a[0], a[1]),
+                      o = eA(a[0], a[1]),
                       n = r.pinchDistance > 0 ? t / r.pinchDistance : 1,
                       l = ey(r.pinchStartZoom * n, 1, 4),
                       c = ez(r.pinchStartRotation + ez(i - r.pinchAngle)),
                       d = 340 / (e.currentTarget.clientWidth > 0 ? e.currentTarget.clientWidth : 340),
-                      u = eS({
+                      u = eT({
                         x: r.pinchStartOffset.x + (o.x - r.pinchCenter.x) * d,
                         y: r.pinchStartOffset.y + (o.y - r.pinchCenter.y) * d
                       }, l, el, c);
-                    em(l), eg(c), ex(u);
+                    eh(l), eg(c), ex(u);
                     return
                   }
-                  "pan" !== s.mode || s.panPointerId !== e.pointerId || ex(eS({
+                  "pan" !== s.mode || s.panPointerId !== e.pointerId || ex(eT({
                     x: s.startOffset.x + (e.clientX - s.startX) * (340 / (e.currentTarget.clientWidth > 0 ? e.currentTarget.clientWidth : 340)),
                     y: s.startOffset.y + (e.clientY - s.startY) * (340 / (e.currentTarget.clientWidth > 0 ? e.currentTarget.clientWidth : 340))
-                  }, eh, el, ep))
+                  }, em, el, ep))
                 },
                 onPointerUp: eq,
                 onPointerCancel: eq,
@@ -1158,19 +1158,19 @@
                   if (!el) return;
                   if (e.preventDefault(), e.shiftKey) {
                     let a = ez(ep + (e.deltaY < 0 ? 2 : -2));
-                    eg(a), ex(e => eS(e, eh, el, a));
+                    eg(a), ex(e => eT(e, em, el, a));
                     return
                   }
-                  let a = ey(eh + (e.deltaY < 0 ? .09 : -.09), 1, 4);
-                  em(a), ex(e => eS(e, a, el, ep))
+                  let a = ey(em + (e.deltaY < 0 ? .09 : -.09), 1, 4);
+                  eh(a), ex(e => eT(e, a, el, ep))
                 },
-                children: [el && eP && (0, r.jsx)("img", {
+                children: [el && eD && (0, r.jsx)("img", {
                   src: el.objectUrl,
                   alt: a("dashboard.customize.assets.avatar_editor.alt_preview"),
                   className: o().avatarCropperImage,
                   style: {
-                    width: `${100*eP.widthRatio}%`,
-                    height: `${100*eP.heightRatio}%`,
+                    width: `${100*eD.widthRatio}%`,
+                    height: `${100*eD.heightRatio}%`,
                     left: `calc(50% + ${ef.x/340*100}%)`,
                     top: `calc(50% + ${ef.y/340*100}%)`,
                     transform: `translate(-50%, -50%) rotate(${ep}deg)`
@@ -1204,12 +1204,12 @@
                         type: "button",
                         className: o().avatarCropperInlineReset,
                         onClick: () => {
-                          em(1), ex(e => eS(e, 1, el, ep))
+                          eh(1), ex(e => eT(e, 1, el, ep))
                         },
                         disabled: eI,
                         children: a("dashboard.customize.assets.avatar_editor.controls.reset")
                       }), (0, r.jsxs)("strong", {
-                        children: [eh.toFixed(2), "x"]
+                        children: [em.toFixed(2), "x"]
                       })]
                     })]
                   }), (0, r.jsx)("div", {
@@ -1218,10 +1218,10 @@
                       min: 1,
                       max: 4,
                       step: .01,
-                      value: eh,
+                      value: em,
                       onChange: e => {
                         let a = Number(e.currentTarget.value);
-                        em(a), ex(e => eS(e, a, el, ep))
+                        eh(a), ex(e => eT(e, a, el, ep))
                       }
                     })
                   })]
@@ -1237,9 +1237,9 @@
                         type: "button",
                         className: o().avatarCropperInlineReset,
                         onClick: () => {
-                          eg(0), ex(e => eS(e, eh, el, 0))
+                          eg(0), ex(e => eT(e, em, el, 0))
                         },
-                        disabled: eD,
+                        disabled: eW,
                         children: a("dashboard.customize.assets.avatar_editor.controls.reset")
                       }), (0, r.jsxs)("strong", {
                         children: [Math.round(ep), " ", a("dashboard.customize.assets.avatar_editor.controls.rotation_unit")]
@@ -1254,7 +1254,7 @@
                       value: ep,
                       onChange: e => {
                         let a = ez(Number(e.currentTarget.value));
-                        eg(a), ex(e => eS(e, eh, el, a))
+                        eg(a), ex(e => eT(e, em, el, a))
                       }
                     })
                   })]
@@ -1268,7 +1268,7 @@
                   }), (0, r.jsxs)("button", {
                     type: "button",
                     className: o().avatarCropperPrimaryButton,
-                    onClick: eW,
+                    onClick: eP,
                     children: [eb ? d.loading : null, eb ? a("dashboard.customize.assets.avatar_editor.actions.saving") : a("dashboard.customize.assets.avatar_editor.actions.apply")]
                   })]
                 })]
@@ -1276,10 +1276,10 @@
             })
           }), (0, r.jsx)(p, {
             label: a("dashboard.customize.assets.background"),
-            value: eV.url,
+            value: eJ.url,
             accept: w.vJ.background.map(e => e).join(", "),
             isLoading: i.isLoading && "background" === i.assetType,
-            onFileChange: e => eJ(e, "background"),
+            onFileChange: e => eY(e, "background"),
             fileType: "background",
             setAsset: k
           }), (0, r.jsxs)("div", {
@@ -1289,7 +1289,7 @@
             }), (0, r.jsx)("div", {
               className: o().uploadCard,
               onClick: () => {
-                F("audioManager"), S(!0)
+                F("audioManager"), T(!0)
               },
               children: (0, r.jsxs)("div", {
                 className: o().uploadCardText,
@@ -1300,7 +1300,7 @@
             })]
           }), (0, r.jsx)(p, {
             label: a("dashboard.customize.assets.avatar"),
-            value: eV.avatar,
+            value: eJ.avatar,
             accept: w.vJ.avatar.map(e => e).join(", "),
             isLoading: i.isLoading && "avatar" === i.assetType,
             onFileChange: eR,
@@ -1308,12 +1308,12 @@
             setAsset: z
           }), (0, r.jsx)(p, {
             label: a("dashboard.customize.assets.cursor"),
-            value: eV.custom_cursor,
+            value: eJ.custom_cursor,
             accept: w.vJ.cursor.map(e => e).join(", "),
             isLoading: i.isLoading && "cursor" === i.assetType,
-            onFileChange: e => eJ(e, "cursor"),
+            onFileChange: e => eY(e, "cursor"),
             fileType: "cursor",
-            setAsset: A
+            setAsset: S
           })]
         })
       };
@@ -1333,9 +1333,9 @@
         }
       }
       var C = s(41609),
-        A = s.n(C),
-        T = s(16053),
-        S = s(57157),
+        S = s.n(C),
+        A = s(16053),
+        T = s(57157),
         M = s(81469),
         L = s(61861),
         B = s(98500),
@@ -1348,7 +1348,7 @@
         backgroundEffects: n,
         setBackgroundEffects: l,
         opacity: u,
-        setOpacity: h,
+        setOpacity: m,
         usernameEffects: p,
         blur: f,
         setBlur: x,
@@ -1362,91 +1362,91 @@
         locationMarker: F,
         setLocation: q
       }) => {
-        let W = (0, m.kj)(),
-          [P, I] = (0, t.useState)(""),
-          D = {
-            usernameEffects: W("dashboard.customize.general.username_effects.modal_title"),
-            discordPresenceSettings: W("dashboard.customize.general.discord_presence.modal_title")
+        let P = (0, h.kj)(),
+          [D, I] = (0, t.useState)(""),
+          W = {
+            usernameEffects: P("dashboard.customize.general.username_effects.modal_title"),
+            discordPresenceSettings: P("dashboard.customize.general.discord_presence.modal_title")
           },
-          [$, O] = (0, t.useState)(!1),
-          [U, H] = (0, t.useState)(""),
-          [G, Y] = (0, t.useState)(R.config.discord_presence_settings || {
+          [$, U] = (0, t.useState)(!1),
+          [O, G] = (0, t.useState)(""),
+          [H, V] = (0, t.useState)(R.config.discord_presence_settings || {
             show_badges: !0,
             show_guild_tag: !0,
             idle_text: ""
           }),
-          J = "" !== R.config.display_name ? R.config.display_name : R.username,
-          V = R.premium,
-          X = R.config.opacity ?? 1,
-          Z = R.config.profile_gradient ? {
-            backgroundColor: (0, T.E2)(R.config.color, X),
-            backgroundImage: `linear-gradient(25deg, ${(0,T.E2)(R.config.gradient_1,X)}, ${(0,T.E2)(R.config.gradient_2,X)})`,
+          Y = "" !== R.config.display_name ? R.config.display_name : R.username,
+          J = R.premium,
+          Z = R.config.opacity ?? 1,
+          X = R.config.profile_gradient ? {
+            backgroundColor: (0, A.E2)(R.config.color, Z),
+            backgroundImage: `linear-gradient(25deg, ${(0,A.E2)(R.config.gradient_1,Z)}, ${(0,A.E2)(R.config.gradient_2,Z)})`,
             color: R.config.text_color
           } : {
-            backgroundColor: (0, T.E2)(R.config.color, X),
+            backgroundColor: (0, A.E2)(R.config.color, Z),
             color: R.config.text_color
           },
           K = [{
             value: "none",
-            label: W("dashboard.customize.general.background_effects.none")
+            label: P("dashboard.customize.general.background_effects.none")
           }, {
             value: "dither",
-            label: W("dashboard.customize.general.background_effects.dither", {
-              premium: V ? "" : W("dashboard.customize.general.premium_only")
+            label: P("dashboard.customize.general.background_effects.dither", {
+              premium: J ? "" : P("dashboard.customize.general.premium_only")
             }),
-            disabled: !V
+            disabled: !J
           }, {
             value: "plasma",
-            label: W("dashboard.customize.general.background_effects.plasma", {
-              premium: V ? "" : W("dashboard.customize.general.premium_only")
+            label: P("dashboard.customize.general.background_effects.plasma", {
+              premium: J ? "" : P("dashboard.customize.general.premium_only")
             }),
-            disabled: !V
+            disabled: !J
           }, {
             value: "aurora",
-            label: W("dashboard.customize.general.background_effects.aurora")
+            label: P("dashboard.customize.general.background_effects.aurora")
           }, {
             value: "snowflakes",
-            label: W("dashboard.customize.general.background_effects.snowflakes")
+            label: P("dashboard.customize.general.background_effects.snowflakes")
           }, {
             value: "rain",
-            label: W("dashboard.customize.general.background_effects.rain")
+            label: P("dashboard.customize.general.background_effects.rain")
           }, {
             value: "blurred",
-            label: W("dashboard.customize.general.background_effects.blurred")
+            label: P("dashboard.customize.general.background_effects.blurred")
           }, {
             value: "night",
-            label: W("dashboard.customize.general.background_effects.night")
+            label: P("dashboard.customize.general.background_effects.night")
           }, {
             value: "tv",
-            label: W("dashboard.customize.general.background_effects.tv")
+            label: P("dashboard.customize.general.background_effects.tv")
           }],
           Q = [{
             value: "enabled",
-            label: W("dashboard.customize.general.discord_presence.enabled")
+            label: P("dashboard.customize.general.discord_presence.enabled")
           }, {
             value: "disabled",
-            label: W("dashboard.customize.general.discord_presence.disabled")
+            label: P("dashboard.customize.general.discord_presence.disabled")
           }],
           ee = (0, t.useMemo)(() => [{
             value: .2,
-            label: W("dashboard.customize.general.sliders.opacity.marks.twenty")
+            label: P("dashboard.customize.general.sliders.opacity.marks.twenty")
           }, {
             value: .5,
-            label: W("dashboard.customize.general.sliders.opacity.marks.fifty")
+            label: P("dashboard.customize.general.sliders.opacity.marks.fifty")
           }, {
             value: .8,
-            label: W("dashboard.customize.general.sliders.opacity.marks.eighty")
-          }], [W]),
+            label: P("dashboard.customize.general.sliders.opacity.marks.eighty")
+          }], [P]),
           ea = (0, t.useMemo)(() => [{
             value: 20,
-            label: W("dashboard.customize.general.sliders.blur.marks.twenty")
+            label: P("dashboard.customize.general.sliders.blur.marks.twenty")
           }, {
             value: 50,
-            label: W("dashboard.customize.general.sliders.blur.marks.fifty")
+            label: P("dashboard.customize.general.sliders.blur.marks.fifty")
           }, {
             value: 80,
-            label: W("dashboard.customize.general.sliders.blur.marks.eighty")
-          }], [W]),
+            label: P("dashboard.customize.general.sliders.blur.marks.eighty")
+          }], [P]),
           es = {
             none: "none",
             rgb: "rainbow",
@@ -1472,71 +1472,71 @@
           er = (0, t.useMemo)(() => [{
             urlName: "typewriter",
             image: !1,
-            name: W("dashboard.customize.general.username_effects.list.typewriter"),
+            name: P("dashboard.customize.general.username_effects.list.typewriter"),
             premium: !0
           }, {
             urlName: "rainbow",
             image: !1,
-            name: W("dashboard.customize.general.username_effects.list.rainbow"),
+            name: P("dashboard.customize.general.username_effects.list.rainbow"),
             premium: !1
           }, {
             urlName: "fuzzy",
             image: !1,
-            name: W("dashboard.customize.general.username_effects.list.fuzzy"),
+            name: P("dashboard.customize.general.username_effects.list.fuzzy"),
             premium: !1
           }, {
             urlName: "shuffle",
             image: !1,
-            name: W("dashboard.customize.general.username_effects.list.shuffle"),
+            name: P("dashboard.customize.general.username_effects.list.shuffle"),
             premium: !1
           }, {
             urlName: "sparkle_black",
             image: !0,
-            name: W("dashboard.customize.general.username_effects.list.sparkle_black"),
+            name: P("dashboard.customize.general.username_effects.list.sparkle_black"),
             premium: !1
           }, {
             urlName: "sparkle_blue",
             image: !0,
-            name: W("dashboard.customize.general.username_effects.list.sparkle_blue"),
+            name: P("dashboard.customize.general.username_effects.list.sparkle_blue"),
             premium: !1
           }, {
             urlName: "sparkle_green",
             image: !0,
-            name: W("dashboard.customize.general.username_effects.list.sparkle_green"),
+            name: P("dashboard.customize.general.username_effects.list.sparkle_green"),
             premium: !1
           }, {
             urlName: "sparkle_pink",
             image: !0,
-            name: W("dashboard.customize.general.username_effects.list.sparkle_pink"),
+            name: P("dashboard.customize.general.username_effects.list.sparkle_pink"),
             premium: !1
           }, {
             urlName: "sparkle_red",
             image: !0,
-            name: W("dashboard.customize.general.username_effects.list.sparkle_red"),
+            name: P("dashboard.customize.general.username_effects.list.sparkle_red"),
             premium: !1
           }, {
             urlName: "sparkle_white",
             image: !0,
-            name: W("dashboard.customize.general.username_effects.list.sparkle_white"),
+            name: P("dashboard.customize.general.username_effects.list.sparkle_white"),
             premium: !1
           }, {
             urlName: "sparkle_yellow",
             image: !0,
-            name: W("dashboard.customize.general.username_effects.list.sparkle_yellow"),
+            name: P("dashboard.customize.general.username_effects.list.sparkle_yellow"),
             premium: !1
-          }], [W]),
+          }], [P]),
           et = (0, t.useMemo)(() => ({
-            rainbow: W("dashboard.customize.general.username_effects.samples.rainbow"),
-            typewriter: W("dashboard.customize.general.username_effects.samples.typewriter"),
-            fuzzy: W("dashboard.customize.general.username_effects.samples.fuzzy"),
-            shuffle: W("dashboard.customize.general.username_effects.samples.shuffle")
-          }), [W]);
+            rainbow: P("dashboard.customize.general.username_effects.samples.rainbow"),
+            typewriter: P("dashboard.customize.general.username_effects.samples.typewriter"),
+            fuzzy: P("dashboard.customize.general.username_effects.samples.fuzzy"),
+            shuffle: P("dashboard.customize.general.username_effects.samples.shuffle")
+          }), [P]);
         (0, t.useEffect)(() => {
           if ("" !== p) {
             let e = es[p],
               a = er.find(a => a.urlName === e),
               s = !!a && a.premium;
-            H({
+            G({
               urlName: e,
               name: a?.name,
               premium: s,
@@ -1545,7 +1545,7 @@
           }
         }, [p, er]);
         let ei = (e, a, s, r) => {
-            H({
+            G({
               urlName: e,
               name: a,
               premium: s,
@@ -1553,7 +1553,7 @@
             })
           },
           eo = () => {
-            z(U.urlName, close)
+            z(O.urlName, close)
           },
           en = e => {
             "username" === e ? _(!b) : "socials" === e ? B(!C) : "badges" === e && k(!w)
@@ -1564,20 +1564,20 @@
                 headers: {
                   "Content-Type": "application/json"
                 },
-                body: JSON.stringify(G)
+                body: JSON.stringify(H)
               }),
               a = await e.json();
-            e.ok ? (c.oR.success(a.message), O(!1)) : c.oR.error(a.error)
+            e.ok ? (c.oR.success(a.message), U(!1)) : c.oR.error(a.error)
           };
         return (0, r.jsxs)(r.Fragment, {
           children: [(0, r.jsx)(j.A, {
             opened: $,
-            onClose: () => O(!1),
+            onClose: () => U(!1),
             centered: !0,
-            size: "discordPresenceSettings" === P ? "400px" : "auto",
-            title: D[P],
-            bodyClassName: "usernameEffects" === P ? o().usernameEffectsModalBody : void 0,
-            children: "usernameEffects" === P ? (0, r.jsxs)(r.Fragment, {
+            size: "discordPresenceSettings" === D ? "400px" : "auto",
+            title: W[D],
+            bodyClassName: "usernameEffects" === D ? o().usernameEffectsModalBody : void 0,
+            children: "usernameEffects" === D ? (0, r.jsxs)(r.Fragment, {
               children: [(0, r.jsxs)("div", {
                 className: o().usernameEffectsModalContent,
                 children: [(0, r.jsxs)("div", {
@@ -1585,16 +1585,16 @@
                   children: [(0, r.jsxs)("div", {
                     className: o().usernameEffectsSelection,
                     children: [(0, r.jsx)("div", {
-                      className: `${o().usernameEffect} ${"none"===U.urlName&&o().selectedEffect}`,
-                      onClick: () => ei("none", W("dashboard.customize.general.username_effects.none"), !1, !1),
+                      className: `${o().usernameEffect} ${"none"===O.urlName&&o().selectedEffect}`,
+                      onClick: () => ei("none", P("dashboard.customize.general.username_effects.none"), !1, !1),
                       children: (0, r.jsxs)("div", {
                         className: o().noUsernameEffect,
                         children: [d.none, (0, r.jsx)("span", {
-                          children: W("dashboard.customize.general.username_effects.none")
+                          children: P("dashboard.customize.general.username_effects.none")
                         })]
                       })
                     }), er.map((e, a) => (0, r.jsxs)("div", {
-                      className: `${o().usernameEffect} ${U.urlName===e.urlName&&o().selectedEffect}`,
+                      className: `${o().usernameEffect} ${O.urlName===e.urlName&&o().selectedEffect}`,
                       onClick: () => ei(e.urlName, e.name, e.premium, e.image),
                       children: [e.premium && (0, r.jsx)("div", {
                         className: o().premiumOnly,
@@ -1605,13 +1605,13 @@
                       }) : "rainbow" === e.urlName ? (0, r.jsx)("h1", {
                         className: o().rainbowName,
                         children: et.rainbow
-                      }) : "typewriter" === e.urlName ? (0, r.jsx)(A(), {
+                      }) : "typewriter" === e.urlName ? (0, r.jsx)(S(), {
                         options: {
                           strings: et.typewriter,
                           autoStart: !0,
                           loop: !0,
                           pauseFor: 1e3,
-                          stringSplitter: T.dz
+                          stringSplitter: A.dz
                         }
                       }) : "fuzzy" === e.urlName ? (0, r.jsx)(L.A, {
                         username: et.fuzzy,
@@ -1631,61 +1631,61 @@
                       className: o().usernameEffectsPreviewInnerWrapper,
                       children: [(0, r.jsx)("div", {
                         className: o().userBackground,
-                        style: Z,
-                        children: U.image ? (0, r.jsx)("h1", {
+                        style: X,
+                        children: O.image ? (0, r.jsx)("h1", {
                           className: o().usernameEffectPreviewTitle,
                           style: {
-                            backgroundImage: "" !== U ? `url(https://assets.guns.lol/${U.urlName}.gif)` : ""
+                            backgroundImage: "" !== O ? `url(https://assets.guns.lol/${O.urlName}.gif)` : ""
                           },
-                          children: J
-                        }) : "rainbow" === U.urlName ? (0, r.jsx)("h1", {
+                          children: Y
+                        }) : "rainbow" === O.urlName ? (0, r.jsx)("h1", {
                           className: o().rainbowName,
-                          children: J
-                        }) : "typewriter" === U.urlName ? (0, r.jsxs)(r.Fragment, {
+                          children: Y
+                        }) : "typewriter" === O.urlName ? (0, r.jsxs)(r.Fragment, {
                           children: [(0, r.jsx)("style", {
                             children: `.${o().userBackground} .Typewriter {
                                                         font-size: 22px;
                                                         margin: 21px 0;
                                                     }
                                                     `
-                          }), (0, r.jsx)(A(), {
+                          }), (0, r.jsx)(S(), {
                             options: {
-                              strings: J,
+                              strings: Y,
                               autoStart: !0,
                               loop: !0,
-                              stringSplitter: T.dz
+                              stringSplitter: A.dz
                             }
                           })]
-                        }) : "fuzzy" === U.urlName ? (0, r.jsx)(L.A, {
-                          username: J,
+                        }) : "fuzzy" === O.urlName ? (0, r.jsx)(L.A, {
+                          username: Y,
                           usernameEffect: "fuzzy",
                           textColor: R.config.text_color,
                           fontSize: "23px"
-                        }) : "shuffle" === U.urlName ? (0, r.jsx)(L.A, {
-                          username: J,
+                        }) : "shuffle" === O.urlName ? (0, r.jsx)(L.A, {
+                          username: Y,
                           usernameEffect: "shuffle",
                           textColor: R.config.text_color,
                           fontSize: "24px"
                         }) : (0, r.jsx)("h1", {
-                          children: J
+                          children: Y
                         })
-                      }), "none" === U.urlName ? (0, r.jsxs)("div", {
+                      }), "none" === O.urlName ? (0, r.jsxs)("div", {
                         className: o().usernameEffectSelected,
                         children: [(0, r.jsx)("h1", {
-                          children: W("dashboard.customize.general.username_effects.preview.no_effect_title")
+                          children: P("dashboard.customize.general.username_effects.preview.no_effect_title")
                         }), (0, r.jsx)("span", {
-                          children: W("dashboard.customize.general.username_effects.preview.no_effect_description")
+                          children: P("dashboard.customize.general.username_effects.preview.no_effect_description")
                         })]
-                      }) : "" !== U && (0, r.jsxs)("div", {
+                      }) : "" !== O && (0, r.jsxs)("div", {
                         className: o().usernameEffectSelected,
                         children: [(0, r.jsx)("h1", {
-                          children: U.name
+                          children: O.name
                         }), (0, r.jsx)("span", {
-                          children: W("dashboard.customize.general.username_effects.preview.description", {
-                            type: U.premium ? (0, r.jsx)("span", {
+                          children: P("dashboard.customize.general.username_effects.preview.description", {
+                            type: O.premium ? (0, r.jsx)("span", {
                               className: o().premiumTextGradient,
-                              children: W("dashboard.customize.general.username_effects.preview.premium_label")
-                            }) : W("dashboard.customize.general.username_effects.preview.free_label")
+                              children: P("dashboard.customize.general.username_effects.preview.premium_label")
+                            }) : P("dashboard.customize.general.username_effects.preview.free_label")
                           })
                         })]
                       })]
@@ -1695,16 +1695,16 @@
                   className: o().usernameEffectsButtonsMobile,
                   children: [(0, r.jsx)("span", {
                     className: o().saveButtonUsernameEffects,
-                    onClick: () => O(!1),
-                    children: W("dashboard.customize.general.username_effects.preview.buttons.cancel")
-                  }), U.premium && !R.premium ? (0, r.jsx)(v.A, {
+                    onClick: () => U(!1),
+                    children: P("dashboard.customize.general.username_effects.preview.buttons.cancel")
+                  }), O.premium && !R.premium ? (0, r.jsx)(v.A, {
                     href: "/pricing",
                     target: "_blank",
-                    children: W("dashboard.customize.general.username_effects.preview.buttons.buy")
+                    children: P("dashboard.customize.general.username_effects.preview.buttons.buy")
                   }) : (0, r.jsx)("span", {
                     className: o().saveButtonUsernameEffects,
                     onClick: eo,
-                    children: W("dashboard.customize.general.username_effects.preview.buttons.save")
+                    children: P("dashboard.customize.general.username_effects.preview.buttons.save")
                   })]
                 })]
               }), (0, r.jsx)("div", {
@@ -1713,55 +1713,55 @@
                   className: o().usernameEffectsButtons,
                   children: [(0, r.jsx)("span", {
                     className: o().saveButtonUsernameEffects,
-                    onClick: () => O(!1),
-                    children: W("dashboard.customize.general.username_effects.preview.buttons.cancel")
-                  }), U.premium && !R.premium ? (0, r.jsx)(v.A, {
+                    onClick: () => U(!1),
+                    children: P("dashboard.customize.general.username_effects.preview.buttons.cancel")
+                  }), O.premium && !R.premium ? (0, r.jsx)(v.A, {
                     href: "/pricing",
                     target: "_blank",
-                    children: W("dashboard.customize.general.username_effects.preview.buttons.buy")
+                    children: P("dashboard.customize.general.username_effects.preview.buttons.buy")
                   }) : (0, r.jsx)("span", {
                     className: o().saveButtonUsernameEffects,
                     onClick: eo,
-                    children: W("dashboard.customize.general.username_effects.preview.buttons.save")
+                    children: P("dashboard.customize.general.username_effects.preview.buttons.save")
                   })]
                 })
               })]
-            }) : "discordPresenceSettings" === P && ("enabled" === s ? (0, r.jsxs)("div", {
+            }) : "discordPresenceSettings" === D && ("enabled" === s ? (0, r.jsxs)("div", {
               className: o().discordPresenceSettingsContainer,
               children: [(0, r.jsxs)("div", {
                 className: o().discordPresenceSettingsSwitchWrapperContainer,
                 children: [(0, r.jsx)(M.A, {
-                  featureName: W("dashboard.customize.general.discord_presence.show_badges"),
-                  checked: G.show_badges,
-                  onChangeFunction: e => Y({
-                    ...G,
+                  featureName: P("dashboard.customize.general.discord_presence.show_badges"),
+                  checked: H.show_badges,
+                  onChangeFunction: e => V({
+                    ...H,
                     show_badges: e.currentTarget.checked
                   })
                 }), (0, r.jsx)(M.A, {
-                  featureName: W("dashboard.customize.general.discord_presence.show_guild_tag"),
-                  checked: G.show_guild_tag,
-                  onChangeFunction: e => Y({
-                    ...G,
+                  featureName: P("dashboard.customize.general.discord_presence.show_guild_tag"),
+                  checked: H.show_guild_tag,
+                  onChangeFunction: e => V({
+                    ...H,
                     show_guild_tag: e.currentTarget.checked
                   })
                 })]
               }), (0, r.jsx)(g.A, {
                 icon: d.idleText,
-                featureName: W("dashboard.customize.general.discord_presence.idle_text_label"),
-                value: G.idle_text,
-                onChangeFunction: e => Y({
-                  ...G,
+                featureName: P("dashboard.customize.general.discord_presence.idle_text_label"),
+                value: H.idle_text,
+                onChangeFunction: e => V({
+                  ...H,
                   idle_text: e.target.value
                 }),
-                placeholder: W("dashboard.customize.general.discord_presence.idle_text_placeholder")
+                placeholder: P("dashboard.customize.general.discord_presence.idle_text_placeholder")
               }), (0, r.jsx)("span", {
                 className: o().saveDiscordPresenceSettingsButton,
                 onClick: el,
-                children: W("dashboard.customize.general.discord_presence.save_button")
+                children: P("dashboard.customize.general.discord_presence.save_button")
               })]
             }) : (0, r.jsx)("h1", {
               className: o().discordPresenceSettingsDisabled,
-              children: W("dashboard.customize.general.discord_presence.enable_notice")
+              children: P("dashboard.customize.general.discord_presence.enable_notice")
             }))
           }), (0, r.jsxs)("div", {
             className: o().generalComponentContainer,
@@ -1770,26 +1770,26 @@
               children: [(0, r.jsxs)("div", {
                 className: o().featureRow,
                 children: [R.config.premium.typewriter_enabled && 0 === R.config.premium.typewriter.length || !R.config.premium.typewriter_enabled ? (0, r.jsx)(g.A, {
-                  featureName: W("dashboard.customize.general.description.label"),
+                  featureName: P("dashboard.customize.general.description.label"),
                   value: e,
                   onChangeFunction: e => {
                     a(e.target.value)
                   },
-                  placeholder: W("dashboard.customize.general.description.placeholder"),
+                  placeholder: P("dashboard.customize.general.description.placeholder"),
                   icon: d.description
                 }) : (0, r.jsxs)("div", {
                   className: o().descriptionWrapper,
                   children: [(0, r.jsx)("h1", {
                     className: o().description,
-                    children: W("dashboard.customize.general.description.label")
+                    children: P("dashboard.customize.general.description.label")
                   }), (0, r.jsx)("div", {
                     className: o().descriptionText,
                     children: (0, r.jsx)("h1", {
-                      children: W("dashboard.customize.general.description.typewriter_enabled", {
+                      children: P("dashboard.customize.general.description.typewriter_enabled", {
                         link: (0, r.jsx)(E(), {
                           href: "/premium",
                           target: "_blank",
-                          children: W("dashboard.customize.premium_label")
+                          children: P("dashboard.customize.premium_label")
                         })
                       })
                     })
@@ -1798,15 +1798,15 @@
                   className: o().discordPresenceSelectWrapper,
                   children: [(0, r.jsx)(y.A, {
                     data: Q,
-                    featureName: W("dashboard.customize.general.discord_presence.field_label"),
+                    featureName: P("dashboard.customize.general.discord_presence.field_label"),
                     value: s,
                     onChangeFunction: i,
-                    placeholder: W("dashboard.customize.general.select_placeholder"),
+                    placeholder: P("dashboard.customize.general.select_placeholder"),
                     icon: d.discordPresence
                   }), (0, r.jsx)("span", {
                     className: o().discordPresenceSettings,
                     onClick: () => {
-                      I("discordPresenceSettings"), O(!0)
+                      I("discordPresenceSettings"), U(!0)
                     },
                     children: d.settings
                   })]
@@ -1814,14 +1814,14 @@
                   className: o().discordPresenceWrapper,
                   children: [(0, r.jsx)("h1", {
                     className: o().discordPresence,
-                    children: W("dashboard.customize.general.discord_presence.field_label")
+                    children: P("dashboard.customize.general.discord_presence.field_label")
                   }), (0, r.jsx)("div", {
                     className: o().discordPresenceConnect,
                     children: (0, r.jsx)("h1", {
-                      children: W("dashboard.customize.general.discord_presence.connect_description", {
+                      children: P("dashboard.customize.general.discord_presence.connect_description", {
                         link: (0, r.jsxs)(E(), {
                           href: "/account",
-                          children: [d.lock, " ", W("dashboard.customize.general.discord_presence.connect_link")]
+                          children: [d.lock, " ", P("dashboard.customize.general.discord_presence.connect_link")]
                         })
                       })
                     })
@@ -1831,22 +1831,22 @@
                 className: o().featureRow,
                 children: [(0, r.jsx)(y.A, {
                   data: K,
-                  featureName: W("dashboard.customize.general.background_effects_field"),
+                  featureName: P("dashboard.customize.general.background_effects_field"),
                   value: n,
                   onChangeFunction: l,
-                  placeholder: W("dashboard.customize.general.select_placeholder"),
+                  placeholder: P("dashboard.customize.general.select_placeholder"),
                   icon: d.backgroundEffects
                 }), (0, r.jsxs)("div", {
                   className: o().usernameEffectsWrapper,
                   children: [(0, r.jsx)("h1", {
                     className: o().usernameEffectsText,
-                    children: W("dashboard.customize.general.username_effects.section_title")
+                    children: P("dashboard.customize.general.username_effects.section_title")
                   }), (0, r.jsxs)("span", {
                     className: o().usernameEffectsButton,
                     onClick: () => {
-                      I("usernameEffects"), O(!0)
+                      I("usernameEffects"), U(!0)
                     },
-                    children: [d.backgroundEffects, " ", W("dashboard.customize.general.username_effects.button_label")]
+                    children: [d.backgroundEffects, " ", P("dashboard.customize.general.username_effects.button_label")]
                   })]
                 })]
               })]
@@ -1854,21 +1854,21 @@
               className: o().generalComponentRight,
               children: [(0, r.jsxs)("div", {
                 className: `${o().featureRow} ${o().sliderDiv}`,
-                children: [(0, r.jsx)(S.A, {
-                  featureName: W("dashboard.customize.general.sliders.opacity.title"),
-                  helpDescription: W("dashboard.customize.general.sliders.opacity.description"),
+                children: [(0, r.jsx)(T.A, {
+                  featureName: P("dashboard.customize.general.sliders.opacity.title"),
+                  helpDescription: P("dashboard.customize.general.sliders.opacity.description"),
                   element: (0, r.jsx)(N.A, {
                     value: u,
-                    onChangeFunction: h,
+                    onChangeFunction: m,
                     step: .01,
                     max: 1,
                     min: 0,
                     label: e => `${Math.floor(100*e)}%`,
                     marks: ee
                   })
-                }), (0, r.jsx)(S.A, {
-                  featureName: W("dashboard.customize.general.sliders.blur.title"),
-                  helpDescription: W("dashboard.customize.general.sliders.blur.description"),
+                }), (0, r.jsx)(T.A, {
+                  featureName: P("dashboard.customize.general.sliders.blur.title"),
+                  helpDescription: P("dashboard.customize.general.sliders.blur.description"),
                   element: (0, r.jsx)(N.A, {
                     value: f,
                     onChangeFunction: x,
@@ -1882,16 +1882,16 @@
               }), (0, r.jsxs)("div", {
                 className: o().featureRow,
                 children: [(0, r.jsx)(g.A, {
-                  featureName: W("dashboard.customize.general.location.label"),
+                  featureName: P("dashboard.customize.general.location.label"),
                   value: F,
                   onChangeFunction: e => {
                     q(e.target.value)
                   },
-                  placeholder: W("dashboard.customize.general.location.placeholder"),
+                  placeholder: P("dashboard.customize.general.location.placeholder"),
                   icon: d.locationMarker
-                }), (0, r.jsx)(S.A, {
-                  featureName: W("dashboard.customize.general.glow.title"),
-                  helpDescription: W("dashboard.customize.general.glow.description"),
+                }), (0, r.jsx)(T.A, {
+                  featureName: P("dashboard.customize.general.glow.title"),
+                  helpDescription: P("dashboard.customize.general.glow.description"),
                   element: (0, r.jsx)("div", {
                     className: o().glowSettings,
                     children: (0, r.jsxs)("div", {
@@ -1899,15 +1899,15 @@
                       children: [(0, r.jsxs)("div", {
                         className: `${o().glowSetting} ${b&&o().glowSettingEnabled}`,
                         onClick: () => en("username"),
-                        children: [d.glow, " ", W("dashboard.customize.general.glow.username")]
+                        children: [d.glow, " ", P("dashboard.customize.general.glow.username")]
                       }), (0, r.jsxs)("div", {
                         className: `${o().glowSetting} ${C&&o().glowSettingEnabled}`,
                         onClick: () => en("socials"),
-                        children: [d.glow, " ", W("dashboard.customize.general.glow.socials")]
+                        children: [d.glow, " ", P("dashboard.customize.general.glow.socials")]
                       }), (0, r.jsxs)("div", {
                         className: `${o().glowSetting} ${w&&o().glowSettingEnabled}`,
                         onClick: () => en("badges"),
-                        children: [d.glow, " ", W("dashboard.customize.general.glow.badges")]
+                        children: [d.glow, " ", P("dashboard.customize.general.glow.badges")]
                       })]
                     })
                   })
@@ -1919,8 +1919,8 @@
       };
       var F = s(9992),
         q = s(30184);
-      let W = new Set(["dither", "plasma", "aurora", "snowflakes", "rain", "blurred", "night", "tv"]),
-        P = ({
+      let P = new Set(["dither", "plasma", "aurora", "snowflakes", "rain", "blurred", "night", "tv"]),
+        D = ({
           accentColor: e,
           setAccentColor: a,
           textColor: s,
@@ -1931,7 +1931,7 @@
           setGradientPrimary: c,
           gradientSecondary: d,
           setGradientSecondary: u,
-          isGradientEnabled: h,
+          isGradientEnabled: m,
           setGradientEnabled: p,
           setIconColor: g,
           iconColor: f,
@@ -1939,8 +1939,8 @@
           backgroundEffectsColor: b,
           setBackgroundEffectsColor: v
         }) => {
-          let j = (0, m.kj)(),
-            _ = W.has(x);
+          let j = (0, h.kj)(),
+            _ = P.has(x);
           return (0, r.jsx)(r.Fragment, {
             children: (0, r.jsxs)("div", {
               className: o().generalComponentContainer,
@@ -1984,12 +1984,12 @@
               }), (0, r.jsxs)("div", {
                 className: o().generalComponentRight,
                 children: [(0, r.jsx)("span", {
-                  className: h ? o().gradientButtonEnabled : o().gradientButtonDisabled,
+                  className: m ? o().gradientButtonEnabled : o().gradientButtonDisabled,
                   onClick: function() {
-                    h ? p(!1) : p(!0)
+                    m ? p(!1) : p(!0)
                   },
-                  children: j(h ? "dashboard.customize.color.gradient.disable_button" : "dashboard.customize.color.gradient.enable_button")
-                }), h && (0, r.jsxs)("div", {
+                  children: j(m ? "dashboard.customize.color.gradient.disable_button" : "dashboard.customize.color.gradient.enable_button")
+                }), m && (0, r.jsxs)("div", {
                   className: o().featureRow,
                   children: [(0, r.jsx)(q.A, {
                     featureName: j("dashboard.customize.color.gradient.primary"),
@@ -2018,10 +2018,10 @@
           setVolumeControl: c,
           swapColors: d,
           setSwapColors: u,
-          discordAvatarDecoration: h,
+          discordAvatarDecoration: m,
           setDiscordAvatarDecoration: p
         }) => {
-          let g = (0, m.kj)();
+          let g = (0, h.kj)();
           return (0, r.jsx)(r.Fragment, {
             children: (0, r.jsx)("div", {
               className: o().generalComponentContainer,
@@ -2029,7 +2029,7 @@
                 className: `${o().generalComponentLeft} ${o().otherComponent} ${o().otherComponentWrapper}`,
                 children: [(0, r.jsxs)("div", {
                   className: `${o().featureRow} ${o().otherComponent}`,
-                  children: [(0, r.jsx)(S.A, {
+                  children: [(0, r.jsx)(T.A, {
                     featureName: g("dashboard.customize.other.monochrome_icons.label"),
                     helpDescription: g("dashboard.customize.other.monochrome_icons.description"),
                     element: (0, r.jsx)(M.A, {
@@ -2040,7 +2040,7 @@
                     featureName: g("dashboard.customize.other.animated_title"),
                     checked: i,
                     onChangeFunction: e => n(e.currentTarget.checked)
-                  }), (0, r.jsx)(S.A, {
+                  }), (0, r.jsx)(T.A, {
                     featureName: g("dashboard.customize.other.swap_box_colors.label"),
                     helpDescription: g("dashboard.customize.other.swap_box_colors.description"),
                     element: (0, r.jsx)(M.A, {
@@ -2060,7 +2060,7 @@
                     onChangeFunction: e => a(e.currentTarget.checked)
                   }), (0, r.jsx)(M.A, {
                     featureName: g("dashboard.customize.other.discord_avatar_decoration"),
-                    checked: h,
+                    checked: m,
                     onChangeFunction: e => p(e.currentTarget.checked)
                   })]
                 })]
@@ -2068,10 +2068,10 @@
             })
           })
         };
-      var D = s(54834);
+      var W = s(54834);
       async function $(e, a, s, r, t) {
         try {
-          a(D.A.loading);
+          a(W.A.loading);
           let i = /^#[0-9a-fA-F]{6}$/.test(e.background_effects_color ?? ""),
             o = await fetch("https://guns.lol/api/dashboard/customize", {
               method: "POST",
@@ -2113,24 +2113,24 @@
           }, 500)
         }
       }
-      var O = s(39449),
-        U = s(60884);
-      let H = ({
+      var U = s(39449),
+        O = s(60884);
+      let G = ({
         data: e
       }) => {
-        let a = (0, m.kj)(),
+        let a = (0, h.kj)(),
           s = a("common.unsaved_changes.save_button"),
           [i, n] = (0, t.useState)({
             ...e.config
           }),
-          [u, h] = (0, t.useState)(i),
+          [u, m] = (0, t.useState)(i),
           [p, g] = (0, t.useState)(!1),
           [f, x] = (0, t.useState)(s);
         (0, t.useEffect)(() => {
           g(JSON.stringify(u) !== JSON.stringify(i))
         }, [u, i]);
         let b = e => a => {
-          h(s => ({
+          m(s => ({
             ...s,
             [e]: a
           }))
@@ -2142,13 +2142,13 @@
             theme: "dark",
             className: l().toasterStyles,
             icons: {
-              success: D.A.successToast
+              success: W.A.successToast
             },
             visibleToasts: 2
-          }), (0, r.jsx)(O.N, {
+          }), (0, r.jsx)(U.N, {
             children: p && (0, r.jsx)("div", {
               className: l().unsavedChangesWrapper,
-              children: (0, r.jsxs)(U.P.div, {
+              children: (0, r.jsxs)(O.P.div, {
                 className: l().unsavedChangesBar,
                 initial: {
                   opacity: 0,
@@ -2180,7 +2180,7 @@
                   children: [(0, r.jsx)("span", {
                     className: l().resetButton,
                     onClick: () => {
-                      h({
+                      m({
                         ...i
                       }), g(!1)
                     },
@@ -2242,7 +2242,7 @@
               })
             }), (0, r.jsx)(F.A, {
               featureName: a("dashboard.customize.sections.color"),
-              children: (0, r.jsx)(P, {
+              children: (0, r.jsx)(D, {
                 accentColor: u.color,
                 setAccentColor: b("color"),
                 textColor: u.text_color,
@@ -2328,26 +2328,26 @@
     },
     59931: e => {
       e.exports = {
-        checkboxWrapper: "checkboxWrapper_checkboxWrapper__9OUSt",
-        checkboxBox: "checkboxWrapper_checkboxBox__LRzEf",
-        checkmark: "checkboxWrapper_checkmark__JWvoQ",
-        checkboxContent: "checkboxWrapper_checkboxContent__XMPvb",
-        label: "checkboxWrapper_label__W2Pzt",
-        description: "checkboxWrapper_description__1OY4I"
+        checkboxWrapper: "GUNS__53-fb7620db-5edbb5d3-d5838081",
+        checkboxBox: "GUNS__e5-546bd132-f2783efa-b167c221",
+        checkmark: "GUNS__37-9c3ca347-1dfc372f-b86cd6fc",
+        checkboxContent: "GUNS__ab-99239a2d-372d534a-01c82082",
+        label: "GUNS__41-9e476fd0-97f08255-c536c341",
+        description: "GUNS__09-9ac6549b-7658a140-3ba7fea8"
       }
     },
     73728: e => {
       e.exports = {
-        switch: "switchWrapper_switch__mTK4q",
-        input: "switchWrapper_input__wPAP0",
-        track: "switchWrapper_track__6KFya",
-        thumb: "switchWrapper_thumb__HeiXF"
+        switch: "GUNS__37-bebc3157-36356f81-31aa98a5",
+        input: "GUNS__07-6848431b-ec698247-987f2132",
+        track: "GUNS__c1-89bc1537-00272519-3133d28f",
+        thumb: "GUNS__13-b5e3f9d4-24f5d8e3-cfe09b0b"
       }
     },
     81469: (e, a, s) => {
       "use strict";
       s.d(a, {
-        A: () => h
+        A: () => m
       });
       var r = s(95155),
         t = s(29722),
@@ -2359,14 +2359,14 @@
         d = s(38256);
       let u = ["ar", "he", "fa", "ur"];
 
-      function h({
+      function m({
         featureName: e,
         onChangeFunction: a,
         className: s,
         id: o,
         onChange: l,
-        defaultChecked: h,
-        disabled: m,
+        defaultChecked: m,
+        disabled: h,
         ...p
       }) {
         let g = (0, d.useLang)(),
@@ -2386,15 +2386,15 @@
             },
             children: (0, r.jsxs)("label", {
               className: (0, t.A)(c().switch, s),
-              "data-disabled": m,
+              "data-disabled": h,
               "data-direction": x,
               children: [(0, r.jsx)("input", {
                 ...p,
                 id: o ?? f,
                 type: "checkbox",
                 className: c().input,
-                defaultChecked: h,
-                disabled: m,
+                defaultChecked: m,
+                disabled: h,
                 onChange: e => {
                   l?.(e), a?.(e)
                 }

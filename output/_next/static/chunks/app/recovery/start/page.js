@@ -2,155 +2,155 @@
   [2783], {
     18943: e => {
       e.exports = {
-        page: "authExperience_page__uyui4",
-        panel: "authExperience_panel__o274H",
-        panelHeaderAction: "authExperience_panelHeaderAction__AFIh3",
-        brand: "authExperience_brand__JvheW",
-        brandLink: "authExperience_brandLink__iGZej",
-        brandLogo: "authExperience_brandLogo__xAwjQ",
-        title: "authExperience_title__ZY_r9",
-        subtitle: "authExperience_subtitle__BVEpo",
-        brandText: "authExperience_brandText__nwJnq",
-        body: "authExperience_body__RRr0f",
-        section: "authExperience_section__H3G0_",
-        credentialsStack: "authExperience_credentialsStack__o2Ozo",
-        emailSection: "authExperience_emailSection__kM6az",
-        field: "authExperience_field__5TnSj",
-        fieldLabel: "authExperience_fieldLabel__z__YD",
-        fieldShell: "authExperience_fieldShell__m79Fh",
-        fieldInput: "authExperience_fieldInput__RKFOq",
-        fieldPrefix: "authExperience_fieldPrefix__fFxyT",
-        fieldInputWithPrefix: "authExperience_fieldInputWithPrefix__xlr9G",
-        fieldRight: "authExperience_fieldRight__Imjjb",
-        passwordToggle: "authExperience_passwordToggle__NQiO8",
-        passwordReveal: "authExperience_passwordReveal__aUlDL",
-        passwordRevealOpen: "authExperience_passwordRevealOpen__adnex",
-        passwordHint: "authExperience_passwordHint___ySzN",
-        pwMeter: "authExperience_pwMeter__o9PMU",
-        pwBar: "authExperience_pwBar__7AoWu",
-        pwOn: "authExperience_pwOn__CQOiB",
-        pwLabel: "authExperience_pwLabel__6Zd2E",
-        helperText: "authExperience_helperText__jqcdy",
-        usernameStatus: "authExperience_usernameStatus__CoJI7",
-        usernameStatusIcon: "authExperience_usernameStatusIcon__LEMW5",
-        usernameStatusSuccess: "authExperience_usernameStatusSuccess__Q4eqP",
-        usernameStatusError: "authExperience_usernameStatusError__6P3HN",
-        helperAction: "authExperience_helperAction__o0EoI",
-        captchaWrapper: "authExperience_captchaWrapper__9WWV4",
-        actions: "authExperience_actions__J9EJe",
-        registerButton: "authExperience_registerButton__cL2Wy",
-        primaryButton: "authExperience_primaryButton__HxWUI",
-        secondaryButton: "authExperience_secondaryButton__XqYqL",
-        ghostButton: "authExperience_ghostButton__mOPog",
-        divider: "authExperience_divider__mHjuk",
-        inlineLink: "authExperience_inlineLink__8LmMO",
-        footer: "authExperience_footer__ykUvF",
-        legal: "authExperience_legal__olSjY",
-        errorBanner: "authExperience_errorBanner__KaM3h",
-        agreementList: "authExperience_agreementList__E4rE5",
-        agreement: "authExperience_agreement__pQTXH",
-        metaRow: "authExperience_metaRow__ujdFv",
-        metaRowWrap: "authExperience_metaRowWrap__1njxK",
-        subtleText: "authExperience_subtleText__0w1EA",
-        centeredStack: "authExperience_centeredStack__ZeaiD",
-        loadingIcon: "authExperience_loadingIcon__1VK1t",
-        loadingMessage: "authExperience_loadingMessage__5_cL9",
-        footerButton: "authExperience_footerButton__OFOio",
-        modalStack: "authExperience_modalStack__9d_Yz",
-        modalTextBlock: "authExperience_modalTextBlock__okOJJ",
-        modalTitle: "authExperience_modalTitle__jBSk5",
-        modalDescription: "authExperience_modalDescription__aLThV",
-        socialButton: "authExperience_socialButton__87Zsh",
-        socialLastUsedBadge: "authExperience_socialLastUsedBadge__a0Z_i",
-        summaryCard: "authExperience_summaryCard__1zA4D",
-        summaryCardButton: "authExperience_summaryCardButton__SEdaN",
-        stepBackButton: "authExperience_stepBackButton__421gK",
-        stepBackIcon: "authExperience_stepBackIcon__60Ilt",
-        summaryGrid: "authExperience_summaryGrid__rGWr6",
-        providerRow: "authExperience_providerRow__JnQMz",
-        summaryInfoBlock: "authExperience_summaryInfoBlock__Vh3bw",
-        summaryHeader: "authExperience_summaryHeader__oPydf",
-        summaryLabel: "authExperience_summaryLabel__YJFdO",
-        summaryLabelPlain: "authExperience_summaryLabelPlain__PTLHH",
-        summaryValue: "authExperience_summaryValue__Sd8pV",
-        summaryEditAction: "authExperience_summaryEditAction__Wtvit",
-        providerIconWrap: "authExperience_providerIconWrap__FmJDk",
-        providerMeta: "authExperience_providerMeta__M0_Nf",
-        providerEyebrow: "authExperience_providerEyebrow__DXppH",
-        providerName: "authExperience_providerName__I0VSw",
-        usernameSection: "authExperience_usernameSection__GJi1X",
-        footerContainer: "authExperience_footerContainer__yskgJ"
+        page: "GUNS__46-85dd92a2-f2354121-569442c3",
+        panel: "GUNS__7b-a367b144-ef9b1f6d-e8949708",
+        panelHeaderAction: "GUNS__f3-4ad71b9f-2dac4266-0398c8d4",
+        brand: "GUNS__c3-0509edcf-2b9ff916-f83c6df9",
+        brandLink: "GUNS__3c-c4bb5e38-d1897d45-fde07dac",
+        brandLogo: "GUNS__5c-ad0583a9-794a70e9-ece4e7a7",
+        title: "GUNS__00-7f909a44-f8066d24-d9f24204",
+        subtitle: "GUNS__54-c6de9bab-e78ba7fe-aceedc06",
+        brandText: "GUNS__d4-d66c56ff-06ff9469-1291adca",
+        body: "GUNS__0c-256622b4-d9ab2c31-9607b2f5",
+        section: "GUNS__4e-bbba0bbb-47ed6541-61af55e9",
+        credentialsStack: "GUNS__c9-e0ad0ea0-4819e34d-15ea86aa",
+        emailSection: "GUNS__f8-1a70b4d3-f8ea8fab-0d3089cf",
+        field: "GUNS__2b-8130d4b6-1af76d1e-5c67477d",
+        fieldLabel: "GUNS__97-8184030f-a0be19bb-358f6a39",
+        fieldShell: "GUNS__c5-5957cdf8-37311b9b-8d90f3f8",
+        fieldInput: "GUNS__41-3784a145-ff7d1e0b-75f09ae3",
+        fieldPrefix: "GUNS__90-a6491d0f-1643e71d-dbaf468e",
+        fieldInputWithPrefix: "GUNS__fd-588f5ac1-50574dca-ebe0da3f",
+        fieldRight: "GUNS__2e-5b411be9-27d87dee-82941852",
+        passwordToggle: "GUNS__5a-47f1bd63-9b6e5205-2fa1ab63",
+        passwordReveal: "GUNS__23-642a4d40-40fa70cf-c0a02fb9",
+        passwordRevealOpen: "GUNS__c7-17500567-6217f716-7a97ee3b",
+        passwordHint: "GUNS__45-266474b7-5a8780b5-04eefd97",
+        pwMeter: "GUNS__0c-b21132d1-f45c588b-fe59563f",
+        pwBar: "GUNS__6c-948d139c-06d7f063-4f5ed67b",
+        pwOn: "GUNS__51-961e427c-0c27b812-a783c55d",
+        pwLabel: "GUNS__40-f0a8ca94-bfe90b3e-1047e1a1",
+        helperText: "GUNS__69-98aee67d-d0acdc30-c06af962",
+        usernameStatus: "GUNS__f6-5b427ee7-5a76537b-e6dea46d",
+        usernameStatusIcon: "GUNS__e4-55475029-d829da22-7186cb26",
+        usernameStatusSuccess: "GUNS__2f-e1ae8fbb-f9d2da11-90916ae4",
+        usernameStatusError: "GUNS__d9-12c8a415-6370ab3d-c61e57e3",
+        helperAction: "GUNS__01-8bdf03da-e20dff75-b7c96152",
+        captchaWrapper: "GUNS__5a-a82dc899-d180ac69-24f39e38",
+        actions: "GUNS__dc-7f2135d9-1eea7e1b-b51c7e91",
+        registerButton: "GUNS__c8-96145e08-8d7f6703-0b6bf39f",
+        primaryButton: "GUNS__10-6a2580d7-b98eee00-f385b67c",
+        secondaryButton: "GUNS__f6-66a2fa30-ce94b151-5bb7e563",
+        ghostButton: "GUNS__5a-d4078f9d-9f841810-20db6dc0",
+        divider: "GUNS__b4-a2cbd7fc-66a2cd35-0960df23",
+        inlineLink: "GUNS__e6-75cdf462-19e99fde-0268b026",
+        footer: "GUNS__e4-6071c658-d2b0f2b7-e53e57b5",
+        legal: "GUNS__c6-87364632-9e6c7623-b96c1e71",
+        errorBanner: "GUNS__2a-a7973ff3-7cbcb4d2-9e607fec",
+        agreementList: "GUNS__f7-b2506e9d-5ad54acc-a17de706",
+        agreement: "GUNS__7d-04109ec2-3718b181-c07a8ae6",
+        metaRow: "GUNS__1f-c77455b9-ac469be4-f87f6d43",
+        metaRowWrap: "GUNS__00-d88c62d6-92f5f060-d1d481d8",
+        subtleText: "GUNS__3e-c2d572cb-58743bcb-2df8e4f5",
+        centeredStack: "GUNS__a3-76a9fc98-97b5d80d-7d593425",
+        loadingIcon: "GUNS__43-90338eb0-a185e4f3-c6708f91",
+        loadingMessage: "GUNS__b1-4991f7f7-2c10a839-835b671f",
+        footerButton: "GUNS__b0-1fa9e72c-ce09a97a-c9f5113e",
+        modalStack: "GUNS__99-379e6dbe-fe588d17-fcdd703a",
+        modalTextBlock: "GUNS__cd-07a99d77-549a643f-db49651b",
+        modalTitle: "GUNS__95-f530aba2-c320b062-f2c552e7",
+        modalDescription: "GUNS__42-a9143a80-c38e682b-0566da5c",
+        socialButton: "GUNS__22-72e4f54d-28217121-a57c7370",
+        socialLastUsedBadge: "GUNS__6e-c2d7ec2d-4a2d732f-27005715",
+        summaryCard: "GUNS__2a-3577845c-bdff22dd-b868672c",
+        summaryCardButton: "GUNS__94-7a8c75e6-69c9c8cc-768bc580",
+        stepBackButton: "GUNS__25-bb6b5ef1-4b5586a0-05b41ca6",
+        stepBackIcon: "GUNS__6c-ab3996a5-b61a3a52-527ec341",
+        summaryGrid: "GUNS__ff-703b7764-0486dad4-79567f96",
+        providerRow: "GUNS__5d-a3873266-0472efe3-a0476bef",
+        summaryInfoBlock: "GUNS__b9-face83f1-28428d73-63bc927a",
+        summaryHeader: "GUNS__0e-bccaf896-7e4328c8-1ca95153",
+        summaryLabel: "GUNS__b7-30d67775-73d1fcb8-87ee4cef",
+        summaryLabelPlain: "GUNS__15-a8b85626-4d5a9bd5-8cdc23a3",
+        summaryValue: "GUNS__ee-9bf8d738-891283cc-75aea248",
+        summaryEditAction: "GUNS__e4-ee6e9ce7-a80ed033-13a5116f",
+        providerIconWrap: "GUNS__e9-eef25a6c-2cd3dce0-2e89e559",
+        providerMeta: "GUNS__da-188f5854-e797e0f5-2687bdfc",
+        providerEyebrow: "GUNS__55-ca973a89-e22aa71f-92108d22",
+        providerName: "GUNS__1a-2f6ae9b2-810babcb-1fcbf09f",
+        usernameSection: "GUNS__8b-5ebd3e81-e7fd2212-221f8255",
+        footerContainer: "GUNS__f5-85f750c2-b172755c-dfcf1f52"
       }
     },
-    23937: (e, r, t) => {
-      Promise.resolve().then(t.bind(t, 96789))
+    23937: (e, a, c) => {
+      Promise.resolve().then(c.bind(c, 96789))
     },
-    37897: (e, r, t) => {
+    37897: (e, a, c) => {
       "use strict";
-      t.d(r, {
-        A: () => c
+      c.d(a, {
+        A: () => _
       });
-      var a = t(95155),
-        n = t(12115),
-        i = t(98241),
-        _ = t.n(i),
-        s = t(54834);
+      var t = c(95155),
+        d = c(12115),
+        r = c(98241),
+        s = c.n(r),
+        f = c(54834);
 
-      function c({
+      function _({
         featureName: e,
-        onChangeFunction: r,
-        value: t,
-        placeholder: i,
-        icon: c,
-        prefix: o,
-        prefixLength: u,
-        viewPassword: l,
-        onKeyPress: p,
-        isImageUrl: h,
-        type: d = "text",
-        ...m
+        onChangeFunction: a,
+        value: c,
+        placeholder: r,
+        icon: _,
+        prefix: n,
+        prefixLength: i,
+        viewPassword: b,
+        onKeyPress: o,
+        isImageUrl: l,
+        type: u = "text",
+        ...N
       }) {
-        let [x, v] = (0, n.useState)(!!l);
-        return (0, n.useEffect)(() => {
-          v(!!l)
-        }, [l]), (0, a.jsxs)("div", {
-          className: _().inputContainerWrapper,
+        let [S, U] = (0, d.useState)(!!b);
+        return (0, d.useEffect)(() => {
+          U(!!b)
+        }, [b]), (0, t.jsxs)("div", {
+          className: s().inputContainerWrapper,
           "data-dashboard-feature-label": "string" == typeof e ? e : void 0,
-          children: [e && (0, a.jsx)("h1", {
-            className: _().featureName,
+          children: [e && (0, t.jsx)("h1", {
+            className: s().featureName,
             children: e
-          }), (0, a.jsxs)("div", {
-            className: `${_().inputWrapperDiv} ${o&&_().inputWrapperURL}`,
-            children: [(0, a.jsxs)("span", {
-              className: _().inputWrapperSpan,
+          }), (0, t.jsxs)("div", {
+            className: `${s().inputWrapperDiv} ${n&&s().inputWrapperURL}`,
+            children: [(0, t.jsxs)("span", {
+              className: s().inputWrapperSpan,
               style: {
-                position: o ? "absolute" : "static"
+                position: n ? "absolute" : "static"
               },
-              children: [h ? (0, a.jsx)("img", {
-                src: c,
+              children: [l ? (0, t.jsx)("img", {
+                src: _,
                 alt: "icon",
-                className: _().inputWrapperIconImage
-              }) : c, o && (0, a.jsx)("h1", {
-                children: o
+                className: s().inputWrapperIconImage
+              }) : _, n && (0, t.jsx)("h1", {
+                children: n
               })]
-            }), l && (0, a.jsx)("p", {
+            }), b && (0, t.jsx)("p", {
               onClick: () => {
-                v(!x)
+                U(!S)
               },
-              children: x ? s.A.hidePassword : s.A.views
-            }), (0, a.jsx)("input", {
+              children: S ? f.A.hidePassword : f.A.views
+            }), (0, t.jsx)("input", {
               autoCorrect: "false",
-              type: l ? x ? "password" : "text" : d,
-              onKeyDown: p,
-              value: t,
+              type: b ? S ? "password" : "text" : u,
+              onKeyDown: o,
+              value: c,
               style: {
-                paddingLeft: o ? u : "",
-                paddingRight: l ? 47 : ""
+                paddingLeft: n ? i : "",
+                paddingRight: b ? 47 : ""
               },
-              placeholder: i,
-              className: _().inputWrapperInput,
-              onChange: r,
-              ...m
+              placeholder: r,
+              className: s().inputWrapperInput,
+              onChange: a,
+              ...N
             })]
           })]
         })
@@ -158,245 +158,245 @@
     },
     49982: e => {
       e.exports = {
-        recoveryCards: "recovery_recoveryCards__WJBd_",
-        recoveryCard: "recovery_recoveryCard__qwc09",
-        cardIcon: "recovery_cardIcon__zpL7s",
-        startContainer: "recovery_startContainer__S93kn",
-        helper: "recovery_helper__zv0UY",
-        startForm: "recovery_startForm___iASD",
-        checklist: "recovery_checklist__A9ii9",
-        checklistItem: "recovery_checklistItem__KP5eB",
-        checkStatus: "recovery_checkStatus__nhJJl",
-        checkStatusPass: "recovery_checkStatusPass__q8_wm",
-        evidenceGrid: "recovery_evidenceGrid__qePei",
-        messageBox: "recovery_messageBox__N2T3Z",
-        wizardActions: "recovery_wizardActions__NqboN",
-        resultContainer: "recovery_resultContainer__LCSRD",
-        resultTitle: "recovery_resultTitle__s_ZcD",
-        resultBody: "recovery_resultBody__OaC_I",
-        resultMeta: "recovery_resultMeta__hKi70",
-        resultActions: "recovery_resultActions__bcXYa",
-        contactSupportButton: "recovery_contactSupportButton__mdqDp",
-        oauthButton: "recovery_oauthButton__2rnYe",
-        oauthInformation: "recovery_oauthInformation__ecm5t",
-        recoveryHelper: "recovery_recoveryHelper__utTRi",
-        finalizeChangesPanel: "recovery_finalizeChangesPanel__LO2PA",
-        finalizeChangesTitle: "recovery_finalizeChangesTitle__CC__G",
-        finalizeChangesLoading: "recovery_finalizeChangesLoading__yTU9k",
-        finalizeChangesList: "recovery_finalizeChangesList__SkodS",
-        finalizeChangesItem: "recovery_finalizeChangesItem__iRN8f",
-        finalizeChangesDot: "recovery_finalizeChangesDot__qCWv3",
-        inlineActionLink: "recovery_inlineActionLink__r5YXG"
+        recoveryCards: "GUNS__5e-0d557c88-14dbf77c-7c8b9b18",
+        recoveryCard: "GUNS__9e-8c8ed7a0-91daed06-042363f1",
+        cardIcon: "GUNS__fa-870888a3-41ced431-69976c61",
+        startContainer: "GUNS__5b-761a0f57-0a72a245-a5e5862d",
+        helper: "GUNS__5f-c11e9e70-ea9f1f93-c52fcac0",
+        startForm: "GUNS__b3-5cfe527f-09a26f8a-f0ec6c79",
+        checklist: "GUNS__45-5784a138-6fe270ee-e343f6b4",
+        checklistItem: "GUNS__46-63ee2a12-ff58e5db-11bce2b8",
+        checkStatus: "GUNS__49-1a6948fa-d82bdf5c-8402712f",
+        checkStatusPass: "GUNS__9e-2c55b8fb-1dc10264-aa77dc4f",
+        evidenceGrid: "GUNS__4b-cd81bbff-2989e18b-5b9e71f9",
+        messageBox: "GUNS__f5-0d50b4ab-01b24d47-e574ae4f",
+        wizardActions: "GUNS__b1-0f468169-94496de0-7c6ff945",
+        resultContainer: "GUNS__01-e71f52ef-fbee82c6-1d2aeef2",
+        resultTitle: "GUNS__3d-08fdbffa-110c55c5-8fbe9390",
+        resultBody: "GUNS__3d-0ba865cd-642c9fd3-12030801",
+        resultMeta: "GUNS__29-1973ca05-a4da642b-543c63ee",
+        resultActions: "GUNS__b7-3b22f219-221eddcb-8f7ee495",
+        contactSupportButton: "GUNS__c7-bc3b8b45-b7d9da39-153ca154",
+        oauthButton: "GUNS__db-c1663c2f-5f435fa0-95665a7c",
+        oauthInformation: "GUNS__b9-0f02e1f1-aed2f6d3-ac115989",
+        recoveryHelper: "GUNS__9b-69a82901-05de711d-a828b6fc",
+        finalizeChangesPanel: "GUNS__0b-f161207f-83247a2c-b8b11e9e",
+        finalizeChangesTitle: "GUNS__c1-05cea06d-d9937a86-20e7bd9b",
+        finalizeChangesLoading: "GUNS__29-fa41f9c4-1d789709-0230cd43",
+        finalizeChangesList: "GUNS__57-7eb3557c-7df3f6b1-dd8aa5a1",
+        finalizeChangesItem: "GUNS__2e-1a67a3d9-3c6f81c2-ede6f7ef",
+        finalizeChangesDot: "GUNS__93-5ee561b7-7dc20d7c-9af3a106",
+        inlineActionLink: "GUNS__d4-0f2b7dc1-d271521b-9c261c3b"
       }
     },
-    73321: (e, r, t) => {
+    73321: (e, a, c) => {
       "use strict";
-      var a = t(74645);
-      t.o(a, "redirect") && t.d(r, {
+      var t = c(74645);
+      c.o(t, "redirect") && c.d(a, {
         redirect: function() {
-          return a.redirect
+          return t.redirect
         }
-      }), t.o(a, "useParams") && t.d(r, {
+      }), c.o(t, "useParams") && c.d(a, {
         useParams: function() {
-          return a.useParams
+          return t.useParams
         }
-      }), t.o(a, "usePathname") && t.d(r, {
+      }), c.o(t, "usePathname") && c.d(a, {
         usePathname: function() {
-          return a.usePathname
+          return t.usePathname
         }
-      }), t.o(a, "useRouter") && t.d(r, {
+      }), c.o(t, "useRouter") && c.d(a, {
         useRouter: function() {
-          return a.useRouter
+          return t.useRouter
         }
-      }), t.o(a, "useSearchParams") && t.d(r, {
+      }), c.o(t, "useSearchParams") && c.d(a, {
         useSearchParams: function() {
-          return a.useSearchParams
+          return t.useSearchParams
         }
       })
     },
-    77570: (e, r, t) => {
+    77570: (e, a, c) => {
       "use strict";
-      t.d(r, {
-        A: () => s
+      c.d(a, {
+        A: () => f
       });
-      var a = t(95155),
-        n = t(81934),
-        i = t(18943),
-        _ = t.n(i);
+      var t = c(95155),
+        d = c(81934),
+        r = c(18943),
+        s = c.n(r);
 
-      function s({
+      function f({
         title: e,
-        subtitle: r,
-        headerAction: t,
-        children: i,
-        footer: s,
-        legal: c
+        subtitle: a,
+        headerAction: c,
+        children: r,
+        footer: f,
+        legal: _
       }) {
-        return (0, a.jsx)("div", {
-          className: _().page,
-          children: (0, a.jsxs)("div", {
-            className: _().panel,
-            children: [t && (0, a.jsx)("div", {
-              className: _().panelHeaderAction,
-              children: t
-            }), (0, a.jsxs)("div", {
-              className: _().brand,
-              children: [(0, a.jsx)(n.A, {
+        return (0, t.jsx)("div", {
+          className: s().page,
+          children: (0, t.jsxs)("div", {
+            className: s().panel,
+            children: [c && (0, t.jsx)("div", {
+              className: s().panelHeaderAction,
+              children: c
+            }), (0, t.jsxs)("div", {
+              className: s().brand,
+              children: [(0, t.jsx)(d.A, {
                 href: "/",
-                className: _().brandLink,
-                children: (0, a.jsx)("img", {
+                className: s().brandLink,
+                children: (0, t.jsx)("img", {
                   src: "https://assets.guns.lol/guns_logo_no_background_cropped.png",
                   alt: "guns.lol",
-                  className: _().brandLogo
+                  className: s().brandLogo
                 })
-              }), (0, a.jsxs)("div", {
-                className: _().brandText,
-                children: [(0, a.jsx)("h1", {
-                  className: _().title,
+              }), (0, t.jsxs)("div", {
+                className: s().brandText,
+                children: [(0, t.jsx)("h1", {
+                  className: s().title,
                   children: e
-                }), r && (0, a.jsx)("p", {
-                  className: _().subtitle,
-                  children: r
+                }), a && (0, t.jsx)("p", {
+                  className: s().subtitle,
+                  children: a
                 })]
               })]
-            }), (0, a.jsx)("div", {
-              className: _().body,
-              children: i
-            }), s && (0, a.jsx)("div", {
-              className: _().footer,
-              children: s
-            }), c && (0, a.jsx)("div", {
-              className: _().legal,
-              children: c
+            }), (0, t.jsx)("div", {
+              className: s().body,
+              children: r
+            }), f && (0, t.jsx)("div", {
+              className: s().footer,
+              children: f
+            }), _ && (0, t.jsx)("div", {
+              className: s().legal,
+              children: _
             })]
           })
         })
       }
     },
-    81934: (e, r, t) => {
+    81934: (e, a, c) => {
       "use strict";
-      t.d(r, {
-        A: () => s
+      c.d(a, {
+        A: () => f
       });
-      var a = t(95155),
-        n = t(98500),
-        i = t.n(n),
-        _ = t(38256);
+      var t = c(95155),
+        d = c(98500),
+        r = c.n(d),
+        s = c(38256);
 
-      function s({
+      function f({
         href: e,
-        asTag: r,
-        locale: t,
-        children: n,
-        ...s
+        asTag: a,
+        locale: c,
+        children: d,
+        ...f
       }) {
-        let c = t || (0, _.useLang)();
-        if (e.startsWith("http://") || e.startsWith("https://") || e.startsWith("mailto:") || e.startsWith("tel:")) return r ? (0, a.jsx)("a", {
+        let _ = c || (0, s.useLang)();
+        if (e.startsWith("http://") || e.startsWith("https://") || e.startsWith("mailto:") || e.startsWith("tel:")) return a ? (0, t.jsx)("a", {
           href: e,
-          ...s,
-          children: n
-        }) : (0, a.jsx)(i(), {
+          ...f,
+          children: d
+        }) : (0, t.jsx)(r(), {
           href: e,
-          ...s,
-          children: n
+          ...f,
+          children: d
         });
-        let o = "en" == c ? `${e.startsWith("/")?"":"/"}${e}` : `/${c}${e.startsWith("/")?"":"/"}${e}`;
-        return r ? (0, a.jsx)("a", {
-          href: o,
-          ...s,
-          children: n
-        }) : (0, a.jsx)(i(), {
-          href: o,
-          ...s,
-          children: n
+        let n = "en" == _ ? `${e.startsWith("/")?"":"/"}${e}` : `/${_}${e.startsWith("/")?"":"/"}${e}`;
+        return a ? (0, t.jsx)("a", {
+          href: n,
+          ...f,
+          children: d
+        }) : (0, t.jsx)(r(), {
+          href: n,
+          ...f,
+          children: d
         })
       }
     },
-    96789: (e, r, t) => {
+    96789: (e, a, c) => {
       "use strict";
-      t.d(r, {
-        default: () => d
+      c.d(a, {
+        default: () => u
       });
-      var a = t(95155),
-        n = t(12115),
-        i = t(73321),
-        _ = t(77570),
-        s = t(37897),
-        c = t(38256),
-        o = t(54834),
-        u = t(18943),
-        l = t.n(u),
-        p = t(49982),
-        h = t.n(p);
+      var t = c(95155),
+        d = c(12115),
+        r = c(73321),
+        s = c(77570),
+        f = c(37897),
+        _ = c(38256),
+        n = c(54834),
+        i = c(18943),
+        b = c.n(i),
+        o = c(49982),
+        l = c.n(o);
 
-      function d() {
-        let e = (0, c.kj)(),
-          r = (0, i.useRouter)(),
-          t = (0, i.useSearchParams)().get("type") || "lost_2fa_device",
-          [u, p] = (0, n.useState)(""),
-          [d, m] = (0, n.useState)(!1),
-          [x, v] = (0, n.useState)(""),
-          [y, E] = (0, n.useState)(""),
-          f = async a => {
-            if (a.preventDefault(), !u.trim()) return void v(e("auth.recovery.start.errors.identifier_required"));
+      function u() {
+        let e = (0, _.kj)(),
+          a = (0, r.useRouter)(),
+          c = (0, r.useSearchParams)().get("type") || "lost_2fa_device",
+          [i, o] = (0, d.useState)(""),
+          [u, N] = (0, d.useState)(!1),
+          [S, U] = (0, d.useState)(""),
+          [G, h] = (0, d.useState)(""),
+          p = async t => {
+            if (t.preventDefault(), !i.trim()) return void U(e("auth.recovery.start.errors.identifier_required"));
             try {
-              m(!0), v(""), E("");
-              let a = await fetch("/api/recovery/start", {
+              N(!0), U(""), h("");
+              let t = await fetch("/api/recovery/start", {
                   method: "POST",
                   headers: {
                     "Content-Type": "application/json"
                   },
                   body: JSON.stringify({
-                    recoveryType: t,
-                    identifier: u.trim()
+                    recoveryType: c,
+                    identifier: i.trim()
                   })
                 }),
-                n = await a.json();
-              if (!a.ok) return void v(n.error || e("auth.recovery.start.errors.unable_start"));
-              if (!n.attemptId) return void E(n.message);
-              let i = `/recovery/start/evidence?attempt=${encodeURIComponent(n.attemptId)}`;
-              r.push(i)
+                d = await t.json();
+              if (!t.ok) return void U(d.error || e("auth.recovery.start.errors.unable_start"));
+              if (!d.attemptId) return void h(d.message);
+              let r = `/recovery/start/evidence?attempt=${encodeURIComponent(d.attemptId)}`;
+              a.push(r)
             } catch {
-              v(e("auth.recovery.start.errors.unable_start"))
+              U(e("auth.recovery.start.errors.unable_start"))
             } finally {
-              m(!1)
+              N(!1)
             }
           };
-        return (0, a.jsx)(_.A, {
+        return (0, t.jsx)(s.A, {
           title: e("auth.recovery.start.title"),
           subtitle: e("auth.recovery.start.subtitle"),
-          children: (0, a.jsxs)("form", {
-            onSubmit: f,
-            children: [(0, a.jsx)(s.A, {
+          children: (0, t.jsxs)("form", {
+            onSubmit: p,
+            children: [(0, t.jsx)(f.A, {
               featureName: e("auth.recovery.start.identifier_label"),
-              value: u,
-              onChangeFunction: e => p(e.target.value),
+              value: i,
+              onChangeFunction: e => o(e.target.value),
               placeholder: e("auth.recovery.start.identifier_placeholder"),
-              icon: o.A.user
-            }), (0, a.jsx)("div", {
-              className: h().recoveryHelper,
-              children: (0, a.jsx)("h1", {
+              icon: n.A.user
+            }), (0, t.jsx)("div", {
+              className: l().recoveryHelper,
+              children: (0, t.jsx)("h1", {
                 children: e("auth.recovery.start.helper")
               })
-            }), x && (0, a.jsx)("div", {
-              className: l().errorBanner,
+            }), S && (0, t.jsx)("div", {
+              className: b().errorBanner,
               style: {
                 marginTop: "15px"
               },
-              children: x
-            }), y && (0, a.jsx)("p", {
-              className: l().helperText,
-              children: y
-            }), (0, a.jsx)("div", {
-              className: l().actions,
+              children: S
+            }), G && (0, t.jsx)("p", {
+              className: b().helperText,
+              children: G
+            }), (0, t.jsx)("div", {
+              className: b().actions,
               style: {
                 marginTop: 10
               },
-              children: (0, a.jsx)("button", {
-                className: l().primaryButton,
+              children: (0, t.jsx)("button", {
+                className: b().primaryButton,
                 type: "submit",
-                disabled: d,
-                children: d ? e("auth.recovery.start.starting") : e("auth.recovery.start.continue")
+                disabled: u,
+                children: u ? e("auth.recovery.start.starting") : e("auth.recovery.start.continue")
               })
             })]
           })
@@ -405,6 +405,6 @@
     }
   },
   e => {
-    e.O(0, [1406, 8121, 8500, 8256, 5886, 8441, 3794, 7358], () => e(e.s = 23937)), _N_E = e.O()
+    e.O(0, [1406, 4103, 8500, 8256, 5886, 8441, 3794, 7358], () => e(e.s = 23937)), _N_E = e.O()
   }
 ]);

@@ -7,17 +7,17 @@
       "use strict";
       t.d(r, {
         R: () => f,
-        s: () => g
+        s: () => h
       });
       let n = !1,
-        o = [/loading chunk/i, /chunkloaderror/i, /chunk loading failed/i],
-        a = ["chrome-extension:", "moz-extension:", "safari-extension:"],
+        a = [/loading chunk/i, /chunkloaderror/i, /chunk loading failed/i],
+        o = ["chrome-extension:", "moz-extension:", "safari-extension:"],
         s = [/turnstile/i],
-        i = e => !!e && a.some(r => e.startsWith(r)),
-        l = e => !!e && a.some(r => e.includes(r)),
-        d = e => !!e && o.some(r => r.test(e)),
-        u = e => !!e && e.toLowerCase().includes("extension context invalidated"),
-        c = e => {
+        i = e => !!e && o.some(r => e.startsWith(r)),
+        l = e => !!e && o.some(r => e.includes(r)),
+        d = e => !!e && a.some(r => r.test(e)),
+        c = e => !!e && e.toLowerCase().includes("extension context invalidated"),
+        u = e => {
           if (!e) return !1;
           let r = e.toLowerCase();
           return s.every(e => e.test(r))
@@ -35,9 +35,9 @@
                 if (!r || !("tagName" in r)) return !1;
                 let t = r.tagName;
                 return "SCRIPT" === t || "LINK" === t
-              })(e) || d(e.message) || d(r?.message) || d(r?.name) || "Script error." === e.message && !t || i(t) || l(r?.stack) || u(e.message) || u(r?.message) || c(e.message) || c(r?.message) || m(e.message) || m(r?.message) || 0) return;
+              })(e) || d(e.message) || d(r?.message) || d(r?.name) || "Script error." === e.message && !t || i(t) || l(r?.stack) || c(e.message) || c(r?.message) || u(e.message) || u(r?.message) || m(e.message) || m(r?.message) || 0) return;
             let n = e.error;
-            g({
+            h({
               message: e.message ?? n?.message ?? "Unknown window error",
               name: n?.name ?? "Error",
               stack: n?.stack ?? null,
@@ -55,16 +55,16 @@
             let r = e.reason;
             if ((e => {
                 if (!e) return !1;
-                if (e instanceof Error) return !!(d(e.message) || d(e.name) || l(e.stack) || u(e.message) || i(e.stack ?? "") || c(e.message) || m(e.message));
-                if ("string" == typeof e) return d(e) || u(e) || c(e) || m(e);
+                if (e instanceof Error) return !!(d(e.message) || d(e.name) || l(e.stack) || c(e.message) || i(e.stack ?? "") || u(e.message) || m(e.message));
+                if ("string" == typeof e) return d(e) || c(e) || u(e) || m(e);
                 if ("object" == typeof e && "message" in e) {
                   let r = e.message;
-                  if ("string" == typeof r) return d(r) || u(r) || c(r) || m(r)
+                  if ("string" == typeof r) return d(r) || c(r) || u(r) || m(r)
                 }
                 return !1
               })(r)) return;
             let t = r instanceof Error ? r : Error("string" == typeof r ? r : JSON.stringify(r, null, 2));
-            g({
+            h({
               message: t.message,
               name: t.name,
               stack: t.stack ?? null,
@@ -77,8 +77,8 @@
             })
           }))
         },
-        g = async e => {
-          let r, t = h(e);
+        h = async e => {
+          let r, t = g(e);
           try {
             if (r = await fetch("/api/telemetry/errors", {
                 method: "POST",
@@ -123,19 +123,19 @@
             eventId: null,
             errorId: null
           }
-        }, h = e => {
+        }, g = e => {
           let r = w(),
             t = e.route ?? window.location.pathname,
-            n = _(t ?? "/"),
-            o = p("undefined" != typeof navigator ? navigator.userAgent ?? null : null),
-            a = e.viewport ?? {
+            n = b(t ?? "/"),
+            a = p("undefined" != typeof navigator ? navigator.userAgent ?? null : null),
+            o = e.viewport ?? {
               width: window.innerWidth,
               height: window.innerHeight
             },
             s = {
               ...e.metadata ?? {},
-              ...o ? {
-                environment: o
+              ...a ? {
+                environment: a
               } : {},
               rawRoute: t,
               normalizedRoute: n
@@ -144,7 +144,7 @@
             ...e,
             href: r,
             route: n,
-            viewport: a,
+            viewport: o,
             metadata: s
           }
         }, w = () => {
@@ -161,13 +161,13 @@
           let r = e.toLowerCase(),
             t = "unknown",
             n = "unknown",
-            o = "desktop";
-          return /edg\//.test(r) ? t = "edge" : /chrome\//.test(r) ? t = "chrome" : /safari\//.test(r) && !/chrome\//.test(r) ? t = "safari" : /firefox\//.test(r) ? t = "firefox" : /msie|trident/.test(r) && (t = "ie"), /windows nt/.test(r) ? n = "windows" : /mac os x/.test(r) ? n = "macos" : /android/.test(r) ? n = "android" : /iphone|ipad|ipod/.test(r) ? n = "ios" : /linux/.test(r) && (n = "linux"), /bot|crawler|spider|crawling/.test(r) ? o = "bot" : /ipad/.test(r) ? o = "tablet" : /iphone|android.+mobile/.test(r) && (o = "mobile"), {
+            a = "desktop";
+          return /edg\//.test(r) ? t = "edge" : /chrome\//.test(r) ? t = "chrome" : /safari\//.test(r) && !/chrome\//.test(r) ? t = "safari" : /firefox\//.test(r) ? t = "firefox" : /msie|trident/.test(r) && (t = "ie"), /windows nt/.test(r) ? n = "windows" : /mac os x/.test(r) ? n = "macos" : /android/.test(r) ? n = "android" : /iphone|ipad|ipod/.test(r) ? n = "ios" : /linux/.test(r) && (n = "linux"), /bot|crawler|spider|crawling/.test(r) ? a = "bot" : /ipad/.test(r) ? a = "tablet" : /iphone|android.+mobile/.test(r) && (a = "mobile"), {
             browser: t,
             os: n,
-            device: o
+            device: a
           }
-        }, _ = e => {
+        }, b = e => {
           if (!e) return "/";
           let [r] = e.split(/[?#]/, 1), t = r.split("/").map(e => e ? /^[0-9]+$/.test(e) && e.length >= 3 ? ":int" : /^[0-9a-f]{16,}$/i.test(e) ? ":hex" : /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(e) ? ":uuid" : /^[0-9a-z_-]{12,}$/i.test(e) ? ":id" : /^\d{4}-\d{2}-\d{2}$/.test(e) ? ":date" : e : e).join("/");
           return t.startsWith("/") ? t : `/${t}`
@@ -177,30 +177,30 @@
     87460: (e, r, t) => {
       "use strict";
       t.r(r), t.d(r, {
-        default: () => g
+        default: () => h
       });
       var n = t(95155),
-        o = t(12115);
+        a = t(12115);
       t(70063);
-      var a = t(98500),
-        s = t.n(a),
+      var o = t(98500),
+        s = t.n(o),
         i = t(98241),
         l = t.n(i),
         d = t(98410),
-        u = t.n(d),
-        c = t(54834),
+        c = t.n(d),
+        u = t(54834),
         m = t(50768),
         f = t(38256);
 
-      function g({
+      function h({
         error: e
       }) {
         let r = (0, f.kj)(),
-          [t, a] = (0, o.useState)(null),
-          [i, d] = (0, o.useState)(null),
-          g = (0, o.useRef)(!1);
-        return (0, o.useEffect)(() => {
-          g.current || (g.current = !0, (0, m.s)({
+          [t, o] = (0, a.useState)(null),
+          [i, d] = (0, a.useState)(null),
+          h = (0, a.useRef)(!1);
+        return (0, a.useEffect)(() => {
+          h.current || (h.current = !0, (0, m.s)({
             message: e?.message ?? "Global error boundary triggered",
             name: e?.name ?? "GlobalErrorBoundary",
             stack: e?.stack ?? null,
@@ -214,23 +214,23 @@
             eventId: e,
             errorId: r
           }) => {
-            e && a(e), r && d(r)
+            e && o(e), r && d(r)
           }))
         }, [e]), (0, n.jsxs)("div", {
           className: l().containerWrapper,
           children: [(0, n.jsxs)("div", {
-            className: `${l().container} ${u().card}`,
+            className: `${l().container} ${c().card}`,
             children: [(0, n.jsx)("div", {
               className: l().headIcon,
-              children: c.A.error
+              children: u.A.error
             }), (0, n.jsx)("h1", {
               className: l().headline,
               children: r("errors.frontend.global_error.title")
             }), (0, n.jsx)("h3", {
-              className: `${l().subheadline} ${u().subtitle}`,
+              className: `${l().subheadline} ${c().subtitle}`,
               children: r("errors.frontend.global_error.message")
             }), (0, n.jsxs)("div", {
-              className: u().buttonRow,
+              className: c().buttonRow,
               children: [(0, n.jsx)("button", {
                 type: "button",
                 onClick: () => window.location.reload(),
@@ -244,25 +244,25 @@
               })]
             })]
           }), i && t && (0, n.jsx)("div", {
-            className: u().errorInformationContainer,
+            className: c().errorInformationContainer,
             children: (0, n.jsxs)("div", {
-              className: u().errorInformationList,
+              className: c().errorInformationList,
               children: [(0, n.jsxs)("div", {
-                className: u().errorInformationCard,
+                className: c().errorInformationCard,
                 children: [(0, n.jsx)("span", {
-                  className: u().errorInformationLabel,
+                  className: c().errorInformationLabel,
                   children: "Error ID"
                 }), (0, n.jsx)("span", {
-                  className: u().errorInformationValue,
+                  className: c().errorInformationValue,
                   children: i
                 })]
               }), (0, n.jsxs)("div", {
-                className: u().errorInformationCard,
+                className: c().errorInformationCard,
                 children: [(0, n.jsx)("span", {
-                  className: u().errorInformationLabel,
+                  className: c().errorInformationLabel,
                   children: "Event ID"
                 }), (0, n.jsx)("span", {
-                  className: u().errorInformationValue,
+                  className: c().errorInformationValue,
                   children: t
                 })]
               })]
@@ -273,18 +273,18 @@
     },
     98410: e => {
       e.exports = {
-        card: "errorPage_card__nVu91",
-        subtitle: "errorPage_subtitle__OQBQU",
-        buttonRow: "errorPage_buttonRow__uPGHd",
-        errorInformationContainer: "errorPage_errorInformationContainer__Si_Lc",
-        errorInformationList: "errorPage_errorInformationList__fABF_",
-        errorInformationCard: "errorPage_errorInformationCard__FIGF5",
-        errorInformationLabel: "errorPage_errorInformationLabel__4mw0h",
-        errorInformationValue: "errorPage_errorInformationValue__zKkVW"
+        card: "GUNS__3a-53cd6657-24bee4fb-db885458",
+        subtitle: "GUNS__70-263da991-087cbdc6-4de83355",
+        buttonRow: "GUNS__d6-149930b2-c76c2c44-6f0ac1ea",
+        errorInformationContainer: "GUNS__08-3d3f5ac7-c4f56b2c-aa02d2d1",
+        errorInformationList: "GUNS__d6-69a9174f-8d3960e2-83536abd",
+        errorInformationCard: "GUNS__7c-fd1dd9d4-eff2f4c3-09775a46",
+        errorInformationLabel: "GUNS__5a-2cb9440a-5b85ad6a-35c46142",
+        errorInformationValue: "GUNS__c9-a3cbd3c0-b4f93143-b17f8747"
       }
     }
   },
   e => {
-    e.O(0, [7020, 8121, 8500, 8256, 5886, 8441, 3794, 7358], () => e(e.s = 48219)), _N_E = e.O()
+    e.O(0, [7020, 4103, 8500, 8256, 5886, 8441, 3794, 7358], () => e(e.s = 48219)), _N_E = e.O()
   }
 ]);

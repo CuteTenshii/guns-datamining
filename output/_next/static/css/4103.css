@@ -1,4 +1,4 @@
-.redeemPage_redeemPageWrapper__nfBWZ {
+.GUNS__ad-f164e536-b34cf689-79a21167 {
   width: 100%;
   display: flex;
   align-items: center;
@@ -6,7 +6,7 @@
   height: 100%
 }
 
-.redeemPage_redeemContainer__eXByj {
+.GUNS__88-e3466b57-96eda9da-0c8c78d5 {
   background-color: #101010;
   border: 2px solid #161616;
   padding: 25px;
@@ -21,7 +21,7 @@
   margin: 0 10px
 }
 
-.redeemPage_redeemContainerDescription__xPzPu {
+.GUNS__2d-3ad95613-1eb27109-b9fa4ee3 {
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -30,7 +30,7 @@
   margin-bottom: 12px
 }
 
-.redeemPage_redeemContainerDescription__xPzPu h1 {
+.GUNS__2d-3ad95613-1eb27109-b9fa4ee3 h1 {
   font-size: 22px;
   font-weight: 500;
   color: #fafafa;
@@ -39,18 +39,18 @@
   gap: 7px
 }
 
-.redeemPage_redeemContainerDescription__xPzPu h3 {
+.GUNS__2d-3ad95613-1eb27109-b9fa4ee3 h3 {
   font-size: 16px;
   font-weight: 450;
   color: #939393
 }
 
-.redeemPage_redeemContainerDescription__xPzPu h1,
-.redeemPage_redeemContainerDescription__xPzPu h3 {
+.GUNS__2d-3ad95613-1eb27109-b9fa4ee3 h1,
+.GUNS__2d-3ad95613-1eb27109-b9fa4ee3 h3 {
   margin: 0
 }
 
-.redeemPage_redeemButton__c2O8g {
+.GUNS__ba-4eb42c7c-c523799a-1694536e {
   background-color: #7e2c8b63;
   border: 2px solid #7e2c8b7c;
   border-radius: 20px;
@@ -66,19 +66,19 @@
   height: 45px
 }
 
-.redeemPage_redeemButton__c2O8g:hover {
+.GUNS__ba-4eb42c7c-c523799a-1694536e:hover {
   background-color: #7e2c8b76
 }
 
-.redeemPage_redeemButton__c2O8g:active {
+.GUNS__ba-4eb42c7c-c523799a-1694536e:active {
   transform: translateY(4px)
 }
 
-.redeemPage_redeemButton__c2O8g svg {
+.GUNS__ba-4eb42c7c-c523799a-1694536e svg {
   font-size: 25px
 }
 
-.redeemPage_errorContainer__FAIiv {
+.GUNS__e9-3d4d263a-d027d10e-8cc09b10 {
   margin-top: 15px;
   background-color: rgba(255, 0, 0, .24);
   border: 2px solid rgba(255, 0, 0, .144);
@@ -92,65 +92,85 @@
   text-align: center
 }
 
-.redeemPage_productSelection__xM0Sp {
-  border-radius: 50px;
-  border: 2px solid #181818;
-  padding: 8px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  transition: .25s;
-  background-color: #141414
+.GUNS__e7-0ee9bf50-c2b579dc-1b9c26d0 {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 10px
 }
 
-.redeemPage_productSelection__xM0Sp,
-.redeemPage_selection__XSd_S {
+.GUNS__6b-23bda079-6a42b362-51867e70 {
+  margin-top: 10px;
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
+  flex-direction: column;
+  margin-bottom: 5px
+}
+
+.GUNS__45-869b80b0-05ae5082-61b5cc3b {
+  font-size: 16px;
+  font-weight: 500;
+  color: #dddddd;
+  margin: 0 0 5.5px 3px
+}
+
+.GUNS__a4-251a99a3-deeddb62-f6928109 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center
+}
+
+.GUNS__2a-6aa19775-d6e21816-c002cd1f,
+.GUNS__42-32bac209-d1b70eeb-2d5ce08c {
+  display: flex;
+  gap: 10px;
   align-items: center;
   justify-content: center;
   width: 100%;
-  box-sizing: border-box
+  box-sizing: border-box;
+  padding: 13px;
+  border-radius: 15px;
+  background-color: #151515;
+  border: 2px solid #1b1b1b;
+  cursor: pointer;
+  transition: .25s
 }
 
-.redeemPage_selection__XSd_S {
-  gap: 7px;
-  border: 2px solid transparent;
-  padding: 6px 0;
-  transition: .2s
-}
-
-.redeemPage_selection__XSd_S h1 {
-  font-size: 15px;
+.GUNS__2a-6aa19775-d6e21816-c002cd1f h1,
+.GUNS__42-32bac209-d1b70eeb-2d5ce08c h1 {
+  margin: 0;
+  font-size: 17px;
   font-weight: 500;
-  color: #fafafa;
-  margin: 0
+  color: #fafafa
 }
 
-.redeemPage_selection__XSd_S img {
-  width: 25px;
-  height: 25px
+.GUNS__2a-6aa19775-d6e21816-c002cd1f svg,
+.GUNS__42-32bac209-d1b70eeb-2d5ce08c svg {
+  font-size: 25px
 }
 
-.redeemPage_selection__XSd_S.redeemPage_selected____j2P {
-  border-radius: 50px;
-  border: 2px solid #252525;
-  background-color: #202020
+.GUNS__42-32bac209-d1b70eeb-2d5ce08c span {
+  color: #858585;
+  font-size: 15px;
+  margin-left: -4px
 }
 
-@media (max-width:515px) {
-  .redeemPage_productSelection__xM0Sp {
-    border-radius: 25px;
-    flex-direction: column
-  }
+.GUNS__83-c79f0339-0ae65942-b4a4797e {
+  background-color: #7e2c8b34;
+  border: 2px solid #7e2c8b9c
 }
 
-.accordion_accordion__N17UW {
+.GUNS__12-be3077f3-a8f18deb-1bbe4bcd {
   display: flex;
   flex-direction: column;
   gap: 12px;
   width: 100%
 }
 
-.accordion_item__39egf {
+.GUNS__ed-1f5db1b6-6e1c9e9a-9df02a11 {
   background-color: #101010;
   border: 2px solid #151515;
   border-radius: 17px;
@@ -158,18 +178,18 @@
   overflow: hidden
 }
 
-.accordion_item__39egf[data-active=true],
-.accordion_item__39egf[data-active=true]:hover {
+.GUNS__ed-1f5db1b6-6e1c9e9a-9df02a11[data-active=true],
+.GUNS__ed-1f5db1b6-6e1c9e9a-9df02a11[data-active=true]:hover {
   border-color: #212121;
   background: #121212
 }
 
-.accordion_item__39egf:hover {
+.GUNS__ed-1f5db1b6-6e1c9e9a-9df02a11:hover {
   background-color: #da69ff46;
   border: 2px solid #da69ff46
 }
 
-.accordion_control__fcaOt {
+.GUNS__27-485642c9-68e46e30-ba776f64 {
   width: 100%;
   border: 2px solid transparent;
   background: transparent;
@@ -186,17 +206,17 @@
   color: #fafafa
 }
 
-html.rtl .accordion_control__fcaOt {
+html.rtl .GUNS__27-485642c9-68e46e30-ba776f64 {
   direction: rtl;
   text-align: right
 }
 
-.accordion_control__fcaOt:disabled {
+.GUNS__27-485642c9-68e46e30-ba776f64:disabled {
   opacity: .6;
   cursor: not-allowed
 }
 
-.accordion_control__fcaOt:after {
+.GUNS__27-485642c9-68e46e30-ba776f64:after {
   content: "";
   width: 8px;
   min-width: 8px;
@@ -207,36 +227,36 @@ html.rtl .accordion_control__fcaOt {
   transition: transform .2s ease
 }
 
-.accordion_control__fcaOt[data-active=true]:after {
+.GUNS__27-485642c9-68e46e30-ba776f64[data-active=true]:after {
   transform: rotate(-135deg)
 }
 
-.accordion_panel__ewbOR {
+.GUNS__84-639dc8cb-feb99d31-87968fa3 {
   border-top: 1px solid transparent;
   transition: border-color .16s ease
 }
 
-.accordion_panel__ewbOR[data-active=true] {
+.GUNS__84-639dc8cb-feb99d31-87968fa3[data-active=true] {
   border-color: rgba(255, 255, 255, .04)
 }
 
-.accordion_content__3mhM7 {
+.GUNS__7f-f8ad7c54-d23abd9d-5b6e2871 {
   padding: 0;
   color: rgba(255, 255, 255, .85)
 }
 
-.accordion_contentInner__8XOty {
+.GUNS__d9-e226e07f-f18301ba-9c54b47c {
   padding: 12px 18px 18px;
   color: rgba(255, 255, 255, .85);
   text-align: left
 }
 
-html.rtl .accordion_contentInner__8XOty {
+html.rtl .GUNS__d9-e226e07f-f18301ba-9c54b47c {
   direction: rtl;
   text-align: right
 }
 
-.generalPages_inputWrapperDiv__Zczna {
+.GUNS__59-8c42d41e-1de2d421-a3a17b32 {
   display: flex;
   align-items: center;
   border-radius: .5rem;
@@ -244,7 +264,7 @@ html.rtl .accordion_contentInner__8XOty {
   direction: ltr
 }
 
-.generalPages_inputWrapperDiv__Zczna p {
+.GUNS__59-8c42d41e-1de2d421-a3a17b32 p {
   margin: 0;
   position: absolute;
   right: 15px;
@@ -256,15 +276,15 @@ html.rtl .accordion_contentInner__8XOty {
   padding: 5px
 }
 
-.generalPages_inputWrapperDiv__Zczna p:hover {
+.GUNS__59-8c42d41e-1de2d421-a3a17b32 p:hover {
   background-color: #fafafa23
 }
 
-.generalPages_inputWrapperDiv__Zczna p:active {
+.GUNS__59-8c42d41e-1de2d421-a3a17b32 p:active {
   transform: translateY(3px)
 }
 
-.generalPages_inputWrapperSpan___MNu2 {
+.GUNS__88-ba688a4f-b8cbf521-0548de3d {
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -280,22 +300,22 @@ html.rtl .accordion_contentInner__8XOty {
   position: relative
 }
 
-.generalPages_inputWrapperSpan___MNu2 h1 {
+.GUNS__88-ba688a4f-b8cbf521-0548de3d h1 {
   color: #777 !important
 }
 
-.generalPages_inputWrapperSpan___MNu2 svg {
+.GUNS__88-ba688a4f-b8cbf521-0548de3d svg {
   font-size: 25px;
   color: #666666
 }
 
-.generalPages_inputWrapperIconImage__Qjcm_ {
+.GUNS__41-6a2fd3d0-85698ee9-bd30f8c0 {
   height: 25px;
   width: 25px;
   object-fit: cover
 }
 
-.generalPages_inputWrapperInput__tuGGp {
+.GUNS__92-c12990bd-43c6d71f-5bfffbbc {
   background-color: #0c0c0c;
   border: 2px solid transparent;
   font-family: Satoshi, sans-serif;
@@ -312,30 +332,30 @@ html.rtl .accordion_contentInner__8XOty {
   width: 100%
 }
 
-.generalPages_inputWrapperInput__tuGGp:focus,
-.generalPages_inputWrapperInput__tuGGp:hover {
+.GUNS__92-c12990bd-43c6d71f-5bfffbbc:focus,
+.GUNS__92-c12990bd-43c6d71f-5bfffbbc:hover {
   border: 2px solid #191919
 }
 
-.generalPages_inputContainerWrapper__M6vFf {
+.GUNS__19-5794a21e-7fadb463-42893d8d {
   width: 100%
 }
 
-.generalPages_inputContainerWrapper__M6vFf h1 {
+.GUNS__19-5794a21e-7fadb463-42893d8d h1 {
   font-size: 16px;
   font-weight: 500;
   color: #dddddd;
   margin: 0 0 5.5px 3px
 }
 
-.generalPages_featureContainerSpan__ttWAA {
+.GUNS__c7-643d05d2-de3b4e6c-ca804786 {
   color: #bebebe;
   font-size: 22.5px;
   font-weight: 600;
   margin-left: 5px
 }
 
-.generalPages_featureContainer__C5fiX {
+.GUNS__38-725da7d1-34683eae-ad4bb2a4 {
   margin-top: 15px;
   display: flex;
   background-color: #111111;
@@ -345,7 +365,7 @@ html.rtl .accordion_contentInner__8XOty {
   justify-content: space-around
 }
 
-.generalPages_featureContainer__C5fiX input[type=file] {
+.GUNS__38-725da7d1-34683eae-ad4bb2a4 input[type=file] {
   opacity: 0;
   position: absolute;
   height: 100%;
@@ -354,28 +374,28 @@ html.rtl .accordion_contentInner__8XOty {
   cursor: pointer
 }
 
-.generalPages_inputWrapperURL__Z_4DZ {
+.GUNS__ca-1789a8ec-0247ad29-806eb446 {
   position: relative
 }
 
-.generalPages_inputWrapperURL__Z_4DZ h1 {
+.GUNS__ca-1789a8ec-0247ad29-806eb446 h1 {
   margin: 0 0 0 7px !important
 }
 
-.generalPages_containerWrapper__UJv9J {
+.GUNS__06-7d992a0e-d4a5c503-347331ae {
   height: 100vh;
   text-align: center
 }
 
-.generalPages_containerWrapper__UJv9J,
-.generalPages_container__Hpj_A {
+.GUNS__06-7d992a0e-d4a5c503-347331ae,
+.GUNS__aa-ec9fa5b3-bc287ca3-9233caef {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column
 }
 
-.generalPages_container__Hpj_A {
+.GUNS__aa-ec9fa5b3-bc287ca3-9233caef {
   background-color: #101010;
   border: 2px solid #161616;
   padding: 25px;
@@ -386,47 +406,47 @@ html.rtl .accordion_contentInner__8XOty {
 }
 
 @media (max-width:550px) {
-  .generalPages_container__Hpj_A {
+  .GUNS__aa-ec9fa5b3-bc287ca3-9233caef {
     width: 95%
   }
 
-  .generalPages_loggedInContainer__G3FZU {
+  .GUNS__49-c152695b-18b01b3a-3b5b2ff0 {
     width: 95% !important
   }
 }
 
-.generalPages_container__Hpj_A h1 {
+.GUNS__aa-ec9fa5b3-bc287ca3-9233caef h1 {
   font-size: 23px;
   font-weight: 500;
   color: #fafafa
 }
 
-.generalPages_container__Hpj_A h3 {
+.GUNS__aa-ec9fa5b3-bc287ca3-9233caef h3 {
   margin-top: 4px !important;
   font-size: 16px;
   font-weight: 450;
   color: #939393
 }
 
-.generalPages_container__Hpj_A svg {
+.GUNS__aa-ec9fa5b3-bc287ca3-9233caef svg {
   font-size: 65px;
   color: #fafafa;
   margin-bottom: 7px
 }
 
-.generalPages_container__Hpj_A h1,
-.generalPages_container__Hpj_A h3 {
+.GUNS__aa-ec9fa5b3-bc287ca3-9233caef h1,
+.GUNS__aa-ec9fa5b3-bc287ca3-9233caef h3 {
   margin: 0
 }
 
-.generalPages_containerButtons__Q_FHb {
+.GUNS__b5-11e09f02-587aa269-38083af8 {
   margin-top: 15px;
   display: flex;
   gap: 5px
 }
 
-.generalPages_containerButtons__Q_FHb a,
-.generalPages_containerButtons__Q_FHb span {
+.GUNS__b5-11e09f02-587aa269-38083af8 a,
+.GUNS__b5-11e09f02-587aa269-38083af8 span {
   color: #fafafa;
   text-decoration: none;
   padding: 7px 15px;
@@ -440,29 +460,29 @@ html.rtl .accordion_contentInner__8XOty {
   justify-content: center
 }
 
-.generalPages_containerButtons__Q_FHb a svg,
-.generalPages_containerButtons__Q_FHb span svg {
+.GUNS__b5-11e09f02-587aa269-38083af8 a svg,
+.GUNS__b5-11e09f02-587aa269-38083af8 span svg {
   font-size: 25px;
   margin-bottom: 0
 }
 
-.generalPages_containerButtons__Q_FHb a:active,
-.generalPages_containerButtons__Q_FHb span:active {
+.GUNS__b5-11e09f02-587aa269-38083af8 a:active,
+.GUNS__b5-11e09f02-587aa269-38083af8 span:active {
   transform: translateY(4px)
 }
 
-.generalPages_containerButtons__Q_FHb a:hover,
-.generalPages_containerButtons__Q_FHb span:hover {
+.GUNS__b5-11e09f02-587aa269-38083af8 a:hover,
+.GUNS__b5-11e09f02-587aa269-38083af8 span:hover {
   border: 2px solid #222222;
   background-color: #181818
 }
 
-.generalPages_inactiveAccountButtons__x1xYg a,
-.generalPages_inactiveAccountButtons__x1xYg span {
+.GUNS__d9-d2c92ed8-8ecf0af7-d14d51ad a,
+.GUNS__d9-d2c92ed8-8ecf0af7-d14d51ad span {
   border-radius: 15px
 }
 
-.generalPages_errorContainer___Fb6d {
+.GUNS__fb-5035eadf-bd181732-a5f918f6 {
   background-color: rgba(255, 0, 0, .24);
   border: 2px solid rgba(255, 0, 0, .144);
   display: flex;
@@ -476,16 +496,16 @@ html.rtl .accordion_contentInner__8XOty {
   text-align: center
 }
 
-.generalPages_privacyPolicyWrapper__gfrpX,
-.generalPages_termsOfServiceWrapper__7LNDF {
+.GUNS__4e-2452f840-5acf97bb-f6207ff4,
+.GUNS__53-4102e17c-45ea155d-127d5291 {
   align-items: center;
   width: 100%;
   flex-direction: column;
   display: flex
 }
 
-.generalPages_privacyPolicy__EPx6x,
-.generalPages_termsOfService__K1VQR {
+.GUNS__27-ba0dc390-4ebbd193-4dabe1ed,
+.GUNS__99-7960448c-22496003-ae10d844 {
   width: 100%;
   max-width: 750px;
   padding: 20px;
@@ -493,121 +513,121 @@ html.rtl .accordion_contentInner__8XOty {
   margin-top: 9rem
 }
 
-.generalPages_privacyPolicy__EPx6x .generalPages_description__93Cdi,
-.generalPages_privacyPolicy__EPx6x .generalPages_legalDescription__Fv2sV,
-.generalPages_privacyPolicy__EPx6x .generalPages_terms__RZOZQ,
-.generalPages_termsOfService__K1VQR .generalPages_description__93Cdi,
-.generalPages_termsOfService__K1VQR .generalPages_terms__RZOZQ {
+.GUNS__27-ba0dc390-4ebbd193-4dabe1ed .GUNS__05-a913765f-3247b6c0-cf9ccc5c,
+.GUNS__27-ba0dc390-4ebbd193-4dabe1ed .GUNS__35-8c913e75-1b179e97-5434654a,
+.GUNS__27-ba0dc390-4ebbd193-4dabe1ed .GUNS__83-7c128cb2-dd1b85f5-6fdeebab,
+.GUNS__99-7960448c-22496003-ae10d844 .GUNS__35-8c913e75-1b179e97-5434654a,
+.GUNS__99-7960448c-22496003-ae10d844 .GUNS__83-7c128cb2-dd1b85f5-6fdeebab {
   direction: ltr
 }
 
-.generalPages_description__93Cdi h1,
-.generalPages_description__93Cdi h3 {
+.GUNS__35-8c913e75-1b179e97-5434654a h1,
+.GUNS__35-8c913e75-1b179e97-5434654a h3 {
   margin: 0
 }
 
-.generalPages_description__93Cdi {
+.GUNS__35-8c913e75-1b179e97-5434654a {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-bottom: 35px
 }
 
-.generalPages_description__93Cdi h1 {
+.GUNS__35-8c913e75-1b179e97-5434654a h1 {
   color: #fafafa
 }
 
-.generalPages_description__93Cdi h3 {
+.GUNS__35-8c913e75-1b179e97-5434654a h3 {
   color: #c2c2c2;
   font-weight: 400
 }
 
-.generalPages_terms__RZOZQ {
+.GUNS__83-7c128cb2-dd1b85f5-6fdeebab {
   display: flex;
   flex-direction: column;
   gap: 40px;
   margin-bottom: 30px
 }
 
-.generalPages_term__uhIEE h1 {
+.GUNS__aa-c56a16ec-937c100d-86d8f7c7 h1 {
   font-weight: 550;
   margin: 0;
   font-size: 24px;
   color: #fafafa
 }
 
-.generalPages_termsValue__Wlgsx {
+.GUNS__1e-72af68cb-ba185890-042023a4 {
   margin-top: 13px;
   color: #e2e2e2;
   font-weight: 400;
   font-size: 17.5px
 }
 
-.generalPages_termsValue__Wlgsx ul {
+.GUNS__1e-72af68cb-ba185890-042023a4 ul {
   display: flex;
   flex-direction: column;
   gap: 13px;
   padding-inline-start: 20px
 }
 
-.generalPages_termsValue__Wlgsx a {
+.GUNS__1e-72af68cb-ba185890-042023a4 a {
   text-decoration: none;
   color: #999999
 }
 
-.generalPages_lastUpdate__2MZoA {
+.GUNS__90-5533d7ae-b0f0b710-164c0497 {
   color: #b9b9b9
 }
 
-.generalPages_giftButton__Cuk2P {
+.GUNS__e5-a0ae0983-2c7ec0ee-e490e9e9 {
   display: flex;
   cursor: pointer
 }
 
-.generalPages_giftButton__Cuk2P svg {
+.GUNS__e5-a0ae0983-2c7ec0ee-e490e9e9 svg {
   color: #89419c;
   font-size: 31px;
   transition: .25s
 }
 
-.generalPages_giftButton__Cuk2P svg:hover {
+.GUNS__e5-a0ae0983-2c7ec0ee-e490e9e9 svg:hover {
   color: #a14fb8;
   filter: drop-shadow(0 0 10px #89419c)
 }
 
-.generalPages_giftImage__TxYz8 {
+.GUNS__5b-16055bb9-89869457-02aacc89 {
   height: 260px;
   width: auto
 }
 
-.generalPages_giftModal__YJfzd {
+.GUNS__fb-baeba943-4ae2c034-f0974d99 {
   margin-top: 20px;
   display: flex;
   align-items: center;
   gap: 40px
 }
 
-.generalPages_giftInformation__qLGOB {
+.GUNS__df-b4a1b9a9-9178a75d-ec8b6019 {
   flex-direction: column;
   display: flex;
   gap: 20px;
   width: 100%
 }
 
-.generalPages_yourGiftText__L_YvK {
+.GUNS__e1-711ede94-260d2862-f94a0808 {
   font-size: 16px;
   font-weight: 500;
   color: #dddddd;
   margin: 0 0 5.5px 3px
 }
 
-.generalPages_giftTypes__HCwtP {
+.GUNS__f6-75d1e8e5-15552b8e-f7352552 {
   display: flex;
   flex-direction: column;
   gap: 15px
 }
 
-.generalPages_giftContainer___OG_J h1 {
+.GUNS__de-b99d3e22-612724a9-1ac98453 h1 {
   margin: 0;
   display: flex;
   align-items: center;
@@ -616,7 +636,7 @@ html.rtl .accordion_contentInner__8XOty {
   font-weight: 500
 }
 
-.generalPages_giftContainer___OG_J {
+.GUNS__de-b99d3e22-612724a9-1ac98453 {
   background-image: url(https://assets.guns.lol/gradient_background.png);
   padding: 12px;
   display: flex;
@@ -630,14 +650,14 @@ html.rtl .accordion_contentInner__8XOty {
   gap: 15px
 }
 
-.generalPages_giftContainer___OG_J h3 {
+.GUNS__de-b99d3e22-612724a9-1ac98453 h3 {
   font-weight: 450;
   font-size: 16px;
   color: #b77dc9;
   margin: 0
 }
 
-.generalPages_saveText__XFn6K {
+.GUNS__0b-8e17bc6a-1064e1cf-8247aa5b {
   margin-left: 2px;
   font-weight: 450;
   font-size: 14.5px;
@@ -648,22 +668,22 @@ html.rtl .accordion_contentInner__8XOty {
   cursor: pointer
 }
 
-.generalPages_priceText__hmRdx {
+.GUNS__52-cc441981-bd2dab40-8e71feec {
   font-weight: 500;
   font-size: 19px
 }
 
-.generalPages_giftDescription__FWIlK {
+.GUNS__aa-fdeb1c66-5c7b0ce6-87d78925 {
   display: flex;
   flex-direction: column;
   gap: 3px
 }
 
-.generalPages_selectedGift__cXV1i {
+.GUNS__bb-ff299908-90975cb6-5e2dde22 {
   border: 2px solid #5f286ec5
 }
 
-.generalPages_continueButton__Mjbel {
+.GUNS__b4-f714cc1c-a7f53a01-5a2d3aa4 {
   padding: 9px 16px;
   background-color: #141414;
   border: 2px solid #1b1b1b;
@@ -676,24 +696,24 @@ html.rtl .accordion_contentInner__8XOty {
   box-sizing: border-box
 }
 
-.generalPages_continueButton__Mjbel svg {
+.GUNS__b4-f714cc1c-a7f53a01-5a2d3aa4 svg {
   font-size: 25px
 }
 
-.generalPages_buttonWrapper__Efdb9 {
+.GUNS__ed-be02989e-9c1033d1-89289b46 {
   display: flex;
   width: 100%;
   justify-content: right;
   box-sizing: border-box
 }
 
-.generalPages_usernameSearch__d4TIt {
+.GUNS__42-0852a156-97729122-0199ab21 {
   display: flex;
   align-items: center;
   gap: 7px
 }
 
-.generalPages_searchButton__fy4ly {
+.GUNS__2e-26b31e22-491995fc-578e6848 {
   margin-top: 25px;
   background-color: #0C0C0C;
   padding: 12px;
@@ -704,11 +724,11 @@ html.rtl .accordion_contentInner__8XOty {
   cursor: pointer
 }
 
-.generalPages_searchButton__fy4ly svg {
+.GUNS__2e-26b31e22-491995fc-578e6848 svg {
   font-size: 25px
 }
 
-.generalPages_user__s7ZGs {
+.GUNS__01-c262ce92-6f477f04-f6c7e9a1 {
   display: flex;
   padding: 15px;
   background-color: #0C0C0C;
@@ -720,26 +740,26 @@ html.rtl .accordion_contentInner__8XOty {
   position: relative
 }
 
-.generalPages_user__s7ZGs img {
+.GUNS__01-c262ce92-6f477f04-f6c7e9a1 img {
   height: 60px;
   width: 60px;
   object-fit: cover;
   border-radius: 50%
 }
 
-.generalPages_userDescription__KsezC h1 {
+.GUNS__48-428b5fe5-051e7161-269115e3 h1 {
   margin: 0;
   font-weight: 500;
   font-size: 23px
 }
 
-.generalPages_userDescription__KsezC a {
+.GUNS__48-428b5fe5-051e7161-269115e3 a {
   text-decoration: none;
   font-size: 15px;
   color: #979797
 }
 
-.generalPages_removeUser___A7Kw {
+.GUNS__c2-e07a3079-029f497f-07805e8e {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -753,49 +773,49 @@ html.rtl .accordion_contentInner__8XOty {
   cursor: pointer
 }
 
-.generalPages_removeUser___A7Kw svg {
+.GUNS__c2-e07a3079-029f497f-07805e8e svg {
   font-size: 21px
 }
 
 @media (max-width:805px) {
-  .generalPages_giftModal__YJfzd {
+  .GUNS__fb-baeba943-4ae2c034-f0974d99 {
     flex-direction: column
   }
 }
 
 @media (max-width:425px) {
-  .generalPages_giftImage__TxYz8 {
+  .GUNS__5b-16055bb9-89869457-02aacc89 {
     width: 100%;
     height: auto
   }
 }
 
-.generalPages_legalDescription__Fv2sV {
+.GUNS__05-a913765f-3247b6c0-cf9ccc5c {
   display: flex;
   flex-direction: column;
   gap: 8px
 }
 
-.generalPages_legalDescription__Fv2sV h3 {
+.GUNS__05-a913765f-3247b6c0-cf9ccc5c h3 {
   margin: 0;
   font-size: 16.5px;
   font-weight: 450;
   color: #b9b9b9
 }
 
-.generalPages_legalDescription__Fv2sV h3 a {
+.GUNS__05-a913765f-3247b6c0-cf9ccc5c h3 a {
   color: #fafafa;
   text-decoration: none
 }
 
-.generalPages_billingContainerWrapper__tAMCz {
+.GUNS__81-cce3bab9-68dd0db7-e85fb163 {
   height: 100vh;
   text-align: center;
   max-width: 500px
 }
 
-.generalPages_billingContainerWrapper__tAMCz,
-.generalPages_billingContainer__5mTBL {
+.GUNS__60-1acc6936-c7454147-271475a8,
+.GUNS__81-cce3bab9-68dd0db7-e85fb163 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -804,7 +824,7 @@ html.rtl .accordion_contentInner__8XOty {
   box-sizing: border-box
 }
 
-.generalPages_billingContainer__5mTBL {
+.GUNS__60-1acc6936-c7454147-271475a8 {
   background-color: #101010;
   border: 2px solid #161616;
   padding: 25px;
@@ -812,48 +832,48 @@ html.rtl .accordion_contentInner__8XOty {
 }
 
 @media (max-width:550px) {
-  .generalPages_billingContainer__5mTBL {
+  .GUNS__60-1acc6936-c7454147-271475a8 {
     width: 95%
   }
 
-  .generalPages_actionsContainer__6Dne3,
-  .generalPages_moreProductsContainer__zc2uh {
+  .GUNS__6b-60fa176f-3e9aed78-2105a80b,
+  .GUNS__87-c1021b31-7604e05d-67a17d3d {
     width: 95% !important
   }
 }
 
-.generalPages_billingContainer__5mTBL h1 {
+.GUNS__60-1acc6936-c7454147-271475a8 h1 {
   font-size: 23px;
   font-weight: 500;
   color: #fafafa
 }
 
-.generalPages_billingContainer__5mTBL h3 {
+.GUNS__60-1acc6936-c7454147-271475a8 h3 {
   margin-top: 4px !important;
   font-size: 16px;
   font-weight: 450;
   color: #939393
 }
 
-.generalPages_billingContainer__5mTBL svg {
+.GUNS__60-1acc6936-c7454147-271475a8 svg {
   font-size: 65px;
   color: #fafafa;
   margin-bottom: 7px
 }
 
-.generalPages_billingContainer__5mTBL h1,
-.generalPages_billingContainer__5mTBL h3 {
+.GUNS__60-1acc6936-c7454147-271475a8 h1,
+.GUNS__60-1acc6936-c7454147-271475a8 h3 {
   margin: 0
 }
 
-.generalPages_billingCenterWrapper__EN7I4 {
+.GUNS__31-293e031c-6438a989-0abec06a {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center
 }
 
-.generalPages_loadingPage__mJHOJ {
+.GUNS__1d-5dd21eb3-f9428693-10b325cf {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -861,19 +881,19 @@ html.rtl .accordion_contentInner__8XOty {
   height: 100%
 }
 
-.generalPages_loadingPage__mJHOJ svg {
+.GUNS__1d-5dd21eb3-f9428693-10b325cf svg {
   font-size: 44px;
   color: #5e5e5e
 }
 
-.generalPages_dropdownNavigationWrapper__FVRUa {
+.GUNS__5c-bb36d32a-2cc6c217-879fa38e {
   width: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column
 }
 
-.generalPages_dropdownNavigationDescription__es4ED {
+.GUNS__64-2123432a-6f7f160b-cc0eb91a {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -883,17 +903,17 @@ html.rtl .accordion_contentInner__8XOty {
   cursor: pointer
 }
 
-.generalPages_dropdownNavigationSelected__uvAGK {
+.GUNS__e2-141ea6e6-0daca58d-b79859e9 {
   background-color: rgba(218, 102, 218, .155) !important
 }
 
-.generalPages_dropdownNavigationDescription__es4ED svg:not(.generalPages_dropdownNavigationDescription__es4ED h1 svg) {
+.GUNS__64-2123432a-6f7f160b-cc0eb91a svg:not(.GUNS__64-2123432a-6f7f160b-cc0eb91a h1 svg) {
   width: 26px;
   color: #eee;
   transition: .3s
 }
 
-.generalPages_dropdownNavigationDescription__es4ED h1 {
+.GUNS__64-2123432a-6f7f160b-cc0eb91a h1 {
   margin: 0;
   display: flex;
   align-items: center;
@@ -904,12 +924,12 @@ html.rtl .accordion_contentInner__8XOty {
   gap: 8px
 }
 
-.generalPages_dropdownNavigationDescription__es4ED h1 svg {
+.GUNS__64-2123432a-6f7f160b-cc0eb91a h1 svg {
   font-size: 25px;
   color: #eee
 }
 
-.generalPages_dropdownNavigationLink__8KOaG {
+.GUNS__ea-35bf5763-c253899b-6943f123 {
   background: none !important;
   color: #949494 !important;
   font-weight: 400 !important;
@@ -923,12 +943,12 @@ html.rtl .accordion_contentInner__8XOty {
   display: flex
 }
 
-.generalPages_dropdownNavigationLinkSelected__uhdyO,
-.generalPages_dropdownNavigationLink__8KOaG:hover {
+.GUNS__81-3085e91a-83376614-e22e2c5d,
+.GUNS__ea-35bf5763-c253899b-6943f123:hover {
   color: #cccccc !important
 }
 
-.generalPages_dropdownNavigation__OSlVH {
+.GUNS__33-7d8143ce-772fabd7-26daf384 {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -938,36 +958,36 @@ html.rtl .accordion_contentInner__8XOty {
   transition: max-height .2s, opacity .4s
 }
 
-.generalPages_dropdownNavigationWrapper__FVRUa.generalPages_active__p2ZrU .generalPages_dropdownNavigation__OSlVH {
+.GUNS__5c-bb36d32a-2cc6c217-879fa38e.GUNS__b3-8584daea-5513d300-ba8f2711 .GUNS__33-7d8143ce-772fabd7-26daf384 {
   max-height: 500px;
   opacity: 1
 }
 
-.generalPages_dropdownNavigationWrapper__FVRUa.generalPages_active__p2ZrU .generalPages_dropdownNavigationLink__8KOaG {
+.GUNS__5c-bb36d32a-2cc6c217-879fa38e.GUNS__b3-8584daea-5513d300-ba8f2711 .GUNS__ea-35bf5763-c253899b-6943f123 {
   max-height: 25px;
   opacity: 1
 }
 
-.generalPages_dropdownNavigationWrapper__FVRUa.generalPages_active__p2ZrU .generalPages_dropdownNavigationDescription__es4ED svg:not(.generalPages_dropdownNavigationDescription__es4ED h1 svg) {
+.GUNS__5c-bb36d32a-2cc6c217-879fa38e.GUNS__b3-8584daea-5513d300-ba8f2711 .GUNS__64-2123432a-6f7f160b-cc0eb91a svg:not(.GUNS__64-2123432a-6f7f160b-cc0eb91a h1 svg) {
   transform: rotate(180deg)
 }
 
-.generalPages_dropdownNavigation__OSlVH a:last-child {
+.GUNS__33-7d8143ce-772fabd7-26daf384 a:last-child {
   margin-bottom: 5px
 }
 
-.generalPages_dropdownNavigationDescription__es4ED:hover {
+.GUNS__64-2123432a-6f7f160b-cc0eb91a:hover {
   background-color: #fafafa27
 }
 
-.generalPages_featureName__rb9Yb {
+.GUNS__78-c05d9cd4-e1809b05-ce3a9fc3 {
   width: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column
 }
 
-.generalPages_featureNameText__vFWRR {
+.GUNS__45-3dc0b2e3-cec6fe0a-7efea39f {
   margin: 0;
   font-size: 16px;
   font-weight: 500;
@@ -977,18 +997,18 @@ html.rtl .accordion_contentInner__8XOty {
   gap: 4px
 }
 
-.generalPages_featureNameText__vFWRR svg {
+.GUNS__45-3dc0b2e3-cec6fe0a-7efea39f svg {
   font-size: 18px;
   min-width: 18px
 }
 
-.generalPages_helpDescription__h8ICF {
+.GUNS__f1-5445e635-cbb9d39c-230c6a14 {
   font-weight: 450;
   font-size: 15px;
   color: #fafafa
 }
 
-.generalPages_toasterStyles__fNx3o li[data-type=success] {
+.GUNS__27-4d17cf63-2b1073f3-3815fa49 li[data-type=success] {
   background-color: rgba(47, 192, 47, .15) !important;
   border: 2px solid rgba(32, 158, 32, .2) !important;
   border-radius: 50px !important;
@@ -998,26 +1018,26 @@ html.rtl .accordion_contentInner__8XOty {
   backdrop-filter: blur(35px)
 }
 
-.generalPages_toasterStyles__fNx3o div[data-title] {
+.GUNS__27-4d17cf63-2b1073f3-3815fa49 div[data-title] {
   font-family: Satoshi, sans-serif !important;
   font-weight: 450 !important;
   font-size: 14.5px !important;
   color: #fafafa !important
 }
 
-.generalPages_toasterStyles__fNx3o li[data-type=success] div[data-icon],
-.generalPages_toasterStyles__fNx3o li[data-type=success] div[data-icon] svg {
+.GUNS__27-4d17cf63-2b1073f3-3815fa49 li[data-type=success] div[data-icon],
+.GUNS__27-4d17cf63-2b1073f3-3815fa49 li[data-type=success] div[data-icon] svg {
   margin-left: 0 !important;
   margin-right: 0 !important;
   width: 21px;
   height: 21px
 }
 
-.generalPages_toasterStyles__fNx3o li[data-type=success] div[data-icon] svg {
+.GUNS__27-4d17cf63-2b1073f3-3815fa49 li[data-type=success] div[data-icon] svg {
   color: #247524
 }
 
-.generalPages_toasterStyles__fNx3o li[data-type=error] {
+.GUNS__27-4d17cf63-2b1073f3-3815fa49 li[data-type=error] {
   background-color: rgba(255, 0, 0, .22) !important;
   border: 2px solid rgba(255, 0, 0, .2) !important;
   border-radius: 50px !important;
@@ -1027,19 +1047,19 @@ html.rtl .accordion_contentInner__8XOty {
   backdrop-filter: blur(35px)
 }
 
-.generalPages_toasterStyles__fNx3o li[data-type=error] div[data-icon],
-.generalPages_toasterStyles__fNx3o li[data-type=error] div[data-icon] svg {
+.GUNS__27-4d17cf63-2b1073f3-3815fa49 li[data-type=error] div[data-icon],
+.GUNS__27-4d17cf63-2b1073f3-3815fa49 li[data-type=error] div[data-icon] svg {
   margin-left: 0 !important;
   margin-right: 0 !important;
   width: 23px;
   height: 23px
 }
 
-.generalPages_toasterStyles__fNx3o li[data-type=error] div[data-icon] svg {
+.GUNS__27-4d17cf63-2b1073f3-3815fa49 li[data-type=error] div[data-icon] svg {
   color: #b81010
 }
 
-.generalPages_toasterStyles__fNx3o li[data-type=info] {
+.GUNS__27-4d17cf63-2b1073f3-3815fa49 li[data-type=info] {
   background-color: rgba(47, 112, 192, .15) !important;
   border: 2px solid rgba(32, 82, 158, .2) !important;
   border-radius: 50px !important;
@@ -1049,19 +1069,19 @@ html.rtl .accordion_contentInner__8XOty {
   backdrop-filter: blur(35px)
 }
 
-.generalPages_toasterStyles__fNx3o li[data-type=info] div[data-icon],
-.generalPages_toasterStyles__fNx3o li[data-type=info] div[data-icon] svg {
+.GUNS__27-4d17cf63-2b1073f3-3815fa49 li[data-type=info] div[data-icon],
+.GUNS__27-4d17cf63-2b1073f3-3815fa49 li[data-type=info] div[data-icon] svg {
   margin-left: 0 !important;
   margin-right: 0 !important;
   width: 21px;
   height: 21px
 }
 
-.generalPages_toasterStyles__fNx3o li[data-type=info] div[data-icon] svg {
+.GUNS__27-4d17cf63-2b1073f3-3815fa49 li[data-type=info] div[data-icon] svg {
   color: #1f59c4b2
 }
 
-.generalPages_unsavedChangesWrapper__ps1Wt {
+.GUNS__47-9a8a8b52-b80d9ac7-914bcaf0 {
   position: fixed;
   bottom: 35px;
   width: 100%;
@@ -1073,7 +1093,7 @@ html.rtl .accordion_contentInner__8XOty {
   transform: translateX(-50%)
 }
 
-.generalPages_unsavedChangesBar__xEICd {
+.GUNS__8d-2d390f6d-caa44943-6e55ae69 {
   max-width: 700px;
   width: 95%;
   box-sizing: border-box;
@@ -1088,35 +1108,35 @@ html.rtl .accordion_contentInner__8XOty {
   pointer-events: auto
 }
 
-.generalPages_unsavedChangesButtons__0x7W4 {
+.GUNS__95-b9e24ea1-e22895a2-648ed5e2 {
   display: flex;
   gap: 15px;
   align-items: center
 }
 
-.generalPages_unsavedChangesButtons__0x7W4 span {
+.GUNS__95-b9e24ea1-e22895a2-648ed5e2 span {
   cursor: pointer;
   transition: .25s;
   text-align: center;
   font-size: 16px
 }
 
-.generalPages_unsavedChangesBar__xEICd h1 {
+.GUNS__8d-2d390f6d-caa44943-6e55ae69 h1 {
   margin: 0;
   font-size: 17px;
   color: #fafafa;
   font-weight: 500
 }
 
-.generalPages_unsavedChangesButtons__0x7W4 span:first-child {
+.GUNS__95-b9e24ea1-e22895a2-648ed5e2 span:first-child {
   color: #939393
 }
 
-.generalPages_unsavedChangesButtons__0x7W4 span:first-child:hover {
+.GUNS__95-b9e24ea1-e22895a2-648ed5e2 span:first-child:hover {
   color: #aaaaaafa
 }
 
-.generalPages_unsavedChangesButtons__0x7W4 span:nth-child(2) {
+.GUNS__95-b9e24ea1-e22895a2-648ed5e2 span:nth-child(2) {
   background-color: #7e2c8b63;
   border: 2px solid #7e2c8b7c;
   padding: 7px 15px;
@@ -1128,50 +1148,50 @@ html.rtl .accordion_contentInner__8XOty {
   justify-content: center
 }
 
-.generalPages_unsavedChangesButtons__0x7W4 span:nth-child(2) svg {
+.GUNS__95-b9e24ea1-e22895a2-648ed5e2 span:nth-child(2) svg {
   font-size: 22px
 }
 
-.generalPages_unsavedChangesButtons__0x7W4 span:nth-child(2):hover {
+.GUNS__95-b9e24ea1-e22895a2-648ed5e2 span:nth-child(2):hover {
   background-color: #7e2c8b7a;
   border: 2px solid #7e2c8b9a
 }
 
-.generalPages_compactText__ON1tO {
+.GUNS__24-c5429602-888c1a07-eb0deaed {
   display: none
 }
 
 @media (max-width:475px) {
-  .generalPages_compactText__ON1tO {
+  .GUNS__24-c5429602-888c1a07-eb0deaed {
     display: block
   }
 
-  .generalPages_unsavedChangesBar__xEICd h1:not(.generalPages_compactText__ON1tO) {
+  .GUNS__8d-2d390f6d-caa44943-6e55ae69 h1:not(.GUNS__24-c5429602-888c1a07-eb0deaed) {
     display: none
   }
 
-  .generalPages_unsavedChangesBar__xEICd {
+  .GUNS__8d-2d390f6d-caa44943-6e55ae69 {
     gap: 15px
   }
 }
 
 @media (max-width:390px) {
-  .generalPages_unsavedChangesBar__xEICd h1 {
+  .GUNS__8d-2d390f6d-caa44943-6e55ae69 h1 {
     display: none
   }
 
-  .generalPages_unsavedChangesButtons__0x7W4 {
+  .GUNS__95-b9e24ea1-e22895a2-648ed5e2 {
     width: 100%;
     box-sizing: border-box;
     justify-content: center
   }
 
-  .generalPages_unsavedChangesButtons__0x7W4 span {
+  .GUNS__95-b9e24ea1-e22895a2-648ed5e2 span {
     flex: 1 1
   }
 }
 
-.generalPages_giftBanner__IPV1P {
+.GUNS__ea-3cafe428-dca01bc7-8f8ecdee {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1185,7 +1205,7 @@ html.rtl .accordion_contentInner__8XOty {
   margin: 0 0 30px
 }
 
-.generalPages_giftBanner__IPV1P span {
+.GUNS__ea-3cafe428-dca01bc7-8f8ecdee span {
   background: linear-gradient(90deg, #d283eb, #e3b5f1);
   background-clip: text;
   -webkit-background-clip: text;
@@ -1193,18 +1213,18 @@ html.rtl .accordion_contentInner__8XOty {
   font-weight: 600
 }
 
-.generalPages_giftBanner__IPV1P svg {
+.GUNS__ea-3cafe428-dca01bc7-8f8ecdee svg {
   min-width: 25px;
   font-size: 25px;
   color: #fafafa;
   vertical-align: middle
 }
 
-.generalPages_giftBannerContent__5_RjD {
+.GUNS__9a-4e55756c-20c14920-50eae2be {
   vertical-align: middle
 }
 
-.generalPages_moreProductsContainer__zc2uh {
+.GUNS__6b-60fa176f-3e9aed78-2105a80b {
   margin-top: 15px;
   background-color: #101010;
   border: 2px solid #161616;
@@ -1218,21 +1238,21 @@ html.rtl .accordion_contentInner__8XOty {
   width: 100%
 }
 
-.generalPages_moreProductsContainer__zc2uh h1 {
+.GUNS__6b-60fa176f-3e9aed78-2105a80b h1 {
   margin: 0;
   font-size: 20px;
   font-weight: 500;
   color: #fafafa
 }
 
-.generalPages_moreProductsContainer__zc2uh h3 {
+.GUNS__6b-60fa176f-3e9aed78-2105a80b h3 {
   font-size: 16px;
   font-weight: 400;
   color: #c2c2c2;
   margin: 0 0 10px
 }
 
-.generalPages_moreProductsContainer__zc2uh a {
+.GUNS__6b-60fa176f-3e9aed78-2105a80b a {
   text-decoration: none;
   color: #fafafa;
   padding: 8px 15px;
@@ -1243,15 +1263,15 @@ html.rtl .accordion_contentInner__8XOty {
   display: inline-block
 }
 
-.generalPages_moreProductsContainer__zc2uh a:hover {
+.GUNS__6b-60fa176f-3e9aed78-2105a80b a:hover {
   border: 2px solid #232323
 }
 
-.generalPages_moreProductsContainer__zc2uh a:active {
+.GUNS__6b-60fa176f-3e9aed78-2105a80b a:active {
   transform: translateY(4px)
 }
 
-.generalPages_actionsContainer__6Dne3 {
+.GUNS__87-c1021b31-7604e05d-67a17d3d {
   margin-top: 15px;
   background-color: #101010;
   border: 2px solid #161616;
@@ -1266,7 +1286,7 @@ html.rtl .accordion_contentInner__8XOty {
   gap: 10px
 }
 
-.generalPages_actionsContainer__6Dne3 span {
+.GUNS__87-c1021b31-7604e05d-67a17d3d span {
   text-align: center;
   color: #fafafa;
   padding: 10px;
@@ -1283,19 +1303,19 @@ html.rtl .accordion_contentInner__8XOty {
   gap: 6px
 }
 
-.generalPages_actionsContainer__6Dne3 span svg {
+.GUNS__87-c1021b31-7604e05d-67a17d3d span svg {
   font-size: 23px
 }
 
-.generalPages_actionsContainer__6Dne3 span:hover {
+.GUNS__87-c1021b31-7604e05d-67a17d3d span:hover {
   border: 2px solid #232323
 }
 
-.generalPages_actionsContainer__6Dne3 span:active {
+.GUNS__87-c1021b31-7604e05d-67a17d3d span:active {
   transform: translateY(4px)
 }
 
-.generalPages_actionsContainer__6Dne3 a {
+.GUNS__87-c1021b31-7604e05d-67a17d3d a {
   text-decoration: none;
   color: #fafafa;
   padding: 10px;
@@ -1311,42 +1331,42 @@ html.rtl .accordion_contentInner__8XOty {
   gap: 6px
 }
 
-.generalPages_actionsContainer__6Dne3 a:hover {
+.GUNS__87-c1021b31-7604e05d-67a17d3d a:hover {
   border: 2px solid #232323
 }
 
-.generalPages_actionsContainer__6Dne3 a:active {
+.GUNS__87-c1021b31-7604e05d-67a17d3d a:active {
   transform: translateY(4px)
 }
 
-.generalPages_actionsContainer__6Dne3 a svg {
+.GUNS__87-c1021b31-7604e05d-67a17d3d a svg {
   font-size: 23px
 }
 
-.generalPages_headIcon__T5a0w {
+.GUNS__a7-74987e23-d63d51e1-f6703ec6 {
   line-height: 0;
   margin-bottom: 6px
 }
 
-.generalPages_headIcon__T5a0w svg {
+.GUNS__a7-74987e23-d63d51e1-f6703ec6 svg {
   font-size: 50px;
   color: #eaeaea
 }
 
-.generalPages_headline__WXUM5 {
+.GUNS__a4-511b2c44-3d126c6d-758de6fd {
   margin: 0;
   font-size: 22px;
   font-weight: 600;
   color: #fafafa
 }
 
-.generalPages_subheadline__tb23H {
+.GUNS__61-d79d6e2a-9c18dfa8-29de940d {
   margin: 6px 0 14px;
   color: #b9b9b9;
   font-size: 14.5px
 }
 
-.generalPages_loggedInContainer__G3FZU {
+.GUNS__49-c152695b-18b01b3a-3b5b2ff0 {
   width: 100%;
   display: flex;
   gap: 10px;
@@ -1361,7 +1381,7 @@ html.rtl .accordion_contentInner__8XOty {
   max-width: 500px
 }
 
-.generalPages_loggedLeft__snT3o {
+.GUNS__44-e287d66d-18d5f26e-382a2ab5 {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -1369,19 +1389,19 @@ html.rtl .accordion_contentInner__8XOty {
   font-size: 15.5px
 }
 
-.generalPages_loggedLeft__snT3o svg {
+.GUNS__44-e287d66d-18d5f26e-382a2ab5 svg {
   font-size: 22.5px;
   color: #e5e5e5
 }
 
-.generalPages_loggedActions__zgm4B {
+.GUNS__6c-79284a60-a5c168eb-1e78d694 {
   display: flex;
   gap: 6px;
   width: 100%;
   box-sizing: border-box
 }
 
-.generalPages_actionRow__YOCN0 {
+.GUNS__15-ec9336a2-a94760e5-47f8f687 {
   margin-top: 20px;
   display: flex;
   gap: 8px;
@@ -1389,7 +1409,7 @@ html.rtl .accordion_contentInner__8XOty {
   justify-content: center
 }
 
-.generalPages_button__Yr3JN {
+.GUNS__90-a16085a0-89fe293f-d7e8c78c {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1404,53 +1424,53 @@ html.rtl .accordion_contentInner__8XOty {
   color: #fafafa
 }
 
-.generalPages_button__Yr3JN:active {
+.GUNS__90-a16085a0-89fe293f-d7e8c78c:active {
   transform: translateY(4px)
 }
 
-.generalPages_buttonSecondary__0VbNN {
+.GUNS__ed-f4cbb9e7-abc5db56-2649a420 {
   background: #141414;
   border-color: #1b1b1b
 }
 
-.generalPages_buttonSecondary__0VbNN:hover {
+.GUNS__ed-f4cbb9e7-abc5db56-2649a420:hover {
   border-color: #232323
 }
 
-.generalPages_buttonPrimary__aunrU {
+.GUNS__85-4220d036-82cb1866-08f5c9cf {
   background: linear-gradient(180deg, #7e2c8b63, #6d247a5a);
   border-color: #7e2c8b57
 }
 
-.generalPages_buttonPrimary__aunrU:hover {
+.GUNS__85-4220d036-82cb1866-08f5c9cf:hover {
   border-color: #87359996
 }
 
-.generalPages_containerButtons__Q_FHb {
+.GUNS__b5-11e09f02-587aa269-38083af8 {
   margin-top: 10px
 }
 
 @media (max-width:465px) {
-  .generalPages_loggedActions__zgm4B {
+  .GUNS__6c-79284a60-a5c168eb-1e78d694 {
     flex-direction: column
   }
 }
 
-.generalPages_loggedInContainer__G3FZU svg {
+.GUNS__49-c152695b-18b01b3a-3b5b2ff0 svg {
   margin-bottom: 0
 }
 
-.generalPages_loggedActions__zgm4B .generalPages_button__Yr3JN svg {
+.GUNS__6c-79284a60-a5c168eb-1e78d694 .GUNS__90-a16085a0-89fe293f-d7e8c78c svg {
   font-size: 20px
 }
 
-.generalPages_loggedActions__zgm4B a,
-.generalPages_loggedActions__zgm4B button {
+.GUNS__6c-79284a60-a5c168eb-1e78d694 a,
+.GUNS__6c-79284a60-a5c168eb-1e78d694 button {
   flex: 1 1 auto;
   text-align: center
 }
 
-.generalPages_claimPageWrapper__oOmDO {
+.GUNS__a7-702671ab-df4575b8-c472d9a3 {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -1458,16 +1478,16 @@ html.rtl .accordion_contentInner__8XOty {
   align-items: center
 }
 
-.generalPages_languageSelectWrapper__HxDcv {
+.GUNS__1b-953273cc-93abc77d-d246f672 {
   position: relative;
   width: 100%
 }
 
-.generalPages_languageSelectWrapperCompact__j0a8v {
+.GUNS__b0-1f16c20c-d616e522-248b4680 {
   max-width: fit-content
 }
 
-.generalPages_languageSelectTrigger__3oDQ4 {
+.GUNS__7b-1f6ca460-b7109009-0bd89b76 {
   border-radius: 17px;
   padding: 9px 14px;
   background-color: #101010;
@@ -1484,61 +1504,61 @@ html.rtl .accordion_contentInner__8XOty {
   outline: none
 }
 
-.generalPages_languageSelectTriggerCompact__cK758 {
+.GUNS__10-88a18043-a8e098c7-6d77033b {
   padding: 8px 10px;
   gap: 5px;
   background: #161616;
   border: 2px solid #1b1b1b
 }
 
-.generalPages_languageSelectTriggerCompactOpen__1_CmO,
-.generalPages_languageSelectTriggerCompact__cK758:hover {
+.GUNS__10-88a18043-a8e098c7-6d77033b:hover,
+.GUNS__9a-f4971884-75a49812-65964680 {
   border-color: #212121 !important;
   background-color: #181818 !important
 }
 
-.generalPages_languageSelectTriggerOpen__gZz64,
-.generalPages_languageSelectTrigger__3oDQ4:hover {
+.GUNS__26-3cabf11f-507b3401-138cb6c4,
+.GUNS__7b-1f6ca460-b7109009-0bd89b76:hover {
   border-color: #212121;
   background-color: #141414
 }
 
-.generalPages_languageSelectTrigger__3oDQ4:focus-visible {
+.GUNS__7b-1f6ca460-b7109009-0bd89b76:focus-visible {
   outline: none
 }
 
-.generalPages_languageSelectValue__TeQiN {
+.GUNS__dc-510507db-a148fbe9-a6dc523a {
   display: flex;
   align-items: center;
   gap: 10px
 }
 
-.generalPages_languageSelectValueCompact__6f7NB {
+.GUNS__4e-a7c4b786-5381342b-7a9e8e1e {
   gap: 6px
 }
 
-.generalPages_languageSelectValue__TeQiN span:last-of-type {
+.GUNS__dc-510507db-a148fbe9-a6dc523a span:last-of-type {
   font-size: 15px
 }
 
-.generalPages_languageSelectValue__TeQiN svg {
+.GUNS__dc-510507db-a148fbe9-a6dc523a svg {
   width: 25px;
   height: 25px;
   object-fit: cover;
   border-radius: 7px
 }
 
-.generalPages_languageSelectChevron__PJ7Lj {
+.GUNS__26-a762fb56-d31c246e-7164557c {
   width: 20px;
   height: 20px;
   transition: transform .25s ease
 }
 
-.generalPages_languageSelectChevronOpen__w10Lu {
+.GUNS__5f-bcb6e335-0242419c-1208c1cf {
   transform: rotate(180deg)
 }
 
-.generalPages_languageSelectDrawer__kU78A {
+.GUNS__f4-6f594cd3-8974848f-952e81bf {
   position: absolute;
   left: 0;
   width: 100%;
@@ -1557,19 +1577,19 @@ html.rtl .accordion_contentInner__8XOty {
   overflow: hidden
 }
 
-.generalPages_languageSelectWrapperCompact__j0a8v .generalPages_languageSelectDrawer__kU78A {
+.GUNS__b0-1f16c20c-d616e522-248b4680 .GUNS__f4-6f594cd3-8974848f-952e81bf {
   min-width: 230px;
   width: max-content;
   max-width: 320px
 }
 
-.generalPages_languageSelectDrawerClosed__bTRnM {
+.GUNS__6a-e8371c9b-df99d0c2-28e00016 {
   max-height: 0;
   overflow: hidden;
   border-width: 0
 }
 
-.generalPages_languageSelectDrawerContent__C_4vq {
+.GUNS__70-594b5617-a6f81d80-22769a50 {
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -1580,19 +1600,19 @@ html.rtl .accordion_contentInner__8XOty {
   padding: 0 4px 0 0
 }
 
-.generalPages_languageSelectDrawerDown__w_N8i {
+.GUNS__63-6d441ed2-b7cf9051-51f4a149 {
   top: calc(100% + 8px);
   transform: translateY(-6px) scale(.98);
   transform-origin: top center
 }
 
-.generalPages_languageSelectDrawerUp__w5fIz {
+.GUNS__96-7526483c-90f68437-6b4ff6c0 {
   bottom: calc(100% + 8px);
   transform: translateY(6px) scale(.98);
   transform-origin: bottom center
 }
 
-.generalPages_languageSelectDrawerOpen__9g1x_ {
+.GUNS__e9-ee54510b-7dc6834b-10a84f87 {
   opacity: 1;
   transform: translateY(0) scale(1);
   pointer-events: auto;
@@ -1602,7 +1622,7 @@ html.rtl .accordion_contentInner__8XOty {
   box-shadow: 0 12px 30px rgba(0, 0, 0, .45)
 }
 
-.generalPages_languageSelectOption__sfxzm {
+.GUNS__2e-5078a647-ccf30d6a-b9e99984 {
   border: none;
   background: transparent;
   color: #f5f5f5;
@@ -1618,28 +1638,28 @@ html.rtl .accordion_contentInner__8XOty {
   transition: background .2s ease, border .2s ease
 }
 
-.generalPages_languageSelectOption__sfxzm:hover {
+.GUNS__2e-5078a647-ccf30d6a-b9e99984:hover {
   background: #202020
 }
 
-.generalPages_languageSelectDrawer__kU78A svg {
+.GUNS__f4-6f594cd3-8974848f-952e81bf svg {
   width: 22px;
   height: 22px;
   object-fit: cover;
   border-radius: 7px
 }
 
-.generalPages_languageSelectOptionActive__rZo43 {
+.GUNS__45-7dd97851-fc74478e-125f1780 {
   background-color: #202020
 }
 
-.generalPages_languageSelectCountry__KU_df {
+.GUNS__61-7bb701b5-0ebe4465-2aca5e2c {
   font-size: 13px;
   color: #939393;
   font-weight: 450
 }
 
-.generalPages_notification__V02Q4 {
+.GUNS__98-a33d3490-d7f707b9-a5f5dedd {
   background-color: #131313;
   border: 2px solid #191919;
   padding: 13px;
@@ -1648,40 +1668,40 @@ html.rtl .accordion_contentInner__8XOty {
   text-align: center
 }
 
-.generalPages_notification__V02Q4 h1 {
+.GUNS__98-a33d3490-d7f707b9-a5f5dedd h1 {
   margin: 0;
   font-size: 16px;
   color: #fafafa;
   font-weight: 450
 }
 
-.generalPages_languageSelectRussian__p7Rw7 {
+.GUNS__2f-625d5d01-da613de4-73717ed2 {
   font-family: Onest, sans-serif !important;
   font-size: 14px !important
 }
 
-html.rtl .generalPages_languageSelectArabic__L0zZb {
+html.rtl .GUNS__3d-c99d9760-e9b16879-56fe290e {
   direction: rtl;
   flex-direction: row-reverse
 }
 
-html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSelectArabic__L0zZb) {
+html.rtl .GUNS__2e-5078a647-ccf30d6a-b9e99984:not(.GUNS__3d-c99d9760-e9b16879-56fe290e) {
   direction: ltr
 }
 
-.errorPage_card__nVu91 {
+.GUNS__3a-53cd6657-24bee4fb-db885458 {
   background-color: #101010;
   border: 2px solid #161616;
   padding: 25px
 }
 
-.errorPage_subtitle__OQBQU {
+.GUNS__70-263da991-087cbdc6-4de83355 {
   max-width: 32rem;
   margin-left: auto !important;
   margin-right: auto !important
 }
 
-.errorPage_buttonRow__uPGHd {
+.GUNS__d6-149930b2-c76c2c44-6f0ac1ea {
   margin-top: 20px;
   display: flex;
   justify-content: center;
@@ -1690,32 +1710,32 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   box-sizing: border-box
 }
 
-.errorPage_buttonRow__uPGHd a,
-.errorPage_buttonRow__uPGHd button {
+.GUNS__d6-149930b2-c76c2c44-6f0ac1ea a,
+.GUNS__d6-149930b2-c76c2c44-6f0ac1ea button {
   min-width: 160px;
   border-radius: 16px;
   padding: 6px 12px
 }
 
 @media (max-width:550px) {
-  .errorPage_errorInformationContainer__Si_Lc {
+  .GUNS__08-3d3f5ac7-c4f56b2c-aa02d2d1 {
     width: 95% !important
   }
 }
 
 @media (max-width:520px) {
-  .errorPage_buttonRow__uPGHd {
+  .GUNS__d6-149930b2-c76c2c44-6f0ac1ea {
     flex-direction: column
   }
 
-  .errorPage_buttonRow__uPGHd a,
-  .errorPage_buttonRow__uPGHd button {
+  .GUNS__d6-149930b2-c76c2c44-6f0ac1ea a,
+  .GUNS__d6-149930b2-c76c2c44-6f0ac1ea button {
     width: 100%;
     box-sizing: border-box
   }
 }
 
-.errorPage_errorInformationContainer__Si_Lc {
+.GUNS__08-3d3f5ac7-c4f56b2c-aa02d2d1 {
   margin-top: 10px;
   width: 100%;
   max-width: 500px;
@@ -1723,19 +1743,17 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   border-radius: 20px;
   background-color: #101010;
   border: 2px solid #161616;
-  padding: 15px;
+  padding: 15px
+}
+
+.GUNS__08-3d3f5ac7-c4f56b2c-aa02d2d1,
+.GUNS__d6-69a9174f-8d3960e2-83536abd {
   display: flex;
   flex-direction: column;
   gap: 10px
 }
 
-.errorPage_errorInformationList__fABF_ {
-  display: flex;
-  flex-direction: column;
-  gap: 10px
-}
-
-.errorPage_errorInformationCard__FIGF5 {
+.GUNS__7c-fd1dd9d4-eff2f4c3-09775a46 {
   background: #121212;
   border: 2px solid #181818;
   border-radius: 20px;
@@ -1745,29 +1763,29 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   gap: 6px
 }
 
-.errorPage_errorInformationLabel__4mw0h {
+.GUNS__5a-2cb9440a-5b85ad6a-35c46142 {
   font-size: 14px;
   color: #858585
 }
 
-.errorPage_errorInformationValue__zKkVW {
+.GUNS__c9-a3cbd3c0-b4f93143-b17f8747 {
   font-size: 14px;
   color: #fafafa;
   word-break: break-all
 }
 
-.numberInputWrapper_container__EXzia {
+.GUNS__4c-c51318d0-46d0ed4d-9b2e3887 {
   width: 100%
 }
 
-.numberInputWrapper_label__cDBMX {
+.GUNS__55-bb991050-88b45b6a-9431fba7 {
   font-size: 16px;
   font-weight: 500;
   color: #dddddd;
   margin: 0 0 5.5px 3px
 }
 
-.numberInputWrapper_inputShell__1PSdt {
+.GUNS__36-10c45de7-ccb332fc-2340524f {
   display: flex;
   align-items: center;
   border-radius: 15px;
@@ -1777,22 +1795,22 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   transition: border-color .2s ease, box-shadow .2s ease, background-color .2s ease
 }
 
-.numberInputWrapper_inputShell__1PSdt[data-focused=true] {
+.GUNS__36-10c45de7-ccb332fc-2340524f[data-focused=true] {
   border-color: #191919;
   box-shadow: inset 0 0 0 1px #191919
 }
 
-.numberInputWrapper_inputShell__1PSdt[data-error=true] {
+.GUNS__36-10c45de7-ccb332fc-2340524f[data-error=true] {
   border-color: #c65353;
   box-shadow: inset 0 0 0 1px #c65353
 }
 
-.numberInputWrapper_inputShell__1PSdt[data-disabled=true] {
+.GUNS__36-10c45de7-ccb332fc-2340524f[data-disabled=true] {
   opacity: .6;
   cursor: not-allowed
 }
 
-.numberInputWrapper_iconSlot__2hMdz {
+.GUNS__88-5efabde1-ad003188-1d2567eb {
   position: absolute;
   left: 10px;
   display: flex;
@@ -1803,7 +1821,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   pointer-events: none
 }
 
-.numberInputWrapper_input__Stqxg {
+.GUNS__b9-3cd43098-f80d02a0-c2d9d1e4 {
   flex: 1 1;
   border: none;
   background: transparent;
@@ -1815,23 +1833,23 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   transition: color .2s ease
 }
 
-.numberInputWrapper_input__Stqxg::placeholder {
+.GUNS__b9-3cd43098-f80d02a0-c2d9d1e4::placeholder {
   color: #6c6c6c
 }
 
-.numberInputWrapper_input__Stqxg:disabled {
+.GUNS__b9-3cd43098-f80d02a0-c2d9d1e4:disabled {
   cursor: not-allowed
 }
 
-.numberInputWrapper_inputWithIcon__RW0pK {
+.GUNS__c6-69527599-81ad2694-5dd3c53a {
   padding-left: 42px
 }
 
-.numberInputWrapper_inputWithControls__j2wWk {
+.GUNS__40-1e810eb3-7a3be558-c15bccc4 {
   padding-right: 48px
 }
 
-.numberInputWrapper_controls__9DMLN {
+.GUNS__f4-e4e6f8a5-af409fd0-7c13817e {
   position: absolute;
   right: 8px;
   top: 50%;
@@ -1844,7 +1862,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   background: #141414
 }
 
-.numberInputWrapper_controlButton__YR6y8 {
+.GUNS__09-9aa66952-f6ca361f-e5fbc0b1 {
   border: none;
   background: transparent;
   color: #bcbcbc;
@@ -1857,28 +1875,28 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   transition: background .2s ease, color .2s ease
 }
 
-.numberInputWrapper_controlButton__YR6y8+.numberInputWrapper_controlButton__YR6y8 {
+.GUNS__09-9aa66952-f6ca361f-e5fbc0b1+.GUNS__09-9aa66952-f6ca361f-e5fbc0b1 {
   border-top: 1px solid #1e1e1e
 }
 
-.numberInputWrapper_controlButton__YR6y8:hover:not(:disabled) {
+.GUNS__09-9aa66952-f6ca361f-e5fbc0b1:hover:not(:disabled) {
   background: #1f1f1f;
   color: #ffffff
 }
 
-.numberInputWrapper_controlButton__YR6y8:disabled {
+.GUNS__09-9aa66952-f6ca361f-e5fbc0b1:disabled {
   cursor: not-allowed;
   color: #555555
 }
 
-.numberInputWrapper_errorText__pT5Z3 {
+.GUNS__3a-e07473ff-77af25ce-33318629 {
   margin: 6px 0 0 4px;
   color: #ff9b9b;
   font-size: 12px;
   font-weight: 400
 }
 
-.customizeTab_uploadCardWrapper__NjzQ_ {
+.GUNS__78-b9db2395-e999a0a0-201d4aa3 {
   display: flex;
   flex: 1 1;
   padding: 10px;
@@ -1886,12 +1904,12 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   flex-direction: column
 }
 
-.customizeTab_uploadCardWrapper__NjzQ_ span {
+.GUNS__78-b9db2395-e999a0a0-201d4aa3 span {
   font-size: 19px;
   color: #fafafafa
 }
 
-.customizeTab_uploadCard__iGa_h {
+.GUNS__ff-9901d788-c95dcffe-fe863c5c {
   margin-top: 10px;
   background-color: #0f0f0f;
   border: 2px solid #181818;
@@ -1910,36 +1928,36 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
 }
 
 @media (max-width:600px) {
-  .customizeTab_uploadCard__iGa_h {
+  .GUNS__ff-9901d788-c95dcffe-fe863c5c {
     min-width: 200px;
     box-sizing: border-box
   }
 }
 
-.customizeTab_uploadCardText__pxh1_ {
+.GUNS__94-2218c5f6-b05d1ac2-16f9d47f {
   padding: 0 5px
 }
 
-.customizeTab_uploadCardText__pxh1_ h1 {
+.GUNS__94-2218c5f6-b05d1ac2-16f9d47f h1 {
   font-size: 14.5px;
   color: #797979;
   font-weight: 450;
   margin: 2px 0 0
 }
 
-.customizeTab_uploadCardText__pxh1_ svg {
+.GUNS__94-2218c5f6-b05d1ac2-16f9d47f svg {
   font-size: 42px;
   color: #fafafafa
 }
 
-.customizeTab_featureContainerSpan__lBVPQ {
+.GUNS__56-02ad2192-57b9a714-e8269bf5 {
   color: #bebebe;
   font-size: 22.5px;
   font-weight: 600;
   margin-left: 5px
 }
 
-.customizeTab_uploadCardImage__4VFCa {
+.GUNS__ab-10afa642-b9972fef-28a18010 {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -1948,7 +1966,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   object-fit: cover
 }
 
-.customizeTab_fileBadge__OHzzo {
+.GUNS__b9-5c7ea78c-91625765-16a0f9e6 {
   z-index: 999;
   position: absolute;
   top: 9px;
@@ -1957,7 +1975,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   gap: 7px
 }
 
-.customizeTab_fileBadge__OHzzo span {
+.GUNS__b9-5c7ea78c-91625765-16a0f9e6 span {
   background-color: #18181875;
   -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
@@ -1969,44 +1987,44 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   transition: .35s
 }
 
-.customizeTab_fileBadge__OHzzo span:first-child {
+.GUNS__b9-5c7ea78c-91625765-16a0f9e6 span:first-child {
   padding: 7px 10px !important
 }
 
-.customizeTab_fileBadge__OHzzo span:nth-child(2) {
+.GUNS__b9-5c7ea78c-91625765-16a0f9e6 span:nth-child(2) {
   cursor: pointer
 }
 
-.customizeTab_fileBadge__OHzzo span:nth-child(2):hover {
+.GUNS__b9-5c7ea78c-91625765-16a0f9e6 span:nth-child(2):hover {
   background-color: #181818d8
 }
 
-.customizeTab_fileBadge__OHzzo span svg {
+.GUNS__b9-5c7ea78c-91625765-16a0f9e6 span svg {
   font-size: 22px;
   color: rgb(241, 46, 46)
 }
 
-.customizeTab_audioPlaying__D51EJ svg:not(.customizeTab_uploadCardText__pxh1_ svg, .customizeTab_fileBadge__OHzzo svg) {
+.GUNS__a7-dc193273-1388d40c-7993c1bb svg:not(.GUNS__94-2218c5f6-b05d1ac2-16f9d47f svg, .GUNS__b9-5c7ea78c-91625765-16a0f9e6 svg) {
   font-size: 42px;
   color: #fafafafa;
   margin-top: 5px
 }
 
-.customizeTab_uploaderMessage__fcBRY h1 {
+.GUNS__13-54dd360c-58493b80-7dcfd4c2 h1 {
   margin: 2px 0 0;
   font-size: 15.5px;
   color: #a8a8a8
 }
 
-.customizeTab_featureGap__ZcdL2 {
+.GUNS__5c-70334c7d-c4d6d87e-fea893f3 {
   display: flex;
   flex-direction: column;
   gap: 40px;
   margin-bottom: 40px
 }
 
-.customizeTab_generalComponentLeft__prGNi,
-.customizeTab_generalComponentRight__mZ7Ss {
+.GUNS__6b-850887ac-56317e05-1ce5efed,
+.GUNS__cb-d2a408af-2c7de1ee-ace681e2 {
   border-radius: 10px;
   padding: 10px;
   flex: 1 1;
@@ -2014,37 +2032,37 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   display: flex
 }
 
-.customizeTab_generalComponentLeft__prGNi:not(.customizeTab_otherComponent__hInaL),
-.customizeTab_generalComponentRight__mZ7Ss {
+.GUNS__6b-850887ac-56317e05-1ce5efed,
+.GUNS__cb-d2a408af-2c7de1ee-ace681e2:not(.GUNS__54-d0c36670-3fce8ea5-b9e39f6b) {
   flex-direction: column
 }
 
 @media (max-width:1120px) {
 
-  .customizeTab_generalComponentLeft__prGNi,
-  .customizeTab_generalComponentRight__mZ7Ss {
+  .GUNS__6b-850887ac-56317e05-1ce5efed,
+  .GUNS__cb-d2a408af-2c7de1ee-ace681e2 {
     flex-direction: column
   }
 }
 
 @media (max-width:650px) {
-  .customizeTab_generalComponentContainer__YLMjd {
+  .GUNS__b2-05d0e083-46fa21ae-13553283 {
     flex-direction: column;
     gap: 40px !important
   }
 
-  .customizeTab_sliderDiv__ewWcg {
+  .GUNS__77-e3a9df1f-cc21fb9f-98ccb3af {
     margin-bottom: 30px
   }
 }
 
-.customizeTab_generalComponentContainer__YLMjd {
+.GUNS__b2-05d0e083-46fa21ae-13553283 {
   display: flex;
   width: 100%;
   gap: 50px
 }
 
-.customizeTab_featureRow__MH40h {
+.GUNS__e7-30583c2a-35ba5761-8c9a2b59 {
   display: flex;
   width: 100%;
   box-sizing: border-box;
@@ -2052,8 +2070,8 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   gap: 25px
 }
 
-.customizeTab_gradientButtonDisabled__ReVll,
-.customizeTab_gradientButtonEnabled__nTy_T {
+.GUNS__91-3fd49e2b-cffcf2cf-b15e9bb1,
+.GUNS__95-d1787b8e-e0736f98-60aeaa8e {
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -2065,36 +2083,36 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   text-align: center
 }
 
-.customizeTab_gradientButtonDisabled__ReVll {
+.GUNS__95-d1787b8e-e0736f98-60aeaa8e {
   background-color: #830f0f60;
   border: 2px solid #b6222242
 }
 
-.customizeTab_gradientButtonEnabled__nTy_T {
+.GUNS__91-3fd49e2b-cffcf2cf-b15e9bb1 {
   background-color: #0f830f4d;
   border: 2px solid #22b6293f
 }
 
-.customizeTab_gradientButtonDisabled__ReVll:active,
-.customizeTab_gradientButtonEnabled__nTy_T:active {
+.GUNS__91-3fd49e2b-cffcf2cf-b15e9bb1:active,
+.GUNS__95-d1787b8e-e0736f98-60aeaa8e:active {
   transform: translateY(3px)
 }
 
 @media (max-width:1400px) {
-  .customizeTab_featureRow__MH40h:not(.customizeTab_otherComponent__hInaL) {
+  .GUNS__e7-30583c2a-35ba5761-8c9a2b59:not(.GUNS__54-d0c36670-3fce8ea5-b9e39f6b) {
     flex-direction: column
   }
 }
 
-.customizeTab_otherComponent__hInaL {
+.GUNS__54-d0c36670-3fce8ea5-b9e39f6b {
   --placeholder: 0
 }
 
-.customizeTab_otherComponentWrapper__BGjok {
+.GUNS__2c-ac92991e-8dc5807d-6080a581 {
   flex-direction: column
 }
 
-.customizeTab_premiumAd__frnuz {
+.GUNS__e2-998b3ddd-1c3b8384-21d9fe8c {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2105,15 +2123,15 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   border-radius: 50px
 }
 
-.customizeTab_premiumAd__frnuz span {
+.GUNS__e2-998b3ddd-1c3b8384-21d9fe8c span {
   color: #fafafafa;
   font-size: 18.5px;
   font-weight: 400;
   text-align: center
 }
 
-.customizeTab_premiumAd__frnuz span a,
-.customizeTab_premiumAd__frnuz span span {
+.GUNS__e2-998b3ddd-1c3b8384-21d9fe8c span a,
+.GUNS__e2-998b3ddd-1c3b8384-21d9fe8c span span {
   background: linear-gradient(90deg, #db6cfd, #e3b5f1);
   background-clip: text;
   -webkit-background-clip: text;
@@ -2125,62 +2143,62 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   text-wrap: nowrap
 }
 
-.customizeTab_premiumAd__frnuz span a svg,
-.customizeTab_premiumAd__frnuz span span svg {
+.GUNS__e2-998b3ddd-1c3b8384-21d9fe8c span a svg,
+.GUNS__e2-998b3ddd-1c3b8384-21d9fe8c span span svg {
   color: #d283eb;
   font-size: 19px;
   vertical-align: -3px
 }
 
-.customizeTab_premiumAd__frnuz span a:hover {
+.GUNS__e2-998b3ddd-1c3b8384-21d9fe8c span a:hover {
   opacity: .8
 }
 
-.customizeTab_description__OkOR5,
-.customizeTab_discordPresence__E_qVe {
+.GUNS__1d-04a18444-ded8b911-719ca707,
+.GUNS__27-f4f04853-d29471d2-7529b92a {
   font-size: 16px;
   font-weight: 500;
   color: #dddddd;
   margin: 0 0 5.5px 3px
 }
 
-.customizeTab_descriptionWrapper__9FGY3,
-.customizeTab_discordPresenceWrapper___gCQ6 {
+.GUNS__6c-d6cca5f9-97dae699-debd9451,
+.GUNS__de-4dd9b461-5233d28b-6671745a {
   display: flex;
   flex-direction: column;
   width: 100%;
   box-sizing: border-box
 }
 
-.customizeTab_descriptionText__HlPUa,
-.customizeTab_discordPresenceConnect__quUfE {
+.GUNS__30-e319d536-b6df15e4-2a1d7e3b,
+.GUNS__8e-30ee97b4-4909c413-a65ac464 {
   padding: 10px;
   background-color: #0c0c0c;
   border-radius: 15px
 }
 
-.customizeTab_descriptionText__HlPUa h1,
-.customizeTab_discordPresenceConnect__quUfE h1 {
+.GUNS__30-e319d536-b6df15e4-2a1d7e3b h1,
+.GUNS__8e-30ee97b4-4909c413-a65ac464 h1 {
   margin: 0;
   font-size: 16.5px;
   color: #fafafa;
   font-weight: 450
 }
 
-.customizeTab_descriptionText__HlPUa h1 a,
-.customizeTab_discordPresenceConnect__quUfE h1 a {
+.GUNS__30-e319d536-b6df15e4-2a1d7e3b h1 a,
+.GUNS__8e-30ee97b4-4909c413-a65ac464 h1 a {
   text-decoration: none;
   color: #a9a9a9;
   font-weight: 500
 }
 
-.customizeTab_descriptionText__HlPUa h1 a svg,
-.customizeTab_discordPresenceConnect__quUfE h1 a svg {
+.GUNS__30-e319d536-b6df15e4-2a1d7e3b h1 a svg,
+.GUNS__8e-30ee97b4-4909c413-a65ac464 h1 a svg {
   vertical-align: -2px;
   font-size: 18px
 }
 
-.customizeTab_usernameEffectsButton__ijnhF {
+.GUNS__f2-7221abdd-bc6adfef-13518631 {
   display: flex;
   align-items: center;
   width: 100%;
@@ -2198,31 +2216,31 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   border: 2px solid transparent
 }
 
-.customizeTab_usernameEffectsButton__ijnhF:hover {
+.GUNS__f2-7221abdd-bc6adfef-13518631:hover {
   border: 2px solid #191919
 }
 
-.customizeTab_usernameEffectsButton__ijnhF:active {
+.GUNS__f2-7221abdd-bc6adfef-13518631:active {
   transform: translateY(4px)
 }
 
-.customizeTab_usernameEffectsButton__ijnhF svg {
+.GUNS__f2-7221abdd-bc6adfef-13518631 svg {
   font-size: 18px
 }
 
-.customizeTab_usernameEffectsText__6UvYw {
+.GUNS__ff-e8072cb0-ab18ba1a-e16abd39 {
   font-size: 16px;
   font-weight: 500;
   color: #dddddd;
   margin: 0 0 5.5px 3px
 }
 
-.customizeTab_usernameEffectsWrapper__6gIdI {
+.GUNS__c9-bfd13da0-5d7075d4-d7783a8d {
   width: 100%;
   box-sizing: border-box
 }
 
-.customizeTab_usernameEffectsModalBody__t2iSd {
+.GUNS__95-0e7b3761-d35b8724-88023ca9 {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -2230,7 +2248,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   overflow: hidden
 }
 
-.customizeTab_usernameEffectsModalContent__Lyiiv {
+.GUNS__5a-ec34bbf8-12942231-96adc5fb {
   flex: 1 1;
   min-height: 0;
   display: flex;
@@ -2239,12 +2257,12 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   overflow-y: auto
 }
 
-.customizeTab_usernameEffectsModalFooter___m4zk {
+.GUNS__36-3a0b80e6-b1cc8686-0d7972c8 {
   padding-top: 10px;
   background: linear-gradient(180deg, rgba(17, 17, 17, 0), #111111 55%)
 }
 
-.customizeTab_usernameEffects__31nNg {
+.GUNS__e1-3c6e9427-fdcdfa23-315581e4 {
   display: flex;
   gap: 15px;
   width: 100%;
@@ -2253,7 +2271,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   align-items: flex-start
 }
 
-.customizeTab_usernameEffectsSelection__u6Y5H {
+.GUNS__83-34e383c4-9ec61eda-c2166b4a {
   width: 350px;
   display: flex;
   flex-wrap: wrap;
@@ -2265,11 +2283,11 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   -ms-overflow-style: none
 }
 
-.customizeTab_usernameEffectsSelection__u6Y5H::-webkit-scrollbar {
+.GUNS__83-34e383c4-9ec61eda-c2166b4a::-webkit-scrollbar {
   display: none
 }
 
-.customizeTab_usernameEffect__4zTCb {
+.GUNS__6f-e338cd68-b8a831a2-707f1185 {
   position: relative;
   display: flex;
   justify-content: center;
@@ -2288,18 +2306,18 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   flex: 1 1 auto
 }
 
-.customizeTab_usernameEffect__4zTCb:hover {
+.GUNS__6f-e338cd68-b8a831a2-707f1185:hover {
   border: 2px solid #222222
 }
 
-.customizeTab_usernameEffect__4zTCb img {
+.GUNS__6f-e338cd68-b8a831a2-707f1185 img {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
   object-fit: none
 }
 
-.customizeTab_userBackground__hCXpa {
+.GUNS__1b-a406d6d9-09098974-fa701f72 {
   border-radius: 15px;
   display: flex;
   justify-content: center;
@@ -2312,7 +2330,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   backdrop-filter: blur(12px)
 }
 
-.customizeTab_usernameEffectsPreview__Xt3Ol {
+.GUNS__0d-8e65c78d-38c264d9-1c9094cb {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -2320,40 +2338,40 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   flex: 1 1
 }
 
-.customizeTab_usernameEffectSelected__B0taN {
+.GUNS__5d-7d172db9-b5f3d0fa-ea56fc8b {
   background-color: #191919;
   padding: 12px;
   border-radius: 13px;
   color: #c7c7c7
 }
 
-.customizeTab_usernameEffectSelected__B0taN h1 {
+.GUNS__5d-7d172db9-b5f3d0fa-ea56fc8b h1 {
   margin: 0;
   font-size: 18px;
   font-weight: 470;
   color: #fafafa
 }
 
-.customizeTab_usernameEffectSelected__B0taN span {
+.GUNS__5d-7d172db9-b5f3d0fa-ea56fc8b span {
   font-size: 14px
 }
 
-.customizeTab_userBackground__hCXpa h1 {
+.GUNS__1b-a406d6d9-09098974-fa701f72 h1 {
   font-weight: 500;
   font-size: 24px
 }
 
-.customizeTab_usernameEffectPreviewTitle__VXMGC {
+.GUNS__70-514f1f26-31de8fd9-7fe32d54 {
   background-repeat: repeat;
   background-size: auto;
   color: inherit
 }
 
-.customizeTab_selectedEffect__ljmuD {
+.GUNS__be-47dc343d-71803c93-10fe152e {
   border: 2px solid #8d4ca17a !important
 }
 
-.customizeTab_usernameEffectsPreviewInnerWrapper__ksWpp {
+.GUNS__c6-a334ff05-74b39924-f7d662c0 {
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -2361,7 +2379,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   flex-wrap: wrap
 }
 
-.customizeTab_saveButtonUsernameEffects__UHGfu {
+.GUNS__8a-5dce6898-30600ca8-5fc8bfc5 {
   padding: 7px 20px;
   background-color: #762a8d9d;
   border: 2px solid #802d99a4;
@@ -2370,16 +2388,16 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   transition: .35s
 }
 
-.customizeTab_saveButtonUsernameEffects__UHGfu:hover {
+.GUNS__8a-5dce6898-30600ca8-5fc8bfc5:hover {
   background-color: #7e2c8bb9;
   border: 2px solid #6e2883
 }
 
-.customizeTab_saveButtonUsernameEffects__UHGfu:active {
+.GUNS__8a-5dce6898-30600ca8-5fc8bfc5:active {
   transform: translateY(4px)
 }
 
-.customizeTab_usernameEffectsButtons__O2kY3 a {
+.GUNS__e4-d5600f65-1c2daa31-532e7a92 a {
   padding: 7px 20px;
   background-color: #762a8d9d;
   border: 2px solid #802d99a4;
@@ -2389,28 +2407,28 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   text-decoration: none
 }
 
-.customizeTab_usernameEffectsButtons__O2kY3 {
+.GUNS__e4-d5600f65-1c2daa31-532e7a92 {
   width: 100%;
   box-sizing: border-box;
   display: flex;
   gap: 7px
 }
 
-.customizeTab_usernameEffectsButtons__O2kY3 span:first-child {
+.GUNS__e4-d5600f65-1c2daa31-532e7a92 span:first-child {
   background-color: #191919;
   border: 2px solid #202020
 }
 
-.customizeTab_usernameEffectsButtons__O2kY3 span:first-child:hover {
+.GUNS__e4-d5600f65-1c2daa31-532e7a92 span:first-child:hover {
   background-color: #202020;
   border: 2px solid #2c2c2c
 }
 
-.customizeTab_usernameEffectsButtons__O2kY3 span:first-child:active {
+.GUNS__e4-d5600f65-1c2daa31-532e7a92 span:first-child:active {
   transform: translateY(4px)
 }
 
-.customizeTab_usernameEffectsButtons__O2kY3 span {
+.GUNS__e4-d5600f65-1c2daa31-532e7a92 span {
   width: 100%;
   box-sizing: border-box;
   cursor: pointer;
@@ -2418,13 +2436,13 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   justify-content: center
 }
 
-.customizeTab_premiumOnly__p0LCM {
+.GUNS__2c-d216b41f-f6ae9671-d65f25fa {
   position: absolute;
   top: -8px;
   right: -10px
 }
 
-.customizeTab_premiumOnly__p0LCM svg {
+.GUNS__2c-d216b41f-f6ae9671-d65f25fa svg {
   color: #fafafa;
   font-size: 16px;
   padding: 7px;
@@ -2432,7 +2450,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   border-radius: 50%
 }
 
-.customizeTab_premiumTextGradient__xPCWM {
+.GUNS__45-20371e10-c33df5fd-8382801e {
   background: linear-gradient(90deg, #d283eb, #d095e2);
   background-clip: text;
   -webkit-background-clip: text;
@@ -2441,42 +2459,42 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
 }
 
 @media (max-width:555px) {
-  .customizeTab_usernameEffects__31nNg {
+  .GUNS__e1-3c6e9427-fdcdfa23-315581e4 {
     flex-direction: column-reverse
   }
 
-  .customizeTab_usernameEffectsPreview__Xt3Ol {
+  .GUNS__0d-8e65c78d-38c264d9-1c9094cb {
     gap: 15px;
     align-items: self-start
   }
 
-  .customizeTab_usernameEffectsModalFooter___m4zk {
+  .GUNS__36-3a0b80e6-b1cc8686-0d7972c8 {
     display: none
   }
 
-  .customizeTab_usernameEffectsButtonsMobile__grBcx {
+  .GUNS__eb-2974526d-bcd697df-3637e16e {
     display: flex !important
   }
 
-  .customizeTab_usernameEffectsPreviewInnerWrapper__ksWpp {
+  .GUNS__c6-a334ff05-74b39924-f7d662c0 {
     flex-direction: row
   }
 
-  .customizeTab_usernameEffectSelected__B0taN {
+  .GUNS__5d-7d172db9-b5f3d0fa-ea56fc8b {
     height: fit-content
   }
 
-  .customizeTab_usernameEffect__4zTCb {
+  .GUNS__6f-e338cd68-b8a831a2-707f1185 {
     flex: 1 1 auto;
     max-width: 100px
   }
 
-  .customizeTab_usernameEffectsSelection__u6Y5H {
+  .GUNS__83-34e383c4-9ec61eda-c2166b4a {
     width: 100%
   }
 }
 
-.customizeTab_usernameEffectsButtonsMobile__grBcx {
+.GUNS__eb-2974526d-bcd697df-3637e16e {
   display: none;
   margin-top: 5px;
   gap: 8px;
@@ -2485,18 +2503,18 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   justify-content: right
 }
 
-.customizeTab_usernameEffectsButtonsMobile__grBcx span:first-child {
+.GUNS__eb-2974526d-bcd697df-3637e16e span:first-child {
   background-color: #191919;
   border: 2px solid #202020
 }
 
-.customizeTab_usernameEffectsButtonsMobile__grBcx span {
+.GUNS__eb-2974526d-bcd697df-3637e16e span {
   width: 100%;
   box-sizing: border-box;
   cursor: pointer
 }
 
-@keyframes customizeTab_rainbowAnimation__1RvHA {
+@keyframes GUNS__f9-2567f84c-2a4ec79f-1dd67555 {
   0% {
     background-position: 0 50%
   }
@@ -2506,18 +2524,18 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   }
 }
 
-.customizeTab_rainbowName___x3ul {
+.GUNS__40-ef129a61-3f6dd938-a53a57fc {
   background-image: linear-gradient(90deg, violet, indigo, blue, green, yellow, orange, red) !important;
   background-size: 1400% 100%;
   color: transparent !important;
   -webkit-background-clip: text;
   background-clip: text;
-  animation: customizeTab_rainbowAnimation__1RvHA 4s linear infinite;
+  animation: GUNS__f9-2567f84c-2a4ec79f-1dd67555 4s linear infinite;
   text-shadow: none !important;
   font-size: 17px
 }
 
-.customizeTab_noUsernameEffect__7dXYJ {
+.GUNS__61-5d9e53dd-df17dccc-a2ae0e82 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2525,22 +2543,22 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   color: #999999
 }
 
-.customizeTab_noUsernameEffect__7dXYJ svg {
+.GUNS__61-5d9e53dd-df17dccc-a2ae0e82 svg {
   font-size: 31px
 }
 
-.customizeTab_noUsernameEffect__7dXYJ span {
+.GUNS__61-5d9e53dd-df17dccc-a2ae0e82 span {
   font-size: 14.5px
 }
 
-.customizeTab_audioManager__jetrM {
+.GUNS__82-2060732d-3d5eba93-808c0c15 {
   display: flex;
   flex-direction: column;
   gap: 15px;
   align-items: center
 }
 
-.customizeTab_audioManagerBottomWrapper__8x7yE {
+.GUNS__c8-f348dbe0-a9fbaa30-05997679 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2549,7 +2567,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   box-sizing: border-box
 }
 
-.customizeTab_addAudioButton__RVX_I {
+.GUNS__13-f50d2abf-247a256d-e92b4702 {
   box-sizing: border-box;
   width: 100%;
   display: flex;
@@ -2565,19 +2583,19 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   gap: 6px
 }
 
-.customizeTab_addAudioButton__RVX_I:hover {
+.GUNS__13-f50d2abf-247a256d-e92b4702:hover {
   border: 2px solid #252525
 }
 
-.customizeTab_addAudioButton__RVX_I:active {
+.GUNS__13-f50d2abf-247a256d-e92b4702:active {
   transform: translateY(4px)
 }
 
-.customizeTab_addAudioButton__RVX_I svg {
+.GUNS__13-f50d2abf-247a256d-e92b4702 svg {
   font-size: 21px
 }
 
-.customizeTab_noAudios__ww7vy {
+.GUNS__87-0b436e52-21a20a44-ee9a8e2e {
   font-size: 18px;
   color: #dfdfdf;
   font-weight: 450;
@@ -2585,7 +2603,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   margin: 10px 0 -10px
 }
 
-.customizeTab_audioInput__3V3WP {
+.GUNS__75-0f828c81-f95f6d9c-e047dd55 {
   opacity: 0;
   position: absolute;
   height: 100%;
@@ -2594,19 +2612,19 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   cursor: pointer
 }
 
-.customizeTab_addAudio__Tha9m {
+.GUNS__d6-75e259d9-625adb4b-4043156d {
   display: flex;
   flex-direction: column;
   gap: 15px
 }
 
-.customizeTab_addAudioWrapper__4Javj {
+.GUNS__ad-48fc1f8f-f811be47-e8658309 {
   display: flex;
   flex-direction: column;
   gap: 25px
 }
 
-.customizeTab_audioContainer__qqPmL {
+.GUNS__ac-c23fa93b-263de919-49f1cd68 {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -2620,7 +2638,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   cursor: pointer
 }
 
-.customizeTab_audioDescription__yehzK {
+.GUNS__95-914ff56d-46575c58-bc767286 {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -2629,7 +2647,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   white-space: nowrap
 }
 
-.customizeTab_audioContainer__qqPmL svg:not(.customizeTab_buttonDiv__lRyjY svg) {
+.GUNS__ac-c23fa93b-263de919-49f1cd68 svg:not(.GUNS__23-673ca874-e6737c50-94f4b051 svg) {
   font-size: 35px;
   min-width: 35px;
   padding: 10px;
@@ -2637,7 +2655,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   border-radius: 12px
 }
 
-.customizeTab_audioDescription__yehzK h1 {
+.GUNS__95-914ff56d-46575c58-bc767286 h1 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -2647,14 +2665,14 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   font-weight: 500
 }
 
-.customizeTab_audioDescription__yehzK h3 {
+.GUNS__95-914ff56d-46575c58-bc767286 h3 {
   margin: 0;
   font-size: 14px;
   color: #a8a8a8;
   font-weight: 400
 }
 
-.customizeTab_audios___tTe3 {
+.GUNS__ef-cc9b0310-b7334299-4a87ea94 {
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -2663,18 +2681,18 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   direction: ltr
 }
 
-.customizeTab_buttonDiv__lRyjY {
+.GUNS__23-673ca874-e6737c50-94f4b051 {
   display: flex;
   gap: 3px;
   z-index: 99
 }
 
-.customizeTab_buttonDiv__lRyjY span {
+.GUNS__23-673ca874-e6737c50-94f4b051 span {
   display: flex
 }
 
-.customizeTab_deleteButton__mY2U1 svg,
-.customizeTab_editButton__pm0iQ svg {
+.GUNS__2e-559d778e-462b5f2a-f361cb26 svg,
+.GUNS__96-7eaefbdc-5d1cfa2f-6ccbb392 svg {
   background-color: #fafafa0a;
   border-radius: 9px;
   font-size: 19px !important;
@@ -2682,22 +2700,22 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   transition: .35s
 }
 
-.customizeTab_deleteButton__mY2U1 svg:hover,
-.customizeTab_editButton__pm0iQ svg:hover {
+.GUNS__2e-559d778e-462b5f2a-f361cb26 svg:hover,
+.GUNS__96-7eaefbdc-5d1cfa2f-6ccbb392 svg:hover {
   transform: scale(1.15)
 }
 
-.customizeTab_editButton__pm0iQ svg {
+.GUNS__96-7eaefbdc-5d1cfa2f-6ccbb392 svg {
   padding: 3px;
   color: #636363fa
 }
 
-.customizeTab_deleteButton__mY2U1 svg {
+.GUNS__2e-559d778e-462b5f2a-f361cb26 svg {
   padding: 3px;
   color: #c42626fa
 }
 
-.customizeTab_audiosWrapper__ORu1_ {
+.GUNS__63-00ac4d64-af8286ba-02d5aeda {
   margin: 10px 0 25px;
   display: flex;
   flex-direction: column;
@@ -2705,14 +2723,14 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   box-sizing: border-box
 }
 
-.customizeTab_audioAmount__eh3Q5 {
+.GUNS__ae-d3e72c10-0711931c-7a045502 {
   font-size: 17.5px;
   color: #dfdfdf;
   font-weight: 450;
   margin: 0 0 10px 2px
 }
 
-.customizeTab_activeAudio__MMmKJ {
+.GUNS__f7-958deb9e-00cd1a23-f89bf2c7 {
   background-color: rgba(7, 184, 7, .39);
   border: 2px solid rgba(7, 196, 7, .247);
   align-items: center;
@@ -2725,7 +2743,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   height: fit-content
 }
 
-.customizeTab_audioManagerDescription__pkp7u {
+.GUNS__99-17603627-b78f78f8-b58b1b4d {
   font-size: 16px;
   font-weight: 450;
   color: #dddddd;
@@ -2737,7 +2755,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   box-sizing: border-box
 }
 
-.customizeTab_shuffleSongs__ajcRm {
+.GUNS__79-523a508d-15a8b3dc-978d6a62 {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2748,30 +2766,30 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   border-radius: 15px
 }
 
-.customizeTab_shuffleSongsDescription__56qxu {
+.GUNS__4d-e5101e9b-3af9bc94-b5525692 {
   display: flex;
   flex-direction: column;
   gap: 4px
 }
 
-.customizeTab_shuffleSongsDescription__56qxu h1,
-.customizeTab_shuffleSongsDescription__56qxu h3 {
+.GUNS__4d-e5101e9b-3af9bc94-b5525692 h1,
+.GUNS__4d-e5101e9b-3af9bc94-b5525692 h3 {
   margin: 0
 }
 
-.customizeTab_shuffleSongsDescription__56qxu h1 {
+.GUNS__4d-e5101e9b-3af9bc94-b5525692 h1 {
   font-size: 18.5px;
   color: #dfdfdf;
   font-weight: 500
 }
 
-.customizeTab_shuffleSongsDescription__56qxu h3 {
+.GUNS__4d-e5101e9b-3af9bc94-b5525692 h3 {
   font-size: 14.5px;
   color: #a8a8a8;
   font-weight: 400
 }
 
-.customizeTab_audioContainerWrapper__4TZNt {
+.GUNS__0d-80943a29-f12eea2e-bc71828e {
   display: flex;
   align-items: center;
   gap: 15px;
@@ -2780,7 +2798,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   white-space: nowrap
 }
 
-.customizeTab_audioPlayer__VqTza {
+.GUNS__1f-5420ad77-2f552473-d84ba07f {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2791,60 +2809,60 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   border-radius: 15px
 }
 
-.customizeTab_audioPlayerDescription__efgRg {
+.GUNS__9e-dd2826da-0c1d0558-636784e8 {
   display: flex;
   flex-direction: column;
   gap: 4px
 }
 
-.customizeTab_audioPlayerDescription__efgRg h1,
-.customizeTab_audioPlayerDescription__efgRg h3 {
+.GUNS__9e-dd2826da-0c1d0558-636784e8 h1,
+.GUNS__9e-dd2826da-0c1d0558-636784e8 h3 {
   margin: 0
 }
 
-.customizeTab_audioPlayerDescription__efgRg h1 {
+.GUNS__9e-dd2826da-0c1d0558-636784e8 h1 {
   font-size: 18.5px;
   color: #dfdfdf;
   font-weight: 500
 }
 
-.customizeTab_audioPlayerDescription__efgRg h3 {
+.GUNS__9e-dd2826da-0c1d0558-636784e8 h3 {
   font-size: 14.5px;
   color: #a8a8a8;
   font-weight: 400
 }
 
-.customizeTab_audioManagerSettings__dAboX {
+.GUNS__69-42fd3e9c-db3280c7-c932e68e {
   flex-direction: column
 }
 
-.customizeTab_audioManagerSettings__dAboX,
-.customizeTab_audioUploadCardWrapper__rsWIA {
+.GUNS__69-42fd3e9c-db3280c7-c932e68e,
+.GUNS__80-a08259eb-84c72b21-27e9492f {
   display: flex;
   gap: 10px;
   width: 100%;
   box-sizing: border-box
 }
 
-.customizeTab_audioUploadCardWrapper__rsWIA .customizeTab_uploadCard__iGa_h {
+.GUNS__80-a08259eb-84c72b21-27e9492f .GUNS__ff-9901d788-c95dcffe-fe863c5c {
   width: 100%
 }
 
 @media (max-width:550px) {
-  .customizeTab_audioUploadCardWrapper__rsWIA {
+  .GUNS__80-a08259eb-84c72b21-27e9492f {
     flex-direction: column;
     gap: 5px
   }
 }
 
-.customizeTab_audioCover__IaUjp {
+.GUNS__4d-26ec9e41-095f5932-45b7a255 {
   height: 55px;
   width: auto;
   object-fit: cover;
   border-radius: 10px
 }
 
-.customizeTab_glowSettings__2HlC2 {
+.GUNS__d4-94ed6e31-f0762014-575da6dc {
   margin-top: 5.5px;
   display: flex;
   flex-direction: column;
@@ -2852,14 +2870,14 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   box-sizing: border-box
 }
 
-.customizeTab_glowSettingsInner__NYmTd {
+.GUNS__5b-bc0e78a7-34d1a115-4e74d662 {
   display: flex;
   gap: 10px;
   align-items: center;
   flex-wrap: wrap
 }
 
-.customizeTab_glowSetting__EuUPa {
+.GUNS__df-598036df-66e81bb2-50ac36ba {
   color: #fafafa;
   background-color: #202020;
   border: 2px solid #252525;
@@ -2874,22 +2892,22 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   flex: 1 1 auto
 }
 
-.customizeTab_glowSettingEnabled__4ibLi {
+.GUNS__d3-36b7b7ea-e509628d-53e7c140 {
   background-color: #0f830f4d;
   border: 2px solid #22b6293f
 }
 
-.customizeTab_glowSetting__EuUPa svg {
+.GUNS__df-598036df-66e81bb2-50ac36ba svg {
   font-size: 20px
 }
 
 @media (max-width:670px) {
-  .customizeTab_otherComponent__hInaL {
+  .GUNS__54-d0c36670-3fce8ea5-b9e39f6b {
     flex-direction: column
   }
 }
 
-.customizeTab_unsavedChangesWrapper__hssE_ {
+.GUNS__ff-42097a0b-a7866a1f-f69fee32 {
   position: fixed;
   bottom: 40px;
   width: 100%;
@@ -2901,7 +2919,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   transform: translateX(-50%)
 }
 
-.customizeTab_unsavedChangesBar__voa9M {
+.GUNS__9b-37b85aeb-2826d13a-3aec7653 {
   max-width: 650px;
   width: 95%;
   box-sizing: border-box;
@@ -2916,33 +2934,33 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   pointer-events: auto
 }
 
-.customizeTab_unsavedChangesButtons___uDBb {
+.GUNS__19-8fed3817-56cd3ee3-4021370c {
   display: flex;
   gap: 15px;
   align-items: center
 }
 
-.customizeTab_unsavedChangesButtons___uDBb span {
+.GUNS__19-8fed3817-56cd3ee3-4021370c span {
   cursor: pointer;
   transition: .25s
 }
 
-.customizeTab_unsavedChangesBar__voa9M h1 {
+.GUNS__9b-37b85aeb-2826d13a-3aec7653 h1 {
   margin: 0;
   font-size: 16px;
   color: #fafafa;
   font-weight: 500
 }
 
-.customizeTab_unsavedChangesButtons___uDBb span:first-child {
+.GUNS__19-8fed3817-56cd3ee3-4021370c span:first-child {
   color: #939393
 }
 
-.customizeTab_unsavedChangesButtons___uDBb span:first-child:hover {
+.GUNS__19-8fed3817-56cd3ee3-4021370c span:first-child:hover {
   color: #aaaaaafa
 }
 
-.customizeTab_unsavedChangesButtons___uDBb span:nth-child(2) {
+.GUNS__19-8fed3817-56cd3ee3-4021370c span:nth-child(2) {
   background-color: #7e2c8b63;
   border: 2px solid #7e2c8b7c;
   padding: 7px 15px;
@@ -2954,16 +2972,16 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   justify-content: center
 }
 
-.customizeTab_unsavedChangesButtons___uDBb span:nth-child(2) svg {
+.GUNS__19-8fed3817-56cd3ee3-4021370c span:nth-child(2) svg {
   font-size: 22px
 }
 
-.customizeTab_unsavedChangesButtons___uDBb span:nth-child(2):hover {
+.GUNS__19-8fed3817-56cd3ee3-4021370c span:nth-child(2):hover {
   background-color: #7e2c8b7a;
   border: 2px solid #7e2c8b9a
 }
 
-.customizeTab_discordPresenceSelectWrapper__gVHz0 {
+.GUNS__b3-8ad5e462-8326065f-efda7a7a {
   display: flex;
   align-items: center;
   gap: 5px;
@@ -2971,7 +2989,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   box-sizing: border-box
 }
 
-.customizeTab_discordPresenceSettings__eP7DM {
+.GUNS__ef-001fddd4-d9bd3e1a-78044514 {
   margin-top: 28px;
   background-color: #0c0c0c;
   border-radius: 15px;
@@ -2985,33 +3003,33 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   border: 2px solid transparent
 }
 
-.customizeTab_discordPresenceSettings__eP7DM svg {
+.GUNS__ef-001fddd4-d9bd3e1a-78044514 svg {
   font-size: 23px;
   color: #fafafafa
 }
 
-.customizeTab_discordPresenceSettings__eP7DM:hover {
+.GUNS__ef-001fddd4-d9bd3e1a-78044514:hover {
   border: 2px solid #191919
 }
 
-.customizeTab_discordPresenceSettings__eP7DM:active {
+.GUNS__ef-001fddd4-d9bd3e1a-78044514:active {
   transform: translateY(4px)
 }
 
-.customizeTab_discordPresenceSettingsContainer__2BH7O {
+.GUNS__3e-df8c8265-6a1d7faa-d1a6a41c {
   margin-top: 10px;
   display: flex;
   flex-direction: column;
   gap: 20px
 }
 
-.customizeTab_discordPresenceSettingsSwitchWrapperContainer__iyRA9 {
+.GUNS__c6-cce87869-e9aca86f-843cad86 {
   display: flex;
   align-items: center;
   gap: 10px
 }
 
-.customizeTab_saveDiscordPresenceSettingsButton__v7S3b {
+.GUNS__84-914b4607-67b5c29a-0755b8a7 {
   background-color: #7e2c8b63;
   border: 2px solid #7e2c8b7c;
   padding: 7px 15px;
@@ -3027,16 +3045,16 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   box-sizing: border-box
 }
 
-.customizeTab_saveDiscordPresenceSettingsButton__v7S3b:hover {
+.GUNS__84-914b4607-67b5c29a-0755b8a7:hover {
   background-color: #7e2c8b7a;
   border: 2px solid #7e2c8b9a
 }
 
-.customizeTab_saveDiscordPresenceSettingsButton__v7S3b:active {
+.GUNS__84-914b4607-67b5c29a-0755b8a7:active {
   transform: translateY(4px)
 }
 
-.customizeTab_discordPresenceSettingsDisabled___2jbk {
+.GUNS__e0-18d4e26f-e0026206-e4ae06f7 {
   color: #afafaf;
   text-align: center;
   font-size: 16px;
@@ -3044,14 +3062,14 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   font-weight: 450
 }
 
-.customizeTab_avatarCropperModal__XVA9D {
+.GUNS__f2-a74f4ff7-df77df3e-a3660b12 {
   display: flex;
   flex-direction: column;
   gap: 15px;
   width: 100%
 }
 
-.customizeTab_avatarCropperStage__vUsv9 {
+.GUNS__4f-744742ac-d3af0698-69324ee6 {
   position: relative;
   width: min(100%, 520px);
   aspect-ratio: 1/1;
@@ -3065,18 +3083,18 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   user-select: none
 }
 
-.customizeTab_avatarCropperStage__vUsv9:active {
+.GUNS__4f-744742ac-d3af0698-69324ee6:active {
   cursor: grabbing
 }
 
-.customizeTab_avatarCropperImage__m8Rck {
+.GUNS__a1-1f5ad2ee-fc579d78-6799222b {
   position: absolute;
   top: 50%;
   left: 50%;
   pointer-events: none
 }
 
-.customizeTab_avatarCropperGrid__2C5q3 {
+.GUNS__8d-92ba729d-ccdd8272-55b95f5a {
   position: absolute;
   inset: 0;
   pointer-events: none;
@@ -3084,7 +3102,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   background-size: 33.33% 100%, 100% 33.33%
 }
 
-.customizeTab_avatarCropperMask__m8HI_ {
+.GUNS__fb-4bd3a547-085dc552-07c96151 {
   position: absolute;
   inset: 0;
   pointer-events: none;
@@ -3093,35 +3111,35 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   border-radius: 18px
 }
 
-.customizeTab_avatarCropperBottom__1LXxP {
+.GUNS__ed-003d3da7-f54e36be-331eb751 {
   display: flex;
   flex-direction: column;
   gap: 8px
 }
 
-.customizeTab_avatarCropperModalBody__5ovtp {
+.GUNS__fc-f3c9e8e4-4c92e337-aa4a808e {
   overflow-y: auto !important;
   overflow-x: hidden !important;
   max-height: min(82vh, calc(100dvh - 130px)) !important;
   padding-bottom: max(10px, env(safe-area-inset-bottom))
 }
 
-.customizeTab_avatarCropperHint__brko2 {
+.GUNS__53-8e667406-c8ac4ae7-93ea8dd3 {
   margin: 0;
   color: #afafaf;
   font-size: 13px;
   text-align: center
 }
 
-.customizeTab_avatarCropperHintDesktop__Ep39L {
+.GUNS__0c-1b2eac35-81221dda-5c38ec9f {
   display: inline
 }
 
-.customizeTab_avatarCropperHintMobile__j1Tea {
+.GUNS__39-3253d6ab-5ec8b33e-282d4d05 {
   display: none
 }
 
-.customizeTab_avatarCropperSliderGroup__1i5xI {
+.GUNS__b7-1b323e38-2baae0d0-6bba990f {
   border-radius: 15px;
   border: 2px solid #171717;
   background-color: #111111;
@@ -3131,26 +3149,26 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   gap: 7px
 }
 
-.customizeTab_avatarCropperSliderLabel__8GbpZ {
+.GUNS__99-daad1c6f-66420603-3d216fca {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 8px
 }
 
-.customizeTab_avatarCropperSliderLabel__8GbpZ span {
+.GUNS__99-daad1c6f-66420603-3d216fca span {
   font-size: 13px;
   color: #d2d2d2;
   font-weight: 500
 }
 
-.customizeTab_avatarCropperSliderMeta__e6ZDu {
+.GUNS__c3-b5d6f531-dd9bbcde-5b980600 {
   display: flex;
   align-items: center;
   gap: 6px
 }
 
-.customizeTab_avatarCropperInlineReset__VwQiI {
+.GUNS__54-a94fbe86-3264a227-fab873bb {
   border: 1px solid #2c2c2c;
   background-color: #151515;
   color: #d9d9d9;
@@ -3161,12 +3179,12 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   transition: .18s
 }
 
-.customizeTab_avatarCropperInlineReset__VwQiI:hover {
+.GUNS__54-a94fbe86-3264a227-fab873bb:hover {
   background-color: #1d1d1d;
   color: #f2f2f2
 }
 
-.customizeTab_avatarCropperInlineReset__VwQiI:disabled {
+.GUNS__54-a94fbe86-3264a227-fab873bb:disabled {
   cursor: not-allowed;
   opacity: .45;
   color: #9a9a9a;
@@ -3174,7 +3192,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   border-color: #252525
 }
 
-.customizeTab_avatarCropperSliderLabel__8GbpZ strong {
+.GUNS__99-daad1c6f-66420603-3d216fca strong {
   font-size: 11.5px;
   padding: 3px 7px;
   border-radius: 999px;
@@ -3186,7 +3204,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   text-align: center
 }
 
-.customizeTab_avatarCropperActions__nbTtn {
+.GUNS__b1-7b1ad7bf-2d2ce580-2c01cf52 {
   display: flex;
   gap: 8px;
   justify-content: flex-end;
@@ -3194,8 +3212,8 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   margin-top: 10px
 }
 
-.customizeTab_avatarCropperPrimaryButton__b_3u1,
-.customizeTab_avatarCropperSecondaryButton__PxCU_ {
+.GUNS__70-7eddbe33-4eb66fea-6217cd6d,
+.GUNS__ae-5649c567-28b4fce4-bed14fe8 {
   border-radius: 15px;
   border: 2px solid transparent;
   padding: 9px 13px;
@@ -3211,73 +3229,73 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   height: 43px
 }
 
-.customizeTab_avatarCropperSecondaryButton__PxCU_ {
+.GUNS__ae-5649c567-28b4fce4-bed14fe8 {
   background-color: #161616;
   border-color: #212121
 }
 
-.customizeTab_avatarCropperSecondaryButton__PxCU_:hover {
+.GUNS__ae-5649c567-28b4fce4-bed14fe8:hover {
   background-color: #1d1d1d
 }
 
-.customizeTab_avatarCropperPrimaryButton__b_3u1 {
+.GUNS__70-7eddbe33-4eb66fea-6217cd6d {
   background-color: #7e2c8b63;
   border-color: #7e2c8b5d
 }
 
-.customizeTab_avatarCropperPrimaryButton__b_3u1:hover {
+.GUNS__70-7eddbe33-4eb66fea-6217cd6d:hover {
   background-color: #7e2c8b7a;
   border-color: #7e2c8b9a
 }
 
-.customizeTab_avatarCropperPrimaryButton__b_3u1:active,
-.customizeTab_avatarCropperSecondaryButton__PxCU_:active {
+.GUNS__70-7eddbe33-4eb66fea-6217cd6d:active,
+.GUNS__ae-5649c567-28b4fce4-bed14fe8:active {
   transform: translateY(2px)
 }
 
 @media (max-width:600px) {
-  .customizeTab_avatarCropperModal__XVA9D {
+  .GUNS__f2-a74f4ff7-df77df3e-a3660b12 {
     gap: 10px
   }
 
-  .customizeTab_avatarCropperHint__brko2 {
+  .GUNS__53-8e667406-c8ac4ae7-93ea8dd3 {
     font-size: 12.5px;
     text-align: left
   }
 
-  .customizeTab_avatarCropperHintDesktop__Ep39L {
+  .GUNS__0c-1b2eac35-81221dda-5c38ec9f {
     display: none
   }
 
-  .customizeTab_avatarCropperHintMobile__j1Tea {
+  .GUNS__39-3253d6ab-5ec8b33e-282d4d05 {
     display: inline
   }
 
-  .customizeTab_avatarCropperStage__vUsv9 {
+  .GUNS__4f-744742ac-d3af0698-69324ee6 {
     width: 100%
   }
 
-  .customizeTab_avatarCropperActions__nbTtn {
+  .GUNS__b1-7b1ad7bf-2d2ce580-2c01cf52 {
     justify-content: stretch;
     margin-top: 4px
   }
 
-  .customizeTab_avatarCropperPrimaryButton__b_3u1,
-  .customizeTab_avatarCropperSecondaryButton__PxCU_ {
+  .GUNS__70-7eddbe33-4eb66fea-6217cd6d,
+  .GUNS__ae-5649c567-28b4fce4-bed14fe8 {
     flex: 1 1
   }
 
-  .customizeTab_avatarCropperSliderGroup__1i5xI {
+  .GUNS__b7-1b323e38-2baae0d0-6bba990f {
     padding: 9px 9px 14px
   }
 }
 
-.customizeTab_avatarCropperRotationSlider__J_6cZ,
-.customizeTab_avatarCropperZoomSlider__V_zqH {
+.GUNS__28-f18162cc-aba4f872-00ae8eb7,
+.GUNS__77-b500e5ba-1ca6a830-9dea4897 {
   padding: 0 5px
 }
 
-.checkboxWrapper_checkboxWrapper__9OUSt {
+.GUNS__53-fb7620db-5edbb5d3-d5838081 {
   display: flex;
   align-items: flex-start;
   gap: 12px;
@@ -3287,13 +3305,13 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   line-height: 1.4
 }
 
-.checkboxWrapper_checkboxWrapper__9OUSt input {
+.GUNS__53-fb7620db-5edbb5d3-d5838081 input {
   position: absolute;
   opacity: 0;
   pointer-events: none
 }
 
-.checkboxWrapper_checkboxBox__LRzEf {
+.GUNS__e5-546bd132-f2783efa-b167c221 {
   width: 20px;
   height: 20px;
   border-radius: 6px;
@@ -3306,16 +3324,16 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   flex-shrink: 0
 }
 
-.checkboxWrapper_checkboxWrapper__9OUSt[data-disabled=true] {
+.GUNS__53-fb7620db-5edbb5d3-d5838081[data-disabled=true] {
   opacity: .6;
   cursor: not-allowed
 }
 
-.checkboxWrapper_checkboxWrapper__9OUSt[data-disabled=true] .checkboxWrapper_checkboxBox__LRzEf {
+.GUNS__53-fb7620db-5edbb5d3-d5838081[data-disabled=true] .GUNS__e5-546bd132-f2783efa-b167c221 {
   border-color: #1a1a1a
 }
 
-.checkboxWrapper_checkmark__JWvoQ {
+.GUNS__37-9c3ca347-1dfc372f-b86cd6fc {
   opacity: 0;
   color: #fff;
   width: 14px;
@@ -3324,37 +3342,37 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   transition: opacity .1s ease, margin-bottom .1s ease
 }
 
-.checkboxWrapper_checkboxWrapper__9OUSt[data-checked=true] .checkboxWrapper_checkboxBox__LRzEf {
+.GUNS__53-fb7620db-5edbb5d3-d5838081[data-checked=true] .GUNS__e5-546bd132-f2783efa-b167c221 {
   background-color: #ad50d8;
   border-color: #ad50d8
 }
 
-.checkboxWrapper_checkboxWrapper__9OUSt[data-checked=true] .checkboxWrapper_checkmark__JWvoQ {
+.GUNS__53-fb7620db-5edbb5d3-d5838081[data-checked=true] .GUNS__37-9c3ca347-1dfc372f-b86cd6fc {
   opacity: 1;
   margin-bottom: 5.5px
 }
 
-.checkboxWrapper_checkboxContent__XMPvb {
+.GUNS__ab-99239a2d-372d534a-01c82082 {
   display: flex;
   flex-direction: column;
   gap: 2px
 }
 
-.checkboxWrapper_label__W2Pzt {
+.GUNS__41-9e476fd0-97f08255-c536c341 {
   font-weight: 500;
   color: #f4f4f4
 }
 
-.checkboxWrapper_description__1OY4I {
+.GUNS__09-9ac6549b-7658a140-3ba7fea8 {
   color: #a9a9a9;
   font-size: 13px
 }
 
-.selectWrapper_container__BGFhd {
+.GUNS__a3-24c433d6-378c65c5-2a8e726a {
   width: 100%
 }
 
-.selectWrapper_label__l8Ag6 {
+.GUNS__4f-eeffaf02-c3f457dc-e1ef8e24 {
   margin: 0 0 6px 3px;
   font-size: 16px;
   font-weight: 500;
@@ -3362,7 +3380,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   display: flex
 }
 
-.selectWrapper_shell__Gd_uz {
+.GUNS__3b-14d46023-9e79b44b-159c4ff0 {
   position: relative;
   display: flex;
   align-items: center;
@@ -3372,20 +3390,20 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   transition: border-color .2s ease, box-shadow .2s ease, background-color .2s ease, opacity .2s ease
 }
 
-.selectWrapper_shell__Gd_uz[data-open=true] {
+.GUNS__3b-14d46023-9e79b44b-159c4ff0[data-open=true] {
   border-color: #171717
 }
 
-.selectWrapper_shell__Gd_uz:hover {
+.GUNS__3b-14d46023-9e79b44b-159c4ff0:hover {
   border-color: #191919
 }
 
-.selectWrapper_shell__Gd_uz[data-disabled=true] {
+.GUNS__3b-14d46023-9e79b44b-159c4ff0[data-disabled=true] {
   opacity: .55;
   cursor: not-allowed
 }
 
-.selectWrapper_iconSlot___0FXz {
+.GUNS__d3-c21cfd38-430b0eff-b94dc041 {
   position: absolute;
   left: 12px;
   top: 50%;
@@ -3398,7 +3416,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   pointer-events: none
 }
 
-.selectWrapper_trigger__H6qu1 {
+.GUNS__5d-ca15789f-fd0ac2bd-19e39093 {
   flex: 1 1;
   border: none;
   background: transparent;
@@ -3410,15 +3428,15 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   cursor: pointer
 }
 
-.selectWrapper_triggerWithIcon__npo7_ {
+.GUNS__65-05a6d251-5f226ec3-05f5c4ce {
   padding-left: 48px
 }
 
-.selectWrapper_trigger__H6qu1:disabled {
+.GUNS__5d-ca15789f-fd0ac2bd-19e39093:disabled {
   cursor: not-allowed
 }
 
-.selectWrapper_value__onMW2 {
+.GUNS__07-9e3274c0-c9b7af62-a0bf4c90 {
   display: block;
   white-space: nowrap;
   overflow: hidden;
@@ -3426,11 +3444,11 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   font-size: 15px
 }
 
-.selectWrapper_placeholder__AJ7aS {
+.GUNS__48-aee4e72d-4ec1dc72-c8ce0788 {
   color: #6c6c6c
 }
 
-.selectWrapper_chevrons__hIv57 {
+.GUNS__bf-591b5384-98753a6b-866fb128 {
   position: absolute;
   right: 13px;
   top: 50%;
@@ -3444,7 +3462,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   pointer-events: none
 }
 
-.selectWrapper_dropdown__4g2Mv {
+.GUNS__07-c3fa643a-8fe967b1-59b4fc78 {
   position: fixed;
   border-radius: 15px;
   border: 2px solid #151515;
@@ -3461,14 +3479,14 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   z-index: 999999999
 }
 
-.selectWrapper_dropdown__4g2Mv[data-open=true] {
+.GUNS__07-c3fa643a-8fe967b1-59b4fc78[data-open=true] {
   opacity: 1;
   visibility: visible;
   transform: translateY(0) scale(1);
   filter: blur(0)
 }
 
-.selectWrapper_optionList__nF5AJ {
+.GUNS__38-ea4b0fb7-4d271638-45d22497 {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -3478,20 +3496,20 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   scrollbar-color: #2a2a2a transparent
 }
 
-.selectWrapper_optionList__nF5AJ::-webkit-scrollbar {
+.GUNS__38-ea4b0fb7-4d271638-45d22497::-webkit-scrollbar {
   width: 6px
 }
 
-.selectWrapper_optionList__nF5AJ::-webkit-scrollbar-thumb {
+.GUNS__38-ea4b0fb7-4d271638-45d22497::-webkit-scrollbar-thumb {
   background-color: #2a2a2a;
   border-radius: 6px
 }
 
-.selectWrapper_optionList__nF5AJ::-webkit-scrollbar-track {
+.GUNS__38-ea4b0fb7-4d271638-45d22497::-webkit-scrollbar-track {
   background: transparent
 }
 
-.selectWrapper_option__5YaSH {
+.GUNS__58-75b6f7ee-8f90fb52-c8d87b43 {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -3504,39 +3522,39 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   transition: background .15s ease, color .15s ease
 }
 
-.selectWrapper_option__5YaSH[data-highlighted=true] {
+.GUNS__58-75b6f7ee-8f90fb52-c8d87b43[data-highlighted=true] {
   background: #1b1b1b
 }
 
-.selectWrapper_option__5YaSH[data-selected=true] {
+.GUNS__58-75b6f7ee-8f90fb52-c8d87b43[data-selected=true] {
   color: #ffffff;
   font-weight: 500
 }
 
-.selectWrapper_option__5YaSH[data-disabled=true] {
+.GUNS__58-75b6f7ee-8f90fb52-c8d87b43[data-disabled=true] {
   opacity: .45;
   cursor: not-allowed
 }
 
-.selectWrapper_option__5YaSH[data-disabled=true]:hover {
+.GUNS__58-75b6f7ee-8f90fb52-c8d87b43[data-disabled=true]:hover {
   background: transparent
 }
 
-.selectWrapper_emptyState__pO_b_ {
+.GUNS__a1-5fe1652b-2b03f8ad-cf811adc {
   padding: 16px 10px;
   text-align: center;
   font-size: 14px;
   color: #8f8f8f
 }
 
-.tooltipWrapper_wrapper__XIQY2 {
+.GUNS__ba-7f5364ea-c3a36c5d-b0f3d011 {
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center
 }
 
-.tooltipWrapper_tooltip__vVc01 {
+.GUNS__ca-42ad2aff-c7e7db33-534468e1 {
   --tooltip-hidden-x: 0px;
   --tooltip-visible-x: 0px;
   --tooltip-hidden-y: -4px;
@@ -3568,71 +3586,71 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   will-change: transform, opacity
 }
 
-.tooltipWrapper_tooltip__vVc01[data-visible=true] {
+.GUNS__ca-42ad2aff-c7e7db33-534468e1[data-visible=true] {
   opacity: 1;
   transform: translate3d(var(--tooltip-visible-x), var(--tooltip-visible-y), 0) scale(1)
 }
 
-.tooltipWrapper_tooltip__vVc01[data-placement=top] {
+.GUNS__ca-42ad2aff-c7e7db33-534468e1[data-placement=top] {
   --tooltip-hidden-y: 6px;
   --tooltip-visible-y: 0px;
   transform-origin: 50% 100%
 }
 
-.tooltipWrapper_tooltip__vVc01[data-placement=top]:after {
+.GUNS__ca-42ad2aff-c7e7db33-534468e1[data-placement=top]:after {
   bottom: -6px;
   left: 50%;
   transform: translate(-50%) rotate(45deg)
 }
 
-.tooltipWrapper_tooltip__vVc01[data-placement=bottom] {
+.GUNS__ca-42ad2aff-c7e7db33-534468e1[data-placement=bottom] {
   --tooltip-hidden-y: -6px;
   --tooltip-visible-y: 0px;
   transform-origin: 50% 0
 }
 
-.tooltipWrapper_tooltip__vVc01[data-placement=bottom]:after {
+.GUNS__ca-42ad2aff-c7e7db33-534468e1[data-placement=bottom]:after {
   top: -6px;
   left: 50%;
   transform: translate(-50%) rotate(45deg)
 }
 
-.tooltipWrapper_tooltip__vVc01[data-placement=left] {
+.GUNS__ca-42ad2aff-c7e7db33-534468e1[data-placement=left] {
   --tooltip-hidden-x: 6px;
   --tooltip-visible-x: 0px;
   transform-origin: 100% 50%
 }
 
-.tooltipWrapper_tooltip__vVc01[data-placement=left]:after {
+.GUNS__ca-42ad2aff-c7e7db33-534468e1[data-placement=left]:after {
   right: -6px;
   top: 50%;
   transform: translateY(-50%) rotate(45deg)
 }
 
-.tooltipWrapper_tooltip__vVc01[data-placement=right] {
+.GUNS__ca-42ad2aff-c7e7db33-534468e1[data-placement=right] {
   --tooltip-hidden-x: -6px;
   --tooltip-visible-x: 0px;
   transform-origin: 0 50%
 }
 
-.tooltipWrapper_tooltip__vVc01[data-placement=right]:after {
+.GUNS__ca-42ad2aff-c7e7db33-534468e1[data-placement=right]:after {
   left: -6px;
   top: 50%;
   transform: translateY(-50%) rotate(45deg)
 }
 
 @media (prefers-reduced-motion:reduce) {
-  .tooltipWrapper_tooltip__vVc01 {
+  .GUNS__ca-42ad2aff-c7e7db33-534468e1 {
     transition: opacity .001ms, visibility .001ms;
     transform: none
   }
 
-  .tooltipWrapper_tooltip__vVc01[data-visible=true] {
+  .GUNS__ca-42ad2aff-c7e7db33-534468e1[data-visible=true] {
     transform: none
   }
 }
 
-.modalWrapper_overlay__YYEDi {
+.GUNS__2a-ec424462-e2d1ad6f-42d31c98 {
   position: fixed;
   inset: 0;
   background-color: rgba(0, 0, 0, .66);
@@ -3644,15 +3662,15 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   opacity: 0
 }
 
-.modalWrapper_overlay__YYEDi[data-centered=true] {
+.GUNS__2a-ec424462-e2d1ad6f-42d31c98[data-centered=true] {
   align-items: center
 }
 
-.modalWrapper_overlay__YYEDi[data-centered=false] {
+.GUNS__2a-ec424462-e2d1ad6f-42d31c98[data-centered=false] {
   align-items: flex-start
 }
 
-.modalWrapper_modal__M1y6L {
+.GUNS__c9-9f956df0-2aa75d71-7434650d {
   border-radius: 20px;
   width: 100%;
   max-width: 850px;
@@ -3664,23 +3682,23 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   opacity: 0
 }
 
-.modalWrapper_overlay__YYEDi[data-state=open] {
-  animation: modalWrapper_overlay-fade-in__xCPl5 .16s ease forwards
+.GUNS__2a-ec424462-e2d1ad6f-42d31c98[data-state=open] {
+  animation: GUNS__28-fac3e645-eb45c253-1613aaec .16s ease forwards
 }
 
-.modalWrapper_overlay__YYEDi[data-state=closing] {
-  animation: modalWrapper_overlay-fade-out__MSx7M .14s ease forwards
+.GUNS__2a-ec424462-e2d1ad6f-42d31c98[data-state=closing] {
+  animation: GUNS__08-a43818b0-b02ed44f-26fc9b5d .14s ease forwards
 }
 
-.modalWrapper_modal__M1y6L[data-state=open] {
-  animation: modalWrapper_modal-scale-in__Ld0gl .23s ease forwards
+.GUNS__c9-9f956df0-2aa75d71-7434650d[data-state=open] {
+  animation: GUNS__f8-f3bfe6a6-ed71fab1-6cb58cec .23s ease forwards
 }
 
-.modalWrapper_modal__M1y6L[data-state=closing] {
-  animation: modalWrapper_modal-scale-out__IUp7n .25s ease forwards
+.GUNS__c9-9f956df0-2aa75d71-7434650d[data-state=closing] {
+  animation: GUNS__d9-8be0fc70-7c7db8fc-95d242f5 .25s ease forwards
 }
 
-.modalWrapper_header__cjFZs {
+.GUNS__c6-de21a81f-58192bf7-b172e0ea {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -3688,14 +3706,14 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   padding: 10px 14px 12px
 }
 
-.modalWrapper_title__RzvAM {
+.GUNS__2a-e1e76140-19cae230-28ef5727 {
   margin: 0;
   font-size: 15.5px;
   font-weight: 550;
   color: #f8f8f8
 }
 
-.modalWrapper_closeButton__Z8MLT {
+.GUNS__8f-a6cb3991-90ec747f-4d7f9d93 {
   border: none;
   background: transparent;
   color: #adadad;
@@ -3706,18 +3724,18 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   outline: none
 }
 
-.modalWrapper_closeButton__Z8MLT:hover {
+.GUNS__8f-a6cb3991-90ec747f-4d7f9d93:hover {
   color: #ffffff
 }
 
-.modalWrapper_body__AsTAG {
+.GUNS__28-d82a957e-1d95260e-e1b07846 {
   padding: 0 14px 15px;
   max-height: calc(90vh - 120px);
   overflow-y: auto;
   overflow-x: hidden
 }
 
-@keyframes modalWrapper_overlay-fade-in__xCPl5 {
+@keyframes GUNS__28-fac3e645-eb45c253-1613aaec {
   0% {
     opacity: 0
   }
@@ -3727,7 +3745,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   }
 }
 
-@keyframes modalWrapper_overlay-fade-out__MSx7M {
+@keyframes GUNS__08-a43818b0-b02ed44f-26fc9b5d {
   0% {
     opacity: 1
   }
@@ -3737,7 +3755,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   }
 }
 
-@keyframes modalWrapper_modal-scale-in__Ld0gl {
+@keyframes GUNS__f8-f3bfe6a6-ed71fab1-6cb58cec {
   0% {
     opacity: 0;
     transform: scale(.85)
@@ -3749,7 +3767,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   }
 }
 
-@keyframes modalWrapper_modal-scale-out__IUp7n {
+@keyframes GUNS__d9-8be0fc70-7c7db8fc-95d242f5 {
   0% {
     opacity: 1;
     transform: scale(1)
@@ -3761,18 +3779,18 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   }
 }
 
-.authSocialButtons_socialButtons__IMxvB {
+.GUNS__32-620ea355-a1cc4a11-0c360b6c {
   display: flex;
   flex-direction: column;
   gap: 8px;
   width: 100%
 }
 
-.authSocialButtons_compact__lH7Z0 {
+.GUNS__ec-11371991-35223594-ec326ace {
   gap: 11px
 }
 
-.authSocialButtons_socialButton__ehef5 {
+.GUNS__98-edf3a2ac-0afd67ed-866e7ec6 {
   width: 100%;
   border: 2px solid #1c1c1c;
   border-radius: 17px;
@@ -3791,21 +3809,21 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   position: relative
 }
 
-.authSocialButtons_socialButton__ehef5:hover:not(:disabled) {
+.GUNS__98-edf3a2ac-0afd67ed-866e7ec6:hover:not(:disabled) {
   border-color: #232323;
   background: #1c1c1c
 }
 
-.authSocialButtons_socialButton__ehef5:active:not(:disabled) {
+.GUNS__98-edf3a2ac-0afd67ed-866e7ec6:active:not(:disabled) {
   transform: translateY(2px)
 }
 
-.authSocialButtons_socialButton__ehef5:disabled {
+.GUNS__98-edf3a2ac-0afd67ed-866e7ec6:disabled {
   opacity: .72;
   cursor: default
 }
 
-.authSocialButtons_icon__WZ8Ky {
+.GUNS__4e-f5d84cc9-7f32510b-16cf00a0 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3814,17 +3832,17 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   flex-shrink: 0
 }
 
-.authSocialButtons_icon__WZ8Ky svg {
+.GUNS__4e-f5d84cc9-7f32510b-16cf00a0 svg {
   display: block
 }
 
-.authSocialButtons_buttonText__EggMW {
+.GUNS__f2-79752ffe-3875da3c-c7bacfca {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis
 }
 
-.authSocialButtons_lastUsedBadge__XapKy {
+.GUNS__6e-53bbcc89-272f7dd5-293a1953 {
   position: absolute;
   top: -12px;
   right: -14px;
@@ -3837,12 +3855,12 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   pointer-events: none
 }
 
-.overflowText_overflowText__BvWn9 {
+.GUNS__0a-c73bda7f-ec73c2af-ec6abbe5 {
   display: block
 }
 
-.overflowText_overflowTextContent__6gjLY,
-.overflowText_overflowText__BvWn9 {
+.GUNS__0a-c73bda7f-ec73c2af-ec6abbe5,
+.GUNS__29-07f9604e-f4d8e0d9-ad473a5c {
   min-width: 0;
   max-width: 100%;
   overflow: hidden;
@@ -3850,21 +3868,21 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   white-space: nowrap
 }
 
-.overflowText_overflowTextContent__6gjLY {
+.GUNS__29-07f9604e-f4d8e0d9-ad473a5c {
   display: inline-block;
   vertical-align: top
 }
 
-.overflowText_isScrollable__zQkJA {
+.GUNS__79-2afeb800-bb50c375-1f18c0a2 {
   max-width: none;
   overflow: visible;
   text-overflow: clip;
   width: max-content;
-  animation: overflowText_overflowTextPan__sN9l5 var(--overflow-text-duration, 8s) ease-in-out infinite alternate;
+  animation: GUNS__ca-92bb5fe1-ffe7fbdf-6ec087a4 var(--overflow-text-duration, 8s) ease-in-out infinite alternate;
   will-change: transform
 }
 
-@keyframes overflowText_overflowTextPan__sN9l5 {
+@keyframes GUNS__ca-92bb5fe1-ffe7fbdf-6ec087a4 {
 
   0%,
   14% {
@@ -3878,7 +3896,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
 }
 
 @media (prefers-reduced-motion:reduce) {
-  .overflowText_isScrollable__zQkJA {
+  .GUNS__79-2afeb800-bb50c375-1f18c0a2 {
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -3887,7 +3905,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   }
 }
 
-.sliderWrapper_wrapper__gzM17 {
+.GUNS__ec-a9da6dd8-132e02a7-cd16b658 {
   display: flex;
   align-items: center;
   gap: 16px;
@@ -3895,7 +3913,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   min-width: 0
 }
 
-.sliderWrapper_sliderContent__uCR1G {
+.GUNS__96-8304f174-bd54cefb-75d6707a {
   width: 100%;
   min-width: 0;
   flex: 1 1;
@@ -3905,7 +3923,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   position: relative
 }
 
-.sliderWrapper_sliderShell__MTFUa {
+.GUNS__44-193d757e-48269873-02bed72a {
   --track-height: 10px;
   --thumb-size: 15px;
   --touch-target-height: 36px;
@@ -3917,7 +3935,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   padding: var(--track-offset) 0 0
 }
 
-.sliderWrapper_track__Xgedw {
+.GUNS__72-5ce6f53d-1413285c-aa6090ba {
   width: 100%;
   height: 10px;
   border-radius: 999px;
@@ -3925,7 +3943,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   position: relative
 }
 
-.sliderWrapper_progress__gFerd {
+.GUNS__57-039aee70-e5a62261-c63c93e9 {
   position: absolute;
   top: 0;
   left: 0;
@@ -3934,7 +3952,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   background-color: rgb(134, 142, 150)
 }
 
-.sliderWrapper_thumb__KYwhv {
+.GUNS__20-345a5613-0b52cc9b-60d52f5a {
   position: absolute;
   top: 50%;
   width: var(--thumb-size);
@@ -3949,7 +3967,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   transform: translateY(-50%)
 }
 
-.sliderWrapper_range__EZCQS {
+.GUNS__f2-0dba9ea2-5811641b-e8f7ca3d {
   appearance: none;
   background: transparent;
   position: absolute;
@@ -3968,11 +3986,11 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   -webkit-tap-highlight-color: transparent
 }
 
-.sliderWrapper_range__EZCQS:disabled {
+.GUNS__f2-0dba9ea2-5811641b-e8f7ca3d:disabled {
   cursor: not-allowed
 }
 
-.sliderWrapper_marks__2rpOc {
+.GUNS__bb-eca8726a-511bfcaa-1f3a0f0b {
   position: absolute;
   inset: 0;
   pointer-events: none;
@@ -3980,7 +3998,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   color: #757575
 }
 
-.sliderWrapper_mark___KvGl {
+.GUNS__7d-7a14a53e-dda05dd7-53bba004 {
   position: absolute;
   top: 0;
   transform: translateX(-50%);
@@ -3990,7 +4008,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   gap: 10px
 }
 
-.sliderWrapper_markDot__rJqsU {
+.GUNS__d3-1976450f-9b2b2cdf-a9709b05 {
   width: 6px;
   height: 6px;
   border-radius: 50%;
@@ -3999,18 +4017,18 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   transition: background .12s ease, border-color .12s ease, box-shadow .12s ease
 }
 
-.sliderWrapper_markDot__rJqsU[data-active=true] {
+.GUNS__d3-1976450f-9b2b2cdf-a9709b05[data-active=true] {
   background: #ffffff;
   border-color: #ffffff
 }
 
-.sliderWrapper_markLabel__vO_PU {
+.GUNS__b7-e71a8b02-36dda168-51e16392 {
   white-space: nowrap;
   color: rgba(255, 255, 255, .8);
   font-size: clamp(10px, 2.2vw, 12px)
 }
 
-.sliderWrapper_valueLabel__bFZqo {
+.GUNS__cd-2203985c-bbac1cbe-0445495c {
   font-size: 13px;
   font-weight: 600;
   color: #f6f7fb;
@@ -4018,7 +4036,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   text-align: right
 }
 
-.sliderWrapper_tooltip__oZii8 {
+.GUNS__0d-d338da93-6652d4fb-5730347d {
   position: absolute;
   top: -18px;
   left: 50%;
@@ -4039,14 +4057,14 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   will-change: opacity, transform
 }
 
-.sliderWrapper_tooltip__oZii8[data-visible=true] {
+.GUNS__0d-d338da93-6652d4fb-5730347d[data-visible=true] {
   opacity: 1;
   visibility: visible;
   transform: translate(-50%, -100%) scale(1);
   transition: opacity .14s ease, transform .18s cubic-bezier(.16, 1, .3, 1), visibility 0s linear 0s
 }
 
-.sliderWrapper_tooltip__oZii8:after {
+.GUNS__0d-d338da93-6652d4fb-5730347d:after {
   content: "";
   position: absolute;
   bottom: -4px;
@@ -4060,35 +4078,35 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
 }
 
 @media (prefers-reduced-motion:reduce) {
-  .sliderWrapper_tooltip__oZii8 {
+  .GUNS__0d-d338da93-6652d4fb-5730347d {
     transition: opacity .01ms linear, visibility .01ms linear;
     transform: translate(-50%, -100%)
   }
 }
 
 @media (max-width:600px) {
-  .sliderWrapper_wrapper__gzM17 {
+  .GUNS__ec-a9da6dd8-132e02a7-cd16b658 {
     flex-direction: column;
     align-items: stretch;
     gap: 8px
   }
 
-  .sliderWrapper_sliderShell__MTFUa {
+  .GUNS__44-193d757e-48269873-02bed72a {
     --track-height: 12px;
     --thumb-size: 20px;
     --touch-target-height: 44px
   }
 
-  .sliderWrapper_mark___KvGl {
+  .GUNS__7d-7a14a53e-dda05dd7-53bba004 {
     gap: 8px
   }
 
-  .sliderWrapper_valueLabel__bFZqo {
+  .GUNS__cd-2203985c-bbac1cbe-0445495c {
     text-align: left
   }
 }
 
-.userLayout4_userInformation__jLiFz {
+.GUNS__9f-8396021a-805886d8-29713a45 {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -4096,50 +4114,50 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   margin-top: -70px
 }
 
-.userLayout4_usernameWrapper__oQeKy {
+.GUNS__fb-92724b84-219a1efd-fe77ee7b {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 5px
 }
 
-.userLayout4_avatar__zJ0K1 {
+.GUNS__e7-34b45806-7f2941c7-b256a4be {
   width: 118px;
   height: 118px;
   border-radius: 35px;
   object-fit: cover
 }
 
-.userLayout4_userDescriptionText__iEEap,
-.userLayout4_userDescriptionUsername__2Dozf,
-.userLayout4_usernameCursor__fvSqj {
+.GUNS__25-dc8a4805-a493a34f-16defd34,
+.GUNS__80-66bef5fd-6a5a1482-54b0562a,
+.GUNS__92-49ba7775-3b35063a-5d503469 {
   margin: 0;
   color: var(--textColor)
 }
 
-.userLayout4_userDescriptionText__iEEap {
+.GUNS__92-49ba7775-3b35063a-5d503469 {
   margin-top: 5px
 }
 
-.userLayout4_userDescriptionUsername__2Dozf,
-.userLayout4_usernameCursor__fvSqj {
+.GUNS__25-dc8a4805-a493a34f-16defd34,
+.GUNS__80-66bef5fd-6a5a1482-54b0562a {
   text-shadow: var(--colorUsernameGlow);
   width: fit-content;
   background-image: var(--usernameEffects)
 }
 
-.userLayout4_usernameCursor__fvSqj {
+.GUNS__80-66bef5fd-6a5a1482-54b0562a {
   font-weight: 400 !important
 }
 
-.userLayout4_userDescription__EzbhR {
+.GUNS__b5-72772e19-c0ab7504-37751a09 {
   max-width: 27rem;
   display: flex;
   flex-direction: column;
   margin-left: 5px
 }
 
-.userLayout4_topRightWrapper__Tluww {
+.GUNS__4a-b11da200-4cb18dbe-e52bd320 {
   justify-content: left;
   display: flex;
   top: 12px;
@@ -4149,7 +4167,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   right: 3px
 }
 
-.userLayout4_topRightDivider__PFEua {
+.GUNS__07-850e85b3-5cfd863f-515e963a {
   width: 2px;
   background: var(--modernLayoutBottomLeftDivider);
   height: 15px;
@@ -4157,11 +4175,11 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   margin-right: 2px
 }
 
-.userLayout4_socialsWrapper__vdg_N {
+.GUNS__25-9d1373ac-48e52581-75d99041 {
   padding: 0 11px
 }
 
-.userLayout4_discordPresenceWidget__2Gmku {
+.GUNS__94-1fcf4741-8dc5da1c-b3f8ab72 {
   width: 100%;
   max-width: var(--containerWidth);
   border-radius: var(--containerRadius);
@@ -4179,16 +4197,16 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   gap: 13px
 }
 
-.userLayout4_discordAvatar__xmyv3 {
+.GUNS__46-4a45097c-22cdcf41-e024ee2c {
   display: flex
 }
 
-.userLayout4_discordStatus__RlUNo {
+.GUNS__c8-ce842370-f39f8270-2da933c4 {
   display: flex;
   position: relative
 }
 
-.userLayout4_discordStatusIcon__uJ_7V {
+.GUNS__d9-b4689849-01634695-4b0c054c {
   bottom: 4px;
   height: 17px;
   object-fit: cover;
@@ -4197,14 +4215,14 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   width: 17px
 }
 
-.userLayout4_discordStatus__RlUNo img:first-child {
+.GUNS__c8-ce842370-f39f8270-2da933c4 img:first-child {
   border-radius: 50%;
   height: 65px;
   object-fit: cover;
   width: 65px
 }
 
-.userLayout4_discordUserInformation__u2dc6 {
+.GUNS__cd-cf93f8cd-b09266a4-fe8101f5 {
   display: flex;
   gap: 10px;
   justify-content: left;
@@ -4215,7 +4233,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   white-space: nowrap
 }
 
-.userLayout4_discordActivity__GXUZH {
+.GUNS__37-f1bf1b57-60b612b1-98e1c04d {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -4227,20 +4245,20 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   min-width: 0
 }
 
-.userLayout4_discordActivityImageStack__wgg6K,
-.userLayout4_discordActivityTextStack__xCJT1 {
+.GUNS__04-5663d44d-86332b62-4ce54114,
+.GUNS__4b-382b24a5-4c55d9a0-76ac830f {
   display: grid;
   min-width: 0
 }
 
-.userLayout4_discordActivityTextStack__xCJT1 {
+.GUNS__04-5663d44d-86332b62-4ce54114 {
   max-width: 100%;
   overflow: hidden;
   width: 100%
 }
 
-.userLayout4_discordActivityImageLayer__ww0Bx,
-.userLayout4_discordActivityTextLayer__Omyey {
+.GUNS__23-b2151148-efc8b271-610fc899,
+.GUNS__98-8530d546-b82dfa1f-4ac8a83d {
   display: block;
   grid-area: 1/1;
   max-width: 100%;
@@ -4249,21 +4267,21 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   will-change: opacity, filter
 }
 
-.userLayout4_discordActivityImageLayer__ww0Bx {
+.GUNS__23-b2151148-efc8b271-610fc899 {
   align-items: center;
   display: flex
 }
 
-.userLayout4_discordActivityEnter__50dEy {
-  animation: userLayout4_discordActivityFadeIn__aqgpj .36s cubic-bezier(.22, 1, .36, 1) both
+.GUNS__b0-772e24b8-97592c3c-d4551616 {
+  animation: GUNS__1f-eb2f7ff5-85fca052-433d0125 .36s cubic-bezier(.22, 1, .36, 1) both
 }
 
-.userLayout4_discordActivityExit__zQsBy {
-  animation: userLayout4_discordActivityFadeOut__or0wo .26s cubic-bezier(.4, 0, .2, 1) both;
+.GUNS__32-0b460efa-045ffbdf-81b551ce {
+  animation: GUNS__b6-4caf3747-d296f8e9-f815834b .26s cubic-bezier(.4, 0, .2, 1) both;
   pointer-events: none
 }
 
-@keyframes userLayout4_discordActivityFadeIn__aqgpj {
+@keyframes GUNS__1f-eb2f7ff5-85fca052-433d0125 {
   0% {
     opacity: 0;
     filter: blur(5px)
@@ -4275,7 +4293,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   }
 }
 
-@keyframes userLayout4_discordActivityFadeOut__or0wo {
+@keyframes GUNS__b6-4caf3747-d296f8e9-f815834b {
   0% {
     opacity: 1;
     filter: blur(0)
@@ -4288,16 +4306,16 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
 }
 
 @media (prefers-reduced-motion:reduce) {
-  .userLayout4_discordActivityEnter__50dEy {
+  .GUNS__b0-772e24b8-97592c3c-d4551616 {
     animation: none
   }
 
-  .userLayout4_discordActivityExit__zQsBy {
+  .GUNS__32-0b460efa-045ffbdf-81b551ce {
     display: none
   }
 }
 
-.userLayout4_discordUser__lJQt1 {
+.GUNS__0a-e5be9e53-1f0c9778-15d0563c {
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
@@ -4309,58 +4327,58 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   min-width: 0
 }
 
-.userLayout4_discordUserDiv__ZOqcn {
+.GUNS__ff-9ae899fc-e7630063-e0b53e71 {
   align-items: center;
   display: flex
 }
 
-.userLayout4_discordUserDiv__ZOqcn span {
+.GUNS__ff-9ae899fc-e7630063-e0b53e71 span {
   color: var(--presenceUsernameColor);
   margin: 0
 }
 
-.userLayout4_discordUserBadges__JCVZU {
+.GUNS__c3-36ba504d-566e2ed0-758325f3 {
   display: flex;
   margin-left: 6px
 }
 
-.userLayout4_discordUser__lJQt1 h3 {
+.GUNS__0a-e5be9e53-1f0c9778-15d0563c h3 {
   color: var(--presenceStatusColor);
   margin: 0
 }
 
-.userLayout4_highlight__VoQ7w {
+.GUNS__4c-fdf70afd-2b937c2f-6594e0bf {
   font-weight: 700;
   color: var(--presenceUsernameColor)
 }
 
-.userLayout4_activityImage__kst04 {
+.GUNS__67-ad447732-bb674b0e-2683cbff {
   display: flex;
   align-items: center;
   flex: 0 0 auto
 }
 
-.userLayout4_activityImage__kst04 img {
+.GUNS__67-ad447732-bb674b0e-2683cbff img {
   border-radius: calc(var(--containerRadius) - 10px);
   height: 65px;
   object-fit: cover;
   width: 65px
 }
 
-.userLayout4_discordBadge__FKeSw {
+.GUNS__81-1e2e5216-5ab27b56-00059841 {
   display: flex;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none
 }
 
-.userLayout4_discordBadge__FKeSw img {
+.GUNS__81-1e2e5216-5ab27b56-00059841 img {
   height: 22px;
   width: 22px;
   object-fit: cover
 }
 
-.userLayout4_userProfileSvg__S5Q8a {
+.GUNS__2b-66aed959-29bb8af5-4ea2aea4 {
   font-size: 5em;
   color: var(--textColor);
   margin-right: 10px;
@@ -4369,14 +4387,14 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   align-items: center
 }
 
-.userLayout4_discordUserDiv__ZOqcn span,
-.userLayout4_discordUser__lJQt1 h3 {
+.GUNS__0a-e5be9e53-1f0c9778-15d0563c h3,
+.GUNS__ff-9ae899fc-e7630063-e0b53e71 span {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap
 }
 
-.userLayout4_discordNotConnected__q0TyD {
+.GUNS__93-82695686-a7535ef2-5c7a5988 {
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -4387,42 +4405,42 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   flex: 1 1
 }
 
-.userLayout4_discordNotConnected__q0TyD h1,
-.userLayout4_discordNotConnected__q0TyD h3 {
+.GUNS__93-82695686-a7535ef2-5c7a5988 h1,
+.GUNS__93-82695686-a7535ef2-5c7a5988 h3 {
   margin: 0
 }
 
-.userLayout4_discordNotConnected__q0TyD h1 {
+.GUNS__93-82695686-a7535ef2-5c7a5988 h1 {
   color: var(--presenceUsernameColor);
   display: flex;
   align-items: center
 }
 
-.userLayout4_discordNotConnected__q0TyD h1 svg {
+.GUNS__93-82695686-a7535ef2-5c7a5988 h1 svg {
   font-size: 24px;
   margin-right: 6px;
   color: rgb(218, 47, 47)
 }
 
-.userLayout4_discordNotConnected__q0TyD h3 {
+.GUNS__93-82695686-a7535ef2-5c7a5988 h3 {
   color: var(--presenceStatusColor)
 }
 
-.userLayout4_discordNotConnected__q0TyD h3 a {
+.GUNS__93-82695686-a7535ef2-5c7a5988 h3 a {
   color: var(--presenceUsernameColor)
 }
 
-.userLayout4_offlineText__TvoP2 {
+.GUNS__32-2a8f753e-851d693c-c2015a17 {
   font-style: italic;
   padding-right: 3px
 }
 
-.userLayout4_avatarWrapper__2_G3s {
+.GUNS__da-c5ffcf81-64e21380-8ed3ddea {
   width: fit-content;
   z-index: 2
 }
 
-.userLayout4_discordEmoji__AnKAu {
+.GUNS__83-175054bf-b777e890-2e1b9fa1 {
   display: block;
   margin: 3px 5px -1px 0;
   float: left;
@@ -4430,24 +4448,24 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   height: 20px
 }
 
-.userLayout4_discordEmojiText__j4ZEp {
+.GUNS__25-6099c86c-663e5cd3-13255d70 {
   display: flex;
   align-items: flex-end
 }
 
-.userLayout4_defaultEmoji__pN158 {
+.GUNS__e0-85659874-88ba1b9a-6ac6fe75 {
   color: var(--textColor);
   margin-right: 2px
 }
 
-.userLayout4_discordLoading__mCw5b {
+.GUNS__70-7338906a-a9a0932c-ed4f152b {
   width: 100%;
   height: 100%;
   display: flex;
   gap: 12px
 }
 
-.userLayout4_discordLoading__mCw5b h1 {
+.GUNS__70-7338906a-a9a0932c-ed4f152b h1 {
   color: var(--presenceUsernameColor);
   margin: 0;
   padding: 22.5px;
@@ -4461,12 +4479,12 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   gap: 8px
 }
 
-.userLayout4_discordLoading__mCw5b svg {
+.GUNS__70-7338906a-a9a0932c-ed4f152b svg {
   font-size: 24px;
   color: var(--presenceUsernameColor)
 }
 
-.userLayout4_guildTag__PygER {
+.GUNS__6b-803f0b11-5d4ab606-7374015f {
   display: flex;
   align-items: center;
   gap: 6px;
@@ -4477,18 +4495,18 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   border-radius: 8px
 }
 
-.userLayout4_guildTag__PygER img {
+.GUNS__6b-803f0b11-5d4ab606-7374015f img {
   height: 16px;
   width: 16px;
   object-fit: cover
 }
 
-.userLayout4_guildTag__PygER span {
+.GUNS__6b-803f0b11-5d4ab606-7374015f span {
   color: var(--presenceUsernameColor);
   font-size: 12px
 }
 
-.switchWrapper_switch__mTK4q {
+.GUNS__37-bebc3157-36356f81-31aa98a5 {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -4501,12 +4519,12 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   transition: opacity .12s ease
 }
 
-.switchWrapper_switch__mTK4q[data-disabled=true] {
+.GUNS__37-bebc3157-36356f81-31aa98a5[data-disabled=true] {
   cursor: not-allowed;
   opacity: .5
 }
 
-.switchWrapper_input__wPAP0 {
+.GUNS__07-6848431b-ec698247-987f2132 {
   position: absolute;
   inset: 0;
   opacity: 0;
@@ -4516,7 +4534,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   pointer-events: none
 }
 
-.switchWrapper_track__6KFya {
+.GUNS__c1-89bc1537-00272519-3133d28f {
   position: relative;
   width: 100%;
   height: 100%;
@@ -4527,7 +4545,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   display: inline-block
 }
 
-.switchWrapper_thumb__HeiXF {
+.GUNS__13-b5e3f9d4-24f5d8e3-cfe09b0b {
   position: absolute;
   top: 3px;
   left: 4px;
@@ -4539,39 +4557,39 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   transition: .15s ease
 }
 
-.switchWrapper_input__wPAP0:checked+.switchWrapper_track__6KFya {
+.GUNS__07-6848431b-ec698247-987f2132:checked+.GUNS__c1-89bc1537-00272519-3133d28f {
   background-color: #9e52b1;
   border-color: #9e52b1
 }
 
-.switchWrapper_input__wPAP0:checked+.switchWrapper_track__6KFya .switchWrapper_thumb__HeiXF {
+.GUNS__07-6848431b-ec698247-987f2132:checked+.GUNS__c1-89bc1537-00272519-3133d28f .GUNS__13-b5e3f9d4-24f5d8e3-cfe09b0b {
   background-color: #fff;
   left: calc(100% - 22px)
 }
 
-.switchWrapper_switch__mTK4q[data-disabled=true] .switchWrapper_thumb__HeiXF {
+.GUNS__37-bebc3157-36356f81-31aa98a5[data-disabled=true] .GUNS__13-b5e3f9d4-24f5d8e3-cfe09b0b {
   box-shadow: none;
   background: rgba(255, 255, 255, .8)
 }
 
-.switchWrapper_switch__mTK4q[data-direction=rtl] .switchWrapper_thumb__HeiXF {
+.GUNS__37-bebc3157-36356f81-31aa98a5[data-direction=rtl] .GUNS__13-b5e3f9d4-24f5d8e3-cfe09b0b {
   left: auto;
   right: 4px
 }
 
-.switchWrapper_switch__mTK4q[data-direction=rtl] .switchWrapper_input__wPAP0:checked+.switchWrapper_track__6KFya .switchWrapper_thumb__HeiXF {
+.GUNS__37-bebc3157-36356f81-31aa98a5[data-direction=rtl] .GUNS__07-6848431b-ec698247-987f2132:checked+.GUNS__c1-89bc1537-00272519-3133d28f .GUNS__13-b5e3f9d4-24f5d8e3-cfe09b0b {
   left: auto;
   right: calc(100% - 22px)
 }
 
-.stepperWrapper_stepper__aPLnc {
+.GUNS__2d-0a74e7e2-86df1f2a-8b61c626 {
   display: flex;
   flex-direction: column;
   gap: 24px;
   width: 100%
 }
 
-.stepperWrapper_steps__nYx24 {
+.GUNS__5f-59a31c3d-9fac272c-3044b317 {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -4581,7 +4599,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   width: 100%
 }
 
-.stepperWrapper_step__BaOTc {
+.GUNS__85-cd9ff4ca-d8d4db1e-185d96a9 {
   flex: 1 1;
   display: flex;
   align-items: center;
@@ -4591,7 +4609,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   min-width: 0
 }
 
-.stepperWrapper_indicator__AockR {
+.GUNS__3d-a6a4fadc-8d4b2434-1311e5d4 {
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -4604,38 +4622,38 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   transition: border .16s ease, background .16s ease, color .16s ease
 }
 
-.stepperWrapper_indicator__AockR[data-status=current] {
+.GUNS__3d-a6a4fadc-8d4b2434-1311e5d4[data-status=current] {
   background-color: #242424;
   border: 2px solid #323232
 }
 
-.stepperWrapper_indicator__AockR[data-status=complete] {
+.GUNS__3d-a6a4fadc-8d4b2434-1311e5d4[data-status=complete] {
   background-color: #41b93181;
   border: 2px solid #41b9317a;
   color: #fafafa
 }
 
-.stepperWrapper_indicatorInner__HFyUE {
+.GUNS__a8-5afb6c59-fa09e008-ba148453 {
   display: grid;
   place-items: center;
   font-size: 18px
 }
 
-.stepperWrapper_meta__50lvh {
+.GUNS__42-ea291bc2-59e73120-3c974111 {
   display: flex;
   flex-direction: column;
   gap: 2px;
   min-width: 0
 }
 
-.stepperWrapper_label__hW6MU {
+.GUNS__37-0a8b178d-bb87ab33-dda919b6 {
   font-size: 14px;
   font-weight: 600;
   color: #f1f3f8;
   overflow-wrap: anywhere
 }
 
-.stepperWrapper_description__HrMcp {
+.GUNS__d9-f4ff9439-cb42dc61-f4903849 {
   font-size: 13px;
   color: rgba(241, 243, 248, .65);
   white-space: normal;
@@ -4643,28 +4661,28 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   line-height: 1.35
 }
 
-.stepperWrapper_panel__HVnxr {
+.GUNS__f7-47b23c91-e376342c-e42a97af {
   width: 100%
 }
 
 @media (max-width:450px) {
-  .stepperWrapper_steps__nYx24 {
+  .GUNS__5f-59a31c3d-9fac272c-3044b317 {
     display: none
   }
 }
 
-.popoverWrapper_popoverWrapper___G8tt {
+.GUNS__8e-d5676189-4c68cc64-f0362297 {
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center
 }
 
-.popoverWrapper_popoverWrapper___G8tt * {
+.GUNS__8e-d5676189-4c68cc64-f0362297 * {
   outline: none
 }
 
-.popoverWrapper_popoverDropdown__efgkb {
+.GUNS__f2-36e50cca-29761462-dd21271f {
   position: fixed;
   z-index: 999999999;
   background-color: #111;
@@ -4682,22 +4700,22 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   box-sizing: border-box
 }
 
-.popoverWrapper_popoverDropdown__efgkb[data-visible=true] {
+.GUNS__f2-36e50cca-29761462-dd21271f[data-visible=true] {
   opacity: 1;
   pointer-events: auto
 }
 
-.popoverWrapper_popoverDropdown__efgkb:focus-visible {
+.GUNS__f2-36e50cca-29761462-dd21271f:focus-visible {
   outline: 2px solid rgba(255, 255, 255, .35);
   outline-offset: 4px
 }
 
-.colorInputWrapper_wrapper__HMrVe {
+.GUNS__e1-f8f642a4-f6d47d23-fb654296 {
   position: relative;
   width: 100%
 }
 
-.colorInputWrapper_textInput__lIQe9 {
+.GUNS__ab-a5d3bdab-cc778255-657e2cc4 {
   padding-left: 40px;
   padding-right: 70px;
   letter-spacing: .5px;
@@ -4705,11 +4723,11 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   direction: ltr !important
 }
 
-.colorInputWrapper_textInputWithIcon__pCuPt {
+.GUNS__fc-40c58644-d0c31024-70c7140e {
   padding-left: 110px
 }
 
-.colorInputWrapper_leftSwatchButton__2i9aK {
+.GUNS__3a-b829acea-47c748b8-50a13f3f {
   background: transparent;
   border: none;
   position: absolute;
@@ -4726,26 +4744,26 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   transition: .15s ease
 }
 
-.colorInputWrapper_leftSwatchButton__2i9aK:disabled {
+.GUNS__3a-b829acea-47c748b8-50a13f3f:disabled {
   opacity: .55
 }
 
-.colorInputWrapper_leftSwatchButton__2i9aK:not(:disabled):hover {
+.GUNS__3a-b829acea-47c748b8-50a13f3f:not(:disabled):hover {
   border-color: #2a2a2a
 }
 
-.colorInputWrapper_leftSwatchButton__2i9aK:not(:disabled):active {
+.GUNS__3a-b829acea-47c748b8-50a13f3f:not(:disabled):active {
   transform: translateY(-50%) scale(.97)
 }
 
-.colorInputWrapper_colorSwatch__Ijvyq {
+.GUNS__2e-1339255d-a7d84b7f-0ea67142 {
   width: 100%;
   height: 100%;
   border-radius: 50%;
   border: none
 }
 
-.colorInputWrapper_leftIcon__Xj0aW {
+.GUNS__aa-902256d4-5487d5f8-b9613ef0 {
   position: absolute;
   left: 58px;
   top: 50%;
@@ -4757,7 +4775,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   pointer-events: none
 }
 
-.colorInputWrapper_pickerButton__U9Wlw {
+.GUNS__92-4f4687b2-1e664613-974c4960 {
   position: absolute;
   right: 7px;
   top: 50%;
@@ -4775,20 +4793,20 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   transition: .15s ease
 }
 
-.colorInputWrapper_pickerButton__U9Wlw:disabled {
+.GUNS__92-4f4687b2-1e664613-974c4960:disabled {
   opacity: .5;
   cursor: not-allowed
 }
 
-.colorInputWrapper_pickerButton__U9Wlw:not(:disabled):hover {
+.GUNS__92-4f4687b2-1e664613-974c4960:not(:disabled):hover {
   color: #ffffff
 }
 
-.colorInputWrapper_pickerButton__U9Wlw:not(:disabled):active {
+.GUNS__92-4f4687b2-1e664613-974c4960:not(:disabled):active {
   transform: translateY(-50%) scale(.96)
 }
 
-.colorInputWrapper_panel__MRo6m {
+.GUNS__38-a51c3e41-62cbb5a1-ccccab8b {
   position: absolute;
   top: calc(100% + 10px);
   left: 0;
@@ -4804,7 +4822,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   z-index: 99999999
 }
 
-.colorInputWrapper_svArea___zVit {
+.GUNS__2c-a7bb8984-7029b34c-14a9174a {
   position: relative;
   height: 160px;
   border-radius: 14px;
@@ -4813,21 +4831,21 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   touch-action: none
 }
 
-.colorInputWrapper_svBlackOverlay__XIwtz,
-.colorInputWrapper_svWhiteOverlay__BKAkR {
+.GUNS__6b-ae93a09c-8aab347b-8e4436a2,
+.GUNS__b2-febba06e-61337463-5b9fb42c {
   position: absolute;
   inset: 0
 }
 
-.colorInputWrapper_svWhiteOverlay__BKAkR {
+.GUNS__b2-febba06e-61337463-5b9fb42c {
   background: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0))
 }
 
-.colorInputWrapper_svBlackOverlay__XIwtz {
+.GUNS__6b-ae93a09c-8aab347b-8e4436a2 {
   background: linear-gradient(0deg, #000, rgba(0, 0, 0, 0))
 }
 
-.colorInputWrapper_svCursor___MSvJ {
+.GUNS__d1-b875ba75-f1517f91-aeffde62 {
   position: absolute;
   width: 18px;
   height: 18px;
@@ -4838,11 +4856,11 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   pointer-events: none
 }
 
-.colorInputWrapper_hueSliderWrapper__ycaHU {
+.GUNS__f2-1b8470e4-71cc8038-7031f1f6 {
   width: 100%
 }
 
-.colorInputWrapper_hueSlider__bQeHE {
+.GUNS__6c-f4fedfd4-da5b3cbc-6c77e2c2 {
   width: 100%;
   appearance: none;
   height: 14px;
@@ -4853,7 +4871,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   touch-action: none
 }
 
-.colorInputWrapper_hueSlider__bQeHE::-webkit-slider-thumb {
+.GUNS__6c-f4fedfd4-da5b3cbc-6c77e2c2::-webkit-slider-thumb {
   appearance: none;
   width: 18px;
   height: 18px;
@@ -4864,7 +4882,7 @@ html.rtl .generalPages_languageSelectOption__sfxzm:not(.generalPages_languageSel
   cursor: pointer
 }
 
-.colorInputWrapper_hueSlider__bQeHE::-moz-range-thumb {
+.GUNS__6c-f4fedfd4-da5b3cbc-6c77e2c2::-moz-range-thumb {
   width: 18px;
   height: 18px;
   border-radius: 50%;

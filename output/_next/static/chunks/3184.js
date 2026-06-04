@@ -3,7 +3,7 @@
   [3184], {
     3184: (e, t, o) => {
       o.r(t), o.d(t, {
-        default: () => e2
+        default: () => e5
       });
       var a = o(95155),
         s = o(12115),
@@ -131,7 +131,7 @@
             icon: u.A.timezone,
             placeholder: H("dashboard.premium.layout.modern_settings.second_tab.timezone.select_placeholder")
           }],
-          Y = {
+          Z = {
             en: f.c,
             es: x.es,
             pt: j.F,
@@ -141,7 +141,7 @@
             ru: C.ru,
             ar: w.ar
           },
-          Z = e ? n().buttonEnabled : n().buttonDisabled,
+          Y = e ? n().buttonEnabled : n().buttonDisabled,
           Q = async () => {
             (await fetch("https://guns.lol/api/dashboard/premium/secondTab", {
               method: "POST",
@@ -185,7 +185,7 @@
             label: H("dashboard.premium.layout.modern_settings.join_date.relative", {
               value: (0, b.m)(eN, {
                 addSuffix: !0,
-                locale: Y[W]
+                locale: Z[W]
               })
             })
           }, {
@@ -411,7 +411,7 @@
                   gap: "10px"
                 },
                 children: [(0, a.jsx)("span", {
-                  className: Z,
+                  className: Y,
                   onClick: () => t(!e),
                   children: e ? H("dashboard.premium.layout.modern_settings.border.disable_button") : H("dashboard.premium.layout.modern_settings.border.enable_button")
                 }), e && (0, a.jsxs)("div", {
@@ -1307,7 +1307,7 @@
       };
       var K = o(9992),
         q = o(54834);
-      async function Y(e, t, o, a, s, r) {
+      async function Z(e, t, o, a, s, r) {
         try {
           t(q.A.loading);
           let i = await fetch("https://guns.lol/api/dashboard/premium/layout", {
@@ -1352,7 +1352,7 @@
           }, 500)
         }
       }
-      let Z = ({
+      let Y = ({
         isBorderEnabled: e,
         setIsBorderEnabled: t,
         borderColor: o,
@@ -1603,13 +1603,14 @@
           audio: "dashboard.premium.layout.portfolio_settings.modules.audio.description",
           skills: "dashboard.premium.layout.portfolio_settings.modules.skills.description"
         },
-        ec = e => "audio" === e || "skills" === e ? 1 : 2,
-        eu = () => `portfolio-${Date.now()}-${Math.random().toString(36).slice(2,8)}`,
-        em = "undefined" != typeof Intl && "supportedValuesOf" in Intl ? Intl.supportedValuesOf("timeZone") : ["America/New_York", "America/Chicago", "America/Denver", "America/Los_Angeles", "America/Sao_Paulo", "Europe/London", "Europe/Paris", "Europe/Berlin", "Europe/Moscow", "Asia/Dubai", "Asia/Kolkata", "Asia/Tokyo", "Asia/Shanghai", "Australia/Sydney", "Pacific/Auckland", "Africa/Cairo", "Africa/Lagos"],
-        ep = (e, t) => e(en[t]),
-        eh = (e, t) => e(ed[t]),
-        eb = (e, t) => e(0 === t ? "dashboard.premium.layout.portfolio_settings.about.cards.left" : 1 === t ? "dashboard.premium.layout.portfolio_settings.about.cards.right" : "dashboard.premium.layout.portfolio_settings.about.cards.portfolio"),
-        e_ = (e, t) => "hero" === e ? {
+        ec = new Set(["youtube", "spotify", "discord", "telegram", "roblox", "github", "lastfm", "timezone"]),
+        eu = e => "audio" === e || "skills" === e ? 1 : 2,
+        em = () => `portfolio-${Date.now()}-${Math.random().toString(36).slice(2,8)}`,
+        ep = "undefined" != typeof Intl && "supportedValuesOf" in Intl ? Intl.supportedValuesOf("timeZone") : ["America/New_York", "America/Chicago", "America/Denver", "America/Los_Angeles", "America/Sao_Paulo", "Europe/London", "Europe/Paris", "Europe/Berlin", "Europe/Moscow", "Asia/Dubai", "Asia/Kolkata", "Asia/Tokyo", "Asia/Shanghai", "Australia/Sydney", "Pacific/Auckland", "Africa/Cairo", "Africa/Lagos"],
+        eh = (e, t) => e(en[t]),
+        eb = (e, t) => e(ed[t]),
+        e_ = (e, t) => e(0 === t ? "dashboard.premium.layout.portfolio_settings.about.cards.left" : 1 === t ? "dashboard.premium.layout.portfolio_settings.about.cards.right" : "dashboard.premium.layout.portfolio_settings.about.cards.portfolio"),
+        eg = (e, t) => "hero" === e ? {
           show_avatar: !0,
           show_buttons: !0,
           hero_style: "classic"
@@ -1639,22 +1640,22 @@
           content: "",
           text_alignment: "left"
         },
-        eg = (e = [], t) => {
+        ey = (e = [], t) => {
           let o = [{
               id: "portfolio-top-hero",
               type: "hero",
               visible: !0,
-              settings: e_("hero", t)
+              settings: eg("hero", t)
             }],
             a = (Array.isArray(e) && e.length > 0 ? e.filter(e => el.includes(e?.type)) : o).map((e, o) => {
               let a, s = el.includes(e.type) ? e.type : "about",
                 r = 0 !== o || er.includes(s) ? s : "hero";
               return {
-                id: e.id || eu(),
+                id: e.id || em(),
                 type: r,
                 visible: !1 !== e.visible,
                 settings: (a = {
-                  ...e_(r, t),
+                  ...eg(r, t),
                   ...e.settings || {}
                 }, "hero" === r && (a.hero_style = "centered" === a.hero_style ? "centered" : "classic"), a)
               }
@@ -1663,17 +1664,17 @@
             id: a[0].id,
             type: "hero",
             visible: !0,
-            settings: e_("hero", t)
+            settings: eg("hero", t)
           }), a = a.filter((e, t) => 0 === t || !er.includes(e.type))
         };
 
-      function ey(e) {
+      function ef(e) {
         let t = (0, _.kj)(),
           {
             modules: o,
             setModules: r
           } = e,
-          [i, l] = (0, s.useState)(eg(o, t)),
+          [i, l] = (0, s.useState)(ey(o, t)),
           [d, c] = (0, s.useState)(null),
           [m, p] = (0, s.useState)(!1),
           [h, b] = (0, s.useState)(null),
@@ -1683,7 +1684,7 @@
             }
           }));
         (0, s.useEffect)(() => {
-          l(eg(o, t))
+          l(ey(o, t))
         }, [o, t]);
         let f = e => (l(e), r(e), e),
           x = i[0],
@@ -1712,19 +1713,19 @@
               className: n().portfolioAddModuleGrid,
               children: ei.map(e => {
                 let o = v[e] || 0,
-                  s = ec(e),
+                  s = eu(e),
                   r = o >= s;
                 return (0, a.jsxs)("button", {
                   type: "button",
                   className: n().portfolioAddModuleOption,
                   disabled: r,
                   onClick: () => (e => {
-                    if ((v[e] || 0) >= ec(e)) return;
+                    if ((v[e] || 0) >= eu(e)) return;
                     let o = {
-                      id: eu(),
+                      id: em(),
                       type: e,
                       visible: !0,
-                      settings: e_(e, t)
+                      settings: eg(e, t)
                     };
                     f([...i, o]), b("audio" === e ? null : o.id), p(!1)
                   })(e),
@@ -1734,11 +1735,11 @@
                   }), (0, a.jsxs)("div", {
                     className: n().portfolioAddModuleText,
                     children: [(0, a.jsx)("h2", {
-                      children: ep(t, e)
+                      children: eh(t, e)
                     }), (0, a.jsx)("p", {
                       children: r ? t("dashboard.premium.layout.portfolio_settings.add_module.limit_reached", {
                         limit: s
-                      }) : eh(t, e)
+                      }) : eb(t, e)
                     })]
                   }), !r && (0, a.jsx)("span", {
                     className: n().portfolioAddModuleArrow,
@@ -1747,7 +1748,7 @@
                 }, e)
               })
             })
-          }), (0, a.jsx)(ef, {
+          }), (0, a.jsx)(ex, {
             ...e,
             module: x,
             updateSettings: N
@@ -1793,7 +1794,7 @@
                 strategy: H._G,
                 children: (0, a.jsx)("div", {
                   className: n().portfolioModuleList,
-                  children: j.map(t => (0, a.jsx)(ev, {
+                  children: j.map(t => (0, a.jsx)(ek, {
                     module: t,
                     updateModule: k,
                     updateSettings: N,
@@ -1808,7 +1809,7 @@
                   }, t.id))
                 })
               }), (0, a.jsx)(U.Hd, {
-                children: d && (0, a.jsx)(ex, {
+                children: d && (0, a.jsx)(ej, {
                   module: d,
                   isOverlay: !0
                 })
@@ -1818,7 +1819,7 @@
         })
       }
 
-      function ef(e) {
+      function ex(e) {
         let t = (0, _.kj)(),
           {
             module: o,
@@ -1835,7 +1836,7 @@
                 children: t("dashboard.premium.layout.portfolio_settings.hero.description")
               })]
             })
-          }), (0, a.jsx)(eB, {
+          }), (0, a.jsx)(eT, {
             module: o,
             updateSettings: s,
             isBorderEnabled: e.isBorderEnabled,
@@ -1854,7 +1855,7 @@
         })
       }
 
-      function ex({
+      function ej({
         module: e,
         isOverlay: t = !1
       }) {
@@ -1875,9 +1876,9 @@
                   children: eo[e.type]
                 }), (0, a.jsxs)("div", {
                   children: [(0, a.jsx)("h1", {
-                    children: ep(o, e.type)
-                  }), (0, a.jsx)("h3", {
                     children: eh(o, e.type)
+                  }), (0, a.jsx)("h3", {
+                    children: eb(o, e.type)
                   })]
                 })]
               })
@@ -1886,7 +1887,7 @@
         })
       }
 
-      function ej({
+      function ev({
         onSave: e,
         saveButtonText: t
       }) {
@@ -1903,7 +1904,7 @@
         }) : null
       }
 
-      function ev({
+      function ek({
         module: e,
         updateModule: t,
         updateSettings: o,
@@ -1927,7 +1928,7 @@
             id: e.id,
             animateLayoutChanges: () => !1
           }),
-          j = eh(h, e.type),
+          j = eb(h, e.type),
           v = {
             transform: W.Ks.Transform.toString(y),
             transition: f,
@@ -1961,7 +1962,7 @@
                   children: eo[e.type]
                 }), (0, a.jsxs)("div", {
                   children: [(0, a.jsx)("h1", {
-                    children: ep(h, e.type)
+                    children: eh(h, e.type)
                   }), (0, a.jsx)("h3", {
                     children: j
                   })]
@@ -1986,7 +1987,7 @@
                   children: u.A.deleteButton
                 })]
               })]
-            }), i && (0, a.jsx)(eC, {
+            }), i && (0, a.jsx)(ew, {
               module: e,
               updateSettings: o,
               onSave: d,
@@ -1998,7 +1999,7 @@
         })
       }
 
-      function ek(e, t, o) {
+      function eN(e, t, o) {
         return (a, s = "", r = "text") => {
           let i = e.current,
             l = t();
@@ -2012,7 +2013,7 @@
         }
       }
 
-      function eN({
+      function eC({
         insert: e,
         onOptions: t
       }) {
@@ -2197,7 +2198,7 @@
         })
       }
 
-      function eC({
+      function ew({
         module: e,
         updateSettings: t,
         onSave: o,
@@ -2208,7 +2209,7 @@
         let d = (0, _.kj)(),
           c = e.settings || {},
           p = (0, s.useRef)(null);
-        if ("about" === e.type) return (0, a.jsx)(eL, {
+        if ("about" === e.type) return (0, a.jsx)(eR, {
           module: e,
           settings: c,
           updateSettings: t,
@@ -2216,7 +2217,7 @@
           saveButtonText: r,
           isMonochromeIcons: i
         });
-        if ("projects" === e.type) return (0, a.jsx)(eO, {
+        if ("projects" === e.type) return (0, a.jsx)(eI, {
           module: e,
           settings: c,
           updateSettings: t,
@@ -2224,7 +2225,7 @@
           saveButtonText: r,
           isMonochromeIcons: i
         });
-        if ("skills" === e.type) return (0, a.jsx)(eR, {
+        if ("skills" === e.type) return (0, a.jsx)(eF, {
           module: e,
           settings: c,
           updateSettings: t,
@@ -2232,13 +2233,13 @@
           saveButtonText: r,
           isMonochromeIcons: i
         });
-        if ("audio" === e.type) return (0, a.jsx)(ew, {
+        if ("audio" === e.type) return (0, a.jsx)(eA, {
           module: e,
           settings: c,
           updateSettings: t,
           audioList: l
         });
-        let b = ek(p, () => c.content || "", o => t(e.id, {
+        let b = eN(p, () => c.content || "", o => t(e.id, {
           content: o
         }));
         return (0, a.jsxs)("div", {
@@ -2269,7 +2270,7 @@
             icon: u.A.layout
           }), (0, a.jsxs)("div", {
             className: n().portfolioEditorBox,
-            children: [(0, a.jsx)(eN, {
+            children: [(0, a.jsx)(eC, {
               insert: b
             }), (0, a.jsx)("textarea", {
               ref: p,
@@ -2284,7 +2285,7 @@
         })
       }
 
-      function ew({
+      function eA({
         module: e,
         settings: t,
         updateSettings: o,
@@ -2545,7 +2546,7 @@
           })]
         })
       }
-      let eA = [{
+      let eS = [{
         value: "classic",
         labelKey: "dashboard.premium.layout.portfolio_settings.hero.style.classic",
         svg: (0, a.jsxs)("svg", {
@@ -2631,14 +2632,14 @@
         })
       }];
 
-      function eS({
+      function eB({
         value: e,
         onChange: t
       }) {
         let o = (0, _.kj)();
         return (0, a.jsx)("div", {
           className: n().heroStylePicker,
-          children: eA.map(s => (0, a.jsxs)("button", {
+          children: eS.map(s => (0, a.jsxs)("button", {
             type: "button",
             className: `${n().heroStyleOption} ${e===s.value?n().heroStyleOptionSelected:""}`,
             onClick: () => t(s.value),
@@ -2653,7 +2654,7 @@
         })
       }
 
-      function eB({
+      function eT({
         module: e,
         updateSettings: t,
         isBorderEnabled: o,
@@ -2715,7 +2716,7 @@
             children: [(0, a.jsx)("span", {
               className: n().portfolioFieldLabel,
               children: j("dashboard.premium.layout.portfolio_settings.hero.style.label")
-            }), (0, a.jsx)(eS, {
+            }), (0, a.jsx)(eB, {
               value: v.hero_style || "classic",
               onChange: o => t(e.id, {
                 hero_style: o
@@ -2833,7 +2834,7 @@
         })
       }
 
-      function eT({
+      function eL({
         opened: e,
         onClose: t,
         card: o,
@@ -2889,23 +2890,23 @@
             icon: u.A.timezone,
             placeholder: void 0
           }],
-          b = eM(o),
+          b = eD(o),
           [y, f] = (0, s.useState)("empty" !== b),
           [x, j] = (0, s.useState)("empty" !== b ? b : "youtube"),
-          [v, k] = (0, s.useState)(eD(o)),
+          [v, k] = (0, s.useState)(e$(o)),
           [N, C] = (0, s.useState)(o.second_tab_config?.clock_face_style ?? "dark"),
           [w, A] = (0, s.useState)(o.second_tab_config?.clock_hidden ?? !1),
           [S, B] = (0, s.useState)(o.second_tab_config?.clock_time_format ?? "24h"),
-          [T, L] = (0, s.useState)("timezone" === b ? eD(o).replace(/_/g, " ") : ""),
+          [T, L] = (0, s.useState)("timezone" === b ? e$(o).replace(/_/g, " ") : ""),
           [R, F] = (0, s.useState)(!1);
         (0, s.useEffect)(() => {
           if (!e) return;
-          let t = eM(o),
-            a = eD(o);
+          let t = eD(o),
+            a = e$(o);
           f(!0), j("empty" !== t ? t : "youtube"), k(a), L("timezone" === t ? a.replace(/_/g, " ") : ""), F(!1), C(o.second_tab_config?.clock_face_style ?? "dark"), A(o.second_tab_config?.clock_hidden ?? !1), B(o.second_tab_config?.clock_time_format ?? "24h")
         }, [e]);
         let M = T.replace(/_/g, " ").toLowerCase(),
-          D = em.filter(e => e.replace(/_/g, " ").toLowerCase().includes(M)).slice(0, 80).map(e => ({
+          D = ep.filter(e => e.replace(/_/g, " ").toLowerCase().includes(M)).slice(0, 80).map(e => ({
             value: e,
             label: e.replace(/_/g, " ")
           })),
@@ -3076,22 +3077,49 @@
               }) : null, (0, a.jsx)("span", {
                 className: n().saveSecondTabButton,
                 onClick: () => {
-                  let e = l(y ? "discord_presence" === x ? {
-                    type: "discord_presence"
-                  } : {
-                    type: "second_tab",
-                    second_tab_config: e$({
-                      second_tab_enabled: !0,
-                      second_tab: {
-                        [x]: "timezone" === x ? v || T.replace(/ /g, "_") : v
-                      },
-                      clock_face_style: N,
-                      clock_hidden: w,
-                      clock_time_format: S
-                    })
-                  } : {
-                    type: "empty"
-                  });
+                  if (y && "discord_presence" !== x) {
+                    let e = eO(x, v, T);
+                    if (! function(e, t) {
+                        if (!ec.has(e) || !t) return !1;
+                        if ("timezone" === e) try {
+                          return Intl.DateTimeFormat(void 0, {
+                            timeZone: t
+                          }), !0
+                        } catch {
+                          return !1
+                        }
+                        return ({
+                          youtube: /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.?be)\/.+$/,
+                          spotify: /^(?:https?:\/\/)?(?:open\.spotify\.com\/)(?:intl-[a-zA-Z]+\/)?(album|track|playlist|show|episode)[\/:].+/,
+                          discord: /^(?:https?:\/\/)?(?:www\.)?(?:discord\.gg|discord\.com\/invite)\/[a-zA-Z0-9-]+$/,
+                          telegram: /^(https?:\/\/)?(www\.)?t\.me\/.+$/,
+                          roblox: /^(https?:\/\/)?(www\.)?roblox\.com\/users\/\d+\/profile$/,
+                          github: /^(https?:\/\/)?(www\.)?github\.com\/.+$/,
+                          lastfm: /^(https?:\/\/)?(www\.)?last\.fm\/user\/[a-zA-Z0-9_-]+$/
+                        })[e]?.test(t) ?? !1
+                      }(x, e)) return void p.oR.error(`Invalid ${$?.name||"widget"} format.`)
+                  }
+                  let e = l((() => {
+                    if (!y) return {
+                      type: "empty"
+                    };
+                    if ("discord_presence" === x) return {
+                      type: "discord_presence"
+                    };
+                    let e = eO(x, v, T);
+                    return {
+                      type: "second_tab",
+                      second_tab_config: ez({
+                        second_tab_enabled: !0,
+                        second_tab: {
+                          [x]: e
+                        },
+                        clock_face_style: N,
+                        clock_hidden: w,
+                        clock_time_format: S
+                      })
+                    }
+                  })());
                   p.oR.success(c("dashboard.premium.layout.portfolio_settings.about.second_tab_save_success")), d?.({
                     portfolio_modules: e
                   }), t()
@@ -3103,7 +3131,7 @@
         })
       }
 
-      function eL({
+      function eR({
         module: e,
         settings: t,
         updateSettings: o,
@@ -3123,13 +3151,13 @@
             return t.map(e => ({
               type: e?.type === "discord_presence" ? "discord_presence" : e?.type === "second_tab" ? "second_tab" : "empty",
               ...e?.type === "second_tab" ? {
-                second_tab_config: e$(e.second_tab_config)
+                second_tab_config: ez(e.second_tab_config)
               } : {}
             }))
           }(t.cards),
-          x = eq(t.tags),
+          x = eY(t.tags),
           j = t => {
-            let a = eK(t ?? b);
+            let a = eZ(t ?? b);
             if (a) {
               if (x.length >= 24) return void p.oR.error(d("dashboard.premium.layout.portfolio_settings.skills.max_tags_error"));
               if (x.some(e => e.toLowerCase() === a.toLowerCase())) return void p.oR.error(d("dashboard.premium.layout.portfolio_settings.skills.duplicate_tag_error"));
@@ -3140,11 +3168,11 @@
           };
         return (0, a.jsxs)("div", {
           className: n().portfolioFieldStack,
-          children: [null !== c && (0, a.jsx)(eT, {
+          children: [null !== c && (0, a.jsx)(eL, {
             opened: null !== c,
             onClose: () => h(null),
             card: f[c],
-            cardLabel: eb(d, c),
+            cardLabel: e_(d, c),
             hasOtherDiscordPresence: f.some((e, t) => t !== c && "discord_presence" === e.type),
             onCardUpdate: t => {
               let a;
@@ -3173,8 +3201,8 @@
               children: d("dashboard.premium.layout.portfolio_settings.about.bio_label")
             }), (0, a.jsxs)("div", {
               className: n().portfolioEditorBox,
-              children: [(0, a.jsx)(eN, {
-                insert: ek(y, () => t.secondary_description || "", t => o(e.id, {
+              children: [(0, a.jsx)(eC, {
+                insert: eN(y, () => t.secondary_description || "", t => o(e.id, {
                   secondary_description: t
                 }))
               }), (0, a.jsx)("textarea", {
@@ -3196,7 +3224,7 @@
               className: n().portfolioTagList,
               children: x.map(t => (0, a.jsxs)("div", {
                 className: n().portfolioProjectTag,
-                children: [(0, a.jsx)(eJ, {
+                children: [(0, a.jsx)(eK, {
                   skill: t,
                   isMonochrome: l
                 }), (0, a.jsx)("span", {
@@ -3212,7 +3240,7 @@
               }, t))
             }), (0, a.jsxs)("div", {
               className: n().portfolioTagInputRow,
-              children: [(0, a.jsx)(eG, {
+              children: [(0, a.jsx)(eq, {
                 value: b,
                 onChange: g,
                 onCommit: e => j(e),
@@ -3222,13 +3250,13 @@
               }), (0, a.jsx)("button", {
                 type: "button",
                 className: n().portfolioTagAddButton,
-                disabled: x.length >= 24 || !eK(b),
+                disabled: x.length >= 24 || !eZ(b),
                 onClick: () => j(),
                 children: u.A.addTag
               })]
             })]
           }), f.map((e, t) => {
-            let o = eM(e),
+            let o = eD(e),
               s = {
                 discord_presence: u.A.discord,
                 youtube: u.A.youtube,
@@ -3246,7 +3274,7 @@
                 className: n().portfolioCardTriggerInfo,
                 children: [(0, a.jsx)("span", {
                   className: n().portfolioCardTriggerLabel,
-                  children: eb(d, t)
+                  children: e_(d, t)
                 }), (0, a.jsxs)("span", {
                   className: `${n().portfolioCardTriggerCurrent} ${"empty"===o?n().portfolioCardTriggerDisabled:""}`,
                   children: ["empty" !== o && (0, a.jsx)("span", {
@@ -3274,7 +3302,7 @@
         })
       }
 
-      function eR({
+      function eF({
         module: e,
         settings: t,
         updateSettings: o,
@@ -3284,14 +3312,14 @@
       }) {
         let d = (0, _.kj)(),
           [c, h] = (0, s.useState)(""),
-          b = eq(t.skills),
+          b = eY(t.skills),
           g = (0, U.FR)((0, U.MS)(U.AN, {
             activationConstraint: {
               distance: 6
             }
           })),
           y = t => {
-            let a = eK(t ?? c);
+            let a = eZ(t ?? c);
             if (a) {
               if (b.length >= 24) return void p.oR.error(d("dashboard.premium.layout.portfolio_settings.skills.max_skills_error"));
               if (b.some(e => e.toLowerCase() === a.toLowerCase())) return void p.oR.error(d("dashboard.premium.layout.portfolio_settings.skills.duplicate_skill_error"));
@@ -3344,7 +3372,7 @@
                 strategy: H.m$,
                 children: (0, a.jsx)("div", {
                   className: n().portfolioTagList,
-                  children: b.map(t => (0, a.jsx)(eF, {
+                  children: b.map(t => (0, a.jsx)(eM, {
                     tag: t,
                     onRemove: () => o(e.id, {
                       skills: b.filter(e => e !== t)
@@ -3355,7 +3383,7 @@
               })
             }), (0, a.jsxs)("div", {
               className: n().portfolioTagInputRow,
-              children: [(0, a.jsx)(eG, {
+              children: [(0, a.jsx)(eq, {
                 value: c,
                 onChange: h,
                 onCommit: e => y(e),
@@ -3365,7 +3393,7 @@
               }), (0, a.jsx)("button", {
                 type: "button",
                 className: n().portfolioTagAddButton,
-                disabled: b.length >= 24 || !eK(c),
+                disabled: b.length >= 24 || !eZ(c),
                 onClick: () => y(),
                 children: u.A.addTag
               })]
@@ -3374,7 +3402,7 @@
         })
       }
 
-      function eF({
+      function eM({
         tag: e,
         onRemove: t,
         isMonochrome: o
@@ -3400,7 +3428,7 @@
             className: n().portfolioProjectTagHandle,
             ...s,
             children: u.A.dragHandle
-          }), (0, a.jsx)(eJ, {
+          }), (0, a.jsx)(eK, {
             skill: e,
             isMonochrome: o
           }), (0, a.jsx)("span", {
@@ -3414,14 +3442,14 @@
         })
       }
 
-      function eM(e) {
+      function eD(e) {
         if ("empty" === e.type) return "empty";
         if ("discord_presence" === e.type) return "discord_presence";
         let t = e.second_tab_config?.second_tab;
         return (t && "object" == typeof t ? Object.keys(t)[0] : null) || "youtube"
       }
 
-      function eD(e) {
+      function e$(e) {
         if ("second_tab" !== e.type) return "";
         let t = e.second_tab_config?.second_tab;
         if (!t || "object" != typeof t) return "";
@@ -3429,7 +3457,11 @@
         return o && t[o] || ""
       }
 
-      function e$(e) {
+      function eO(e, t, o) {
+        return "timezone" === e ? (t || o.replace(/ /g, "_")).trim() : t.trim()
+      }
+
+      function ez(e) {
         let t = e?.second_tab && "object" == typeof e.second_tab ? e.second_tab : {},
           o = Object.keys(t)[0];
         return {
@@ -3443,7 +3475,7 @@
         }
       }
 
-      function eO({
+      function eI({
         module: e,
         settings: t,
         updateSettings: o,
@@ -3459,7 +3491,7 @@
             description: e.description || "",
             image: e.image || "",
             link: e.link || "",
-            tags: eV(e.tags)
+            tags: eG(e.tags)
           })),
           [h, b] = (0, s.useState)(null),
           [g, y] = (0, s.useState)(null),
@@ -3477,7 +3509,7 @@
           v = p.findIndex(e => e.id === g);
         return (0, a.jsxs)("div", {
           className: n().portfolioFieldStack,
-          children: [j && (0, a.jsx)(eE, {
+          children: [j && (0, a.jsx)(eU, {
             opened: !!g,
             onClose: () => y(null),
             moduleId: e.id,
@@ -3502,7 +3534,7 @@
             onClick: () => {
               if (p.length >= 4) return;
               let e = {
-                id: eu(),
+                id: em(),
                 name: "",
                 description: "",
                 image: "",
@@ -3538,7 +3570,7 @@
               strategy: H._G,
               children: (0, a.jsx)("div", {
                 className: n().portfolioProjectList,
-                children: p.map((e, t) => (0, a.jsx)(eI, {
+                children: p.map((e, t) => (0, a.jsx)(eP, {
                   project: e,
                   index: t,
                   onEdit: () => y(e.id),
@@ -3546,7 +3578,7 @@
                 }, e.id))
               })
             }), (0, a.jsx)(U.Hd, {
-              children: h && (0, a.jsx)(ez, {
+              children: h && (0, a.jsx)(eE, {
                 project: h,
                 index: p.findIndex(e => e.id === h.id),
                 isOverlay: !0
@@ -3556,7 +3588,7 @@
         })
       }
 
-      function ez({
+      function eE({
         project: e,
         index: t,
         isOverlay: o = !1
@@ -3588,7 +3620,7 @@
         })
       }
 
-      function eI({
+      function eP({
         project: e,
         index: t,
         onEdit: o,
@@ -3672,7 +3704,7 @@
         })
       }
 
-      function eE({
+      function eU({
         opened: e,
         onClose: t,
         moduleId: o,
@@ -3695,18 +3727,18 @@
               distance: 6
             }
           })),
-          T = eV(r.tags),
+          T = eG(r.tags),
           L = C || (A ? "" : r.image || "");
         (0, s.useEffect)(() => () => {
           C && URL.revokeObjectURL(C)
         }, [C]);
         let F = e => {
-            eH(o, d, i, l, {
-              tags: eV(e)
+            eV(o, d, i, l, {
+              tags: eG(e)
             })
           },
           M = e => {
-            let t = eW(e ?? j);
+            let t = eJ(e ?? j);
             if (t) {
               if (T.length >= 4) return void p.oR.error(y("dashboard.premium.layout.portfolio_settings.projects.max_tags_error"));
               if (T.some(e => e.toLowerCase() === t.toLowerCase())) return void p.oR.error(y("dashboard.premium.layout.portfolio_settings.projects.duplicate_tag_error"));
@@ -3763,7 +3795,7 @@
               featureName: y("dashboard.premium.layout.portfolio_settings.projects.name_label"),
               placeholder: y("dashboard.premium.layout.portfolio_settings.projects.name_placeholder"),
               value: r.name || "",
-              onChangeFunction: e => eH(o, d, i, l, {
+              onChangeFunction: e => eV(o, d, i, l, {
                 name: e.target.value
               }),
               icon: u.A.layout
@@ -3771,10 +3803,10 @@
               featureName: y("dashboard.premium.layout.portfolio_settings.fields.description"),
               placeholder: y("dashboard.premium.layout.portfolio_settings.projects.description_placeholder"),
               value: r.description || "",
-              onChangeFunction: e => eH(o, d, i, l, {
+              onChangeFunction: e => eV(o, d, i, l, {
                 description: e.target.value
               })
-            }), (0, a.jsx)(eU, {
+            }), (0, a.jsx)(eW, {
               image: L,
               previewFileName: k?.name || "",
               loading: f,
@@ -3795,7 +3827,7 @@
               featureName: y("dashboard.premium.layout.portfolio_settings.projects.link_label"),
               value: r.link || "",
               placeholder: y("dashboard.premium.layout.portfolio_settings.projects.link_placeholder"),
-              onChangeFunction: e => eH(o, d, i, l, {
+              onChangeFunction: e => eV(o, d, i, l, {
                 link: e.target.value
               }),
               icon: u.A.url
@@ -3803,7 +3835,7 @@
               className: n().portfolioTagEditor,
               children: [(0, a.jsxs)("div", {
                 className: n().portfolioTagInputRow,
-                children: [(0, a.jsx)(eG, {
+                children: [(0, a.jsx)(eq, {
                   value: j,
                   placeholder: y("dashboard.premium.layout.portfolio_settings.projects.tag_placeholder"),
                   onChange: v,
@@ -3814,7 +3846,7 @@
                 }), (0, a.jsx)("button", {
                   type: "button",
                   className: n().portfolioTagAddButton,
-                  disabled: T.length >= 4 || !eW(j),
+                  disabled: T.length >= 4 || !eJ(j),
                   onClick: () => M(),
                   children: u.A.addTag
                 })]
@@ -3839,7 +3871,7 @@
                     style: {
                       marginTop: 0
                     },
-                    children: T.map(e => (0, a.jsx)(eP, {
+                    children: T.map(e => (0, a.jsx)(eH, {
                       tag: e,
                       onRemove: () => F(T.filter(t => t !== e)),
                       isMonochrome: c
@@ -3847,7 +3879,7 @@
                   })
                 })
               })]
-            }), (0, a.jsx)(ej, {
+            }), (0, a.jsx)(ev, {
               onSave: D,
               saveButtonText: b
             })]
@@ -3855,7 +3887,7 @@
         })
       }
 
-      function eP({
+      function eH({
         tag: e,
         onRemove: t,
         isMonochrome: o
@@ -3881,7 +3913,7 @@
             className: n().portfolioProjectTagHandle,
             ...s,
             children: u.A.dragHandle
-          }), (0, a.jsx)(eJ, {
+          }), (0, a.jsx)(eK, {
             skill: e,
             isMonochrome: o
           }), (0, a.jsx)("span", {
@@ -3895,7 +3927,7 @@
         })
       }
 
-      function eU({
+      function eW({
         image: e,
         previewFileName: t,
         loading: o,
@@ -3962,7 +3994,7 @@
         })
       }
 
-      function eH(e, t, o, a, s) {
+      function eV(e, t, o, a, s) {
         let r = [...o];
         return r[a] = {
           ...r[a],
@@ -3972,18 +4004,18 @@
         })
       }
 
-      function eW(e) {
+      function eJ(e) {
         return "string" == typeof e ? e.replace(/,/g, " ").replace(/\s+/g, " ").trim().slice(0, 28) : ""
       }
 
-      function eV(e) {
+      function eG(e) {
         return (Array.isArray(e) ? e : "string" == typeof e ? e.split(",") : []).reduce((e, t) => {
-          let o = eW(t);
+          let o = eJ(t);
           return o && !e.some(e => e.toLowerCase() === o.toLowerCase()) && e.length < 4 && e.push(o), e
         }, [])
       }
 
-      function eJ({
+      function eK({
         skill: e,
         isMonochrome: t
       }) {
@@ -4008,7 +4040,7 @@
         })
       }
 
-      function eG({
+      function eq({
         value: e,
         onChange: t,
         onCommit: o,
@@ -4094,7 +4126,7 @@
                 t.preventDefault(), v(e.name)
               },
               onMouseEnter: () => g(t),
-              children: [(0, a.jsx)(eJ, {
+              children: [(0, a.jsx)(eK, {
                 skill: e,
                 isMonochrome: l
               }), (0, a.jsx)("span", {
@@ -4105,21 +4137,21 @@
         })
       }
 
-      function eK(e) {
+      function eZ(e) {
         return "string" == typeof e ? e.replace(/,/g, " ").replace(/\s+/g, " ").trim().slice(0, 32) : ""
       }
 
-      function eq(e) {
+      function eY(e) {
         return (Array.isArray(e) ? e : []).reduce((e, t) => {
-          let o = eK(t);
+          let o = eZ(t);
           return o && !e.some(e => e.toLowerCase() === o.toLowerCase()) && e.length < 24 && e.push(o), e
         }, [])
       }
-      var eY = o(98241),
-        eZ = o.n(eY);
-      let eQ = e => Array.isArray(e) ? e.map(eQ) : e && "object" == typeof e ? Object.keys(e).sort().reduce((t, o) => (t[o] = eQ(e[o]), t), {}) : e,
-        eX = e => JSON.stringify(eQ(e)),
-        e0 = {
+      var eQ = o(98241),
+        eX = o.n(eQ);
+      let e0 = e => Array.isArray(e) ? e.map(e0) : e && "object" == typeof e ? Object.keys(e).sort().reduce((t, o) => (t[o] = e0(e[o]), t), {}) : e,
+        e1 = e => JSON.stringify(e0(e)),
+        e2 = {
           hero: {
             hero_style: "classic",
             show_avatar: !0,
@@ -4138,7 +4170,7 @@
             lyrics_track_map: {}
           }
         },
-        e1 = e => {
+        e4 = e => {
           var t;
           return e && "object" == typeof e ? {
             ...e,
@@ -4149,9 +4181,9 @@
                 let o = t && "object" == typeof t ? {
                     ...t
                   } : {},
-                  a = e0[e] || {};
+                  a = e2[e] || {};
                 if (Object.keys(a).forEach(e => {
-                    void 0 !== o[e] && eX(o[e]) === eX(a[e]) && delete o[e]
+                    void 0 !== o[e] && e1(o[e]) === e1(a[e]) && delete o[e]
                   }), "audio" === e) {
                   let e = Object.entries(o.lyrics_track_map && "object" == typeof o.lyrics_track_map && !Array.isArray(o.lyrics_track_map) ? o.lyrics_track_map : {}).reduce((e, [t, o]) => (o && "object" == typeof o && ("string" == typeof o.synced_lyrics ? o.synced_lyrics.trim() : "") && (e[t] = o), e), {});
                   Object.keys(e).length > 0 ? o.lyrics_track_map = e : delete o.lyrics_track_map, !0 !== o.show_lyrics && delete o.show_lyrics
@@ -4163,7 +4195,7 @@
             } : e) : []
           } : e
         },
-        e2 = ({
+        e5 = ({
           data: e
         }) => {
           let t = (0, _.kj)(),
@@ -4196,7 +4228,7 @@
             k = t("common.unsaved_changes.save_button"),
             [N, C] = (0, s.useState)(k);
           (0, s.useEffect)(() => {
-            v(eX(e1(f)) !== eX(e1(u)))
+            v(e1(e4(f)) !== e1(e4(u)))
           }, [f, u]);
           let w = e => t => {
               x(o => ({
@@ -4205,7 +4237,7 @@
               }))
             },
             S = (e = {}) => {
-              Y(Object.keys(e).length > 0 ? {
+              Z(Object.keys(e).length > 0 ? {
                 ...f,
                 ...e
               } : f, C, v, m, t, x)
@@ -4215,16 +4247,16 @@
               richColors: !0,
               position: "top-center",
               theme: "dark",
-              className: eZ().toasterStyles,
+              className: eX().toasterStyles,
               icons: {
                 success: q.A.successToast
               },
               visibleToasts: 2
             }), (0, a.jsx)(r.N, {
               children: j && (0, a.jsx)("div", {
-                className: eZ().unsavedChangesWrapper,
+                className: eX().unsavedChangesWrapper,
                 children: (0, a.jsxs)(i.P.div, {
-                  className: eZ().unsavedChangesBar,
+                  className: eX().unsavedChangesBar,
                   initial: {
                     opacity: 0,
                     y: 40,
@@ -4248,18 +4280,18 @@
                   children: [(0, a.jsx)("h1", {
                     children: t("common.unsaved_changes.title")
                   }), (0, a.jsx)("h1", {
-                    className: eZ().compactText,
+                    className: eX().compactText,
                     children: t("common.unsaved_changes.compact")
                   }), (0, a.jsxs)("div", {
-                    className: eZ().unsavedChangesButtons,
+                    className: eX().unsavedChangesButtons,
                     children: [(0, a.jsx)("span", {
-                      className: eZ().resetButton,
+                      className: eX().resetButton,
                       onClick: () => {
                         x(u), v(!1)
                       },
                       children: t("common.unsaved_changes.reset")
                     }), (0, a.jsx)("span", {
-                      className: eZ().saveButton,
+                      className: eX().saveButton,
                       onClick: () => S(),
                       children: N
                     })]
@@ -4331,7 +4363,7 @@
                 })
               }) : "sleek" === d ? (0, a.jsx)(K.A, {
                 featureName: t("dashboard.premium.layout.sleek"),
-                children: (0, a.jsx)(Z, {
+                children: (0, a.jsx)(Y, {
                   isBorderEnabled: f.border_enabled,
                   setIsBorderEnabled: w("border_enabled"),
                   borderColor: f.border_color,
@@ -4351,7 +4383,7 @@
                 })
               }) : "portfolio" === d && (0, a.jsx)(K.A, {
                 featureName: t("dashboard.premium.layout.portfolio"),
-                children: (0, a.jsx)(ey, {
+                children: (0, a.jsx)(ef, {
                   modules: f.portfolio_modules,
                   setModules: w("portfolio_modules"),
                   isBorderEnabled: f.border_enabled,

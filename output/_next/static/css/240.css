@@ -1,4 +1,4 @@
-.embedEditor_embedEditor___rN_r {
+.GUNS__76-8c872849-b6119087-98c0c69f {
   display: flex;
   justify-content: flex-start;
   border-radius: 8px;
@@ -7,14 +7,14 @@
   padding: 5px
 }
 
-.embedEditor_editor__LuV5Y {
+.GUNS__6a-4f0f94fc-ebe29704-3d07492e {
   min-width: 250px;
   display: flex;
   flex-direction: column;
   gap: 16px
 }
 
-.embedEditor_preview__ZdAjh {
+.GUNS__75-27cefc19-92f97681-73c90dcf {
   padding: 11px 12.5px 11px 11px;
   display: flex;
   flex-direction: column;
@@ -28,89 +28,89 @@
   min-height: 25px
 }
 
-.embedEditor_messageAuthor__gu37x {
+.GUNS__a9-2a5ee88e-f95b97dc-ebdbef31 {
   display: flex;
   align-items: center;
   margin-bottom: 10px
 }
 
-.embedEditor_messageInfo__9ZxNw {
+.GUNS__fb-695c8524-3a622084-d19b1950 {
   display: flex;
   place-items: center
 }
 
-.embedEditor_wrapper__NZaM9 {
+.GUNS__a5-394e11b7-ae2d1514-e4fd7b13 {
   display: flex;
   flex-direction: column;
   margin-left: 25px
 }
 
-.embedEditor_avatar__Lmfl3 {
+.GUNS__88-ba89e835-289a2af0-84526c03 {
   width: 41px;
   height: 41px;
   border-radius: 50%;
   margin-right: 11px
 }
 
-.embedEditor_link__kxtm_ {
+.GUNS__ae-78472ac1-455b646f-80ab4289 {
   color: #1da1f2;
   cursor: pointer;
   font-size: 15.5px
 }
 
-.embedEditor_link__kxtm_:hover {
+.GUNS__ae-78472ac1-455b646f-80ab4289:hover {
   text-decoration: underline
 }
 
-.embedEditor_username__QNtCu {
+.GUNS__a0-48a530d5-bb11aa40-c4b4ca63 {
   font-weight: 700;
   cursor: pointer
 }
 
-.embedEditor_username__QNtCu:hover {
+.GUNS__a0-48a530d5-bb11aa40-c4b4ca63:hover {
   text-decoration: underline
 }
 
-.embedEditor_timestamp__gpv4z {
+.GUNS__9e-6fae48ac-449ff1df-899e9e87 {
   font-size: 12px;
   color: #999;
   margin-left: 8px;
   cursor: default
 }
 
-.embedEditor_discordEmbed__H4fGs {
+.GUNS__43-ac22265a-520052c8-e0407332 {
   word-wrap: break-word;
   white-space: pre-wrap;
   max-width: 250px
 }
 
-.embedEditor_embedTitle__OKhEa h1 {
+.GUNS__bd-65579014-ef7cd323-97e13e03 h1 {
   margin: 0;
   font-size: 16.5px;
   color: #1da1f2
 }
 
-.embedEditor_embedTitle__OKhEa h1:hover {
+.GUNS__bd-65579014-ef7cd323-97e13e03 h1:hover {
   text-decoration: underline;
   cursor: pointer
 }
 
-.embedEditor_embedDescription__njL9n {
+.GUNS__23-520448c8-b3eb6927-de64d109 {
   margin-top: 5px;
   font-size: 14.5px
 }
 
-.embedEditor_embedAuthor__I1PJR {
+.GUNS__72-1221a698-335f036e-26096b3b {
   margin-bottom: 3px
 }
 
-.embedEditor_embedAuthor__I1PJR h1 {
+.GUNS__72-1221a698-335f036e-26096b3b h1 {
   font-size: 13.5px;
   font-weight: 500;
   margin: 3.6px 0 0
 }
 
-.embedEditor_embedAuthor__I1PJR h2 {
+.GUNS__72-1221a698-335f036e-26096b3b h2 {
   font-size: 13.5px;
   text-decoration: none;
   font-weight: 500;
@@ -118,30 +118,30 @@
   margin: 3px 0 0
 }
 
-.embedEditor_embedAuthor__I1PJR h2:hover {
+.GUNS__72-1221a698-335f036e-26096b3b h2:hover {
   text-decoration: underline;
   cursor: pointer
 }
 
-.embedEditor_embedImage__9d38x {
+.GUNS__a9-83e101aa-04cfd709-a7d260b1 {
   margin-top: 15px
 }
 
-.embedEditor_embedImage__9d38x img {
+.GUNS__a9-83e101aa-04cfd709-a7d260b1 img {
   height: 100%;
   width: 100%
 }
 
-.embedEditor_embedInput__sCB2r h1 {
+.GUNS__ca-c01ce70d-d9d0f27f-d0f8c46d h1 {
   font-size: 16.5px;
   margin: 0 0 3.5px 2px
 }
 
-.embedEditor_saveEmbedButtonContainer__bKT0Q {
+.GUNS__f7-6a7df2a6-35e83156-de9ef99b {
   margin-top: 15px
 }
 
-.embedEditor_saveEmbedButtonContainer__bKT0Q span {
+.GUNS__f7-6a7df2a6-35e83156-de9ef99b span {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -156,27 +156,27 @@
   transition: .35s
 }
 
-.embedEditor_saveEmbedButtonContainer__bKT0Q span:hover {
+.GUNS__f7-6a7df2a6-35e83156-de9ef99b span:hover {
   border: 2px solid #242424
 }
 
-.embedEditor_saveEmbedButtonContainer__bKT0Q span:active {
+.GUNS__f7-6a7df2a6-35e83156-de9ef99b span:active {
   transform: translateY(4px)
 }
 
 @media (max-width:670px) {
-  .embedEditor_embedEditor___rN_r {
+  .GUNS__76-8c872849-b6119087-98c0c69f {
     flex-direction: column
   }
 
-  .embedEditor_wrapper__NZaM9 {
+  .GUNS__a5-394e11b7-ae2d1514-e4fd7b13 {
     margin-left: 0;
     margin-top: 25px;
     margin-bottom: 10px
   }
 }
 
-.embedEditor_embedTimestamp__6q4YZ h1 {
+.GUNS__8d-d1ca48b0-44c40745-e94c8226 h1 {
   font-size: 11px;
   font-weight: 400;
   margin-bottom: 2px

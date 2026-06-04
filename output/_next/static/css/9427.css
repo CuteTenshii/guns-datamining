@@ -1,4 +1,4 @@
-.userPortfolioLayout_portfolioPage__fEj6G {
+.GUNS__7b-ad72801c-d3bb8b46-0894ec4e {
   position: relative;
   width: 100%;
   min-height: 100svh;
@@ -12,13 +12,13 @@
   z-index: 1
 }
 
-.userPortfolioLayout_portfolioPage__fEj6G[data-compact-top-audio=true] {
+.GUNS__7b-ad72801c-d3bb8b46-0894ec4e[data-compact-top-audio=true] {
   gap: 0;
   padding-top: 0;
   padding-bottom: 0
 }
 
-.userPortfolioLayout_portfolioSections__LiyrU {
+.GUNS__9d-aa0d7193-ab3c9d09-69855837 {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -27,11 +27,11 @@
   margin-top: 0
 }
 
-.userPortfolioLayout_portfolioPage__fEj6G[data-compact-top-audio=true] .userPortfolioLayout_portfolioSections__LiyrU {
+.GUNS__7b-ad72801c-d3bb8b46-0894ec4e[data-compact-top-audio=true] .GUNS__9d-aa0d7193-ab3c9d09-69855837 {
   margin-top: 0
 }
 
-.userPortfolioLayout_portfolioReveal__QOdD5 {
+.GUNS__a7-42c2b4ef-18d7dfdb-651f60fe {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -44,24 +44,24 @@
   scroll-snap-stop: always
 }
 
-.userPortfolioLayout_portfolioReveal__QOdD5 [data-reveal-part] {
+.GUNS__a7-42c2b4ef-18d7dfdb-651f60fe [data-reveal-part] {
   --portfolioRevealOrder: 1;
   opacity: .001;
   pointer-events: none;
   will-change: opacity, transform
 }
 
-.userPortfolioLayout_portfolioReveal__QOdD5[data-reveal-active=true] [data-reveal-part],
-.userPortfolioLayout_portfolioReveal__QOdD5[data-reveal-done=true] [data-reveal-part] {
+.GUNS__a7-42c2b4ef-18d7dfdb-651f60fe[data-reveal-active=true] [data-reveal-part],
+.GUNS__a7-42c2b4ef-18d7dfdb-651f60fe[data-reveal-done=true] [data-reveal-part] {
   pointer-events: auto
 }
 
-.userPortfolioLayout_portfolioReveal__QOdD5[data-reveal-done=true] [data-reveal-part] {
+.GUNS__a7-42c2b4ef-18d7dfdb-651f60fe[data-reveal-done=true] [data-reveal-part] {
   opacity: 1;
   will-change: auto
 }
 
-.userPortfolioLayout_portfolioIntroStack__LJotx {
+.GUNS__25-5e1f5fdb-ebea97ac-06673f53 {
   position: relative;
   width: 100%;
   max-width: 64rem;
@@ -75,21 +75,21 @@
   box-sizing: border-box
 }
 
-.userPortfolioLayout_portfolioTopSection__JBYdI {
+.GUNS__33-289b5a49-64aef540-cb964a41 {
   min-height: 100%;
   display: flex;
   align-items: center;
   justify-content: center
 }
 
-.userPortfolioLayout_heroModule__6s_La,
-.userPortfolioLayout_portfolioSection__Dj55G {
+.GUNS__04-48c26bc6-e5a19dc2-c8288809,
+.GUNS__07-9f3b6c9b-13597119-0404b65e {
   width: 100%;
   max-width: 72rem;
   box-sizing: border-box
 }
 
-.userPortfolioLayout_heroModule__6s_La {
+.GUNS__07-9f3b6c9b-13597119-0404b65e {
   position: relative;
   max-width: 82rem;
   padding: 42px 0;
@@ -97,7 +97,7 @@
   box-sizing: border-box
 }
 
-.userPortfolioLayout_heroStage__gLhgu {
+.GUNS__18-7c2472f2-6a2c59bb-c9c39e70 {
   position: relative;
   width: 100%;
   display: grid;
@@ -108,11 +108,11 @@
   padding: 10px 18px
 }
 
-.userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroStage__gLhgu {
+.GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__18-7c2472f2-6a2c59bb-c9c39e70 {
   gap: 30px
 }
 
-.userPortfolioLayout_heroStageSolo__XXDpj {
+.GUNS__35-08e74f4d-3c49b19d-e4ff0f76 {
   width: 100%;
   max-width: 100%;
   margin-inline: auto;
@@ -121,7 +121,7 @@
   display: grid
 }
 
-.userPortfolioLayout_heroIdentity__fK3hj {
+.GUNS__74-a07b26e4-6436fb8c-6bb9433f {
   justify-self: end;
   display: flex;
   flex-direction: column;
@@ -129,7 +129,7 @@
   min-width: 0
 }
 
-.userPortfolioLayout_heroAvatarFrame__5QFcb {
+.GUNS__60-f6e4b357-041933b3-bab21af8 {
   position: relative;
   width: 172px;
   height: 172px;
@@ -144,7 +144,7 @@
   overflow: hidden
 }
 
-.userPortfolioLayout_heroAvatar__YWQCR {
+.GUNS__5f-efece4b5-517a4ed2-4257cacf {
   width: 100%;
   height: 100%;
   display: block;
@@ -152,8 +152,8 @@
   border-radius: inherit
 }
 
-.userPortfolioLayout_heroDescription__YZUtU,
-.userPortfolioLayout_heroTitlePanel__5kFEo {
+.GUNS__2f-d8370fad-3038f469-2e916cdf,
+.GUNS__81-7438d2df-c0161f48-3f3200e7 {
   background-color: var(--containerColor);
   background-image: var(--containerGradient);
   background-origin: border-box;
@@ -162,7 +162,7 @@
   backdrop-filter: blur(var(--containerBlur))
 }
 
-.userPortfolioLayout_heroContent__g0PA1 {
+.GUNS__58-21193694-fe5d6591-fbd81464 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -172,12 +172,12 @@
   gap: 10px
 }
 
-.userPortfolioLayout_heroContent__g0PA1 h1,
-.userPortfolioLayout_heroContent__g0PA1 p {
+.GUNS__58-21193694-fe5d6591-fbd81464 h1,
+.GUNS__58-21193694-fe5d6591-fbd81464 p {
   margin: 0
 }
 
-.userPortfolioLayout_heroTitlePanel__5kFEo {
+.GUNS__2f-d8370fad-3038f469-2e916cdf {
   max-width: 100%;
   padding: 18px 22px 20px;
   border-radius: var(--containerRadius);
@@ -185,7 +185,7 @@
   box-sizing: border-box
 }
 
-.userPortfolioLayout_heroTitlePanel__5kFEo h1 {
+.GUNS__2f-d8370fad-3038f469-2e916cdf h1 {
   color: var(--textColor);
   text-shadow: var(--colorUsernameGlow);
   line-height: .98;
@@ -193,41 +193,41 @@
   overflow-wrap: anywhere
 }
 
-.userPortfolioLayout_heroTitleStack__ELzKh {
+.GUNS__05-5309d41d-2d976092-500695a1 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 8px
 }
 
-.userPortfolioLayout_heroTitleRow__s0rEV {
+.GUNS__d2-ba3d2def-d2760e65-3ed7811a {
   display: flex;
   align-items: center;
   gap: 10px;
   flex-wrap: wrap
 }
 
-.userPortfolioLayout_heroBadgeContainerInline__txCnM {
+.GUNS__59-1f40d600-40dba878-90b11147 {
   display: inline-flex;
   align-items: center;
   flex-shrink: 0
 }
 
-.userPortfolioLayout_heroBadgeRail__vrvRW {
+.GUNS__a2-b2b4814e-6b1224a6-275d5630 {
   max-width: 100%
 }
 
-.userPortfolioLayout_heroBadgeGroup__6yrd_,
-.userPortfolioLayout_heroBadgeTrack__wNpVX {
+.GUNS__f5-a3fa5675-121435b7-c6f8a1c8,
+.GUNS__f7-a57a2f04-fa294a61-f4d92e2e {
   display: flex;
   align-items: center
 }
 
-.userPortfolioLayout_heroBadgeGroup__6yrd_ {
+.GUNS__f5-a3fa5675-121435b7-c6f8a1c8 {
   gap: 5.5px
 }
 
-.userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroBadgeRail__vrvRW[data-carousel-active=true] {
+.GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__a2-b2b4814e-6b1224a6-275d5630[data-carousel-active=true] {
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
@@ -235,24 +235,24 @@
   mask-image: linear-gradient(90deg, transparent, #000 10px, #000 calc(100% - 10px), transparent)
 }
 
-.userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroBadgeRail__vrvRW[data-carousel-active=true] .userPortfolioLayout_heroBadgeTrack__wNpVX {
+.GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__a2-b2b4814e-6b1224a6-275d5630[data-carousel-active=true] .GUNS__f7-a57a2f04-fa294a61-f4d92e2e {
   width: max-content;
   flex: 0 0 auto;
   max-width: none;
-  animation: userPortfolioLayout_heroBadgeRailLoop__tAKxK 11s linear infinite;
+  animation: GUNS__bc-99dedf07-89eeb7e7-cff34073 11s linear infinite;
   will-change: transform
 }
 
-.userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroBadgeRail__vrvRW[data-carousel-paused=true] .userPortfolioLayout_heroBadgeTrack__wNpVX {
+.GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__a2-b2b4814e-6b1224a6-275d5630[data-carousel-paused=true] .GUNS__f7-a57a2f04-fa294a61-f4d92e2e {
   animation-play-state: paused
 }
 
-.userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroBadgeRail__vrvRW[data-carousel-active=true] .userPortfolioLayout_heroBadgeGroup__6yrd_ {
+.GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__a2-b2b4814e-6b1224a6-275d5630[data-carousel-active=true] .GUNS__f5-a3fa5675-121435b7-c6f8a1c8 {
   flex: 0 0 auto;
   padding-right: 5.5px
 }
 
-.userPortfolioLayout_heroBadgeContainerCentered__AoY3n {
+.GUNS__fa-9eb5df22-bc7e6d38-f7b031fa {
   display: flex;
   width: 100%;
   justify-content: center;
@@ -261,7 +261,7 @@
   overflow: hidden
 }
 
-.userPortfolioLayout_heroModule__6s_La[data-hero-style=centered] .userPortfolioLayout_heroBadgeRail__vrvRW {
+.GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=centered] .GUNS__a2-b2b4814e-6b1224a6-275d5630 {
   width: fit-content;
   max-width: 100%;
   min-width: 0;
@@ -271,37 +271,37 @@
   justify-content: center
 }
 
-.userPortfolioLayout_heroModule__6s_La[data-hero-style=centered] .userPortfolioLayout_heroBadgeTrack__wNpVX {
+.GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=centered] .GUNS__f7-a57a2f04-fa294a61-f4d92e2e {
   width: max-content;
   flex: 0 0 auto;
   max-width: none
 }
 
-.userPortfolioLayout_heroModule__6s_La[data-hero-style=centered] .userPortfolioLayout_heroBadgeRail__vrvRW[data-carousel-active=true] {
+.GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=centered] .GUNS__a2-b2b4814e-6b1224a6-275d5630[data-carousel-active=true] {
   width: 100%;
   justify-content: flex-start;
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 10px, #000 calc(100% - 10px), transparent);
   mask-image: linear-gradient(90deg, transparent, #000 10px, #000 calc(100% - 10px), transparent)
 }
 
-.userPortfolioLayout_heroModule__6s_La[data-hero-style=centered] .userPortfolioLayout_heroBadgeRail__vrvRW[data-carousel-active=true] .userPortfolioLayout_heroBadgeTrack__wNpVX {
+.GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=centered] .GUNS__a2-b2b4814e-6b1224a6-275d5630[data-carousel-active=true] .GUNS__f7-a57a2f04-fa294a61-f4d92e2e {
   width: max-content;
   flex: 0 0 auto;
   max-width: none;
-  animation: userPortfolioLayout_heroBadgeRailLoop__tAKxK 11s linear infinite;
+  animation: GUNS__bc-99dedf07-89eeb7e7-cff34073 11s linear infinite;
   will-change: transform
 }
 
-.userPortfolioLayout_heroModule__6s_La[data-hero-style=centered] .userPortfolioLayout_heroBadgeRail__vrvRW[data-carousel-paused=true] .userPortfolioLayout_heroBadgeTrack__wNpVX {
+.GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=centered] .GUNS__a2-b2b4814e-6b1224a6-275d5630[data-carousel-paused=true] .GUNS__f7-a57a2f04-fa294a61-f4d92e2e {
   animation-play-state: paused
 }
 
-.userPortfolioLayout_heroModule__6s_La[data-hero-style=centered] .userPortfolioLayout_heroBadgeRail__vrvRW[data-carousel-active=true] .userPortfolioLayout_heroBadgeGroup__6yrd_ {
+.GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=centered] .GUNS__a2-b2b4814e-6b1224a6-275d5630[data-carousel-active=true] .GUNS__f5-a3fa5675-121435b7-c6f8a1c8 {
   flex: 0 0 auto;
   padding-right: 5.5px
 }
 
-.userPortfolioLayout_heroDescription__YZUtU {
+.GUNS__81-7438d2df-c0161f48-3f3200e7 {
   color: var(--textColor);
   max-width: 42rem;
   padding: 15px 17px;
@@ -312,16 +312,16 @@
   box-shadow: 0 16px 44px rgba(0, 0, 0, .16)
 }
 
-.userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroActions__wdm3Q {
+.GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__20-140cbab4-d4407d14-80413a1e {
   margin-top: 20px
 }
 
-.userPortfolioLayout_heroActions__wdm3Q {
+.GUNS__20-140cbab4-d4407d14-80413a1e {
   max-width: 100%;
   transform: translateY(-2px)
 }
 
-.userPortfolioLayout_heroBottomMeta__irvco {
+.GUNS__38-301bcaaf-9d61b88f-afdbaa22 {
   position: fixed;
   left: 27px;
   bottom: 22px;
@@ -337,22 +337,22 @@
   z-index: 40
 }
 
-.userPortfolioLayout_heroBottomMetaSep__HHFcL {
+.GUNS__0d-72afd7f5-05c9e1d8-8763be9f {
   opacity: .36;
   font-size: 11px;
   -webkit-user-select: none;
   user-select: none
 }
 
-.userPortfolioLayout_heroBottomMetaItem__k0r_r {
+.GUNS__08-25508449-9c4a029c-41f12d14 {
   display: inline-flex;
   align-items: center;
   gap: 5px;
   opacity: .72
 }
 
-.userPortfolioLayout_heroModule__6s_La[data-hero-style=centered] .userPortfolioLayout_heroStageSolo__XXDpj,
-.userPortfolioLayout_heroModule__6s_La[data-hero-style=centered] .userPortfolioLayout_heroStage__gLhgu {
+.GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=centered] .GUNS__18-7c2472f2-6a2c59bb-c9c39e70,
+.GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=centered] .GUNS__35-08e74f4d-3c49b19d-e4ff0f76 {
   width: 100%;
   max-width: 100%;
   grid-template-columns: 1fr;
@@ -362,19 +362,19 @@
   gap: 26px
 }
 
-.userPortfolioLayout_heroModule__6s_La[data-hero-style=centered] .userPortfolioLayout_heroIdentity__fK3hj {
+.GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=centered] .GUNS__74-a07b26e4-6436fb8c-6bb9433f {
   justify-self: center;
   order: -1
 }
 
-.userPortfolioLayout_heroModule__6s_La[data-hero-style=centered] .userPortfolioLayout_heroAvatarFrame__5QFcb {
+.GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=centered] .GUNS__60-f6e4b357-041933b3-bab21af8 {
   border-radius: 50%;
   width: 180px;
   height: 180px;
   box-shadow: 0 0 0 5px rgba(255, 255, 255, .07), 0 0 0 10px rgba(255, 255, 255, .03), 0 28px 72px rgba(0, 0, 0, .44)
 }
 
-.userPortfolioLayout_heroModule__6s_La[data-hero-style=centered] .userPortfolioLayout_heroContent__g0PA1 {
+.GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=centered] .GUNS__58-21193694-fe5d6591-fbd81464 {
   width: 100%;
   min-width: 0;
   align-items: center;
@@ -382,19 +382,19 @@
   max-width: 52rem
 }
 
-.userPortfolioLayout_heroModule__6s_La[data-hero-style=centered] .userPortfolioLayout_heroTitleStack__ELzKh {
+.GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=centered] .GUNS__05-5309d41d-2d976092-500695a1 {
   width: 100%;
   min-width: 0;
   align-items: center
 }
 
-.userPortfolioLayout_heroModule__6s_La[data-hero-style=centered] .userPortfolioLayout_heroTitleRow__s0rEV {
+.GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=centered] .GUNS__d2-ba3d2def-d2760e65-3ed7811a {
   justify-content: center;
   width: 100%;
   min-width: 0
 }
 
-.userPortfolioLayout_heroModule__6s_La[data-hero-style=centered] .userPortfolioLayout_heroTitlePanel__5kFEo {
+.GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=centered] .GUNS__2f-d8370fad-3038f469-2e916cdf {
   width: 100%;
   min-width: 0;
   background: transparent;
@@ -405,7 +405,7 @@
   padding: 6px 0
 }
 
-.userPortfolioLayout_heroModule__6s_La[data-hero-style=centered] .userPortfolioLayout_heroDescription__YZUtU {
+.GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=centered] .GUNS__81-7438d2df-c0161f48-3f3200e7 {
   background: transparent;
   border: none;
   -webkit-backdrop-filter: none;
@@ -414,7 +414,7 @@
   padding: 0
 }
 
-.userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroTitlePanel__5kFEo {
+.GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__2f-d8370fad-3038f469-2e916cdf {
   background: transparent;
   border: none;
   -webkit-backdrop-filter: none;
@@ -423,7 +423,7 @@
   padding: 2px 0 6px
 }
 
-.userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroStage__gLhgu:not(.userPortfolioLayout_heroStageSolo__XXDpj) {
+.GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__18-7c2472f2-6a2c59bb-c9c39e70:not(.GUNS__35-08e74f4d-3c49b19d-e4ff0f76) {
   width: fit-content;
   max-width: 100%;
   margin-inline: auto;
@@ -431,31 +431,31 @@
   justify-content: center
 }
 
-.userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroStage__gLhgu.userPortfolioLayout_heroStageSolo__XXDpj {
+.GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__18-7c2472f2-6a2c59bb-c9c39e70.GUNS__35-08e74f4d-3c49b19d-e4ff0f76 {
   width: fit-content;
   max-width: 100%;
   margin-inline: auto
 }
 
-.userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroContent__g0PA1 {
+.GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__58-21193694-fe5d6591-fbd81464 {
   width: auto;
   max-width: 100%;
   min-width: 0;
   gap: 6px
 }
 
-.userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroTitleRow__s0rEV {
+.GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__d2-ba3d2def-d2760e65-3ed7811a {
   width: fit-content;
   max-width: 100%
 }
 
-.userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroBadgeContainerInline__txCnM {
+.GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__59-1f40d600-40dba878-90b11147 {
   flex-shrink: 1;
   min-width: 0;
   max-width: 100%
 }
 
-.userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroDescription__YZUtU {
+.GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__81-7438d2df-c0161f48-3f3200e7 {
   background: transparent;
   border: none;
   -webkit-backdrop-filter: none;
@@ -464,7 +464,7 @@
   padding: 0
 }
 
-.userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroAvatarFrame__5QFcb {
+.GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__60-f6e4b357-041933b3-bab21af8 {
   background-color: transparent;
   background-image: none;
   border: none;
@@ -473,28 +473,28 @@
   box-shadow: none
 }
 
-.userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroActions__wdm3Q {
+.GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__20-140cbab4-d4407d14-80413a1e {
   transform: none
 }
 
-.userPortfolioLayout_heroTitleEffects__HXw2P {
+.GUNS__f3-8b06883e-d025a27a-52567259 {
   background-image: var(--usernameEffects) !important;
   background-repeat: repeat;
   background-size: auto
 }
 
-.userPortfolioLayout_audioModule__8YjAu {
+.GUNS__ac-29722d55-c6a95eb5-6e836a0d {
   width: 100%;
   max-width: 64rem;
   box-sizing: border-box
 }
 
-.userPortfolioLayout_portfolioSections__LiyrU .userPortfolioLayout_audioModule__8YjAu {
+.GUNS__9d-aa0d7193-ab3c9d09-69855837 .GUNS__ac-29722d55-c6a95eb5-6e836a0d {
   --containerWidth: var(--portfolioModuleAudioWidth, 48rem);
   max-width: var(--portfolioModuleAudioWidth, 48rem)
 }
 
-.userPortfolioLayout_portfolioSection__Dj55G {
+.GUNS__04-48c26bc6-e5a19dc2-c8288809 {
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -502,25 +502,25 @@
   max-width: var(--portfolioModuleMaxWidth, 54rem)
 }
 
-.userPortfolioLayout_sectionHeading__labPJ {
+.GUNS__d3-da886a08-d0f07b56-afbb72f4 {
   display: flex;
   flex-direction: column;
   gap: var(--portfolioModuleGap8, 6px)
 }
 
-.userPortfolioLayout_sectionHeading__labPJ h1,
-.userPortfolioLayout_sectionHeading__labPJ p {
+.GUNS__d3-da886a08-d0f07b56-afbb72f4 h1,
+.GUNS__d3-da886a08-d0f07b56-afbb72f4 p {
   margin: 0
 }
 
-.userPortfolioLayout_sectionHeading__labPJ h1 {
+.GUNS__d3-da886a08-d0f07b56-afbb72f4 h1 {
   color: var(--textColor);
   font-size: clamp(18px, 4vw, var(--portfolioModuleHeadingFont, 27px));
   font-weight: 700;
   overflow-wrap: anywhere
 }
 
-.userPortfolioLayout_sectionHeading__labPJ p {
+.GUNS__d3-da886a08-d0f07b56-afbb72f4 p {
   color: var(--textColorDarker);
   font-size: var(--portfolioModuleBodyFont, 12px);
   line-height: 1.55;
@@ -528,8 +528,8 @@
   overflow-wrap: anywhere
 }
 
-.userPortfolioLayout_aboutCard__zg5mT,
-.userPortfolioLayout_textCard__3z1zP {
+.GUNS__16-94b8553d-38030f74-0403fc6e,
+.GUNS__78-fd8143c6-c7385e6f-9b42faf4 {
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -544,7 +544,7 @@
   background-origin: border-box
 }
 
-.userPortfolioLayout_textCard__3z1zP {
+.GUNS__16-94b8553d-38030f74-0403fc6e {
   padding: clamp(14px, 3vw, var(--portfolioModuleTextCardPadding, 21px));
   font-size: var(--portfolioModuleBodyFont, 12px);
   line-height: 1.6;
@@ -552,40 +552,40 @@
   overflow-wrap: anywhere
 }
 
-.userPortfolioLayout_aboutCards__P8iAU {
+.GUNS__75-0fd8ed4e-7fc51b4b-480b0bed {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: stretch;
   gap: 14px
 }
 
-.userPortfolioLayout_aboutCards__P8iAU[data-count="1"] {
+.GUNS__75-0fd8ed4e-7fc51b4b-480b0bed[data-count="1"] {
   grid-template-columns: minmax(0, 38rem);
   justify-content: center
 }
 
-.userPortfolioLayout_aboutCard__zg5mT {
+.GUNS__78-fd8143c6-c7385e6f-9b42faf4 {
   padding: 10px;
   min-width: 0;
   overflow: hidden
 }
 
-.userPortfolioLayout_aboutCardContent__ZPr4I,
-.userPortfolioLayout_aboutCard__zg5mT {
+.GUNS__42-fc4a8ecb-0134cd8f-16509107,
+.GUNS__78-fd8143c6-c7385e6f-9b42faf4 {
   width: 100%;
   max-width: 100%;
   display: flex;
   align-items: stretch
 }
 
-.userPortfolioLayout_aboutCardContent__ZPr4I>* {
+.GUNS__42-fc4a8ecb-0134cd8f-16509107>* {
   width: 100%;
   max-width: 100%
 }
 
-.userPortfolioLayout_aboutCardContent__ZPr4I [class*=discordPresenceContainer],
-.userPortfolioLayout_aboutCardContent__ZPr4I [class*=secondTab],
-.userPortfolioLayout_aboutCardContent__ZPr4I>:not(style) {
+.GUNS__42-fc4a8ecb-0134cd8f-16509107 [class*=discordPresenceContainer],
+.GUNS__42-fc4a8ecb-0134cd8f-16509107 [class*=secondTab],
+.GUNS__42-fc4a8ecb-0134cd8f-16509107>:not(style) {
   margin: 0 !important;
   padding: 0 !important;
   width: 100% !important;
@@ -601,48 +601,48 @@
   -webkit-backdrop-filter: none !important
 }
 
-.userPortfolioLayout_aboutCardContent__ZPr4I [class*=discordUserInformation] {
+.GUNS__42-fc4a8ecb-0134cd8f-16509107 [class*=discordUserInformation] {
   padding: 0 !important;
   width: 100%
 }
 
-.userPortfolioLayout_aboutCardContent__ZPr4I [class*=discordPresenceContainer] {
+.GUNS__42-fc4a8ecb-0134cd8f-16509107 [class*=discordPresenceContainer] {
   justify-content: center
 }
 
-.userPortfolioLayout_aboutCardContent__ZPr4I [class*=secondTab] {
+.GUNS__42-fc4a8ecb-0134cd8f-16509107 [class*=secondTab] {
   align-items: center
 }
 
-.userPortfolioLayout_projectGrid__mlvP7 {
+.GUNS__8f-05ab8dd3-96722b99-ecfc33d7 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--portfolioModuleGap18, 13.5px)
 }
 
-.userPortfolioLayout_projectGrid__mlvP7[data-count="1"] {
+.GUNS__8f-05ab8dd3-96722b99-ecfc33d7[data-count="1"] {
   grid-template-columns: 1fr
 }
 
-.userPortfolioLayout_projectGrid__mlvP7[data-count="1"] .userPortfolioLayout_projectCard__h8O_m {
+.GUNS__8f-05ab8dd3-96722b99-ecfc33d7[data-count="1"] .GUNS__91-d071a5c5-39582cb6-db02233d {
   min-height: var(--portfolioModuleProjectHeroHeight, 420px)
 }
 
-.userPortfolioLayout_projectGrid__mlvP7[data-count="2"] {
+.GUNS__8f-05ab8dd3-96722b99-ecfc33d7[data-count="2"] {
   grid-template-columns: 1fr
 }
 
-.userPortfolioLayout_projectGrid__mlvP7[data-count="2"] .userPortfolioLayout_projectCard__h8O_m {
+.GUNS__8f-05ab8dd3-96722b99-ecfc33d7[data-count="2"] .GUNS__91-d071a5c5-39582cb6-db02233d {
   grid-column: 1/-1
 }
 
-.userPortfolioLayout_projectGrid__mlvP7[data-count="3"] .userPortfolioLayout_projectCard__h8O_m[data-project-index="2"] {
+.GUNS__8f-05ab8dd3-96722b99-ecfc33d7[data-count="3"] .GUNS__91-d071a5c5-39582cb6-db02233d[data-project-index="2"] {
   grid-column: 1/-1;
   width: 100%;
   justify-self: stretch
 }
 
-.userPortfolioLayout_projectCard__h8O_m {
+.GUNS__91-d071a5c5-39582cb6-db02233d {
   position: relative;
   min-height: var(--portfolioModuleProjectHeight, 225px);
   border-radius: var(--containerRadius);
@@ -660,7 +660,7 @@
   background-origin: border-box
 }
 
-.userPortfolioLayout_projectImage__7YCI5 {
+.GUNS__12-ec678af2-524b7369-2844fe5a {
   position: absolute;
   inset: 0;
   z-index: 0;
@@ -669,43 +669,43 @@
   transition: transform .26s ease
 }
 
-.userPortfolioLayout_projectScrim__Wqc4M {
+.GUNS__f5-10340946-79523511-349521b9 {
   position: absolute;
   inset: 0;
   z-index: 1;
   background: linear-gradient(0deg, rgba(0, 0, 0, .72), rgba(0, 0, 0, .18))
 }
 
-.userPortfolioLayout_projectCard__h8O_m[data-hover=visit_overlay]:hover .userPortfolioLayout_projectImage__7YCI5,
-.userPortfolioLayout_projectCard__h8O_m[data-hover=zoom_image]:hover .userPortfolioLayout_projectImage__7YCI5 {
+.GUNS__91-d071a5c5-39582cb6-db02233d[data-hover=visit_overlay]:hover .GUNS__12-ec678af2-524b7369-2844fe5a,
+.GUNS__91-d071a5c5-39582cb6-db02233d[data-hover=zoom_image]:hover .GUNS__12-ec678af2-524b7369-2844fe5a {
   transform: scale(1.06)
 }
 
-.userPortfolioLayout_projectCard__h8O_m[data-hover=none]:hover .userPortfolioLayout_projectImage__7YCI5 {
+.GUNS__91-d071a5c5-39582cb6-db02233d[data-hover=none]:hover .GUNS__12-ec678af2-524b7369-2844fe5a {
   transform: none
 }
 
-.userPortfolioLayout_projectCard__h8O_m[data-hover=lift] {
+.GUNS__91-d071a5c5-39582cb6-db02233d[data-hover=lift] {
   transition: transform .22s ease, box-shadow .22s ease
 }
 
-.userPortfolioLayout_projectCard__h8O_m[data-hover=lift]:hover {
+.GUNS__91-d071a5c5-39582cb6-db02233d[data-hover=lift]:hover {
   transform: translateY(-6px);
   box-shadow: 0 18px 48px rgba(0, 0, 0, .32)
 }
 
-.userPortfolioLayout_projectCard__h8O_m[data-hover=show_tags] .userPortfolioLayout_projectTags__uJn45 {
+.GUNS__91-d071a5c5-39582cb6-db02233d[data-hover=show_tags] .GUNS__5b-448926bc-f360f850-e5ade1a0 {
   opacity: 0;
   transform: translateY(-6px);
   transition: opacity .18s ease, transform .18s ease
 }
 
-.userPortfolioLayout_projectCard__h8O_m[data-hover=show_tags]:hover .userPortfolioLayout_projectTags__uJn45 {
+.GUNS__91-d071a5c5-39582cb6-db02233d[data-hover=show_tags]:hover .GUNS__5b-448926bc-f360f850-e5ade1a0 {
   opacity: 1;
   transform: translateY(0)
 }
 
-.userPortfolioLayout_projectTags__uJn45 {
+.GUNS__5b-448926bc-f360f850-e5ade1a0 {
   position: absolute;
   z-index: 2;
   top: var(--portfolioModuleTagInset, 9px);
@@ -716,18 +716,18 @@
   max-width: calc(100% - var(--portfolioModuleTagInsetDouble, 18px))
 }
 
-.userPortfolioLayout_projectCard__h8O_m[data-tag-position=top_right] .userPortfolioLayout_projectTags__uJn45 {
+.GUNS__91-d071a5c5-39582cb6-db02233d[data-tag-position=top_right] .GUNS__5b-448926bc-f360f850-e5ade1a0 {
   left: auto;
   right: var(--portfolioModuleTagInset, 9px);
   justify-content: flex-end
 }
 
-.userPortfolioLayout_projectCard__h8O_m[data-tag-position=bottom_above_title] .userPortfolioLayout_projectTags__uJn45 {
+.GUNS__91-d071a5c5-39582cb6-db02233d[data-tag-position=bottom_above_title] .GUNS__5b-448926bc-f360f850-e5ade1a0 {
   top: auto;
   bottom: calc(var(--portfolioModuleProjectPadding, 22.5px) + 74px)
 }
 
-.userPortfolioLayout_projectTagPill__omq2q {
+.GUNS__37-b100a3e7-104f9f4c-8e713728 {
   display: inline-flex;
   align-items: center;
   gap: var(--portfolioModuleGap5, 3.75px);
@@ -741,21 +741,21 @@
   backdrop-filter: blur(var(--containerBlur))
 }
 
-.userPortfolioLayout_projectTagDot__Y4ylZ {
+.GUNS__54-4ac3a9c6-961b54e0-8c9f57b6 {
   width: var(--portfolioModuleProjectTagDot, 6px);
   height: var(--portfolioModuleProjectTagDot, 6px);
   border-radius: 50%;
   flex: 0 0 var(--portfolioModuleProjectTagDot, 6px)
 }
 
-.userPortfolioLayout_projectTagIcon__mne5w {
+.GUNS__46-b913928d-c62289b7-8de4dc58 {
   width: var(--portfolioModuleProjectTagIcon, 9px);
   height: var(--portfolioModuleProjectTagIcon, 9px);
   flex: 0 0 var(--portfolioModuleProjectTagIcon, 9px);
   display: block
 }
 
-.userPortfolioLayout_projectContent__pEgio {
+.GUNS__b4-e3665cbf-d58c7f96-ee1096c3 {
   position: relative;
   z-index: 2;
   padding: clamp(16px, 3vw, var(--portfolioModuleProjectPadding, 22.5px));
@@ -765,49 +765,49 @@
   max-width: 80%
 }
 
-.userPortfolioLayout_projectCard__h8O_m[data-text-align=middle] {
+.GUNS__91-d071a5c5-39582cb6-db02233d[data-text-align=middle] {
   align-items: center;
   justify-content: center
 }
 
-.userPortfolioLayout_projectCard__h8O_m[data-text-align=middle] .userPortfolioLayout_projectContent__pEgio {
+.GUNS__91-d071a5c5-39582cb6-db02233d[data-text-align=middle] .GUNS__b4-e3665cbf-d58c7f96-ee1096c3 {
   align-items: center;
   text-align: center;
   max-width: 86%
 }
 
-.userPortfolioLayout_projectCard__h8O_m[data-text-align=bottom_left] .userPortfolioLayout_projectContent__pEgio {
+.GUNS__91-d071a5c5-39582cb6-db02233d[data-text-align=bottom_left] .GUNS__b4-e3665cbf-d58c7f96-ee1096c3 {
   max-width: 80%
 }
 
-.userPortfolioLayout_projectCard__h8O_m[data-text-align=bottom_right] {
+.GUNS__91-d071a5c5-39582cb6-db02233d[data-text-align=bottom_right] {
   justify-content: flex-end
 }
 
-.userPortfolioLayout_projectCard__h8O_m[data-text-align=bottom_right] .userPortfolioLayout_projectContent__pEgio {
+.GUNS__91-d071a5c5-39582cb6-db02233d[data-text-align=bottom_right] .GUNS__b4-e3665cbf-d58c7f96-ee1096c3 {
   align-items: flex-end;
   text-align: right;
   max-width: 80%
 }
 
-.userPortfolioLayout_projectContent__pEgio h2,
-.userPortfolioLayout_projectContent__pEgio p {
+.GUNS__b4-e3665cbf-d58c7f96-ee1096c3 h2,
+.GUNS__b4-e3665cbf-d58c7f96-ee1096c3 p {
   margin: 0;
   overflow-wrap: anywhere
 }
 
-.userPortfolioLayout_projectContent__pEgio h2 {
+.GUNS__b4-e3665cbf-d58c7f96-ee1096c3 h2 {
   font-size: clamp(18px, 3vw, var(--portfolioModuleProjectTitleFont, 25.5px));
   font-weight: 700
 }
 
-.userPortfolioLayout_projectContent__pEgio p {
+.GUNS__b4-e3665cbf-d58c7f96-ee1096c3 p {
   color: var(--textColorDarker);
   font-size: var(--portfolioModuleBodyFont, 12px);
   line-height: 1.45
 }
 
-.userPortfolioLayout_projectVisit__Io1zI {
+.GUNS__f6-cca90b98-a68f3cbd-f663cc91 {
   position: absolute;
   inset: 0;
   z-index: 3;
@@ -822,57 +822,57 @@
   transition: opacity .18s ease
 }
 
-.userPortfolioLayout_projectCard__h8O_m[data-hover=visit_overlay]:hover .userPortfolioLayout_projectVisit__Io1zI {
+.GUNS__91-d071a5c5-39582cb6-db02233d[data-hover=visit_overlay]:hover .GUNS__f6-cca90b98-a68f3cbd-f663cc91 {
   opacity: 1
 }
 
-.userPortfolioLayout_skillsGrid__Ka3LW {
+.GUNS__8c-afdd5c2e-0a88e335-5e9756c2 {
   display: flex;
   flex-wrap: wrap;
   gap: var(--portfolioModuleGap10, 7.5px)
 }
 
-.userPortfolioLayout_skillsGrid__Ka3LW[data-layout=grid] {
+.GUNS__8c-afdd5c2e-0a88e335-5e9756c2[data-layout=grid] {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(130px, 1fr))
 }
 
-.userPortfolioLayout_skillsGrid__Ka3LW[data-layout=grid] .userPortfolioLayout_skillPill__e9LP_ {
+.GUNS__8c-afdd5c2e-0a88e335-5e9756c2[data-layout=grid] .GUNS__08-f3542ffc-cbe67775-602210e2 {
   justify-content: center
 }
 
-.userPortfolioLayout_skillsCategoryGrid__ESWLr {
+.GUNS__ba-42a2a088-86b094e5-c88d3ec3 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--portfolioModuleGap18, 13.5px)
 }
 
-.userPortfolioLayout_skillCategoryGroup__7DqVP {
+.GUNS__38-99484680-1fac1fda-6f2cd29b {
   min-width: 0
 }
 
-.userPortfolioLayout_skillCategoryGroup__7DqVP h2 {
+.GUNS__38-99484680-1fac1fda-6f2cd29b h2 {
   margin: 0 0 var(--portfolioModuleGap8, 6px);
   color: var(--textColorDarker);
   font-size: var(--portfolioModuleBodyFont, 12px);
   font-weight: 650
 }
 
-.userPortfolioLayout_skillPillDot__Yjqfo {
+.GUNS__3b-b89689a3-b4ad956c-d7edd925 {
   width: 8px;
   height: 8px;
   border-radius: 50%;
   flex-shrink: 0
 }
 
-.userPortfolioLayout_skillPillIcon__MBrOu {
+.GUNS__55-8b362b41-7e82c10b-7570fbe6 {
   width: var(--portfolioModuleSkillIcon, 11.25px);
   height: var(--portfolioModuleSkillIcon, 11.25px);
   flex: 0 0 var(--portfolioModuleSkillIcon, 11.25px);
   display: block
 }
 
-.userPortfolioLayout_skillPill__e9LP_ {
+.GUNS__08-f3542ffc-cbe67775-602210e2 {
   display: inline-flex;
   align-items: center;
   gap: var(--portfolioModuleGap7, 5.25px);
@@ -891,53 +891,53 @@
   white-space: nowrap
 }
 
-.userPortfolioLayout_customContent__eUZBw {
+.GUNS__70-7cf7bb9a-2028ce23-c344e5f1 {
   display: flex;
   flex-direction: column;
   gap: var(--portfolioModuleGap8, 6px)
 }
 
-.userPortfolioLayout_customContent__eUZBw[data-align=center] {
+.GUNS__70-7cf7bb9a-2028ce23-c344e5f1[data-align=center] {
   text-align: center;
   align-items: center
 }
 
-.userPortfolioLayout_customContent__eUZBw[data-align=right] {
+.GUNS__70-7cf7bb9a-2028ce23-c344e5f1[data-align=right] {
   text-align: right;
   align-items: flex-end
 }
 
-.userPortfolioLayout_customContent__eUZBw h1,
-.userPortfolioLayout_customContent__eUZBw h2,
-.userPortfolioLayout_customContent__eUZBw h3,
-.userPortfolioLayout_customContent__eUZBw p {
+.GUNS__70-7cf7bb9a-2028ce23-c344e5f1 h1,
+.GUNS__70-7cf7bb9a-2028ce23-c344e5f1 h2,
+.GUNS__70-7cf7bb9a-2028ce23-c344e5f1 h3,
+.GUNS__70-7cf7bb9a-2028ce23-c344e5f1 p {
   margin: 0
 }
 
-.userPortfolioLayout_customContent__eUZBw h1 {
+.GUNS__70-7cf7bb9a-2028ce23-c344e5f1 h1 {
   font-size: var(--portfolioModuleCustomH1, 21px)
 }
 
-.userPortfolioLayout_customContent__eUZBw h2 {
+.GUNS__70-7cf7bb9a-2028ce23-c344e5f1 h2 {
   font-size: var(--portfolioModuleCustomH2, 17.25px)
 }
 
-.userPortfolioLayout_customContent__eUZBw h3 {
+.GUNS__70-7cf7bb9a-2028ce23-c344e5f1 h3 {
   font-size: var(--portfolioModuleCustomH3, 14.25px)
 }
 
-.userPortfolioLayout_customContent__eUZBw a {
+.GUNS__70-7cf7bb9a-2028ce23-c344e5f1 a {
   color: var(--textColor);
   overflow-wrap: anywhere;
   word-break: break-word
 }
 
-.userPortfolioLayout_customContent__eUZBw[data-link-style=underline] a {
+.GUNS__70-7cf7bb9a-2028ce23-c344e5f1[data-link-style=underline] a {
   text-decoration: underline;
   text-underline-offset: 3px
 }
 
-.userPortfolioLayout_customContent__eUZBw[data-link-style=pill] a {
+.GUNS__70-7cf7bb9a-2028ce23-c344e5f1[data-link-style=pill] a {
   display: inline-flex;
   padding: 2px 8px;
   border-radius: 999px;
@@ -946,49 +946,49 @@
   text-decoration: none
 }
 
-.userPortfolioLayout_customContent__eUZBw[data-link-style=glow] a {
+.GUNS__70-7cf7bb9a-2028ce23-c344e5f1[data-link-style=glow] a {
   text-decoration: none;
   text-shadow: 0 0 12px var(--textColor)
 }
 
-.userPortfolioLayout_customContent__eUZBw[data-link-style=plain] a {
+.GUNS__70-7cf7bb9a-2028ce23-c344e5f1[data-link-style=plain] a {
   text-decoration: none
 }
 
-.userPortfolioLayout_customContent__eUZBw[data-collapsed=true] {
+.GUNS__70-7cf7bb9a-2028ce23-c344e5f1[data-collapsed=true] {
   max-height: var(--customCollapsedMaxHeight, calc(1.6em * 6 + var(--portfolioModuleGap8, 6px) * 5));
   overflow: hidden;
   -webkit-mask-image: linear-gradient(180deg, #000 82%, transparent);
   mask-image: linear-gradient(180deg, #000 82%, transparent)
 }
 
-.userPortfolioLayout_customContent__eUZBw[data-collapsible=true] {
+.GUNS__70-7cf7bb9a-2028ce23-c344e5f1[data-collapsible=true] {
   max-height: var(--customContentMaxHeight, var(--customExpandedMaxHeight, 9999px));
   overflow: hidden;
   transition-property: max-height
 }
 
-.userPortfolioLayout_customContent__eUZBw[data-collapsible=true][data-interaction-animation=fade] {
+.GUNS__70-7cf7bb9a-2028ce23-c344e5f1[data-collapsible=true][data-interaction-animation=fade] {
   transition-duration: .56s;
   transition-timing-function: cubic-bezier(.2, .7, .2, 1)
 }
 
-.userPortfolioLayout_customContent__eUZBw[data-collapsible=true][data-interaction-animation=pop] {
+.GUNS__70-7cf7bb9a-2028ce23-c344e5f1[data-collapsible=true][data-interaction-animation=pop] {
   transition-duration: .52s;
   transition-timing-function: cubic-bezier(.18, 1.15, .34, 1)
 }
 
-.userPortfolioLayout_customContent__eUZBw[data-collapsible=true][data-interaction-animation=unfold] {
+.GUNS__70-7cf7bb9a-2028ce23-c344e5f1[data-collapsible=true][data-interaction-animation=unfold] {
   transition-duration: .7s;
   transition-timing-function: cubic-bezier(.2, .72, .12, 1)
 }
 
-.userPortfolioLayout_customContent__eUZBw[data-collapsed=false] {
+.GUNS__70-7cf7bb9a-2028ce23-c344e5f1[data-collapsed=false] {
   -webkit-mask-image: none;
   mask-image: none
 }
 
-.userPortfolioLayout_customContent__eUZBw blockquote {
+.GUNS__70-7cf7bb9a-2028ce23-c344e5f1 blockquote {
   margin: 0;
   padding: 4px 0 4px 14px;
   border-left: 2px solid var(--textColor);
@@ -996,7 +996,7 @@
   font-size: 1.1em
 }
 
-.userPortfolioLayout_customContent__eUZBw ul {
+.GUNS__70-7cf7bb9a-2028ce23-c344e5f1 ul {
   margin: 0;
   padding-left: 18px;
   display: flex;
@@ -1004,7 +1004,7 @@
   gap: 4px
 }
 
-.userPortfolioLayout_customContent__eUZBw code {
+.GUNS__70-7cf7bb9a-2028ce23-c344e5f1 code {
   display: inline;
   padding: 2px 6px;
   border-radius: 6px;
@@ -1013,12 +1013,12 @@
   font-size: .9em
 }
 
-.userPortfolioLayout_sectionHeading__labPJ[data-align=center] {
+.GUNS__d3-da886a08-d0f07b56-afbb72f4[data-align=center] {
   align-items: center;
   text-align: center
 }
 
-.userPortfolioLayout_readMoreButton__l9E60 {
+.GUNS__d4-ecbd9d49-57ea7dd5-76739d2f {
   margin-top: var(--portfolioModuleGap10, 7.5px);
   display: inline-flex;
   align-items: center;
@@ -1034,22 +1034,22 @@
   cursor: pointer
 }
 
-.userPortfolioLayout_customContent__eUZBw[data-toggle-active=true][data-interaction-animation=fade],
-.userPortfolioLayout_readMoreButton__l9E60[data-toggle-active=true][data-animation=fade] {
-  animation: userPortfolioLayout_customReadMoreFadePulse__bZ7y7 .56s cubic-bezier(.2, .7, .2, 1)
+.GUNS__70-7cf7bb9a-2028ce23-c344e5f1[data-toggle-active=true][data-interaction-animation=fade],
+.GUNS__d4-ecbd9d49-57ea7dd5-76739d2f[data-toggle-active=true][data-animation=fade] {
+  animation: GUNS__64-fb8ec083-4f8b38de-c7ba21d4 .56s cubic-bezier(.2, .7, .2, 1)
 }
 
-.userPortfolioLayout_customContent__eUZBw[data-toggle-active=true][data-interaction-animation=pop],
-.userPortfolioLayout_readMoreButton__l9E60[data-toggle-active=true][data-animation=pop] {
-  animation: userPortfolioLayout_customReadMorePopPulse__63ZuF .52s cubic-bezier(.18, 1.15, .34, 1)
+.GUNS__70-7cf7bb9a-2028ce23-c344e5f1[data-toggle-active=true][data-interaction-animation=pop],
+.GUNS__d4-ecbd9d49-57ea7dd5-76739d2f[data-toggle-active=true][data-animation=pop] {
+  animation: GUNS__07-d9182382-837aa49c-20691fdd .52s cubic-bezier(.18, 1.15, .34, 1)
 }
 
-.userPortfolioLayout_customContent__eUZBw[data-toggle-active=true][data-interaction-animation=unfold],
-.userPortfolioLayout_readMoreButton__l9E60[data-toggle-active=true][data-animation=unfold] {
-  animation: userPortfolioLayout_customReadMoreUnfoldPulse__kQX2m .7s cubic-bezier(.2, .72, .12, 1)
+.GUNS__70-7cf7bb9a-2028ce23-c344e5f1[data-toggle-active=true][data-interaction-animation=unfold],
+.GUNS__d4-ecbd9d49-57ea7dd5-76739d2f[data-toggle-active=true][data-animation=unfold] {
+  animation: GUNS__a5-d73ed353-df9f175f-34df95ea .7s cubic-bezier(.2, .72, .12, 1)
 }
 
-.userPortfolioLayout_scrollProgressBar__fbgfM {
+.GUNS__da-9401a1cf-19f81560-7e6e18b8 {
   position: fixed;
   z-index: 55;
   top: 12px;
@@ -1063,7 +1063,7 @@
   pointer-events: none
 }
 
-.userPortfolioLayout_scrollProgressBar__fbgfM span {
+.GUNS__da-9401a1cf-19f81560-7e6e18b8 span {
   display: block;
   width: 100%;
   height: 100%;
@@ -1072,7 +1072,7 @@
   box-shadow: 0 0 14px var(--textColor)
 }
 
-.userPortfolioLayout_scrollProgressDots__xuvRG {
+.GUNS__91-10a31676-9447bfb7-f8a8c061 {
   position: fixed;
   z-index: 55;
   right: 16px;
@@ -1084,7 +1084,7 @@
   pointer-events: none
 }
 
-.userPortfolioLayout_scrollProgressDots__xuvRG span {
+.GUNS__91-10a31676-9447bfb7-f8a8c061 span {
   width: 7px;
   height: 7px;
   border-radius: 50%;
@@ -1093,13 +1093,13 @@
   transition: opacity .18s ease, transform .18s ease, background .18s ease
 }
 
-.userPortfolioLayout_scrollProgressDots__xuvRG span[data-active=true] {
+.GUNS__91-10a31676-9447bfb7-f8a8c061 span[data-active=true] {
   opacity: 1;
   transform: scale(1.45);
   background: var(--textColor)
 }
 
-.userPortfolioLayout_customEmbed__j70j7 {
+.GUNS__41-53148273-a1978857-81e3d5dd {
   width: 100%;
   min-height: 360px;
   border: var(--presenceContainerBorder);
@@ -1108,7 +1108,7 @@
   background: #000
 }
 
-.userPortfolioLayout_scrollIndicator__YXxS3 {
+.GUNS__1c-b0f698f7-d1505db6-7276de7d {
   position: fixed;
   left: 50%;
   bottom: 18px;
@@ -1133,7 +1133,7 @@
   transition: opacity .26s ease, translate .26s cubic-bezier(.22, 1, .36, 1), visibility 0s linear 0s
 }
 
-.userPortfolioLayout_scrollIndicator__YXxS3[data-visible=false] {
+.GUNS__1c-b0f698f7-d1505db6-7276de7d[data-visible=false] {
   opacity: 0 !important;
   translate: -50% 10px;
   pointer-events: none;
@@ -1141,19 +1141,19 @@
   transition: opacity .26s ease, translate .26s cubic-bezier(.22, 1, .36, 1), visibility 0s linear .26s
 }
 
-.userPortfolioLayout_scrollIndicator__YXxS3:focus-visible,
-.userPortfolioLayout_scrollIndicator__YXxS3:hover {
+.GUNS__1c-b0f698f7-d1505db6-7276de7d:focus-visible,
+.GUNS__1c-b0f698f7-d1505db6-7276de7d:hover {
   opacity: 1;
   translate: -50% -2px
 }
 
-.userPortfolioLayout_scrollIndicator__YXxS3:focus-visible {
+.GUNS__1c-b0f698f7-d1505db6-7276de7d:focus-visible {
   outline: 2px solid var(--textColor);
   outline-offset: 6px;
   border-radius: 999px
 }
 
-.userPortfolioLayout_scrollIndicator__YXxS3 strong {
+.GUNS__1c-b0f698f7-d1505db6-7276de7d strong {
   font-size: 12px;
   font-weight: 560;
   line-height: 1;
@@ -1162,17 +1162,17 @@
   white-space: nowrap
 }
 
-.userPortfolioLayout_scrollIndicator__YXxS3 span {
+.GUNS__1c-b0f698f7-d1505db6-7276de7d span {
   width: 11px;
   height: 11px;
   border-right: 2px solid var(--textColor);
   border-bottom: 2px solid var(--textColor);
   transform: rotate(45deg);
-  animation: userPortfolioLayout_portfolioScrollCue__WE0oj 1.35s ease-in-out infinite;
+  animation: GUNS__c2-b14692e0-1b9b0b73-8aa64360 1.35s ease-in-out infinite;
   filter: drop-shadow(0 0 8px var(--textColor))
 }
 
-@keyframes userPortfolioLayout_portfolioScrollCue__WE0oj {
+@keyframes GUNS__c2-b14692e0-1b9b0b73-8aa64360 {
 
   0%,
   to {
@@ -1186,7 +1186,7 @@
   }
 }
 
-@keyframes userPortfolioLayout_customReadMoreFadePulse__bZ7y7 {
+@keyframes GUNS__64-fb8ec083-4f8b38de-c7ba21d4 {
   0% {
     opacity: .72
   }
@@ -1196,7 +1196,7 @@
   }
 }
 
-@keyframes userPortfolioLayout_customReadMorePopPulse__63ZuF {
+@keyframes GUNS__07-d9182382-837aa49c-20691fdd {
   0% {
     transform: scale(.985)
   }
@@ -1210,7 +1210,7 @@
   }
 }
 
-@keyframes userPortfolioLayout_customReadMoreUnfoldPulse__kQX2m {
+@keyframes GUNS__a5-d73ed353-df9f175f-34df95ea {
   0% {
     opacity: .82;
     transform: translateY(-10px)
@@ -1223,64 +1223,64 @@
 }
 
 @media (max-width:720px) {
-  .userPortfolioLayout_portfolioPage__fEj6G {
+  .GUNS__7b-ad72801c-d3bb8b46-0894ec4e {
     padding: 26px 12px 132px;
     gap: 0
   }
 
-  .userPortfolioLayout_portfolioPage__fEj6G[data-compact-top-audio=true] {
+  .GUNS__7b-ad72801c-d3bb8b46-0894ec4e[data-compact-top-audio=true] {
     gap: 0;
     padding-top: 26px;
     padding-bottom: 132px
   }
 
-  .userPortfolioLayout_portfolioSections__LiyrU {
+  .GUNS__9d-aa0d7193-ab3c9d09-69855837 {
     margin-top: 56px;
     gap: var(--portfolioSectionGapScaled, 25.5px)
   }
 
-  .userPortfolioLayout_portfolioTopSection__JBYdI {
+  .GUNS__33-289b5a49-64aef540-cb964a41 {
     min-height: calc(100vh - 52px);
     min-height: calc(100dvh - 52px);
     padding-bottom: 72px
   }
 
-  .userPortfolioLayout_portfolioIntroStack__LJotx {
+  .GUNS__25-5e1f5fdb-ebea97ac-06673f53 {
     min-height: calc(100dvh - 52px);
     margin-bottom: 56px
   }
 
-  .userPortfolioLayout_heroModule__6s_La,
-  .userPortfolioLayout_portfolioSection__Dj55G {
+  .GUNS__04-48c26bc6-e5a19dc2-c8288809,
+  .GUNS__07-9f3b6c9b-13597119-0404b65e {
     border-radius: var(--containerRadius)
   }
 
-  .userPortfolioLayout_heroModule__6s_La {
+  .GUNS__07-9f3b6c9b-13597119-0404b65e {
     padding: 18px 0 54px
   }
 
-  .userPortfolioLayout_heroStageSolo__XXDpj,
-  .userPortfolioLayout_heroStage__gLhgu {
+  .GUNS__18-7c2472f2-6a2c59bb-c9c39e70,
+  .GUNS__35-08e74f4d-3c49b19d-e4ff0f76 {
     grid-template-columns: 1fr;
     gap: 18px;
     padding: 0;
     justify-content: stretch
   }
 
-  .userPortfolioLayout_heroIdentity__fK3hj {
+  .GUNS__74-a07b26e4-6436fb8c-6bb9433f {
     justify-self: center
   }
 
-  .userPortfolioLayout_heroAvatarFrame__5QFcb {
+  .GUNS__60-f6e4b357-041933b3-bab21af8 {
     width: 150px;
     height: 150px
   }
 
-  .userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] {
+  .GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] {
     padding: 12px 0 46px
   }
 
-  .userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroStage__gLhgu:not(.userPortfolioLayout_heroStageSolo__XXDpj) {
+  .GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__18-7c2472f2-6a2c59bb-c9c39e70:not(.GUNS__35-08e74f4d-3c49b19d-e4ff0f76) {
     width: fit-content;
     max-width: 390px;
     grid-template-columns: clamp(112px, 34vw, 132px) minmax(0, 1fr);
@@ -1291,7 +1291,7 @@
     box-sizing: border-box
   }
 
-  .userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroIdentity__fK3hj {
+  .GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__74-a07b26e4-6436fb8c-6bb9433f {
     width: 100%;
     justify-self: start;
     align-items: center;
@@ -1299,25 +1299,25 @@
     box-sizing: border-box
   }
 
-  .userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroAvatarFrame__5QFcb {
+  .GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__60-f6e4b357-041933b3-bab21af8 {
     width: 140px;
     height: 140px
   }
 
-  .userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroContent__g0PA1 {
+  .GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__58-21193694-fe5d6591-fbd81464 {
     width: 100%;
     max-width: 100%;
     min-width: 0;
     gap: 7px
   }
 
-  .userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroTitlePanel__5kFEo {
+  .GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__2f-d8370fad-3038f469-2e916cdf {
     width: 100%;
     min-width: 0;
     padding: 0 0 4px
   }
 
-  .userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroTitleRow__s0rEV {
+  .GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__d2-ba3d2def-d2760e65-3ed7811a {
     width: fit-content;
     max-width: 100%;
     min-width: 0;
@@ -1327,13 +1327,13 @@
     gap: 6px
   }
 
-  .userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroTitlePanel__5kFEo .hero-tw-classic .Typewriter,
-  .userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroTitlePanel__5kFEo h1 {
+  .GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__2f-d8370fad-3038f469-2e916cdf .hero-tw-classic .Typewriter,
+  .GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__2f-d8370fad-3038f469-2e916cdf h1 {
     font-size: clamp(24px, 8vw, 34px) !important;
     line-height: 1
   }
 
-  .userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroBadgeContainerInline__txCnM {
+  .GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__59-1f40d600-40dba878-90b11147 {
     width: auto;
     min-width: 0;
     max-width: 100%;
@@ -1341,7 +1341,7 @@
     overflow: hidden
   }
 
-  .userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroBadgeRail__vrvRW {
+  .GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__a2-b2b4814e-6b1224a6-275d5630 {
     width: fit-content;
     max-width: 100%;
     justify-content: flex-start;
@@ -1356,105 +1356,105 @@
     mask-image: none
   }
 
-  .userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroBadgeRail__vrvRW[data-carousel-active=true] {
+  .GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__a2-b2b4814e-6b1224a6-275d5630[data-carousel-active=true] {
     width: 100%;
     padding: 4px 0;
     -webkit-mask-image: linear-gradient(90deg, transparent, #000 10px, #000 calc(100% - 10px), transparent);
     mask-image: linear-gradient(90deg, transparent, #000 10px, #000 calc(100% - 10px), transparent)
   }
 
-  .userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroBadgeRail__vrvRW::-webkit-scrollbar {
+  .GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__a2-b2b4814e-6b1224a6-275d5630::-webkit-scrollbar {
     display: none
   }
 
-  .userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroBadgeTrack__wNpVX {
+  .GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__f7-a57a2f04-fa294a61-f4d92e2e {
     width: max-content;
     flex: 0 0 auto;
     max-width: none
   }
 
-  .userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroBadgeRail__vrvRW[data-carousel-active=true] .userPortfolioLayout_heroBadgeTrack__wNpVX {
-    animation: userPortfolioLayout_heroBadgeRailLoop__tAKxK 11s linear infinite;
+  .GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__a2-b2b4814e-6b1224a6-275d5630[data-carousel-active=true] .GUNS__f7-a57a2f04-fa294a61-f4d92e2e {
+    animation: GUNS__bc-99dedf07-89eeb7e7-cff34073 11s linear infinite;
     will-change: transform
   }
 
-  .userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroBadgeRail__vrvRW[data-carousel-paused=true] .userPortfolioLayout_heroBadgeTrack__wNpVX {
+  .GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__a2-b2b4814e-6b1224a6-275d5630[data-carousel-paused=true] .GUNS__f7-a57a2f04-fa294a61-f4d92e2e {
     animation-play-state: paused
   }
 
-  .userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroBadgeGroup__6yrd_ {
+  .GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__f5-a3fa5675-121435b7-c6f8a1c8 {
     flex: 0 0 auto;
     gap: 4px;
     padding: 0
   }
 
-  .userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroBadgeRail__vrvRW[data-carousel-active=true] .userPortfolioLayout_heroBadgeGroup__6yrd_ {
+  .GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__a2-b2b4814e-6b1224a6-275d5630[data-carousel-active=true] .GUNS__f5-a3fa5675-121435b7-c6f8a1c8 {
     padding-right: 4px
   }
 
-  .userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroBadgeGroup__6yrd_[aria-hidden=true] {
+  .GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__f5-a3fa5675-121435b7-c6f8a1c8[aria-hidden=true] {
     pointer-events: none
   }
 
-  .userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroBadgeRail__vrvRW svg {
+  .GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__a2-b2b4814e-6b1224a6-275d5630 svg {
     font-size: calc(var(--userBadge) * .8)
   }
 
-  .userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroBadgeRail__vrvRW img {
+  .GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__a2-b2b4814e-6b1224a6-275d5630 img {
     height: 19px
   }
 
-  .userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroDescription__YZUtU {
+  .GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__81-7438d2df-c0161f48-3f3200e7 {
     max-width: 100%;
     padding: 0;
     font-size: clamp(12px, 3.4vw, 14px) !important;
     line-height: 1.35
   }
 
-  .userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroActions__wdm3Q {
+  .GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__20-140cbab4-d4407d14-80413a1e {
     width: 100%;
     max-width: 100%;
     margin-top: 4px;
     transform: none
   }
 
-  .userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroActions__wdm3Q>div {
+  .GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__20-140cbab4-d4407d14-80413a1e>div {
     max-width: 100%;
     gap: 7px;
     row-gap: 7px
   }
 
-  .userPortfolioLayout_heroModule__6s_La[data-hero-style=classic] .userPortfolioLayout_heroActions__wdm3Q svg {
+  .GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=classic] .GUNS__20-140cbab4-d4407d14-80413a1e svg {
     font-size: 27px !important
   }
 
-  .userPortfolioLayout_heroModule__6s_La[data-hero-style=centered] .userPortfolioLayout_heroContent__g0PA1 {
+  .GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=centered] .GUNS__58-21193694-fe5d6591-fbd81464 {
     align-items: center;
     text-align: center;
     max-width: 100%
   }
 
-  .userPortfolioLayout_heroTitlePanel__5kFEo {
+  .GUNS__2f-d8370fad-3038f469-2e916cdf {
     width: 100%;
     padding: 16px
   }
 
-  .userPortfolioLayout_heroTitlePanel__5kFEo h1 {
+  .GUNS__2f-d8370fad-3038f469-2e916cdf h1 {
     font-size: 42px !important
   }
 
-  .userPortfolioLayout_heroDescription__YZUtU {
+  .GUNS__81-7438d2df-c0161f48-3f3200e7 {
     max-width: 100%;
     padding: 14px
   }
 
-  .userPortfolioLayout_heroModule__6s_La[data-hero-style=centered] .userPortfolioLayout_heroActions__wdm3Q {
+  .GUNS__07-9f3b6c9b-13597119-0404b65e[data-hero-style=centered] .GUNS__20-140cbab4-d4407d14-80413a1e {
     display: flex;
     justify-content: center;
     width: 100%
   }
 
-  .userPortfolioLayout_heroBottomMeta__irvco {
+  .GUNS__38-301bcaaf-9d61b88f-afdbaa22 {
     left: 15px;
     transform: none;
     bottom: calc(env(safe-area-inset-bottom, 0px) + 10px);
@@ -1463,59 +1463,59 @@
     white-space: nowrap
   }
 
-  .userPortfolioLayout_scrollProgressDots__xuvRG {
+  .GUNS__91-10a31676-9447bfb7-f8a8c061 {
     display: none
   }
 
-  .userPortfolioLayout_scrollIndicator__YXxS3 {
+  .GUNS__1c-b0f698f7-d1505db6-7276de7d {
     bottom: calc(env(safe-area-inset-bottom, 0px) + 30px);
     min-height: 36px;
     gap: 4px
   }
 
-  .userPortfolioLayout_scrollIndicator__YXxS3 strong {
+  .GUNS__1c-b0f698f7-d1505db6-7276de7d strong {
     font-size: 11px
   }
 
-  .userPortfolioLayout_aboutCards__P8iAU,
-  .userPortfolioLayout_projectGrid__mlvP7,
-  .userPortfolioLayout_projectGrid__mlvP7[data-count="3"],
-  .userPortfolioLayout_skillsCategoryGrid__ESWLr {
+  .GUNS__75-0fd8ed4e-7fc51b4b-480b0bed,
+  .GUNS__8f-05ab8dd3-96722b99-ecfc33d7,
+  .GUNS__8f-05ab8dd3-96722b99-ecfc33d7[data-count="3"],
+  .GUNS__ba-42a2a088-86b094e5-c88d3ec3 {
     grid-template-columns: 1fr
   }
 
-  .userPortfolioLayout_aboutCardContent__ZPr4I,
-  .userPortfolioLayout_aboutCard__zg5mT {
+  .GUNS__42-fc4a8ecb-0134cd8f-16509107,
+  .GUNS__78-fd8143c6-c7385e6f-9b42faf4 {
     width: 100%
   }
 
-  .userPortfolioLayout_projectGrid__mlvP7[data-count="1"] .userPortfolioLayout_projectCard__h8O_m {
+  .GUNS__8f-05ab8dd3-96722b99-ecfc33d7[data-count="1"] .GUNS__91-d071a5c5-39582cb6-db02233d {
     min-height: 420px
   }
 
-  .userPortfolioLayout_projectGrid__mlvP7[data-count="3"] .userPortfolioLayout_projectCard__h8O_m[data-project-index="2"] {
+  .GUNS__8f-05ab8dd3-96722b99-ecfc33d7[data-count="3"] .GUNS__91-d071a5c5-39582cb6-db02233d[data-project-index="2"] {
     width: 100%;
     grid-column: auto
   }
 
-  .userPortfolioLayout_projectCard__h8O_m {
+  .GUNS__91-d071a5c5-39582cb6-db02233d {
     min-height: 280px
   }
 
-  .userPortfolioLayout_projectContent__pEgio {
+  .GUNS__b4-e3665cbf-d58c7f96-ee1096c3 {
     max-width: 100%;
     padding: 18px
   }
 }
 
 @media (max-height:760px) {
-  .userPortfolioLayout_portfolioSections__LiyrU {
+  .GUNS__9d-aa0d7193-ab3c9d09-69855837 {
     margin-top: 28px;
     gap: 28px
   }
 }
 
-@keyframes userPortfolioLayout_heroBadgeRailLoop__tAKxK {
+@keyframes GUNS__bc-99dedf07-89eeb7e7-cff34073 {
   0% {
     transform: translateZ(0)
   }
@@ -1527,28 +1527,28 @@
 
 @media (prefers-reduced-motion:reduce) {
 
-  .userPortfolioLayout_portfolioReveal__QOdD5,
-  .userPortfolioLayout_portfolioReveal__QOdD5 [data-reveal-part],
-  .userPortfolioLayout_projectImage__7YCI5,
-  .userPortfolioLayout_projectVisit__Io1zI,
-  .userPortfolioLayout_scrollIndicator__YXxS3 span {
+  .GUNS__12-ec678af2-524b7369-2844fe5a,
+  .GUNS__1c-b0f698f7-d1505db6-7276de7d span,
+  .GUNS__a7-42c2b4ef-18d7dfdb-651f60fe,
+  .GUNS__a7-42c2b4ef-18d7dfdb-651f60fe [data-reveal-part],
+  .GUNS__f6-cca90b98-a68f3cbd-f663cc91 {
     transition: none;
     animation: none
   }
 
-  .userPortfolioLayout_portfolioReveal__QOdD5 [data-reveal-part] {
+  .GUNS__a7-42c2b4ef-18d7dfdb-651f60fe [data-reveal-part] {
     opacity: 1 !important;
     transform: none !important;
     pointer-events: auto !important;
     will-change: auto !important
   }
 
-  .userPortfolioLayout_customContent__eUZBw[data-collapsible=true] {
+  .GUNS__70-7cf7bb9a-2028ce23-c344e5f1[data-collapsible=true] {
     transition: none
   }
 
-  .userPortfolioLayout_customContent__eUZBw[data-toggle-active=true],
-  .userPortfolioLayout_readMoreButton__l9E60[data-toggle-active=true] {
+  .GUNS__70-7cf7bb9a-2028ce23-c344e5f1[data-toggle-active=true],
+  .GUNS__d4-ecbd9d49-57ea7dd5-76739d2f[data-toggle-active=true] {
     animation: none
   }
 }

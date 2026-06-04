@@ -35,8 +35,8 @@
           [m, u] = (0, r.useState)(e),
           [w, j] = (0, r.useState)("string" == typeof e ? e : ""),
           [N, C] = (0, r.useState)(t ?? 2),
-          [k, A] = (0, r.useState)(a ?? 2),
-          [S, F] = (0, r.useState)(null),
+          [k, S] = (0, r.useState)(a ?? 2),
+          [A, F] = (0, r.useState)(null),
           T = [{
             value: "satoshi",
             label: n("dashboard.premium.fonts.default_fonts.options.satoshi")
@@ -98,7 +98,7 @@
             s.rel = "stylesheet", s.dataset.font = a, s.href = t[a], e.appendChild(s)
           })
         }, []);
-        let R = async e => {
+        let E = async e => {
           p(!0), e.target.disabled = !0;
           try {
             let t = e.target.files?.[0];
@@ -106,7 +106,7 @@
             let a = t.name.split(".").pop()?.toLowerCase();
             if (!["ttf", "otf", "woff"].includes(a || "")) return void d.oR.error(n("dashboard.premium.fonts.errors.invalid_type"));
             if (t.size > 5242880) return void d.oR.error(n("dashboard.premium.fonts.errors.max_size"));
-            let s = await E(t);
+            let s = await R(t);
             if (!s) return void d.oR.error(n("dashboard.premium.fonts.errors.invalid_font"));
             let r = s.names.fullName?.en !== "false" ? s.names.fullName.en : n("dashboard.premium.fonts.custom_font_name"),
               o = new FormData;
@@ -120,11 +120,11 @@
               name: r,
               weight: s.tables.os2.usWeightClass,
               style: s.names.fontSubfamily?.en || "Regular"
-            }), j(""), await I(l.url)) : d.oR.error(l.error)
+            }), j(""), await P(l.url)) : d.oR.error(l.error)
           } finally {
             e.target.disabled = !1, e.target.value = "", p(!1)
           }
-        }, E = e => new Promise(t => {
+        }, R = e => new Promise(t => {
           let a = new FileReader;
           a.onload = function() {
             let e = a.result;
@@ -135,7 +135,7 @@
               t(null)
             }
           }, a.readAsArrayBuffer(e)
-        }), O = async () => {
+        }), I = async () => {
           let e = await fetch("https://guns.lol/api/dashboard/premium/remove/font", {
               method: "POST",
               headers: {
@@ -144,10 +144,10 @@
             }),
             t = await e.json();
           e.ok ? (F(null), u(""), j("satoshi"), d.oR.success(n("dashboard.premium.fonts.remove_success"))) : d.oR.error(t.error)
-        }, I = async e => {
+        }, P = async e => {
           let t = new FontFace("USERFONT", `url(${e})`);
           await t.load(), document.fonts.add(t), F(t.family)
-        }, P = async () => {
+        }, $ = async () => {
           let e = "" === w ? {
               letterSpacing: k,
               fontSize: N
@@ -164,7 +164,7 @@
             }),
             s = await a.json();
           a.ok ? (d.oR.success(t ? n("dashboard.premium.fonts.save_success.settings") : n("dashboard.premium.fonts.save_success.default")), t || u(w)) : d.oR.error(s.error)
-        }, $ = [{
+        }, O = [{
           value: 1,
           label: n("dashboard.premium.fonts.letter_spacing.marks.compact")
         }, {
@@ -217,7 +217,7 @@
                       type: "file",
                       accept: ".ttf,.otf,.woff",
                       onChange: e => {
-                        R(e)
+                        E(e)
                       }
                     })]
                   }) : (0, s.jsxs)("div", {
@@ -225,7 +225,7 @@
                     children: [(0, s.jsx)("span", {
                       className: l().customFontText,
                       style: {
-                        fontFamily: S || ""
+                        fontFamily: A || ""
                       },
                       children: m.name
                     }), (0, s.jsxs)("div", {
@@ -243,7 +243,7 @@
                       })]
                     }), (0, s.jsx)("div", {
                       className: l().customFontRemove,
-                      onClick: O,
+                      onClick: I,
                       children: (0, s.jsx)("span", {
                         children: f.A.deleteButton
                       })
@@ -273,9 +273,9 @@
                             max: 3,
                             min: 1,
                             label: e => {},
-                            marks: $,
+                            marks: O,
                             value: k,
-                            onChangeFunction: A
+                            onChangeFunction: S
                           })]
                         })
                       })]
@@ -304,7 +304,7 @@
               className: l().fontModalFooter,
               children: (0, s.jsx)("span", {
                 className: l().saveChangesFonts,
-                onClick: P,
+                onClick: $,
                 children: n("dashboard.premium.fonts.save_button")
               })
             })]
@@ -316,7 +316,7 @@
             }), (0, s.jsxs)("span", {
               className: l().manageFontsButton,
               onClick: () => {
-                "string" != typeof m && I(m.url), i(!0)
+                "string" != typeof m && P(m.url), i(!0)
               },
               children: [f.A.font, " ", n("dashboard.premium.fonts.section_button")]
             })]
@@ -463,8 +463,8 @@
         };
       var C = a(81469),
         k = a(44923),
-        A = a(87256),
-        S = a(39768),
+        S = a(87256),
+        A = a(39768),
         F = a(47650);
 
       function T({
@@ -486,11 +486,11 @@
           transform: b,
           transition: g,
           isDragging: y
-        } = (0, A.gl)({
+        } = (0, S.gl)({
           id: e.id,
           animateLayoutChanges: () => !1
         }), v = {
-          transform: S.Ks.Transform.toString(b),
+          transform: A.Ks.Transform.toString(b),
           transition: g,
           opacity: +!y
         };
@@ -554,7 +554,7 @@
           })]
         })
       }
-      let R = ({
+      let E = ({
         onTagsChange: e,
         tagsList: t
       }) => {
@@ -582,8 +582,8 @@
               distance: 10
             }
           })),
-          S = e => "" === e.trim() ? (d.oR.error(a("dashboard.premium.settings.typewriter.tags.errors.empty")), !1) : !(e.trim().length > 100) || (d.oR.error(a("dashboard.premium.settings.typewriter.tags.errors.max_length")), !1),
-          R = async (t, a = !0) => {
+          A = e => "" === e.trim() ? (d.oR.error(a("dashboard.premium.settings.typewriter.tags.errors.empty")), !1) : !(e.trim().length > 100) || (d.oR.error(a("dashboard.premium.settings.typewriter.tags.errors.max_length")), !1),
+          E = async (t, a = !0) => {
             _(!0);
             try {
               if (!await e(t.map(e => e.text))) return !1;
@@ -593,16 +593,16 @@
             } finally {
               _(!1)
             }
-          }, E = async () => {
-            v || !S(n) || (i.length > 4 ? d.oR.error(a("dashboard.premium.settings.typewriter.tags.errors.max_count")) : await R([...i, {
+          }, R = async () => {
+            v || !A(n) || (i.length > 4 ? d.oR.error(a("dashboard.premium.settings.typewriter.tags.errors.max_count")) : await E([...i, {
               id: `tag-new-${Date.now()}`,
               text: n.trim()
             }]) && o(""))
-          }, O = async e => {
+          }, I = async e => {
             if (v) return;
             let t = i.filter(t => t.id !== e);
-            await R(t) && h === e && (b(null), y(""))
-          }, I = async e => {
+            await E(t) && h === e && (b(null), y(""))
+          }, P = async e => {
             if (u(null), v) return;
             let {
               active: t,
@@ -612,33 +612,33 @@
             let s = i.findIndex(e => e.id === t.id),
               r = i.findIndex(e => e.id === a.id);
             if (r === s || -1 === s || -1 === r) return;
-            let n = (0, A.be)(i, s, r);
-            c(n), await R(n, !1) || c(i)
-          }, P = e => {
+            let n = (0, S.be)(i, s, r);
+            c(n), await E(n, !1) || c(i)
+          }, $ = e => {
             if (v) return;
             let t = i.find(t => t.id === e);
             t && (b(e), y(t.text))
-          }, $ = () => {
+          }, O = () => {
             b(null), y("")
           }, D = async () => {
-            if (!h || v || !S(g)) return;
+            if (!h || v || !A(g)) return;
             let e = g.trim(),
               t = i.findIndex(e => e.id === h);
             if (-1 === t) return;
-            if (e === i[t].text) return void $();
+            if (e === i[t].text) return void O();
             let a = [...i];
             a[t] = {
               ...a[t],
               text: e
-            }, await R(a) && $()
+            }, await E(a) && O()
           }, B = async e => {
-            "Enter" === e.key && (e.preventDefault(), await E())
+            "Enter" === e.key && (e.preventDefault(), await R())
           }, z = async e => {
             if ("Enter" === e.key) {
               e.preventDefault(), await D();
               return
             }
-            "Escape" === e.key && (e.preventDefault(), $())
+            "Escape" === e.key && (e.preventDefault(), O())
           };
         return w ? (0, s.jsxs)("div", {
           className: l().tagsInputWrapper,
@@ -655,7 +655,7 @@
             }), (0, s.jsx)("button", {
               type: "button",
               className: l().addTag,
-              onClick: E,
+              onClick: R,
               disabled: v,
               children: f.A.addTag
             })]
@@ -678,11 +678,11 @@
                 onDragCancel: () => {
                   u(null)
                 },
-                onDragEnd: I,
+                onDragEnd: P,
                 autoScroll: !1,
-                children: [(0, s.jsx)(A.gB, {
+                children: [(0, s.jsx)(S.gB, {
                   items: i.map(e => e.id),
-                  strategy: A._G,
+                  strategy: S._G,
                   children: (0, s.jsx)("div", {
                     className: l().tags,
                     children: i.map(e => (0, s.jsx)(T, {
@@ -693,9 +693,9 @@
                       onEditingValueChange: y,
                       onEditKeyPress: z,
                       onSaveEdit: D,
-                      onCancelEdit: $,
-                      onStartEdit: P,
-                      onRemove: O
+                      onCancelEdit: O,
+                      onStartEdit: $,
+                      onRemove: I
                     }, e.id))
                   })
                 }), w && (0, F.createPortal)((0, s.jsx)(k.Hd, {
@@ -720,7 +720,7 @@
           })]
         }) : null
       };
-      async function E(e, t, a, s, r) {
+      async function R(e, t, a, s, r) {
         try {
           let n = JSON.stringify({
               typewriter_enabled: a
@@ -744,7 +744,7 @@
           return console.error(e.message), !1
         }
       }
-      let O = ({
+      let I = ({
         hideViews: e,
         setHideViews: t,
         isTypewriterEnabled: a,
@@ -767,9 +767,9 @@
             value: 8,
             label: b("dashboard.premium.settings.typewriter.speed_marks.fast")
           }],
-          A = async e => !!await E(!0, !1, !1, e, b) && (N(e), !0);
-        async function S() {
-          a ? await E(!1, !0, !1, [], b) && n(!1) : await E(!1, !0, !0, [], b) && n(!0)
+          S = async e => !!await R(!0, !1, !1, e, b) && (N(e), !0);
+        async function A() {
+          a ? await R(!1, !0, !1, [], b) && n(!1) : await R(!1, !0, !0, [], b) && n(!0)
         }
         let F = async () => {
           let e = await fetch("https://guns.lol/api/dashboard/premium/typewriterSpeed", {
@@ -796,10 +796,10 @@
               className: l().typewriterWrapper,
               children: [(0, s.jsx)("span", {
                 className: a ? l().typewriterEnabled : l().typewriterDisabled,
-                onClick: S,
+                onClick: A,
                 children: a ? b("dashboard.premium.settings.typewriter.disable_button") : b("dashboard.premium.settings.typewriter.enable_button")
-              }), a && (0, s.jsx)(R, {
-                onTagsChange: A,
+              }), a && (0, s.jsx)(E, {
+                onTagsChange: S,
                 tagsList: j
               })]
             }), a && (0, s.jsxs)(s.Fragment, {
@@ -864,10 +864,10 @@
           })]
         })
       };
-      var I = a(54834);
-      async function P(e, t, a, s, r) {
+      var P = a(54834);
+      async function $(e, t, a, s, r) {
         try {
-          t(I.A.loading);
+          t(P.A.loading);
           let n = await fetch("https://guns.lol/api/dashboard/premium", {
               method: "POST",
               body: JSON.stringify({
@@ -892,8 +892,8 @@
           }, 500)
         }
       }
-      var $ = a(98241),
-        D = a.n($);
+      var O = a(98241),
+        D = a.n(O);
       let B = ({
         data: e
       }) => {
@@ -932,7 +932,7 @@
             theme: "dark",
             className: D().toasterStyles,
             icons: {
-              success: I.A.successToast
+              success: P.A.successToast
             },
             visibleToasts: 2
           }), (0, s.jsx)(n.N, {
@@ -978,7 +978,7 @@
                   }), (0, s.jsx)("span", {
                     className: D().saveButton,
                     onClick: () => {
-                      P(p, g, f, i, t)
+                      $(p, g, f, i, t)
                     },
                     children: b
                   })]
@@ -1011,7 +1011,7 @@
               })
             }), (0, s.jsx)(c.A, {
               featureName: t("dashboard.premium.feature_names.settings"),
-              children: (0, s.jsx)(O, {
+              children: (0, s.jsx)(I, {
                 hideViews: p.hide_views,
                 setHideViews: y("hide_views"),
                 parallaxAnimation: p.parallax_animation,
@@ -1199,12 +1199,12 @@
     47256: () => {},
     67361: e => {
       e.exports = {
-        accordion: "accordion_accordion__N17UW",
-        item: "accordion_item__39egf",
-        control: "accordion_control__fcaOt",
-        panel: "accordion_panel__ewbOR",
-        content: "accordion_content__3mhM7",
-        contentInner: "accordion_contentInner__8XOty"
+        accordion: "GUNS__12-be3077f3-a8f18deb-1bbe4bcd",
+        item: "GUNS__ed-1f5db1b6-6e1c9e9a-9df02a11",
+        control: "GUNS__27-485642c9-68e46e30-ba776f64",
+        panel: "GUNS__84-639dc8cb-feb99d31-87968fa3",
+        content: "GUNS__7f-f8ad7c54-d23abd9d-5b6e2871",
+        contentInner: "GUNS__d9-e226e07f-f18301ba-9c54b47c"
       }
     },
     82413: (e, t, a) => {

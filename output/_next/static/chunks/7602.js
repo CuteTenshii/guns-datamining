@@ -2,130 +2,130 @@
   [7602], {
     31887: e => {
       e.exports = {
-        uploadCardWrapper: "customizeTab_uploadCardWrapper__NjzQ_",
-        uploadCard: "customizeTab_uploadCard__iGa_h",
-        uploadCardText: "customizeTab_uploadCardText__pxh1_",
-        featureContainerSpan: "customizeTab_featureContainerSpan__lBVPQ",
-        uploadCardImage: "customizeTab_uploadCardImage__4VFCa",
-        fileBadge: "customizeTab_fileBadge__OHzzo",
-        audioPlaying: "customizeTab_audioPlaying__D51EJ",
-        uploaderMessage: "customizeTab_uploaderMessage__fcBRY",
-        featureGap: "customizeTab_featureGap__ZcdL2",
-        generalComponentRight: "customizeTab_generalComponentRight__mZ7Ss",
-        generalComponentLeft: "customizeTab_generalComponentLeft__prGNi",
-        otherComponent: "customizeTab_otherComponent__hInaL",
-        generalComponentContainer: "customizeTab_generalComponentContainer__YLMjd",
-        sliderDiv: "customizeTab_sliderDiv__ewWcg",
-        featureRow: "customizeTab_featureRow__MH40h",
-        gradientButtonDisabled: "customizeTab_gradientButtonDisabled__ReVll",
-        gradientButtonEnabled: "customizeTab_gradientButtonEnabled__nTy_T",
-        otherComponentWrapper: "customizeTab_otherComponentWrapper__BGjok",
-        premiumAd: "customizeTab_premiumAd__frnuz",
-        discordPresence: "customizeTab_discordPresence__E_qVe",
-        description: "customizeTab_description__OkOR5",
-        discordPresenceWrapper: "customizeTab_discordPresenceWrapper___gCQ6",
-        descriptionWrapper: "customizeTab_descriptionWrapper__9FGY3",
-        discordPresenceConnect: "customizeTab_discordPresenceConnect__quUfE",
-        descriptionText: "customizeTab_descriptionText__HlPUa",
-        usernameEffectsButton: "customizeTab_usernameEffectsButton__ijnhF",
-        usernameEffectsText: "customizeTab_usernameEffectsText__6UvYw",
-        usernameEffectsWrapper: "customizeTab_usernameEffectsWrapper__6gIdI",
-        usernameEffectsModalBody: "customizeTab_usernameEffectsModalBody__t2iSd",
-        usernameEffectsModalContent: "customizeTab_usernameEffectsModalContent__Lyiiv",
-        usernameEffectsModalFooter: "customizeTab_usernameEffectsModalFooter___m4zk",
-        usernameEffects: "customizeTab_usernameEffects__31nNg",
-        usernameEffectsSelection: "customizeTab_usernameEffectsSelection__u6Y5H",
-        usernameEffect: "customizeTab_usernameEffect__4zTCb",
-        userBackground: "customizeTab_userBackground__hCXpa",
-        usernameEffectsPreview: "customizeTab_usernameEffectsPreview__Xt3Ol",
-        usernameEffectSelected: "customizeTab_usernameEffectSelected__B0taN",
-        usernameEffectPreviewTitle: "customizeTab_usernameEffectPreviewTitle__VXMGC",
-        selectedEffect: "customizeTab_selectedEffect__ljmuD",
-        usernameEffectsPreviewInnerWrapper: "customizeTab_usernameEffectsPreviewInnerWrapper__ksWpp",
-        saveButtonUsernameEffects: "customizeTab_saveButtonUsernameEffects__UHGfu",
-        usernameEffectsButtons: "customizeTab_usernameEffectsButtons__O2kY3",
-        premiumOnly: "customizeTab_premiumOnly__p0LCM",
-        premiumTextGradient: "customizeTab_premiumTextGradient__xPCWM",
-        usernameEffectsButtonsMobile: "customizeTab_usernameEffectsButtonsMobile__grBcx",
-        rainbowName: "customizeTab_rainbowName___x3ul",
-        rainbowAnimation: "customizeTab_rainbowAnimation__1RvHA",
-        noUsernameEffect: "customizeTab_noUsernameEffect__7dXYJ",
-        audioManager: "customizeTab_audioManager__jetrM",
-        audioManagerBottomWrapper: "customizeTab_audioManagerBottomWrapper__8x7yE",
-        addAudioButton: "customizeTab_addAudioButton__RVX_I",
-        noAudios: "customizeTab_noAudios__ww7vy",
-        audioInput: "customizeTab_audioInput__3V3WP",
-        addAudio: "customizeTab_addAudio__Tha9m",
-        addAudioWrapper: "customizeTab_addAudioWrapper__4Javj",
-        audioContainer: "customizeTab_audioContainer__qqPmL",
-        audioDescription: "customizeTab_audioDescription__yehzK",
-        buttonDiv: "customizeTab_buttonDiv__lRyjY",
-        audios: "customizeTab_audios___tTe3",
-        editButton: "customizeTab_editButton__pm0iQ",
-        deleteButton: "customizeTab_deleteButton__mY2U1",
-        audiosWrapper: "customizeTab_audiosWrapper__ORu1_",
-        audioAmount: "customizeTab_audioAmount__eh3Q5",
-        activeAudio: "customizeTab_activeAudio__MMmKJ",
-        audioManagerDescription: "customizeTab_audioManagerDescription__pkp7u",
-        shuffleSongs: "customizeTab_shuffleSongs__ajcRm",
-        shuffleSongsDescription: "customizeTab_shuffleSongsDescription__56qxu",
-        audioContainerWrapper: "customizeTab_audioContainerWrapper__4TZNt",
-        audioPlayer: "customizeTab_audioPlayer__VqTza",
-        audioPlayerDescription: "customizeTab_audioPlayerDescription__efgRg",
-        audioManagerSettings: "customizeTab_audioManagerSettings__dAboX",
-        audioUploadCardWrapper: "customizeTab_audioUploadCardWrapper__rsWIA",
-        audioCover: "customizeTab_audioCover__IaUjp",
-        glowSettings: "customizeTab_glowSettings__2HlC2",
-        glowSettingsInner: "customizeTab_glowSettingsInner__NYmTd",
-        glowSetting: "customizeTab_glowSetting__EuUPa",
-        glowSettingEnabled: "customizeTab_glowSettingEnabled__4ibLi",
-        unsavedChangesWrapper: "customizeTab_unsavedChangesWrapper__hssE_",
-        unsavedChangesBar: "customizeTab_unsavedChangesBar__voa9M",
-        unsavedChangesButtons: "customizeTab_unsavedChangesButtons___uDBb",
-        discordPresenceSelectWrapper: "customizeTab_discordPresenceSelectWrapper__gVHz0",
-        discordPresenceSettings: "customizeTab_discordPresenceSettings__eP7DM",
-        discordPresenceSettingsContainer: "customizeTab_discordPresenceSettingsContainer__2BH7O",
-        discordPresenceSettingsSwitchWrapperContainer: "customizeTab_discordPresenceSettingsSwitchWrapperContainer__iyRA9",
-        saveDiscordPresenceSettingsButton: "customizeTab_saveDiscordPresenceSettingsButton__v7S3b",
-        discordPresenceSettingsDisabled: "customizeTab_discordPresenceSettingsDisabled___2jbk",
-        avatarCropperModal: "customizeTab_avatarCropperModal__XVA9D",
-        avatarCropperStage: "customizeTab_avatarCropperStage__vUsv9",
-        avatarCropperImage: "customizeTab_avatarCropperImage__m8Rck",
-        avatarCropperGrid: "customizeTab_avatarCropperGrid__2C5q3",
-        avatarCropperMask: "customizeTab_avatarCropperMask__m8HI_",
-        avatarCropperBottom: "customizeTab_avatarCropperBottom__1LXxP",
-        avatarCropperModalBody: "customizeTab_avatarCropperModalBody__5ovtp",
-        avatarCropperHint: "customizeTab_avatarCropperHint__brko2",
-        avatarCropperHintDesktop: "customizeTab_avatarCropperHintDesktop__Ep39L",
-        avatarCropperHintMobile: "customizeTab_avatarCropperHintMobile__j1Tea",
-        avatarCropperSliderGroup: "customizeTab_avatarCropperSliderGroup__1i5xI",
-        avatarCropperSliderLabel: "customizeTab_avatarCropperSliderLabel__8GbpZ",
-        avatarCropperSliderMeta: "customizeTab_avatarCropperSliderMeta__e6ZDu",
-        avatarCropperInlineReset: "customizeTab_avatarCropperInlineReset__VwQiI",
-        avatarCropperActions: "customizeTab_avatarCropperActions__nbTtn",
-        avatarCropperSecondaryButton: "customizeTab_avatarCropperSecondaryButton__PxCU_",
-        avatarCropperPrimaryButton: "customizeTab_avatarCropperPrimaryButton__b_3u1",
-        avatarCropperRotationSlider: "customizeTab_avatarCropperRotationSlider__J_6cZ",
-        avatarCropperZoomSlider: "customizeTab_avatarCropperZoomSlider__V_zqH"
+        uploadCardWrapper: "GUNS__78-b9db2395-e999a0a0-201d4aa3",
+        uploadCard: "GUNS__ff-9901d788-c95dcffe-fe863c5c",
+        uploadCardText: "GUNS__94-2218c5f6-b05d1ac2-16f9d47f",
+        featureContainerSpan: "GUNS__56-02ad2192-57b9a714-e8269bf5",
+        uploadCardImage: "GUNS__ab-10afa642-b9972fef-28a18010",
+        fileBadge: "GUNS__b9-5c7ea78c-91625765-16a0f9e6",
+        audioPlaying: "GUNS__a7-dc193273-1388d40c-7993c1bb",
+        uploaderMessage: "GUNS__13-54dd360c-58493b80-7dcfd4c2",
+        featureGap: "GUNS__5c-70334c7d-c4d6d87e-fea893f3",
+        generalComponentRight: "GUNS__6b-850887ac-56317e05-1ce5efed",
+        generalComponentLeft: "GUNS__cb-d2a408af-2c7de1ee-ace681e2",
+        otherComponent: "GUNS__54-d0c36670-3fce8ea5-b9e39f6b",
+        generalComponentContainer: "GUNS__b2-05d0e083-46fa21ae-13553283",
+        sliderDiv: "GUNS__77-e3a9df1f-cc21fb9f-98ccb3af",
+        featureRow: "GUNS__e7-30583c2a-35ba5761-8c9a2b59",
+        gradientButtonDisabled: "GUNS__95-d1787b8e-e0736f98-60aeaa8e",
+        gradientButtonEnabled: "GUNS__91-3fd49e2b-cffcf2cf-b15e9bb1",
+        otherComponentWrapper: "GUNS__2c-ac92991e-8dc5807d-6080a581",
+        premiumAd: "GUNS__e2-998b3ddd-1c3b8384-21d9fe8c",
+        discordPresence: "GUNS__27-f4f04853-d29471d2-7529b92a",
+        description: "GUNS__1d-04a18444-ded8b911-719ca707",
+        discordPresenceWrapper: "GUNS__6c-d6cca5f9-97dae699-debd9451",
+        descriptionWrapper: "GUNS__de-4dd9b461-5233d28b-6671745a",
+        discordPresenceConnect: "GUNS__8e-30ee97b4-4909c413-a65ac464",
+        descriptionText: "GUNS__30-e319d536-b6df15e4-2a1d7e3b",
+        usernameEffectsButton: "GUNS__f2-7221abdd-bc6adfef-13518631",
+        usernameEffectsText: "GUNS__ff-e8072cb0-ab18ba1a-e16abd39",
+        usernameEffectsWrapper: "GUNS__c9-bfd13da0-5d7075d4-d7783a8d",
+        usernameEffectsModalBody: "GUNS__95-0e7b3761-d35b8724-88023ca9",
+        usernameEffectsModalContent: "GUNS__5a-ec34bbf8-12942231-96adc5fb",
+        usernameEffectsModalFooter: "GUNS__36-3a0b80e6-b1cc8686-0d7972c8",
+        usernameEffects: "GUNS__e1-3c6e9427-fdcdfa23-315581e4",
+        usernameEffectsSelection: "GUNS__83-34e383c4-9ec61eda-c2166b4a",
+        usernameEffect: "GUNS__6f-e338cd68-b8a831a2-707f1185",
+        userBackground: "GUNS__1b-a406d6d9-09098974-fa701f72",
+        usernameEffectsPreview: "GUNS__0d-8e65c78d-38c264d9-1c9094cb",
+        usernameEffectSelected: "GUNS__5d-7d172db9-b5f3d0fa-ea56fc8b",
+        usernameEffectPreviewTitle: "GUNS__70-514f1f26-31de8fd9-7fe32d54",
+        selectedEffect: "GUNS__be-47dc343d-71803c93-10fe152e",
+        usernameEffectsPreviewInnerWrapper: "GUNS__c6-a334ff05-74b39924-f7d662c0",
+        saveButtonUsernameEffects: "GUNS__8a-5dce6898-30600ca8-5fc8bfc5",
+        usernameEffectsButtons: "GUNS__e4-d5600f65-1c2daa31-532e7a92",
+        premiumOnly: "GUNS__2c-d216b41f-f6ae9671-d65f25fa",
+        premiumTextGradient: "GUNS__45-20371e10-c33df5fd-8382801e",
+        usernameEffectsButtonsMobile: "GUNS__eb-2974526d-bcd697df-3637e16e",
+        rainbowName: "GUNS__40-ef129a61-3f6dd938-a53a57fc",
+        rainbowAnimation: "GUNS__f9-2567f84c-2a4ec79f-1dd67555",
+        noUsernameEffect: "GUNS__61-5d9e53dd-df17dccc-a2ae0e82",
+        audioManager: "GUNS__82-2060732d-3d5eba93-808c0c15",
+        audioManagerBottomWrapper: "GUNS__c8-f348dbe0-a9fbaa30-05997679",
+        addAudioButton: "GUNS__13-f50d2abf-247a256d-e92b4702",
+        noAudios: "GUNS__87-0b436e52-21a20a44-ee9a8e2e",
+        audioInput: "GUNS__75-0f828c81-f95f6d9c-e047dd55",
+        addAudio: "GUNS__d6-75e259d9-625adb4b-4043156d",
+        addAudioWrapper: "GUNS__ad-48fc1f8f-f811be47-e8658309",
+        audioContainer: "GUNS__ac-c23fa93b-263de919-49f1cd68",
+        audioDescription: "GUNS__95-914ff56d-46575c58-bc767286",
+        buttonDiv: "GUNS__23-673ca874-e6737c50-94f4b051",
+        audios: "GUNS__ef-cc9b0310-b7334299-4a87ea94",
+        editButton: "GUNS__96-7eaefbdc-5d1cfa2f-6ccbb392",
+        deleteButton: "GUNS__2e-559d778e-462b5f2a-f361cb26",
+        audiosWrapper: "GUNS__63-00ac4d64-af8286ba-02d5aeda",
+        audioAmount: "GUNS__ae-d3e72c10-0711931c-7a045502",
+        activeAudio: "GUNS__f7-958deb9e-00cd1a23-f89bf2c7",
+        audioManagerDescription: "GUNS__99-17603627-b78f78f8-b58b1b4d",
+        shuffleSongs: "GUNS__79-523a508d-15a8b3dc-978d6a62",
+        shuffleSongsDescription: "GUNS__4d-e5101e9b-3af9bc94-b5525692",
+        audioContainerWrapper: "GUNS__0d-80943a29-f12eea2e-bc71828e",
+        audioPlayer: "GUNS__1f-5420ad77-2f552473-d84ba07f",
+        audioPlayerDescription: "GUNS__9e-dd2826da-0c1d0558-636784e8",
+        audioManagerSettings: "GUNS__69-42fd3e9c-db3280c7-c932e68e",
+        audioUploadCardWrapper: "GUNS__80-a08259eb-84c72b21-27e9492f",
+        audioCover: "GUNS__4d-26ec9e41-095f5932-45b7a255",
+        glowSettings: "GUNS__d4-94ed6e31-f0762014-575da6dc",
+        glowSettingsInner: "GUNS__5b-bc0e78a7-34d1a115-4e74d662",
+        glowSetting: "GUNS__df-598036df-66e81bb2-50ac36ba",
+        glowSettingEnabled: "GUNS__d3-36b7b7ea-e509628d-53e7c140",
+        unsavedChangesWrapper: "GUNS__ff-42097a0b-a7866a1f-f69fee32",
+        unsavedChangesBar: "GUNS__9b-37b85aeb-2826d13a-3aec7653",
+        unsavedChangesButtons: "GUNS__19-8fed3817-56cd3ee3-4021370c",
+        discordPresenceSelectWrapper: "GUNS__b3-8ad5e462-8326065f-efda7a7a",
+        discordPresenceSettings: "GUNS__ef-001fddd4-d9bd3e1a-78044514",
+        discordPresenceSettingsContainer: "GUNS__3e-df8c8265-6a1d7faa-d1a6a41c",
+        discordPresenceSettingsSwitchWrapperContainer: "GUNS__c6-cce87869-e9aca86f-843cad86",
+        saveDiscordPresenceSettingsButton: "GUNS__84-914b4607-67b5c29a-0755b8a7",
+        discordPresenceSettingsDisabled: "GUNS__e0-18d4e26f-e0026206-e4ae06f7",
+        avatarCropperModal: "GUNS__f2-a74f4ff7-df77df3e-a3660b12",
+        avatarCropperStage: "GUNS__4f-744742ac-d3af0698-69324ee6",
+        avatarCropperImage: "GUNS__a1-1f5ad2ee-fc579d78-6799222b",
+        avatarCropperGrid: "GUNS__8d-92ba729d-ccdd8272-55b95f5a",
+        avatarCropperMask: "GUNS__fb-4bd3a547-085dc552-07c96151",
+        avatarCropperBottom: "GUNS__ed-003d3da7-f54e36be-331eb751",
+        avatarCropperModalBody: "GUNS__fc-f3c9e8e4-4c92e337-aa4a808e",
+        avatarCropperHint: "GUNS__53-8e667406-c8ac4ae7-93ea8dd3",
+        avatarCropperHintDesktop: "GUNS__0c-1b2eac35-81221dda-5c38ec9f",
+        avatarCropperHintMobile: "GUNS__39-3253d6ab-5ec8b33e-282d4d05",
+        avatarCropperSliderGroup: "GUNS__b7-1b323e38-2baae0d0-6bba990f",
+        avatarCropperSliderLabel: "GUNS__99-daad1c6f-66420603-3d216fca",
+        avatarCropperSliderMeta: "GUNS__c3-b5d6f531-dd9bbcde-5b980600",
+        avatarCropperInlineReset: "GUNS__54-a94fbe86-3264a227-fab873bb",
+        avatarCropperActions: "GUNS__b1-7b1ad7bf-2d2ce580-2c01cf52",
+        avatarCropperSecondaryButton: "GUNS__ae-5649c567-28b4fce4-bed14fe8",
+        avatarCropperPrimaryButton: "GUNS__70-7eddbe33-4eb66fea-6217cd6d",
+        avatarCropperRotationSlider: "GUNS__28-f18162cc-aba4f872-00ae8eb7",
+        avatarCropperZoomSlider: "GUNS__77-b500e5ba-1ca6a830-9dea4897"
       }
     },
-    39449: (e, t, a) => {
+    39449: (e, a, r) => {
       "use strict";
-      a.d(t, {
-        N: () => T
+      r.d(a, {
+        N: () => N
       });
-      var r = a(95155),
-        o = a(12115),
-        s = a(39551),
-        i = a(28819),
-        n = a(15131),
-        u = a(24866);
-      class c extends o.Component {
+      var t = r(95155),
+        d = r(12115),
+        o = r(39551),
+        c = r(28819),
+        n = r(15131),
+        s = r(24866);
+      class i extends d.Component {
         getSnapshotBeforeUpdate(e) {
-          let t = this.props.childRef.current;
-          if (t && e.isPresent && !this.props.isPresent) {
+          let a = this.props.childRef.current;
+          if (a && e.isPresent && !this.props.isPresent) {
             let e = this.props.sizeRef.current;
-            e.height = t.offsetHeight || 0, e.width = t.offsetWidth || 0, e.top = t.offsetTop, e.left = t.offsetLeft
+            e.height = a.offsetHeight || 0, e.width = a.offsetWidth || 0, e.top = a.offsetTop, e.left = a.offsetLeft
           }
           return null
         }
@@ -135,13 +135,13 @@
         }
       }
 
-      function _({
+      function f({
         children: e,
-        isPresent: t
+        isPresent: a
       }) {
-        let a = (0, o.useId)(),
-          s = (0, o.useRef)(null),
-          i = (0, o.useRef)({
+        let r = (0, d.useId)(),
+          o = (0, d.useRef)(null),
+          c = (0, d.useRef)({
             width: 0,
             height: 0,
             top: 0,
@@ -149,278 +149,278 @@
           }),
           {
             nonce: n
-          } = (0, o.useContext)(u.Q);
-        return (0, o.useInsertionEffect)(() => {
+          } = (0, d.useContext)(s.Q);
+        return (0, d.useInsertionEffect)(() => {
           let {
             width: e,
-            height: r,
-            top: o,
-            left: u
-          } = i.current;
-          if (t || !s.current || !e || !r) return;
-          s.current.dataset.motionPopId = a;
-          let c = document.createElement("style");
-          return n && (c.nonce = n), document.head.appendChild(c), c.sheet && c.sheet.insertRule(`
-          [data-motion-pop-id="${a}"] {
+            height: t,
+            top: d,
+            left: s
+          } = c.current;
+          if (a || !o.current || !e || !t) return;
+          o.current.dataset.motionPopId = r;
+          let i = document.createElement("style");
+          return n && (i.nonce = n), document.head.appendChild(i), i.sheet && i.sheet.insertRule(`
+          [data-motion-pop-id="${r}"] {
             position: absolute !important;
             width: ${e}px !important;
-            height: ${r}px !important;
-            top: ${o}px !important;
-            left: ${u}px !important;
+            height: ${t}px !important;
+            top: ${d}px !important;
+            left: ${s}px !important;
           }
         `), () => {
-            document.head.removeChild(c)
+            document.head.removeChild(i)
           }
-        }, [t]), (0, r.jsx)(c, {
-          isPresent: t,
-          childRef: s,
-          sizeRef: i,
-          children: o.cloneElement(e, {
-            ref: s
+        }, [a]), (0, t.jsx)(i, {
+          isPresent: a,
+          childRef: o,
+          sizeRef: c,
+          children: d.cloneElement(e, {
+            ref: o
           })
         })
       }
-      let d = ({
+      let l = ({
         children: e,
-        initial: t,
-        isPresent: a,
-        onExitComplete: s,
-        custom: u,
-        presenceAffectsLayout: c,
-        mode: d
+        initial: a,
+        isPresent: r,
+        onExitComplete: o,
+        custom: s,
+        presenceAffectsLayout: i,
+        mode: l
       }) => {
-        let p = (0, i.M)(l),
-          m = (0, o.useId)(),
-          f = (0, o.useCallback)(e => {
-            for (let t of (p.set(e, !0), p.values()))
-              if (!t) return;
-            s && s()
-          }, [p, s]),
-          b = (0, o.useMemo)(() => ({
-            id: m,
-            initial: t,
-            isPresent: a,
-            custom: u,
-            onExitComplete: f,
-            register: e => (p.set(e, !1), () => p.delete(e))
-          }), c ? [Math.random(), f] : [a, f]);
-        return (0, o.useMemo)(() => {
-          p.forEach((e, t) => p.set(t, !1))
-        }, [a]), o.useEffect(() => {
-          a || p.size || !s || s()
-        }, [a]), "popLayout" === d && (e = (0, r.jsx)(_, {
-          isPresent: a,
+        let _ = (0, c.M)(u),
+          p = (0, d.useId)(),
+          b = (0, d.useCallback)(e => {
+            for (let a of (_.set(e, !0), _.values()))
+              if (!a) return;
+            o && o()
+          }, [_, o]),
+          S = (0, d.useMemo)(() => ({
+            id: p,
+            initial: a,
+            isPresent: r,
+            custom: s,
+            onExitComplete: b,
+            register: e => (_.set(e, !1), () => _.delete(e))
+          }), i ? [Math.random(), b] : [r, b]);
+        return (0, d.useMemo)(() => {
+          _.forEach((e, a) => _.set(a, !1))
+        }, [r]), d.useEffect(() => {
+          r || _.size || !o || o()
+        }, [r]), "popLayout" === l && (e = (0, t.jsx)(f, {
+          isPresent: r,
           children: e
-        })), (0, r.jsx)(n.t.Provider, {
-          value: b,
+        })), (0, t.jsx)(n.t.Provider, {
+          value: S,
           children: e
         })
       };
 
-      function l() {
+      function u() {
         return new Map
       }
-      var p = a(79196);
-      let m = e => e.key || "";
+      var _ = r(79196);
+      let p = e => e.key || "";
 
-      function f(e) {
-        let t = [];
-        return o.Children.forEach(e, e => {
-          (0, o.isValidElement)(e) && t.push(e)
-        }), t
+      function b(e) {
+        let a = [];
+        return d.Children.forEach(e, e => {
+          (0, d.isValidElement)(e) && a.push(e)
+        }), a
       }
-      var b = a(4524);
-      let T = ({
+      var S = r(4524);
+      let N = ({
         children: e,
-        custom: t,
-        initial: a = !0,
+        custom: a,
+        initial: r = !0,
         onExitComplete: n,
-        presenceAffectsLayout: u = !0,
-        mode: c = "sync",
-        propagate: _ = !1
+        presenceAffectsLayout: s = !0,
+        mode: i = "sync",
+        propagate: f = !1
       }) => {
-        let [l, T] = (0, p.xQ)(_), z = (0, o.useMemo)(() => f(e), [e]), h = _ && !l ? [] : z.map(m), g = (0, o.useRef)(!0), C = (0, o.useRef)(z), v = (0, i.M)(() => new Map), [S, w] = (0, o.useState)(z), [y, E] = (0, o.useState)(z);
-        (0, b.E)(() => {
-          g.current = !1, C.current = z;
+        let [u, N] = (0, _.xQ)(f), U = (0, d.useMemo)(() => b(e), [e]), G = f && !u ? [] : U.map(p), h = (0, d.useRef)(!0), m = (0, d.useRef)(U), g = (0, c.M)(() => new Map), [v, C] = (0, d.useState)(U), [y, w] = (0, d.useState)(U);
+        (0, S.E)(() => {
+          h.current = !1, m.current = U;
           for (let e = 0; e < y.length; e++) {
-            let t = m(y[e]);
-            h.includes(t) ? v.delete(t) : !0 !== v.get(t) && v.set(t, !1)
+            let a = p(y[e]);
+            G.includes(a) ? g.delete(a) : !0 !== g.get(a) && g.set(a, !1)
           }
-        }, [y, h.length, h.join("-")]);
-        let P = [];
-        if (z !== S) {
-          let e = [...z];
-          for (let t = 0; t < y.length; t++) {
-            let a = y[t],
-              r = m(a);
-            h.includes(r) || (e.splice(t, 0, a), P.push(a))
+        }, [y, G.length, G.join("-")]);
+        let R = [];
+        if (U !== v) {
+          let e = [...U];
+          for (let a = 0; a < y.length; a++) {
+            let r = y[a],
+              t = p(r);
+            G.includes(t) || (e.splice(a, 0, r), R.push(r))
           }
-          "wait" === c && P.length && (e = P), E(f(e)), w(z);
+          "wait" === i && R.length && (e = R), w(b(e)), C(U);
           return
         }
         let {
-          forceRender: B
-        } = (0, o.useContext)(s.L);
-        return (0, r.jsx)(r.Fragment, {
+          forceRender: E
+        } = (0, d.useContext)(o.L);
+        return (0, t.jsx)(t.Fragment, {
           children: y.map(e => {
-            let o = m(e),
-              s = (!_ || !!l) && (z === y || h.includes(o));
-            return (0, r.jsx)(d, {
-              isPresent: s,
-              initial: (!g.current || !!a) && void 0,
-              custom: s ? void 0 : t,
-              presenceAffectsLayout: u,
-              mode: c,
-              onExitComplete: s ? void 0 : () => {
-                if (!v.has(o)) return;
-                v.set(o, !0);
+            let d = p(e),
+              o = (!f || !!u) && (U === y || G.includes(d));
+            return (0, t.jsx)(l, {
+              isPresent: o,
+              initial: (!h.current || !!r) && void 0,
+              custom: o ? void 0 : a,
+              presenceAffectsLayout: s,
+              mode: i,
+              onExitComplete: o ? void 0 : () => {
+                if (!g.has(d)) return;
+                g.set(d, !0);
                 let e = !0;
-                v.forEach(t => {
-                  t || (e = !1)
-                }), e && (null == B || B(), E(C.current), _ && (null == T || T()), n && n())
+                g.forEach(a => {
+                  a || (e = !1)
+                }), e && (null == E || E(), w(m.current), f && (null == N || N()), n && n())
               },
               children: e
-            }, o)
+            }, d)
           })
         })
       }
     },
-    39818: (e, t, a) => {
+    39818: (e, a, r) => {
       "use strict";
-      a.d(t, {
-        C9: () => c,
-        F_: () => p,
-        I9: () => m,
-        _Y: () => u,
-        h3: () => d,
+      r.d(a, {
+        C9: () => i,
+        F_: () => _,
+        I9: () => p,
+        _Y: () => s,
+        h3: () => l,
         iN: () => n,
-        l4: () => l,
-        qc: () => _,
-        vH: () => i
+        l4: () => u,
+        qc: () => f,
+        vH: () => c
       });
-      var r = a(66609),
-        o = a(45941);
-      async function s(e) {
-        return new Promise((t, a) => {
-          let r = new Image,
-            o = new FileReader;
-          o.onload = e => {
-            r.src = e.target.result
-          }, r.onload = () => {
-            let a = r.width,
-              o = r.height;
-            if (a > 50 || o > 50) {
-              let a = document.createElement("canvas"),
-                o = a.getContext("2d");
-              a.width = 32, a.height = 32, o.drawImage(r, 0, 0, 32, 32), a.toBlob(a => {
-                t(new File([a], e.name, {
+      var t = r(66609),
+        d = r(45941);
+      async function o(e) {
+        return new Promise((a, r) => {
+          let t = new Image,
+            d = new FileReader;
+          d.onload = e => {
+            t.src = e.target.result
+          }, t.onload = () => {
+            let r = t.width,
+              d = t.height;
+            if (r > 50 || d > 50) {
+              let r = document.createElement("canvas"),
+                d = r.getContext("2d");
+              r.width = 32, r.height = 32, d.drawImage(t, 0, 0, 32, 32), r.toBlob(r => {
+                a(new File([r], e.name, {
                   type: e.type
                 }))
               }, e.type)
-            } else t(e)
-          }, r.onerror = e => a(e), o.onerror = e => a(e), o.readAsDataURL(e)
+            } else a(e)
+          }, t.onerror = e => r(e), d.onerror = e => r(e), d.readAsDataURL(e)
         })
       }
-      let i = (e, t) => {
-        let a = o.o2[t],
-          s = e.name.split(".").pop().toLowerCase() || "";
-        return (o.nB[t] || []).includes("." + s.toLowerCase()) ? !a || !(e.size / 1e6 > a) || (r.oR.error(`Could not upload file. Max file size is ${a}MB`), null) : (r.oR.error("Invalid file type."), null)
+      let c = (e, a) => {
+        let r = d.o2[a],
+          o = e.name.split(".").pop().toLowerCase() || "";
+        return (d.nB[a] || []).includes("." + o.toLowerCase()) ? !r || !(e.size / 1e6 > r) || (t.oR.error(`Could not upload file. Max file size is ${r}MB`), null) : (t.oR.error("Invalid file type."), null)
       };
-      async function n(e, t, a) {
+      async function n(e, a, r) {
         try {
-          if (!i(t, e)) return null;
-          "cursor" === e && (t = await s(t));
-          let o = new FormData;
-          o.append(e, t);
+          if (!c(a, e)) return null;
+          "cursor" === e && (a = await o(a));
+          let d = new FormData;
+          d.append(e, a);
           let n = await fetch(`https://guns.lol/api/dashboard/customize/upload/${e}`, {
               method: "POST",
-              body: o
+              body: d
             }),
-            u = await n.json();
-          if (n.ok) return r.oR.success(a("dashboard.customize.assets.upload_success", {
+            s = await n.json();
+          if (n.ok) return t.oR.success(r("dashboard.customize.assets.upload_success", {
             type: e
-          })), u.url;
-          return r.oR.error(u.error), console.error("Failed to upload file:", n.statusText), null
+          })), s.url;
+          return t.oR.error(s.error), console.error("Failed to upload file:", n.statusText), null
         } catch (e) {
-          return r.oR.error(JSON.parse(e.request.response).error), console.error("Error uploading file:", e), null
+          return t.oR.error(JSON.parse(e.request.response).error), console.error("Error uploading file:", e), null
         }
       }
-      async function u(e) {
+      async function s(e) {
         try {
-          let t = await fetch(`https://guns.lol/api/dashboard/customize/remove/${e}`, {
+          let a = await fetch(`https://guns.lol/api/dashboard/customize/remove/${e}`, {
             method: "POST"
           });
-          if (t.ok) return r.oR.success(`Successfully removed ${e}.`), "success";
-          return r.oR.error(`Failed to remove ${e}`), console.error("Failed to remove file:", t.statusText), null
-        } catch (t) {
-          return r.oR.error(`Failed to remove ${e}`), console.error("Error removing file:", t), null
+          if (a.ok) return t.oR.success(`Successfully removed ${e}.`), "success";
+          return t.oR.error(`Failed to remove ${e}`), console.error("Failed to remove file:", a.statusText), null
+        } catch (a) {
+          return t.oR.error(`Failed to remove ${e}`), console.error("Error removing file:", a), null
         }
       }
-      async function c(e, t, a, s) {
-        if (!t) return r.oR.error("Please select an audio file."), null;
-        let n = o.o2.cover;
-        if (a && a.size / 1e6 > n) return r.oR.error(`Could not upload file. Max audio cover size is ${n}MB`), null;
-        if (!i(t, "audio")) return null;
-        let u = new FormData;
-        u.append("audio", t), u.append("cover", a), u.append("title", e);
-        let c = await fetch("https://guns.lol/api/dashboard/customize/upload/audio", {
+      async function i(e, a, r, o) {
+        if (!a) return t.oR.error("Please select an audio file."), null;
+        let n = d.o2.cover;
+        if (r && r.size / 1e6 > n) return t.oR.error(`Could not upload file. Max audio cover size is ${n}MB`), null;
+        if (!c(a, "audio")) return null;
+        let s = new FormData;
+        s.append("audio", a), s.append("cover", r), s.append("title", e);
+        let i = await fetch("https://guns.lol/api/dashboard/customize/upload/audio", {
             method: "POST",
-            body: u
+            body: s
           }),
-          _ = await c.json();
-        return c.ok ? (r.oR.success("Successfully uploaded audio."), s(_.audios), !0) : (r.oR.error(_.error), console.error("Failed to upload file:", _.error), null)
+          f = await i.json();
+        return i.ok ? (t.oR.success("Successfully uploaded audio."), o(f.audios), !0) : (t.oR.error(f.error), console.error("Failed to upload file:", f.error), null)
       }
-      async function _(e, t) {
-        let a = await fetch("https://guns.lol/api/dashboard/customize/remove/audio", {
-            method: "POST",
-            body: JSON.stringify({
-              id: e
-            })
-          }),
-          o = await a.json();
-        return a.ok ? (t(o.audios), !0) : (r.oR.error(o.error), console.error(o.error), null)
-      }
-      async function d(e, t) {
-        let a = await fetch("https://guns.lol/api/dashboard/customize/audio/active", {
+      async function f(e, a) {
+        let r = await fetch("https://guns.lol/api/dashboard/customize/remove/audio", {
             method: "POST",
             body: JSON.stringify({
               id: e
             })
           }),
-          o = await a.json();
-        return a.ok ? (r.oR.success("Successfully set audio as active."), t(o.audios), !0) : (r.oR.error(o.error), console.error(o.error), null)
+          d = await r.json();
+        return r.ok ? (a(d.audios), !0) : (t.oR.error(d.error), console.error(d.error), null)
       }
-      async function l(e, t, a, s) {
-        let i = o.o2.cover;
-        if (a && a.size / 1e6 > i) return r.oR.error(`Could not upload file. Max file size is ${i}MB`), null;
+      async function l(e, a) {
+        let r = await fetch("https://guns.lol/api/dashboard/customize/audio/active", {
+            method: "POST",
+            body: JSON.stringify({
+              id: e
+            })
+          }),
+          d = await r.json();
+        return r.ok ? (t.oR.success("Successfully set audio as active."), a(d.audios), !0) : (t.oR.error(d.error), console.error(d.error), null)
+      }
+      async function u(e, a, r, o) {
+        let c = d.o2.cover;
+        if (r && r.size / 1e6 > c) return t.oR.error(`Could not upload file. Max file size is ${c}MB`), null;
         let n = new FormData;
-        n.append("cover", a), n.append("id", e), n.append("title", t);
-        let u = await fetch("https://guns.lol/api/dashboard/customize/audio/details", {
+        n.append("cover", r), n.append("id", e), n.append("title", a);
+        let s = await fetch("https://guns.lol/api/dashboard/customize/audio/details", {
             method: "POST",
             body: n
           }),
-          c = await u.json();
-        return u.ok ? (r.oR.success("Successfully changed audio details."), s(c.audios), !0) : (r.oR.error(c.error), console.error(c.error), null)
+          i = await s.json();
+        return s.ok ? (t.oR.success("Successfully changed audio details."), o(i.audios), !0) : (t.oR.error(i.error), console.error(i.error), null)
       }
-      async function p(e, t) {
-        let a = await fetch("https://guns.lol/api/dashboard/customize/audio/settings", {
+      async function _(e, a) {
+        let r = await fetch("https://guns.lol/api/dashboard/customize/audio/settings", {
             method: "POST",
             body: JSON.stringify({
               shuffle_audios: e
             })
           }),
-          o = await a.json();
-        return a.ok ? (r.oR.success(`Successfully ${e?"enabled":"disabled"} shuffle songs.`), t(e), !0) : (r.oR.error(o.error), console.error(o.error), null)
+          d = await r.json();
+        return r.ok ? (t.oR.success(`Successfully ${e?"enabled":"disabled"} shuffle songs.`), a(e), !0) : (t.oR.error(d.error), console.error(d.error), null)
       }
-      async function m(e, t) {
-        let a = await fetch("https://guns.lol/api/dashboard/customize/audio/settings", {
+      async function p(e, a) {
+        let r = await fetch("https://guns.lol/api/dashboard/customize/audio/settings", {
             method: "POST",
             body: JSON.stringify({
               audio_player: e
             })
           }),
-          o = await a.json();
-        return a.ok ? (r.oR.success(`Successfully ${e?"enabled":"disabled"} audio player.`), t(e), !0) : (r.oR.error(o.error), console.error(o.error), null)
+          d = await r.json();
+        return r.ok ? (t.oR.success(`Successfully ${e?"enabled":"disabled"} audio player.`), a(e), !0) : (t.oR.error(d.error), console.error(d.error), null)
       }
     }
   }
