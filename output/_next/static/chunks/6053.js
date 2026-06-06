@@ -5738,29 +5738,28 @@ void main() {
           j = "" !== r.description || 0 !== s.typewriter.length,
           w = !!r.location,
           S = !0 !== s.hide_views,
-          N = S || w,
-          C = "number" == typeof t.uid ? `UID ${t.uid.toLocaleString("en-US")}` : "UID unavailable",
-          k = r.user_badges,
-          A = r.custom_badges,
-          $ = k.length > 0 && k[0] && "string" == typeof k[0],
-          T = A.length > 0 && "string" == typeof A[0][0],
+          N = "number" == typeof t.uid ? `UID ${t.uid.toLocaleString("en-US")}` : "UID unavailable",
+          C = r.user_badges,
+          k = r.custom_badges,
+          A = C.length > 0 && C[0] && "string" == typeof C[0],
+          $ = k.length > 0 && "string" == typeof k[0][0],
+          T = C.length > 0 && A || !A && C.some(e => !0 === e.enabled),
           P = k.length > 0 && $ || !$ && k.some(e => !0 === e.enabled),
-          U = A.length > 0 && T || !T && A.some(e => !0 === e.enabled),
-          E = P || U,
-          z = s.typewriter_speed ?? 5,
-          M = s.typewriter_delete_speed ?? 7,
-          I = "unfold" === s.animation || "pop" === s.animation || "fade" === s.animation ? s.animation : "fade",
-          B = {
+          U = T || P,
+          E = s.typewriter_speed ?? 5,
+          z = s.typewriter_delete_speed ?? 7,
+          M = "unfold" === s.animation || "pop" === s.animation || "fade" === s.animation ? s.animation : "fade",
+          I = {
             ...m.username,
             fontSize: m.username.fontSize,
             fontWeight: 700
           },
-          L = window.matchMedia?.("(pointer: coarse)").matches,
-          W = r.username_effects,
-          D = "rgb" === W || "rainbow" === W,
-          F = !!W && !D && !["none", "typewriter", "fuzzy", "shuffle"].includes(W),
-          R = e8().heroTitlePanel,
-          G = (0, a.jsxs)("div", {
+          B = window.matchMedia?.("(pointer: coarse)").matches,
+          L = r.username_effects,
+          W = "rgb" === L || "rainbow" === L,
+          D = !!L && !W && !["none", "typewriter", "fuzzy", "shuffle"].includes(L),
+          F = e8().heroTitlePanel,
+          R = (0, a.jsxs)("div", {
             className: `${e8().heroStage} ${!b?e8().heroStageSolo:""}`,
             children: [b && (0, a.jsx)("div", {
               className: e8().heroIdentity,
@@ -5786,7 +5785,7 @@ void main() {
             }), (0, a.jsxs)("div", {
               className: e8().heroContent,
               children: [(0, a.jsx)("div", {
-                className: R,
+                className: F,
                 "data-reveal-part": "hero-title",
                 style: tu(2),
                 children: (0, a.jsxs)("div", {
@@ -5794,12 +5793,12 @@ void main() {
                   children: [(0, a.jsxs)("div", {
                     className: e8().heroTitleRow,
                     children: [(0, a.jsx)(ea.A, {
-                      content: C,
+                      content: N,
                       offset: 0,
                       pageTooltipStyles: !0,
-                      children: "typewriter" === W ? (0, a.jsxs)(a.Fragment, {
+                      children: "typewriter" === L ? (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsx)("style", {
-                          children: `.hero-tw-${u} .Typewriter { font-size: ${B.fontSize}; font-weight: ${B.fontWeight??700}; font-family: ${B.fontFamily??"inherit"}; color: var(--textColor); text-shadow: var(--colorUsernameGlow); }`
+                          children: `.hero-tw-${u} .Typewriter { font-size: ${I.fontSize}; font-weight: ${I.fontWeight??700}; font-family: ${I.fontFamily??"inherit"}; color: var(--textColor); text-shadow: var(--colorUsernameGlow); }`
                         }), (0, a.jsx)("div", {
                           className: `hero-tw-${u}`,
                           children: (0, a.jsx)(et(), {
@@ -5811,17 +5810,17 @@ void main() {
                             }
                           })
                         })]
-                      }) : "fuzzy" === W || "shuffle" === W ? (0, a.jsx)(eS.A, {
+                      }) : "fuzzy" === L || "shuffle" === L ? (0, a.jsx)(eS.A, {
                         username: f,
-                        usernameEffect: W,
-                        fontSize: B.fontSize,
+                        usernameEffect: L,
+                        fontSize: I.fontSize,
                         textColor: r.text_color
                       }) : (0, a.jsx)("h1", {
-                        className: D ? i().rainbowName : F ? e8().heroTitleEffects : void 0,
-                        style: B,
+                        className: W ? i().rainbowName : D ? e8().heroTitleEffects : void 0,
+                        style: I,
                         children: f
                       })
-                    }), E && "classic" === u && (0, a.jsx)("div", {
+                    }), U && "classic" === u && (0, a.jsx)("div", {
                       className: e8().heroBadgeContainerInline,
                       children: (0, a.jsx)(es, {
                         config: r,
@@ -5832,7 +5831,7 @@ void main() {
                         groupClassName: e8().heroBadgeGroup
                       })
                     })]
-                  }), E && "centered" === u && (0, a.jsx)("div", {
+                  }), U && "centered" === u && (0, a.jsx)("div", {
                     className: e8().heroBadgeContainerCentered,
                     children: (0, a.jsx)(es, {
                       config: r,
@@ -5856,8 +5855,8 @@ void main() {
                     strings: s.typewriter,
                     autoStart: !0,
                     loop: !0,
-                    delay: 600 / z,
-                    deleteSpeed: 600 / M,
+                    delay: 600 / E,
+                    deleteSpeed: 600 / z,
                     pauseFor: 900
                   }
                 }) : r.description
@@ -5886,17 +5885,17 @@ void main() {
           });
         return (0, a.jsxs)("div", {
           className: `${e8().heroModule} ${e8().portfolioTopSection}`,
-          "data-animation": I,
+          "data-animation": M,
           "data-hero-style": u,
-          children: [s.parallax_animation && !L ? (0, a.jsx)(eK.A, {
+          children: [s.parallax_animation && !B ? (0, a.jsx)(eK.A, {
             ...te,
             tiltEnable: !0,
             style: {
               width: "100%",
               position: "relative"
             },
-            children: G
-          }) : G, N && (0, a.jsxs)("div", {
+            children: R
+          }) : R, (0, a.jsxs)("div", {
             className: e8().heroBottomMeta,
             children: [(0, a.jsx)("div", {
               className: e8().heroBottomMetaItem,
