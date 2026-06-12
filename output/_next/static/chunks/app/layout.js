@@ -1,32 +1,32 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [7177], {
-    7754: (e, t, n) => {
+    7754: (e, t, r) => {
       "use strict";
-      n.d(t, {
-        default: () => s
+      r.d(t, {
+        default: () => a
       });
-      var r = n(12115);
+      var n = r(12115);
 
-      function s() {
-        return (0, r.useEffect)(() => {
+      function a() {
+        return (0, n.useEffect)(() => {
           fetch("/api/ping", {
             method: "POST"
           })
         }, []), null
       }
     },
-    9171: (e, t, n) => {
+    9171: (e, t, r) => {
       "use strict";
-      n.d(t, {
+      r.d(t, {
         default: () => f
       });
-      var r = n(95155),
-        s = n(12115),
-        a = n(73321),
-        i = n(72674),
-        o = n.n(i),
-        l = n(94345),
-        u = n(38256);
+      var n = r(95155),
+        a = r(12115),
+        s = r(73321),
+        i = r(72674),
+        o = r.n(i),
+        l = r(94345),
+        u = r(38256);
       let d = {
         en: "English",
         es: "Espa\xf1ol",
@@ -45,94 +45,94 @@
       function f({
         activeLocale: e,
         preferredLocale: t,
-        originalPath: n,
+        originalPath: r,
         originalSearch: i
       }) {
         let d = (0, u.kj)(),
           f = (0, u.KX)(),
-          [m, p] = (0, s.useState)(!1),
-          h = (0, a.usePathname)(),
-          g = (0, a.useSearchParams)(),
-          y = (0, s.useMemo)(() => {
+          [m, p] = (0, a.useState)(!1),
+          h = (0, s.usePathname)(),
+          g = (0, s.useSearchParams)(),
+          w = (0, a.useMemo)(() => {
             var e;
-            return (e = h ?? n ?? "/") && "" !== e ? e.startsWith("/") ? e : `/${e}` : "/"
-          }, [h, n]),
-          b = (0, s.useMemo)(() => {
-            let e = (0, l.KM)(y, f);
+            return (e = h ?? r ?? "/") && "" !== e ? e.startsWith("/") ? e : `/${e}` : "/"
+          }, [h, r]),
+          y = (0, a.useMemo)(() => {
+            let e = (0, l.KM)(w, f);
             return "" === e ? "/" : e
-          }, [y, f]),
-          w = (0, s.useMemo)(() => {
+          }, [w, f]),
+          b = (0, a.useMemo)(() => {
             let e = g?.toString?.() ?? "";
             return e && e.length > 0 ? `?${e}` : i ?? ""
           }, [g, i]),
-          _ = (0, s.useMemo)(() => t && f.includes(t) ? t : "en", [t, f]),
-          v = (0, s.useMemo)(() => c(t), [t]),
-          x = (0, s.useMemo)(() => c(e), [e]),
-          k = (0, s.useMemo)(() => t && "en" !== t ? `/${t}${"/"===b?"":b}` : b, [t, b]),
-          S = (0, s.useMemo)(() => d("common.language_notice.title", {
+          _ = (0, a.useMemo)(() => t && f.includes(t) ? t : "en", [t, f]),
+          v = (0, a.useMemo)(() => c(t), [t]),
+          k = (0, a.useMemo)(() => c(e), [e]),
+          x = (0, a.useMemo)(() => t && "en" !== t ? `/${t}${"/"===y?"":y}` : y, [t, y]),
+          j = (0, a.useMemo)(() => d("common.language_notice.title", {
             preferred: v
           }, _), [_, v, d]),
-          j = (0, s.useMemo)(() => d("common.language_notice.description", {
-            current: x,
+          S = (0, a.useMemo)(() => d("common.language_notice.description", {
+            current: k,
             preferred: v
-          }, _), [_, x, v, d]),
-          I = (0, s.useMemo)(() => d("common.language_notice.switch_button", {
+          }, _), [_, k, v, d]),
+          I = (0, a.useMemo)(() => d("common.language_notice.switch_button", {
             preferred: v
           }, _), [_, v, d]),
-          P = (0, s.useMemo)(() => d("common.language_notice.use_current_button", {
-            current: x
-          }, _), [_, x, d]),
-          C = (0, s.useMemo)(() => d("common.language_notice.dismiss_button", {
-            current: x
-          }, _), [_, x, d]),
-          E = (0, s.useMemo)(() => `${k}${w}`, [k, w]),
-          M = (0, s.useMemo)(() => `${y}${w}`, [y, w]);
-        return t && t !== e && !m ? (0, r.jsxs)(r.Fragment, {
+          E = (0, a.useMemo)(() => d("common.language_notice.use_current_button", {
+            current: k
+          }, _), [_, k, d]),
+          O = (0, a.useMemo)(() => d("common.language_notice.dismiss_button", {
+            current: k
+          }, _), [_, k, d]),
+          P = (0, a.useMemo)(() => `${x}${b}`, [x, b]),
+          M = (0, a.useMemo)(() => `${w}${b}`, [w, b]);
+        return t && t !== e && !m ? (0, n.jsxs)(n.Fragment, {
           children: [
-            ["ar", "he", "fa", "ur"].includes(_) ? (0, r.jsx)("style", {
+            ["ar", "he", "fa", "ur"].includes(_) ? (0, n.jsx)("style", {
               children: `
                     .${o().wrapper} {
                         direction: rtl;
                     }
                     `
-            }) : (0, r.jsx)("style", {
+            }) : (0, n.jsx)("style", {
               children: `
                     .${o().wrapper} {
                         direction: ltr;
                     }
                     `
-            }), "ru" === t ? (0, r.jsx)("style", {
+            }), "ru" === t ? (0, n.jsx)("style", {
               children: `
                     .${o().wrapper} * {
                         font-family: 'Onest', sans-serif !important;
                     }
                     `
-            }) : (0, r.jsx)("style", {
+            }) : (0, n.jsx)("style", {
               children: `
                         .${o().wrapper} * {
                             font-family: 'Satoshi', sans-serif !important;
                         }
                         `
-            }), (0, r.jsxs)("div", {
+            }), (0, n.jsxs)("div", {
               className: o().wrapper,
-              children: [(0, r.jsx)("div", {
+              children: [(0, n.jsx)("div", {
                 className: o().title,
-                children: S
-              }), (0, r.jsx)("div", {
-                className: o().description,
                 children: j
-              }), (0, r.jsxs)("div", {
+              }), (0, n.jsx)("div", {
+                className: o().description,
+                children: S
+              }), (0, n.jsxs)("div", {
                 className: o().actions,
-                children: [(0, r.jsx)("button", {
+                children: [(0, n.jsx)("button", {
                   type: "button",
                   className: o().switchButton,
                   onClick: () => {
                     t && (0, l.xS)(t, {
-                      redirect: E
+                      redirect: P
                     })
                   },
                   children: I
-                }), (0, r.jsx)("button", {
+                }), (0, n.jsx)("button", {
                   type: "button",
                   className: o().useCurrentButton,
                   onClick: () => {
@@ -140,12 +140,12 @@
                       redirect: M
                     })
                   },
-                  children: P
-                }), (0, r.jsx)("button", {
+                  children: E
+                }), (0, n.jsx)("button", {
                   type: "button",
                   className: o().dismissButton,
                   onClick: () => p(!0),
-                  children: C
+                  children: O
                 })]
               })]
             })
@@ -158,19 +158,19 @@
       Object.defineProperty(t, "__esModule", {
         value: !0
       });
-      var n = {
+      var r = {
         cancelIdleCallback: function() {
-          return a
+          return s
         },
         requestIdleCallback: function() {
-          return s
+          return a
         }
       };
-      for (var r in n) Object.defineProperty(t, r, {
+      for (var n in r) Object.defineProperty(t, n, {
         enumerable: !0,
-        get: n[r]
+        get: r[n]
       });
-      let s = "undefined" != typeof self && self.requestIdleCallback && self.requestIdleCallback.bind(window) || function(e) {
+      let a = "undefined" != typeof self && self.requestIdleCallback && self.requestIdleCallback.bind(window) || function(e) {
           let t = Date.now();
           return self.setTimeout(function() {
             e({
@@ -181,87 +181,87 @@
             })
           }, 1)
         },
-        a = "undefined" != typeof self && self.cancelIdleCallback && self.cancelIdleCallback.bind(window) || function(e) {
+        s = "undefined" != typeof self && self.cancelIdleCallback && self.cancelIdleCallback.bind(window) || function(e) {
           return clearTimeout(e)
         };
       ("function" == typeof t.default || "object" == typeof t.default && null !== t.default) && void 0 === t.default.__esModule && (Object.defineProperty(t.default, "__esModule", {
         value: !0
       }), Object.assign(t.default, t), e.exports = t.default)
     },
-    32864: (e, t, n) => {
+    32864: (e, t, r) => {
       "use strict";
-      n.d(t, {
-        default: () => a
+      r.d(t, {
+        default: () => s
       });
-      var r = n(12115),
-        s = n(50768);
-      let a = ({
+      var n = r(12115),
+        a = r(50768);
+      let s = ({
         children: e
-      }) => ((0, r.useEffect)(() => {
-        (0, s.R)()
+      }) => ((0, n.useEffect)(() => {
+        (0, a.R)()
       }, []), e)
     },
-    42593: (e, t, n) => {
+    42593: (e, t, r) => {
       "use strict";
       Object.defineProperty(t, "__esModule", {
         value: !0
       });
-      var r = {
+      var n = {
         default: function() {
-          return w
+          return b
         },
         handleClientScriptLoad: function() {
           return g
         },
         initScriptLoader: function() {
-          return y
+          return w
         }
       };
-      for (var s in r) Object.defineProperty(t, s, {
+      for (var a in n) Object.defineProperty(t, a, {
         enumerable: !0,
-        get: r[s]
+        get: n[a]
       });
-      let a = n(73623),
-        i = n(66388),
-        o = n(95155),
-        l = a._(n(47650)),
-        u = i._(n(12115)),
-        d = n(75368),
-        c = n(3584),
-        f = n(28356),
+      let s = r(73623),
+        i = r(66388),
+        o = r(95155),
+        l = s._(r(47650)),
+        u = i._(r(12115)),
+        d = r(75368),
+        c = r(3584),
+        f = r(28356),
         m = new Map,
         p = new Set,
         h = e => {
           let {
             src: t,
-            id: n,
-            onLoad: r = () => {},
-            onReady: s = null,
-            dangerouslySetInnerHTML: a,
+            id: r,
+            onLoad: n = () => {},
+            onReady: a = null,
+            dangerouslySetInnerHTML: s,
             children: i = "",
             strategy: o = "afterInteractive",
             onError: u,
             stylesheets: d
-          } = e, f = n || t;
+          } = e, f = r || t;
           if (f && p.has(f)) return;
           if (m.has(t)) {
-            p.add(f), m.get(t).then(r, u);
+            p.add(f), m.get(t).then(n, u);
             return
           }
           let h = () => {
-              s && s(), p.add(f)
+              a && a(), p.add(f)
             },
             g = document.createElement("script"),
-            y = new Promise((e, t) => {
+            w = new Promise((e, t) => {
               g.addEventListener("load", function(t) {
-                e(), r && r.call(this, t), h()
+                e(), n && n.call(this, t), h()
               }), g.addEventListener("error", function(e) {
                 t(e)
               })
             }).catch(function(e) {
               u && u(e)
             });
-          a ? (g.innerHTML = a.__html || "", h()) : i ? (g.textContent = "string" == typeof i ? i : Array.isArray(i) ? i.join("") : "", h()) : t && (g.src = t, m.set(t, y)), (0, c.setAttributesFromProps)(g, e), "worker" === o && g.setAttribute("type", "text/partytown"), g.setAttribute("data-nscript", o), d && (e => {
+          s ? (g.innerHTML = s.__html || "", h()) : i ? (g.textContent = "string" == typeof i ? i : Array.isArray(i) ? i.join("") : "", h()) : t && (g.src = t, m.set(t, w)), (0, c.setAttributesFromProps)(g, e), "worker" === o && g.setAttribute("type", "text/partytown"), g.setAttribute("data-nscript", o), d && (e => {
             if (l.default.preinit) return e.forEach(e => {
               l.default.preinit(e, {
                 as: "style"
@@ -270,8 +270,8 @@
             {
               let t = document.head;
               e.forEach(e => {
-                let n = document.createElement("link");
-                n.type = "text/css", n.rel = "stylesheet", n.href = e, t.appendChild(n)
+                let r = document.createElement("link");
+                r.type = "text/css", r.rel = "stylesheet", r.href = e, t.appendChild(r)
               })
             }
           })(d), document.body.appendChild(g)
@@ -286,69 +286,69 @@
         }) : h(e)
       }
 
-      function y(e) {
+      function w(e) {
         e.forEach(g), [...document.querySelectorAll('[data-nscript="beforeInteractive"]'), ...document.querySelectorAll('[data-nscript="beforePageRender"]')].forEach(e => {
           let t = e.id || e.getAttribute("src");
           p.add(t)
         })
       }
 
-      function b(e) {
+      function y(e) {
         let {
           id: t,
-          src: n = "",
-          onLoad: r = () => {},
-          onReady: s = null,
-          strategy: a = "afterInteractive",
+          src: r = "",
+          onLoad: n = () => {},
+          onReady: a = null,
+          strategy: s = "afterInteractive",
           onError: i,
           stylesheets: c,
           ...m
         } = e, {
           updateScripts: g,
-          scripts: y,
-          getIsSsr: b,
-          appDir: w,
+          scripts: w,
+          getIsSsr: y,
+          appDir: b,
           nonce: _
         } = (0, u.useContext)(d.HeadManagerContext);
         _ = m.nonce || _;
         let v = (0, u.useRef)(!1);
         (0, u.useEffect)(() => {
-          let e = t || n;
-          v.current || (s && e && p.has(e) && s(), v.current = !0)
-        }, [s, t, n]);
-        let x = (0, u.useRef)(!1);
+          let e = t || r;
+          v.current || (a && e && p.has(e) && a(), v.current = !0)
+        }, [a, t, r]);
+        let k = (0, u.useRef)(!1);
         if ((0, u.useEffect)(() => {
-            if (!x.current) {
-              if ("afterInteractive" === a) h(e);
-              else "lazyOnload" === a && ("complete" === document.readyState ? (0, f.requestIdleCallback)(() => h(e)) : window.addEventListener("load", () => {
+            if (!k.current) {
+              if ("afterInteractive" === s) h(e);
+              else "lazyOnload" === s && ("complete" === document.readyState ? (0, f.requestIdleCallback)(() => h(e)) : window.addEventListener("load", () => {
                 (0, f.requestIdleCallback)(() => h(e))
               }));
-              x.current = !0
+              k.current = !0
             }
-          }, [e, a]), ("beforeInteractive" === a || "worker" === a) && (g ? (y[a] = (y[a] || []).concat([{
+          }, [e, s]), ("beforeInteractive" === s || "worker" === s) && (g ? (w[s] = (w[s] || []).concat([{
             id: t,
-            src: n,
-            onLoad: r,
-            onReady: s,
+            src: r,
+            onLoad: n,
+            onReady: a,
             onError: i,
             ...m,
             nonce: _
-          }]), g(y)) : b && b() ? p.add(t || n) : b && !b() && h({
+          }]), g(w)) : y && y() ? p.add(t || r) : y && !y() && h({
             ...e,
             nonce: _
-          })), w) {
+          })), b) {
           if (c && c.forEach(e => {
               l.default.preinit(e, {
                 as: "style"
               })
-            }), "beforeInteractive" === a)
-            if (!n) return m.dangerouslySetInnerHTML && (m.children = m.dangerouslySetInnerHTML.__html, delete m.dangerouslySetInnerHTML), (0, o.jsx)("script", {
+            }), "beforeInteractive" === s)
+            if (!r) return m.dangerouslySetInnerHTML && (m.children = m.dangerouslySetInnerHTML.__html, delete m.dangerouslySetInnerHTML), (0, o.jsx)("script", {
               nonce: _,
               dangerouslySetInnerHTML: {
                 __html: `(self.__next_s=self.__next_s||[]).push(${JSON.stringify([0,{...m,id:t}])})`
               }
             });
-            else return l.default.preload(n, m.integrity ? {
+            else return l.default.preload(r, m.integrity ? {
               as: "script",
               integrity: m.integrity,
               nonce: _,
@@ -360,10 +360,10 @@
             }), (0, o.jsx)("script", {
               nonce: _,
               dangerouslySetInnerHTML: {
-                __html: `(self.__next_s=self.__next_s||[]).push(${JSON.stringify([n,{...m,id:t}])})`
+                __html: `(self.__next_s=self.__next_s||[]).push(${JSON.stringify([r,{...m,id:t}])})`
               }
             });
-          "afterInteractive" === a && n && l.default.preload(n, m.integrity ? {
+          "afterInteractive" === s && r && l.default.preload(r, m.integrity ? {
             as: "script",
             integrity: m.integrity,
             nonce: _,
@@ -376,52 +376,102 @@
         }
         return null
       }
-      Object.defineProperty(b, "__nextScript", {
+      Object.defineProperty(y, "__nextScript", {
         value: !0
       });
-      let w = b;
+      let b = y;
       ("function" == typeof t.default || "object" == typeof t.default && null !== t.default) && void 0 === t.default.__esModule && (Object.defineProperty(t.default, "__esModule", {
         value: !0
       }), Object.assign(t.default, t), e.exports = t.default)
     },
-    50768: (e, t, n) => {
+    50768: (e, t, r) => {
       "use strict";
-      n.d(t, {
-        R: () => m,
-        s: () => p
+      r.d(t, {
+        R: () => x,
+        s: () => j
       });
-      let r = !1,
-        s = [/loading chunk/i, /chunkloaderror/i, /chunk loading failed/i],
-        a = ["chrome-extension:", "moz-extension:", "safari-extension:"],
-        i = [/turnstile/i],
-        o = e => !!e && a.some(t => e.startsWith(t)),
-        l = e => !!e && a.some(t => e.includes(t)),
-        u = e => !!e && s.some(t => t.test(e)),
-        d = e => !!e && e.toLowerCase().includes("extension context invalidated"),
-        c = e => {
-          if (!e) return !1;
-          let t = e.toLowerCase();
-          return i.every(e => e.test(t))
+      let n = !1,
+        a = [/loading chunk/i, /chunkloaderror/i, /chunk loading failed/i, /failed to fetch dynamically imported module/i, /importing a module script failed/i],
+        s = ["chrome-extension:", "moz-extension:", "safari-extension:"],
+        i = new Set(["window_error", "unhandled_rejection", "global_error_boundary"]),
+        o = new Set(["SCRIPT", "LINK", "IMG", "IFRAME", "VIDEO", "AUDIO", "SOURCE"]),
+        l = [/extension context invalidated/i, /window\.__firefox__\.reader/i, /contentwindow is null/i, /contentwindow\.document/i, /can't access property ["']document["'],\s*[a-z]\.contentwindow is null/i, /cannot read propert(?:y|ies) of null \(reading ['"]document['"]\)/i, /cannot read property ['"]document['"] of null/i, /cannot prefetch.*cannot be converted to a url/i, /window\.webkit\.messagehandlers/i, /failed to execute ['"]removechild['"] on ['"]node['"]/i, /null is not an object \(evaluating ['"][^'"]*\.parentnode\.removechild['"]\)/i, /(?:getresult|xbrowser|swbrowser) is not defined/i, /can't find variable:\s*getresult/i, /a0_0x[0-9a-f]+ is not defined/i, /internal json-rpc error/i, /"code"\s*:\s*-32603/i, /the play\(\) request was interrupted/i, /error creating webgl context/i, /turnstile/i],
+        u = [/execute_auto_fill/i, /needinjectcss/i, /_getownpropertydescriptor/i, /<anonymous>:\d+:\d+/i],
+        d = new Set(["failed to fetch", "load failed", "a network error occurred.", "networkerror when attempting to fetch resource.", "the operation was aborted.", "the user aborted a request."]),
+        c = [/the string did not match the expected pattern/i, /json\.parse: unexpected character/i, /unexpected token '<'/i, /unexpected end of json input/i],
+        f = [/\/_next\/static\//i, /webpack-internal:\/\//i, /https?:\/\/(?:www\.)?guns\.lol\/_next\//i, /https?:\/\/(?:www\.)?guns\.lol\/app\//i],
+        m = e => !!e && s.some(t => e.startsWith(t)),
+        p = e => !!e && s.some(t => e.includes(t)),
+        h = e => !!e && a.some(t => t.test(e)),
+        g = (e, t) => e.tags?.includes(t) ?? !1,
+        w = (...e) => {
+          let t = e.filter(Boolean).join("\n");
+          return !!t && l.some(e => e.test(t))
         },
-        f = e => {
-          if (!e) return !1;
-          let t = e.toLowerCase();
-          return !!(t.includes("cannot read property 'document' of null") || t.includes("cannot read properties of null (reading 'document'") || t.includes("null is not an object") && t.includes("contentwindow.document") || t.includes("cannot prefetch") && t.includes("cannot be converted to a url") || t.includes("window.webkit.messagehandlers") || t.includes("failed to execute 'removechild' on 'node'") || t.includes("getresult is not defined"))
+        y = e => {
+          let t = (e ?? "").trim().replace(/^uncaught\s+/i, "").replace(/^(?:typeerror|referenceerror|syntaxerror|networkerror|aborterror):\s*/i, "").toLowerCase();
+          return d.has(t)
         },
-        m = () => {
-          r || (r = !0, window.addEventListener("error", e => {
-            let t, n;
-            if (t = e.error, n = e.filename ?? null, (e => {
-                let t = e.target;
-                if (!t || !("tagName" in t)) return !1;
-                let n = t.tagName;
-                return "SCRIPT" === n || "LINK" === n
-              })(e) || u(e.message) || u(t?.message) || u(t?.name) || "Script error." === e.message && !n || o(n) || l(t?.stack) || d(e.message) || d(t?.message) || c(e.message) || c(t?.message) || f(e.message) || f(t?.message) || 0) return;
-            let r = e.error;
-            p({
-              message: e.message ?? r?.message ?? "Unknown window error",
-              name: r?.name ?? "Error",
-              stack: r?.stack ?? null,
+        b = e => !!e && c.some(t => t.test(e)),
+        _ = (...e) => {
+          let t = e.filter(Boolean).join("\n");
+          return !!t && f.some(e => e.test(t))
+        },
+        v = e => {
+          if (w(e.message, e.stack, e.filename)) return !0;
+          if (_(e.stack, e.filename)) return !1;
+          let t = [e.message, e.stack, e.filename].filter(Boolean).join("\n");
+          return u.some(e => e.test(t))
+        },
+        k = e => {
+          if (e instanceof Error) return {
+            message: e.message,
+            name: e.name,
+            stack: e.stack ?? null
+          };
+          if ("string" == typeof e) return {
+            message: e,
+            name: "Error",
+            stack: null
+          };
+          if ("object" == typeof e && "message" in e) {
+            let t = e.message,
+              r = e.name,
+              n = e.stack;
+            if ("string" == typeof t) return {
+              message: t,
+              name: "string" == typeof r ? r : "Error",
+              stack: "string" == typeof n ? n : null
+            }
+          }
+          try {
+            return {
+              message: JSON.stringify(e, null, 2),
+              name: "Error",
+              stack: null
+            }
+          } catch {
+            return {
+              message: String(e),
+              name: "Error",
+              stack: null
+            }
+          }
+        },
+        x = () => {
+          n || (n = !0, window.addEventListener("error", e => {
+            var t;
+            let r, n, a;
+            if (n = (t = e).error, a = t.filename ?? null, !(!((r = t.target) && "tagName" in r && o.has(r.tagName.toUpperCase()) || h(t.message) || h(n?.message) || h(n?.name) || "Script error." === t.message && !a || m(a) || p(n?.stack) || w(t.message, n?.message, n?.name, n?.stack, a) || v({
+                message: t.message ?? n?.message,
+                stack: n?.stack,
+                filename: a
+              })) && _(n?.stack, a))) return;
+            let s = e.error;
+            j({
+              message: e.message ?? s?.message ?? "Unknown window error",
+              name: s?.name ?? "Error",
+              stack: s?.stack ?? null,
               severity: "error",
               componentStack: null,
               route: window.location.pathname,
@@ -435,20 +485,19 @@
           }), window.addEventListener("unhandledrejection", e => {
             let t = e.reason;
             if ((e => {
-                if (!e) return !1;
-                if (e instanceof Error) return !!(u(e.message) || u(e.name) || l(e.stack) || d(e.message) || o(e.stack ?? "") || c(e.message) || f(e.message));
-                if ("string" == typeof e) return u(e) || d(e) || c(e) || f(e);
-                if ("object" == typeof e && "message" in e) {
-                  let t = e.message;
-                  if ("string" == typeof t) return u(t) || d(t) || c(t) || f(t)
-                }
-                return !1
+                if (!e || e && "object" == typeof e && "isTrusted" in e && !("message" in e) && !("stack" in e)) return !0;
+                let {
+                  message: t,
+                  name: r,
+                  stack: n
+                } = k(e);
+                return !(!(!t || "{}" === t || h(t) || h(r) || p(n) || w(t, r, n) || y(t) || b(t)) && n && _(n))
               })(t)) return;
-            let n = t instanceof Error ? t : Error("string" == typeof t ? t : JSON.stringify(t, null, 2));
-            p({
-              message: n.message,
-              name: n.name,
-              stack: n.stack ?? null,
+            let r = k(t);
+            j({
+              message: r.message,
+              name: r.name,
+              stack: r.stack,
               severity: "error",
               route: window.location.pathname,
               metadata: {
@@ -458,22 +507,30 @@
             })
           }))
         },
-        p = async e => {
-          let t, n = h(e);
+        j = async e => {
+          let t, r, n, a, s, o, l, u = S(e);
+          if (r = u.tags?.some(e => i.has(e)) ?? !1, n = u.message, a = u.name ?? null, s = u.stack ?? null, o = u.componentStack ?? null, l = "string" == typeof u.metadata?.filename ? u.metadata.filename : null, h(n) || h(a) || h(s) || p(s) || m(l) || w(n, a, s, o, l) || r && (y(n) || b(n)) || r && v({
+              message: n,
+              stack: s,
+              filename: l
+            }) || g(u, "window_error") && !_(s, l) || g(u, "unhandled_rejection") && (!s || !_(s)) || 0) return {
+            eventId: null,
+            errorId: null
+          };
           try {
             if (t = await fetch("/api/telemetry/errors", {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json"
                 },
-                body: JSON.stringify(n),
+                body: JSON.stringify(u),
                 keepalive: !0
               }), 401 === t.status && (t = await fetch("/api/telemetry/errorsP", {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json"
                 },
-                body: JSON.stringify(n),
+                body: JSON.stringify(u),
                 keepalive: !0
               })), !t.ok) return {
               eventId: null,
@@ -492,7 +549,7 @@
                   }
                 }))
               }
-              return console.error(`[telemetry] error=${r??"none"} event=${t??"none"} route=${n.route}`), {
+              return console.error(`[telemetry] error=${r??"none"} event=${t??"none"} route=${u.route}`), {
                 eventId: t,
                 errorId: r
               }
@@ -504,31 +561,31 @@
             eventId: null,
             errorId: null
           }
-        }, h = e => {
-          let t = g(),
-            n = e.route ?? window.location.pathname,
-            r = b(n ?? "/"),
-            s = y("undefined" != typeof navigator ? navigator.userAgent ?? null : null),
-            a = e.viewport ?? {
+        }, S = e => {
+          let t = I(),
+            r = e.route ?? window.location.pathname,
+            n = O(r ?? "/"),
+            a = E("undefined" != typeof navigator ? navigator.userAgent ?? null : null),
+            s = e.viewport ?? {
               width: window.innerWidth,
               height: window.innerHeight
             },
             i = {
               ...e.metadata ?? {},
-              ...s ? {
-                environment: s
+              ...a ? {
+                environment: a
               } : {},
-              rawRoute: n,
-              normalizedRoute: r
+              rawRoute: r,
+              normalizedRoute: n
             };
           return {
             ...e,
             href: t,
-            route: r,
-            viewport: a,
+            route: n,
+            viewport: s,
             metadata: i
           }
-        }, g = () => {
+        }, I = () => {
           try {
             let {
               pathname: e
@@ -537,25 +594,25 @@
           } catch {
             return null
           }
-        }, y = e => {
+        }, E = e => {
           if (!e) return null;
           let t = e.toLowerCase(),
-            n = "unknown",
             r = "unknown",
-            s = "desktop";
-          return /edg\//.test(t) ? n = "edge" : /chrome\//.test(t) ? n = "chrome" : /safari\//.test(t) && !/chrome\//.test(t) ? n = "safari" : /firefox\//.test(t) ? n = "firefox" : /msie|trident/.test(t) && (n = "ie"), /windows nt/.test(t) ? r = "windows" : /mac os x/.test(t) ? r = "macos" : /android/.test(t) ? r = "android" : /iphone|ipad|ipod/.test(t) ? r = "ios" : /linux/.test(t) && (r = "linux"), /bot|crawler|spider|crawling/.test(t) ? s = "bot" : /ipad/.test(t) ? s = "tablet" : /iphone|android.+mobile/.test(t) && (s = "mobile"), {
-            browser: n,
-            os: r,
-            device: s
+            n = "unknown",
+            a = "desktop";
+          return /edg\//.test(t) ? r = "edge" : /chrome\//.test(t) ? r = "chrome" : /safari\//.test(t) && !/chrome\//.test(t) ? r = "safari" : /firefox\//.test(t) ? r = "firefox" : /msie|trident/.test(t) && (r = "ie"), /windows nt/.test(t) ? n = "windows" : /mac os x/.test(t) ? n = "macos" : /android/.test(t) ? n = "android" : /iphone|ipad|ipod/.test(t) ? n = "ios" : /linux/.test(t) && (n = "linux"), /bot|crawler|spider|crawling/.test(t) ? a = "bot" : /ipad/.test(t) ? a = "tablet" : /iphone|android.+mobile/.test(t) && (a = "mobile"), {
+            browser: r,
+            os: n,
+            device: a
           }
-        }, b = e => {
+        }, O = e => {
           if (!e) return "/";
-          let [t] = e.split(/[?#]/, 1), n = t.split("/").map(e => e ? /^[0-9]+$/.test(e) && e.length >= 3 ? ":int" : /^[0-9a-f]{16,}$/i.test(e) ? ":hex" : /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(e) ? ":uuid" : /^[0-9a-z_-]{12,}$/i.test(e) ? ":id" : /^\d{4}-\d{2}-\d{2}$/.test(e) ? ":date" : e : e).join("/");
-          return n.startsWith("/") ? n : `/${n}`
+          let [t] = e.split(/[?#]/, 1), r = t.split("/").map(e => e ? /^[0-9]+$/.test(e) && e.length >= 3 ? ":int" : /^[0-9a-f]{16,}$/i.test(e) ? ":hex" : /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(e) ? ":uuid" : /^[0-9a-z_-]{12,}$/i.test(e) ? ":id" : /^\d{4}-\d{2}-\d{2}$/.test(e) ? ":date" : e : e).join("/");
+          return r.startsWith("/") ? r : `/${r}`
         }
     },
-    53223: (e, t, n) => {
-      Promise.resolve().then(n.bind(n, 38256)), Promise.resolve().then(n.bind(n, 9171)), Promise.resolve().then(n.bind(n, 7754)), Promise.resolve().then(n.bind(n, 32864)), Promise.resolve().then(n.t.bind(n, 70063, 23)), Promise.resolve().then(n.t.bind(n, 42593, 23))
+    53223: (e, t, r) => {
+      Promise.resolve().then(r.bind(r, 38256)), Promise.resolve().then(r.bind(r, 9171)), Promise.resolve().then(r.bind(r, 7754)), Promise.resolve().then(r.bind(r, 32864)), Promise.resolve().then(r.t.bind(r, 70063, 23)), Promise.resolve().then(r.t.bind(r, 42593, 23))
     },
     70063: () => {},
     72674: e => {
@@ -569,28 +626,28 @@
         dismissButton: "GUNS__10-5a62d54e-f98a37f7-2f702e1d"
       }
     },
-    73321: (e, t, n) => {
+    73321: (e, t, r) => {
       "use strict";
-      var r = n(74645);
-      n.o(r, "redirect") && n.d(t, {
+      var n = r(74645);
+      r.o(n, "redirect") && r.d(t, {
         redirect: function() {
-          return r.redirect
+          return n.redirect
         }
-      }), n.o(r, "useParams") && n.d(t, {
+      }), r.o(n, "useParams") && r.d(t, {
         useParams: function() {
-          return r.useParams
+          return n.useParams
         }
-      }), n.o(r, "usePathname") && n.d(t, {
+      }), r.o(n, "usePathname") && r.d(t, {
         usePathname: function() {
-          return r.usePathname
+          return n.usePathname
         }
-      }), n.o(r, "useRouter") && n.d(t, {
+      }), r.o(n, "useRouter") && r.d(t, {
         useRouter: function() {
-          return r.useRouter
+          return n.useRouter
         }
-      }), n.o(r, "useSearchParams") && n.d(t, {
+      }), r.o(n, "useSearchParams") && r.d(t, {
         useSearchParams: function() {
-          return r.useSearchParams
+          return n.useSearchParams
         }
       })
     }

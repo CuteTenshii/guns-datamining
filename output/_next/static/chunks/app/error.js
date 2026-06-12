@@ -6,41 +6,91 @@
     50768: (e, r, t) => {
       "use strict";
       t.d(r, {
-        R: () => f,
-        s: () => h
+        R: () => x,
+        s: () => I
       });
       let n = !1,
-        a = [/loading chunk/i, /chunkloaderror/i, /chunk loading failed/i],
+        a = [/loading chunk/i, /chunkloaderror/i, /chunk loading failed/i, /failed to fetch dynamically imported module/i, /importing a module script failed/i],
         o = ["chrome-extension:", "moz-extension:", "safari-extension:"],
-        s = [/turnstile/i],
-        i = e => !!e && o.some(r => e.startsWith(r)),
-        l = e => !!e && o.some(r => e.includes(r)),
-        d = e => !!e && a.some(r => r.test(e)),
-        c = e => !!e && e.toLowerCase().includes("extension context invalidated"),
-        u = e => {
-          if (!e) return !1;
-          let r = e.toLowerCase();
-          return s.every(e => e.test(r))
+        s = new Set(["window_error", "unhandled_rejection", "global_error_boundary"]),
+        i = new Set(["SCRIPT", "LINK", "IMG", "IFRAME", "VIDEO", "AUDIO", "SOURCE"]),
+        l = [/extension context invalidated/i, /window\.__firefox__\.reader/i, /contentwindow is null/i, /contentwindow\.document/i, /can't access property ["']document["'],\s*[a-z]\.contentwindow is null/i, /cannot read propert(?:y|ies) of null \(reading ['"]document['"]\)/i, /cannot read property ['"]document['"] of null/i, /cannot prefetch.*cannot be converted to a url/i, /window\.webkit\.messagehandlers/i, /failed to execute ['"]removechild['"] on ['"]node['"]/i, /null is not an object \(evaluating ['"][^'"]*\.parentnode\.removechild['"]\)/i, /(?:getresult|xbrowser|swbrowser) is not defined/i, /can't find variable:\s*getresult/i, /a0_0x[0-9a-f]+ is not defined/i, /internal json-rpc error/i, /"code"\s*:\s*-32603/i, /the play\(\) request was interrupted/i, /error creating webgl context/i, /turnstile/i],
+        d = [/execute_auto_fill/i, /needinjectcss/i, /_getownpropertydescriptor/i, /<anonymous>:\d+:\d+/i],
+        c = new Set(["failed to fetch", "load failed", "a network error occurred.", "networkerror when attempting to fetch resource.", "the operation was aborted.", "the user aborted a request."]),
+        u = [/the string did not match the expected pattern/i, /json\.parse: unexpected character/i, /unexpected token '<'/i, /unexpected end of json input/i],
+        m = [/\/_next\/static\//i, /webpack-internal:\/\//i, /https?:\/\/(?:www\.)?guns\.lol\/_next\//i, /https?:\/\/(?:www\.)?guns\.lol\/app\//i],
+        f = e => !!e && o.some(r => e.startsWith(r)),
+        g = e => !!e && o.some(r => e.includes(r)),
+        p = e => !!e && a.some(r => r.test(e)),
+        h = (e, r) => e.tags?.includes(r) ?? !1,
+        w = (...e) => {
+          let r = e.filter(Boolean).join("\n");
+          return !!r && l.some(e => e.test(r))
         },
-        m = e => {
-          if (!e) return !1;
-          let r = e.toLowerCase();
-          return !!(r.includes("cannot read property 'document' of null") || r.includes("cannot read properties of null (reading 'document'") || r.includes("null is not an object") && r.includes("contentwindow.document") || r.includes("cannot prefetch") && r.includes("cannot be converted to a url") || r.includes("window.webkit.messagehandlers") || r.includes("failed to execute 'removechild' on 'node'") || r.includes("getresult is not defined"))
+        b = e => {
+          let r = (e ?? "").trim().replace(/^uncaught\s+/i, "").replace(/^(?:typeerror|referenceerror|syntaxerror|networkerror|aborterror):\s*/i, "").toLowerCase();
+          return c.has(r)
         },
-        f = () => {
+        _ = e => !!e && u.some(r => r.test(e)),
+        k = (...e) => {
+          let r = e.filter(Boolean).join("\n");
+          return !!r && m.some(e => e.test(r))
+        },
+        y = e => {
+          if (w(e.message, e.stack, e.filename)) return !0;
+          if (k(e.stack, e.filename)) return !1;
+          let r = [e.message, e.stack, e.filename].filter(Boolean).join("\n");
+          return d.some(e => e.test(r))
+        },
+        v = e => {
+          if (e instanceof Error) return {
+            message: e.message,
+            name: e.name,
+            stack: e.stack ?? null
+          };
+          if ("string" == typeof e) return {
+            message: e,
+            name: "Error",
+            stack: null
+          };
+          if ("object" == typeof e && "message" in e) {
+            let r = e.message,
+              t = e.name,
+              n = e.stack;
+            if ("string" == typeof r) return {
+              message: r,
+              name: "string" == typeof t ? t : "Error",
+              stack: "string" == typeof n ? n : null
+            }
+          }
+          try {
+            return {
+              message: JSON.stringify(e, null, 2),
+              name: "Error",
+              stack: null
+            }
+          } catch {
+            return {
+              message: String(e),
+              name: "Error",
+              stack: null
+            }
+          }
+        },
+        x = () => {
           n || (n = !0, window.addEventListener("error", e => {
-            let r, t;
-            if (r = e.error, t = e.filename ?? null, (e => {
-                let r = e.target;
-                if (!r || !("tagName" in r)) return !1;
-                let t = r.tagName;
-                return "SCRIPT" === t || "LINK" === t
-              })(e) || d(e.message) || d(r?.message) || d(r?.name) || "Script error." === e.message && !t || i(t) || l(r?.stack) || c(e.message) || c(r?.message) || u(e.message) || u(r?.message) || m(e.message) || m(r?.message) || 0) return;
-            let n = e.error;
-            h({
-              message: e.message ?? n?.message ?? "Unknown window error",
-              name: n?.name ?? "Error",
-              stack: n?.stack ?? null,
+            var r;
+            let t, n, a;
+            if (n = (r = e).error, a = r.filename ?? null, !(!((t = r.target) && "tagName" in t && i.has(t.tagName.toUpperCase()) || p(r.message) || p(n?.message) || p(n?.name) || "Script error." === r.message && !a || f(a) || g(n?.stack) || w(r.message, n?.message, n?.name, n?.stack, a) || y({
+                message: r.message ?? n?.message,
+                stack: n?.stack,
+                filename: a
+              })) && k(n?.stack, a))) return;
+            let o = e.error;
+            I({
+              message: e.message ?? o?.message ?? "Unknown window error",
+              name: o?.name ?? "Error",
+              stack: o?.stack ?? null,
               severity: "error",
               componentStack: null,
               route: window.location.pathname,
@@ -54,20 +104,19 @@
           }), window.addEventListener("unhandledrejection", e => {
             let r = e.reason;
             if ((e => {
-                if (!e) return !1;
-                if (e instanceof Error) return !!(d(e.message) || d(e.name) || l(e.stack) || c(e.message) || i(e.stack ?? "") || u(e.message) || m(e.message));
-                if ("string" == typeof e) return d(e) || c(e) || u(e) || m(e);
-                if ("object" == typeof e && "message" in e) {
-                  let r = e.message;
-                  if ("string" == typeof r) return d(r) || c(r) || u(r) || m(r)
-                }
-                return !1
+                if (!e || e && "object" == typeof e && "isTrusted" in e && !("message" in e) && !("stack" in e)) return !0;
+                let {
+                  message: r,
+                  name: t,
+                  stack: n
+                } = v(e);
+                return !(!(!r || "{}" === r || p(r) || p(t) || g(n) || w(r, t, n) || b(r) || _(r)) && n && k(n))
               })(r)) return;
-            let t = r instanceof Error ? r : Error("string" == typeof r ? r : JSON.stringify(r, null, 2));
-            h({
+            let t = v(r);
+            I({
               message: t.message,
               name: t.name,
-              stack: t.stack ?? null,
+              stack: t.stack,
               severity: "error",
               route: window.location.pathname,
               metadata: {
@@ -77,22 +126,30 @@
             })
           }))
         },
-        h = async e => {
-          let r, t = g(e);
+        I = async e => {
+          let r, t, n, a, o, i, l, d = j(e);
+          if (t = d.tags?.some(e => s.has(e)) ?? !1, n = d.message, a = d.name ?? null, o = d.stack ?? null, i = d.componentStack ?? null, l = "string" == typeof d.metadata?.filename ? d.metadata.filename : null, p(n) || p(a) || p(o) || g(o) || f(l) || w(n, a, o, i, l) || t && (b(n) || _(n)) || t && y({
+              message: n,
+              stack: o,
+              filename: l
+            }) || h(d, "window_error") && !k(o, l) || h(d, "unhandled_rejection") && (!o || !k(o)) || 0) return {
+            eventId: null,
+            errorId: null
+          };
           try {
             if (r = await fetch("/api/telemetry/errors", {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json"
                 },
-                body: JSON.stringify(t),
+                body: JSON.stringify(d),
                 keepalive: !0
               }), 401 === r.status && (r = await fetch("/api/telemetry/errorsP", {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json"
                 },
-                body: JSON.stringify(t),
+                body: JSON.stringify(d),
                 keepalive: !0
               })), !r.ok) return {
               eventId: null,
@@ -101,19 +158,19 @@
             let e = await r.json().catch(() => null);
             if (e && (e.eventId || e.errorId)) {
               let r = "string" == typeof e.eventId ? e.eventId : null,
-                n = "string" == typeof e.errorId ? e.errorId : null;
+                t = "string" == typeof e.errorId ? e.errorId : null;
               {
                 let e = window;
-                r && (e.__gunsLastTelemetryEventId = r), n && (e.__gunsLastTelemetryErrorId = n), window.dispatchEvent(new CustomEvent("guns:telemetry-event", {
+                r && (e.__gunsLastTelemetryEventId = r), t && (e.__gunsLastTelemetryErrorId = t), window.dispatchEvent(new CustomEvent("guns:telemetry-event", {
                   detail: {
                     eventId: r,
-                    errorId: n
+                    errorId: t
                   }
                 }))
               }
-              return console.error(`[telemetry] error=${n??"none"} event=${r??"none"} route=${t.route}`), {
+              return console.error(`[telemetry] error=${t??"none"} event=${r??"none"} route=${d.route}`), {
                 eventId: r,
-                errorId: n
+                errorId: t
               }
             }
           } catch (e) {
@@ -123,11 +180,11 @@
             eventId: null,
             errorId: null
           }
-        }, g = e => {
-          let r = w(),
+        }, j = e => {
+          let r = N(),
             t = e.route ?? window.location.pathname,
-            n = b(t ?? "/"),
-            a = p("undefined" != typeof navigator ? navigator.userAgent ?? null : null),
+            n = E(t ?? "/"),
+            a = S("undefined" != typeof navigator ? navigator.userAgent ?? null : null),
             o = e.viewport ?? {
               width: window.innerWidth,
               height: window.innerHeight
@@ -147,7 +204,7 @@
             viewport: o,
             metadata: s
           }
-        }, w = () => {
+        }, N = () => {
           try {
             let {
               pathname: e
@@ -156,7 +213,7 @@
           } catch {
             return null
           }
-        }, p = e => {
+        }, S = e => {
           if (!e) return null;
           let r = e.toLowerCase(),
             t = "unknown",
@@ -167,7 +224,7 @@
             os: n,
             device: a
           }
-        }, b = e => {
+        }, E = e => {
           if (!e) return "/";
           let [r] = e.split(/[?#]/, 1), t = r.split("/").map(e => e ? /^[0-9]+$/.test(e) && e.length >= 3 ? ":int" : /^[0-9a-f]{16,}$/i.test(e) ? ":hex" : /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(e) ? ":uuid" : /^[0-9a-z_-]{12,}$/i.test(e) ? ":id" : /^\d{4}-\d{2}-\d{2}$/.test(e) ? ":date" : e : e).join("/");
           return t.startsWith("/") ? t : `/${t}`
@@ -177,7 +234,7 @@
     87460: (e, r, t) => {
       "use strict";
       t.r(r), t.d(r, {
-        default: () => h
+        default: () => g
       });
       var n = t(95155),
         a = t(12115);
@@ -192,22 +249,23 @@
         m = t(50768),
         f = t(38256);
 
-      function h({
+      function g({
         error: e
       }) {
         let r = (0, f.kj)(),
           [t, o] = (0, a.useState)(null),
           [i, d] = (0, a.useState)(null),
-          h = (0, a.useRef)(!1);
+          g = (0, a.useRef)(!1);
         return (0, a.useEffect)(() => {
-          h.current || (h.current = !0, (0, m.s)({
+          g.current || (g.current = !0, (0, m.s)({
             message: e?.message ?? "Global error boundary triggered",
             name: e?.name ?? "GlobalErrorBoundary",
             stack: e?.stack ?? null,
             severity: "error",
             route: window.location.pathname,
             metadata: {
-              source: "global-error-boundary"
+              source: "global-error-boundary",
+              digest: e?.digest ?? null
             },
             tags: ["global_error_boundary"]
           }).then(({
