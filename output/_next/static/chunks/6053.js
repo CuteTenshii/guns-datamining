@@ -5148,9 +5148,17 @@ void main() {
         let y = ((e = [], t) => {
             let r = (Array.isArray(e) && e.length > 0 ? e : ti).filter(e => tn.has(e?.type)),
               a = r.findIndex(e => e?.type === "hero"),
-              s = 0 === a ? r : [a > 0 ? r[a] : ti[0], ...r.filter((e, t) => e?.type !== "hero" || t === a)],
-              n = !!t?.url;
-            return s.filter((e, r) => !!e && !1 !== e.visible && ("audio" === e.type ? n && to(e.settings, t) : 0 === r ? "hero" === e.type : "hero" !== e.type))
+              s = 0 === a ? r : [a > 0 ? r[a] : ti[0], ...r.filter((e, t) => e?.type !== "hero" && t !== a)],
+              n = !!t?.url,
+              i = new Set,
+              o = {};
+            return s.filter((e, r) => {
+              if (!e || !1 === e.visible || i.has(e.id)) return !1;
+              if (0 === r) return "hero" === e.type && (i.add(e.id), o[e.type] = 1, !0);
+              if ("hero" === e.type || "audio" === e.type && (!n || !to(e.settings, t))) return !1;
+              let a = (o[e.type] || 0) + 1;
+              return !(a > ("audio" === e.type || "skills" === e.type ? 1 : 2)) && (i.add(e.id), o[e.type] = a, !0)
+            })
           })(r.portfolio_modules, h),
           b = (0, s.useRef)(null),
           _ = (0, s.useRef)(-1),

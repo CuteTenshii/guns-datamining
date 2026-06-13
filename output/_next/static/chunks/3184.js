@@ -3,7 +3,7 @@
   [3184], {
     3184: (e, t, o) => {
       o.r(t), o.d(t, {
-        default: () => e5
+        default: () => e8
       });
       var a = o(95155),
         s = o(12115),
@@ -1307,43 +1307,44 @@
       };
       var K = o(9992),
         q = o(54834);
-      async function Z(e, t, o, a, s, r) {
+      async function Z(e, t, o, a, s, r, i = {}) {
         try {
           t(q.A.loading);
-          let i = await fetch("https://guns.lol/api/dashboard/premium/layout", {
+          let l = {
+            layout: e.layout,
+            border_color: e.border_color,
+            border_radius: e.border_radius,
+            border_width: e.border_width,
+            border_enabled: e.border_enabled,
+            border_style: e.border_style ?? "static",
+            border_opacity: e.border_opacity ?? .3,
+            text_align: e.text_align,
+            button_border_radius: e.button_border_radius,
+            show_url: e.show_url,
+            button_shadow: e.button_shadow,
+            join_date: e.join_date ?? "relative",
+            avatar_radius: e.avatar_radius ?? 35,
+            links_position: e.links_position ?? "center",
+            portfolio_border_radius: e.portfolio_border_radius ?? e.border_radius ?? 20
+          };
+          i.includePortfolioModules && (l.portfolio_modules = e.portfolio_modules ?? []);
+          let n = await fetch("https://guns.lol/api/dashboard/premium/layout", {
               method: "POST",
-              body: JSON.stringify({
-                layout: e.layout,
-                border_color: e.border_color,
-                border_radius: e.border_radius,
-                border_width: e.border_width,
-                border_enabled: e.border_enabled,
-                border_style: e.border_style ?? "static",
-                border_opacity: e.border_opacity ?? .3,
-                text_align: e.text_align,
-                button_border_radius: e.button_border_radius,
-                show_url: e.show_url,
-                button_shadow: e.button_shadow,
-                join_date: e.join_date ?? "relative",
-                avatar_radius: e.avatar_radius ?? 35,
-                links_position: e.links_position ?? "center",
-                portfolio_border_radius: e.portfolio_border_radius ?? e.border_radius ?? 20,
-                portfolio_modules: e.portfolio_modules ?? []
-              })
+              body: JSON.stringify(l)
             }),
-            l = await i.json();
-          if (i.ok) {
+            d = await n.json();
+          if (n.ok) {
             p.oR.success(s("common.unsaved_changes.settings_saved"));
             let t = {
               ...e,
-              ...Array.isArray(l?.portfolio_modules) ? {
-                portfolio_modules: l.portfolio_modules
+              ...Array.isArray(d?.portfolio_modules) ? {
+                portfolio_modules: d.portfolio_modules
               } : {}
             };
             setTimeout(() => {
               r && r(t), a(t), o(!1)
             }, 500)
-          } else p.oR.error(l.error)
+          } else p.oR.error(d.error)
         } catch (e) {
           p.oR.error(s("common.unsaved_changes.unknown_error")), console.error(e.message)
         } finally {
@@ -1647,25 +1648,32 @@
               visible: !0,
               settings: eg("hero", t)
             }],
-            a = (Array.isArray(e) && e.length > 0 ? e.filter(e => el.includes(e?.type)) : o).map((e, o) => {
-              let a, s = el.includes(e.type) ? e.type : "about",
-                r = 0 !== o || er.includes(s) ? s : "hero";
-              return {
-                id: e.id || em(),
-                type: r,
-                visible: !1 !== e.visible,
-                settings: (a = {
-                  ...eg(r, t),
-                  ...e.settings || {}
-                }, "hero" === r && (a.hero_style = "centered" === a.hero_style ? "centered" : "classic"), a)
-              }
-            });
-          return 0 === a.length && (a = o), er.includes(a[0].type) || (a[0] = {
-            id: a[0].id,
+            a = Array.isArray(e) && e.length > 0 ? e.filter(e => el.includes(e?.type)) : o,
+            s = a.findIndex(e => e?.type === "hero"),
+            r = 0 === s ? a : [s > 0 ? a[s] : o[0], ...a.filter((e, t) => e?.type !== "hero" && t !== s)],
+            i = new Set,
+            l = {},
+            n = r.reduce((e, o, a) => {
+              let s, r = el.includes(o.type) ? o.type : "about",
+                n = 0 !== a || er.includes(r) ? r : "hero",
+                d = o.id || em(),
+                c = (l[n] || 0) + 1;
+              return i.has(d) || e.length > 0 && er.includes(n) || c > eu(n) ? e : (i.add(d), l[n] = c, e.push({
+                id: d,
+                type: n,
+                visible: !1 !== o.visible,
+                settings: (s = {
+                  ...eg(n, t),
+                  ...o.settings || {}
+                }, "hero" === n && (s.hero_style = "centered" === s.hero_style ? "centered" : "classic"), s)
+              }), e)
+            }, []);
+          return 0 === n.length && (n = o), er.includes(n[0].type) || (n[0] = {
+            id: n[0].id,
             type: "hero",
             visible: !0,
             settings: eg("hero", t)
-          }), a = a.filter((e, t) => 0 === t || !er.includes(e.type))
+          }), n = n.filter((e, t) => 0 === t || !er.includes(e.type))
         };
 
       function ef(e) {
@@ -4170,32 +4178,30 @@
             lyrics_track_map: {}
           }
         },
-        e4 = e => {
-          var t;
-          return e && "object" == typeof e ? {
-            ...e,
-            portfolio_modules: Array.isArray(t = e.portfolio_modules) ? t.map(e => e && "object" == typeof e ? {
-              ...e,
-              visible: !1 !== e.visible,
-              settings: ((e, t) => {
-                let o = t && "object" == typeof t ? {
-                    ...t
-                  } : {},
-                  a = e2[e] || {};
-                if (Object.keys(a).forEach(e => {
-                    void 0 !== o[e] && e1(o[e]) === e1(a[e]) && delete o[e]
-                  }), "audio" === e) {
-                  let e = Object.entries(o.lyrics_track_map && "object" == typeof o.lyrics_track_map && !Array.isArray(o.lyrics_track_map) ? o.lyrics_track_map : {}).reduce((e, [t, o]) => (o && "object" == typeof o && ("string" == typeof o.synced_lyrics ? o.synced_lyrics.trim() : "") && (e[t] = o), e), {});
-                  Object.keys(e).length > 0 ? o.lyrics_track_map = e : delete o.lyrics_track_map, !0 !== o.show_lyrics && delete o.show_lyrics
-                }
-                return Object.keys(o).forEach(e => {
-                  void 0 === o[e] && delete o[e]
-                }), o
-              })(e.type, e.settings)
-            } : e) : []
-          } : e
-        },
-        e5 = ({
+        e4 = e => Array.isArray(e) ? e.map(e => e && "object" == typeof e ? {
+          ...e,
+          visible: !1 !== e.visible,
+          settings: ((e, t) => {
+            let o = t && "object" == typeof t ? {
+                ...t
+              } : {},
+              a = e2[e] || {};
+            if (Object.keys(a).forEach(e => {
+                void 0 !== o[e] && e1(o[e]) === e1(a[e]) && delete o[e]
+              }), "audio" === e) {
+              let e = Object.entries(o.lyrics_track_map && "object" == typeof o.lyrics_track_map && !Array.isArray(o.lyrics_track_map) ? o.lyrics_track_map : {}).reduce((e, [t, o]) => (o && "object" == typeof o && ("string" == typeof o.synced_lyrics ? o.synced_lyrics.trim() : "") && (e[t] = o), e), {});
+              Object.keys(e).length > 0 ? o.lyrics_track_map = e : delete o.lyrics_track_map, !0 !== o.show_lyrics && delete o.show_lyrics
+            }
+            return Object.keys(o).forEach(e => {
+              void 0 === o[e] && delete o[e]
+            }), o
+          })(e.type, e.settings)
+        } : e) : [],
+        e5 = e => e && "object" == typeof e ? {
+          ...e,
+          portfolio_modules: e4(e.portfolio_modules)
+        } : e,
+        e8 = ({
           data: e
         }) => {
           let t = (0, _.kj)(),
@@ -4228,7 +4234,7 @@
             k = t("common.unsaved_changes.save_button"),
             [N, C] = (0, s.useState)(k);
           (0, s.useEffect)(() => {
-            v(e1(e4(f)) !== e1(e4(u)))
+            v(e1(e5(f)) !== e1(e5(u)))
           }, [f, u]);
           let w = e => t => {
               x(o => ({
@@ -4237,10 +4243,15 @@
               }))
             },
             S = (e = {}) => {
-              Z(Object.keys(e).length > 0 ? {
-                ...f,
-                ...e
-              } : f, C, v, m, t, x)
+              let o = Object.keys(e).length > 0 ? {
+                  ...f,
+                  ...e
+                } : f,
+                a = e1(e4(o.portfolio_modules)) !== e1(e4(u.portfolio_modules)),
+                s = "portfolio" === o.layout && (Object.prototype.hasOwnProperty.call(e, "portfolio_modules") || a);
+              Z(o, C, v, m, t, x, {
+                includePortfolioModules: s
+              })
             };
           return (0, a.jsxs)(a.Fragment, {
             children: [(0, a.jsx)(p.l$, {

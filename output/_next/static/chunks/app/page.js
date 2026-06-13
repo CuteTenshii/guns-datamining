@@ -132,8 +132,8 @@
       });
       var i = s(95155),
         r = s(59791),
-        l = s.n(r),
-        c = s(81382),
+        c = s.n(r),
+        l = s(81382),
         t = s(87974),
         n = s(12115),
         d = s(60884);
@@ -184,47 +184,47 @@
           j = (100 * Math.round(a.premium / 100)).toLocaleString("en-US"),
           w = x && x < 768 ? .3 : .6;
         return (0, n.useEffect)(() => {
-          document.querySelectorAll(`.${l().elementAnimation}`).forEach((e, a) => {
+          document.querySelectorAll(`.${c().elementAnimation}`).forEach((e, a) => {
             setTimeout(() => {
-              e.classList.add(l().expandAnimation)
+              e.classList.add(c().expandAnimation)
             }, 350 + 300 * a)
           }), u(window.innerWidth)
         }, []), (0, i.jsx)(i.Fragment, {
-          children: (0, i.jsxs)(c.A, {
+          children: (0, i.jsxs)(l.A, {
             data: s,
             statsData: a,
             children: [(0, i.jsx)("div", {
-              className: l().landingPage,
+              className: c().landingPage,
               children: (0, i.jsxs)("div", {
-                className: l().heroWrapper,
+                className: c().heroWrapper,
                 children: [(0, i.jsx)("img", {
-                  className: l().gunsGradient,
+                  className: c().gunsGradient,
                   draggable: !1,
                   src: "https://assets.guns.lol/gradient_background.png",
                   alt: ""
                 }), (0, i.jsxs)("div", {
-                  className: `${l().heroContentWrapper} ${l().elementAnimation}`,
+                  className: `${c().heroContentWrapper} ${c().elementAnimation}`,
                   children: [(0, i.jsxs)("div", {
-                    className: l().heroContent,
+                    className: c().heroContent,
                     children: [(0, i.jsx)("h1", {
                       children: r("landing.hero.title")
                     }), (0, i.jsx)("p", {
                       children: r("landing.hero.description")
                     })]
                   }), (0, i.jsxs)("div", {
-                    className: l().heroButtons,
+                    className: c().heroButtons,
                     children: [(0, i.jsx)(f.A, {
                       href: "/register?ref=landing_page_hero",
-                      className: `${l().registerButton}`,
+                      className: `${c().registerButton}`,
                       children: r("landing.hero.sign_up")
                     }), (0, i.jsx)(f.A, {
                       href: "/pricing",
-                      className: `${l().pricingButton}`,
+                      className: `${c().pricingButton}`,
                       children: r("landing.hero.view_pricing")
                     })]
                   })]
                 }), (0, i.jsxs)("div", {
-                  className: `${l().heroShowcase} ${l().elementAnimation}`,
+                  className: `${c().heroShowcase} ${c().elementAnimation}`,
                   children: [(0, i.jsx)("img", {
                     src: "https://assets.guns.lol/dashboard.png",
                     alt: ""
@@ -237,9 +237,9 @@
             }), (0, i.jsx)(o, {
               amount: w,
               children: (0, i.jsxs)("div", {
-                className: `${l().statisticsShowcase} ${l().elementAnimation}`,
+                className: `${c().statisticsShowcase} ${c().elementAnimation}`,
                 children: [(0, i.jsxs)("div", {
-                  className: l().statisticsDescription,
+                  className: c().statisticsDescription,
                   children: [(0, i.jsx)("h1", {
                     children: r("landing.stats.title", {
                       users: (0, i.jsx)("span", {
@@ -249,11 +249,11 @@
                   }), (0, i.jsx)("h3", {
                     children: r("landing.stats.description")
                   }), (0, i.jsxs)("div", {
-                    className: l().statisticBoxWrapper,
+                    className: c().statisticBoxWrapper,
                     children: [(0, i.jsxs)("div", {
-                      className: l().statisticBox,
+                      className: c().statisticBox,
                       children: [(0, i.jsxs)("div", {
-                        className: l().boxWrapper,
+                        className: c().boxWrapper,
                         children: [(0, i.jsxs)("h1", {
                           children: [g, "+"]
                         }), (0, i.jsx)("span", {
@@ -261,9 +261,9 @@
                         })]
                       }), t.A.profileViews]
                     }), (0, i.jsxs)("div", {
-                      className: l().statisticBox,
+                      className: c().statisticBox,
                       children: [(0, i.jsxs)("div", {
-                        className: l().boxWrapper,
+                        className: c().boxWrapper,
                         children: [(0, i.jsxs)("h1", {
                           children: [b, "+"]
                         }), (0, i.jsx)("span", {
@@ -271,9 +271,9 @@
                         })]
                       }), t.A.users]
                     }), (0, i.jsxs)("div", {
-                      className: l().statisticBox,
+                      className: c().statisticBox,
                       children: [(0, i.jsxs)("div", {
-                        className: l().boxWrapper,
+                        className: c().boxWrapper,
                         children: [(0, i.jsxs)("h1", {
                           children: [N, "+"]
                         }), (0, i.jsx)("span", {
@@ -281,9 +281,9 @@
                         })]
                       }), t.A.fileUploads]
                     }), (0, i.jsxs)("div", {
-                      className: l().statisticBox,
+                      className: c().statisticBox,
                       children: [(0, i.jsxs)("div", {
-                        className: l().boxWrapper,
+                        className: c().boxWrapper,
                         children: [(0, i.jsxs)("h1", {
                           children: [j, "+"]
                         }), (0, i.jsx)("span", {
@@ -293,35 +293,35 @@
                     })]
                   })]
                 }), (0, i.jsxs)("div", {
-                  className: l().claimProfileWrapper,
+                  className: c().claimProfileWrapper,
                   children: [(0, i.jsx)("h1", {
-                    className: l().claimProfileText,
+                    className: c().claimProfileText,
                     children: r("landing.stats.claim_profile_text")
                   }), (0, i.jsxs)("div", {
-                    className: l().claimProfileBox,
+                    className: c().claimProfileBox,
                     children: [(0, i.jsx)("div", {
-                      className: l().inputContainerWrapper,
+                      className: c().inputContainerWrapper,
                       children: (0, i.jsxs)("div", {
-                        className: `${l().inputWrapperDiv} ${l().inputWrapperURL}`,
+                        className: `${c().inputWrapperDiv} ${c().inputWrapperURL}`,
                         children: [(0, i.jsx)("span", {
-                          className: l().inputWrapperSpan,
+                          className: c().inputWrapperSpan,
                           children: (0, i.jsx)("h1", {
                             children: "guns.lol/"
                           })
                         }), (0, i.jsx)("input", {
-                          autoCorrect: "false",
+                          autoCorrect: "off",
                           value: d,
-                          onChange: e => {
+                          onInput: e => {
                             m(e.target.value)
                           },
                           type: "text",
                           placeholder: r("landing.stats.claim_input_placeholder"),
-                          className: `${l().inputWrapperInput}`
+                          className: `${c().inputWrapperInput}`
                         })]
                       })
                     }), (0, i.jsx)(f.A, {
                       href: `/register?claim=${d}&ref=landing_page`,
-                      className: `${l().claimNow}`,
+                      className: `${c().claimNow}`,
                       children: r("landing.stats.claim_now_text")
                     })]
                   })]
@@ -330,9 +330,9 @@
             }), (0, i.jsx)(o, {
               amount: w,
               children: (0, i.jsxs)("div", {
-                className: l().premiumShowcase,
+                className: c().premiumShowcase,
                 children: [(0, i.jsx)("h1", {
-                  className: l().premiumHeadingText,
+                  className: c().premiumHeadingText,
                   children: r("landing.pricing.title", {
                     subscribers: (0, i.jsxs)("span", {
                       children: [j, "+"]

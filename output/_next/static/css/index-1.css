@@ -842,9 +842,10 @@
   background-color: #111111;
   border: 2px solid transparent;
   font-family: Satoshi, sans-serif;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
+  user-select: text;
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  -webkit-touch-callout: default;
   font-weight: 400;
   border-radius: 17px;
   outline: none;

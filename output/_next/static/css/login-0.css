@@ -124,6 +124,9 @@
   font-size: 16px;
   padding: 14px 16px;
   outline: none;
+  user-select: text;
+  -webkit-user-select: text;
+  -webkit-touch-callout: default;
   transition: border-color .25s ease, box-shadow .25s ease, background-color .25s ease
 }
 

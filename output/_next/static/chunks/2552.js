@@ -49,8 +49,8 @@
         let _ = (0, l.kj)(),
           [h, b] = (0, r.useState)(null),
           [m, p] = (0, r.useState)(null),
-          [N, g] = (0, r.useState)(""),
-          w = {
+          [N, w] = (0, r.useState)(""),
+          S = {
             google: {
               continue: _("auth.social.continue_with_google"),
               signup: _("auth.social.signup_with_google"),
@@ -60,9 +60,9 @@
         (0, r.useEffect)(() => {
           let e = window.localStorage.getItem(i),
             a = Number(window.localStorage.getItem(f) || "0");
-          "google" === e && a > 0 && (p("google"), g(_("auth.social.last_used")))
+          "google" === e && a > 0 && (p("google"), w(_("auth.social.last_used")))
         }, []);
-        let S = async t => {
+        let g = async t => {
           try {
             b(t), a?.("");
             {
@@ -86,12 +86,12 @@
         return (0, c.jsx)("div", {
           className: d().socialButtons,
           children: ["google"].map(e => {
-            let a = w[e],
+            let a = S[e],
               r = h === e;
             return (0, c.jsxs)("button", {
               type: "button",
               className: d().socialButton,
-              onClick: () => S(e),
+              onClick: () => g(e),
               disabled: null !== h,
               children: [a.icon, (0, c.jsx)("span", {
                 className: d().buttonText,
@@ -341,7 +341,11 @@
         type: h = "text",
         ...b
       }) {
-        let [m, p] = (0, r.useState)(!!f);
+        let [m, p] = (0, r.useState)(!!f), {
+          onInput: N,
+          onChange: w,
+          ...S
+        } = b;
         return (0, r.useEffect)(() => {
           p(!!f)
         }, [f]), (0, c.jsxs)("div", {
@@ -370,7 +374,7 @@
               },
               children: m ? n.A.hidePassword : n.A.views
             }), (0, c.jsx)("input", {
-              autoCorrect: "false",
+              autoCorrect: "off",
               type: f ? m ? "password" : "text" : h,
               onKeyDown: u,
               value: t,
@@ -380,8 +384,10 @@
               },
               placeholder: s,
               className: d().inputWrapperInput,
-              onChange: a,
-              ...b
+              onInput: e => {
+                N?.(e), w?.(e), a?.(e)
+              },
+              ...S
             })]
           })]
         })
@@ -414,7 +420,7 @@
         bodyClassName: m,
         children: p
       }) {
-        let [N, g] = (0, r.useState)(e), [w, S] = (0, r.useState)(!1), [v, U] = (0, r.useState)(null), x = (0, r.useRef)(null), G = (0, r.useRef)(null), j = (0, r.useRef)(null), y = (0, r.useRef)(!1), C = e => {
+        let [N, w] = (0, r.useState)(e), [S, g] = (0, r.useState)(!1), [v, U] = (0, r.useState)(null), x = (0, r.useRef)(null), G = (0, r.useRef)(null), j = (0, r.useRef)(null), y = (0, r.useRef)(!1), C = e => {
           if (!e) return !1;
           let a = window.getComputedStyle(e).overflowY;
           return e.scrollHeight > e.clientHeight + 1 && ("auto" === a || "scroll" === a)
@@ -430,11 +436,11 @@
         }, k = (e, a) => a < 0 ? e.scrollTop > 0 : !(a > 0) || e.scrollTop + e.clientHeight < e.scrollHeight;
         if ((0, r.useEffect)(() => {
             if (e) {
-              g(!0), S(!1);
+              w(!0), g(!1);
               return
             }
-            return S(!0), x.current = setTimeout(() => {
-              g(!1), S(!1)
+            return g(!0), x.current = setTimeout(() => {
+              w(!1), g(!1)
             }, 180), () => {
               x.current && (clearTimeout(x.current), x.current = null)
             }
@@ -491,7 +497,7 @@
         let B = "number" == typeof f ? `${f}px` : f,
           L = {};
         B && "auto" !== B ? L.maxWidth = B : (L.width = "fit-content", L.maxWidth = "clamp(100%, 100%, 850px)", L.boxSizing = "border-box");
-        let q = w ? "closing" : "open",
+        let q = S ? "closing" : "open",
           E = (0, c.jsx)("div", {
             className: n().overlay,
             "data-centered": i,

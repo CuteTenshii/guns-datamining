@@ -84,7 +84,11 @@
         type: h = "text",
         ...m
       }) {
-        let [v, _] = (0, a.useState)(!!d);
+        let [v, _] = (0, a.useState)(!!d), {
+          onInput: b,
+          onChange: y,
+          ...g
+        } = m;
         return (0, a.useEffect)(() => {
           _(!!d)
         }, [d]), (0, n.jsxs)("div", {
@@ -113,7 +117,7 @@
               },
               children: v ? i.A.hidePassword : i.A.views
             }), (0, n.jsx)("input", {
-              autoCorrect: "false",
+              autoCorrect: "off",
               type: d ? v ? "password" : "text" : h,
               onKeyDown: f,
               value: r,
@@ -123,8 +127,10 @@
               },
               placeholder: s,
               className: l().inputWrapperInput,
-              onChange: t,
-              ...m
+              onInput: e => {
+                b?.(e), y?.(e), t?.(e)
+              },
+              ...g
             })]
           })]
         })
@@ -137,7 +143,7 @@
       });
       var n = {
         default: function() {
-          return g
+          return y
         },
         handleClientScriptLoad: function() {
           return v
@@ -236,10 +242,10 @@
           updateScripts: v,
           scripts: _,
           getIsSsr: b,
-          appDir: g,
-          nonce: y
+          appDir: y,
+          nonce: g
         } = (0, o.useContext)(u.HeadManagerContext);
-        y = p.nonce || y;
+        g = p.nonce || g;
         let w = (0, o.useRef)(!1);
         (0, o.useEffect)(() => {
           let e = t || r;
@@ -261,18 +267,18 @@
             onReady: a,
             onError: l,
             ...p,
-            nonce: y
+            nonce: g
           }]), v(_)) : b && b() ? h.add(t || r) : b && !b() && m({
             ...e,
-            nonce: y
-          })), g) {
+            nonce: g
+          })), y) {
           if (d && d.forEach(e => {
               c.default.preinit(e, {
                 as: "style"
               })
             }), "beforeInteractive" === s)
             if (!r) return p.dangerouslySetInnerHTML && (p.children = p.dangerouslySetInnerHTML.__html, delete p.dangerouslySetInnerHTML), (0, i.jsx)("script", {
-              nonce: y,
+              nonce: g,
               dangerouslySetInnerHTML: {
                 __html: `(self.__next_s=self.__next_s||[]).push(${JSON.stringify([0,{...p,id:t}])})`
               }
@@ -280,14 +286,14 @@
             else return c.default.preload(r, p.integrity ? {
               as: "script",
               integrity: p.integrity,
-              nonce: y,
+              nonce: g,
               crossOrigin: p.crossOrigin
             } : {
               as: "script",
-              nonce: y,
+              nonce: g,
               crossOrigin: p.crossOrigin
             }), (0, i.jsx)("script", {
-              nonce: y,
+              nonce: g,
               dangerouslySetInnerHTML: {
                 __html: `(self.__next_s=self.__next_s||[]).push(${JSON.stringify([r,{...p,id:t}])})`
               }
@@ -295,11 +301,11 @@
           "afterInteractive" === s && r && c.default.preload(r, p.integrity ? {
             as: "script",
             integrity: p.integrity,
-            nonce: y,
+            nonce: g,
             crossOrigin: p.crossOrigin
           } : {
             as: "script",
-            nonce: y,
+            nonce: g,
             crossOrigin: p.crossOrigin
           })
         }
@@ -308,7 +314,7 @@
       Object.defineProperty(b, "__nextScript", {
         value: !0
       });
-      let g = b;
+      let y = b;
       ("function" == typeof t.default || "object" == typeof t.default && null !== t.default) && void 0 === t.default.__esModule && (Object.defineProperty(t.default, "__esModule", {
         value: !0
       }), Object.assign(t.default, t), e.exports = t.default)
@@ -340,11 +346,11 @@
         bodyClassName: v,
         children: _
       }) {
-        let [b, g] = (0, a.useState)(e), [y, w] = (0, a.useState)(!1), [x, j] = (0, a.useState)(null), S = (0, a.useRef)(null), N = (0, a.useRef)(null), E = (0, a.useRef)(null), C = (0, a.useRef)(!1), k = e => {
+        let [b, y] = (0, a.useState)(e), [g, w] = (0, a.useState)(!1), [x, j] = (0, a.useState)(null), S = (0, a.useRef)(null), N = (0, a.useRef)(null), E = (0, a.useRef)(null), C = (0, a.useRef)(!1), k = e => {
           if (!e) return !1;
           let t = window.getComputedStyle(e).overflowY;
           return e.scrollHeight > e.clientHeight + 1 && ("auto" === t || "scroll" === t)
-        }, A = e => {
+        }, I = e => {
           let t = N.current;
           if (!t || !e) return null;
           let r = e;
@@ -353,14 +359,14 @@
             r = r.parentElement
           }
           return null
-        }, I = (e, t) => t < 0 ? e.scrollTop > 0 : !(t > 0) || e.scrollTop + e.clientHeight < e.scrollHeight;
+        }, A = (e, t) => t < 0 ? e.scrollTop > 0 : !(t > 0) || e.scrollTop + e.clientHeight < e.scrollHeight;
         if ((0, a.useEffect)(() => {
             if (e) {
-              g(!0), w(!1);
+              y(!0), w(!1);
               return
             }
             return w(!0), S.current = setTimeout(() => {
-              g(!1), w(!1)
+              y(!1), w(!1)
             }, 180), () => {
               S.current && (clearTimeout(S.current), S.current = null)
             }
@@ -381,16 +387,16 @@
                 let r = e.target;
                 if (!(r && t.contains(r))) return void e.preventDefault();
                 if (e instanceof WheelEvent) {
-                  let t = A(r);
-                  t && I(t, e.deltaY) || e.preventDefault();
+                  let t = I(r);
+                  t && A(t, e.deltaY) || e.preventDefault();
                   return
                 }
                 if (e instanceof TouchEvent) {
                   let t = e.touches[0]?.clientY ?? null,
                     n = E.current;
                   E.current = t;
-                  let a = A(r);
-                  a && I(a, null !== n && null !== t ? n - t : 0) || e.preventDefault()
+                  let a = I(r);
+                  a && A(a, null !== n && null !== t ? n - t : 0) || e.preventDefault()
                 }
               },
               n = {
@@ -401,7 +407,7 @@
             }), window.addEventListener("wheel", r, n), window.addEventListener("touchmove", r, n), () => {
               window.removeEventListener("keydown", e), window.removeEventListener("wheel", r, n), window.removeEventListener("touchmove", r, n)
             }
-          }, [I, A, t, c, b]), (0, a.useEffect)(() => {
+          }, [A, I, t, c, b]), (0, a.useEffect)(() => {
             if (!b) return;
             let e = e => {
               if (!N.current?.contains(e.target)) {
@@ -417,7 +423,7 @@
         let L = "number" == typeof d ? `${d}px` : d,
           O = {};
         L && "auto" !== L ? O.maxWidth = L : (O.width = "fit-content", O.maxWidth = "clamp(100%, 100%, 850px)", O.boxSizing = "border-box");
-        let P = y ? "closing" : "open",
+        let P = g ? "closing" : "open",
           T = (0, n.jsx)("div", {
             className: i().overlay,
             "data-centered": u,
@@ -529,11 +535,11 @@
           s = e("auth.reset.submit"),
           [i, m] = (0, a.useState)(""),
           [v, _] = (0, a.useState)(""),
-          [b, g] = (0, a.useState)(s),
-          [y, w] = (0, a.useState)(!1),
+          [b, y] = (0, a.useState)(s),
+          [g, w] = (0, a.useState)(!1),
           x = async e => {
             try {
-              g(o.A.loading), _("");
+              y(o.A.loading), _("");
               let n = JSON.stringify({
                   email: i,
                   captcha: e
@@ -543,16 +549,16 @@
                   body: n
                 }),
                 l = await a.json();
-              a.ok ? r.push(t(`/sent?e=${btoa(i)}&d=pass&token=${l.resendToken}`)) : (_(l.error), g(s))
+              a.ok ? r.push(t(`/sent?e=${btoa(i)}&d=pass&token=${l.resendToken}`)) : (_(l.error), y(s))
             } catch (e) {
               return console.error(e.message), !1
             } finally {
-              g(s)
+              y(s)
             }
           }, j = e => {
             w(!1), x(e)
           }, S = () => {
-            _(e("auth.reset.error_captcha")), g(s)
+            _(e("auth.reset.error_captcha")), y(s)
           };
         return (0, a.useEffect)(() => {
           Object.assign(window, {
@@ -565,7 +571,7 @@
             src: "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit",
             id: "_turnstilereset"
           }), (0, n.jsx)(h.A, {
-            opened: y,
+            opened: g,
             centered: !0,
             withCloseButton: !1,
             onClose: () => w(!1),

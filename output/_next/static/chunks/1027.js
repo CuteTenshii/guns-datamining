@@ -540,6 +540,11 @@
         placeholder: a,
         ...i
       }) {
+        let {
+          onInput: c,
+          onChange: r,
+          ...o
+        } = i;
         return (0, h.jsxs)("div", {
           className: s().inputContainerWrapper,
           "data-dashboard-feature-label": "string" == typeof e ? e : void 0,
@@ -554,13 +559,14 @@
                 transition: "border 0.25s",
                 resize: "vertical"
               },
-              spellCheck: "false",
-              type: "text",
+              spellCheck: !1,
               value: t,
               placeholder: a,
               className: s().inputWrapperInput,
-              onChange: l,
-              ...i
+              onInput: e => {
+                c?.(e), r?.(e), l?.(e)
+              },
+              ...o
             })
           })]
         })
@@ -615,15 +621,16 @@
         inputClassName: g,
         onChangeFunction: p,
         onChange: u,
-        onFocus: j,
-        onBlur: q,
-        onKeyDown: T,
-        inputMode: M = "decimal",
-        disabled: b,
-        id: z,
+        onInput: j,
+        onFocus: q,
+        onBlur: T,
+        onKeyDown: M,
+        inputMode: b = "decimal",
+        disabled: z,
+        id: L,
         ...C
       }) {
-        let L = "number" == typeof d ? d : (e => {
+        let B = "number" == typeof d ? d : (e => {
             if ("number" != typeof e || !Number.isFinite(e)) return;
             let l = e.toString().toLowerCase(),
               t = 0;
@@ -636,73 +643,75 @@
             }
             return t > 0 ? t : void 0
           })(m),
-          B = void 0 === i ? void 0 : String(i),
-          H = (0, s.useId)(),
-          V = z ?? H,
-          N = (0, s.useRef)(null),
-          [y, A] = (0, s.useState)(!1),
-          [k, S] = (0, s.useState)(() => w(t ?? "", L));
+          H = void 0 === i ? void 0 : String(i),
+          V = (0, s.useId)(),
+          N = L ?? V,
+          y = (0, s.useRef)(null),
+          [A, k] = (0, s.useState)(!1),
+          [S, _] = (0, s.useState)(() => w(t ?? "", B));
         (0, s.useEffect)(() => {
-          y || S(w(t ?? "", L))
-        }, [t, L, y]);
-        let _ = (0, s.useCallback)(e => {
+          A || _(w(t ?? "", B))
+        }, [t, B, A]);
+        let Z = (0, s.useCallback)(e => {
             p?.(e), u?.(e)
           }, [p, u]),
-          Z = e => {
-            if (b) return;
+          U = e => {
+            if (z) return;
             let l = "number" == typeof t && Number.isFinite(t) ? t : void 0,
-              h = o(r("number" == typeof l ? l + e * m : 1 === e ? "number" == typeof n ? n : m : "number" == typeof v ? v : -m, n, v), L);
-            S(w(h, L)), _(h), N.current?.focus()
+              h = o(r("number" == typeof l ? l + e * m : 1 === e ? "number" == typeof n ? n : m : "number" == typeof v ? v : -m, n, v), B);
+            _(w(h, B)), Z(h), y.current?.focus()
           },
-          U = !b && ("number" != typeof v || "number" != typeof t || t < v),
-          D = !b && ("number" != typeof n || "number" != typeof t || t > n),
-          G = "string" == typeof e ? e : void 0;
+          D = !z && ("number" != typeof v || "number" != typeof t || t < v),
+          G = !z && ("number" != typeof n || "number" != typeof t || t > n),
+          W = "string" == typeof e ? e : void 0;
         return (0, h.jsxs)("div", {
           className: (0, a.A)(c().container, f),
-          "data-dashboard-feature-label": G,
+          "data-dashboard-feature-label": W,
           children: [e && (0, h.jsx)("label", {
-            htmlFor: V,
+            htmlFor: N,
             className: c().label,
             children: e
           }), (0, h.jsxs)("div", {
             className: c().inputShell,
-            "data-focused": y,
-            "data-disabled": b,
+            "data-focused": A,
+            "data-disabled": z,
             children: [l && (0, h.jsx)("span", {
               className: c().iconSlot,
               children: l
             }), (0, h.jsx)("input", {
-              ref: N,
-              id: V,
+              ref: y,
+              id: N,
               type: "text",
-              inputMode: M,
+              inputMode: b,
               autoComplete: "off",
               autoCorrect: "off",
               spellCheck: !1,
               className: (0, a.A)(c().input, l && c().inputWithIcon, !x && c().inputWithControls, g),
-              value: k,
-              placeholder: B,
+              value: S,
+              placeholder: H,
               min: n,
               max: v,
               step: m,
-              onChange: e => {
-                let l, t = e.currentTarget.value;
-                S(t);
+              onInput: e => {
+                let l;
+                j?.(e);
+                let t = e.currentTarget.value;
+                _(t);
                 let h = t.replace(/,/g, ".");
-                if ("" === (l = h.trim()) || "-" === l || "+" === l || "." === l || "-." === l || "+." === l) return void _(0);
+                if ("" === (l = h.trim()) || "-" === l || "+" === l || "." === l || "-." === l || "+." === l) return void Z(0);
                 let a = Number(h);
-                Number.isNaN(a) || _(o(r(a, n, v), L))
+                Number.isNaN(a) || Z(o(r(a, n, v), B))
               },
               onFocus: e => {
-                A(!0), j?.(e)
+                k(!0), q?.(e)
               },
               onBlur: e => {
-                A(!1), S(w(t ?? "", L)), q?.(e)
+                k(!1), _(w(t ?? "", B)), T?.(e)
               },
               onKeyDown: e => {
-                "ArrowUp" === e.key ? (e.preventDefault(), Z(1)) : "ArrowDown" === e.key && (e.preventDefault(), Z(-1)), T?.(e)
+                "ArrowUp" === e.key ? (e.preventDefault(), U(1)) : "ArrowDown" === e.key && (e.preventDefault(), U(-1)), M?.(e)
               },
-              disabled: b,
+              disabled: z,
               ...C
             }), !x && (0, h.jsxs)("div", {
               className: c().controls,
@@ -710,16 +719,16 @@
                 type: "button",
                 className: c().controlButton,
                 onMouseDown: e => e.preventDefault(),
-                onClick: () => Z(1),
-                disabled: !U,
+                onClick: () => U(1),
+                disabled: !D,
                 tabIndex: -1,
                 children: "▲"
               }), (0, h.jsx)("button", {
                 type: "button",
                 className: c().controlButton,
                 onMouseDown: e => e.preventDefault(),
-                onClick: () => Z(-1),
-                disabled: !D,
+                onClick: () => U(-1),
+                disabled: !G,
                 tabIndex: -1,
                 children: "▼"
               })]

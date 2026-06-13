@@ -26,9 +26,13 @@
         onKeyPress: h,
         isImageUrl: p,
         type: m = "text",
-        ..._
+        ...f
       }) {
-        let [f, j] = (0, a.useState)(!!l);
+        let [_, j] = (0, a.useState)(!!l), {
+          onInput: x,
+          onChange: v,
+          ...w
+        } = f;
         return (0, a.useEffect)(() => {
           j(!!l)
         }, [l]), (0, r.jsxs)("div", {
@@ -53,12 +57,12 @@
               })]
             }), l && (0, r.jsx)("p", {
               onClick: () => {
-                j(!f)
+                j(!_)
               },
-              children: f ? c.A.hidePassword : c.A.views
+              children: _ ? c.A.hidePassword : c.A.views
             }), (0, r.jsx)("input", {
-              autoCorrect: "false",
-              type: l ? f ? "password" : "text" : m,
+              autoCorrect: "off",
+              type: l ? _ ? "password" : "text" : m,
               onKeyDown: h,
               value: t,
               style: {
@@ -67,8 +71,10 @@
               },
               placeholder: n,
               className: i().inputWrapperInput,
-              onChange: s,
-              ..._
+              onInput: e => {
+                x?.(e), v?.(e), s?.(e)
+              },
+              ...w
             })]
           })]
         })
@@ -130,13 +136,13 @@
           t = (0, l.useRouter)(),
           [n, c] = (0, a.useState)(""),
           [p, m] = (0, a.useState)(""),
-          [_, f] = (0, a.useState)(""),
+          [f, _] = (0, a.useState)(""),
           j = e("auth.reset.change_password"),
           [x, v] = (0, a.useState)(j),
           w = (0, l.useParams)().reset,
           N = async () => {
             try {
-              v(u.A.loading), f("");
+              v(u.A.loading), _("");
               let e = JSON.stringify({
                   token: w,
                   password: n,
@@ -147,7 +153,7 @@
                   body: e
                 }),
                 a = await r.json();
-              r.ok ? t.push(s("/password/success")) : (f(a.error), v(j))
+              r.ok ? t.push(s("/password/success")) : (_(a.error), v(j))
             } catch (e) {
               return console.error(e.message), !1
             } finally {
@@ -186,10 +192,10 @@
                 })]
               }), (0, r.jsxs)("div", {
                 className: d().containerButtons,
-                children: ["" !== _ && (0, r.jsx)("div", {
+                children: ["" !== f && (0, r.jsx)("div", {
                   className: i().errorContainer,
                   children: (0, r.jsx)("span", {
-                    children: _
+                    children: f
                   })
                 }), (0, r.jsx)("span", {
                   className: d().submitButton,
@@ -202,8 +208,8 @@
         })
       }
       var m = t(98500),
-        _ = t.n(m),
-        f = t(81934);
+        f = t.n(m),
+        _ = t(81934);
 
       function j({
         resetData: e
@@ -222,10 +228,10 @@
                   children: s("auth.reset.invalid_reset_link_description")
                 }), (0, r.jsxs)("div", {
                   className: i().containerButtons,
-                  children: [(0, r.jsx)(f.A, {
+                  children: [(0, r.jsx)(_.A, {
                     href: "/",
                     children: s("auth.reset.reset_link_buttons.home")
-                  }), (0, r.jsx)(_(), {
+                  }), (0, r.jsx)(f(), {
                     href: "https://discord.gg/guns",
                     target: "_blank",
                     children: s("auth.reset.reset_link_buttons.discord")

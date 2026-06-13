@@ -110,7 +110,11 @@
         type: u = "text",
         ...N
       }) {
-        let [S, U] = (0, d.useState)(!!b);
+        let [S, U] = (0, d.useState)(!!b), {
+          onInput: G,
+          onChange: h,
+          ...p
+        } = N;
         return (0, d.useEffect)(() => {
           U(!!b)
         }, [b]), (0, t.jsxs)("div", {
@@ -139,7 +143,7 @@
               },
               children: S ? f.A.hidePassword : f.A.views
             }), (0, t.jsx)("input", {
-              autoCorrect: "false",
+              autoCorrect: "off",
               type: b ? S ? "password" : "text" : u,
               onKeyDown: o,
               value: c,
@@ -149,8 +153,10 @@
               },
               placeholder: r,
               className: s().inputWrapperInput,
-              onChange: a,
-              ...N
+              onInput: e => {
+                G?.(e), h?.(e), a?.(e)
+              },
+              ...p
             })]
           })]
         })
