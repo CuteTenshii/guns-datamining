@@ -8150,7 +8150,7 @@ Read more: https://nextjs.org/docs/messages/failed-to-find-server-action`), "__N
         }) : r()
       }
       window.next = {
-        version: "16.0.9",
+        version: "16.0.10",
         appDir: !0
       }, ("function" == typeof t.default || "object" == typeof t.default && null !== t.default) && void 0 === t.default.__esModule && (Object.defineProperty(t.default, "__esModule", {
         value: !0

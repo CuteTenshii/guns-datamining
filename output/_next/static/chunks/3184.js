@@ -2343,24 +2343,26 @@
             a = Object.entries(t);
           if (0 === a.length) return;
           let s = new Set(l.map(e => String(e.id))),
-            r = new Map(l.map(e => [String(e.url), String(e.id)])),
-            i = {};
+            r = {};
           for (let [e, t] of a) {
             if (!t || "object" != typeof t) continue;
             let o = String(t.track_id || e || ""),
-              a = String(t.track_url || ""),
-              l = "";
-            s.has(e) ? l = e : s.has(o) ? l = o : a && r.has(a) && (l = String(r.get(a) || "")), l && (i[l] || (i[l] = {
-              ...t,
-              track_id: l
-            }))
+              a = "";
+            if (s.has(e) ? a = e : s.has(o) && (a = o), !a || r[a]) continue;
+            let i = {
+              ...t
+            };
+            delete i.track_url, delete i.duration, r[a] = {
+              ...i,
+              track_id: a
+            }
           }
-          let n = Object.keys(t).sort(),
-            c = Object.keys(i).sort(),
-            u = n.length !== c.length || n.some((e, t) => e !== c[t]),
-            m = !u && c.some(e => JSON.stringify(t[e]) !== JSON.stringify(i[e]));
-          (u || m) && o(e.id, {
-            lyrics_track_map: i
+          let i = Object.keys(t).sort(),
+            n = Object.keys(r).sort(),
+            c = i.length !== n.length || i.some((e, t) => e !== n[t]),
+            u = !c && n.some(e => JSON.stringify(t[e]) !== JSON.stringify(r[e]));
+          (c || u) && o(e.id, {
+            lyrics_track_map: r
           })
         }, [d, l, e.id, o]);
         let M = (t, a, s) => {
@@ -2416,12 +2418,10 @@
               if (!o) return void p.oR.error(i("dashboard.premium.layout.portfolio_settings.lyrics_editor.errors.no_timed_lines"));
               M(R.id, {
                 track_id: R.id,
-                track_url: R.url,
                 track_title: R.title,
                 track_name: y.trim() || R.title,
                 artist_name: x.trim(),
                 album_name: "",
-                duration: Number(R.duration || 0) || 0,
                 synced_lyrics: o.syncedLyrics,
                 plain_lyrics: o.plainLyrics
               }, !0), C([]), A(""), p.oR.success(i(1 === o.lineCount ? "dashboard.premium.layout.portfolio_settings.lyrics_editor.messages.import_success_one" : "dashboard.premium.layout.portfolio_settings.lyrics_editor.messages.import_success_other", {
@@ -2462,12 +2462,10 @@
                       let a = String(e.syncedLyrics || "").trim();
                       a ? (M(R.id, {
                         track_id: R.id,
-                        track_url: R.url,
                         track_title: R.title,
                         track_name: t || y.trim() || R.title,
                         artist_name: o || x.trim(),
                         album_name: String(e.albumName || "").trim(),
-                        duration: Number(e.duration || R?.duration || 0) || 0,
                         synced_lyrics: a,
                         plain_lyrics: String(e.plainLyrics || "")
                       }, !0), C([]), A(""), T(!1), p.oR.success(i("dashboard.premium.layout.portfolio_settings.lyrics_editor.messages.applied"))) : p.oR.error(i("dashboard.premium.layout.portfolio_settings.lyrics_editor.errors.result_missing_synced"))

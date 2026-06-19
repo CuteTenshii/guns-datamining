@@ -4217,18 +4217,16 @@ void main() {
             lastClientX: null
           }),
           T = v?.lyrics_track_map && "object" == typeof v.lyrics_track_map ? v.lyrics_track_map : {},
-          P = String(n?.id ?? ""),
-          U = Object.values(T).find(e => e?.track_url === n?.url),
-          E = T[P] || T.__single__ || U || null,
-          z = (0, s.useMemo)(() => (0, eI.O5)(String(E?.synced_lyrics || "")), [E?.synced_lyrics]),
-          M = (0, s.useMemo)(() => (0, eI.L$)(z, N + .045), [z, N]),
-          I = M >= 0 ? z[M] : null,
-          B = (0, s.useMemo)(() => (0, eI.r$)(I?.words, N + .045), [I?.words, N]),
-          L = M >= 0 ? M : 0,
-          W = g && v?.show_lyrics === !0;
+          P = T[String(n?.id ?? "")] || T.__single__ || null,
+          U = (0, s.useMemo)(() => (0, eI.O5)(String(P?.synced_lyrics || "")), [P?.synced_lyrics]),
+          E = (0, s.useMemo)(() => (0, eI.L$)(U, N + .045), [U, N]),
+          z = E >= 0 ? U[E] : null,
+          M = (0, s.useMemo)(() => (0, eI.r$)(z?.words, N + .045), [z?.words, N]),
+          I = E >= 0 ? E : 0,
+          B = g && v?.show_lyrics === !0;
         (0, s.useEffect)(() => {
           let e = t.ref;
-          if (!W || !e || !t.playing) return void C(Number(t.currentTime || e?.currentTime || 0));
+          if (!B || !e || !t.playing) return void C(Number(t.currentTime || e?.currentTime || 0));
           let r = 0,
             a = -1,
             s = () => {
@@ -4236,15 +4234,13 @@ void main() {
               Math.abs(t - a) >= .018 && (a = t, C(t)), r = requestAnimationFrame(s)
             };
           return s(), () => cancelAnimationFrame(r)
-        }, [t.currentTime, t.playing, t.ref, W]);
-        let D = e => {
+        }, [t.currentTime, t.playing, t.ref, B]);
+        let L = e => {
             if (!e || "object" != typeof e) return !1;
-            let t = T[String(e.id ?? "")],
-              r = Object.values(T).find(t => t?.track_url === e?.url),
-              a = t || T.__single__ || r;
-            return "string" == typeof a?.synced_lyrics && a.synced_lyrics.trim().length > 0
+            let t = T[String(e.id ?? "")] || T.__single__;
+            return "string" == typeof t?.synced_lyrics && t.synced_lyrics.trim().length > 0
           },
-          F = e => {
+          W = e => {
             if (!Array.isArray(d) || 0 === d.length) return null;
             let t = d.length,
               r = d.findIndex(e => e.id === n.id),
@@ -4252,11 +4248,11 @@ void main() {
               s = a >= 0 ? a : 0;
             for (let r = 1; r < t; r++) {
               let a = d[(s + e * r + t) % t];
-              if (D(a)) return a
+              if (L(a)) return a
             }
             return null
           },
-          R = e => {
+          D = e => {
             let r = t.ref,
               a = r?.duration || t.duration;
             if (!r || !Number.isFinite(a) || a <= 0) return;
@@ -4268,22 +4264,22 @@ void main() {
               ref: r
             }))
           },
-          G = e => {
+          F = e => {
             let r = $.current.barRect,
               a = t.ref?.duration || t.duration;
             if (!r || !Number.isFinite(a) || a <= 0) return;
             let s = r.width > 0 ? (e - r.left) / r.width : 0;
-            $.current.lastClientX = e, R(s * a)
+            $.current.lastClientX = e, D(s * a)
           },
-          H = (e, r = !0) => {
+          R = (e, r = !0) => {
             let a = t.ref,
               s = $.current.activePointerId === e.pointerId && $.current.wasPlaying;
-            $.current.activePointerId === e.pointerId && (e.preventDefault(), G(r ? e.clientX : $.current.lastClientX ?? e.clientX)), e.currentTarget.hasPointerCapture(e.pointerId) && e.currentTarget.releasePointerCapture(e.pointerId), $.current = {
+            $.current.activePointerId === e.pointerId && (e.preventDefault(), F(r ? e.clientX : $.current.lastClientX ?? e.clientX)), e.currentTarget.hasPointerCapture(e.pointerId) && e.currentTarget.releasePointerCapture(e.pointerId), $.current = {
               activePointerId: null,
               wasPlaying: !1,
               barRect: null,
               lastClientX: null
-            }, a && s && O(a).then(e => {
+            }, a && s && G(a).then(e => {
               e && o(e => ({
                 ...e,
                 playing: !0,
@@ -4291,7 +4287,7 @@ void main() {
               }))
             })
           },
-          O = e => {
+          G = e => {
             let t = e.play();
             return t && "function" == typeof t.then ? t.then(() => !0).catch(t => (o(e => ({
               ...e,
@@ -4301,37 +4297,37 @@ void main() {
               error: t
             }) : console.warn("Audio playback failed.", t), !1)) : Promise.resolve(!0)
           },
-          V = () => {
+          H = () => {
             if (!t.ref || !Array.isArray(d) || 0 === d.length) return;
             let e = d.findIndex(e => e.id === n.id);
             if (1 === d.length) {
               t.ref.currentTime = 0;
               return
             }
-            if (W) {
-              let e = F(-1);
+            if (B) {
+              let e = W(-1);
               if (!e) return;
-              Y(e);
+              V(e);
               return
             }
-            Y(0 === e ? d[d.length - 1] : d[e - 1])
+            V(0 === e ? d[d.length - 1] : d[e - 1])
           },
-          q = () => {
+          O = () => {
             if (!t.ref || !Array.isArray(d) || 0 === d.length) return;
             let e = d.findIndex(e => e.id === n.id);
             if (1 === d.length) {
               t.ref.currentTime = 0;
               return
             }
-            if (W) {
-              let e = F(1);
+            if (B) {
+              let e = W(1);
               if (!e) return;
-              Y(e);
+              V(e);
               return
             }
-            Y(e === d.length - 1 ? d[0] : d[e + 1])
+            V(e === d.length - 1 ? d[0] : d[e + 1])
           },
-          Y = e => {
+          V = e => {
             let a = t.ref;
             if (!a) return;
             let s = () => {
@@ -4343,7 +4339,7 @@ void main() {
                 }))
               },
               n = () => {
-                O(a).then(e => {
+                G(a).then(e => {
                   e && (o(e => ({
                     ...e,
                     playing: !0,
@@ -4368,7 +4364,7 @@ void main() {
               ref: a
             })), a.readyState >= 3 ? n() : a.addEventListener("canplaythrough", n)
           },
-          Z = e => {
+          q = e => {
             S.current || (S.current = !0, e(), setTimeout(() => {
               S.current = !1
             }, 250))
@@ -4376,9 +4372,9 @@ void main() {
         return (0, a.jsxs)("div", {
           className: `${i().audioPlayer} ${k} ${f}`,
           ref: l,
-          children: [f && !W && (0, a.jsx)(eW, {
+          children: [f && !B && (0, a.jsx)(eW, {
             effect: h
-          }), W && (0, a.jsxs)("div", {
+          }), B && (0, a.jsxs)("div", {
             className: i().audioLyricsBackdropLayer,
             children: [n.cover && (0, a.jsx)("div", {
               className: i().audioLyricsCoverBackdrop,
@@ -4442,17 +4438,17 @@ void main() {
                         ...e,
                         playing: !1,
                         ref: r
-                      }))), e.currentTarget.setPointerCapture(e.pointerId), G(e.clientX)
+                      }))), e.currentTarget.setPointerCapture(e.pointerId), F(e.clientX)
                     },
                     onPointerMove: e => {
-                      1 === e.buttons && $.current.activePointerId === e.pointerId && (e.preventDefault(), G(e.clientX))
+                      1 === e.buttons && $.current.activePointerId === e.pointerId && (e.preventDefault(), F(e.clientX))
                     },
-                    onPointerUp: e => H(e),
-                    onPointerCancel: e => H(e, !1),
-                    onLostPointerCapture: e => H(e, !1),
+                    onPointerUp: e => R(e),
+                    onPointerCancel: e => R(e, !1),
+                    onLostPointerCapture: e => R(e, !1),
                     onKeyDown: e => {
                       let r = t.ref?.duration || t.duration;
-                      Number.isFinite(r) && !(r <= 0) && ("ArrowLeft" === e.key || "ArrowDown" === e.key ? (e.preventDefault(), R(t.currentTime - 5)) : "ArrowRight" === e.key || "ArrowUp" === e.key ? (e.preventDefault(), R(t.currentTime + 5)) : "Home" === e.key ? (e.preventDefault(), R(0)) : "End" === e.key && (e.preventDefault(), R(r)))
+                      Number.isFinite(r) && !(r <= 0) && ("ArrowLeft" === e.key || "ArrowDown" === e.key ? (e.preventDefault(), D(t.currentTime - 5)) : "ArrowRight" === e.key || "ArrowUp" === e.key ? (e.preventDefault(), D(t.currentTime + 5)) : "Home" === e.key ? (e.preventDefault(), D(0)) : "End" === e.key && (e.preventDefault(), D(r)))
                     },
                     children: (0, a.jsxs)("div", {
                       className: i().audioProgressTrack,
@@ -4478,7 +4474,7 @@ void main() {
                   className: i().controlButtons,
                   children: [(0, a.jsx)("span", {
                     className: i().sideControlButton,
-                    onClick: () => Z(V),
+                    onClick: () => q(H),
                     children: ez.A.skipBackward
                   }), (0, a.jsx)("span", {
                     className: i().mainControlButton,
@@ -4487,7 +4483,7 @@ void main() {
                       e && (t.playing ? (e.pause(), o(e => ({
                         ...e,
                         playing: !1
-                      }))) : O(e).then(e => {
+                      }))) : G(e).then(e => {
                         e && o(e => ({
                           ...e,
                           playing: !0
@@ -4497,23 +4493,23 @@ void main() {
                     children: t.playing ? ez.A.pause : ez.A.play
                   }), (0, a.jsx)("span", {
                     className: i().sideControlButton,
-                    onClick: () => Z(q),
+                    onClick: () => q(O),
                     children: ez.A.skipForward
                   })]
                 })]
               })]
             })]
-          }), W && (0, a.jsx)("div", {
+          }), B && (0, a.jsx)("div", {
             className: i().audioLyricsShell,
             ...A("audio-lyrics", 2),
-            children: z.length > 0 ? (0, a.jsx)("div", {
+            children: U.length > 0 ? (0, a.jsx)("div", {
               className: i().audioLyricsViewport,
-              children: z.map((e, t) => {
-                let r = t - L,
+              children: U.map((e, t) => {
+                let r = t - I,
                   s = Math.abs(r);
                 if (s > 8) return null;
-                let n = t === M,
-                  o = M >= 0 && t < M,
+                let n = t === E,
+                  o = E >= 0 && t < E,
                   l = {
                     "--lyrics-line-offset": String(r)
                   };
@@ -4525,8 +4521,8 @@ void main() {
                     className: `${i().audioLyricsLineText} ${i().audioLyricsLineTextEnhanced}`,
                     children: e.words.map((e, t) => {
                       var r;
-                      let s, o = n && t === B,
-                        l = n && B >= 0 && t < B,
+                      let s, o = n && t === M,
+                        l = n && M >= 0 && t < M,
                         c = (s = String((r = e.text) || "").match(/^(\W*)(.*?)([\s.,!?;:)"'\]]*)$/), {
                           prefix: s?.[1] || "",
                           body: s?.[2] || r,
@@ -5120,10 +5116,8 @@ void main() {
         to = (e, t) => {
           if (!e || "object" != typeof e) return !1;
           let r = e.lyrics_track_map && "object" == typeof e.lyrics_track_map && !Array.isArray(e.lyrics_track_map) ? e.lyrics_track_map : {},
-            a = r[String(t?.id || "")],
-            s = Object.values(r).find(e => e?.track_url && t?.url && String(e.track_url) === String(t.url)),
-            n = a || s;
-          return "string" == typeof n?.synced_lyrics && n.synced_lyrics.trim().length > 0
+            a = r[String(t?.id || "")] || r.__single__;
+          return "string" == typeof a?.synced_lyrics && a.synced_lyrics.trim().length > 0
         };
 
       function tl({
