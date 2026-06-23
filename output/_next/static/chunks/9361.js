@@ -1553,7 +1553,7 @@
             })
           },
           eo = () => {
-            z(O.urlName, close)
+            z(O.urlName, () => U(!1))
           },
           en = e => {
             "username" === e ? _(!b) : "socials" === e ? B(!C) : "badges" === e && k(!w)
