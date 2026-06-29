@@ -187,7 +187,7 @@
                     }), "."]
                   }), (0, r.jsx)("span", {
                     className: a().lastUpdate,
-                    children: "Last update: 11/09/2025"
+                    children: "Last updated: 2025/11/09"
                   })]
                 })]
               })

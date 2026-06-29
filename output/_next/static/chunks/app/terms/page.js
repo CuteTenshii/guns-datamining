@@ -197,13 +197,25 @@
                 children: "These Terms do not transfer any rights to you except for the limited rights necessary to access and use the Service as permitted herein. All rights not expressly granted are reserved by guns.lol and its licensors."
               })]
             }),
-            "Law Enforcement Requests": (0, i.jsx)(i.Fragment, {
-              children: (0, i.jsxs)("p", {
-                children: ["guns.lol complies with valid legal process as required by applicable law. Law enforcement or rights holders seeking information or action should submit requests in writing to", " ", (0, i.jsx)(l(), {
+            "Law Enforcement Requests": (0, i.jsxs)(i.Fragment, {
+              children: [(0, i.jsxs)("p", {
+                children: ["guns.lol responds to valid legal process issued by an authority with jurisdiction and in accordance with applicable law. Law enforcement and government authorities should submit requests in writing to", " ", (0, i.jsx)(l(), {
                   href: "mailto:legal@guns.lol",
                   children: "legal@guns.lol"
                 }), "."]
-              })
+              }), (0, i.jsx)("p", {
+                children: "Requests should identify the requesting authority and responsible officer, provide official contact information, describe the legal basis and scope of the request, identify the relevant account or content with sufficient specificity, and include a signed copy of the applicable order, warrant, subpoena, or other legal process. We may seek verification, clarification, or formal service before responding. Sending a request by email does not waive any legal rights or objections."
+              })]
+            }),
+            "EU Terrorist Content Regulation (Regulation (EU) 2021/784)": (0, i.jsxs)(i.Fragment, {
+              children: [(0, i.jsxs)("p", {
+                children: ["The designated electronic point of contact for the receipt and expeditious processing of removal orders under Regulation (EU) 2021/784 is", " ", (0, i.jsx)(l(), {
+                  href: "mailto:tco@guns.lol",
+                  children: "tco@guns.lol"
+                }), "."]
+              }), (0, i.jsx)("p", {
+                children: "This contact point is intended exclusively for competent authorities communicating under Regulation (EU) 2021/784. Communications may be submitted in English and should include all information required by the Regulation. General support requests, user reports, and other legal requests should be sent to the appropriate contact listed below."
+              })]
             }),
             "Limitation of Liability": (0, i.jsxs)(i.Fragment, {
               children: [(0, i.jsx)("p", {
@@ -286,13 +298,16 @@
                         children: ["Questions or concerns? Contact ", (0, i.jsx)(l(), {
                           href: "mailto:support@guns.lol",
                           children: "support@guns.lol"
-                        }), ". Law enforcement and legal requests: ", (0, i.jsx)(l(), {
+                        }), ". Law enforcement and other legal requests: ", (0, i.jsx)(l(), {
                           href: "mailto:legal@guns.lol",
                           children: "legal@guns.lol"
+                        }), ". Removal orders under Regulation (EU) 2021/784: ", (0, i.jsx)(l(), {
+                          href: "mailto:tco@guns.lol",
+                          children: "tco@guns.lol"
                         }), "."]
                       }), (0, i.jsx)("span", {
                         className: o().lastUpdate,
-                        children: "Last update: 02/01/2026"
+                        children: "Last updated: 2026/06/29"
                       })]
                     })]
                   })]
