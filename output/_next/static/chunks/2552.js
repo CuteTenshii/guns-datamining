@@ -47,7 +47,7 @@
         refParameter: u = ""
       }) {
         let _ = (0, l.kj)(),
-          [h, b] = (0, r.useState)(null),
+          [b, h] = (0, r.useState)(null),
           [m, p] = (0, r.useState)(null),
           [N, w] = (0, r.useState)(""),
           S = {
@@ -64,7 +64,7 @@
         }, []);
         let g = async t => {
           try {
-            b(t), a?.("");
+            h(t), a?.("");
             {
               let e = Date.now();
               window.localStorage.setItem(i, t), window.localStorage.setItem(f, String(e))
@@ -80,19 +80,19 @@
             if (!n?.url) throw Error("Missing redirect url");
             window.location.href = n.url
           } catch {
-            b(null), a?.(_("auth.social.error_start"))
+            h(null), a?.(_("auth.social.error_start"))
           }
         };
         return (0, c.jsx)("div", {
           className: d().socialButtons,
           children: ["google"].map(e => {
             let a = S[e],
-              r = h === e;
+              r = b === e;
             return (0, c.jsxs)("button", {
               type: "button",
               className: d().socialButton,
               onClick: () => g(e),
-              disabled: null !== h,
+              disabled: null !== b,
               children: [a.icon, (0, c.jsx)("span", {
                 className: d().buttonText,
                 children: r ? _("auth.social.redirecting") : a[t]
@@ -338,14 +338,14 @@
         viewPassword: f,
         onKeyPress: u,
         isImageUrl: _,
-        type: h = "text",
-        ...b
+        type: b = "text",
+        ...h
       }) {
         let [m, p] = (0, r.useState)(!!f), {
           onInput: N,
           onChange: w,
           ...S
-        } = b;
+        } = h;
         return (0, r.useEffect)(() => {
           p(!!f)
         }, [f]), (0, c.jsxs)("div", {
@@ -375,7 +375,7 @@
               children: m ? n.A.hidePassword : n.A.views
             }), (0, c.jsx)("input", {
               autoCorrect: "off",
-              type: f ? m ? "password" : "text" : h,
+              type: f ? m ? "password" : "text" : b,
               onKeyDown: u,
               value: t,
               style: {
@@ -415,8 +415,8 @@
         size: f = "auto",
         closeOnOverlayClick: u = !0,
         withCloseButton: _ = !0,
-        centerTitle: h = !1,
-        className: b,
+        centerTitle: b = !1,
+        className: h,
         bodyClassName: m,
         children: p
       }) {
@@ -511,7 +511,7 @@
               y.current = !1, r && (t ? t() : a())
             },
             children: (0, c.jsxs)("div", {
-              className: `${n().modal} ${b??""}`,
+              className: `${n().modal} ${h??""}`,
               "data-state": q,
               style: L,
               ref: G,
@@ -520,7 +520,7 @@
                 className: n().header,
                 children: [o && (0, c.jsx)("h2", {
                   className: n().title,
-                  style: h ? {
+                  style: b ? {
                     textAlign: "center",
                     width: "100%"
                   } : {},
@@ -611,39 +611,29 @@
     81934: (e, a, t) => {
       "use strict";
       t.d(a, {
-        A: () => n
+        A: () => s
       });
       var c = t(95155),
-        r = t(98500),
-        s = t.n(r),
-        d = t(38256);
+        r = t(38256);
 
-      function n({
+      function s({
         href: e,
         asTag: a,
         locale: t,
-        children: r,
-        ...n
+        children: s,
+        ...d
       }) {
-        let l = t || (0, d.useLang)();
-        if (e.startsWith("http://") || e.startsWith("https://") || e.startsWith("mailto:") || e.startsWith("tel:")) return a ? (0, c.jsx)("a", {
+        let n = t || (0, r.useLang)();
+        if (e.startsWith("http://") || e.startsWith("https://") || e.startsWith("mailto:") || e.startsWith("tel:")) return (0, c.jsx)("a", {
           href: e,
-          ...n,
-          children: r
-        }) : (0, c.jsx)(s(), {
-          href: e,
-          ...n,
-          children: r
+          ...d,
+          children: s
         });
-        let o = "en" == l ? `${e.startsWith("/")?"":"/"}${e}` : `/${l}${e.startsWith("/")?"":"/"}${e}`;
-        return a ? (0, c.jsx)("a", {
-          href: o,
-          ...n,
-          children: r
-        }) : (0, c.jsx)(s(), {
-          href: o,
-          ...n,
-          children: r
+        let l = "en" == n ? `${e.startsWith("/")?"":"/"}${e}` : `/${n}${e.startsWith("/")?"":"/"}${e}`;
+        return (0, c.jsx)("a", {
+          href: l,
+          ...d,
+          children: s
         })
       }
     }

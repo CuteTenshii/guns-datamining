@@ -3,51 +3,49 @@
     4036: (e, s, t) => {
       "use strict";
       t.r(s), t.d(s, {
-        default: () => U
+        default: () => S
       });
       var a = t(95155),
         i = t(12115),
-        n = t(98500),
-        r = t.n(n),
-        d = t(39449),
-        o = t(60884),
-        l = t(56891),
-        c = t.n(l),
-        h = t(86297),
-        u = t(98241),
-        m = t.n(u),
-        p = t(54834),
-        g = t(66609),
-        b = t(97478),
-        f = t(81469),
-        x = t(81576),
-        v = t(41063),
-        _ = t.n(v),
-        j = t(30184),
-        N = t(37897),
-        y = t(58295),
-        w = t(38256);
+        n = t(39449),
+        r = t(60884),
+        d = t(56891),
+        o = t.n(d),
+        l = t(86297),
+        c = t(98241),
+        h = t.n(c),
+        u = t(54834),
+        m = t(66609),
+        p = t(97478),
+        g = t(81469),
+        b = t(81576),
+        f = t(41063),
+        x = t.n(f),
+        v = t(30184),
+        _ = t(37897),
+        j = t(58295),
+        N = t(38256);
 
-      function C({
+      function y({
         embedConfig: e,
         domain: s,
         username: t,
         totalUploads: n
       }) {
-        let r = (0, w.kj)(),
-          d = (0, w.useLang)(),
-          [o, l] = (0, i.useState)({
+        let r = (0, N.kj)(),
+          d = (0, N.useLang)(),
+          [o, c] = (0, i.useState)({
             title: e.title,
             author: e.author,
             authorUrl: e.author_url,
             description: e.description,
             color: e.color
           }),
-          [c, u] = (0, i.useState)(e.color),
-          [m, p] = (0, i.useState)(e.timestamp),
-          b = (0, i.useMemo)(() => r("dashboard.imagehost.settings.embed.editor.examples.file_name"), [r]),
-          x = (0, i.useMemo)(() => r("dashboard.imagehost.settings.embed.editor.examples.file_size"), [r]),
-          v = (0, i.useMemo)(() => r("dashboard.imagehost.settings.embed.editor.preview.username"), [r]),
+          [h, u] = (0, i.useState)(e.color),
+          [p, b] = (0, i.useState)(e.timestamp),
+          f = (0, i.useMemo)(() => r("dashboard.imagehost.settings.embed.editor.examples.file_name"), [r]),
+          y = (0, i.useMemo)(() => r("dashboard.imagehost.settings.embed.editor.examples.file_size"), [r]),
+          w = (0, i.useMemo)(() => r("dashboard.imagehost.settings.embed.editor.preview.username"), [r]),
           C = (0, i.useMemo)(() => r("dashboard.imagehost.settings.embed.editor.preview.timestamp"), [r]),
           k = (0, i.useCallback)(e => {
             let s = new Date(Date.now()).toLocaleString(d || "en", {
@@ -59,14 +57,14 @@
               second: "2-digit",
               hour12: !1
             });
-            return e.replace(/{file_name}/g, b).replace(/{file_size}/g, x).replace(/{username}/g, t).replace(/{upload_date}/g, s).replace(/{total_uploads}/g, n.toString())
-          }, [d, b, x, t, n]),
+            return e.replace(/{file_name}/g, f).replace(/{file_size}/g, y).replace(/{username}/g, t).replace(/{upload_date}/g, s).replace(/{total_uploads}/g, n.toString())
+          }, [d, f, y, t, n]),
           S = e => {
             let {
               name: s,
               value: t
             } = e.target;
-            l({
+            c({
               ...o,
               [s]: t
             })
@@ -80,55 +78,55 @@
                 author: o.author,
                 author_url: o.authorUrl,
                 description: o.description,
-                timestamp: m,
-                color: c
+                timestamp: p,
+                color: h
               }),
               t = await fetch("https://guns.lol/api/dashboard/imagehost/embed", {
                 method: "POST",
                 body: s
               }),
               a = await t.json();
-            t.ok ? g.oR.success(r("dashboard.imagehost.settings.embed.editor.messages.save_success")) : g.oR.error(r("dashboard.imagehost.settings.embed.editor.messages.save_failed", {
+            t.ok ? m.oR.success(r("dashboard.imagehost.settings.embed.editor.messages.save_success")) : m.oR.error(r("dashboard.imagehost.settings.embed.editor.messages.save_failed", {
               error: a.error || ""
             }))
           };
         return (0, a.jsxs)("div", {
-          className: _().embedEditor,
+          className: x().embedEditor,
           children: [(0, a.jsxs)("div", {
-            className: _().editor,
+            className: x().editor,
             children: [(0, a.jsx)("div", {
-              className: _().embedInput,
-              children: (0, a.jsx)(N.A, {
+              className: x().embedInput,
+              children: (0, a.jsx)(_.A, {
                 name: "title",
                 featureName: r("dashboard.imagehost.settings.embed.editor.fields.title"),
                 value: o.title,
                 onChange: S,
                 placeholder: r("dashboard.imagehost.settings.embed.editor.fields.title"),
-                icon: h.A.embedTitle
+                icon: l.A.embedTitle
               })
             }), (0, a.jsx)("div", {
-              className: _().embedInput,
-              children: (0, a.jsx)(N.A, {
+              className: x().embedInput,
+              children: (0, a.jsx)(_.A, {
                 name: "author",
                 featureName: r("dashboard.imagehost.settings.embed.editor.fields.author"),
                 value: o.author,
                 onChange: S,
                 placeholder: r("dashboard.imagehost.settings.embed.editor.fields.author"),
-                icon: h.A.embedAuthor
+                icon: l.A.embedAuthor
               })
             }), (0, a.jsx)("div", {
-              className: _().embedInput,
-              children: (0, a.jsx)(N.A, {
+              className: x().embedInput,
+              children: (0, a.jsx)(_.A, {
                 name: "authorUrl",
                 featureName: r("dashboard.imagehost.settings.embed.editor.fields.author_url"),
                 value: o.authorUrl,
                 onChange: S,
                 placeholder: r("dashboard.imagehost.settings.embed.editor.fields.author_url"),
-                icon: h.A.embedAuthorUrl
+                icon: l.A.embedAuthorUrl
               })
             }), (0, a.jsx)("div", {
-              className: _().embedInput,
-              children: (0, a.jsx)(y.A, {
+              className: x().embedInput,
+              children: (0, a.jsx)(j.A, {
                 rows: 3,
                 name: "description",
                 featureName: r("dashboard.imagehost.settings.embed.editor.fields.description"),
@@ -137,85 +135,85 @@
                 placeholder: r("dashboard.imagehost.settings.embed.editor.fields.description")
               })
             }), (0, a.jsx)("div", {
-              className: _().embedInput,
-              children: (0, a.jsx)(f.A, {
+              className: x().embedInput,
+              children: (0, a.jsx)(g.A, {
                 featureName: r("dashboard.imagehost.settings.embed.editor.fields.timestamp"),
                 onChangeFunction: e => {
-                  p(e.target.checked)
+                  b(e.target.checked)
                 },
-                defaultChecked: m
+                defaultChecked: p
               })
             }), (0, a.jsx)("div", {
-              className: _().embedInput,
-              children: (0, a.jsx)(j.A, {
+              className: x().embedInput,
+              children: (0, a.jsx)(v.A, {
                 featureName: r("dashboard.imagehost.settings.embed.editor.fields.color"),
-                value: c,
+                value: h,
                 onChangeFunction: u
               })
             }), (0, a.jsx)("div", {
-              className: _().saveEmbedButtonContainer,
+              className: x().saveEmbedButtonContainer,
               children: (0, a.jsx)("span", {
                 onClick: U,
                 children: r("dashboard.imagehost.settings.embed.editor.save_button")
               })
             })]
           }), (0, a.jsxs)("div", {
-            className: _().wrapper,
+            className: x().wrapper,
             children: [(0, a.jsxs)("div", {
-              className: _().messageInfo,
+              className: x().messageInfo,
               children: [(0, a.jsx)("img", {
-                className: _().avatar,
+                className: x().avatar,
                 src: "https://cdn.discordapp.com/embed/avatars/0.png",
                 alt: "User Avatar"
               }), (0, a.jsxs)("div", {
-                className: _().userInfo,
+                className: x().userInfo,
                 children: [(0, a.jsxs)("div", {
                   children: [(0, a.jsx)("span", {
-                    className: _().username,
-                    children: v
+                    className: x().username,
+                    children: w
                   }), (0, a.jsx)("span", {
-                    className: _().timestamp,
+                    className: x().timestamp,
                     children: C
                   })]
                 }), (0, a.jsx)("span", {
-                  className: _().link,
+                  className: x().link,
                   children: r("dashboard.imagehost.settings.embed.editor.preview.link", {
                     domain: s,
-                    filename: b
+                    filename: f
                   })
                 })]
               })]
             }), (0, a.jsx)("div", {
-              className: _().preview,
+              className: x().preview,
               style: {
-                borderLeft: `3px solid ${c}`
+                borderLeft: `3px solid ${h}`
               },
               children: (0, a.jsxs)("div", {
-                className: _().discordEmbed,
+                className: x().discordEmbed,
                 style: E,
                 children: [(0, a.jsx)("div", {
-                  className: _().embedAuthor,
+                  className: x().embedAuthor,
                   children: "" !== o.authorUrl ? (0, a.jsx)("h2", {
                     children: k(o.author)
                   }) : (0, a.jsx)("h1", {
                     children: k(o.author)
                   })
                 }), (0, a.jsx)("div", {
-                  className: _().embedTitle,
+                  className: x().embedTitle,
                   children: (0, a.jsx)("h1", {
                     children: k(o.title)
                   })
                 }), (0, a.jsx)("div", {
-                  className: _().embedDescription,
+                  className: x().embedDescription,
                   children: k(o.description)
                 }), (0, a.jsx)("div", {
-                  className: _().embedImage,
+                  className: x().embedImage,
                   children: (0, a.jsx)("img", {
                     src: "https://assets.guns.lol/guns_logo_no_background_cropped.png",
                     alt: "Logo"
                   })
-                }), m && (0, a.jsx)("div", {
-                  className: _().embedTimestamp,
+                }), p && (0, a.jsx)("div", {
+                  className: x().embedTimestamp,
                   children: (0, a.jsx)("h1", {
                     children: C
                   })
@@ -225,22 +223,22 @@
           })]
         })
       }
-      var k = t(57776);
-      let S = "https://guns.lol",
-        E = e => S ? `${S}${e}` : e,
-        U = ({
+      var w = t(57776);
+      let C = "https://guns.lol",
+        k = e => C ? `${C}${e}` : e,
+        S = ({
           data: e
         }) => {
-          let s = (0, w.kj)(),
-            [t, n] = (0, i.useState)(!1),
-            [l, u] = (0, i.useState)(""),
-            [v, _] = (0, i.useState)(!1),
-            [j, N] = (0, i.useState)(!1),
-            [y, S] = (0, i.useState)(!1),
-            [U, A] = (0, i.useState)(""),
-            [G, L] = (0, i.useState)(!1),
-            [I, R] = (0, i.useState)("i.guns.lol"),
-            [M, T] = (0, i.useState)({
+          let s = (0, N.kj)(),
+            [t, d] = (0, i.useState)(!1),
+            [c, f] = (0, i.useState)(""),
+            [x, v] = (0, i.useState)(!1),
+            [_, j] = (0, i.useState)(!1),
+            [C, S] = (0, i.useState)(!1),
+            [E, U] = (0, i.useState)(""),
+            [A, G] = (0, i.useState)(!1),
+            [L, I] = (0, i.useState)("i.guns.lol"),
+            [R, M] = (0, i.useState)({
               title: "",
               author: "",
               author_url: "",
@@ -248,21 +246,21 @@
               color: "#2b2d31",
               timestamp: !0
             }),
-            [$, B] = (0, i.useState)(!1),
-            [P, W] = (0, i.useState)(null),
-            [D, K] = (0, i.useState)(!1),
-            z = s("dashboard.imagehost.settings.save_button"),
-            [O, F] = (0, i.useState)(z),
-            [H, J] = (0, i.useState)(0),
-            Q = (0, i.useMemo)(() => U ? G ? U : `${U.slice(0,5)}************` : s("dashboard.imagehost.settings.upload_key.loading"), [U, G, s]),
-            V = (0, i.useCallback)(async e => {
+            [T, $] = (0, i.useState)(!1),
+            [B, P] = (0, i.useState)(null),
+            [W, D] = (0, i.useState)(!1),
+            K = s("dashboard.imagehost.settings.save_button"),
+            [z, O] = (0, i.useState)(K),
+            [F, H] = (0, i.useState)(0),
+            J = (0, i.useMemo)(() => E ? A ? E : `${E.slice(0,5)}************` : s("dashboard.imagehost.settings.upload_key.loading"), [E, A, s]),
+            Q = (0, i.useCallback)(async e => {
               if (e) try {
-                await navigator.clipboard.writeText(e), g.oR.success(s("dashboard.imagehost.settings.copy_success"))
+                await navigator.clipboard.writeText(e), m.oR.success(s("dashboard.imagehost.settings.copy_success"))
               } catch (e) {
-                g.oR.error(s("dashboard.imagehost.settings.copy_failed"))
+                m.oR.error(s("dashboard.imagehost.settings.copy_failed"))
               }
             }, [s]),
-            X = (0, i.useCallback)(async (e = !0) => {
+            V = (0, i.useCallback)(async (e = !0) => {
               let s = await fetch("/api/dashboard/imagehost/data?latestConfig=true", {
                   method: "POST",
                   headers: {
@@ -280,79 +278,79 @@
                     hideExtension: !!s.hide_extension,
                     showEmbed: !!s.show_embed
                   };
-                J(t.totalUploads || 0), u(n.filenameLength), _(n.anonymousUploads), N(n.hideExtension), S(n.showEmbed), A(s.secret_key || ""), R(i), T({
+                H(t.totalUploads || 0), f(n.filenameLength), v(n.anonymousUploads), j(n.hideExtension), S(n.showEmbed), U(s.secret_key || ""), I(i), M({
                   title: a.title || "",
                   author: a.author || "",
                   author_url: a.author_url || "",
                   description: a.description || "",
                   color: a.color || "#2b2d31",
                   timestamp: "boolean" != typeof a.timestamp || a.timestamp
-                }), W(n), K(!1), e && F(z)
-              } else g.oR.error(t.error)
-            }, [z]);
+                }), P(n), D(!1), e && O(K)
+              } else m.oR.error(t.error)
+            }, [K]);
           (0, i.useEffect)(() => {
-            F(z)
-          }, [z]), (0, i.useEffect)(() => {
-            X()
-          }, [X]), (0, i.useEffect)(() => {
-            if (!P) return void K(!1);
+            O(K)
+          }, [K]), (0, i.useEffect)(() => {
+            V()
+          }, [V]), (0, i.useEffect)(() => {
+            if (!B) return void D(!1);
             let e = !1;
-            "number" != typeof l || Number.isNaN(l) ? e = !0 : l !== P.filenameLength && (e = !0), (v !== P.anonymousUploads || j !== P.hideExtension || y !== P.showEmbed) && (e = !0), K(e)
-          }, [l, v, j, y, P]);
-          let Y = (0, i.useCallback)(() => {
-              P && (u(P.filenameLength), _(P.anonymousUploads), N(P.hideExtension), S(P.showEmbed), K(!1), F(z))
-            }, [P, z]),
-            Z = (0, i.useMemo)(() => "number" != typeof l || Number.isNaN(l) ? null : {
-              filenameLength: l,
-              anonymousUploads: v,
-              hideExtension: j,
-              showEmbed: y
-            }, [l, v, j, y]),
-            q = (0, i.useCallback)(async () => {
-              if (!Z) return void g.oR.error(s("dashboard.imagehost.settings.errors.invalid_length"));
-              if (Z.filenameLength < 5 || Z.filenameLength > 50) return void g.oR.error(s("dashboard.imagehost.settings.errors.length_range"));
-              F(s("dashboard.imagehost.settings.save_button_saving"));
-              let e = await fetch(E("/api/dashboard/imagehost"), {
+            "number" != typeof c || Number.isNaN(c) ? e = !0 : c !== B.filenameLength && (e = !0), (x !== B.anonymousUploads || _ !== B.hideExtension || C !== B.showEmbed) && (e = !0), D(e)
+          }, [c, x, _, C, B]);
+          let X = (0, i.useCallback)(() => {
+              B && (f(B.filenameLength), v(B.anonymousUploads), j(B.hideExtension), S(B.showEmbed), D(!1), O(K))
+            }, [B, K]),
+            Y = (0, i.useMemo)(() => "number" != typeof c || Number.isNaN(c) ? null : {
+              filenameLength: c,
+              anonymousUploads: x,
+              hideExtension: _,
+              showEmbed: C
+            }, [c, x, _, C]),
+            Z = (0, i.useCallback)(async () => {
+              if (!Y) return void m.oR.error(s("dashboard.imagehost.settings.errors.invalid_length"));
+              if (Y.filenameLength < 5 || Y.filenameLength > 50) return void m.oR.error(s("dashboard.imagehost.settings.errors.length_range"));
+              O(s("dashboard.imagehost.settings.save_button_saving"));
+              let e = await fetch(k("/api/dashboard/imagehost"), {
                   method: "POST",
                   headers: {
                     "Content-Type": "application/json"
                   },
                   body: JSON.stringify({
-                    anonymous_uploads: Z.anonymousUploads,
-                    filename_length: Z.filenameLength,
-                    hide_extension: Z.hideExtension,
-                    show_embed: Z.showEmbed
+                    anonymous_uploads: Y.anonymousUploads,
+                    filename_length: Y.filenameLength,
+                    hide_extension: Y.hideExtension,
+                    show_embed: Y.showEmbed
                   })
                 }),
                 t = await e.json();
-              e.ok ? (g.oR.success(s("dashboard.imagehost.settings.save_success")), W(Z), K(!1), F(s("dashboard.imagehost.settings.save_button_saved")), setTimeout(() => F(z), 2e3)) : g.oR.error(t.error), F(z)
-            }, [Z, z, s]),
-            ee = (0, i.useCallback)(async () => {
-              n(!0);
-              let e = await fetch(E("/api/dashboard/imagehost/regenerate"), {
+              e.ok ? (m.oR.success(s("dashboard.imagehost.settings.save_success")), P(Y), D(!1), O(s("dashboard.imagehost.settings.save_button_saved")), setTimeout(() => O(K), 2e3)) : m.oR.error(t.error), O(K)
+            }, [Y, K, s]),
+            q = (0, i.useCallback)(async () => {
+              d(!0);
+              let e = await fetch(k("/api/dashboard/imagehost/regenerate"), {
                   method: "POST",
                   headers: {
                     "Content-Type": "application/json"
                   }
                 }),
                 t = await e.json();
-              e.ok ? (A(t.secretKey || ""), L(!1), g.oR.success(s("dashboard.imagehost.settings.regenerate_success"))) : g.oR.error(t.error), n(!1)
+              e.ok ? (U(t.secretKey || ""), G(!1), m.oR.success(s("dashboard.imagehost.settings.regenerate_success"))) : m.oR.error(t.error), d(!1)
             }, [s]);
           return (0, a.jsxs)(a.Fragment, {
-            children: [(0, a.jsx)(g.l$, {
+            children: [(0, a.jsx)(m.l$, {
               richColors: !0,
               position: "top-center",
               theme: "dark",
-              className: m().toasterStyles,
+              className: h().toasterStyles,
               icons: {
-                success: p.A.successToast
+                success: u.A.successToast
               },
               visibleToasts: 2
-            }), (0, a.jsx)(d.N, {
-              children: D && (0, a.jsx)("div", {
-                className: m().unsavedChangesWrapper,
-                children: (0, a.jsxs)(o.P.div, {
-                  className: m().unsavedChangesBar,
+            }), (0, a.jsx)(n.N, {
+              children: W && (0, a.jsx)("div", {
+                className: h().unsavedChangesWrapper,
+                children: (0, a.jsxs)(r.P.div, {
+                  className: h().unsavedChangesBar,
                   initial: {
                     opacity: 0,
                     y: 40,
@@ -376,35 +374,35 @@
                   children: [(0, a.jsx)("h1", {
                     children: s("common.unsaved_changes.title")
                   }), (0, a.jsx)("h1", {
-                    className: m().compactText,
+                    className: h().compactText,
                     children: s("common.unsaved_changes.compact")
                   }), (0, a.jsxs)("div", {
-                    className: m().unsavedChangesButtons,
+                    className: h().unsavedChangesButtons,
                     children: [(0, a.jsx)("span", {
-                      className: m().resetButton,
-                      onClick: Y,
+                      className: h().resetButton,
+                      onClick: X,
                       children: s("common.unsaved_changes.reset")
                     }), (0, a.jsx)("span", {
-                      className: m().saveButton,
-                      onClick: q,
-                      children: O
+                      className: h().saveButton,
+                      onClick: Z,
+                      children: z
                     })]
                   })]
                 })
               })
-            }), (0, a.jsxs)(k.A, {
-              opened: $,
-              onClose: () => B(!1),
+            }), (0, a.jsxs)(w.A, {
+              opened: T,
+              onClose: () => $(!1),
               title: s("dashboard.imagehost.settings.embed.modal_title"),
               centered: !0,
               size: "650px",
-              children: [(0, a.jsxs)(x.Ay, {
+              children: [(0, a.jsxs)(b.Ay, {
                 width: "auto",
                 position: "top",
-                children: [(0, a.jsx)(x.Ay.Target, {
+                children: [(0, a.jsx)(b.Ay.Target, {
                   children: (0, a.jsxs)("div", {
-                    className: c().variableText,
-                    children: [h.A.lightBulb, s("dashboard.imagehost.settings.embed.tip", {
+                    className: o().variableText,
+                    children: [l.A.lightBulb, s("dashboard.imagehost.settings.embed.tip", {
                       here: (0, a.jsx)("strong", {
                         style: {
                           color: "#fafafa"
@@ -413,9 +411,9 @@
                       })
                     })]
                   })
-                }), (0, a.jsx)(x.Ay.Dropdown, {
+                }), (0, a.jsx)(b.Ay.Dropdown, {
                   children: (0, a.jsxs)("div", {
-                    className: c().variableList,
+                    className: o().variableList,
                     children: [(0, a.jsxs)("h1", {
                       children: [(0, a.jsx)("p", {
                         children: "{file_name}"
@@ -439,141 +437,141 @@
                     })]
                   })
                 })]
-              }), (0, a.jsx)(C, {
-                embedConfig: M,
-                domain: I,
+              }), (0, a.jsx)(y, {
+                embedConfig: R,
+                domain: L,
                 username: e.username,
-                totalUploads: H
+                totalUploads: F
               })]
             }), (0, a.jsxs)("div", {
-              className: c().settingsWrapper,
+              className: o().settingsWrapper,
               children: [(0, a.jsxs)("div", {
-                className: c().settingsHeader,
+                className: o().settingsHeader,
                 children: [(0, a.jsxs)("h1", {
-                  children: [h.A.configuration, " ", s("dashboard.imagehost.settings.header.title")]
+                  children: [l.A.configuration, " ", s("dashboard.imagehost.settings.header.title")]
                 }), (0, a.jsx)("h3", {
                   children: s("dashboard.imagehost.settings.header.description")
                 })]
               }), (0, a.jsxs)("div", {
-                className: c().settingsGrid,
+                className: o().settingsGrid,
                 children: [(0, a.jsxs)("div", {
-                  className: c().settingsCard,
+                  className: o().settingsCard,
                   children: [(0, a.jsxs)("div", {
-                    className: c().settingsCardTop,
+                    className: o().settingsCardTop,
                     children: [(0, a.jsxs)("h2", {
-                      children: [h.A.configuration, " ", s("dashboard.imagehost.settings.general.title")]
+                      children: [l.A.configuration, " ", s("dashboard.imagehost.settings.general.title")]
                     }), (0, a.jsx)("p", {
                       children: s("dashboard.imagehost.settings.general.subtitle")
                     })]
-                  }), (0, a.jsx)(b.A, {
+                  }), (0, a.jsx)(p.A, {
                     id: "filename-length",
                     featureName: s("dashboard.imagehost.settings.general.filename_length"),
-                    value: l,
+                    value: c,
                     placeholder: 7,
                     onChangeFunction: e => {
-                      "number" == typeof e ? u(e) : "" === e && u("")
+                      "number" == typeof e ? f(e) : "" === e && f("")
                     },
                     min: 6,
                     max: 30,
-                    icon: h.A.fileName
+                    icon: l.A.fileName
                   }), (0, a.jsxs)("div", {
-                    className: c().configureEmbedWrapper,
+                    className: o().configureEmbedWrapper,
                     children: [(0, a.jsx)("h1", {
                       children: s("dashboard.imagehost.settings.embed.section_title")
                     }), (0, a.jsxs)("span", {
-                      className: c().configureEmbed,
-                      onClick: () => B(!0),
-                      children: [h.A.openEditor, " ", s("dashboard.imagehost.settings.embed.configure_button")]
+                      className: o().configureEmbed,
+                      onClick: () => $(!0),
+                      children: [l.A.openEditor, " ", s("dashboard.imagehost.settings.embed.configure_button")]
                     })]
                   }), (0, a.jsxs)("div", {
-                    className: c().switchGroup,
-                    children: [(0, a.jsx)(f.A, {
+                    className: o().switchGroup,
+                    children: [(0, a.jsx)(g.A, {
                       id: "anonymous-uploads",
                       featureName: s("dashboard.imagehost.settings.general.anonymous_uploads"),
-                      onChangeFunction: e => _(e.currentTarget.checked),
-                      defaultChecked: v,
-                      checked: v
-                    }), (0, a.jsx)(f.A, {
+                      onChangeFunction: e => v(e.currentTarget.checked),
+                      defaultChecked: x,
+                      checked: x
+                    }), (0, a.jsx)(g.A, {
                       id: "hide-file-extension",
                       featureName: s("dashboard.imagehost.settings.general.hide_extension"),
-                      onChangeFunction: e => N(e.currentTarget.checked),
-                      defaultChecked: j,
-                      checked: j
-                    }), (0, a.jsx)(f.A, {
+                      onChangeFunction: e => j(e.currentTarget.checked),
+                      defaultChecked: _,
+                      checked: _
+                    }), (0, a.jsx)(g.A, {
                       id: "show-discord-embed",
                       featureName: s("dashboard.imagehost.settings.general.show_embed"),
                       onChangeFunction: e => S(e.currentTarget.checked),
-                      defaultChecked: y,
-                      checked: y
+                      defaultChecked: C,
+                      checked: C
                     })]
                   })]
                 }), (0, a.jsxs)("div", {
-                  className: c().settingsCard,
+                  className: o().settingsCard,
                   children: [(0, a.jsxs)("div", {
-                    className: c().settingsCardTop,
+                    className: o().settingsCardTop,
                     children: [(0, a.jsxs)("h2", {
-                      children: [h.A.imagehostDomains, " ", s("dashboard.imagehost.settings.domain.title")]
+                      children: [l.A.imagehostDomains, " ", s("dashboard.imagehost.settings.domain.title")]
                     }), (0, a.jsx)("p", {
                       children: s("dashboard.imagehost.settings.domain.subtitle")
                     })]
                   }), (0, a.jsxs)("div", {
-                    className: c().domainRow,
+                    className: o().domainRow,
                     children: [(0, a.jsxs)("div", {
-                      className: c().domainPillContainer,
+                      className: o().domainPillContainer,
                       children: [(0, a.jsx)("h1", {
                         children: s("dashboard.imagehost.settings.domain.current_label")
                       }), (0, a.jsxs)("span", {
-                        className: c().domainPill,
-                        children: [h.A.link, " https://", I]
+                        className: o().domainPill,
+                        children: [l.A.link, " https://", L]
                       })]
-                    }), (0, a.jsxs)(r(), {
+                    }), (0, a.jsxs)("a", {
                       href: "/imagehost/domains",
-                      className: c().settingsLinkButton,
-                      children: [h.A.link, " ", s("dashboard.imagehost.settings.domain.manage_button")]
+                      className: o().settingsLinkButton,
+                      children: [l.A.link, " ", s("dashboard.imagehost.settings.domain.manage_button")]
                     })]
                   }), (0, a.jsx)("p", {
-                    className: c().settingHelp,
+                    className: o().settingHelp,
                     children: s("dashboard.imagehost.settings.domain.help")
                   })]
                 }), (0, a.jsxs)("div", {
-                  className: c().settingsCard,
+                  className: o().settingsCard,
                   children: [(0, a.jsxs)("div", {
-                    className: c().settingsCardTop,
+                    className: o().settingsCardTop,
                     children: [(0, a.jsxs)("h2", {
-                      children: [h.A.uploadKey, " ", s("dashboard.imagehost.settings.upload_key.title")]
+                      children: [l.A.uploadKey, " ", s("dashboard.imagehost.settings.upload_key.title")]
                     }), (0, a.jsx)("p", {
                       children: s("dashboard.imagehost.settings.upload_key.subtitle")
                     })]
                   }), (0, a.jsxs)("div", {
-                    className: c().setupKeyBlock,
+                    className: o().setupKeyBlock,
                     children: [(0, a.jsxs)("div", {
-                      className: c().setupKeyLabel,
-                      children: [h.A.key, " ", s("dashboard.imagehost.settings.upload_key.secret_label")]
+                      className: o().setupKeyLabel,
+                      children: [l.A.key, " ", s("dashboard.imagehost.settings.upload_key.secret_label")]
                     }), (0, a.jsxs)("div", {
-                      className: c().setupKeyRow,
+                      className: o().setupKeyRow,
                       children: [(0, a.jsx)("span", {
-                        className: c().setupKeyValue,
-                        children: Q
+                        className: o().setupKeyValue,
+                        children: J
                       }), (0, a.jsxs)("div", {
-                        className: c().setupKeyActions,
+                        className: o().setupKeyActions,
                         children: [(0, a.jsxs)("span", {
-                          className: c().uploadKeyButton,
-                          onClick: () => L(e => !e),
-                          children: [G ? p.A.hidePassword : p.A.password, " ", G ? s("dashboard.imagehost.settings.upload_key.hide") : s("dashboard.imagehost.settings.upload_key.reveal")]
+                          className: o().uploadKeyButton,
+                          onClick: () => G(e => !e),
+                          children: [A ? u.A.hidePassword : u.A.password, " ", A ? s("dashboard.imagehost.settings.upload_key.hide") : s("dashboard.imagehost.settings.upload_key.reveal")]
                         }), (0, a.jsxs)("span", {
-                          className: c().uploadKeyButton,
-                          onClick: () => V(U),
-                          children: [p.A.copy, " ", s("dashboard.imagehost.settings.upload_key.copy")]
+                          className: o().uploadKeyButton,
+                          onClick: () => Q(E),
+                          children: [u.A.copy, " ", s("dashboard.imagehost.settings.upload_key.copy")]
                         })]
                       })]
                     }), (0, a.jsxs)("span", {
-                      className: c().regenerateButton,
-                      onClick: ee,
-                      children: [t ? h.A.loading : h.A.regenerateKey, (0, a.jsx)("span", {
+                      className: o().regenerateButton,
+                      onClick: q,
+                      children: [t ? l.A.loading : l.A.regenerateKey, (0, a.jsx)("span", {
                         children: t ? s("dashboard.imagehost.settings.upload_key.generating") : s("dashboard.imagehost.settings.upload_key.regenerate")
                       })]
                     }), (0, a.jsx)("div", {
-                      className: c().uploadKeyNote,
+                      className: o().uploadKeyNote,
                       children: s("dashboard.imagehost.settings.upload_key.note")
                     })]
                   })]

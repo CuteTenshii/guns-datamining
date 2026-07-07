@@ -67,7 +67,7 @@
     49361: (e, a, s) => {
       "use strict";
       s.r(a), s.d(a, {
-        default: () => G
+        default: () => U
       });
       var r = s(95155),
         t = s(12115),
@@ -1337,10 +1337,8 @@
         A = s(16053),
         T = s(57157),
         M = s(81469),
-        L = s(61861),
-        B = s(98500),
-        E = s.n(B);
-      let R = ({
+        L = s(61861);
+      let B = ({
         description: e,
         setDescription: a,
         discordPresence: s,
@@ -1358,96 +1356,96 @@
         setBadgeGlow: k,
         socialGlow: C,
         setSocialGlow: B,
-        userData: R,
-        locationMarker: F,
-        setLocation: q
+        userData: E,
+        locationMarker: R,
+        setLocation: F
       }) => {
-        let P = (0, h.kj)(),
-          [D, I] = (0, t.useState)(""),
-          W = {
-            usernameEffects: P("dashboard.customize.general.username_effects.modal_title"),
-            discordPresenceSettings: P("dashboard.customize.general.discord_presence.modal_title")
+        let q = (0, h.kj)(),
+          [P, D] = (0, t.useState)(""),
+          I = {
+            usernameEffects: q("dashboard.customize.general.username_effects.modal_title"),
+            discordPresenceSettings: q("dashboard.customize.general.discord_presence.modal_title")
           },
-          [$, U] = (0, t.useState)(!1),
-          [O, G] = (0, t.useState)(""),
-          [H, V] = (0, t.useState)(R.config.discord_presence_settings || {
+          [W, $] = (0, t.useState)(!1),
+          [U, O] = (0, t.useState)(""),
+          [G, H] = (0, t.useState)(E.config.discord_presence_settings || {
             show_badges: !0,
             show_guild_tag: !0,
             idle_text: ""
           }),
-          Y = "" !== R.config.display_name ? R.config.display_name : R.username,
-          J = R.premium,
-          Z = R.config.opacity ?? 1,
-          X = R.config.profile_gradient ? {
-            backgroundColor: (0, A.E2)(R.config.color, Z),
-            backgroundImage: `linear-gradient(25deg, ${(0,A.E2)(R.config.gradient_1,Z)}, ${(0,A.E2)(R.config.gradient_2,Z)})`,
-            color: R.config.text_color
+          V = "" !== E.config.display_name ? E.config.display_name : E.username,
+          Y = E.premium,
+          J = E.config.opacity ?? 1,
+          Z = E.config.profile_gradient ? {
+            backgroundColor: (0, A.E2)(E.config.color, J),
+            backgroundImage: `linear-gradient(25deg, ${(0,A.E2)(E.config.gradient_1,J)}, ${(0,A.E2)(E.config.gradient_2,J)})`,
+            color: E.config.text_color
           } : {
-            backgroundColor: (0, A.E2)(R.config.color, Z),
-            color: R.config.text_color
+            backgroundColor: (0, A.E2)(E.config.color, J),
+            color: E.config.text_color
           },
-          K = [{
+          X = [{
             value: "none",
-            label: P("dashboard.customize.general.background_effects.none")
+            label: q("dashboard.customize.general.background_effects.none")
           }, {
             value: "dither",
-            label: P("dashboard.customize.general.background_effects.dither", {
-              premium: J ? "" : P("dashboard.customize.general.premium_only")
+            label: q("dashboard.customize.general.background_effects.dither", {
+              premium: Y ? "" : q("dashboard.customize.general.premium_only")
             }),
-            disabled: !J
+            disabled: !Y
           }, {
             value: "plasma",
-            label: P("dashboard.customize.general.background_effects.plasma", {
-              premium: J ? "" : P("dashboard.customize.general.premium_only")
+            label: q("dashboard.customize.general.background_effects.plasma", {
+              premium: Y ? "" : q("dashboard.customize.general.premium_only")
             }),
-            disabled: !J
+            disabled: !Y
           }, {
             value: "aurora",
-            label: P("dashboard.customize.general.background_effects.aurora")
+            label: q("dashboard.customize.general.background_effects.aurora")
           }, {
             value: "snowflakes",
-            label: P("dashboard.customize.general.background_effects.snowflakes")
+            label: q("dashboard.customize.general.background_effects.snowflakes")
           }, {
             value: "rain",
-            label: P("dashboard.customize.general.background_effects.rain")
+            label: q("dashboard.customize.general.background_effects.rain")
           }, {
             value: "blurred",
-            label: P("dashboard.customize.general.background_effects.blurred")
+            label: q("dashboard.customize.general.background_effects.blurred")
           }, {
             value: "night",
-            label: P("dashboard.customize.general.background_effects.night")
+            label: q("dashboard.customize.general.background_effects.night")
           }, {
             value: "tv",
-            label: P("dashboard.customize.general.background_effects.tv")
+            label: q("dashboard.customize.general.background_effects.tv")
           }],
-          Q = [{
+          K = [{
             value: "enabled",
-            label: P("dashboard.customize.general.discord_presence.enabled")
+            label: q("dashboard.customize.general.discord_presence.enabled")
           }, {
             value: "disabled",
-            label: P("dashboard.customize.general.discord_presence.disabled")
+            label: q("dashboard.customize.general.discord_presence.disabled")
           }],
-          ee = (0, t.useMemo)(() => [{
+          Q = (0, t.useMemo)(() => [{
             value: .2,
-            label: P("dashboard.customize.general.sliders.opacity.marks.twenty")
+            label: q("dashboard.customize.general.sliders.opacity.marks.twenty")
           }, {
             value: .5,
-            label: P("dashboard.customize.general.sliders.opacity.marks.fifty")
+            label: q("dashboard.customize.general.sliders.opacity.marks.fifty")
           }, {
             value: .8,
-            label: P("dashboard.customize.general.sliders.opacity.marks.eighty")
-          }], [P]),
-          ea = (0, t.useMemo)(() => [{
+            label: q("dashboard.customize.general.sliders.opacity.marks.eighty")
+          }], [q]),
+          ee = (0, t.useMemo)(() => [{
             value: 20,
-            label: P("dashboard.customize.general.sliders.blur.marks.twenty")
+            label: q("dashboard.customize.general.sliders.blur.marks.twenty")
           }, {
             value: 50,
-            label: P("dashboard.customize.general.sliders.blur.marks.fifty")
+            label: q("dashboard.customize.general.sliders.blur.marks.fifty")
           }, {
             value: 80,
-            label: P("dashboard.customize.general.sliders.blur.marks.eighty")
-          }], [P]),
-          es = {
+            label: q("dashboard.customize.general.sliders.blur.marks.eighty")
+          }], [q]),
+          ea = {
             none: "none",
             rgb: "rainbow",
             rainbow: "rainbow",
@@ -1469,115 +1467,115 @@
             fuzzy: "fuzzy",
             shuffle: "shuffle"
           },
-          er = (0, t.useMemo)(() => [{
+          es = (0, t.useMemo)(() => [{
             urlName: "typewriter",
             image: !1,
-            name: P("dashboard.customize.general.username_effects.list.typewriter"),
+            name: q("dashboard.customize.general.username_effects.list.typewriter"),
             premium: !0
           }, {
             urlName: "rainbow",
             image: !1,
-            name: P("dashboard.customize.general.username_effects.list.rainbow"),
+            name: q("dashboard.customize.general.username_effects.list.rainbow"),
             premium: !1
           }, {
             urlName: "fuzzy",
             image: !1,
-            name: P("dashboard.customize.general.username_effects.list.fuzzy"),
+            name: q("dashboard.customize.general.username_effects.list.fuzzy"),
             premium: !1
           }, {
             urlName: "shuffle",
             image: !1,
-            name: P("dashboard.customize.general.username_effects.list.shuffle"),
+            name: q("dashboard.customize.general.username_effects.list.shuffle"),
             premium: !1
           }, {
             urlName: "sparkle_black",
             image: !0,
-            name: P("dashboard.customize.general.username_effects.list.sparkle_black"),
+            name: q("dashboard.customize.general.username_effects.list.sparkle_black"),
             premium: !1
           }, {
             urlName: "sparkle_blue",
             image: !0,
-            name: P("dashboard.customize.general.username_effects.list.sparkle_blue"),
+            name: q("dashboard.customize.general.username_effects.list.sparkle_blue"),
             premium: !1
           }, {
             urlName: "sparkle_green",
             image: !0,
-            name: P("dashboard.customize.general.username_effects.list.sparkle_green"),
+            name: q("dashboard.customize.general.username_effects.list.sparkle_green"),
             premium: !1
           }, {
             urlName: "sparkle_pink",
             image: !0,
-            name: P("dashboard.customize.general.username_effects.list.sparkle_pink"),
+            name: q("dashboard.customize.general.username_effects.list.sparkle_pink"),
             premium: !1
           }, {
             urlName: "sparkle_red",
             image: !0,
-            name: P("dashboard.customize.general.username_effects.list.sparkle_red"),
+            name: q("dashboard.customize.general.username_effects.list.sparkle_red"),
             premium: !1
           }, {
             urlName: "sparkle_white",
             image: !0,
-            name: P("dashboard.customize.general.username_effects.list.sparkle_white"),
+            name: q("dashboard.customize.general.username_effects.list.sparkle_white"),
             premium: !1
           }, {
             urlName: "sparkle_yellow",
             image: !0,
-            name: P("dashboard.customize.general.username_effects.list.sparkle_yellow"),
+            name: q("dashboard.customize.general.username_effects.list.sparkle_yellow"),
             premium: !1
-          }], [P]),
-          et = (0, t.useMemo)(() => ({
-            rainbow: P("dashboard.customize.general.username_effects.samples.rainbow"),
-            typewriter: P("dashboard.customize.general.username_effects.samples.typewriter"),
-            fuzzy: P("dashboard.customize.general.username_effects.samples.fuzzy"),
-            shuffle: P("dashboard.customize.general.username_effects.samples.shuffle")
-          }), [P]);
+          }], [q]),
+          er = (0, t.useMemo)(() => ({
+            rainbow: q("dashboard.customize.general.username_effects.samples.rainbow"),
+            typewriter: q("dashboard.customize.general.username_effects.samples.typewriter"),
+            fuzzy: q("dashboard.customize.general.username_effects.samples.fuzzy"),
+            shuffle: q("dashboard.customize.general.username_effects.samples.shuffle")
+          }), [q]);
         (0, t.useEffect)(() => {
           if ("" !== p) {
-            let e = es[p],
-              a = er.find(a => a.urlName === e),
+            let e = ea[p],
+              a = es.find(a => a.urlName === e),
               s = !!a && a.premium;
-            G({
+            O({
               urlName: e,
               name: a?.name,
               premium: s,
               image: a?.image
             })
           }
-        }, [p, er]);
-        let ei = (e, a, s, r) => {
-            G({
+        }, [p, es]);
+        let et = (e, a, s, r) => {
+            O({
               urlName: e,
               name: a,
               premium: s,
               image: r
             })
           },
-          eo = () => {
-            z(O.urlName, () => U(!1))
+          ei = () => {
+            z(U.urlName, () => $(!1))
           },
-          en = e => {
+          eo = e => {
             "username" === e ? _(!b) : "socials" === e ? B(!C) : "badges" === e && k(!w)
           },
-          el = async () => {
+          en = async () => {
             let e = await fetch("https://guns.lol/api/dashboard/customize/discordPresenceSettings", {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json"
                 },
-                body: JSON.stringify(H)
+                body: JSON.stringify(G)
               }),
               a = await e.json();
-            e.ok ? (c.oR.success(a.message), U(!1)) : c.oR.error(a.error)
+            e.ok ? (c.oR.success(a.message), $(!1)) : c.oR.error(a.error)
           };
         return (0, r.jsxs)(r.Fragment, {
           children: [(0, r.jsx)(j.A, {
-            opened: $,
-            onClose: () => U(!1),
+            opened: W,
+            onClose: () => $(!1),
             centered: !0,
-            size: "discordPresenceSettings" === D ? "400px" : "auto",
-            title: W[D],
-            bodyClassName: "usernameEffects" === D ? o().usernameEffectsModalBody : void 0,
-            children: "usernameEffects" === D ? (0, r.jsxs)(r.Fragment, {
+            size: "discordPresenceSettings" === P ? "400px" : "auto",
+            title: I[P],
+            bodyClassName: "usernameEffects" === P ? o().usernameEffectsModalBody : void 0,
+            children: "usernameEffects" === P ? (0, r.jsxs)(r.Fragment, {
               children: [(0, r.jsxs)("div", {
                 className: o().usernameEffectsModalContent,
                 children: [(0, r.jsxs)("div", {
@@ -1585,41 +1583,41 @@
                   children: [(0, r.jsxs)("div", {
                     className: o().usernameEffectsSelection,
                     children: [(0, r.jsx)("div", {
-                      className: `${o().usernameEffect} ${"none"===O.urlName&&o().selectedEffect}`,
-                      onClick: () => ei("none", P("dashboard.customize.general.username_effects.none"), !1, !1),
+                      className: `${o().usernameEffect} ${"none"===U.urlName&&o().selectedEffect}`,
+                      onClick: () => et("none", q("dashboard.customize.general.username_effects.none"), !1, !1),
                       children: (0, r.jsxs)("div", {
                         className: o().noUsernameEffect,
                         children: [d.none, (0, r.jsx)("span", {
-                          children: P("dashboard.customize.general.username_effects.none")
+                          children: q("dashboard.customize.general.username_effects.none")
                         })]
                       })
-                    }), er.map((e, a) => (0, r.jsxs)("div", {
-                      className: `${o().usernameEffect} ${O.urlName===e.urlName&&o().selectedEffect}`,
-                      onClick: () => ei(e.urlName, e.name, e.premium, e.image),
+                    }), es.map((e, a) => (0, r.jsxs)("div", {
+                      className: `${o().usernameEffect} ${U.urlName===e.urlName&&o().selectedEffect}`,
+                      onClick: () => et(e.urlName, e.name, e.premium, e.image),
                       children: [e.premium && (0, r.jsx)("div", {
                         className: o().premiumOnly,
-                        children: R.premium ? d.premium : d.lock
+                        children: E.premium ? d.premium : d.lock
                       }), e.image ? (0, r.jsx)("img", {
                         src: `https://assets.guns.lol/${e.urlName}.gif`,
                         alt: "Username effect preview"
                       }) : "rainbow" === e.urlName ? (0, r.jsx)("h1", {
                         className: o().rainbowName,
-                        children: et.rainbow
+                        children: er.rainbow
                       }) : "typewriter" === e.urlName ? (0, r.jsx)(S(), {
                         options: {
-                          strings: et.typewriter,
+                          strings: er.typewriter,
                           autoStart: !0,
                           loop: !0,
                           pauseFor: 1e3,
                           stringSplitter: A.dz
                         }
                       }) : "fuzzy" === e.urlName ? (0, r.jsx)(L.A, {
-                        username: et.fuzzy,
+                        username: er.fuzzy,
                         usernameEffect: "fuzzy",
                         textColor: "#fafafa",
                         fontSize: "22px"
                       }) : "shuffle" === e.urlName && (0, r.jsx)(L.A, {
-                        username: et.shuffle,
+                        username: er.shuffle,
                         usernameEffect: "shuffle",
                         textColor: "#fafafa",
                         fontSize: "22px"
@@ -1631,17 +1629,17 @@
                       className: o().usernameEffectsPreviewInnerWrapper,
                       children: [(0, r.jsx)("div", {
                         className: o().userBackground,
-                        style: X,
-                        children: O.image ? (0, r.jsx)("h1", {
+                        style: Z,
+                        children: U.image ? (0, r.jsx)("h1", {
                           className: o().usernameEffectPreviewTitle,
                           style: {
-                            backgroundImage: "" !== O ? `url(https://assets.guns.lol/${O.urlName}.gif)` : ""
+                            backgroundImage: "" !== U ? `url(https://assets.guns.lol/${U.urlName}.gif)` : ""
                           },
-                          children: Y
-                        }) : "rainbow" === O.urlName ? (0, r.jsx)("h1", {
+                          children: V
+                        }) : "rainbow" === U.urlName ? (0, r.jsx)("h1", {
                           className: o().rainbowName,
-                          children: Y
-                        }) : "typewriter" === O.urlName ? (0, r.jsxs)(r.Fragment, {
+                          children: V
+                        }) : "typewriter" === U.urlName ? (0, r.jsxs)(r.Fragment, {
                           children: [(0, r.jsx)("style", {
                             children: `.${o().userBackground} .Typewriter {
                                                         font-size: 22px;
@@ -1650,42 +1648,42 @@
                                                     `
                           }), (0, r.jsx)(S(), {
                             options: {
-                              strings: Y,
+                              strings: V,
                               autoStart: !0,
                               loop: !0,
                               stringSplitter: A.dz
                             }
                           })]
-                        }) : "fuzzy" === O.urlName ? (0, r.jsx)(L.A, {
-                          username: Y,
+                        }) : "fuzzy" === U.urlName ? (0, r.jsx)(L.A, {
+                          username: V,
                           usernameEffect: "fuzzy",
-                          textColor: R.config.text_color,
+                          textColor: E.config.text_color,
                           fontSize: "23px"
-                        }) : "shuffle" === O.urlName ? (0, r.jsx)(L.A, {
-                          username: Y,
+                        }) : "shuffle" === U.urlName ? (0, r.jsx)(L.A, {
+                          username: V,
                           usernameEffect: "shuffle",
-                          textColor: R.config.text_color,
+                          textColor: E.config.text_color,
                           fontSize: "24px"
                         }) : (0, r.jsx)("h1", {
-                          children: Y
+                          children: V
                         })
-                      }), "none" === O.urlName ? (0, r.jsxs)("div", {
+                      }), "none" === U.urlName ? (0, r.jsxs)("div", {
                         className: o().usernameEffectSelected,
                         children: [(0, r.jsx)("h1", {
-                          children: P("dashboard.customize.general.username_effects.preview.no_effect_title")
+                          children: q("dashboard.customize.general.username_effects.preview.no_effect_title")
                         }), (0, r.jsx)("span", {
-                          children: P("dashboard.customize.general.username_effects.preview.no_effect_description")
+                          children: q("dashboard.customize.general.username_effects.preview.no_effect_description")
                         })]
-                      }) : "" !== O && (0, r.jsxs)("div", {
+                      }) : "" !== U && (0, r.jsxs)("div", {
                         className: o().usernameEffectSelected,
                         children: [(0, r.jsx)("h1", {
-                          children: O.name
+                          children: U.name
                         }), (0, r.jsx)("span", {
-                          children: P("dashboard.customize.general.username_effects.preview.description", {
-                            type: O.premium ? (0, r.jsx)("span", {
+                          children: q("dashboard.customize.general.username_effects.preview.description", {
+                            type: U.premium ? (0, r.jsx)("span", {
                               className: o().premiumTextGradient,
-                              children: P("dashboard.customize.general.username_effects.preview.premium_label")
-                            }) : P("dashboard.customize.general.username_effects.preview.free_label")
+                              children: q("dashboard.customize.general.username_effects.preview.premium_label")
+                            }) : q("dashboard.customize.general.username_effects.preview.free_label")
                           })
                         })]
                       })]
@@ -1695,16 +1693,16 @@
                   className: o().usernameEffectsButtonsMobile,
                   children: [(0, r.jsx)("span", {
                     className: o().saveButtonUsernameEffects,
-                    onClick: () => U(!1),
-                    children: P("dashboard.customize.general.username_effects.preview.buttons.cancel")
-                  }), O.premium && !R.premium ? (0, r.jsx)(v.A, {
+                    onClick: () => $(!1),
+                    children: q("dashboard.customize.general.username_effects.preview.buttons.cancel")
+                  }), U.premium && !E.premium ? (0, r.jsx)(v.A, {
                     href: "/pricing",
                     target: "_blank",
-                    children: P("dashboard.customize.general.username_effects.preview.buttons.buy")
+                    children: q("dashboard.customize.general.username_effects.preview.buttons.buy")
                   }) : (0, r.jsx)("span", {
                     className: o().saveButtonUsernameEffects,
-                    onClick: eo,
-                    children: P("dashboard.customize.general.username_effects.preview.buttons.save")
+                    onClick: ei,
+                    children: q("dashboard.customize.general.username_effects.preview.buttons.save")
                   })]
                 })]
               }), (0, r.jsx)("div", {
@@ -1713,55 +1711,55 @@
                   className: o().usernameEffectsButtons,
                   children: [(0, r.jsx)("span", {
                     className: o().saveButtonUsernameEffects,
-                    onClick: () => U(!1),
-                    children: P("dashboard.customize.general.username_effects.preview.buttons.cancel")
-                  }), O.premium && !R.premium ? (0, r.jsx)(v.A, {
+                    onClick: () => $(!1),
+                    children: q("dashboard.customize.general.username_effects.preview.buttons.cancel")
+                  }), U.premium && !E.premium ? (0, r.jsx)(v.A, {
                     href: "/pricing",
                     target: "_blank",
-                    children: P("dashboard.customize.general.username_effects.preview.buttons.buy")
+                    children: q("dashboard.customize.general.username_effects.preview.buttons.buy")
                   }) : (0, r.jsx)("span", {
                     className: o().saveButtonUsernameEffects,
-                    onClick: eo,
-                    children: P("dashboard.customize.general.username_effects.preview.buttons.save")
+                    onClick: ei,
+                    children: q("dashboard.customize.general.username_effects.preview.buttons.save")
                   })]
                 })
               })]
-            }) : "discordPresenceSettings" === D && ("enabled" === s ? (0, r.jsxs)("div", {
+            }) : "discordPresenceSettings" === P && ("enabled" === s ? (0, r.jsxs)("div", {
               className: o().discordPresenceSettingsContainer,
               children: [(0, r.jsxs)("div", {
                 className: o().discordPresenceSettingsSwitchWrapperContainer,
                 children: [(0, r.jsx)(M.A, {
-                  featureName: P("dashboard.customize.general.discord_presence.show_badges"),
-                  checked: H.show_badges,
-                  onChangeFunction: e => V({
-                    ...H,
+                  featureName: q("dashboard.customize.general.discord_presence.show_badges"),
+                  checked: G.show_badges,
+                  onChangeFunction: e => H({
+                    ...G,
                     show_badges: e.currentTarget.checked
                   })
                 }), (0, r.jsx)(M.A, {
-                  featureName: P("dashboard.customize.general.discord_presence.show_guild_tag"),
-                  checked: H.show_guild_tag,
-                  onChangeFunction: e => V({
-                    ...H,
+                  featureName: q("dashboard.customize.general.discord_presence.show_guild_tag"),
+                  checked: G.show_guild_tag,
+                  onChangeFunction: e => H({
+                    ...G,
                     show_guild_tag: e.currentTarget.checked
                   })
                 })]
               }), (0, r.jsx)(g.A, {
                 icon: d.idleText,
-                featureName: P("dashboard.customize.general.discord_presence.idle_text_label"),
-                value: H.idle_text,
-                onChangeFunction: e => V({
-                  ...H,
+                featureName: q("dashboard.customize.general.discord_presence.idle_text_label"),
+                value: G.idle_text,
+                onChangeFunction: e => H({
+                  ...G,
                   idle_text: e.target.value
                 }),
-                placeholder: P("dashboard.customize.general.discord_presence.idle_text_placeholder")
+                placeholder: q("dashboard.customize.general.discord_presence.idle_text_placeholder")
               }), (0, r.jsx)("span", {
                 className: o().saveDiscordPresenceSettingsButton,
-                onClick: el,
-                children: P("dashboard.customize.general.discord_presence.save_button")
+                onClick: en,
+                children: q("dashboard.customize.general.discord_presence.save_button")
               })]
             }) : (0, r.jsx)("h1", {
               className: o().discordPresenceSettingsDisabled,
-              children: P("dashboard.customize.general.discord_presence.enable_notice")
+              children: q("dashboard.customize.general.discord_presence.enable_notice")
             }))
           }), (0, r.jsxs)("div", {
             className: o().generalComponentContainer,
@@ -1769,44 +1767,44 @@
               className: o().generalComponentLeft,
               children: [(0, r.jsxs)("div", {
                 className: o().featureRow,
-                children: [R.config.premium.typewriter_enabled && 0 === R.config.premium.typewriter.length || !R.config.premium.typewriter_enabled ? (0, r.jsx)(g.A, {
-                  featureName: P("dashboard.customize.general.description.label"),
+                children: [E.config.premium.typewriter_enabled && 0 === E.config.premium.typewriter.length || !E.config.premium.typewriter_enabled ? (0, r.jsx)(g.A, {
+                  featureName: q("dashboard.customize.general.description.label"),
                   value: e,
                   onChangeFunction: e => {
                     a(e.target.value)
                   },
-                  placeholder: P("dashboard.customize.general.description.placeholder"),
+                  placeholder: q("dashboard.customize.general.description.placeholder"),
                   icon: d.description
                 }) : (0, r.jsxs)("div", {
                   className: o().descriptionWrapper,
                   children: [(0, r.jsx)("h1", {
                     className: o().description,
-                    children: P("dashboard.customize.general.description.label")
+                    children: q("dashboard.customize.general.description.label")
                   }), (0, r.jsx)("div", {
                     className: o().descriptionText,
                     children: (0, r.jsx)("h1", {
-                      children: P("dashboard.customize.general.description.typewriter_enabled", {
-                        link: (0, r.jsx)(E(), {
+                      children: q("dashboard.customize.general.description.typewriter_enabled", {
+                        link: (0, r.jsx)("a", {
                           href: "/premium",
                           target: "_blank",
-                          children: P("dashboard.customize.premium_label")
+                          children: q("dashboard.customize.premium_label")
                         })
                       })
                     })
                   })]
-                }), R.discord || !R.discord && "enabled" === R.config.presence ? (0, r.jsxs)("div", {
+                }), E.discord || !E.discord && "enabled" === E.config.presence ? (0, r.jsxs)("div", {
                   className: o().discordPresenceSelectWrapper,
                   children: [(0, r.jsx)(y.A, {
-                    data: Q,
-                    featureName: P("dashboard.customize.general.discord_presence.field_label"),
+                    data: K,
+                    featureName: q("dashboard.customize.general.discord_presence.field_label"),
                     value: s,
                     onChangeFunction: i,
-                    placeholder: P("dashboard.customize.general.select_placeholder"),
+                    placeholder: q("dashboard.customize.general.select_placeholder"),
                     icon: d.discordPresence
                   }), (0, r.jsx)("span", {
                     className: o().discordPresenceSettings,
                     onClick: () => {
-                      I("discordPresenceSettings"), U(!0)
+                      D("discordPresenceSettings"), $(!0)
                     },
                     children: d.settings
                   })]
@@ -1814,14 +1812,14 @@
                   className: o().discordPresenceWrapper,
                   children: [(0, r.jsx)("h1", {
                     className: o().discordPresence,
-                    children: P("dashboard.customize.general.discord_presence.field_label")
+                    children: q("dashboard.customize.general.discord_presence.field_label")
                   }), (0, r.jsx)("div", {
                     className: o().discordPresenceConnect,
                     children: (0, r.jsx)("h1", {
-                      children: P("dashboard.customize.general.discord_presence.connect_description", {
-                        link: (0, r.jsxs)(E(), {
+                      children: q("dashboard.customize.general.discord_presence.connect_description", {
+                        link: (0, r.jsxs)("a", {
                           href: "/account",
-                          children: [d.lock, " ", P("dashboard.customize.general.discord_presence.connect_link")]
+                          children: [d.lock, " ", q("dashboard.customize.general.discord_presence.connect_link")]
                         })
                       })
                     })
@@ -1830,23 +1828,23 @@
               }), (0, r.jsxs)("div", {
                 className: o().featureRow,
                 children: [(0, r.jsx)(y.A, {
-                  data: K,
-                  featureName: P("dashboard.customize.general.background_effects_field"),
+                  data: X,
+                  featureName: q("dashboard.customize.general.background_effects_field"),
                   value: n,
                   onChangeFunction: l,
-                  placeholder: P("dashboard.customize.general.select_placeholder"),
+                  placeholder: q("dashboard.customize.general.select_placeholder"),
                   icon: d.backgroundEffects
                 }), (0, r.jsxs)("div", {
                   className: o().usernameEffectsWrapper,
                   children: [(0, r.jsx)("h1", {
                     className: o().usernameEffectsText,
-                    children: P("dashboard.customize.general.username_effects.section_title")
+                    children: q("dashboard.customize.general.username_effects.section_title")
                   }), (0, r.jsxs)("span", {
                     className: o().usernameEffectsButton,
                     onClick: () => {
-                      I("usernameEffects"), U(!0)
+                      D("usernameEffects"), $(!0)
                     },
-                    children: [d.backgroundEffects, " ", P("dashboard.customize.general.username_effects.button_label")]
+                    children: [d.backgroundEffects, " ", q("dashboard.customize.general.username_effects.button_label")]
                   })]
                 })]
               })]
@@ -1855,8 +1853,8 @@
               children: [(0, r.jsxs)("div", {
                 className: `${o().featureRow} ${o().sliderDiv}`,
                 children: [(0, r.jsx)(T.A, {
-                  featureName: P("dashboard.customize.general.sliders.opacity.title"),
-                  helpDescription: P("dashboard.customize.general.sliders.opacity.description"),
+                  featureName: q("dashboard.customize.general.sliders.opacity.title"),
+                  helpDescription: q("dashboard.customize.general.sliders.opacity.description"),
                   element: (0, r.jsx)(N.A, {
                     value: u,
                     onChangeFunction: m,
@@ -1864,11 +1862,11 @@
                     max: 1,
                     min: 0,
                     label: e => `${Math.floor(100*e)}%`,
-                    marks: ee
+                    marks: Q
                   })
                 }), (0, r.jsx)(T.A, {
-                  featureName: P("dashboard.customize.general.sliders.blur.title"),
-                  helpDescription: P("dashboard.customize.general.sliders.blur.description"),
+                  featureName: q("dashboard.customize.general.sliders.blur.title"),
+                  helpDescription: q("dashboard.customize.general.sliders.blur.description"),
                   element: (0, r.jsx)(N.A, {
                     value: f,
                     onChangeFunction: x,
@@ -1876,38 +1874,38 @@
                     max: 100,
                     min: 0,
                     label: e => `${e}px`,
-                    marks: ea
+                    marks: ee
                   })
                 })]
               }), (0, r.jsxs)("div", {
                 className: o().featureRow,
                 children: [(0, r.jsx)(g.A, {
-                  featureName: P("dashboard.customize.general.location.label"),
-                  value: F,
+                  featureName: q("dashboard.customize.general.location.label"),
+                  value: R,
                   onChangeFunction: e => {
-                    q(e.target.value)
+                    F(e.target.value)
                   },
-                  placeholder: P("dashboard.customize.general.location.placeholder"),
+                  placeholder: q("dashboard.customize.general.location.placeholder"),
                   icon: d.locationMarker
                 }), (0, r.jsx)(T.A, {
-                  featureName: P("dashboard.customize.general.glow.title"),
-                  helpDescription: P("dashboard.customize.general.glow.description"),
+                  featureName: q("dashboard.customize.general.glow.title"),
+                  helpDescription: q("dashboard.customize.general.glow.description"),
                   element: (0, r.jsx)("div", {
                     className: o().glowSettings,
                     children: (0, r.jsxs)("div", {
                       className: o().glowSettingsInner,
                       children: [(0, r.jsxs)("div", {
                         className: `${o().glowSetting} ${b&&o().glowSettingEnabled}`,
-                        onClick: () => en("username"),
-                        children: [d.glow, " ", P("dashboard.customize.general.glow.username")]
+                        onClick: () => eo("username"),
+                        children: [d.glow, " ", q("dashboard.customize.general.glow.username")]
                       }), (0, r.jsxs)("div", {
                         className: `${o().glowSetting} ${C&&o().glowSettingEnabled}`,
-                        onClick: () => en("socials"),
-                        children: [d.glow, " ", P("dashboard.customize.general.glow.socials")]
+                        onClick: () => eo("socials"),
+                        children: [d.glow, " ", q("dashboard.customize.general.glow.socials")]
                       }), (0, r.jsxs)("div", {
                         className: `${o().glowSetting} ${w&&o().glowSettingEnabled}`,
-                        onClick: () => en("badges"),
-                        children: [d.glow, " ", P("dashboard.customize.general.glow.badges")]
+                        onClick: () => eo("badges"),
+                        children: [d.glow, " ", q("dashboard.customize.general.glow.badges")]
                       })]
                     })
                   })
@@ -1917,10 +1915,10 @@
           })]
         })
       };
-      var F = s(9992),
-        q = s(30184);
-      let P = new Set(["dither", "plasma", "aurora", "snowflakes", "rain", "blurred", "night", "tv"]),
-        D = ({
+      var E = s(9992),
+        R = s(30184);
+      let F = new Set(["dither", "plasma", "aurora", "snowflakes", "rain", "blurred", "night", "tv"]),
+        q = ({
           accentColor: e,
           setAccentColor: a,
           textColor: s,
@@ -1940,7 +1938,7 @@
           setBackgroundEffectsColor: v
         }) => {
           let j = (0, h.kj)(),
-            _ = P.has(x);
+            _ = F.has(x);
           return (0, r.jsx)(r.Fragment, {
             children: (0, r.jsxs)("div", {
               className: o().generalComponentContainer,
@@ -1948,12 +1946,12 @@
                 className: o().generalComponentLeft,
                 children: [(0, r.jsxs)("div", {
                   className: o().featureRow,
-                  children: [(0, r.jsx)(q.A, {
+                  children: [(0, r.jsx)(R.A, {
                     featureName: j("dashboard.customize.color.fields.accent"),
                     onChangeFunction: a,
                     value: e,
                     placeholder: j("dashboard.customize.color.placeholder")
-                  }), (0, r.jsx)(q.A, {
+                  }), (0, r.jsx)(R.A, {
                     featureName: j("dashboard.customize.color.fields.text"),
                     onChangeFunction: t,
                     value: s,
@@ -1961,12 +1959,12 @@
                   })]
                 }), (0, r.jsxs)("div", {
                   className: o().featureRow,
-                  children: [(0, r.jsx)(q.A, {
+                  children: [(0, r.jsx)(R.A, {
                     featureName: j("dashboard.customize.color.fields.background"),
                     onChangeFunction: n,
                     value: i,
                     placeholder: j("dashboard.customize.color.placeholder")
-                  }), (0, r.jsx)(q.A, {
+                  }), (0, r.jsx)(R.A, {
                     featureName: j("dashboard.customize.color.fields.icon"),
                     onChangeFunction: g,
                     value: f,
@@ -1974,7 +1972,7 @@
                   })]
                 }), _ && (0, r.jsx)("div", {
                   className: o().featureRow,
-                  children: (0, r.jsx)(q.A, {
+                  children: (0, r.jsx)(R.A, {
                     featureName: j("dashboard.customize.color.fields.background_effect"),
                     onChangeFunction: v,
                     value: b,
@@ -1991,12 +1989,12 @@
                   children: j(m ? "dashboard.customize.color.gradient.disable_button" : "dashboard.customize.color.gradient.enable_button")
                 }), m && (0, r.jsxs)("div", {
                   className: o().featureRow,
-                  children: [(0, r.jsx)(q.A, {
+                  children: [(0, r.jsx)(R.A, {
                     featureName: j("dashboard.customize.color.gradient.primary"),
                     onChangeFunction: c,
                     value: l,
                     placeholder: j("dashboard.customize.color.placeholder")
-                  }), (0, r.jsx)(q.A, {
+                  }), (0, r.jsx)(R.A, {
                     featureName: j("dashboard.customize.color.gradient.secondary"),
                     onChangeFunction: u,
                     value: d,
@@ -2007,7 +2005,7 @@
             })
           })
         },
-        I = ({
+        P = ({
           discordAvatar: e,
           setDiscordAvatar: a,
           monochromeIcons: s,
@@ -2068,10 +2066,10 @@
             })
           })
         };
-      var W = s(54834);
-      async function $(e, a, s, r, t) {
+      var D = s(54834);
+      async function I(e, a, s, r, t) {
         try {
-          a(W.A.loading);
+          a(D.A.loading);
           let i = /^#[0-9a-fA-F]{6}$/.test(e.background_effects_color ?? ""),
             o = await fetch("https://guns.lol/api/dashboard/customize", {
               method: "POST",
@@ -2113,9 +2111,9 @@
           }, 500)
         }
       }
-      var U = s(39449),
-        O = s(60884);
-      let G = ({
+      var W = s(39449),
+        $ = s(60884);
+      let U = ({
         data: e
       }) => {
         let a = (0, h.kj)(),
@@ -2142,13 +2140,13 @@
             theme: "dark",
             className: l().toasterStyles,
             icons: {
-              success: W.A.successToast
+              success: D.A.successToast
             },
             visibleToasts: 2
-          }), (0, r.jsx)(U.N, {
+          }), (0, r.jsx)(W.N, {
             children: p && (0, r.jsx)("div", {
               className: l().unsavedChangesWrapper,
-              children: (0, r.jsxs)(O.P.div, {
+              children: (0, r.jsxs)($.P.div, {
                 className: l().unsavedChangesBar,
                 initial: {
                   opacity: 0,
@@ -2187,7 +2185,7 @@
                     children: a("common.unsaved_changes.reset")
                   }), (0, r.jsx)("span", {
                     className: l().saveButton,
-                    onClick: () => $(u, x, g, n, a),
+                    onClick: () => I(u, x, g, n, a),
                     children: f
                   })]
                 })]
@@ -2195,7 +2193,7 @@
             })
           }), (0, r.jsxs)("div", {
             className: o().featureGap,
-            children: [(0, r.jsx)(F.A, {
+            children: [(0, r.jsx)(E.A, {
               featureName: a("dashboard.customize.sections.assets"),
               children: (0, r.jsx)(k, {
                 data: e
@@ -2216,9 +2214,9 @@
                   })
                 })
               })
-            }), (0, r.jsx)(F.A, {
+            }), (0, r.jsx)(E.A, {
               featureName: a("dashboard.customize.sections.general"),
-              children: (0, r.jsx)(R, {
+              children: (0, r.jsx)(B, {
                 description: u.description,
                 setDescription: b("description"),
                 discordPresence: u.presence,
@@ -2240,9 +2238,9 @@
                 locationMarker: u.location,
                 setLocation: b("location")
               })
-            }), (0, r.jsx)(F.A, {
+            }), (0, r.jsx)(E.A, {
               featureName: a("dashboard.customize.sections.color"),
-              children: (0, r.jsx)(D, {
+              children: (0, r.jsx)(q, {
                 accentColor: u.color,
                 setAccentColor: b("color"),
                 textColor: u.text_color,
@@ -2261,9 +2259,9 @@
                 backgroundEffectsColor: u.background_effects_color || u.text_color,
                 setBackgroundEffectsColor: b("background_effects_color")
               })
-            }), (0, r.jsx)(F.A, {
+            }), (0, r.jsx)(E.A, {
               featureName: a("dashboard.customize.sections.other"),
-              children: (0, r.jsx)(I, {
+              children: (0, r.jsx)(P, {
                 discordAvatar: u.use_discord_avatar,
                 setDiscordAvatar: b("use_discord_avatar"),
                 monochromeIcons: u.monochrome,

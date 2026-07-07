@@ -3,7 +3,7 @@
     40116: (e, s, a) => {
       "use strict";
       a.r(s), a.d(s, {
-        default: () => _
+        default: () => v
       });
       var n = a(95155),
         t = a(12115),
@@ -392,11 +392,9 @@
           })
         })
       }
-      var m = a(98500),
-        b = a.n(m),
-        g = a(99387);
+      var m = a(99387);
 
-      function u({
+      function b({
         setOnboardingData: e,
         username: s
       }) {
@@ -426,7 +424,7 @@
                 alt: ""
               }), (0, n.jsxs)("span", {
                 children: ["guns.lol/", s]
-              }), (0, n.jsx)("div", {}), (0, n.jsx)(g.A, {
+              }), (0, n.jsx)("div", {}), (0, n.jsx)(m.A, {
                 value: `https://guns.lol/${s.endsWith(".")?s+"/":s}`,
                 timeout: 1e3,
                 children: ({
@@ -441,7 +439,7 @@
                   })
                 })
               })]
-            }), (0, n.jsxs)(b(), {
+            }), (0, n.jsxs)("a", {
               href: `/${s}`,
               target: "_blank",
               children: [a("dashboard.onboarding.step4.open_page"), " ", i.externalLink, " "]
@@ -453,25 +451,25 @@
             }), (0, n.jsxs)("div", {
               className: o().links,
               children: [(0, n.jsxs)("span", {
-                children: [a("dashboard.onboarding.step4.quick_links.account_overview"), " ", i.dot, " ", (0, n.jsx)(b(), {
+                children: [a("dashboard.onboarding.step4.quick_links.account_overview"), " ", i.dot, " ", (0, n.jsx)("a", {
                   href: "/account",
                   target: "_blank",
                   children: "guns.lol/account"
                 })]
               }), (0, n.jsxs)("span", {
-                children: [a("dashboard.onboarding.step4.quick_links.customize"), " ", i.dot, " ", (0, n.jsx)(b(), {
+                children: [a("dashboard.onboarding.step4.quick_links.customize"), " ", i.dot, " ", (0, n.jsx)("a", {
                   href: "/customize",
                   target: "_blank",
                   children: "guns.lol/customize"
                 })]
               }), (0, n.jsxs)("span", {
-                children: [a("dashboard.onboarding.step4.quick_links.links"), " ", i.dot, " ", (0, n.jsx)(b(), {
+                children: [a("dashboard.onboarding.step4.quick_links.links"), " ", i.dot, " ", (0, n.jsx)("a", {
                   href: "/links",
                   target: "_blank",
                   children: "guns.lol/links"
                 })]
               }), (0, n.jsxs)("span", {
-                children: [a("dashboard.onboarding.step4.quick_links.templates"), " ", i.dot, " ", (0, n.jsx)(b(), {
+                children: [a("dashboard.onboarding.step4.quick_links.templates"), " ", i.dot, " ", (0, n.jsx)("a", {
                   href: "/templates",
                   target: "_blank",
                   children: "guns.lol/templates"
@@ -484,16 +482,16 @@
               children: a("dashboard.onboarding.step4.support.title")
             }), (0, n.jsxs)("div", {
               className: o().buttons,
-              children: [(0, n.jsxs)(b(), {
+              children: [(0, n.jsxs)("a", {
                 href: "mailto:support@guns.lol",
                 className: o().button,
                 children: [i.email, " ", a("dashboard.onboarding.step4.support.email")]
-              }), (0, n.jsxs)(b(), {
+              }), (0, n.jsxs)("a", {
                 href: "https://discord.gg/guns",
                 className: o().button,
                 target: "_blank",
                 children: [i.discord, " ", a("dashboard.onboarding.step4.support.discord")]
-              }), (0, n.jsxs)(b(), {
+              }), (0, n.jsxs)("a", {
                 href: "https://help.guns.lol",
                 className: o().button,
                 target: "_blank",
@@ -503,26 +501,26 @@
           })]
         })
       }
-      var x = a(66609),
-        f = a(98241),
-        v = a.n(f),
-        j = a(54834);
+      var g = a(66609),
+        u = a(98241),
+        x = a.n(u),
+        f = a(54834);
 
-      function _({
+      function v({
         data: e
       }) {
         let s = (0, d.kj)(),
           a = [1, 2],
           [r, h] = (0, t.useState)(e.onboarding_step),
-          [m, b] = (0, t.useState)(),
-          g = '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-dasharray="15" stroke-dashoffset="15" stroke-linecap="round" stroke-width="2" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"></animate><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"></animateTransform></path></svg>',
-          f = (0, t.useMemo)(() => e => `${4!==e?s("dashboard.onboarding.buttons.continue"):s("dashboard.onboarding.buttons.finish")} <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 12h16m0 0l-6-6m6 6l-6 6"></path></svg>`, [s]),
-          _ = f(r),
+          [m, u] = (0, t.useState)(),
+          v = '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-dasharray="15" stroke-dashoffset="15" stroke-linecap="round" stroke-width="2" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"></animate><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"></animateTransform></path></svg>',
+          j = (0, t.useMemo)(() => e => `${4!==e?s("dashboard.onboarding.buttons.continue"):s("dashboard.onboarding.buttons.finish")} <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 12h16m0 0l-6-6m6 6l-6 6"></path></svg>`, [s]),
+          _ = j(r),
           [w, N] = (0, t.useState)(_),
           [k, S] = (0, t.useState)(s("dashboard.onboarding.buttons.skip")),
           T = async () => {
             try {
-              S(g);
+              S(v);
               let e = await fetch("https://guns.lol/api/dashboard/onboarding", {
                   method: "POST",
                   body: JSON.stringify({
@@ -535,9 +533,9 @@
                 }),
                 s = await e.json();
               e.ok ? 4 !== r ? setTimeout(function() {
-                h(s.step), N(f(s.step))
-              }, 600) : location.href = "/account" : (x.oR.error(s.error), setTimeout(function() {
-                N(f(s.step))
+                h(s.step), N(j(s.step))
+              }, 600) : location.href = "/account" : (g.oR.error(s.error), setTimeout(function() {
+                N(j(s.step))
               }, 600))
             } finally {
               setTimeout(function() {
@@ -545,27 +543,27 @@
               }, 600)
             }
           }, C = async () => {
-            if (!m || !m?.data?.selection && a.includes(r)) return x.oR.error(s("dashboard.onboarding.errors.selection_required"));
-            N(g);
+            if (!m || !m?.data?.selection && a.includes(r)) return g.oR.error(s("dashboard.onboarding.errors.selection_required"));
+            N(v);
             let e = await fetch("https://guns.lol/api/dashboard/onboarding", {
                 method: "POST",
                 body: JSON.stringify(m)
               }),
               n = await e.json();
             e.ok ? (4 !== r ? setTimeout(function() {
-              h(n.step), N(f(n.step))
-            }, 600) : location.href = "/account", b(void 0)) : (x.oR.error(n.error), setTimeout(function() {
-              N(f(n.step))
+              h(n.step), N(j(n.step))
+            }, 600) : location.href = "/account", u(void 0)) : (g.oR.error(n.error), setTimeout(function() {
+              N(j(n.step))
             }, 600))
           };
         return (0, n.jsxs)(n.Fragment, {
-          children: [(0, n.jsx)(x.l$, {
+          children: [(0, n.jsx)(g.l$, {
             richColors: !0,
             position: "top-center",
             theme: "dark",
-            className: v().toasterStyles,
+            className: x().toasterStyles,
             icons: {
-              success: j.A.successToast
+              success: f.A.successToast
             },
             visibleToasts: 2
           }), (0, n.jsxs)("div", {
@@ -599,13 +597,13 @@
               }), (0, n.jsxs)("div", {
                 className: o().onboardingQuestionPadding,
                 children: [1 === r ? (0, n.jsx)(l, {
-                  setOnboardingData: b
+                  setOnboardingData: u
                 }) : 2 === r ? (0, n.jsx)(c, {
-                  setOnboardingData: b
+                  setOnboardingData: u
                 }) : 3 === r ? (0, n.jsx)(p, {
-                  setOnboardingData: b
-                }) : 4 === r && (0, n.jsx)(u, {
-                  setOnboardingData: b,
+                  setOnboardingData: u
+                }) : 4 === r && (0, n.jsx)(b, {
+                  setOnboardingData: u,
                   username: e.username
                 }), (0, n.jsxs)("div", {
                   className: o().onboardingButtons,

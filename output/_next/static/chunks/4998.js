@@ -6,19 +6,19 @@
         n: () => p
       });
       var t = a(95155),
-        n = a(12115),
-        o = a(67361),
-        r = a.n(o);
-      let i = (0, n.createContext)(null),
-        d = (0, n.createContext)(null),
+        o = a(12115),
+        n = a(67361),
+        r = a.n(n);
+      let i = (0, o.createContext)(null),
+        d = (0, o.createContext)(null),
         l = (...e) => e.filter(Boolean).join(" "),
         c = () => {
-          let e = (0, n.useContext)(i);
+          let e = (0, o.useContext)(i);
           if (!e) throw Error("Accordion components must be used within <Accordion>");
           return e
         },
         h = () => {
-          let e = (0, n.useContext)(d);
+          let e = (0, o.useContext)(d);
           if (!e) throw Error("Accordion.Item subcomponents must be used within <Accordion.Item>");
           return e
         },
@@ -27,32 +27,32 @@
           children: e,
           value: s,
           defaultValue: a,
-          multiple: o = !1,
+          multiple: n = !1,
           onChange: d,
           className: c = "",
           ...h
         }) => {
           let p = void 0 !== s,
-            m = p ? u(s, o) : null,
-            [x, g] = (0, n.useState)(() => u(a, o)),
+            m = p ? u(s, n) : null,
+            [x, g] = (0, o.useState)(() => u(a, n)),
             b = p ? m : x,
-            j = (0, n.useCallback)(e => o ? Array.isArray(b) && b.includes(e) : b === e, [b, o]),
-            w = (0, n.useCallback)(e => {
+            j = (0, o.useCallback)(e => n ? Array.isArray(b) && b.includes(e) : b === e, [b, n]),
+            w = (0, o.useCallback)(e => {
               let s = ((e, s, a) => {
                 if (a) {
                   let a = Array.isArray(e) ? e : [];
                   return a.includes(s) ? a.filter(e => e !== s) : [...a, s]
                 }
                 return e === s ? null : s
-              })(b, e, o);
+              })(b, e, n);
               p || g(s), d?.(s)
-            }, [b, p, o, d]),
-            f = (0, n.useMemo)(() => ({
-              multiple: o,
+            }, [b, p, n, d]),
+            f = (0, o.useMemo)(() => ({
+              multiple: n,
               currentValue: b,
               toggleItem: w,
               isItemActive: j
-            }), [o, b, w, j]);
+            }), [n, b, w, j]);
           return (0, t.jsx)(i.Provider, {
             value: f,
             children: (0, t.jsx)("div", {
@@ -66,14 +66,14 @@
             value: e,
             children: s,
             className: a = "",
-            ...o
+            ...n
           }) => {
             let i = c(),
-              h = (0, n.useId)(),
-              u = (0, n.useRef)(`${h}-control`),
-              p = (0, n.useRef)(`${h}-panel`),
+              h = (0, o.useId)(),
+              u = (0, o.useRef)(`${h}-control`),
+              p = (0, o.useRef)(`${h}-panel`),
               m = i.isItemActive(e),
-              x = (0, n.useMemo)(() => ({
+              x = (0, o.useMemo)(() => ({
                 value: e,
                 controlIdRef: u,
                 panelIdRef: p
@@ -81,24 +81,24 @@
             return (0, t.jsx)(d.Provider, {
               value: x,
               children: (0, t.jsx)("div", {
-                ...o,
+                ...n,
                 className: l(r().item, a),
                 "data-active": m || void 0,
                 children: s
               })
             })
           },
-          Control: (0, n.forwardRef)(function({
+          Control: (0, o.forwardRef)(function({
             children: e,
             className: s = "",
             onClick: a,
-            disabled: n,
-            id: o,
+            disabled: o,
+            id: n,
             ...i
           }, d) {
             let u = c(),
               p = h(),
-              m = o ?? p.controlIdRef.current;
+              m = n ?? p.controlIdRef.current;
             p.controlIdRef.current = m;
             let x = u.isItemActive(p.value);
             return (0, t.jsx)("button", {
@@ -108,28 +108,28 @@
               ref: d,
               className: l(r().control, s),
               "data-active": x || void 0,
-              disabled: n,
+              disabled: o,
               onClick: e => {
-                a?.(e), e.defaultPrevented || n || u.toggleItem(p.value)
+                a?.(e), e.defaultPrevented || o || u.toggleItem(p.value)
               },
               children: e
             })
           }),
-          Panel: (0, n.forwardRef)(function({
+          Panel: (0, o.forwardRef)(function({
             children: e,
             className: s = "",
             id: a,
-            ...o
+            ...n
           }, i) {
             let d = c(),
               u = h(),
               p = a ?? u.panelIdRef.current;
             u.panelIdRef.current = p;
             let m = d.isItemActive(u.value),
-              x = (0, n.useRef)(null),
-              [g, b] = (0, n.useState)(0),
-              [j, w] = (0, n.useState)(!1);
-            (0, n.useEffect)(() => {
+              x = (0, o.useRef)(null),
+              [g, b] = (0, o.useState)(0),
+              [j, w] = (0, o.useState)(!1);
+            (0, o.useEffect)(() => {
               let e = x.current;
               if (!e) return;
               let s = window,
@@ -144,7 +144,7 @@
             }, []);
             let f = m ? j && g > 0 ? `${g}px` : void 0 : "0px";
             return (0, t.jsx)("div", {
-              ...o,
+              ...n,
               id: p,
               ref: i,
               className: l(r().panel, s),
@@ -180,23 +180,21 @@
     72617: (e, s, a) => {
       "use strict";
       a.r(s), a.d(s, {
-        default: () => w
+        default: () => b
       });
       var t = a(95155),
-        n = a(12115),
-        o = a(56891),
-        r = a.n(o),
+        o = a(12115),
+        n = a(56891),
+        r = a.n(n),
         i = a(86297),
         d = a(98241),
         l = a.n(d),
         c = a(54834),
         h = a(66609),
-        u = a(98500),
-        p = a.n(u),
-        m = a(22834),
-        x = a(38256);
-      let g = "https://help.guns.lol/how-to-guides/image-host",
-        b = {
+        u = a(22834),
+        p = a(38256);
+      let m = "https://help.guns.lol/how-to-guides/image-host",
+        x = {
           windows: "Windows",
           macos: "macOS",
           linux: "Linux",
@@ -204,53 +202,53 @@
           android: "Android"
         };
 
-      function j() {
+      function g() {
         if ("undefined" == typeof navigator) return "windows";
         let e = navigator.userAgent.toLowerCase();
         return /iphone|ipad|ipod/.test(e) ? "ios" : /android/.test(e) ? "android" : /windows|win32|win64/.test(e) ? "windows" : /mac os x|macintosh/.test(e) ? "macos" : /linux|x11/.test(e) ? "linux" : "windows"
       }
 
-      function w({
+      function b({
         data: e
       }) {
-        let s = (0, x.kj)(),
-          [a, o] = (0, n.useState)(j()),
-          [d, u] = (0, n.useState)(!1),
-          [w, f] = (0, n.useState)({
+        let s = (0, p.kj)(),
+          [a, n] = (0, o.useState)(g()),
+          [d, b] = (0, o.useState)(!1),
+          [j, w] = (0, o.useState)({
             windows: "",
             macos: "",
             linux: ""
           }),
-          [v, k] = (0, n.useState)(null),
-          _ = v?.config?.secret_key || "",
-          N = _ ? _.slice(0, 5) + "************" : "",
-          y = (0, n.useMemo)(() => ({
+          [f, v] = (0, o.useState)(null),
+          k = f?.config?.secret_key || "",
+          _ = k ? k.slice(0, 5) + "************" : "",
+          N = (0, o.useMemo)(() => ({
             windows: s("dashboard.imagehost.setup.platform_names.windows"),
             macos: s("dashboard.imagehost.setup.platform_names.macos"),
             linux: s("dashboard.imagehost.setup.platform_names.linux"),
             ios: s("dashboard.imagehost.setup.platform_names.ios"),
             android: s("dashboard.imagehost.setup.platform_names.android")
           }), [s]),
-          A = (0, n.useMemo)(() => ({
-            windows: `${g}#windows-desktop-app`,
-            macos: `${g}#macos-desktop-app`,
-            linux: `${g}#linux-deb`,
-            ios: `${g}#ios-shortcut`,
-            android: `${g}#android-xshare`
+          y = (0, o.useMemo)(() => ({
+            windows: `${m}#windows-desktop-app`,
+            macos: `${m}#macos-desktop-app`,
+            linux: `${m}#linux-deb`,
+            ios: `${m}#ios-shortcut`,
+            android: `${m}#android-xshare`
           }), []),
-          R = s("dashboard.imagehost.setup.shared.optional_hotkey"),
-          S = s("dashboard.imagehost.setup.shared.use_app"),
-          C = s("dashboard.imagehost.setup.common.app_name"),
-          I = s("dashboard.imagehost.setup.common.xshare_name"),
-          B = s("dashboard.imagehost.setup.common.xshare_config"),
-          L = s("dashboard.imagehost.setup.common.ios_shortcut_name"),
-          $ = async e => {
+          A = s("dashboard.imagehost.setup.shared.optional_hotkey"),
+          R = s("dashboard.imagehost.setup.shared.use_app"),
+          S = s("dashboard.imagehost.setup.common.app_name"),
+          C = s("dashboard.imagehost.setup.common.xshare_name"),
+          I = s("dashboard.imagehost.setup.common.xshare_config"),
+          B = s("dashboard.imagehost.setup.common.ios_shortcut_name"),
+          L = async e => {
             try {
               await navigator.clipboard.writeText(e), h.oR.success(s("dashboard.imagehost.setup.copy_success"))
             } catch {
               h.oR.error(s("dashboard.imagehost.setup.copy_failed"))
             }
-          }, U = ({
+          }, $ = ({
             n: e,
             children: s
           }) => (0, t.jsxs)("div", {
@@ -262,7 +260,7 @@
               className: r().setupStepText,
               children: s
             })]
-          }), T = async () => {
+          }), U = async () => {
             let e = await fetch("/api/dashboard/imagehost/data", {
                 method: "POST",
                 headers: {
@@ -270,8 +268,8 @@
                 }
               }),
               s = await e.json();
-            e.ok ? k(s) : h.oR.error(s.error)
-          }, O = async () => {
+            e.ok ? v(s) : h.oR.error(s.error)
+          }, T = async () => {
             let e = await fetch("/api/dashboard/imagehost/appDownloadUrls", {
                 method: "POST",
                 headers: {
@@ -280,10 +278,10 @@
               }),
               s = await e.json();
             if (!e.ok) return h.oR.error(s.error), null;
-            f(s)
+            w(s)
           };
-        return (0, n.useEffect)(() => {
-          T(), O()
+        return (0, o.useEffect)(() => {
+          U(), T()
         }, []), (0, t.jsxs)(t.Fragment, {
           children: [(0, t.jsx)(h.l$, {
             richColors: !0,
@@ -300,10 +298,10 @@
               className: r().setupCard,
               children: [(0, t.jsx)("div", {
                 className: r().setupTabs,
-                children: Object.keys(b).map(e => (0, t.jsxs)("button", {
-                  onClick: () => o(e),
+                children: Object.keys(x).map(e => (0, t.jsxs)("button", {
+                  onClick: () => n(e),
                   className: `${r().setupTab} ${a===e?r().setupTabActive:""}`,
-                  children: [y[e], e === j() && (0, t.jsx)("span", {
+                  children: [N[e], e === g() && (0, t.jsx)("span", {
                     className: r().setupAutoBadge,
                     children: s("dashboard.imagehost.setup.tabs.detected")
                   })]
@@ -317,16 +315,16 @@
                   className: r().setupKeyRow,
                   children: [(0, t.jsx)("span", {
                     className: r().setupKeyValue,
-                    children: d ? _ : N
+                    children: d ? k : _
                   }), (0, t.jsxs)("div", {
                     className: r().setupKeyActions,
                     children: [(0, t.jsxs)("span", {
                       className: r().uploadKeyButton,
-                      onClick: () => u(e => !e),
+                      onClick: () => b(e => !e),
                       children: [d ? c.A.hidePassword : c.A.password, " ", d ? s("dashboard.imagehost.setup.upload_key.hide") : s("dashboard.imagehost.setup.upload_key.reveal")]
                     }), (0, t.jsxs)("span", {
                       className: r().uploadKeyButton,
-                      onClick: () => $(_),
+                      onClick: () => L(k),
                       children: [c.A.copy, " ", s("dashboard.imagehost.setup.upload_key.copy")]
                     })]
                   })]
@@ -340,7 +338,7 @@
                   className: r().setupStepsHeader,
                   children: (0, t.jsx)("h2", {
                     children: s("dashboard.imagehost.setup.steps_header", {
-                      platform: y[a]
+                      platform: N[a]
                     })
                   })
                 }), (0, t.jsx)("div", {
@@ -349,65 +347,65 @@
                     switch (a) {
                       case "windows":
                         return (0, t.jsxs)(t.Fragment, {
-                          children: [(0, t.jsx)(U, {
+                          children: [(0, t.jsx)($, {
                             n: 1,
                             children: s("dashboard.imagehost.setup.windows.step1", {
-                              link: (0, t.jsxs)(p(), {
-                                href: w?.windows,
+                              link: (0, t.jsxs)("a", {
+                                href: j?.windows,
                                 download: !0,
-                                children: [i.A.externalLink, " ", C]
+                                children: [i.A.externalLink, " ", S]
                               })
                             })
-                          }), (0, t.jsx)(U, {
+                          }), (0, t.jsx)($, {
                             n: 2,
                             children: s("dashboard.imagehost.setup.windows.step2")
-                          }), (0, t.jsx)(U, {
+                          }), (0, t.jsx)($, {
                             n: 3,
-                            children: R
-                          }), (0, t.jsx)(U, {
+                            children: A
+                          }), (0, t.jsx)($, {
                             n: 4,
-                            children: S
+                            children: R
                           }), (0, t.jsxs)("div", {
                             className: r().setupButtonWrapper,
                             children: [(0, t.jsx)("div", {
                               className: r().accordionWrapper,
-                              children: (0, t.jsx)(m.n, {
-                                children: (0, t.jsxs)(m.n.Item, {
+                              children: (0, t.jsx)(u.n, {
+                                children: (0, t.jsxs)(u.n.Item, {
                                   value: "windows-warning",
                                   id: "windows-warning",
                                   className: r().setupAccordionItem,
-                                  children: [(0, t.jsx)(m.n.Control, {
+                                  children: [(0, t.jsx)(u.n.Control, {
                                     id: "windows-warning-control",
                                     className: r().setupAccordionControl,
                                     children: s("dashboard.imagehost.setup.windows.warning.title")
-                                  }), (0, t.jsxs)(m.n.Panel, {
+                                  }), (0, t.jsxs)(u.n.Panel, {
                                     children: [s("dashboard.imagehost.setup.windows.warning.body"), (0, t.jsx)("br", {}), s("dashboard.imagehost.setup.windows.warning.hint")]
                                   })]
                                 }, "windows-warning")
                               })
                             }), (0, t.jsxs)("a", {
-                              href: A.windows,
+                              href: y.windows,
                               target: "_blank",
                               rel: "noreferrer",
                               className: r().openDocsButton,
                               children: [i.A.link, " ", s("dashboard.imagehost.setup.buttons.open_guide", {
-                                platform: y.windows
+                                platform: N.windows
                               })]
                             })]
                           })]
                         });
                       case "macos":
                         return (0, t.jsxs)(t.Fragment, {
-                          children: [(0, t.jsx)(U, {
+                          children: [(0, t.jsx)($, {
                             n: 1,
                             children: s("dashboard.imagehost.setup.macos.step1", {
-                              link: (0, t.jsxs)(p(), {
-                                href: w?.macos,
+                              link: (0, t.jsxs)("a", {
+                                href: j?.macos,
                                 download: !0,
-                                children: [i.A.externalLink, " ", C]
+                                children: [i.A.externalLink, " ", S]
                               })
                             })
-                          }), (0, t.jsx)(U, {
+                          }), (0, t.jsx)($, {
                             n: 2,
                             children: s("dashboard.imagehost.setup.macos.step2", {
                               dmg: (0, t.jsx)("strong", {
@@ -417,7 +415,7 @@
                                 children: s("dashboard.imagehost.setup.macos.applications_label")
                               })
                             })
-                          }), (0, t.jsx)(U, {
+                          }), (0, t.jsx)($, {
                             n: 3,
                             children: s("dashboard.imagehost.setup.macos.step3")
                           }), (0, t.jsxs)("div", {
@@ -429,70 +427,70 @@
                                 children: 'sudo xattr -rd com.apple.quarantine "/Applications/guns.lol Image Host.app"'
                               })
                             })]
-                          }), (0, t.jsx)(U, {
+                          }), (0, t.jsx)($, {
                             n: 4,
-                            children: R
-                          }), (0, t.jsx)(U, {
+                            children: A
+                          }), (0, t.jsx)($, {
                             n: 5,
-                            children: S
+                            children: R
                           }), (0, t.jsx)("div", {
                             className: r().setupButtonWrapper,
                             children: (0, t.jsxs)("a", {
-                              href: A.macos,
+                              href: y.macos,
                               target: "_blank",
                               rel: "noreferrer",
                               className: r().openDocsButton,
                               children: [i.A.link, " ", s("dashboard.imagehost.setup.buttons.open_guide", {
-                                platform: y.macos
+                                platform: N.macos
                               })]
                             })
                           })]
                         });
                       case "linux":
                         return (0, t.jsxs)(t.Fragment, {
-                          children: [(0, t.jsx)(U, {
+                          children: [(0, t.jsx)($, {
                             n: 1,
                             children: s("dashboard.imagehost.setup.linux.step1", {
-                              link: (0, t.jsxs)(p(), {
-                                href: w?.linux,
+                              link: (0, t.jsxs)("a", {
+                                href: j?.linux,
                                 download: !0,
-                                children: [i.A.externalLink, " ", C]
+                                children: [i.A.externalLink, " ", S]
                               })
                             })
-                          }), (0, t.jsx)(U, {
+                          }), (0, t.jsx)($, {
                             n: 2,
                             children: s("dashboard.imagehost.setup.linux.step2")
-                          }), (0, t.jsx)(U, {
+                          }), (0, t.jsx)($, {
                             n: 3,
-                            children: R
-                          }), (0, t.jsx)(U, {
+                            children: A
+                          }), (0, t.jsx)($, {
                             n: 4,
-                            children: S
+                            children: R
                           }), (0, t.jsx)("div", {
                             className: r().setupButtonWrapper,
                             children: (0, t.jsxs)("a", {
-                              href: A.linux,
+                              href: y.linux,
                               target: "_blank",
                               rel: "noreferrer",
                               className: r().openDocsButton,
                               children: [i.A.link, " ", s("dashboard.imagehost.setup.buttons.open_guide", {
-                                platform: y.linux
+                                platform: N.linux
                               })]
                             })
                           })]
                         });
                       case "android":
                         return (0, t.jsxs)(t.Fragment, {
-                          children: [(0, t.jsx)(U, {
+                          children: [(0, t.jsx)($, {
                             n: 1,
                             children: s("dashboard.imagehost.setup.android.step1", {
-                              link: (0, t.jsxs)(p(), {
+                              link: (0, t.jsxs)("a", {
                                 href: "https://github.com/tsdko/xshare/releases/latest",
                                 target: "_blank",
-                                children: [i.A.externalLink, " ", I]
+                                children: [i.A.externalLink, " ", C]
                               })
                             })
-                          }), (0, t.jsx)(U, {
+                          }), (0, t.jsx)($, {
                             n: 2,
                             children: s("dashboard.imagehost.setup.android.step2", {
                               config: (0, t.jsxs)("a", {
@@ -506,7 +504,7 @@
                                     RequestURL: "https://guns.lol/api/imagehost/upload",
                                     Body: "MultipartFormData",
                                     Arguments: {
-                                      key: _
+                                      key: k
                                     },
                                     FileFormName: "file",
                                     URL: "$json:link$",
@@ -517,69 +515,69 @@
                                     type: "application/json"
                                   }), s = window.URL.createObjectURL(e), void((a = document.createElement("a")).href = s, a.download = "guns.lol_config.sxcu", a.click(), window.URL.revokeObjectURL(s))
                                 },
-                                children: [i.A.externalLink, " ", B]
+                                children: [i.A.externalLink, " ", I]
                               })
                             })
-                          }), (0, t.jsx)(U, {
+                          }), (0, t.jsx)($, {
                             n: 3,
                             children: s("dashboard.imagehost.setup.android.step3")
-                          }), (0, t.jsx)(U, {
+                          }), (0, t.jsx)($, {
                             n: 4,
                             children: s("dashboard.imagehost.setup.android.step4")
-                          }), (0, t.jsx)(U, {
+                          }), (0, t.jsx)($, {
                             n: 5,
                             children: s("dashboard.imagehost.setup.android.step5")
-                          }), (0, t.jsx)(U, {
+                          }), (0, t.jsx)($, {
                             n: 6,
                             children: s("dashboard.imagehost.setup.android.step6")
                           }), (0, t.jsx)("div", {
                             className: r().setupButtonWrapper,
                             children: (0, t.jsxs)("a", {
-                              href: A.android,
+                              href: y.android,
                               target: "_blank",
                               rel: "noreferrer",
                               className: r().openDocsButton,
                               children: [i.A.link, " ", s("dashboard.imagehost.setup.buttons.open_guide", {
-                                platform: y.android
+                                platform: N.android
                               })]
                             })
                           })]
                         });
                       case "ios":
                         return (0, t.jsxs)(t.Fragment, {
-                          children: [(0, t.jsx)(U, {
+                          children: [(0, t.jsx)($, {
                             n: 1,
                             children: s("dashboard.imagehost.setup.ios.step1", {
-                              shortcut: (0, t.jsxs)(p(), {
+                              shortcut: (0, t.jsxs)("a", {
                                 href: "https://www.icloud.com/shortcuts/f38438b968cc4e068e06558e31c16a68",
                                 target: "_blank",
                                 children: [i.A.externalLink, " ", s("dashboard.imagehost.setup.common.ios_shortcut_label")]
                               }),
-                              name: L
+                              name: B
                             })
-                          }), (0, t.jsx)(U, {
+                          }), (0, t.jsx)($, {
                             n: 2,
                             children: s("dashboard.imagehost.setup.ios.step2", {
-                              name: L
+                              name: B
                             })
-                          }), (0, t.jsx)(U, {
+                          }), (0, t.jsx)($, {
                             n: 3,
                             children: s("dashboard.imagehost.setup.ios.step3")
-                          }), (0, t.jsx)(U, {
+                          }), (0, t.jsx)($, {
                             n: 4,
                             children: s("dashboard.imagehost.setup.ios.step4")
-                          }), (0, t.jsx)(U, {
+                          }), (0, t.jsx)($, {
                             n: 5,
                             children: s("dashboard.imagehost.setup.ios.step5")
                           }), (0, t.jsx)("div", {
                             className: r().setupButtonWrapper,
                             children: (0, t.jsxs)("a", {
-                              href: A.ios,
+                              href: y.ios,
                               target: "_blank",
                               rel: "noreferrer",
                               className: r().openDocsButton,
                               children: [i.A.link, " ", s("dashboard.imagehost.setup.buttons.open_guide", {
-                                platform: y.ios
+                                platform: N.ios
                               })]
                             })
                           })]

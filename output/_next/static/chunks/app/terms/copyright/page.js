@@ -6,25 +6,23 @@
     27577: (e, i, t) => {
       "use strict";
       t.d(i, {
-        default: () => d
+        default: () => l
       });
       var a = t(95155);
       t(12115);
       var n = t(98241),
         o = t.n(n),
         r = t(81382),
-        s = t(98500),
-        l = t.n(s),
-        c = t(38256);
+        s = t(38256);
 
-      function d({
+      function l({
         data: e
       }) {
-        let i = (0, c.useLang)(),
-          t = (0, c.kj)(),
+        let i = (0, s.useLang)(),
+          t = (0, s.kj)(),
           n = e.statsData,
-          s = e.tokenData,
-          d = {
+          l = e.tokenData,
+          c = {
             Overview: (0, a.jsxs)(a.Fragment, {
               children: [(0, a.jsx)("p", {
                 children: "guns.lol respects intellectual property rights and expects users to do the same. This policy describes how to submit copyright notices, how we handle counter-notifications, and how we address repeat infringement. We follow the requirements of the Digital Millennium Copyright Act (DMCA) and comparable laws where applicable."
@@ -34,7 +32,7 @@
             }),
             "Copyright Contact": (0, a.jsxs)(a.Fragment, {
               children: [(0, a.jsxs)("p", {
-                children: ["Our designated point of contact for copyright matters is: ", (0, a.jsx)(l(), {
+                children: ["Our designated point of contact for copyright matters is: ", (0, a.jsx)("a", {
                   href: "mailto:legal@guns.lol",
                   children: "legal@guns.lol"
                 })]
@@ -60,7 +58,7 @@
                   children: "Your physical or electronic signature."
                 })]
               }), (0, a.jsxs)("p", {
-                children: ["Send to: ", (0, a.jsx)(l(), {
+                children: ["Send to: ", (0, a.jsx)("a", {
                   href: "mailto:legal@guns.lol",
                   children: "legal@guns.lol"
                 }), ". By submitting a notice, you agree we may forward its contents (including your contact details) to the user who posted the material, and to publish or share redacted versions for transparency or legal compliance."]
@@ -84,7 +82,7 @@
                   children: "Your physical or electronic signature."
                 })]
               }), (0, a.jsxs)("p", {
-                children: ["Send to: ", (0, a.jsx)(l(), {
+                children: ["Send to: ", (0, a.jsx)("a", {
                   href: "mailto:legal@guns.lol",
                   children: "legal@guns.lol"
                 }), ". If we receive a valid counter-notification, we will forward it to the original claimant. Unless the claimant informs us that they have filed an action seeking a court order, we may restore the material within a reasonable time."]
@@ -108,7 +106,7 @@
           };
         return (0, a.jsx)(a.Fragment, {
           children: (0, a.jsx)(r.A, {
-            data: s,
+            data: l,
             statsData: n,
             children: (0, a.jsx)("div", {
               className: o().termsOfServiceWrapper,
@@ -128,7 +126,7 @@
                   })]
                 }), (0, a.jsx)("div", {
                   className: o().terms,
-                  children: Object.entries(d).map(([e, i]) => (0, a.jsxs)("div", {
+                  children: Object.entries(c).map(([e, i]) => (0, a.jsxs)("div", {
                     className: o().term,
                     children: [(0, a.jsx)("h1", {
                       children: e
@@ -140,10 +138,10 @@
                 }), (0, a.jsxs)("div", {
                   className: o().legalDescription,
                   children: [(0, a.jsxs)("h3", {
-                    children: ["Questions or submissions:", " ", (0, a.jsx)(l(), {
+                    children: ["Questions or submissions:", " ", (0, a.jsx)("a", {
                       href: "mailto:legal@guns.lol",
                       children: "legal@guns.lol"
-                    }), ". For general support:", " ", (0, a.jsx)(l(), {
+                    }), ". For general support:", " ", (0, a.jsx)("a", {
                       href: "mailto:support@guns.lol",
                       children: "support@guns.lol"
                     }), "."]
@@ -160,6 +158,6 @@
     }
   },
   e => {
-    e.O(0, [4103, 9404, 8500, 8256, 5886, 226, 1382, 8441, 3794, 7358], () => e(e.s = 9245)), _N_E = e.O()
+    e.O(0, [8121, 9404, 8256, 5886, 226, 1382, 8441, 3794, 7358], () => e(e.s = 9245)), _N_E = e.O()
   }
 ]);

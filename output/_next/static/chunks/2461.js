@@ -719,7 +719,7 @@
     82461: (e, a, t) => {
       "use strict";
       t.r(a), t.d(a, {
-        default: () => W
+        default: () => F
       });
       var o = t(95155),
         c = t(12115),
@@ -1084,14 +1084,12 @@
       };
       var U = t(37897),
         x = t(57157),
-        y = t(98500),
-        k = t.n(y),
-        G = t(45941),
-        C = t(30184),
-        j = t(38256),
-        w = t(12521);
+        y = t(45941),
+        k = t(30184),
+        G = t(38256),
+        C = t(12521);
 
-      function M({
+      function j({
         social: e,
         id: a,
         socialMode: t,
@@ -1100,50 +1098,50 @@
         setIsModalOpened: u,
         previousIcon: b
       }) {
-        let h = (0, j.kj)(),
+        let h = (0, G.kj)(),
           p = (0, r.vp)(e, h),
           _ = s.find(t => t.social === e && t.id === a),
           [S, g] = (0, c.useState)(() => _ ? _.value : ""),
-          [N, y] = (0, c.useState)(),
-          [M, A] = (0, c.useState)(!1),
-          [E, I] = (0, c.useState)(b),
-          [L, B] = (0, c.useState)(t ?? "link"),
-          [R, T] = (0, c.useState)(_?.glow_color || "#a3a3a3"),
-          $ = !!E,
-          D = "custom_url" !== e ? S.replace("https://" + r.Uy[e], "") : S.replace("https://", "");
-        async function F(t) {
-          let o = "custom_url" === e && $ ? R : "",
-            c = await m(e, D, a, L, f, A, N || E, o);
+          [N, j] = (0, c.useState)(),
+          [w, M] = (0, c.useState)(!1),
+          [A, E] = (0, c.useState)(b),
+          [I, L] = (0, c.useState)(t ?? "link"),
+          [B, R] = (0, c.useState)(_?.glow_color || "#a3a3a3"),
+          T = !!A,
+          $ = "custom_url" !== e ? S.replace("https://" + r.Uy[e], "") : S.replace("https://", "");
+        async function D(t) {
+          let o = "custom_url" === e && T ? B : "",
+            c = await m(e, $, a, I, f, M, N || A, o);
           t.target.style.pointerEvents = "none", c ? (d.oR.success(h("dashboard.links.social_edit.save_success")), u(!1)) : t.target.style.pointerEvents = "all"
         }
-        let O = async e => {
+        let F = async e => {
           var a;
           let t;
           e.target.disabled = !0;
           let o = e.target.files?.[0];
           if (!o) return;
-          let c = G.nB.icon,
-            s = W(o.name).toLowerCase();
+          let c = y.nB.icon,
+            s = O(o.name).toLowerCase();
           if (!c.includes(s)) {
             d.oR.error(h("dashboard.links.social_edit.invalid_file")), e.target.disabled = !1, e.target.value = "";
             return
           }
           try {
             let e = await v(o);
-            T(e)
+            R(e)
           } catch (e) {
-            T("#a3a3a3")
+            R("#a3a3a3")
           }
-          y(o), a = o, (t = new FileReader).onload = function(e) {
-            I(e.target.result)
+          j(o), a = o, (t = new FileReader).onload = function(e) {
+            E(e.target.result)
           }, t.readAsDataURL(a)
         };
 
-        function W(e) {
+        function O(e) {
           return "." + e.substring(e.lastIndexOf(".") + 1)
         }
-        let P = e => {
-          B(e)
+        let W = e => {
+          L(e)
         };
         return (0, o.jsxs)(o.Fragment, {
           children: [(0, o.jsxs)("div", {
@@ -1156,19 +1154,19 @@
                   children: h("dashboard.links.social_edit.icon.label")
                 }), (0, o.jsx)("div", {
                   className: n().iconUpload,
-                  children: E ? (0, o.jsxs)(o.Fragment, {
+                  children: A ? (0, o.jsxs)(o.Fragment, {
                     children: [(0, o.jsxs)("div", {
                       className: n().fileBadge,
                       children: [(0, o.jsx)("span", {
-                        children: W(N && N.name ? N.name : E).toUpperCase()
+                        children: O(N && N.name ? N.name : A).toUpperCase()
                       }), (0, o.jsx)("span", {
                         onClick: function() {
-                          I(""), y(""), T("#a3a3a3")
+                          E(""), j(""), R("#a3a3a3")
                         },
                         children: l.A.deleteFile
                       })]
                     }), (0, o.jsx)("img", {
-                      src: E,
+                      src: A,
                       alt: "Icon",
                       className: n().uploadCardImage
                     })]
@@ -1180,17 +1178,17 @@
                       })]
                     }), (0, o.jsx)("input", {
                       type: "file",
-                      accept: w.vJ.icon.map(e => e).join(", "),
+                      accept: C.vJ.icon.map(e => e).join(", "),
                       onChange: e => {
-                        O(e)
+                        F(e)
                       }
                     })]
                   })
                 })]
-              }), $ && (0, o.jsx)(C.A, {
+              }), T && (0, o.jsx)(k.A, {
                 featureName: h("dashboard.links.social_edit.icon_glow.label"),
-                onChangeFunction: T,
-                value: R,
+                onChangeFunction: R,
+                value: B,
                 placeholder: h("dashboard.links.social_edit.icon_glow.placeholder")
               })]
             }), (0, o.jsxs)("div", {
@@ -1201,20 +1199,20 @@
                 element: (0, o.jsxs)("div", {
                   className: n().socialModeSelection,
                   children: [(0, o.jsxs)("span", {
-                    className: `${n().socialModeSelectionButton} ${"link"===L&&n().active}`,
-                    onClick: () => P("link"),
+                    className: `${n().socialModeSelectionButton} ${"link"===I&&n().active}`,
+                    onClick: () => W("link"),
                     children: [l.A.link, " ", h("dashboard.links.social_edit.mode.link_option")]
                   }), (0, o.jsxs)("span", {
-                    className: `${n().socialModeSelectionButton} ${"text"===L&&n().active}`,
-                    onClick: () => P("text"),
+                    className: `${n().socialModeSelectionButton} ${"text"===I&&n().active}`,
+                    onClick: () => W("text"),
                     children: [l.A.text, " ", h("dashboard.links.social_edit.mode.text_option")]
                   })]
                 })
-              }), "link" === L ? (0, o.jsx)(U.A, {
+              }), "link" === I ? (0, o.jsx)(U.A, {
                 onChangeFunction: e => {
                   g(e.target.value)
                 },
-                value: D,
+                value: $,
                 placeholder: p,
                 prefix: r.Uy[e],
                 prefixLength: r.Fb[e],
@@ -1223,7 +1221,7 @@
                 onChangeFunction: e => {
                   g(e.target.value)
                 },
-                value: D,
+                value: $,
                 placeholder: p,
                 icon: l.A["custom_url" === e ? "customUrl" : e]
               })]
@@ -1232,9 +1230,9 @@
             className: n().socialSaveButtonWrapper,
             children: [(0, o.jsxs)("span", {
               className: n().socialSaveButton,
-              onClick: F,
-              children: [M && l.A.loading, " ", h("dashboard.links.social_edit.save_button")]
-            }), (0, o.jsx)(k(), {
+              onClick: D,
+              children: [w && l.A.loading, " ", h("dashboard.links.social_edit.save_button")]
+            }), (0, o.jsx)("a", {
               href: "https://help.guns.lol/getting-started/adding-links",
               target: "_blank",
               children: h("dashboard.links.social_edit.help_link")
@@ -1243,59 +1241,59 @@
         })
       }
 
-      function A({
+      function w({
         social: e,
         setSocials: a,
         setIsModalOpened: t
       }) {
-        let s = (0, j.kj)(),
+        let s = (0, G.kj)(),
           f = (0, r.vp)(e, s),
           [u, b] = (0, c.useState)(""),
           [h, p] = (0, c.useState)(),
           [_, m] = (0, c.useState)(""),
           [S, g] = (0, c.useState)(!1),
-          [y, M] = (0, c.useState)(!1),
-          [A, E] = (0, c.useState)("link"),
-          [I, L] = (0, c.useState)("#a3a3a3");
-        async function B(o) {
-          if (!y) {
-            M(!0), o.target.style.pointerEvents = "none";
+          [j, w] = (0, c.useState)(!1),
+          [M, A] = (0, c.useState)("link"),
+          [E, I] = (0, c.useState)("#a3a3a3");
+        async function L(o) {
+          if (!j) {
+            w(!0), o.target.style.pointerEvents = "none";
             try {
-              let o = "custom_url" === e && _ ? I : "";
-              await N(e, u, a, A, h, g, o) && t(!1)
+              let o = "custom_url" === e && _ ? E : "";
+              await N(e, u, a, M, h, g, o) && t(!1)
             } finally {
-              o.target.style.pointerEvents = "all", M(!1)
+              o.target.style.pointerEvents = "all", w(!1)
             }
           }
         }
-        let R = async e => {
+        let B = async e => {
           var a;
           let t;
           e.target.disabled = !0;
           let o = e.target.files?.[0];
           if (!o) return;
-          let c = G.nB.icon,
-            n = T(o.name).toLowerCase();
+          let c = y.nB.icon,
+            n = R(o.name).toLowerCase();
           if (!c.includes(n)) {
             d.oR.error(s("dashboard.links.social_add.invalid_file")), e.target.disabled = !1, e.target.value = "";
             return
           }
           try {
             let e = await v(o);
-            L(e)
+            I(e)
           } catch (e) {
-            L("#a3a3a3")
+            I("#a3a3a3")
           }
           p(o), a = o, (t = new FileReader).onload = function(e) {
             m(e.target.result)
           }, t.readAsDataURL(a)
         };
 
-        function T(e) {
+        function R(e) {
           return "." + e.substring(e.lastIndexOf(".") + 1)
         }
-        let $ = e => {
-          E(e)
+        let T = e => {
+          A(e)
         };
         return (0, o.jsxs)(o.Fragment, {
           children: [(0, o.jsxs)("div", {
@@ -1316,19 +1314,19 @@
                       })]
                     }), (0, o.jsx)("input", {
                       type: "file",
-                      accept: w.vJ.icon.map(e => e).join(", "),
+                      accept: C.vJ.icon.map(e => e).join(", "),
                       onChange: e => {
-                        R(e)
+                        B(e)
                       }
                     })]
                   }) : (0, o.jsxs)(o.Fragment, {
                     children: [(0, o.jsxs)("div", {
                       className: n().fileBadge,
                       children: [(0, o.jsx)("span", {
-                        children: T(h.name).toUpperCase()
+                        children: R(h.name).toUpperCase()
                       }), (0, o.jsx)("span", {
                         onClick: function() {
-                          m(""), p(""), L("#a3a3a3")
+                          m(""), p(""), I("#a3a3a3")
                         },
                         children: l.A.deleteFile
                       })]
@@ -1339,10 +1337,10 @@
                     })]
                   })
                 })]
-              }), !!_ && (0, o.jsx)(C.A, {
+              }), !!_ && (0, o.jsx)(k.A, {
                 featureName: s("dashboard.links.social_add.icon_glow.label"),
-                onChangeFunction: L,
-                value: I,
+                onChangeFunction: I,
+                value: E,
                 placeholder: s("dashboard.links.social_add.icon_glow.placeholder")
               })]
             }), (0, o.jsxs)("div", {
@@ -1353,16 +1351,16 @@
                 element: (0, o.jsxs)("div", {
                   className: n().socialModeSelection,
                   children: [(0, o.jsxs)("span", {
-                    className: `${n().socialModeSelectionButton} ${"link"===A&&n().active}`,
-                    onClick: () => $("link"),
+                    className: `${n().socialModeSelectionButton} ${"link"===M&&n().active}`,
+                    onClick: () => T("link"),
                     children: [l.A.link, " ", s("dashboard.links.social_add.mode.link_option")]
                   }), (0, o.jsxs)("span", {
-                    className: `${n().socialModeSelectionButton} ${"text"===A&&n().active}`,
-                    onClick: () => $("text"),
+                    className: `${n().socialModeSelectionButton} ${"text"===M&&n().active}`,
+                    onClick: () => T("text"),
                     children: [l.A.text, " ", s("dashboard.links.social_add.mode.text_option")]
                   })]
                 })
-              }), "link" === A ? (0, o.jsx)(U.A, {
+              }), "link" === M ? (0, o.jsx)(U.A, {
                 onChangeFunction: e => {
                   b(e.target.value)
                 },
@@ -1384,9 +1382,9 @@
             className: n().socialSaveButtonWrapper,
             children: [(0, o.jsxs)("span", {
               className: n().socialSaveButton,
-              onClick: B,
+              onClick: L,
               children: [S && l.A.loading, " ", s("dashboard.links.social_add.save_button")]
-            }), (0, o.jsx)(k(), {
+            }), (0, o.jsx)("a", {
               href: "https://help.guns.lol/getting-started/adding-links",
               target: "_blank",
               children: s("dashboard.links.social_add.help_link")
@@ -1394,17 +1392,17 @@
           })]
         })
       }
-      var E = t(44923),
-        I = t(87256),
-        L = t(39768);
+      var M = t(44923),
+        A = t(87256),
+        E = t(39768);
 
-      function B({
+      function I({
         socials: e,
         setSocials: a,
         setCurrentModal: t,
         setIsModalOpened: s
       }) {
-        let l = (0, j.kj)(),
+        let l = (0, G.kj)(),
           [r, f] = (0, c.useState)(e),
           [u, b] = (0, c.useState)(null),
           [h, p] = (0, c.useState)(!1);
@@ -1413,7 +1411,7 @@
         }, []), (0, c.useEffect)(() => {
           f(e)
         }, [e]);
-        let _ = (0, E.FR)((0, E.MS)(E.AN, {
+        let _ = (0, M.FR)((0, M.MS)(M.AN, {
             activationConstraint: {
               distance: 10
             }
@@ -1428,7 +1426,7 @@
             let c = r.findIndex(e => e.id === t.id),
               s = r.findIndex(e => e.id === o.id);
             if (s === c) return;
-            let n = (0, I.VE)(r, c, s),
+            let n = (0, A.VE)(r, c, s),
               u = n.map(e => ({
                 id: e.id
               })); - 1 !== c && -1 !== s && (f(n), a(n)), (await fetch("https://guns.lol/api/dashboard/links/order", {
@@ -1441,9 +1439,9 @@
               })
             })).ok || d.oR.error(l("dashboard.links.badge_list.errors.socials_order"))
           };
-        return h ? (0, o.jsxs)(E.Mp, {
+        return h ? (0, o.jsxs)(M.Mp, {
           sensors: _,
-          collisionDetection: E.fp,
+          collisionDetection: M.fp,
           onDragStart: e => {
             let {
               active: a
@@ -1451,20 +1449,20 @@
             t && b(t)
           },
           onDragEnd: m,
-          children: [(0, o.jsx)(I.gB, {
+          children: [(0, o.jsx)(A.gB, {
             items: r.map(e => e.id),
-            strategy: I.vl,
+            strategy: A.vl,
             children: (0, o.jsx)("div", {
               className: n().displaySocials,
-              children: r.map(e => (0, o.jsx)(R, {
+              children: r.map(e => (0, o.jsx)(L, {
                 item: e,
                 setIsModalOpened: s,
                 setCurrentModal: t,
                 setSocials: a
               }, e.id))
             })
-          }), (0, o.jsx)(E.Hd, {
-            children: u && (0, o.jsx)(R, {
+          }), (0, o.jsx)(M.Hd, {
+            children: u && (0, o.jsx)(L, {
               item: u,
               setIsModalOpened: s,
               setCurrentModal: t,
@@ -1474,13 +1472,13 @@
         }) : null
       }
 
-      function R({
+      function L({
         item: e,
         setIsModalOpened: a,
         setCurrentModal: t,
         setSocials: c
       }) {
-        let s = (0, j.kj)(),
+        let s = (0, G.kj)(),
           {
             attributes: f,
             listeners: u,
@@ -1488,12 +1486,12 @@
             transform: h,
             transition: p,
             isDragging: _
-          } = (0, I.gl)({
+          } = (0, A.gl)({
             id: e.id,
             animateLayoutChanges: () => !1
           }),
           m = {
-            transform: L.Ks.Transform.toString(h),
+            transform: E.Ks.Transform.toString(h),
             transition: p,
             opacity: +!_
           },
@@ -1550,15 +1548,15 @@
           })]
         })
       }
-      var T = t(98241),
-        $ = t.n(T),
-        D = t(54834),
-        F = t(61778),
-        O = t(57776);
-      let W = ({
+      var B = t(98241),
+        R = t.n(B),
+        T = t(54834),
+        $ = t(61778),
+        D = t(57776);
+      let F = ({
         data: e
       }) => {
-        let a = (0, j.kj)(),
+        let a = (0, G.kj)(),
           t = e.config,
           s = ["link", "changeOrder", "ltc", "eth", "deleteButton", "editButton", "empty", "moneroMonochrome", "image", "deleteFile", "loading", "dragHandle", "text", "eye", "eyeOff"],
           [f, u] = (0, c.useState)(t.socials),
@@ -1585,9 +1583,9 @@
             richColors: !0,
             position: "top-center",
             theme: "dark",
-            className: $().toasterStyles,
+            className: R().toasterStyles,
             icons: {
-              success: D.A.successToast
+              success: T.A.successToast
             },
             visibleToasts: 2
           }), (0, o.jsxs)("div", {
@@ -1601,7 +1599,7 @@
               })]
             }), (0, o.jsx)("div", {
               className: n().socialSelectionContainer,
-              children: Object.entries(l.A).map(([e, t], c) => !s.includes(e) && (0, o.jsx)(F.A, {
+              children: Object.entries(l.A).map(([e, t], c) => !s.includes(e) && (0, o.jsx)($.A, {
                 content: S(e),
                 children: (0, o.jsx)("div", {
                   onClick: () => {
@@ -1627,13 +1625,13 @@
                 }, c)
               }, c))
             })]
-          }), (0, o.jsx)(O.A, {
+          }), (0, o.jsx)(D.A, {
             opened: b,
             onClose: () => h(!1),
             title: m,
             centered: !0,
             size: "430px",
-            children: "edit" === p.category ? (0, o.jsx)(M, {
+            children: "edit" === p.category ? (0, o.jsx)(j, {
               social: p.social,
               id: p.id,
               socialMode: p.mode,
@@ -1641,14 +1639,14 @@
               socialsConfig: f,
               setSocials: u,
               setIsModalOpened: h
-            }) : "social" === p.category && (0, o.jsx)(A, {
+            }) : "social" === p.category && (0, o.jsx)(w, {
               social: p.social,
               setSocials: u,
               setIsModalOpened: h
             })
           }), (0, o.jsx)("div", {
             className: n().displaySocialsWrapper,
-            children: (0, o.jsx)(B, {
+            children: (0, o.jsx)(I, {
               socials: f,
               setSocials: u,
               setCurrentModal: _,

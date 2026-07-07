@@ -323,7 +323,7 @@
     78136: (e, a, t) => {
       "use strict";
       t.r(a), t.d(a, {
-        default: () => $
+        default: () => C
       });
       var s = t(95155),
         r = t(12115),
@@ -338,38 +338,36 @@
         h = t(45687),
         u = t(67421),
         v = t(37897),
-        g = t(98500),
-        f = t.n(g),
-        b = t(61778),
-        x = t(38256),
-        j = t(57776),
-        y = t(99387),
-        _ = t(29483);
+        g = t(61778),
+        f = t(38256),
+        b = t(57776),
+        x = t(99387),
+        j = t(29483);
 
-      function N({
+      function y({
         userDetails: e
       }) {
-        let a = (0, x.kj)(),
+        let a = (0, f.kj)(),
           [t, l] = (0, r.useState)(""),
           [n, d] = (0, r.useState)("trending"),
-          [o, g] = (0, r.useState)(null),
-          [N, A] = (0, r.useState)(1),
-          [T, w] = (0, r.useState)(!0),
-          [S, C] = (0, r.useState)({
+          [o, y] = (0, r.useState)(null),
+          [_, N] = (0, r.useState)(1),
+          [A, T] = (0, r.useState)(!0),
+          [w, S] = (0, r.useState)({
             search: "",
             sort: "",
             templateAuthor: ""
           }),
-          [k, $] = (0, r.useState)(!1),
-          [R, O] = (0, r.useState)(!1),
-          [q, I] = (0, r.useState)(""),
-          [F, L] = (0, r.useState)(""),
-          [B, M] = (0, r.useState)(null),
-          D = e.username,
-          E = new Date().getTime(),
-          [U, W] = (0, r.useState)(e.favorite_templates || []),
-          [P, V] = (0, r.useState)(!0),
-          z = {
+          [C, k] = (0, r.useState)(!1),
+          [$, R] = (0, r.useState)(!1),
+          [O, q] = (0, r.useState)(""),
+          [I, F] = (0, r.useState)(""),
+          [L, B] = (0, r.useState)(null),
+          M = e.username,
+          D = new Date().getTime(),
+          [E, U] = (0, r.useState)(e.favorite_templates || []),
+          [W, P] = (0, r.useState)(!0),
+          V = {
             name: "",
             id: "",
             premiumOnly: !1,
@@ -379,13 +377,13 @@
               avatar: ""
             }
           },
-          [H, G] = (0, r.useState)(z),
-          [J] = (0, _.A)(t, 600);
+          [z, H] = (0, r.useState)(V),
+          [G] = (0, j.A)(t, 600);
         (0, r.useEffect)(() => {
-          k && J !== S.search && Q(void 0, J)
-        }, [k, J, S.search]);
-        let Z = (0, r.useMemo)(() => "applyTemplate" === q ? H.premiumOnly && !e.premium ? a("dashboard.templates.shared.modal.apply.premium_only_title") : a("dashboard.templates.shared.modal.apply.title") : "authorFilter" === q ? a("dashboard.templates.library.modal.author_filter.title") : a("dashboard.templates.shared.modal.apply.title"), [q, H.premiumOnly, e.premium, a]),
-          K = (0, r.useMemo)(() => [{
+          C && G !== w.search && K(void 0, G)
+        }, [C, G, w.search]);
+        let J = (0, r.useMemo)(() => "applyTemplate" === O ? z.premiumOnly && !e.premium ? a("dashboard.templates.shared.modal.apply.premium_only_title") : a("dashboard.templates.shared.modal.apply.title") : "authorFilter" === O ? a("dashboard.templates.library.modal.author_filter.title") : a("dashboard.templates.shared.modal.apply.title"), [O, z.premiumOnly, e.premium, a]),
+          Z = (0, r.useMemo)(() => [{
             label: a("dashboard.templates.library.sort.options.newest"),
             value: "newest"
           }, {
@@ -401,11 +399,11 @@
             label: a("dashboard.templates.library.sort.options.premium"),
             value: "premium"
           }], [a]),
-          Q = async (e, a) => {
+          K = async (e, a) => {
             let s = "string" == typeof e ? e : n,
               r = "string" == typeof a ? a : t;
-            if (r === S.search && s === S.sort && (B?.username || "") === S.templateAuthor) return;
-            w(!0), A(1);
+            if (r === w.search && s === w.sort && (L?.username || "") === w.templateAuthor) return;
+            T(!0), N(1);
             let l = await fetch("https://guns.lol/api/dashboard/templates/library", {
                 method: "POST",
                 headers: {
@@ -415,18 +413,18 @@
                   page: 1,
                   sort: s,
                   search: r,
-                  templateAuthor: B?.username
+                  templateAuthor: L?.username
                 })
               }),
               i = await l.json();
-            l.ok ? (V(!(i.templates.length < 10)), g(i.templates)) : c.oR.error(i.error), setTimeout(() => {
-              w(!1)
-            }, 500), C({
+            l.ok ? (P(!(i.templates.length < 10)), y(i.templates)) : c.oR.error(i.error), setTimeout(() => {
+              T(!1)
+            }, 500), S({
               search: r,
               sort: s,
-              templateAuthor: B?.username || ""
+              templateAuthor: L?.username || ""
             })
-          }, X = async e => {
+          }, Q = async e => {
             e.target.style.pointerEvents = "none", e.target.innerHTML = (0, h.qV)(m.A.loading);
             try {
               let e = await fetch("https://guns.lol/api/dashboard/templates/library?type=scroll_loading", {
@@ -435,20 +433,20 @@
                     "Content-Type": "application/json"
                   },
                   body: JSON.stringify({
-                    page: N + 1,
+                    page: _ + 1,
                     sort: n,
                     search: t,
-                    templateAuthor: B?.username
+                    templateAuthor: L?.username
                   })
                 }),
                 a = await e.json();
-              e.ok ? (g(e => [...e, ...a.templates]), V(a.hasMore), A(e => e + 1)) : c.oR.error(a.error)
+              e.ok ? (y(e => [...e, ...a.templates]), P(a.hasMore), N(e => e + 1)) : c.oR.error(a.error)
             } finally {
               e.target.style.pointerEvents = "auto", e.target.innerHTML = `${(0,h.qV)(m.A.loadMore)} ${a("dashboard.templates.shared.actions.load_more")}`
             }
           };
         (0, r.useEffect)(() => {
-          k || e();
+          C || e();
           async function e() {
             let e = await fetch("https://guns.lol/api/dashboard/templates/library", {
                 method: "POST",
@@ -462,10 +460,10 @@
                 })
               }),
               a = await e.json();
-            e.ok ? (V(!(a.templates.length < 10)), g(a.templates)) : c.oR.error(a.error), w(!1), $(!0)
+            e.ok ? (P(!(a.templates.length < 10)), y(a.templates)) : c.oR.error(a.error), T(!1), k(!0)
           }
         }, [n, t, o]);
-        let Y = async e => {
+        let X = async e => {
           let a = await fetch("https://guns.lol/api/dashboard/templates/favorite", {
               method: "POST",
               headers: {
@@ -476,58 +474,58 @@
               })
             }),
             t = await a.json();
-          a.ok ? (c.oR.success(t.message), W(t.favorite_templates), "favorite" === t.type ? o?.filter(a => {
+          a.ok ? (c.oR.success(t.message), U(t.favorite_templates), "favorite" === t.type ? o?.filter(a => {
             a.id === e && (a.favorites += 1)
           }) : o?.filter(a => {
             a.id === e && a.favorites > 0 && (a.favorites -= 1)
           })) : c.oR.error(t.error)
-        }, ee = async () => {
-          if ("" === F) return void c.oR.error(a("dashboard.templates.library.modal.author_filter.errors.username_required"));
+        }, Y = async () => {
+          if ("" === I) return void c.oR.error(a("dashboard.templates.library.modal.author_filter.errors.username_required"));
           let e = await fetch("https://guns.lol/api/dashboard/templates/templateAuthor", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json"
               },
               body: JSON.stringify({
-                username: F
+                username: I
               })
             }),
             t = await e.json();
-          e.ok ? M({
+          e.ok ? B({
             username: t.username,
             avatar: t.avatar,
             displayName: t.display_name
           }) : c.oR.error(t.error)
         };
         return (0, s.jsxs)(s.Fragment, {
-          children: [(0, s.jsx)(j.A, {
-            opened: R,
-            onClose: () => O(!1),
-            size: H.premiumOnly && !e.premium ? "auto" : "500px",
-            title: Z,
+          children: [(0, s.jsx)(b.A, {
+            opened: $,
+            onClose: () => R(!1),
+            size: z.premiumOnly && !e.premium ? "auto" : "500px",
+            title: J,
             centered: !0,
-            children: "applyTemplate" === q ? (0, s.jsx)(u.A, {
-              selectedTemplate: H,
+            children: "applyTemplate" === O ? (0, s.jsx)(u.A, {
+              selectedTemplate: z,
               userDetails: e,
-              closeModal: () => O(!1)
-            }) : "authorFilter" === q && (0, s.jsx)("div", {
+              closeModal: () => R(!1)
+            }) : "authorFilter" === O && (0, s.jsx)("div", {
               className: i().authorFilterContainer,
-              children: B ? (0, s.jsxs)("div", {
+              children: L ? (0, s.jsxs)("div", {
                 className: i().templateAuthorFilterInformationContainer,
                 children: [(0, s.jsxs)("div", {
                   className: i().templateAuthorFilterInformation,
                   children: [(0, s.jsx)("img", {
-                    src: B.avatar,
+                    src: L.avatar,
                     alt: "Avatar"
                   }), (0, s.jsxs)("div", {
                     className: i().templateAuthorFilterInformationText,
                     children: [(0, s.jsx)("h1", {
-                      children: B.displayName || B.username
-                    }), (0, s.jsx)(f(), {
-                      href: `/${B.username}`,
+                      children: L.displayName || L.username
+                    }), (0, s.jsx)("a", {
+                      href: `/${L.username}`,
                       target: "_blank",
                       children: a("dashboard.templates.library.modal.author_filter.profile_link", {
-                        username: B.username
+                        username: L.username
                       })
                     })]
                   })]
@@ -535,13 +533,13 @@
                   className: i().authorFilterContainerButtonContainer,
                   children: [(0, s.jsx)("span", {
                     onClick: () => {
-                      Q(), O(!1)
+                      K(), R(!1)
                     },
                     className: i().authorFilterContainerButton,
                     children: a("dashboard.templates.library.modal.author_filter.search_templates_button")
                   }), (0, s.jsx)("span", {
                     onClick: () => {
-                      L(""), M(null)
+                      F(""), B(null)
                     },
                     className: i().authorFilterContainerButtonClose,
                     children: a("dashboard.templates.library.modal.author_filter.remove_button")
@@ -552,18 +550,18 @@
                   featureName: a("dashboard.templates.library.modal.author_filter.input_label"),
                   icon: m.A.defaultAvatar,
                   placeholder: a("dashboard.templates.library.modal.author_filter.input_placeholder"),
-                  value: F,
+                  value: I,
                   onChangeFunction: e => {
-                    L(e.target.value)
+                    F(e.target.value)
                   }
                 }), (0, s.jsxs)("div", {
                   className: i().authorFilterContainerButtonContainer,
                   children: [(0, s.jsx)("span", {
-                    onClick: ee,
+                    onClick: Y,
                     className: i().authorFilterContainerButton,
                     children: a("dashboard.templates.library.modal.author_filter.search_button")
                   }), (0, s.jsx)("span", {
-                    onClick: () => O(!1),
+                    onClick: () => R(!1),
                     className: i().authorFilterContainerButtonClose,
                     children: a("dashboard.templates.actions.close")
                   })]
@@ -585,7 +583,7 @@
                   value: t,
                   maxLength: 40,
                   onKeyPress: e => {
-                    "Enter" === e.key && (e.preventDefault(), Q())
+                    "Enter" === e.key && (e.preventDefault(), K())
                   },
                   onChange: e => {
                     l(e.target.value)
@@ -598,11 +596,11 @@
                   },
                   children: m.A.removeSearch
                 })]
-              }), (0, s.jsx)(b.A, {
+              }), (0, s.jsx)(g.A, {
                 content: a("dashboard.templates.library.search.button"),
                 children: (0, s.jsx)("span", {
                   className: i().searchButton,
-                  onClick: Q,
+                  onClick: K,
                   children: m.A.search
                 })
               })]
@@ -610,24 +608,24 @@
               className: i().filterWrapper,
               children: [(0, s.jsx)(p.A, {
                 onChangeFunction: e => {
-                  d(e), Q(e)
+                  d(e), K(e)
                 },
                 value: n,
-                data: K,
+                data: Z,
                 icon: m.A.sortBy,
                 placeholder: a("dashboard.templates.library.sort.placeholder"),
                 className: i().filterSelectInput
               }), (0, s.jsx)("span", {
                 className: i().userFilter,
                 onClick: () => {
-                  G(z), I("authorFilter"), O(!0)
+                  H(V), q("authorFilter"), R(!0)
                 },
-                children: F ? m.A.userFilterActive : m.A.userFilter
+                children: I ? m.A.userFilterActive : m.A.userFilter
               })]
             })]
           }), (0, s.jsx)("div", {
             className: i().templateLibrary,
-            children: T ? (0, s.jsx)("div", {
+            children: A ? (0, s.jsx)("div", {
               className: i().loadingContainer,
               children: m.A.loading
             }) : (0, s.jsx)(s.Fragment, {
@@ -643,18 +641,18 @@
                     draggable: "false"
                   }), (0, s.jsxs)("div", {
                     className: i().templateOverlay,
-                    children: [e.premium_only && (0, s.jsx)(b.A, {
+                    children: [e.premium_only && (0, s.jsx)(g.A, {
                       content: a("dashboard.templates.shared.tooltips.premium_only_badge"),
                       children: (0, s.jsxs)("span", {
                         className: i().premiumOnly,
                         children: [m.A.premium, " ", a("dashboard.templates.shared.badges.premium")]
                       })
-                    }), (0, s.jsx)(b.A, {
-                      content: U.includes(e.id) ? a("dashboard.templates.shared.tooltips.unfavorite") : a("dashboard.templates.shared.tooltips.favorite"),
+                    }), (0, s.jsx)(g.A, {
+                      content: E.includes(e.id) ? a("dashboard.templates.shared.tooltips.unfavorite") : a("dashboard.templates.shared.tooltips.favorite"),
                       children: (0, s.jsx)("span", {
-                        onClick: () => Y(e.id),
+                        onClick: () => X(e.id),
                         className: i().favoriteTemplate,
-                        children: U.includes(e.id) ? m.A.favoritedTemplate : m.A.favoriteTemplate
+                        children: E.includes(e.id) ? m.A.favoritedTemplate : m.A.favoriteTemplate
                       })
                     })]
                   }), (0, s.jsxs)("div", {
@@ -709,7 +707,7 @@
                         className: i().useTemplateButton,
                         onClick: () => {
                           var a, t, s, r, l, i;
-                          return a = e.id, t = e.name, s = e.premium_only, r = e.image, l = e.user_information.username, i = e.user_information.avatar, void(I("applyTemplate"), G({
+                          return a = e.id, t = e.name, s = e.premium_only, r = e.image, l = e.user_information.username, i = e.user_information.avatar, void(q("applyTemplate"), H({
                             name: t,
                             id: a,
                             premiumOnly: s,
@@ -718,26 +716,26 @@
                               username: l,
                               avatar: i
                             }
-                          }), O(!0))
+                          }), R(!0))
                         },
                         children: a("dashboard.templates.shared.actions.use_template")
-                      }), (0, s.jsx)(y.A, {
+                      }), (0, s.jsx)(x.A, {
                         value: `https://guns.lol/templates/${e.id}`,
                         children: ({
                           copied: e,
                           copy: t
-                        }) => (0, s.jsx)(b.A, {
+                        }) => (0, s.jsx)(g.A, {
                           content: e ? a("dashboard.templates.shared.tooltips.copy_success") : a("dashboard.templates.shared.tooltips.copy"),
                           children: (0, s.jsx)("span", {
                             onClick: t,
                             children: m.A.shareTemplate
                           })
                         })
-                      }), (0, s.jsx)(b.A, {
+                      }), (0, s.jsx)(g.A, {
                         content: a("dashboard.templates.shared.tooltips.preview"),
                         children: (0, s.jsx)("a", {
                           target: "_blank",
-                          href: `/${D}?templatePreview=true&templateId=${e.id}&t=${E}`,
+                          href: `/${M}?templatePreview=true&templateId=${e.id}&t=${D}`,
                           children: m.A.previewEye
                         })
                       })]
@@ -753,31 +751,31 @@
                 })]
               })
             })
-          }), !T && (0, s.jsx)("div", {
+          }), !A && (0, s.jsx)("div", {
             className: i().loadMoreContainer,
-            children: P && (0, s.jsxs)("span", {
+            children: W && (0, s.jsxs)("span", {
               className: i().loadMore,
-              onClick: X,
+              onClick: Q,
               children: [m.A.loadMore, " ", a("dashboard.templates.shared.actions.load_more")]
             })
           })]
         })
       }
-      var A = t(57157),
-        T = t(45941),
-        w = t(12521);
+      var _ = t(57157),
+        N = t(45941),
+        A = t(12521);
 
-      function S({
+      function T({
         userDetails: e
       }) {
-        let a = (0, x.kj)(),
-          t = (0, x.useLang)(),
+        let a = (0, f.kj)(),
+          t = (0, f.useLang)(),
           l = (0, r.useMemo)(() => new Intl.NumberFormat(t || "en"), [t]),
           [n, d] = (0, r.useState)([]),
           o = e.config.avatar,
           p = e.premium ? 20 : 10,
-          [g, f] = (0, r.useState)(!1),
-          [_, N] = (0, r.useState)({
+          [j, y] = (0, r.useState)(!1),
+          [T, w] = (0, r.useState)({
             name: "",
             id: "",
             type: "",
@@ -788,7 +786,7 @@
             file: null,
             unlisted_template_id: ""
           }),
-          [S, C] = (0, r.useState)(_.is_private ? "private" : _.is_unlisted ? "unlisted" : "public"),
+          [S, C] = (0, r.useState)(T.is_private ? "private" : T.is_unlisted ? "unlisted" : "public"),
           [k, $] = (0, r.useState)(!0),
           [R, O] = (0, r.useState)(""),
           [q, I] = (0, r.useState)({
@@ -819,11 +817,11 @@
                   "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
-                  templateId: _.id
+                  templateId: T.id
                 })
               }),
               a = await e.json();
-            e.ok ? (d(n.filter(e => e.id !== _.id)), c.oR.success(a.message), f(!1)) : c.oR.error(a.error)
+            e.ok ? (d(n.filter(e => e.id !== T.id)), c.oR.success(a.message), y(!1)) : c.oR.error(a.error)
           } finally {
             e.target.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M7 21q-.825 0-1.412-.587T5 19V6q-.425 0-.712-.288T4 5q0-.425.288-.712T5 4h4q0-.425.288-.712T10 3h4q.425 0 .713.288T15 4h4q.425 0 .713.288T20 5q0 .425-.288.713T19 6v13q0 .825-.587 1.413T17 21zm3-4q.425 0 .713-.288T11 16V9q0-.425-.288-.712T10 8q-.425 0-.712.288T9 9v7q0 .425.288.713T10 17m4 0q.425 0 .713-.288T15 16V9q0-.425-.288-.712T14 8q-.425 0-.712.288T13 9v7q0 .425.288.713T14 17"></path></svg> ${a("dashboard.templates.uploads.actions.delete")}`, e.target.style.pointerEvents = "auto"
           }
@@ -837,17 +835,17 @@
           e.target.disabled = !0;
           let r = e.target.files?.[0];
           if (!r) return e.target.disabled = !1, e.target.value = "", c.oR.error(a("dashboard.templates.uploads.errors.preview_required"));
-          let l = T.nB.templateImage,
-            i = T.o2.templateImage,
+          let l = N.nB.templateImage,
+            i = N.o2.templateImage,
             n = M(r.name);
           return l.includes(n) ? r.size > 1e6 * i ? (e.target.disabled = !1, e.target.value = "", c.oR.error(a("dashboard.templates.uploads.errors.file_too_large", {
             size: i
-          }))) : void(N(e => ({
+          }))) : void(w(e => ({
             ...e,
             file: r
           })), t = r, (s = new FileReader).onload = function(e) {
             let a = e.target.result;
-            N(e => ({
+            w(e => ({
               ...e,
               image: a
             }))
@@ -858,25 +856,25 @@
           return "." + e.substring(e.lastIndexOf(".") + 1)
         }
         let D = async () => {
-          if ("" === _.name.trim()) return c.oR.error(a("dashboard.templates.uploads.errors.name_required"));
-          if (_.name.length > 30) return c.oR.error(a("dashboard.templates.uploads.errors.name_too_long"));
-          if (0 === _.tags.length) return c.oR.error(a("dashboard.templates.uploads.errors.tags_required"));
-          if ("" === _.image) return c.oR.error(a("dashboard.templates.uploads.errors.preview_required"));
-          if (_.tags.length > 10) return c.oR.error(a("dashboard.templates.uploads.errors.max_tags"));
+          if ("" === T.name.trim()) return c.oR.error(a("dashboard.templates.uploads.errors.name_required"));
+          if (T.name.length > 30) return c.oR.error(a("dashboard.templates.uploads.errors.name_too_long"));
+          if (0 === T.tags.length) return c.oR.error(a("dashboard.templates.uploads.errors.tags_required"));
+          if ("" === T.image) return c.oR.error(a("dashboard.templates.uploads.errors.preview_required"));
+          if (T.tags.length > 10) return c.oR.error(a("dashboard.templates.uploads.errors.max_tags"));
           let e = new FormData;
-          e.append("templateId", _.id), e.append("name", _.name), e.append("tags", JSON.stringify(_.tags)), _.file && e.append("image", _.file);
+          e.append("templateId", T.id), e.append("name", T.name), e.append("tags", JSON.stringify(T.tags)), T.file && e.append("image", T.file);
           let t = await fetch("https://guns.lol/api/dashboard/templates/edit", {
               method: "POST",
               body: e
             }),
             s = await t.json(),
             r = s.template;
-          t.ok ? (d(n.map(e => e.id === _.id ? {
+          t.ok ? (d(n.map(e => e.id === T.id ? {
             ...e,
             name: r.name,
             image: r.image,
             tags: r.tags
-          } : e)), c.oR.success(a("dashboard.templates.uploads.success.updated")), f(!1), N({
+          } : e)), c.oR.success(a("dashboard.templates.uploads.success.updated")), y(!1), w({
             name: "",
             id: "",
             type: "",
@@ -891,11 +889,11 @@
           if ("" === R) return c.oR.error(a("dashboard.templates.uploads.errors.tag_required"));
           if (R.length > 15) return c.oR.error(a("dashboard.templates.uploads.errors.tag_too_long"));
           if (R.length < 3) return c.oR.error(a("dashboard.templates.uploads.errors.tag_too_short"));
-          if (_.tags.length >= 10) return c.oR.error(a("dashboard.templates.uploads.errors.max_tags"));
-          if (_.tags.includes(R)) return c.oR.error(a("dashboard.templates.uploads.errors.tag_exists"));
+          if (T.tags.length >= 10) return c.oR.error(a("dashboard.templates.uploads.errors.max_tags"));
+          if (T.tags.includes(R)) return c.oR.error(a("dashboard.templates.uploads.errors.tag_exists"));
           if (!/^[a-zA-Z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/.test(R)) return c.oR.error(a("dashboard.templates.uploads.errors.tag_invalid_chars"));
           let e = R.replace(/\s+/g, "");
-          N(a => ({
+          w(a => ({
             ...a,
             tags: [...a.tags, e]
           })), O("")
@@ -903,21 +901,21 @@
           let e = await fetch("https://guns.lol/api/dashboard/templates/visibility", {
               method: "POST",
               body: JSON.stringify({
-                templateId: _.id,
+                templateId: T.id,
                 visibility: S
               })
             }),
             a = await e.json(),
             t = a.unlistedId || "";
-          e.ok ? (d(n.map(e => e.id === _.id ? {
+          e.ok ? (d(n.map(e => e.id === T.id ? {
             ...e,
             is_private: "private" === S,
             is_unlisted: "unlisted" === S,
             unlisted_template_id: t
-          } : e)), N(e => ({
+          } : e)), w(e => ({
             ...e,
             unlisted_template_id: t
-          })), c.oR.success(a.message), "unlisted" !== S && (f(!1), N({
+          })), c.oR.success(a.message), "unlisted" !== S && (y(!1), w({
             name: "",
             id: "",
             type: "",
@@ -934,21 +932,21 @@
           unlisted: a("dashboard.templates.uploads.visibility.unlisted")
         };
         return (0, s.jsxs)(s.Fragment, {
-          children: ["use" === _.type ? (0, s.jsx)(j.A, {
-            opened: g,
-            onClose: () => f(!1),
+          children: ["use" === T.type ? (0, s.jsx)(b.A, {
+            opened: j,
+            onClose: () => y(!1),
             size: q.premiumOnly && !e.premium ? "auto" : "500px",
             title: q.premiumOnly && !e.premium ? a("dashboard.templates.shared.modal.apply.premium_only_title") : a("dashboard.templates.shared.modal.apply.title"),
             centered: !0,
             children: (0, s.jsx)(u.A, {
               selectedTemplate: q,
               userDetails: e,
-              closeModal: () => f(!1)
+              closeModal: () => y(!1)
             })
-          }) : (0, s.jsx)(j.A, {
-            opened: g,
+          }) : (0, s.jsx)(b.A, {
+            opened: j,
             onClose: () => {
-              f(!1), N({
+              y(!1), w({
                 name: "",
                 id: "",
                 type: "",
@@ -960,17 +958,17 @@
                 unlisted_template_id: ""
               })
             },
-            title: L[_.type],
+            title: L[T.type],
             centered: !0,
             size: "450px",
-            children: "visibility" === _.type ? (0, s.jsxs)("div", {
+            children: "visibility" === T.type ? (0, s.jsxs)("div", {
               className: i().visibilityContainer,
               children: [(0, s.jsx)("h3", {
                 className: i().visibilityDescription,
                 children: a("dashboard.templates.uploads.visibility.description")
               }), (0, s.jsx)("div", {
                 className: i().visibilityCurrentValueWrapper,
-                children: (0, s.jsx)(A.A, {
+                children: (0, s.jsx)(_.A, {
                   featureName: a("dashboard.templates.uploads.visibility.label"),
                   helpDescription: a("dashboard.templates.uploads.visibility.help"),
                   element: (0, s.jsxs)("span", {
@@ -981,7 +979,7 @@
                     children: [m.A.templateVisibility, " ", W[S]]
                   })
                 })
-              }), "unlisted" === S && _.unlisted_template_id && (0, s.jsxs)("div", {
+              }), "unlisted" === S && T.unlisted_template_id && (0, s.jsxs)("div", {
                 className: i().unlistedLinkContainer,
                 children: [(0, s.jsx)("h1", {
                   className: i().unlistedLinkText,
@@ -990,9 +988,9 @@
                   className: i().unlistedLinkBox,
                   children: [(0, s.jsx)("span", {
                     className: i().unlistedLink,
-                    children: `guns.lol/templates/u/${_.unlisted_template_id}`
-                  }), (0, s.jsx)(y.A, {
-                    value: `https://guns.lol/templates/u/${_.unlisted_template_id}`,
+                    children: `guns.lol/templates/u/${T.unlisted_template_id}`
+                  }), (0, s.jsx)(x.A, {
+                    value: `https://guns.lol/templates/u/${T.unlisted_template_id}`,
                     children: ({
                       copied: e,
                       copy: a
@@ -1008,11 +1006,11 @@
                 onClick: U,
                 children: a("dashboard.templates.uploads.actions.change_visibility")
               })]
-            }) : "delete" === _.type ? (0, s.jsxs)(s.Fragment, {
+            }) : "delete" === T.type ? (0, s.jsxs)(s.Fragment, {
               children: [(0, s.jsx)("h3", {
                 className: i().confirmationMessage,
                 children: a("dashboard.templates.uploads.modals.delete.confirmation", {
-                  name: _.name
+                  name: T.name
                 })
               }), (0, s.jsxs)("div", {
                 className: i().confirmationContainer,
@@ -1020,11 +1018,11 @@
                   onClick: e => F(e),
                   children: [m.A.deleteButton, " ", a("dashboard.templates.uploads.actions.delete")]
                 }), (0, s.jsx)("span", {
-                  onClick: () => f(!1),
+                  onClick: () => y(!1),
                   children: a("dashboard.templates.uploads.actions.cancel")
                 })]
               })]
-            }) : "edit" === _.type && (0, s.jsxs)("div", {
+            }) : "edit" === T.type && (0, s.jsxs)("div", {
               className: i().createTemplateContainerWrapper,
               children: [(0, s.jsx)("h3", {
                 className: i().createTemplateText,
@@ -1038,7 +1036,7 @@
                     children: a("dashboard.templates.uploads.edit.preview_title")
                   }), (0, s.jsx)("div", {
                     className: i().previewUpload,
-                    children: "" === _.image ? (0, s.jsxs)(s.Fragment, {
+                    children: "" === T.image ? (0, s.jsxs)(s.Fragment, {
                       children: [(0, s.jsxs)("div", {
                         className: i().uploadCardText,
                         children: [m.A.image, (0, s.jsx)("h1", {
@@ -1046,7 +1044,7 @@
                         })]
                       }), (0, s.jsx)("input", {
                         type: "file",
-                        accept: w.vJ.templateImage.map(e => e).join(", "),
+                        accept: A.vJ.templateImage.map(e => e).join(", "),
                         onChange: e => {
                           B(e)
                         }
@@ -1055,10 +1053,10 @@
                       children: [(0, s.jsxs)("div", {
                         className: i().fileBadge,
                         children: [(0, s.jsx)("span", {
-                          children: M(_.file?.name || _.image).toUpperCase()
+                          children: M(T.file?.name || T.image).toUpperCase()
                         }), (0, s.jsx)("span", {
                           onClick: function() {
-                            N(e => ({
+                            w(e => ({
                               ...e,
                               image: "",
                               file: null
@@ -1067,7 +1065,7 @@
                           children: m.A.deleteFile
                         })]
                       }), (0, s.jsx)("img", {
-                        src: _.image,
+                        src: T.image,
                         alt: "File",
                         className: i().uploadCardImage
                       })]
@@ -1077,9 +1075,9 @@
                   featureName: a("dashboard.templates.uploads.edit.name_label"),
                   icon: m.A.templateName,
                   placeholder: a("dashboard.templates.uploads.edit.name_placeholder"),
-                  value: _.name,
+                  value: T.name,
                   onChangeFunction: e => {
-                    N(a => ({
+                    w(a => ({
                       ...a,
                       name: e.target.value
                     }))
@@ -1110,9 +1108,9 @@
                         onClick: E,
                         children: m.A.addSign
                       })]
-                    }), _.tags.length > 0 && (0, s.jsx)("div", {
+                    }), T.tags.length > 0 && (0, s.jsx)("div", {
                       className: i().templateTagsList,
-                      children: _.tags.map((e, a) => (0, s.jsxs)("div", {
+                      children: T.tags.map((e, a) => (0, s.jsxs)("div", {
                         className: i().tag,
                         children: [(0, s.jsx)("span", {
                           className: i().tagName,
@@ -1120,7 +1118,7 @@
                         }), (0, s.jsx)("span", {
                           onClick: () => {
                             let e;
-                            return e = _.tags.filter((e, t) => t !== a), void N(a => ({
+                            return e = T.tags.filter((e, t) => t !== a), void w(a => ({
                               ...a,
                               tags: e
                             }))
@@ -1163,19 +1161,19 @@
                       draggable: "false"
                     }), (t.premium_only || t.is_private || t.is_unlisted) && (0, s.jsxs)("div", {
                       className: i().templateOverlay,
-                      children: [t.premium_only && (0, s.jsx)(b.A, {
+                      children: [t.premium_only && (0, s.jsx)(g.A, {
                         content: a("dashboard.templates.shared.tooltips.premium_only_badge"),
                         children: (0, s.jsxs)("span", {
                           className: i().premiumOnly,
                           children: [m.A.premium, " ", a("dashboard.templates.shared.badges.premium")]
                         })
-                      }), t.is_unlisted ? (0, s.jsx)(b.A, {
+                      }), t.is_unlisted ? (0, s.jsx)(g.A, {
                         content: a("dashboard.templates.uploads.tooltips.unlisted"),
                         children: (0, s.jsxs)("span", {
                           className: i().unlistedTemplate,
                           children: [m.A.unlisted, " ", a("dashboard.templates.uploads.badges.unlisted")]
                         })
-                      }) : t.is_private && (0, s.jsx)(b.A, {
+                      }) : t.is_private && (0, s.jsx)(g.A, {
                         content: a("dashboard.templates.uploads.tooltips.private"),
                         children: (0, s.jsxs)("span", {
                           className: i().privateTemplate,
@@ -1234,7 +1232,7 @@
                           className: i().useTemplateButton,
                           onClick: () => {
                             var a, s, r, l, i;
-                            return a = t.id, s = t.name, r = t.premium_only, l = t.image, i = e.username, void(N({
+                            return a = t.id, s = t.name, r = t.premium_only, l = t.image, i = e.username, void(w({
                               name: s,
                               id: a,
                               type: "use",
@@ -1253,15 +1251,15 @@
                                 username: i,
                                 avatar: o
                               }
-                            }), f(!0))
+                            }), y(!0))
                           },
                           children: a("dashboard.templates.shared.actions.use_template")
-                        }), (0, s.jsx)(y.A, {
+                        }), (0, s.jsx)(x.A, {
                           value: `https://guns.lol/templates/${t.is_unlisted?"u/"+t.unlisted_template_id:t.id}`,
                           children: t.is_unlisted ? ({
                             copied: e,
                             copy: t
-                          }) => (0, s.jsx)(b.A, {
+                          }) => (0, s.jsx)(g.A, {
                             content: e ? a("dashboard.templates.shared.tooltips.copy_success") : a("dashboard.templates.uploads.tooltips.copy_unique"),
                             children: (0, s.jsx)("span", {
                               onClick: t,
@@ -1270,7 +1268,7 @@
                           }) : ({
                             copied: e,
                             copy: t
-                          }) => (0, s.jsx)(b.A, {
+                          }) => (0, s.jsx)(g.A, {
                             content: e ? a("dashboard.templates.shared.tooltips.copy_success") : a("dashboard.templates.shared.tooltips.copy"),
                             children: (0, s.jsx)("span", {
                               onClick: t,
@@ -1280,7 +1278,7 @@
                         }), (0, s.jsx)("span", {
                           onClick: () => {
                             var e, a;
-                            return e = t.id, a = t.name, void(N({
+                            return e = t.id, a = t.name, void(w({
                               name: a,
                               id: e,
                               is_private: !1,
@@ -1290,14 +1288,14 @@
                               type: "edit",
                               file: null,
                               unlisted_template_id: ""
-                            }), f(!0))
+                            }), y(!0))
                           },
                           className: i().editTemplate,
                           children: m.A.editTemplate
                         }), (0, s.jsx)("span", {
                           onClick: () => {
                             var e, a, s, r;
-                            return e = t.id, a = t.name, s = t.is_private, void(N({
+                            return e = t.id, a = t.name, s = t.is_private, void(w({
                               name: a,
                               id: e,
                               type: "visibility",
@@ -1307,14 +1305,14 @@
                               image: "",
                               file: null,
                               unlisted_template_id: t.unlisted_template_id
-                            }), C(s ? "private" : r ? "unlisted" : "public"), f(!0))
+                            }), C(s ? "private" : r ? "unlisted" : "public"), y(!0))
                           },
                           className: i().templateVisibility,
                           children: t.is_private ? m.A.public : m.A.private
                         }), (0, s.jsx)("span", {
                           onClick: () => {
                             var e;
-                            return e = t.id, void(N({
+                            return e = t.id, void(w({
                               name: t.name,
                               id: e,
                               type: "delete",
@@ -1324,7 +1322,7 @@
                               image: "",
                               file: null,
                               unlisted_template_id: ""
-                            }), f(!0))
+                            }), y(!0))
                           },
                           className: i().deleteTemplate,
                           children: m.A.deleteButton
@@ -1339,16 +1337,16 @@
         })
       }
 
-      function C({
+      function w({
         userDetails: e
       }) {
-        let a = (0, x.kj)(),
-          t = (0, x.useLang)(),
+        let a = (0, f.kj)(),
+          t = (0, f.useLang)(),
           l = (0, r.useMemo)(() => new Intl.NumberFormat(t || "en"), [t]),
           [n, d] = (0, r.useState)(!1),
           [o, p] = (0, r.useState)(!0),
-          [v, g] = (0, r.useState)([]),
-          [f, _] = (0, r.useState)({
+          [v, j] = (0, r.useState)([]),
+          [y, _] = (0, r.useState)({
             name: "",
             id: "",
             premiumOnly: !1,
@@ -1366,7 +1364,7 @@
                 method: "POST"
               }),
               a = await e.json();
-            e.ok ? g(a.templates) : c.oR.error(a.error), p(!1)
+            e.ok ? j(a.templates) : c.oR.error(a.error), p(!1)
           })()
         }, []);
         let T = async e => {
@@ -1380,17 +1378,17 @@
               })
             }),
             t = await a.json();
-          a.ok ? (c.oR.success(t.message), "unfavorite" === t.type && g(v.filter(a => a.id !== e))) : c.oR.error(t.error)
+          a.ok ? (c.oR.success(t.message), "unfavorite" === t.type && j(v.filter(a => a.id !== e))) : c.oR.error(t.error)
         };
         return (0, s.jsxs)(s.Fragment, {
-          children: [(0, s.jsx)(j.A, {
+          children: [(0, s.jsx)(b.A, {
             opened: n,
             onClose: () => d(!1),
-            size: f.premiumOnly && !e.premium ? "auto" : "500px",
-            title: f.premiumOnly && !e.premium ? a("dashboard.templates.shared.modal.apply.premium_only_title") : a("dashboard.templates.shared.modal.apply.title"),
+            size: y.premiumOnly && !e.premium ? "auto" : "500px",
+            title: y.premiumOnly && !e.premium ? a("dashboard.templates.shared.modal.apply.premium_only_title") : a("dashboard.templates.shared.modal.apply.title"),
             centered: !0,
             children: (0, s.jsx)(u.A, {
-              selectedTemplate: f,
+              selectedTemplate: y,
               userDetails: e,
               closeModal: () => d(!1)
             })
@@ -1418,13 +1416,13 @@
                       draggable: "false"
                     }), (0, s.jsxs)("div", {
                       className: i().templateOverlay,
-                      children: [e.premium_only && (0, s.jsx)(b.A, {
+                      children: [e.premium_only && (0, s.jsx)(g.A, {
                         content: a("dashboard.templates.shared.tooltips.premium_only_badge"),
                         children: (0, s.jsxs)("span", {
                           className: i().premiumOnly,
                           children: [m.A.premium, " ", a("dashboard.templates.shared.badges.premium")]
                         })
-                      }), (0, s.jsx)(b.A, {
+                      }), (0, s.jsx)(g.A, {
                         content: a("dashboard.templates.shared.tooltips.unfavorite"),
                         children: (0, s.jsx)("span", {
                           onClick: () => T(e.id),
@@ -1496,19 +1494,19 @@
                             }), d(!0))
                           },
                           children: a("dashboard.templates.shared.actions.use_template")
-                        }), (0, s.jsx)(y.A, {
+                        }), (0, s.jsx)(x.A, {
                           value: `https://guns.lol/templates/${e.id}`,
                           children: ({
                             copied: e,
                             copy: t
-                          }) => (0, s.jsx)(b.A, {
+                          }) => (0, s.jsx)(g.A, {
                             content: e ? a("dashboard.templates.shared.tooltips.copy_success") : a("dashboard.templates.shared.tooltips.copy"),
                             children: (0, s.jsx)("span", {
                               onClick: t,
                               children: m.A.shareTemplate
                             })
                           })
-                        }), (0, s.jsx)(b.A, {
+                        }), (0, s.jsx)(g.A, {
                           content: a("dashboard.templates.shared.tooltips.preview"),
                           children: (0, s.jsx)("a", {
                             target: "_blank",
@@ -1526,14 +1524,14 @@
         })
       }
 
-      function k({
+      function S({
         userDetails: e
       }) {
-        let a = (0, x.kj)(),
+        let a = (0, f.kj)(),
           [t, l] = (0, r.useState)(!1),
           [n, d] = (0, r.useState)(!0),
           [o, p] = (0, r.useState)([]),
-          [v, g] = (0, r.useState)({
+          [v, j] = (0, r.useState)({
             name: "",
             id: "",
             premiumOnly: !1,
@@ -1543,7 +1541,7 @@
               avatar: ""
             }
           }),
-          f = e.username,
+          y = e.username,
           _ = new Date().getTime(),
           [N, A] = (0, r.useState)(e.favorite_templates || []);
         (0, r.useEffect)(() => {
@@ -1573,7 +1571,7 @@
           })) : c.oR.error(t.error)
         };
         return (0, s.jsxs)(s.Fragment, {
-          children: [(0, s.jsx)(j.A, {
+          children: [(0, s.jsx)(b.A, {
             opened: t,
             onClose: () => l(!1),
             size: v.premiumOnly && !e.premium ? "auto" : "500px",
@@ -1608,13 +1606,13 @@
                       draggable: "false"
                     }), (0, s.jsxs)("div", {
                       className: i().templateOverlay,
-                      children: [e.premium_only && (0, s.jsx)(b.A, {
+                      children: [e.premium_only && (0, s.jsx)(g.A, {
                         content: a("dashboard.templates.shared.tooltips.premium_only_badge"),
                         children: (0, s.jsxs)("span", {
                           className: i().premiumOnly,
                           children: [m.A.premium, " ", a("dashboard.templates.shared.badges.premium")]
                         })
-                      }), (0, s.jsx)(b.A, {
+                      }), (0, s.jsx)(g.A, {
                         content: N.includes(e.id) ? a("dashboard.templates.shared.tooltips.unfavorite") : a("dashboard.templates.shared.tooltips.favorite"),
                         children: (0, s.jsx)("span", {
                           onClick: () => T(e.id),
@@ -1674,7 +1672,7 @@
                           className: i().useTemplateButton,
                           onClick: () => {
                             var a, t, s, r;
-                            return a = e.id, t = e.name, s = e.premium_only, r = e.image, void(g({
+                            return a = e.id, t = e.name, s = e.premium_only, r = e.image, void(j({
                               name: t,
                               id: a,
                               premiumOnly: s,
@@ -1686,23 +1684,23 @@
                             }), l(!0))
                           },
                           children: a("dashboard.templates.shared.actions.use_template")
-                        }), (0, s.jsx)(y.A, {
+                        }), (0, s.jsx)(x.A, {
                           value: `https://guns.lol/templates/${e.id}`,
                           children: ({
                             copied: e,
                             copy: t
-                          }) => (0, s.jsx)(b.A, {
+                          }) => (0, s.jsx)(g.A, {
                             content: e ? a("dashboard.templates.shared.tooltips.copy_success") : a("dashboard.templates.shared.tooltips.copy"),
                             children: (0, s.jsx)("span", {
                               onClick: t,
                               children: m.A.shareTemplate
                             })
                           })
-                        }), (0, s.jsx)(b.A, {
+                        }), (0, s.jsx)(g.A, {
                           content: a("dashboard.templates.shared.tooltips.preview"),
                           children: (0, s.jsx)("a", {
                             target: "_blank",
-                            href: `/${f}?templatePreview=true&templateId=${e.id}&t=${_}`,
+                            href: `/${y}?templatePreview=true&templateId=${e.id}&t=${_}`,
                             children: m.A.previewEye
                           })
                         })]
@@ -1715,16 +1713,16 @@
           })]
         })
       }
-      let $ = ({
+      let C = ({
         data: e
       }) => {
-        let a = (0, x.kj)(),
+        let a = (0, f.kj)(),
           t = e.config,
           l = (0, r.useRef)([]),
           [n, h] = (0, r.useState)(0),
           [u, g] = (0, r.useState)(0),
-          [f, b] = (0, r.useState)(0),
-          [_, $] = (0, r.useState)(0),
+          [j, C] = (0, r.useState)(0),
+          [k, $] = (0, r.useState)(0),
           [R, O] = (0, r.useState)(!1),
           q = e.account_created + 604800 < Math.floor(Date.now() / 1e3),
           [I, F] = (0, r.useState)(),
@@ -1735,7 +1733,7 @@
           [V, z] = (0, r.useState)("public"),
           [H, G] = (0, r.useState)(""),
           [J, Z] = (0, r.useState)(""),
-          K = (t.premium !== T.$h || "string" != typeof t.audio && t.audio.length > 2 || "typewriter" === t.username_effects) && e.premium,
+          K = (t.premium !== N.$h || "string" != typeof t.audio && t.audio.length > 2 || "typewriter" === t.username_effects) && e.premium,
           [Q, X] = (0, r.useState)(K),
           Y = async e => {
             var t;
@@ -1743,8 +1741,8 @@
             e.target.disabled = !0;
             let r = e.target.files?.[0];
             if (!r) return e.target.disabled = !1, e.target.value = "", c.oR.error(a("dashboard.templates.errors.preview_required"));
-            let l = T.o2.templateImage,
-              i = T.nB.templateImage,
+            let l = N.o2.templateImage,
+              i = N.nB.templateImage,
               n = ee(r.name);
             return i.includes(n) ? r.size > 1024 * l * 1024 ? (e.target.disabled = !1, e.target.value = "", c.oR.error(a("dashboard.templates.errors.file_too_large", {
               size: l
@@ -1757,7 +1755,7 @@
           return "." + e.substring(e.lastIndexOf(".") + 1)
         }(0, r.useEffect)(() => {
           let e;
-          null !== n && (e = l.current[n], $(e?.offsetTop ?? 0), b(e?.offsetLeft ?? 0), g(e?.clientWidth ? e?.clientWidth - 24 : 0))
+          null !== n && (e = l.current[n], $(e?.offsetTop ?? 0), C(e?.offsetLeft ?? 0), g(e?.clientWidth ? e?.clientWidth - 24 : 0))
         }, [n]);
         let ea = [{
             label: a("dashboard.navigation.routes.templates.template_library"),
@@ -1844,7 +1842,7 @@
               success: o.A.successToast
             },
             visibleToasts: 2
-          }), (0, s.jsx)(j.A, {
+          }), (0, s.jsx)(b.A, {
             opened: R,
             onClose: () => O(!1),
             title: em[H],
@@ -1873,7 +1871,7 @@
                           })]
                         }), (0, s.jsx)("input", {
                           type: "file",
-                          accept: w.vJ.templateImage.map(e => e).join(", "),
+                          accept: A.vJ.templateImage.map(e => e).join(", "),
                           onChange: e => {
                             Y(e)
                           }
@@ -1947,7 +1945,7 @@
                         }, a))
                       })]
                     })]
-                  }), (0, s.jsx)(A.A, {
+                  }), (0, s.jsx)(_.A, {
                     featureName: a("dashboard.templates.visibility.label"),
                     helpDescription: en,
                     element: (0, s.jsx)(p.A, {
@@ -2004,7 +2002,7 @@
                   children: [(0, s.jsx)("span", {
                     className: i().unlistedLink,
                     children: `guns.lol/templates/u/${J}`
-                  }), (0, s.jsx)(y.A, {
+                  }), (0, s.jsx)(x.A, {
                     value: `https://guns.lol/templates/u/${J}`,
                     children: ({
                       copied: e,
@@ -2059,9 +2057,9 @@
               children: [0 !== u && (0, s.jsx)("span", {
                 className: i().tabUnderlineContainer,
                 style: {
-                  left: f,
+                  left: j,
                   width: u,
-                  top: _,
+                  top: k,
                   bottom: "inherit"
                 },
                 children: (0, s.jsx)("span", {
@@ -2093,13 +2091,13 @@
               },
               children: [m.A.addSign, " ", ed]
             })]
-          }), "library" === et[n] ? (0, s.jsx)(N, {
+          }), "library" === et[n] ? (0, s.jsx)(y, {
             userDetails: e
-          }) : "favorite" === et[n] ? (0, s.jsx)(C, {
+          }) : "favorite" === et[n] ? (0, s.jsx)(w, {
             userDetails: e
-          }) : "lastUsed" === et[n] ? (0, s.jsx)(k, {
+          }) : "lastUsed" === et[n] ? (0, s.jsx)(S, {
             userDetails: e
-          }) : "uploads" === et[n] && (0, s.jsx)(S, {
+          }) : "uploads" === et[n] && (0, s.jsx)(T, {
             userDetails: e
           })]
         })

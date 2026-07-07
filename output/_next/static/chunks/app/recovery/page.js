@@ -11,8 +11,8 @@
       var d = c(95155);
       c(12115);
       var t = c(77570),
-        f = c(81934),
-        _ = c(38256),
+        _ = c(81934),
+        f = c(38256),
         s = c(49982),
         r = c.n(s);
       let i = [{
@@ -110,7 +110,7 @@
       }];
 
       function b() {
-        let e = (0, _.kj)();
+        let e = (0, f.kj)();
         return (0, d.jsx)(t.A, {
           title: e("auth.recovery.selector.title"),
           subtitle: e("auth.recovery.selector.subtitle"),
@@ -118,7 +118,7 @@
             className: r().recoveryCards,
             children: i.map(a => {
               var c;
-              return (0, d.jsxs)(f.A, {
+              return (0, d.jsxs)(_.A, {
                 href: "forgot_password" === (c = a.id) ? "/reset" : `/recovery/start?type=${c}`,
                 className: r().recoveryCard,
                 children: [(0, d.jsx)("span", {
@@ -255,52 +255,52 @@
       });
       var d = c(95155),
         t = c(81934),
-        f = c(18943),
-        _ = c.n(f);
+        _ = c(18943),
+        f = c.n(_);
 
       function s({
         title: e,
         subtitle: a,
         headerAction: c,
-        children: f,
+        children: _,
         footer: s,
         legal: r
       }) {
         return (0, d.jsx)("div", {
-          className: _().page,
+          className: f().page,
           children: (0, d.jsxs)("div", {
-            className: _().panel,
+            className: f().panel,
             children: [c && (0, d.jsx)("div", {
-              className: _().panelHeaderAction,
+              className: f().panelHeaderAction,
               children: c
             }), (0, d.jsxs)("div", {
-              className: _().brand,
+              className: f().brand,
               children: [(0, d.jsx)(t.A, {
                 href: "/",
-                className: _().brandLink,
+                className: f().brandLink,
                 children: (0, d.jsx)("img", {
                   src: "https://assets.guns.lol/guns_logo_no_background_cropped.png",
                   alt: "guns.lol",
-                  className: _().brandLogo
+                  className: f().brandLogo
                 })
               }), (0, d.jsxs)("div", {
-                className: _().brandText,
+                className: f().brandText,
                 children: [(0, d.jsx)("h1", {
-                  className: _().title,
+                  className: f().title,
                   children: e
                 }), a && (0, d.jsx)("p", {
-                  className: _().subtitle,
+                  className: f().subtitle,
                   children: a
                 })]
               })]
             }), (0, d.jsx)("div", {
-              className: _().body,
-              children: f
+              className: f().body,
+              children: _
             }), s && (0, d.jsx)("div", {
-              className: _().footer,
+              className: f().footer,
               children: s
             }), r && (0, d.jsx)("div", {
-              className: _().legal,
+              className: f().legal,
               children: r
             })]
           })
@@ -310,44 +310,34 @@
     81934: (e, a, c) => {
       "use strict";
       c.d(a, {
-        A: () => s
+        A: () => _
       });
       var d = c(95155),
-        t = c(98500),
-        f = c.n(t),
-        _ = c(38256);
+        t = c(38256);
 
-      function s({
+      function _({
         href: e,
         asTag: a,
         locale: c,
-        children: t,
-        ...s
+        children: _,
+        ...f
       }) {
-        let r = c || (0, _.useLang)();
-        if (e.startsWith("http://") || e.startsWith("https://") || e.startsWith("mailto:") || e.startsWith("tel:")) return a ? (0, d.jsx)("a", {
+        let s = c || (0, t.useLang)();
+        if (e.startsWith("http://") || e.startsWith("https://") || e.startsWith("mailto:") || e.startsWith("tel:")) return (0, d.jsx)("a", {
           href: e,
-          ...s,
-          children: t
-        }) : (0, d.jsx)(f(), {
-          href: e,
-          ...s,
-          children: t
+          ...f,
+          children: _
         });
-        let i = "en" == r ? `${e.startsWith("/")?"":"/"}${e}` : `/${r}${e.startsWith("/")?"":"/"}${e}`;
-        return a ? (0, d.jsx)("a", {
-          href: i,
-          ...s,
-          children: t
-        }) : (0, d.jsx)(f(), {
-          href: i,
-          ...s,
-          children: t
+        let r = "en" == s ? `${e.startsWith("/")?"":"/"}${e}` : `/${s}${e.startsWith("/")?"":"/"}${e}`;
+        return (0, d.jsx)("a", {
+          href: r,
+          ...f,
+          children: _
         })
       }
     }
   },
   e => {
-    e.O(0, [1406, 8500, 8256, 8441, 3794, 7358], () => e(e.s = 1011)), _N_E = e.O()
+    e.O(0, [1406, 8256, 8441, 3794, 7358], () => e(e.s = 1011)), _N_E = e.O()
   }
 ]);

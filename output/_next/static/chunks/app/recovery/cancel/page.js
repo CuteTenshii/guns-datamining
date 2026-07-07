@@ -125,8 +125,8 @@
         r = c(73321),
         s = c(77570),
         n = c(38256),
-        f = c(18943),
-        _ = c.n(f),
+        _ = c(18943),
+        f = c.n(_),
         b = c(49982),
         i = c.n(b);
 
@@ -134,13 +134,13 @@
         let e = (0, n.kj)(),
           a = (0, r.useRouter)(),
           c = (0, r.useSearchParams)(),
-          f = c.get("attempt") || "",
+          _ = c.get("attempt") || "",
           b = c.get("token") || "",
           [o, l] = (0, t.useState)(!1),
           [u, N] = (0, t.useState)(""),
           [S, G] = (0, t.useState)(""),
           [U, h] = (0, t.useState)(!1),
-          m = (0, t.useMemo)(() => !!(f && b), [f, b]),
+          m = (0, t.useMemo)(() => !!(_ && b), [_, b]),
           p = async () => {
             if (m && !o && !U) try {
               l(!0), N(""), G("");
@@ -150,7 +150,7 @@
                     "Content-Type": "application/json"
                   },
                   body: JSON.stringify({
-                    attemptId: f,
+                    attemptId: _,
                     token: b
                   })
                 }),
@@ -167,14 +167,14 @@
           title: e("auth.recovery.cancel.done_title"),
           subtitle: e("auth.recovery.cancel.done_subtitle"),
           children: (0, d.jsxs)("div", {
-            className: _().actions,
+            className: f().actions,
             children: [(0, d.jsx)("button", {
-              className: _().primaryButton,
+              className: f().primaryButton,
               type: "button",
               onClick: () => a.push("/login"),
               children: e("auth.recovery.cancel.go_to_login")
             }), (0, d.jsx)("button", {
-              className: _().secondaryButton,
+              className: f().secondaryButton,
               type: "button",
               onClick: () => a.push("/recovery"),
               children: e("auth.recovery.cancel.start_new")
@@ -186,21 +186,21 @@
           children: (0, d.jsxs)("div", {
             className: i().startContainer,
             children: [u && (0, d.jsx)("div", {
-              className: _().errorBanner,
+              className: f().errorBanner,
               children: u
             }), S && (0, d.jsx)("div", {
               className: i().messageBox,
               children: S
             }), (0, d.jsxs)("div", {
-              className: _().actions,
+              className: f().actions,
               children: [(0, d.jsx)("button", {
-                className: _().secondaryButton,
+                className: f().secondaryButton,
                 type: "button",
                 onClick: () => a.push("/login"),
                 disabled: o,
                 children: e("auth.recovery.cancel.keep_request")
               }), (0, d.jsx)("button", {
-                className: _().primaryButton,
+                className: f().primaryButton,
                 type: "button",
                 onClick: p,
                 disabled: o,
@@ -212,12 +212,12 @@
           title: e("auth.recovery.cancel.title"),
           subtitle: e("auth.recovery.cancel.subtitle_invalid"),
           children: [(0, d.jsx)("div", {
-            className: _().errorBanner,
+            className: f().errorBanner,
             children: e("auth.recovery.cancel.errors.missing_info")
           }), (0, d.jsx)("div", {
-            className: _().actions,
+            className: f().actions,
             children: (0, d.jsx)("button", {
-              className: _().primaryButton,
+              className: f().primaryButton,
               type: "button",
               onClick: () => a.push("/recovery"),
               children: e("auth.recovery.cancel.back_to_recovery")
@@ -270,7 +270,7 @@
         headerAction: c,
         children: r,
         footer: n,
-        legal: f
+        legal: _
       }) {
         return (0, d.jsx)("div", {
           className: s().page,
@@ -305,9 +305,9 @@
             }), n && (0, d.jsx)("div", {
               className: s().footer,
               children: n
-            }), f && (0, d.jsx)("div", {
+            }), _ && (0, d.jsx)("div", {
               className: s().legal,
-              children: f
+              children: _
             })]
           })
         })
@@ -316,44 +316,34 @@
     81934: (e, a, c) => {
       "use strict";
       c.d(a, {
-        A: () => n
+        A: () => r
       });
       var d = c(95155),
-        t = c(98500),
-        r = c.n(t),
-        s = c(38256);
+        t = c(38256);
 
-      function n({
+      function r({
         href: e,
         asTag: a,
         locale: c,
-        children: t,
-        ...n
+        children: r,
+        ...s
       }) {
-        let f = c || (0, s.useLang)();
-        if (e.startsWith("http://") || e.startsWith("https://") || e.startsWith("mailto:") || e.startsWith("tel:")) return a ? (0, d.jsx)("a", {
+        let n = c || (0, t.useLang)();
+        if (e.startsWith("http://") || e.startsWith("https://") || e.startsWith("mailto:") || e.startsWith("tel:")) return (0, d.jsx)("a", {
           href: e,
-          ...n,
-          children: t
-        }) : (0, d.jsx)(r(), {
-          href: e,
-          ...n,
-          children: t
+          ...s,
+          children: r
         });
-        let _ = "en" == f ? `${e.startsWith("/")?"":"/"}${e}` : `/${f}${e.startsWith("/")?"":"/"}${e}`;
-        return a ? (0, d.jsx)("a", {
+        let _ = "en" == n ? `${e.startsWith("/")?"":"/"}${e}` : `/${n}${e.startsWith("/")?"":"/"}${e}`;
+        return (0, d.jsx)("a", {
           href: _,
-          ...n,
-          children: t
-        }) : (0, d.jsx)(r(), {
-          href: _,
-          ...n,
-          children: t
+          ...s,
+          children: r
         })
       }
     }
   },
   e => {
-    e.O(0, [1406, 8500, 8256, 8441, 3794, 7358], () => e(e.s = 64143)), _N_E = e.O()
+    e.O(0, [1406, 8256, 8441, 3794, 7358], () => e(e.s = 64143)), _N_E = e.O()
   }
 ]);

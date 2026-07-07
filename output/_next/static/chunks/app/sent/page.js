@@ -57,8 +57,8 @@
         })
       }
       var c = t(66609),
-        h = t(54834),
-        u = t(81934),
+        u = t(54834),
+        h = t(81934),
         d = t(38256);
 
       function m() {
@@ -98,7 +98,7 @@
             theme: "dark",
             className: l().toasterStyles,
             icons: {
-              success: h.A.successToast
+              success: u.A.successToast
             },
             visibleToasts: 2
           }), (0, r.jsx)("div", {
@@ -140,7 +140,7 @@
                 children: [f && null !== s && (0, r.jsx)("span", {
                   onClick: p,
                   children: e("auth.email_sent.resend_email")
-                }), (0, r.jsx)(u.A, {
+                }), (0, r.jsx)(h.A, {
                   href: "/",
                   children: e("auth.email_sent.back_to_home")
                 })]
@@ -178,39 +178,29 @@
     81934: (e, s, t) => {
       "use strict";
       t.d(s, {
-        A: () => l
+        A: () => n
       });
       var r = t(95155),
-        a = t(98500),
-        n = t.n(a),
-        i = t(38256);
+        a = t(38256);
 
-      function l({
+      function n({
         href: e,
         asTag: s,
         locale: t,
-        children: a,
-        ...l
+        children: n,
+        ...i
       }) {
-        let o = t || (0, i.useLang)();
-        if (e.startsWith("http://") || e.startsWith("https://") || e.startsWith("mailto:") || e.startsWith("tel:")) return s ? (0, r.jsx)("a", {
+        let l = t || (0, a.useLang)();
+        if (e.startsWith("http://") || e.startsWith("https://") || e.startsWith("mailto:") || e.startsWith("tel:")) return (0, r.jsx)("a", {
           href: e,
-          ...l,
-          children: a
-        }) : (0, r.jsx)(n(), {
-          href: e,
-          ...l,
-          children: a
+          ...i,
+          children: n
         });
-        let c = "en" == o ? `${e.startsWith("/")?"":"/"}${e}` : `/${o}${e.startsWith("/")?"":"/"}${e}`;
-        return s ? (0, r.jsx)("a", {
-          href: c,
-          ...l,
-          children: a
-        }) : (0, r.jsx)(n(), {
-          href: c,
-          ...l,
-          children: a
+        let o = "en" == l ? `${e.startsWith("/")?"":"/"}${e}` : `/${l}${e.startsWith("/")?"":"/"}${e}`;
+        return (0, r.jsx)("a", {
+          href: o,
+          ...i,
+          children: n
         })
       }
     },
@@ -219,6 +209,6 @@
     }
   },
   e => {
-    e.O(0, [4103, 8500, 6609, 8256, 5886, 8441, 3794, 7358], () => e(e.s = 98141)), _N_E = e.O()
+    e.O(0, [8121, 6609, 8256, 5886, 8441, 3794, 7358], () => e(e.s = 98141)), _N_E = e.O()
   }
 ]);

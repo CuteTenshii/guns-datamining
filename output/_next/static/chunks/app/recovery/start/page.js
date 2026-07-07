@@ -82,24 +82,24 @@
         footerContainer: "GUNS__f5-85f750c2-b172755c-dfcf1f52"
       }
     },
-    23937: (e, a, c) => {
-      Promise.resolve().then(c.bind(c, 96789))
+    23937: (e, a, t) => {
+      Promise.resolve().then(t.bind(t, 96789))
     },
-    37897: (e, a, c) => {
+    37897: (e, a, t) => {
       "use strict";
-      c.d(a, {
+      t.d(a, {
         A: () => _
       });
-      var t = c(95155),
-        d = c(12115),
-        r = c(98241),
-        s = c.n(r),
-        f = c(54834);
+      var c = t(95155),
+        d = t(12115),
+        r = t(98241),
+        s = t.n(r),
+        f = t(54834);
 
       function _({
         featureName: e,
         onChangeFunction: a,
-        value: c,
+        value: t,
         placeholder: r,
         icon: _,
         prefix: n,
@@ -112,41 +112,41 @@
       }) {
         let [S, U] = (0, d.useState)(!!b), {
           onInput: G,
-          onChange: h,
-          ...p
+          onChange: p,
+          ...h
         } = N;
         return (0, d.useEffect)(() => {
           U(!!b)
-        }, [b]), (0, t.jsxs)("div", {
+        }, [b]), (0, c.jsxs)("div", {
           className: s().inputContainerWrapper,
           "data-dashboard-feature-label": "string" == typeof e ? e : void 0,
-          children: [e && (0, t.jsx)("h1", {
+          children: [e && (0, c.jsx)("h1", {
             className: s().featureName,
             children: e
-          }), (0, t.jsxs)("div", {
+          }), (0, c.jsxs)("div", {
             className: `${s().inputWrapperDiv} ${n&&s().inputWrapperURL}`,
-            children: [(0, t.jsxs)("span", {
+            children: [(0, c.jsxs)("span", {
               className: s().inputWrapperSpan,
               style: {
                 position: n ? "absolute" : "static"
               },
-              children: [l ? (0, t.jsx)("img", {
+              children: [l ? (0, c.jsx)("img", {
                 src: _,
                 alt: "icon",
                 className: s().inputWrapperIconImage
-              }) : _, n && (0, t.jsx)("h1", {
+              }) : _, n && (0, c.jsx)("h1", {
                 children: n
               })]
-            }), b && (0, t.jsx)("p", {
+            }), b && (0, c.jsx)("p", {
               onClick: () => {
                 U(!S)
               },
               children: S ? f.A.hidePassword : f.A.views
-            }), (0, t.jsx)("input", {
+            }), (0, c.jsx)("input", {
               autoCorrect: "off",
               type: b ? S ? "password" : "text" : u,
               onKeyDown: o,
-              value: c,
+              value: t,
               style: {
                 paddingLeft: n ? i : "",
                 paddingRight: b ? 47 : ""
@@ -154,9 +154,9 @@
               placeholder: r,
               className: s().inputWrapperInput,
               onInput: e => {
-                G?.(e), h?.(e), a?.(e)
+                G?.(e), p?.(e), a?.(e)
               },
-              ...p
+              ...h
             })]
           })]
         })
@@ -195,83 +195,83 @@
         inlineActionLink: "GUNS__d4-0f2b7dc1-d271521b-9c261c3b"
       }
     },
-    73321: (e, a, c) => {
+    73321: (e, a, t) => {
       "use strict";
-      var t = c(74645);
-      c.o(t, "redirect") && c.d(a, {
+      var c = t(74645);
+      t.o(c, "redirect") && t.d(a, {
         redirect: function() {
-          return t.redirect
+          return c.redirect
         }
-      }), c.o(t, "useParams") && c.d(a, {
+      }), t.o(c, "useParams") && t.d(a, {
         useParams: function() {
-          return t.useParams
+          return c.useParams
         }
-      }), c.o(t, "usePathname") && c.d(a, {
+      }), t.o(c, "usePathname") && t.d(a, {
         usePathname: function() {
-          return t.usePathname
+          return c.usePathname
         }
-      }), c.o(t, "useRouter") && c.d(a, {
+      }), t.o(c, "useRouter") && t.d(a, {
         useRouter: function() {
-          return t.useRouter
+          return c.useRouter
         }
-      }), c.o(t, "useSearchParams") && c.d(a, {
+      }), t.o(c, "useSearchParams") && t.d(a, {
         useSearchParams: function() {
-          return t.useSearchParams
+          return c.useSearchParams
         }
       })
     },
-    77570: (e, a, c) => {
+    77570: (e, a, t) => {
       "use strict";
-      c.d(a, {
+      t.d(a, {
         A: () => f
       });
-      var t = c(95155),
-        d = c(81934),
-        r = c(18943),
-        s = c.n(r);
+      var c = t(95155),
+        d = t(81934),
+        r = t(18943),
+        s = t.n(r);
 
       function f({
         title: e,
         subtitle: a,
-        headerAction: c,
+        headerAction: t,
         children: r,
         footer: f,
         legal: _
       }) {
-        return (0, t.jsx)("div", {
+        return (0, c.jsx)("div", {
           className: s().page,
-          children: (0, t.jsxs)("div", {
+          children: (0, c.jsxs)("div", {
             className: s().panel,
-            children: [c && (0, t.jsx)("div", {
+            children: [t && (0, c.jsx)("div", {
               className: s().panelHeaderAction,
-              children: c
-            }), (0, t.jsxs)("div", {
+              children: t
+            }), (0, c.jsxs)("div", {
               className: s().brand,
-              children: [(0, t.jsx)(d.A, {
+              children: [(0, c.jsx)(d.A, {
                 href: "/",
                 className: s().brandLink,
-                children: (0, t.jsx)("img", {
+                children: (0, c.jsx)("img", {
                   src: "https://assets.guns.lol/guns_logo_no_background_cropped.png",
                   alt: "guns.lol",
                   className: s().brandLogo
                 })
-              }), (0, t.jsxs)("div", {
+              }), (0, c.jsxs)("div", {
                 className: s().brandText,
-                children: [(0, t.jsx)("h1", {
+                children: [(0, c.jsx)("h1", {
                   className: s().title,
                   children: e
-                }), a && (0, t.jsx)("p", {
+                }), a && (0, c.jsx)("p", {
                   className: s().subtitle,
                   children: a
                 })]
               })]
-            }), (0, t.jsx)("div", {
+            }), (0, c.jsx)("div", {
               className: s().body,
               children: r
-            }), f && (0, t.jsx)("div", {
+            }), f && (0, c.jsx)("div", {
               className: s().footer,
               children: f
-            }), _ && (0, t.jsx)("div", {
+            }), _ && (0, c.jsx)("div", {
               className: s().legal,
               children: _
             })]
@@ -279,87 +279,77 @@
         })
       }
     },
-    81934: (e, a, c) => {
+    81934: (e, a, t) => {
       "use strict";
-      c.d(a, {
-        A: () => f
+      t.d(a, {
+        A: () => r
       });
-      var t = c(95155),
-        d = c(98500),
-        r = c.n(d),
-        s = c(38256);
+      var c = t(95155),
+        d = t(38256);
 
-      function f({
+      function r({
         href: e,
         asTag: a,
-        locale: c,
-        children: d,
-        ...f
+        locale: t,
+        children: r,
+        ...s
       }) {
-        let _ = c || (0, s.useLang)();
-        if (e.startsWith("http://") || e.startsWith("https://") || e.startsWith("mailto:") || e.startsWith("tel:")) return a ? (0, t.jsx)("a", {
+        let f = t || (0, d.useLang)();
+        if (e.startsWith("http://") || e.startsWith("https://") || e.startsWith("mailto:") || e.startsWith("tel:")) return (0, c.jsx)("a", {
           href: e,
-          ...f,
-          children: d
-        }) : (0, t.jsx)(r(), {
-          href: e,
-          ...f,
-          children: d
+          ...s,
+          children: r
         });
-        let n = "en" == _ ? `${e.startsWith("/")?"":"/"}${e}` : `/${_}${e.startsWith("/")?"":"/"}${e}`;
-        return a ? (0, t.jsx)("a", {
-          href: n,
-          ...f,
-          children: d
-        }) : (0, t.jsx)(r(), {
-          href: n,
-          ...f,
-          children: d
+        let _ = "en" == f ? `${e.startsWith("/")?"":"/"}${e}` : `/${f}${e.startsWith("/")?"":"/"}${e}`;
+        return (0, c.jsx)("a", {
+          href: _,
+          ...s,
+          children: r
         })
       }
     },
-    96789: (e, a, c) => {
+    96789: (e, a, t) => {
       "use strict";
-      c.d(a, {
+      t.d(a, {
         default: () => u
       });
-      var t = c(95155),
-        d = c(12115),
-        r = c(73321),
-        s = c(77570),
-        f = c(37897),
-        _ = c(38256),
-        n = c(54834),
-        i = c(18943),
-        b = c.n(i),
-        o = c(49982),
-        l = c.n(o);
+      var c = t(95155),
+        d = t(12115),
+        r = t(73321),
+        s = t(77570),
+        f = t(37897),
+        _ = t(38256),
+        n = t(54834),
+        i = t(18943),
+        b = t.n(i),
+        o = t(49982),
+        l = t.n(o);
 
       function u() {
         let e = (0, _.kj)(),
           a = (0, r.useRouter)(),
-          c = (0, r.useSearchParams)().get("type") || "lost_2fa_device",
+          t = (0, r.useSearchParams)().get("type") || "lost_2fa_device",
           [i, o] = (0, d.useState)(""),
           [u, N] = (0, d.useState)(!1),
           [S, U] = (0, d.useState)(""),
-          [G, h] = (0, d.useState)(""),
-          p = async t => {
-            if (t.preventDefault(), !i.trim()) return void U(e("auth.recovery.start.errors.identifier_required"));
+          [G, p] = (0, d.useState)(""),
+          h = async c => {
+            if (c.preventDefault(), !i.trim()) return void U(e("auth.recovery.start.errors.identifier_required"));
             try {
-              N(!0), U(""), h("");
-              let t = await fetch("/api/recovery/start", {
+              N(!0), U(""), p("");
+              let c = await fetch("/api/recovery/start", {
                   method: "POST",
                   headers: {
                     "Content-Type": "application/json"
                   },
                   body: JSON.stringify({
-                    recoveryType: c,
+                    recoveryType: t,
                     identifier: i.trim()
                   })
                 }),
-                d = await t.json();
-              if (!t.ok) return void U(d.error || e("auth.recovery.start.errors.unable_start"));
-              if (!d.attemptId) return void h(d.message);
+                d = await c.json();
+              if (!c.ok) return void U(d.error || e("auth.recovery.start.errors.unable_start"));
+              if (!d.attemptId) return void p(d.message);
               let r = `/recovery/start/evidence?attempt=${encodeURIComponent(d.attemptId)}`;
               a.push(r)
             } catch {
@@ -368,37 +358,37 @@
               N(!1)
             }
           };
-        return (0, t.jsx)(s.A, {
+        return (0, c.jsx)(s.A, {
           title: e("auth.recovery.start.title"),
           subtitle: e("auth.recovery.start.subtitle"),
-          children: (0, t.jsxs)("form", {
-            onSubmit: p,
-            children: [(0, t.jsx)(f.A, {
+          children: (0, c.jsxs)("form", {
+            onSubmit: h,
+            children: [(0, c.jsx)(f.A, {
               featureName: e("auth.recovery.start.identifier_label"),
               value: i,
               onChangeFunction: e => o(e.target.value),
               placeholder: e("auth.recovery.start.identifier_placeholder"),
               icon: n.A.user
-            }), (0, t.jsx)("div", {
+            }), (0, c.jsx)("div", {
               className: l().recoveryHelper,
-              children: (0, t.jsx)("h1", {
+              children: (0, c.jsx)("h1", {
                 children: e("auth.recovery.start.helper")
               })
-            }), S && (0, t.jsx)("div", {
+            }), S && (0, c.jsx)("div", {
               className: b().errorBanner,
               style: {
                 marginTop: "15px"
               },
               children: S
-            }), G && (0, t.jsx)("p", {
+            }), G && (0, c.jsx)("p", {
               className: b().helperText,
               children: G
-            }), (0, t.jsx)("div", {
+            }), (0, c.jsx)("div", {
               className: b().actions,
               style: {
                 marginTop: 10
               },
-              children: (0, t.jsx)("button", {
+              children: (0, c.jsx)("button", {
                 className: b().primaryButton,
                 type: "submit",
                 disabled: u,
@@ -411,6 +401,6 @@
     }
   },
   e => {
-    e.O(0, [1406, 4103, 8500, 8256, 5886, 8441, 3794, 7358], () => e(e.s = 23937)), _N_E = e.O()
+    e.O(0, [1406, 8121, 8256, 5886, 8441, 3794, 7358], () => e(e.s = 23937)), _N_E = e.O()
   }
 ]);

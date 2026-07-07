@@ -3,25 +3,23 @@
     15829: (e, t, r) => {
       "use strict";
       r.d(t, {
-        default: () => d
+        default: () => l
       });
       var i = r(95155);
       r(12115);
       var a = r(98241),
         o = r.n(a),
         s = r(81382),
-        n = r(98500),
-        l = r.n(n),
-        c = r(38256);
+        n = r(38256);
 
-      function d({
+      function l({
         data: e
       }) {
-        let t = (0, c.useLang)(),
-          r = (0, c.kj)(),
+        let t = (0, n.useLang)(),
+          r = (0, n.kj)(),
           a = e?.statsData,
-          n = e?.tokenData,
-          d = {
+          l = e?.tokenData,
+          c = {
             "Changes To Terms": (0, i.jsxs)(i.Fragment, {
               children: [(0, i.jsx)("p", {
                 children: "guns.lol may update these Terms at any time. Changes take effect when posted to the Service or otherwise communicated to you. By continuing to access or use the Service after a change takes effect, you accept the updated Terms. Review the Terms periodically to stay informed."
@@ -67,7 +65,7 @@
               children: [(0, i.jsx)("p", {
                 children: "We take reasonable organizational and technical measures to help protect the Service and user data. No method of transmission or storage is completely secure, and we cannot guarantee absolute security."
               }), (0, i.jsxs)("p", {
-                children: ["You are responsible for safeguarding your account credentials. Notify us promptly at", " ", (0, i.jsx)(l(), {
+                children: ["You are responsible for safeguarding your account credentials. Notify us promptly at", " ", (0, i.jsx)("a", {
                   href: "mailto:support@guns.lol",
                   children: "support@guns.lol"
                 }), " if you detect or suspect unauthorized access or unusual activity in your account."]
@@ -170,7 +168,7 @@
               children: [(0, i.jsx)("p", {
                 children: "All payments made to guns.lol are final and non-refundable, except where a refund is required by applicable law. We do not provide refunds for change of mind, unused services, or partial use."
               }), (0, i.jsxs)("p", {
-                children: ["If a payment was processed incorrectly due to an error on our side, we may, at our sole discretion, issue a refund or account credit. To request a review, contact ", (0, i.jsx)(l(), {
+                children: ["If a payment was processed incorrectly due to an error on our side, we may, at our sole discretion, issue a refund or account credit. To request a review, contact ", (0, i.jsx)("a", {
                   href: "mailto:support@guns.lol",
                   children: "support@guns.lol"
                 }), " with relevant details."]
@@ -180,7 +178,7 @@
             }),
             Privacy: (0, i.jsxs)(i.Fragment, {
               children: [(0, i.jsxs)("p", {
-                children: ["Your use of the Service is subject to our", " ", (0, i.jsx)(l(), {
+                children: ["Your use of the Service is subject to our", " ", (0, i.jsx)("a", {
                   className: o().inlineLink,
                   href: "/privacy",
                   target: "_blank",
@@ -199,7 +197,7 @@
             }),
             "Law Enforcement Requests": (0, i.jsxs)(i.Fragment, {
               children: [(0, i.jsxs)("p", {
-                children: ["guns.lol responds to valid legal process issued by an authority with jurisdiction and in accordance with applicable law. Law enforcement and government authorities should submit requests in writing to", " ", (0, i.jsx)(l(), {
+                children: ["guns.lol responds to valid legal process issued by an authority with jurisdiction and in accordance with applicable law. Law enforcement and government authorities should submit requests in writing to", " ", (0, i.jsx)("a", {
                   href: "mailto:legal@guns.lol",
                   children: "legal@guns.lol"
                 }), "."]
@@ -209,7 +207,7 @@
             }),
             "EU Terrorist Content Regulation (Regulation (EU) 2021/784)": (0, i.jsxs)(i.Fragment, {
               children: [(0, i.jsxs)("p", {
-                children: ["The designated electronic point of contact for the receipt and expeditious processing of removal orders under Regulation (EU) 2021/784 is", " ", (0, i.jsx)(l(), {
+                children: ["The designated electronic point of contact for the receipt and expeditious processing of removal orders under Regulation (EU) 2021/784 is", " ", (0, i.jsx)("a", {
                   href: "mailto:tco@guns.lol",
                   children: "tco@guns.lol"
                 }), "."]
@@ -257,7 +255,7 @@
           };
         return (0, i.jsx)(i.Fragment, {
           children: (0, i.jsx)(s.A, {
-            data: n,
+            data: l,
             statsData: a,
             children: (0, i.jsx)("div", {
               className: o().termsOfServiceWrapper,
@@ -279,7 +277,7 @@
                   })]
                 }), (0, i.jsxs)("div", {
                   className: o().terms,
-                  children: [Object.entries(d).map(([e, t]) => (0, i.jsxs)("div", {
+                  children: [Object.entries(c).map(([e, t]) => (0, i.jsxs)("div", {
                     className: o().term,
                     id: e.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
                     children: [(0, i.jsx)("h1", {
@@ -295,13 +293,13 @@
                     }), (0, i.jsxs)("div", {
                       className: o().termsValue,
                       children: [(0, i.jsxs)("p", {
-                        children: ["Questions or concerns? Contact ", (0, i.jsx)(l(), {
+                        children: ["Questions or concerns? Contact ", (0, i.jsx)("a", {
                           href: "mailto:support@guns.lol",
                           children: "support@guns.lol"
-                        }), ". Law enforcement and other legal requests: ", (0, i.jsx)(l(), {
+                        }), ". Law enforcement and other legal requests: ", (0, i.jsx)("a", {
                           href: "mailto:legal@guns.lol",
                           children: "legal@guns.lol"
-                        }), ". Removal orders under Regulation (EU) 2021/784: ", (0, i.jsx)(l(), {
+                        }), ". Removal orders under Regulation (EU) 2021/784: ", (0, i.jsx)("a", {
                           href: "mailto:tco@guns.lol",
                           children: "tco@guns.lol"
                         }), "."]
@@ -323,6 +321,6 @@
     }
   },
   e => {
-    e.O(0, [4103, 9404, 8500, 8256, 5886, 226, 1382, 8441, 3794, 7358], () => e(e.s = 24887)), _N_E = e.O()
+    e.O(0, [8121, 9404, 8256, 5886, 226, 1382, 8441, 3794, 7358], () => e(e.s = 24887)), _N_E = e.O()
   }
 ]);

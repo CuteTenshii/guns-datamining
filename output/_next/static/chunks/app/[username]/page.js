@@ -48,8 +48,8 @@
         l = r(12115),
         i = r(98241),
         o = r.n(i),
-        s = r(51047),
-        u = r.n(s);
+        u = r(51047),
+        s = r.n(u);
       let c = (e, t) => {
         if ("number" == typeof e && Number.isFinite(e)) return e;
         if ("string" == typeof e) {
@@ -64,7 +64,7 @@
         marks: t,
         value: r,
         defaultValue: i,
-        onChangeFunction: s,
+        onChangeFunction: u,
         label: d,
         className: f,
         min: m,
@@ -76,8 +76,8 @@
         onBlur: w,
         onPointerDown: _,
         onPointerUp: y,
-        onPointerCancel: x,
-        ...N
+        onPointerCancel: N,
+        ...x
       }) {
         let S = c(m, 0),
           j = c(h, 100),
@@ -119,46 +119,46 @@
             },
             children: e
           }), (0, n.jsx)("div", {
-            className: (0, a.A)(o().inputWrapperDiv, u().wrapper, f),
+            className: (0, a.A)(o().inputWrapperDiv, s().wrapper, f),
             children: (0, n.jsx)("div", {
-              className: u().sliderContent,
+              className: s().sliderContent,
               children: (0, n.jsxs)("div", {
-                className: u().sliderShell,
+                className: s().sliderShell,
                 onMouseEnter: () => U(!0),
                 onMouseLeave: () => {
                   G || U(!1)
                 },
                 children: [(0, n.jsxs)("div", {
-                  className: u().track,
+                  className: s().track,
                   children: [(0, n.jsx)("div", {
-                    className: u().progress,
+                    className: s().progress,
                     style: {
                       width: `${T}%`
                     }
                   }), (0, n.jsx)("div", {
-                    className: u().thumb,
+                    className: s().thumb,
                     style: {
                       left: `calc(${T}% - (var(--thumb-size) / 2))`
                     },
                     "data-visible": B,
                     children: (0, n.jsx)("span", {
-                      className: u().tooltip,
+                      className: s().tooltip,
                       "data-visible": B,
                       children: W
                     })
                   })]
                 }), (0, n.jsx)("input", {
-                  ...N,
+                  ...x,
                   type: "range",
                   min: S,
                   max: j,
                   step: E,
                   value: A,
                   disabled: p,
-                  className: u().range,
+                  className: s().range,
                   onChange: e => {
                     let t = Number(e.target.value);
-                    Number.isNaN(t) || (k || C(t), s?.(t), v?.(e))
+                    Number.isNaN(t) || (k || C(t), u?.(t), v?.(e))
                   },
                   onFocus: e => {
                     U(!0), g?.(e)
@@ -173,23 +173,23 @@
                     $(!1), y?.(e)
                   },
                   onPointerCancel: e => {
-                    $(!1), x?.(e)
+                    $(!1), N?.(e)
                   },
                   "aria-valuemin": S,
                   "aria-valuemax": j,
                   "aria-valuenow": A
                 }), D.length > 0 && (0, n.jsx)("div", {
-                  className: u().marks,
+                  className: s().marks,
                   children: D.map((e, t) => (0, n.jsxs)("div", {
-                    className: u().mark,
+                    className: s().mark,
                     style: {
                       left: `${e.position}%`
                     },
                     children: [(0, n.jsx)("span", {
-                      className: u().markDot,
+                      className: s().markDot,
                       "data-active": e.normalizedValue <= A
                     }), e.label && (0, n.jsx)("span", {
-                      className: u().markLabel,
+                      className: s().markLabel,
                       children: e.label
                     })]
                   }, `${e.value}-${t}`))
@@ -292,7 +292,7 @@
     57776: (e, t, r) => {
       "use strict";
       r.d(t, {
-        A: () => s
+        A: () => u
       });
       var n = r(95155),
         a = r(12115),
@@ -300,13 +300,13 @@
         i = r(5585),
         o = r.n(i);
 
-      function s({
+      function u({
         opened: e,
         onClose: t,
         onOverlayClose: r,
         onCloseButtonClick: i,
-        onEscapeClose: s,
-        title: u,
+        onEscapeClose: u,
+        title: s,
         centered: c = !0,
         size: d = "auto",
         closeOnOverlayClick: f = !0,
@@ -316,7 +316,7 @@
         bodyClassName: p,
         children: v
       }) {
-        let [g, w] = (0, a.useState)(e), [_, y] = (0, a.useState)(!1), [x, N] = (0, a.useState)(null), S = (0, a.useRef)(null), j = (0, a.useRef)(null), E = (0, a.useRef)(null), P = (0, a.useRef)(!1), k = e => {
+        let [g, w] = (0, a.useState)(e), [_, y] = (0, a.useState)(!1), [N, x] = (0, a.useState)(null), S = (0, a.useRef)(null), j = (0, a.useRef)(null), E = (0, a.useRef)(null), P = (0, a.useRef)(!1), k = e => {
           if (!e) return !1;
           let t = window.getComputedStyle(e).overflowY;
           return e.scrollHeight > e.clientHeight + 1 && ("auto" === t || "scroll" === t)
@@ -343,13 +343,13 @@
           }, [e]), (0, a.useEffect)(() => {
             if ("undefined" == typeof document) return;
             let e = document.createElement("div");
-            return document.body.appendChild(e), N(e), () => {
-              document.body.removeChild(e), N(null)
+            return document.body.appendChild(e), x(e), () => {
+              document.body.removeChild(e), x(null)
             }
           }, []), (0, a.useEffect)(() => {
             if (!g) return;
             let e = e => {
-                "Escape" === e.key ? s ? s() : t() : ["ArrowUp", "ArrowDown", "PageUp", "PageDown", "Home", "End", " "].includes(e.key) && !j.current?.contains(e.target) && e.preventDefault()
+                "Escape" === e.key ? u ? u() : t() : ["ArrowUp", "ArrowDown", "PageUp", "PageDown", "Home", "End", " "].includes(e.key) && !j.current?.contains(e.target) && e.preventDefault()
               },
               r = e => {
                 let t = j.current;
@@ -377,7 +377,7 @@
             }), window.addEventListener("wheel", r, n), window.addEventListener("touchmove", r, n), () => {
               window.removeEventListener("keydown", e), window.removeEventListener("wheel", r, n), window.removeEventListener("touchmove", r, n)
             }
-          }, [C, M, t, s, g]), (0, a.useEffect)(() => {
+          }, [C, M, t, u, g]), (0, a.useEffect)(() => {
             if (!g) return;
             let e = e => {
               if (!j.current?.contains(e.target)) {
@@ -389,7 +389,7 @@
             return window.addEventListener("touchstart", e, {
               passive: !0
             }), () => window.removeEventListener("touchstart", e)
-          }, [g]), !g || !x) return null;
+          }, [g]), !g || !N) return null;
         let L = "number" == typeof d ? `${d}px` : d,
           U = {};
         L && "auto" !== L ? U.maxWidth = L : (U.width = "fit-content", U.maxWidth = "clamp(100%, 100%, 850px)", U.boxSizing = "border-box");
@@ -412,15 +412,15 @@
               style: U,
               ref: j,
               onClick: e => e.stopPropagation(),
-              children: [(u || m) && (0, n.jsxs)("div", {
+              children: [(s || m) && (0, n.jsxs)("div", {
                 className: o().header,
-                children: [u && (0, n.jsx)("h2", {
+                children: [s && (0, n.jsx)("h2", {
                   className: o().title,
                   style: h ? {
                     textAlign: "center",
                     width: "100%"
                   } : {},
-                  children: u
+                  children: s
                 }), m && (0, n.jsx)("button", {
                   type: "button",
                   className: o().closeButton,
@@ -442,27 +442,27 @@
               })]
             })
           });
-        return (0, l.createPortal)($, x)
+        return (0, l.createPortal)($, N)
       }
     },
     61778: (e, t, r) => {
       "use strict";
       r.d(t, {
-        A: () => u
+        A: () => s
       });
       var n = r(95155),
         a = r(47650),
         l = r(12115),
         i = r(24579),
         o = r.n(i);
-      let s = "undefined" != typeof navigator && /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      let u = "undefined" != typeof navigator && /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-      function u({
+      function s({
         content: e,
         children: t,
         placement: r = "top",
         delay: i = 110,
-        offset: u = 10,
+        offset: s = 10,
         maxWidth: c = 260,
         className: d,
         tooltipClassName: f,
@@ -472,18 +472,18 @@
         let [b, p] = (0, l.useState)(!1), [v, g] = (0, l.useState)(!1), [w, _] = (0, l.useState)({
           top: 0,
           left: 0
-        }), [y, x] = (0, l.useState)(!1), N = (0, l.useRef)(null), S = (0, l.useRef)(null), j = (0, l.useRef)(null), E = h ? 25 + 30 * !!s : i;
+        }), [y, N] = (0, l.useState)(!1), x = (0, l.useRef)(null), S = (0, l.useRef)(null), j = (0, l.useRef)(null), E = h ? 25 + 30 * !!u : i;
         (0, l.useEffect)(() => {
-          x(!0)
+          N(!0)
         }, []);
         let P = (0, l.useCallback)(() => {
-            N.current && (clearTimeout(N.current), N.current = null)
+            x.current && (clearTimeout(x.current), x.current = null)
           }, []),
           k = (0, l.useCallback)(() => "undefined" != typeof document && "active" === document.documentElement.getAttribute("data-user-page-enter-transition"), []),
           M = (0, l.useCallback)(e => {
             if (m || k()) return;
             let t = e?.immediate ?? !1;
-            (P(), t || E <= 0) ? p(!0): N.current = setTimeout(() => p(!0), E)
+            (P(), t || E <= 0) ? p(!0): x.current = setTimeout(() => p(!0), E)
           }, [P, E, m, k]),
           C = (0, l.useCallback)(e => {
             P(), e?.immediate, p(!1)
@@ -506,25 +506,25 @@
               i = 0;
             switch (r) {
               case "bottom":
-                l = n.bottom + u, i = n.left + n.width / 2 - a.width / 2;
+                l = n.bottom + s, i = n.left + n.width / 2 - a.width / 2;
                 break;
               case "left":
-                l = n.top + n.height / 2 - a.height / 2, i = n.left - a.width - u;
+                l = n.top + n.height / 2 - a.height / 2, i = n.left - a.width - s;
                 break;
               case "right":
-                l = n.top + n.height / 2 - a.height / 2, i = n.right + u;
+                l = n.top + n.height / 2 - a.height / 2, i = n.right + s;
                 break;
               default:
-                l = n.top - a.height - u, i = n.left + n.width / 2 - a.width / 2
+                l = n.top - a.height - s, i = n.left + n.width / 2 - a.width / 2
             }
             let o = window.innerWidth - a.width - 8,
-              s = window.innerHeight - a.height - 8,
+              u = window.innerHeight - a.height - 8,
               c = a.width >= window.innerWidth ? 8 : L(i, 8, Math.max(8, o));
             _({
-              top: a.height >= window.innerHeight ? 8 : L(l, 8, Math.max(8, s)),
+              top: a.height >= window.innerHeight ? 8 : L(l, 8, Math.max(8, u)),
               left: c
             })
-          }, [u, r]);
+          }, [s, r]);
         (0, l.useLayoutEffect)(() => {
           if (!b) return;
           U();
@@ -591,13 +591,13 @@
       });
       var r = {
         bindSnapshot: function() {
-          return s
+          return u
         },
         createAsyncLocalStorage: function() {
           return o
         },
         createSnapshot: function() {
-          return u
+          return s
         }
       };
       for (var n in r) Object.defineProperty(t, n, {
@@ -633,11 +633,11 @@
         return i ? new i : new l
       }
 
-      function s(e) {
+      function u(e) {
         return i ? i.bind(e) : l.bind(e)
       }
 
-      function u() {
+      function s() {
         return i ? i.snapshot() : function(e, ...t) {
           return e(...t)
         }
@@ -650,7 +650,7 @@
       }), Object.defineProperty(t, "default", {
         enumerable: !0,
         get: function() {
-          return s
+          return u
         }
       });
       let n = r(95155),
@@ -668,22 +668,22 @@
           loading: null,
           ssr: !0
         },
-        s = function(e) {
+        u = function(e) {
           let t = {
               ...o,
               ...e
             },
             r = (0, a.lazy)(() => t.loader().then(i)),
-            s = t.loading;
+            u = t.loading;
 
-          function u(e) {
-            let i = s ? (0, n.jsx)(s, {
+          function s(e) {
+            let i = u ? (0, n.jsx)(u, {
                 isLoading: !0,
                 pastDelay: !0,
                 error: null
               }) : null,
               o = !t.ssr || !!t.loading,
-              u = o ? a.Suspense : a.Fragment,
+              s = o ? a.Suspense : a.Fragment,
               c = t.ssr ? (0, n.jsxs)(n.Fragment, {
                 children: [null, (0, n.jsx)(r, {
                   ...e
@@ -694,14 +694,14 @@
                   ...e
                 })
               });
-            return (0, n.jsx)(u, {
+            return (0, n.jsx)(s, {
               ...o ? {
                 fallback: i
               } : {},
               children: c
             })
           }
-          return u.displayName = "LoadableComponent", u
+          return s.displayName = "LoadableComponent", s
         }
     },
     73321: (e, t, r) => {
@@ -759,44 +759,34 @@
     81934: (e, t, r) => {
       "use strict";
       r.d(t, {
-        A: () => o
+        A: () => l
       });
       var n = r(95155),
-        a = r(98500),
-        l = r.n(a),
-        i = r(38256);
+        a = r(38256);
 
-      function o({
+      function l({
         href: e,
         asTag: t,
         locale: r,
-        children: a,
-        ...o
+        children: l,
+        ...i
       }) {
-        let s = r || (0, i.useLang)();
-        if (e.startsWith("http://") || e.startsWith("https://") || e.startsWith("mailto:") || e.startsWith("tel:")) return t ? (0, n.jsx)("a", {
+        let o = r || (0, a.useLang)();
+        if (e.startsWith("http://") || e.startsWith("https://") || e.startsWith("mailto:") || e.startsWith("tel:")) return (0, n.jsx)("a", {
           href: e,
-          ...o,
-          children: a
-        }) : (0, n.jsx)(l(), {
-          href: e,
-          ...o,
-          children: a
+          ...i,
+          children: l
         });
-        let u = "en" == s ? `${e.startsWith("/")?"":"/"}${e}` : `/${s}${e.startsWith("/")?"":"/"}${e}`;
-        return t ? (0, n.jsx)("a", {
+        let u = "en" == o ? `${e.startsWith("/")?"":"/"}${e}` : `/${o}${e.startsWith("/")?"":"/"}${e}`;
+        return (0, n.jsx)("a", {
           href: u,
-          ...o,
-          children: a
-        }) : (0, n.jsx)(l(), {
-          href: u,
-          ...o,
-          children: a
+          ...i,
+          children: l
         })
       }
     }
   },
   e => {
-    e.O(0, [7958, 7274, 3785, 2520, 4103, 6564, 9427, 8463, 1831, 4664, 9367, 8413, 6413, 5592, 8500, 5686, 4564, 9388, 8256, 5886, 5395, 2131, 8542, 3957, 6053, 8441, 3794, 7358], () => e(e.s = 44419)), _N_E = e.O()
+    e.O(0, [7958, 7274, 3785, 2520, 8121, 6564, 9427, 8463, 1831, 4664, 9367, 8413, 6413, 5592, 5686, 4564, 9388, 8256, 5886, 5395, 2131, 8542, 3957, 6053, 8441, 3794, 7358], () => e(e.s = 44419)), _N_E = e.O()
   }
 ]);

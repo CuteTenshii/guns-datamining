@@ -234,30 +234,28 @@
     87460: (e, r, t) => {
       "use strict";
       t.r(r), t.d(r, {
-        default: () => g
+        default: () => m
       });
       var n = t(95155),
         a = t(12115);
       t(70063);
-      var o = t(98500),
+      var o = t(98241),
         s = t.n(o),
-        i = t(98241),
+        i = t(98410),
         l = t.n(i),
-        d = t(98410),
-        c = t.n(d),
-        u = t(54834),
-        m = t(50768),
-        f = t(38256);
+        d = t(54834),
+        c = t(50768),
+        u = t(38256);
 
-      function g({
+      function m({
         error: e
       }) {
-        let r = (0, f.kj)(),
+        let r = (0, u.kj)(),
           [t, o] = (0, a.useState)(null),
-          [i, d] = (0, a.useState)(null),
-          g = (0, a.useRef)(!1);
+          [i, m] = (0, a.useState)(null),
+          f = (0, a.useRef)(!1);
         return (0, a.useEffect)(() => {
-          g.current || (g.current = !0, (0, m.s)({
+          f.current || (f.current = !0, (0, c.s)({
             message: e?.message ?? "Global error boundary triggered",
             name: e?.name ?? "GlobalErrorBoundary",
             stack: e?.stack ?? null,
@@ -272,55 +270,55 @@
             eventId: e,
             errorId: r
           }) => {
-            e && o(e), r && d(r)
+            e && o(e), r && m(r)
           }))
         }, [e]), (0, n.jsxs)("div", {
-          className: l().containerWrapper,
+          className: s().containerWrapper,
           children: [(0, n.jsxs)("div", {
-            className: `${l().container} ${c().card}`,
+            className: `${s().container} ${l().card}`,
             children: [(0, n.jsx)("div", {
-              className: l().headIcon,
-              children: u.A.error
+              className: s().headIcon,
+              children: d.A.error
             }), (0, n.jsx)("h1", {
-              className: l().headline,
+              className: s().headline,
               children: r("errors.frontend.global_error.title")
             }), (0, n.jsx)("h3", {
-              className: `${l().subheadline} ${c().subtitle}`,
+              className: `${s().subheadline} ${l().subtitle}`,
               children: r("errors.frontend.global_error.message")
             }), (0, n.jsxs)("div", {
-              className: c().buttonRow,
+              className: l().buttonRow,
               children: [(0, n.jsx)("button", {
                 type: "button",
                 onClick: () => window.location.reload(),
-                className: `${l().button} ${l().buttonPrimary}`,
+                className: `${s().button} ${s().buttonPrimary}`,
                 children: r("errors.frontend.global_error.reload_page")
-              }), (0, n.jsx)(s(), {
+              }), (0, n.jsx)("a", {
                 href: "https://status.guns.lol",
                 target: "_blank",
-                className: `${l().button} ${l().buttonSecondary}`,
+                className: `${s().button} ${s().buttonSecondary}`,
                 children: r("errors.frontend.global_error.check_status")
               })]
             })]
           }), i && t && (0, n.jsx)("div", {
-            className: c().errorInformationContainer,
+            className: l().errorInformationContainer,
             children: (0, n.jsxs)("div", {
-              className: c().errorInformationList,
+              className: l().errorInformationList,
               children: [(0, n.jsxs)("div", {
-                className: c().errorInformationCard,
+                className: l().errorInformationCard,
                 children: [(0, n.jsx)("span", {
-                  className: c().errorInformationLabel,
+                  className: l().errorInformationLabel,
                   children: "Error ID"
                 }), (0, n.jsx)("span", {
-                  className: c().errorInformationValue,
+                  className: l().errorInformationValue,
                   children: i
                 })]
               }), (0, n.jsxs)("div", {
-                className: c().errorInformationCard,
+                className: l().errorInformationCard,
                 children: [(0, n.jsx)("span", {
-                  className: c().errorInformationLabel,
+                  className: l().errorInformationLabel,
                   children: "Event ID"
                 }), (0, n.jsx)("span", {
-                  className: c().errorInformationValue,
+                  className: l().errorInformationValue,
                   children: t
                 })]
               })]
@@ -343,6 +341,6 @@
     }
   },
   e => {
-    e.O(0, [7020, 4103, 8500, 8256, 5886, 8441, 3794, 7358], () => e(e.s = 48219)), _N_E = e.O()
+    e.O(0, [7020, 8121, 8256, 5886, 8441, 3794, 7358], () => e(e.s = 48219)), _N_E = e.O()
   }
 ]);

@@ -395,44 +395,34 @@
     81934: (e, a, c) => {
       "use strict";
       c.d(a, {
-        A: () => r
+        A: () => n
       });
       var t = c(95155),
-        d = c(98500),
-        n = c.n(d),
-        i = c(38256);
+        d = c(38256);
 
-      function r({
+      function n({
         href: e,
         asTag: a,
         locale: c,
-        children: d,
-        ...r
+        children: n,
+        ...i
       }) {
-        let s = c || (0, i.useLang)();
-        if (e.startsWith("http://") || e.startsWith("https://") || e.startsWith("mailto:") || e.startsWith("tel:")) return a ? (0, t.jsx)("a", {
+        let r = c || (0, d.useLang)();
+        if (e.startsWith("http://") || e.startsWith("https://") || e.startsWith("mailto:") || e.startsWith("tel:")) return (0, t.jsx)("a", {
           href: e,
-          ...r,
-          children: d
-        }) : (0, t.jsx)(n(), {
-          href: e,
-          ...r,
-          children: d
+          ...i,
+          children: n
         });
-        let f = "en" == s ? `${e.startsWith("/")?"":"/"}${e}` : `/${s}${e.startsWith("/")?"":"/"}${e}`;
-        return a ? (0, t.jsx)("a", {
-          href: f,
-          ...r,
-          children: d
-        }) : (0, t.jsx)(n(), {
-          href: f,
-          ...r,
-          children: d
+        let s = "en" == r ? `${e.startsWith("/")?"":"/"}${e}` : `/${r}${e.startsWith("/")?"":"/"}${e}`;
+        return (0, t.jsx)("a", {
+          href: s,
+          ...i,
+          children: n
         })
       }
     }
   },
   e => {
-    e.O(0, [1406, 8500, 8256, 8441, 3794, 7358], () => e(e.s = 10939)), _N_E = e.O()
+    e.O(0, [1406, 8256, 8441, 3794, 7358], () => e(e.s = 10939)), _N_E = e.O()
   }
 ]);

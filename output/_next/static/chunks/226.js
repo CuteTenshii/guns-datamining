@@ -2678,39 +2678,29 @@
     },
     81934: (l, t, s) => {
       s.d(t, {
-        A: () => d
+        A: () => e
       });
       var h = s(95155),
-        a = s(98500),
-        e = s.n(a),
-        i = s(38256);
+        a = s(38256);
 
-      function d({
+      function e({
         href: l,
         asTag: t,
         locale: s,
-        children: a,
-        ...d
+        children: e,
+        ...i
       }) {
-        let o = s || (0, i.useLang)();
-        if (l.startsWith("http://") || l.startsWith("https://") || l.startsWith("mailto:") || l.startsWith("tel:")) return t ? (0, h.jsx)("a", {
+        let d = s || (0, a.useLang)();
+        if (l.startsWith("http://") || l.startsWith("https://") || l.startsWith("mailto:") || l.startsWith("tel:")) return (0, h.jsx)("a", {
           href: l,
-          ...d,
-          children: a
-        }) : (0, h.jsx)(e(), {
-          href: l,
-          ...d,
-          children: a
+          ...i,
+          children: e
         });
-        let f = "en" == o ? `${l.startsWith("/")?"":"/"}${l}` : `/${o}${l.startsWith("/")?"":"/"}${l}`;
-        return t ? (0, h.jsx)("a", {
-          href: f,
-          ...d,
-          children: a
-        }) : (0, h.jsx)(e(), {
-          href: f,
-          ...d,
-          children: a
+        let o = "en" == d ? `${l.startsWith("/")?"":"/"}${l}` : `/${d}${l.startsWith("/")?"":"/"}${l}`;
+        return (0, h.jsx)("a", {
+          href: o,
+          ...i,
+          children: e
         })
       }
     }

@@ -262,7 +262,7 @@
     81382: (e, a, r) => {
       "use strict";
       r.d(a, {
-        A: () => x
+        A: () => p
       });
       var o = r(95155),
         s = r(66348),
@@ -270,22 +270,20 @@
         l = r(59791),
         c = r.n(l),
         n = r(54834),
-        i = r(98500),
-        d = r.n(i),
-        f = r(12115),
-        h = r(22834),
-        m = r(66493),
-        _ = r(81934),
-        u = r(38256);
+        i = r(12115),
+        d = r(22834),
+        f = r(66493),
+        h = r(81934),
+        m = r(38256);
 
-      function g({
+      function _({
         formattedUsers: e
       }) {
-        let a = (0, u.kj)(),
+        let a = (0, m.kj)(),
           r = new Date().getFullYear(),
-          [s, l] = (0, f.useState)(""),
-          [i, g] = (0, f.useState)("up"),
-          p = [{
+          [s, l] = (0, i.useState)(""),
+          [_, u] = (0, i.useState)("up"),
+          g = [{
             question: a("common.footer.faq.question_1"),
             answer: a("common.footer.faq.answer_1")
           }, {
@@ -305,23 +303,23 @@
           }, {
             question: a("common.footer.faq.question_6"),
             answer: a("common.footer.faq.answer_6")
-          }].map(e => (0, o.jsxs)(h.n.Item, {
+          }].map(e => (0, o.jsxs)(d.n.Item, {
             value: e.question,
-            children: [(0, o.jsx)(h.n.Control, {
+            children: [(0, o.jsx)(d.n.Control, {
               children: e.question
-            }), (0, o.jsx)(h.n.Panel, {
+            }), (0, o.jsx)(d.n.Panel, {
               children: e.answer
             })]
           }, e.question));
-        (0, f.useEffect)(() => {
+        (0, i.useEffect)(() => {
           (async () => {
             let e = await fetch("/api/statusLogs?excludeLogs=true", {
               cache: "no-store"
             });
-            g((await e.json()).currentStatus)
+            u((await e.json()).currentStatus)
           })()
         }, []);
-        let b = {
+        let p = {
           up: (0, o.jsx)("span", {
             className: t().statusUp,
             children: n.A.statusDot
@@ -341,8 +339,8 @@
             children: [(0, o.jsx)("h1", {
               className: t().faqText,
               children: a("common.footer.faq.title")
-            }), (0, o.jsx)(h.n, {
-              children: p
+            }), (0, o.jsx)(d.n, {
+              children: g
             })]
           }), (0, o.jsxs)("div", {
             className: t().footerWrapper,
@@ -383,7 +381,7 @@
                           className: c().inputWrapperInput
                         })]
                       })
-                    }), (0, o.jsx)(_.A, {
+                    }), (0, o.jsx)(h.A, {
                       href: `/register?claim=${s}&ref=guns_footer_banner`,
                       className: `${c().claimNow}`,
                       children: a("common.footer.banner.claim_now_text")
@@ -411,12 +409,12 @@
                             children: "."
                           }), "lol"]
                         })]
-                      }), (0, o.jsx)(d(), {
+                      }), (0, o.jsx)("a", {
                         href: "https://status.guns.lol",
                         target: "_blank",
                         children: (0, o.jsxs)("span", {
                           className: t().systemStatus,
-                          children: [b[i], " ", a("common.footer.banner.system_status_text")]
+                          children: [p[_], " ", a("common.footer.banner.system_status_text")]
                         })
                       })]
                     }), (0, o.jsx)("span", {
@@ -424,7 +422,7 @@
                     })]
                   }), (0, o.jsx)("div", {
                     className: t().languageSelectionFooter,
-                    children: (0, o.jsx)(m.A, {})
+                    children: (0, o.jsx)(f.A, {})
                   })]
                 }), (0, o.jsxs)("div", {
                   className: t().footerRight,
@@ -436,22 +434,22 @@
                         children: a("common.footer.footer_categories.general")
                       }), (0, o.jsxs)("div", {
                         className: t().links,
-                        children: [(0, o.jsx)(_.A, {
+                        children: [(0, o.jsx)(h.A, {
                           href: "/login",
                           children: a("common.footer.footer_categories_links.login")
-                        }), (0, o.jsx)(_.A, {
+                        }), (0, o.jsx)(h.A, {
                           href: "/register?ref=footer",
                           children: a("common.footer.footer_categories_links.sign_up")
-                        }), (0, o.jsx)(_.A, {
+                        }), (0, o.jsx)(h.A, {
                           href: "/pricing",
                           children: a("common.footer.footer_categories_links.pricing")
-                        }), (0, o.jsx)(_.A, {
+                        }), (0, o.jsx)(h.A, {
                           href: "/recovery",
                           children: a("common.footer.footer_categories_links.recover_account")
-                        }), (0, o.jsx)(_.A, {
+                        }), (0, o.jsx)(h.A, {
                           href: "/leaderboard",
                           children: a("common.footer.footer_categories_links.leaderboard")
-                        }), (0, o.jsx)(d(), {
+                        }), (0, o.jsx)("a", {
                           href: "https://status.guns.lol",
                           target: "_blank",
                           children: a("common.footer.footer_categories_links.website_status")
@@ -463,22 +461,22 @@
                         children: a("common.footer.footer_categories.resources")
                       }), (0, o.jsxs)("div", {
                         className: t().links,
-                        children: [(0, o.jsx)(d(), {
+                        children: [(0, o.jsx)("a", {
                           href: "https://help.guns.lol",
                           target: "_blank",
                           children: a("common.footer.footer_categories_links.help_center")
-                        }), (0, o.jsx)(d(), {
+                        }), (0, o.jsx)("a", {
                           href: "https://help.guns.lol/changelog",
                           target: "_blank",
                           children: a("common.footer.footer_categories_links.changelog")
-                        }), (0, o.jsx)(d(), {
+                        }), (0, o.jsx)("a", {
                           href: "/account/redeem",
                           children: a("common.footer.footer_categories_links.redeem_code")
-                        }), (0, o.jsx)(d(), {
+                        }), (0, o.jsx)("a", {
                           href: "https://salad.com/store/rewards/773aded6-552a-46f0-acc9-99324ca32efe",
                           target: "_blank",
                           children: a("common.footer.footer_categories_links.salad_product")
-                        }), (0, o.jsx)(d(), {
+                        }), (0, o.jsx)("a", {
                           href: "https://hone.gg/a/guns",
                           target: "_blank",
                           children: a("common.footer.footer_categories_links.hone_product")
@@ -493,17 +491,17 @@
                         children: a("common.footer.footer_categories.contact")
                       }), (0, o.jsxs)("div", {
                         className: t().links,
-                        children: [(0, o.jsx)(d(), {
+                        children: [(0, o.jsx)("a", {
                           href: "https://discord.gg/guns",
                           target: "_blank",
                           children: a("common.footer.footer_categories_links.discord_server")
-                        }), (0, o.jsx)(d(), {
+                        }), (0, o.jsx)("a", {
                           href: "mailto:support@guns.lol",
                           children: a("common.footer.footer_categories_links.support_email")
-                        }), (0, o.jsx)(d(), {
+                        }), (0, o.jsx)("a", {
                           href: "mailto:business@guns.lol",
                           children: a("common.footer.footer_categories_links.business_email")
-                        }), (0, o.jsx)(d(), {
+                        }), (0, o.jsx)("a", {
                           href: "mailto:legal@guns.lol",
                           children: a("common.footer.footer_categories_links.legal_email")
                         })]
@@ -514,13 +512,13 @@
                         children: a("common.footer.footer_categories.legal")
                       }), (0, o.jsxs)("div", {
                         className: t().links,
-                        children: [(0, o.jsx)(_.A, {
+                        children: [(0, o.jsx)(h.A, {
                           href: "/terms",
                           children: a("common.footer.footer_categories_links.terms_of_service")
-                        }), (0, o.jsx)(_.A, {
+                        }), (0, o.jsx)(h.A, {
                           href: "/privacy",
                           children: a("common.footer.footer_categories_links.privacy_policy")
-                        }), (0, o.jsx)(_.A, {
+                        }), (0, o.jsx)(h.A, {
                           href: "/terms/copyright",
                           children: a("common.footer.footer_categories_links.copyright_policy")
                         })]
@@ -541,19 +539,19 @@
                     })
                   }), (0, o.jsxs)("div", {
                     className: t().footerSocials,
-                    children: [(0, o.jsx)(d(), {
+                    children: [(0, o.jsx)("a", {
                       href: "https://discord.gg/guns",
                       target: "_blank",
                       children: n.A.discord
-                    }), (0, o.jsx)(d(), {
+                    }), (0, o.jsx)("a", {
                       href: "https://tiktok.com/@guns.lol",
                       target: "_blank",
                       children: n.A.tiktok
-                    }), (0, o.jsx)(d(), {
+                    }), (0, o.jsx)("a", {
                       href: "https://x.com/gunsdotlol",
                       target: "_blank",
                       children: n.A.x
-                    }), (0, o.jsx)(d(), {
+                    }), (0, o.jsx)("a", {
                       href: "https://t.me/gunsbio",
                       target: "_blank",
                       children: n.A.telegram
@@ -565,19 +563,19 @@
           })]
         })
       }
-      var p = r(87974);
+      var u = r(87974);
 
-      function b({
+      function g({
         data: e
       }) {
         let a = !!e?.session?.userId,
-          [r, s] = (0, f.useState)(!1),
-          [l, c] = (0, f.useState)(!1),
-          n = (0, f.useRef)(null),
-          i = (0, f.useRef)(null),
-          h = (0, u.kj)(),
-          _ = (0, u.VJ)(),
-          g = (0, f.useMemo)(() => [{
+          [r, s] = (0, i.useState)(!1),
+          [l, c] = (0, i.useState)(!1),
+          n = (0, i.useRef)(null),
+          d = (0, i.useRef)(null),
+          h = (0, m.kj)(),
+          _ = (0, m.VJ)(),
+          g = (0, i.useMemo)(() => [{
             label: h("common.header.navigation.help_center"),
             href: "https://help.guns.lol",
             external: !0
@@ -592,7 +590,7 @@
             label: h("common.header.navigation.pricing"),
             href: _("/pricing")
           }], []),
-          b = a ? [{
+          p = a ? [{
             label: h("common.header.navigation.dashboard"),
             href: "/account",
             highlighted: !0
@@ -604,38 +602,38 @@
             href: _("/register?ref=header"),
             highlighted: !0
           }],
-          x = a ? t().desktopNav : t().desktopNavExpanded,
-          v = e => (0, o.jsx)(d(), {
+          b = a ? t().desktopNav : t().desktopNavExpanded,
+          x = e => (0, o.jsx)("a", {
             href: e.href,
             target: e.external ? "_blank" : void 0,
             rel: e.external ? "noreferrer" : void 0,
             className: e.highlighted ? t().highlightedLink : void 0,
             children: e.label
           }, e.label);
-        (0, f.useEffect)(() => {
+        (0, i.useEffect)(() => {
           let e = () => {
-            if (!n.current || !i.current) return;
+            if (!n.current || !d.current) return;
             let e = n.current.getBoundingClientRect(),
-              a = i.current.getBoundingClientRect();
+              a = d.current.getBoundingClientRect();
             0 === a.width ? c(!0) : c(a.left - e.right < 24)
           };
           e(), window.addEventListener("resize", e);
           let a = null;
-          return "undefined" != typeof ResizeObserver && (a = new ResizeObserver(e), n.current && a.observe(n.current), i.current && a.observe(i.current)), () => {
+          return "undefined" != typeof ResizeObserver && (a = new ResizeObserver(e), n.current && a.observe(n.current), d.current && a.observe(d.current)), () => {
             window.removeEventListener("resize", e), a?.disconnect()
           }
         }, [a]);
-        let N = (0, f.useRef)(l),
-          j = [t().header, r ? t().active : "", l ? t().forceMobileNav : ""].filter(Boolean).join(" ");
-        return (0, f.useEffect)(() => {
-          N.current && !l && s(!1), N.current = l
+        let v = (0, i.useRef)(l),
+          N = [t().header, r ? t().active : "", l ? t().forceMobileNav : ""].filter(Boolean).join(" ");
+        return (0, i.useEffect)(() => {
+          v.current && !l && s(!1), v.current = l
         }, [l]), (0, o.jsx)("header", {
           className: `${t().headerWrapper} ${r?t().headerWrapperActive:""}`,
           children: (0, o.jsxs)("div", {
-            className: j,
+            className: N,
             children: [(0, o.jsx)("div", {
               className: t().blurBackground
-            }), (0, o.jsx)(d(), {
+            }), (0, o.jsx)("a", {
               href: "/",
               className: t().leftSideHeader,
               ref: n,
@@ -651,40 +649,40 @@
                 })]
               })
             }), (0, o.jsxs)("nav", {
-              className: x,
-              ref: i,
-              children: [g.map(v), b.map(v)]
+              className: b,
+              ref: d,
+              children: [g.map(x), p.map(x)]
             }), (0, o.jsx)("span", {
               className: t().mobileMenuButton,
               onClick: () => s(e => !e),
-              children: p.A.hamburger
+              children: u.A.hamburger
             }), (0, o.jsxs)("div", {
               className: `${t().mobileNavigation} ${r?t().mobileNavigationOpen:""}`,
               children: [(0, o.jsx)("div", {
                 className: t().mobileNavGroup,
-                children: g.map(v)
+                children: g.map(x)
               }), (0, o.jsxs)("div", {
                 className: t().mobileNavGroup,
                 children: [(0, o.jsx)("div", {
                   className: t().mobileNavLanguage,
-                  children: (0, o.jsx)(m.A, {})
-                }), b.map(v)]
+                  children: (0, o.jsx)(f.A, {})
+                }), p.map(x)]
               })]
             })]
           })
         })
       }
 
-      function x({
+      function p({
         children: e,
         data: a,
         statsData: r
       }) {
         let s = (1e4 * Math.round(r.users / 1e4)).toLocaleString("en-US");
         return (0, o.jsxs)(o.Fragment, {
-          children: [(0, o.jsx)(b, {
+          children: [(0, o.jsx)(g, {
             data: a
-          }), e, (0, o.jsx)(g, {
+          }), e, (0, o.jsx)(_, {
             formattedUsers: s
           })]
         })

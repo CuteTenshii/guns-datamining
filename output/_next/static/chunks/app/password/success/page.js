@@ -3,33 +3,31 @@
     49745: (s, e, r) => {
       "use strict";
       r.d(e, {
-        default: () => o
+        default: () => d
       });
       var n = r(95155);
       r(12115);
       var i = r(98241),
-        t = r.n(i),
-        c = r(54834),
-        d = r(98500),
-        a = r.n(d),
-        l = r(38256);
+        a = r.n(i),
+        t = r(54834),
+        c = r(38256);
 
-      function o() {
-        let s = (0, l.kj)();
+      function d() {
+        let s = (0, c.kj)();
         return (0, n.jsx)("div", {
-          className: t().containerWrapper,
+          className: a().containerWrapper,
           children: (0, n.jsxs)("div", {
-            className: t().container,
-            children: [c.A.success, (0, n.jsx)("h1", {
+            className: a().container,
+            children: [t.A.success, (0, n.jsx)("h1", {
               children: s("password.title")
             }), (0, n.jsx)("h3", {
               children: s("password.description")
             }), (0, n.jsxs)("div", {
-              className: t().containerButtons,
-              children: [(0, n.jsx)(a(), {
+              className: a().containerButtons,
+              children: [(0, n.jsx)("a", {
                 href: "/login",
                 children: s("password.buttons.login")
-              }), (0, n.jsx)(a(), {
+              }), (0, n.jsx)("a", {
                 href: "https://discord.gg/guns",
                 target: "_blank",
                 children: s("password.buttons.discord_server")
@@ -44,6 +42,6 @@
     }
   },
   s => {
-    s.O(0, [4103, 8500, 8256, 5886, 8441, 3794, 7358], () => s(s.s = 71453)), _N_E = s.O()
+    s.O(0, [8121, 8256, 5886, 8441, 3794, 7358], () => s(s.s = 71453)), _N_E = s.O()
   }
 ]);

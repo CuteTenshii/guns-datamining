@@ -3,25 +3,23 @@
     87133: (e, t, o) => {
       "use strict";
       o.d(t, {
-        default: () => d
+        default: () => c
       });
       var r = o(95155);
       o(12115);
       var i = o(98241),
         a = o.n(i),
         n = o(81382),
-        s = o(38256),
-        c = o(98500),
-        l = o.n(c);
+        s = o(38256);
 
-      function d({
+      function c({
         data: e
       }) {
         let t = (0, s.kj)(),
           o = (0, s.useLang)(),
           i = e.statsData,
           c = e.tokenData,
-          d = {
+          l = {
             "Changes To Privacy Policy": (0, r.jsx)("p", {
               children: "guns.lol may update this Privacy Policy from time to time. Changes take effect when posted on the Service or otherwise communicated to you. Your continued use of the Service after the effective date constitutes acceptance of the updated Policy, so please review it periodically."
             }),
@@ -63,7 +61,7 @@
               children: [(0, r.jsx)("p", {
                 children: "If you choose to receive updates from us, we may send you occasional emails about new features, product updates, promotions, or other information related to guns.lol. We only send marketing communications where permitted by law or where you have given explicit consent."
               }), (0, r.jsxs)("p", {
-                children: ["You can opt out of marketing emails at any time by clicking the unsubscribe link included in every message or by contacting ", (0, r.jsx)(l(), {
+                children: ["You can opt out of marketing emails at any time by clicking the unsubscribe link included in every message or by contacting ", (0, r.jsx)("a", {
                   href: "mailto:support@guns.lol",
                   children: "support@guns.lol"
                 }), ". Opting out will not affect essential service communications, such as transactional or account-related emails."]
@@ -118,7 +116,7 @@
             }),
             Security: (0, r.jsx)(r.Fragment, {
               children: (0, r.jsxs)("p", {
-                children: ["We use administrative, technical, and physical safeguards designed to protect personal data, including encrypted transport, access controls, and routine monitoring. No method of transmission or storage is entirely secure, and we cannot guarantee absolute security. If you suspect unauthorized access to your account, contact", " ", (0, r.jsx)(l(), {
+                children: ["We use administrative, technical, and physical safeguards designed to protect personal data, including encrypted transport, access controls, and routine monitoring. No method of transmission or storage is entirely secure, and we cannot guarantee absolute security. If you suspect unauthorized access to your account, contact", " ", (0, r.jsx)("a", {
                   href: "mailto:support@guns.lol",
                   children: "support@guns.lol"
                 }), " immediately."]
@@ -132,7 +130,7 @@
               }), (0, r.jsx)("p", {
                 children: "Where our use of your information relies on your consent, you may withdraw that consent at any time without affecting the legality of any processing carried out before withdrawal. guns.lol does not engage in automated decision-making or profiling that would have a significant legal or personal effect on you. If you are unsatisfied with how we handle your data, you have the right to file a complaint with your local data protection authority. However, we encourage you to contact us first so we can attempt to resolve the matter directly and transparently."
               }), (0, r.jsxs)("p", {
-                children: ["To access, edit, correct, or delete your personal information, you can use your account settings or contact", " ", (0, r.jsx)(l(), {
+                children: ["To access, edit, correct, or delete your personal information, you can use your account settings or contact", " ", (0, r.jsx)("a", {
                   href: "mailto:support@guns.lol",
                   children: "support@guns.lol"
                 }), ". If you cannot access your account, contact support and we can process a manual deletion request. We will respond to all verified data requests within the time limits required by applicable law and may ask for reasonable proof of identity before taking action to protect your account and data."]
@@ -140,7 +138,7 @@
             }),
             "Children's Information": (0, r.jsx)(r.Fragment, {
               children: (0, r.jsxs)("p", {
-                children: ["The Service is not intended for children under 13, or the minimum age required in your jurisdiction if higher. We do not knowingly collect personal information from children below the applicable age. If you believe a child has provided personal information to us, contact", " ", (0, r.jsx)(l(), {
+                children: ["The Service is not intended for children under 13, or the minimum age required in your jurisdiction if higher. We do not knowingly collect personal information from children below the applicable age. If you believe a child has provided personal information to us, contact", " ", (0, r.jsx)("a", {
                   href: "mailto:support@guns.lol",
                   children: "support@guns.lol"
                 }), " and we will take appropriate action."]
@@ -169,7 +167,7 @@
                   })]
                 }), (0, r.jsx)("div", {
                   className: a().terms,
-                  children: Object.entries(d).map(([e, t]) => (0, r.jsxs)("div", {
+                  children: Object.entries(l).map(([e, t]) => (0, r.jsxs)("div", {
                     className: a().term,
                     children: [(0, r.jsx)("h1", {
                       children: e
@@ -181,7 +179,7 @@
                 }), (0, r.jsxs)("div", {
                   className: a().legalDescription,
                   children: [(0, r.jsxs)("h3", {
-                    children: ["Any questions or concerns? Please reach out to ", (0, r.jsx)(l(), {
+                    children: ["Any questions or concerns? Please reach out to ", (0, r.jsx)("a", {
                       href: "mailto:support@guns.lol",
                       children: "support@guns.lol"
                     }), "."]
@@ -201,6 +199,6 @@
     }
   },
   e => {
-    e.O(0, [4103, 9404, 8500, 8256, 5886, 226, 1382, 8441, 3794, 7358], () => e(e.s = 96043)), _N_E = e.O()
+    e.O(0, [8121, 9404, 8256, 5886, 226, 1382, 8441, 3794, 7358], () => e(e.s = 96043)), _N_E = e.O()
   }
 ]);

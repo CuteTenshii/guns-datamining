@@ -3,7 +3,7 @@
     25997: (a, e, l) => {
       "use strict";
       l.d(e, {
-        default: () => m
+        default: () => o
       });
       var t = l(95155),
         s = l(12115),
@@ -11,25 +11,23 @@
         d = l(86623),
         i = l.n(d),
         c = l(34023),
-        n = l(98500),
-        o = l.n(n),
-        h = l(38256);
+        n = l(38256);
 
-      function m({
+      function o({
         data: a
       }) {
         let e = a?.tokenData,
           l = a?.statsData,
-          [d, n] = (0, s.useState)("all"),
-          [m, w] = (0, s.useState)(null),
-          [b, p] = (0, s.useState)(!0),
-          [x, _] = (0, s.useState)(null),
-          f = (0, h.kj)();
+          [d, o] = (0, s.useState)("all"),
+          [h, m] = (0, s.useState)(null),
+          [w, b] = (0, s.useState)(!0),
+          [p, x] = (0, s.useState)(null),
+          _ = (0, n.kj)();
         (0, s.useEffect)(() => {
           let a = !0;
           return (async () => {
             try {
-              p(!0);
+              b(!0);
               let e = await fetch("/api/leaderboard/views", {
                   method: "GET",
                   headers: {
@@ -38,21 +36,21 @@
                 }),
                 l = await e.json();
               if (!a) return;
-              !e.ok || l?.error ? _(l?.error) : (w(l), _(null))
+              !e.ok || l?.error ? x(l?.error) : (m(l), x(null))
             } catch (e) {
               if (!a) return;
-              _(e?.message)
+              x(e?.message)
             } finally {
-              a && p(!1)
+              a && b(!1)
             }
           })(), () => {
             a = !1
           }
         }, []);
-        let v = m?.allTime || [],
-          N = m?.month || [],
-          u = (0, s.useMemo)(() => "all" === d ? v : N, [d, v, N]),
-          g = f("all" === d ? "leaderboard.hero.description_alltime" : "leaderboard.hero.description_thismonth");
+        let f = h?.allTime || [],
+          v = h?.month || [],
+          N = (0, s.useMemo)(() => "all" === d ? f : v, [d, f, v]),
+          u = _("all" === d ? "leaderboard.hero.description_alltime" : "leaderboard.hero.description_thismonth");
         return (0, t.jsx)(r.A, {
           data: e,
           statsData: l,
@@ -64,22 +62,22 @@
                 className: i().hero,
                 children: [(0, t.jsx)("h1", {
                   className: i().title,
-                  children: f("leaderboard.hero.title")
+                  children: _("leaderboard.hero.title")
                 }), (0, t.jsx)("p", {
                   className: i().subtitle,
-                  children: g
+                  children: u
                 }), (0, t.jsxs)("div", {
                   className: i().tabs,
                   children: [(0, t.jsx)("button", {
                     className: `${i().tabButton} ${"all"===d?i().tabActive:""}`,
-                    onClick: () => n("all"),
+                    onClick: () => o("all"),
                     type: "button",
-                    children: f("leaderboard.hero.tab_alltime")
+                    children: _("leaderboard.hero.tab_alltime")
                   }), (0, t.jsx)("button", {
                     className: `${i().tabButton} ${"month"===d?i().tabActive:""}`,
-                    onClick: () => n("month"),
+                    onClick: () => o("month"),
                     type: "button",
-                    children: f("leaderboard.hero.tab_thismonth")
+                    children: _("leaderboard.hero.tab_thismonth")
                   })]
                 })]
               }), (0, t.jsxs)("div", {
@@ -89,36 +87,35 @@
                   children: [(0, t.jsx)("span", {
                     children: "#"
                   }), (0, t.jsx)("span", {
-                    children: f("leaderboard.table.profile_row_title")
+                    children: _("leaderboard.table.profile_row_title")
                   }), (0, t.jsx)("span", {
                     style: {
                       textAlign: "right"
                     },
-                    children: f("leaderboard.table.views_row_title")
+                    children: _("leaderboard.table.views_row_title")
                   })]
-                }), b ? (0, t.jsx)("div", {
+                }), w ? (0, t.jsx)("div", {
                   className: i().emptyState,
-                  children: f("leaderboard.table.leaderboard_loading_text")
-                }) : x ? (0, t.jsx)("div", {
+                  children: _("leaderboard.table.leaderboard_loading_text")
+                }) : p ? (0, t.jsx)("div", {
                   className: i().emptyState,
-                  children: x
-                }) : 0 === u.length ? (0, t.jsx)("div", {
+                  children: p
+                }) : 0 === N.length ? (0, t.jsx)("div", {
                   className: i().emptyState,
-                  children: f("leaderboard.table.no_data_text")
+                  children: _("leaderboard.table.no_data_text")
                 }) : (0, t.jsx)(t.Fragment, {
-                  children: u.map((a, e) => {
+                  children: N.map((a, e) => {
                     let l = e < 3 ? i().rankTop : "",
                       s = 0 === e ? i().rowTop1 : 1 === e ? i().rowTop2 : 2 === e ? i().rowTop3 : "",
                       r = a.displayName || a.username || "Unknown",
                       d = a.username || "unknown",
                       n = "number" == typeof a.views ? a.views.toLocaleString("en-US") : "0",
-                      h = r ? r.slice(0, 1) : "?",
-                      m = !!a.premium;
-                    return (0, t.jsx)(o(), {
+                      o = r ? r.slice(0, 1) : "?",
+                      h = !!a.premium;
+                    return (0, t.jsx)("a", {
                       href: `/${d}`,
                       className: i().rowLink,
                       target: "_blank",
-                      prefetch: !1,
                       children: (0, t.jsxs)("div", {
                         className: `${i().row} ${s}`,
                         children: [(0, t.jsx)("span", {
@@ -132,7 +129,7 @@
                             alt: ""
                           }) : (0, t.jsx)("div", {
                             className: i().avatarFallback,
-                            children: h
+                            children: o
                           }), (0, t.jsxs)("div", {
                             className: i().nameBlock,
                             children: [(0, t.jsxs)("div", {
@@ -140,7 +137,7 @@
                               children: [(0, t.jsx)("h1", {
                                 className: i().displayName,
                                 children: r
-                              }), m && (0, t.jsx)("span", {
+                              }), h && (0, t.jsx)("span", {
                                 className: i().premiumBadge,
                                 children: (0, t.jsx)("span", {
                                   className: i().premiumIcon,
@@ -325,6 +322,6 @@
     }
   },
   a => {
-    a.O(0, [9404, 4103, 6992, 8500, 8256, 5886, 226, 1382, 8441, 3794, 7358], () => a(a.s = 41143)), _N_E = a.O()
+    a.O(0, [9404, 8121, 6992, 8256, 5886, 226, 1382, 8441, 3794, 7358], () => a(a.s = 41143)), _N_E = a.O()
   }
 ]);
