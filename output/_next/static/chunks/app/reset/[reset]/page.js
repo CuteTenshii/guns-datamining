@@ -28,13 +28,14 @@
         type: m = "text",
         ..._
       }) {
-        let [f, j] = (0, a.useState)(!!l), {
-          onInput: x,
+        let [f, x] = (0, a.useState)(!!l), {
+          onInput: j,
           onChange: v,
-          ...w
-        } = _;
+          maxLength: w,
+          ...N
+        } = _, g = w ?? (l || "password" === m ? 72 : void 0);
         return (0, a.useEffect)(() => {
-          j(!!l)
+          x(!!l)
         }, [l]), (0, r.jsxs)("div", {
           className: i().inputContainerWrapper,
           "data-dashboard-feature-label": "string" == typeof e ? e : void 0,
@@ -57,7 +58,7 @@
               })]
             }), l && (0, r.jsx)("p", {
               onClick: () => {
-                j(!f)
+                x(!f)
               },
               children: f ? c.A.hidePassword : c.A.views
             }), (0, r.jsx)("input", {
@@ -72,9 +73,10 @@
               placeholder: n,
               className: i().inputWrapperInput,
               onInput: e => {
-                x?.(e), v?.(e), s?.(e)
+                j?.(e), v?.(e), s?.(e)
               },
-              ...w
+              maxLength: g,
+              ...N
             })]
           })]
         })
@@ -137,8 +139,8 @@
           [n, c] = (0, a.useState)(""),
           [p, m] = (0, a.useState)(""),
           [_, f] = (0, a.useState)(""),
-          j = e("auth.reset.change_password"),
-          [x, v] = (0, a.useState)(j),
+          x = e("auth.reset.change_password"),
+          [j, v] = (0, a.useState)(x),
           w = (0, l.useParams)().reset,
           N = async () => {
             try {
@@ -153,11 +155,11 @@
                   body: e
                 }),
                 a = await r.json();
-              r.ok ? t.push(s("/password/success")) : (f(a.error), v(j))
+              r.ok ? t.push(s("/password/success")) : (f(a.error), v(x))
             } catch (e) {
               return console.error(e.message), !1
             } finally {
-              v(j)
+              v(x)
             }
           };
         return (0, r.jsx)(r.Fragment, {
@@ -200,7 +202,7 @@
                 }), (0, r.jsx)("span", {
                   className: o().submitButton,
                   onClick: N,
-                  children: x
+                  children: j
                 })]
               })]
             })
@@ -272,6 +274,6 @@
     }
   },
   e => {
-    e.O(0, [8121, 5439, 8256, 5886, 8441, 3794, 7358], () => e(e.s = 33237)), _N_E = e.O()
+    e.O(0, [4103, 5439, 8256, 5886, 8441, 3794, 7358], () => e(e.s = 33237)), _N_E = e.O()
   }
 ]);

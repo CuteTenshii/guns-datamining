@@ -72,8 +72,9 @@
         let [p, h] = (0, n.useState)(!!l), {
           onInput: g,
           onChange: N,
-          ...S
-        } = b;
+          maxLength: S,
+          ...G
+        } = b, U = S ?? (l || "password" === _ ? 72 : void 0);
         return (0, n.useEffect)(() => {
           h(!!l)
         }, [l]), (0, r.jsxs)("div", {
@@ -115,7 +116,8 @@
               onInput: e => {
                 g?.(e), N?.(e), a?.(e)
               },
-              ...S
+              maxLength: U,
+              ...G
             })]
           })]
         })

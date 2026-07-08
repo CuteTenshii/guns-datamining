@@ -113,8 +113,9 @@
         let [S, U] = (0, d.useState)(!!b), {
           onInput: G,
           onChange: p,
-          ...h
-        } = N;
+          maxLength: h,
+          ...m
+        } = N, v = h ?? (b || "password" === u ? 72 : void 0);
         return (0, d.useEffect)(() => {
           U(!!b)
         }, [b]), (0, c.jsxs)("div", {
@@ -156,7 +157,8 @@
               onInput: e => {
                 G?.(e), p?.(e), a?.(e)
               },
-              ...h
+              maxLength: v,
+              ...m
             })]
           })]
         })
@@ -401,6 +403,6 @@
     }
   },
   e => {
-    e.O(0, [1406, 8121, 8256, 5886, 8441, 3794, 7358], () => e(e.s = 23937)), _N_E = e.O()
+    e.O(0, [1406, 4103, 8256, 5886, 8441, 3794, 7358], () => e(e.s = 23937)), _N_E = e.O()
   }
 ]);

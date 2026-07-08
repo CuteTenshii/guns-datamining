@@ -50,7 +50,7 @@
           [b, h] = (0, r.useState)(null),
           [m, p] = (0, r.useState)(null),
           [N, w] = (0, r.useState)(""),
-          S = {
+          g = {
             google: {
               continue: _("auth.social.continue_with_google"),
               signup: _("auth.social.signup_with_google"),
@@ -62,7 +62,7 @@
             a = Number(window.localStorage.getItem(f) || "0");
           "google" === e && a > 0 && (p("google"), w(_("auth.social.last_used")))
         }, []);
-        let g = async t => {
+        let S = async t => {
           try {
             h(t), a?.("");
             {
@@ -86,12 +86,12 @@
         return (0, c.jsx)("div", {
           className: d().socialButtons,
           children: ["google"].map(e => {
-            let a = S[e],
+            let a = g[e],
               r = b === e;
             return (0, c.jsxs)("button", {
               type: "button",
               className: d().socialButton,
-              onClick: () => g(e),
+              onClick: () => S(e),
               disabled: null !== b,
               children: [a.icon, (0, c.jsx)("span", {
                 className: d().buttonText,
@@ -344,8 +344,9 @@
         let [m, p] = (0, r.useState)(!!f), {
           onInput: N,
           onChange: w,
+          maxLength: g,
           ...S
-        } = h;
+        } = h, v = g ?? (f || "password" === b ? 72 : void 0);
         return (0, r.useEffect)(() => {
           p(!!f)
         }, [f]), (0, c.jsxs)("div", {
@@ -387,6 +388,7 @@
               onInput: e => {
                 N?.(e), w?.(e), a?.(e)
               },
+              maxLength: v,
               ...S
             })]
           })]
@@ -420,7 +422,7 @@
         bodyClassName: m,
         children: p
       }) {
-        let [N, w] = (0, r.useState)(e), [S, g] = (0, r.useState)(!1), [v, U] = (0, r.useState)(null), x = (0, r.useRef)(null), G = (0, r.useRef)(null), j = (0, r.useRef)(null), y = (0, r.useRef)(!1), C = e => {
+        let [N, w] = (0, r.useState)(e), [g, S] = (0, r.useState)(!1), [v, U] = (0, r.useState)(null), x = (0, r.useRef)(null), G = (0, r.useRef)(null), j = (0, r.useRef)(null), y = (0, r.useRef)(!1), C = e => {
           if (!e) return !1;
           let a = window.getComputedStyle(e).overflowY;
           return e.scrollHeight > e.clientHeight + 1 && ("auto" === a || "scroll" === a)
@@ -436,11 +438,11 @@
         }, k = (e, a) => a < 0 ? e.scrollTop > 0 : !(a > 0) || e.scrollTop + e.clientHeight < e.scrollHeight;
         if ((0, r.useEffect)(() => {
             if (e) {
-              w(!0), g(!1);
+              w(!0), S(!1);
               return
             }
-            return g(!0), x.current = setTimeout(() => {
-              w(!1), g(!1)
+            return S(!0), x.current = setTimeout(() => {
+              w(!1), S(!1)
             }, 180), () => {
               x.current && (clearTimeout(x.current), x.current = null)
             }
@@ -497,7 +499,7 @@
         let B = "number" == typeof f ? `${f}px` : f,
           L = {};
         B && "auto" !== B ? L.maxWidth = B : (L.width = "fit-content", L.maxWidth = "clamp(100%, 100%, 850px)", L.boxSizing = "border-box");
-        let q = S ? "closing" : "open",
+        let q = g ? "closing" : "open",
           E = (0, c.jsx)("div", {
             className: n().overlay,
             "data-centered": i,
