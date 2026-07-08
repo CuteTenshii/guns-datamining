@@ -86,42 +86,42 @@
         onBlur: _,
         onPointerDown: x,
         onPointerUp: S,
-        onPointerCancel: w,
-        ...g
+        onPointerCancel: g,
+        ...w
       }) {
         let y = o(p, 0),
           j = o(b, 100),
           k = o(h, 1) || 1,
-          E = a ?? s ?? y,
+          U = a ?? s ?? y,
           C = void 0 !== a,
-          [U, G] = (0, r.useState)(E),
+          [E, G] = (0, r.useState)(U),
           [L, M] = (0, r.useState)(!1),
           [$, I] = (0, r.useState)(!1);
         (0, r.useEffect)(() => {
           C || G(s ?? y)
         }, [s, C, y]);
-        let D = C ? a ?? y : U,
-          A = Math.min(j, Math.max(y, D)),
-          W = Math.max(j - y, Number.EPSILON),
-          B = (A - y) / W * 100;
+        let A = C ? a ?? y : E,
+          W = Math.min(j, Math.max(y, A)),
+          D = Math.max(j - y, Number.EPSILON),
+          B = (W - y) / D * 100;
         (0, r.useEffect)(() => {
           C || G(e => Math.min(j, Math.max(y, e)))
         }, [C, y, j]);
         let R = (0, r.useMemo)(() => t?.length ? t.map(e => ({
             ...e,
             normalizedValue: Math.min(j, Math.max(y, e.value)),
-            position: Math.min(100, Math.max(0, (Math.min(j, Math.max(y, e.value)) - y) / W * 100))
-          })) : [], [t, y, j, W]),
+            position: Math.min(100, Math.max(0, (Math.min(j, Math.max(y, e.value)) - y) / D * 100))
+          })) : [], [t, y, j, D]),
           z = (0, r.useMemo)(() => {
-            if (!u) return `${A}`;
-            let e = "function" == typeof u ? u(A) : u;
-            return null == e || !1 === e ? `${A}` : e
-          }, [u, A]),
-          H = !m && (L || $),
-          P = "string" == typeof e ? e : void 0;
+            if (!u) return `${W}`;
+            let e = "function" == typeof u ? u(W) : u;
+            return null == e || !1 === e ? `${W}` : e
+          }, [u, W]),
+          P = !m && (L || $),
+          H = "string" == typeof e ? e : void 0;
         return (0, n.jsxs)("div", {
           className: i().inputContainerWrapper,
-          "data-dashboard-feature-label": P,
+          "data-dashboard-feature-label": H,
           children: [e && (0, n.jsx)("h1", {
             className: i().featureName,
             style: {
@@ -150,20 +150,20 @@
                     style: {
                       left: `calc(${B}% - (var(--thumb-size) / 2))`
                     },
-                    "data-visible": H,
+                    "data-visible": P,
                     children: (0, n.jsx)("span", {
                       className: c().tooltip,
-                      "data-visible": H,
+                      "data-visible": P,
                       children: z
                     })
                   })]
                 }), (0, n.jsx)("input", {
-                  ...g,
+                  ...w,
                   type: "range",
                   min: y,
                   max: j,
                   step: k,
-                  value: A,
+                  value: W,
                   disabled: m,
                   className: c().range,
                   onChange: e => {
@@ -183,11 +183,11 @@
                     I(!1), S?.(e)
                   },
                   onPointerCancel: e => {
-                    I(!1), w?.(e)
+                    I(!1), g?.(e)
                   },
                   "aria-valuemin": y,
                   "aria-valuemax": j,
-                  "aria-valuenow": A
+                  "aria-valuenow": W
                 }), R.length > 0 && (0, n.jsx)("div", {
                   className: c().marks,
                   children: R.map((e, t) => (0, n.jsxs)("div", {
@@ -197,7 +197,7 @@
                     },
                     children: [(0, n.jsx)("span", {
                       className: c().markDot,
-                      "data-active": e.normalizedValue <= A
+                      "data-active": e.normalizedValue <= W
                     }), e.label && (0, n.jsx)("span", {
                       className: c().markLabel,
                       children: e.label
@@ -213,7 +213,7 @@
     30184: (e, t, a) => {
       "use strict";
       a.d(t, {
-        A: () => v
+        A: () => m
       });
       var n = a(95155),
         l = a(12115),
@@ -232,11 +232,6 @@
           return a ? `#${a}` : t.startsWith("#") ? "#" : ""
         },
         b = e => {
-          if (/^#[0-9a-f]{6}$/i.test(e)) return e.toLowerCase();
-          if (/^#[0-9a-f]{3}$/i.test(e)) return `#${e.slice(1).split("").map(e=>`${e}${e}`).join("")}`.toLowerCase();
-          return null
-        },
-        h = e => {
           let t, a, n, l, r, s, i, {
             r: d,
             g: c,
@@ -252,7 +247,7 @@
             v: r
           }
         },
-        m = (0, n.jsx)("svg", {
+        h = (0, n.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "19",
           height: "19",
@@ -263,44 +258,46 @@
           })
         });
 
-      function v({
+      function m({
         featureName: e,
         onChangeFunction: t,
         value: a,
         placeholder: i = "#000000",
         icon: c,
-        className: v,
-        disabled: N,
-        style: _,
-        ...x
+        className: m,
+        disabled: v,
+        style: N,
+        ..._
       }) {
-        let S = (0, l.useRef)(null),
-          w = (0, l.useRef)(null),
+        let x = (0, l.useRef)(null),
+          S = (0, l.useRef)(null),
           g = (0, l.useRef)(null),
-          [y, j] = (0, l.useState)(!1),
-          [k, E] = (0, l.useState)(() => h(u)),
-          [C, U] = (0, l.useState)(u),
-          [G, L] = (0, l.useState)(!1),
-          [M, $] = (0, l.useState)(!1),
-          [I, D] = (0, l.useState)({
+          [w, y] = (0, l.useState)(!1),
+          [j, k] = (0, l.useState)(() => b(u)),
+          [U, C] = (0, l.useState)(u),
+          [E, G] = (0, l.useState)({
             left: 0,
             top: 0,
             width: 220
           }),
-          [A, W] = (0, l.useState)(!1),
-          B = p("string" == typeof a ? a : ""),
-          R = (0, l.useMemo)(() => B ? b(B) : null, [B]),
-          z = R ?? C;
+          [L, M] = (0, l.useState)(!1),
+          $ = p("string" == typeof a ? a : ""),
+          I = (0, l.useMemo)(() => $ ? (e => {
+            if (/^#[0-9a-f]{6}$/i.test(e)) return e.toLowerCase();
+            if (/^#[0-9a-f]{3}$/i.test(e)) return `#${e.slice(1).split("").map(e=>`${e}${e}`).join("")}`.toLowerCase();
+            return null
+          })($) : null, [$]),
+          A = I ?? U;
         (0, l.useEffect)(() => {
-          R && U(R)
-        }, [R]), (0, l.useEffect)(() => {
-          E(h(z))
-        }, [z]), (0, l.useEffect)(() => {
-          W(!0)
+          I && C(I)
+        }, [I]), (0, l.useEffect)(() => {
+          k(b(A))
+        }, [A]), (0, l.useEffect)(() => {
+          M(!0)
         }, []);
-        let H = (0, l.useCallback)(() => {
-          if (!S.current) return;
-          let e = S.current.getBoundingClientRect(),
+        let W = (0, l.useCallback)(() => {
+          if (!x.current) return;
+          let e = x.current.getBoundingClientRect(),
             t = Math.min(270, e.width),
             a = g.current?.offsetHeight ?? 260,
             n = e.bottom + 10;
@@ -309,37 +306,37 @@
             t >= 12 && (n = t)
           }
           let l = window.innerWidth - t - 12;
-          D({
+          G({
             left: f(e.left, 12, Math.max(12, l)),
             top: n,
             width: t
           })
         }, []);
         (0, l.useLayoutEffect)(() => {
-          if (!y) return;
+          if (!w) return;
           let e = () => {
-            H()
+            W()
           };
           return e(), window.addEventListener("resize", e), window.addEventListener("scroll", e, !0), () => {
             window.removeEventListener("resize", e), window.removeEventListener("scroll", e, !0)
           }
-        }, [y, H]), (0, l.useEffect)(() => {
-          if (!y) return;
+        }, [w, W]), (0, l.useEffect)(() => {
+          if (!w) return;
           let e = e => {
               let t = e.target,
-                a = S.current,
+                a = x.current,
                 n = g.current;
-              a && a.contains(t) || n && n.contains(t) || j(!1)
+              a && a.contains(t) || n && n.contains(t) || y(!1)
             },
             t = e => {
-              "Escape" === e.key && j(!1)
+              "Escape" === e.key && y(!1)
             };
           return document.addEventListener("mousedown", e), document.addEventListener("keydown", t), () => {
             document.removeEventListener("mousedown", e), document.removeEventListener("keydown", t)
           }
-        }, [y]);
-        let P = (0, l.useCallback)(e => {
-            E(e);
+        }, [w]);
+        let D = (0, l.useCallback)(e => {
+            k(e);
             let a = (e => {
               let t, {
                 r: a,
@@ -371,86 +368,72 @@
               });
               return t = e => e.toString(16).padStart(2, "0"), `#${t(a)}${t(n)}${t(l)}`
             })(e);
-            U(a), t?.(a)
+            C(a), t?.(a)
           }, [t]),
-          T = (0, l.useCallback)(e => {
+          B = (0, l.useCallback)(e => {
             let a = p(e.target.value);
             t?.(a)
           }, [t]),
-          O = (0, l.useCallback)((e, t) => {
-            if (!w.current) return;
-            let a = w.current.getBoundingClientRect(),
+          R = (0, l.useCallback)((e, t) => {
+            if (!S.current) return;
+            let a = S.current.getBoundingClientRect(),
               n = f((e - a.left) / a.width, 0, 1),
               l = f((t - a.top) / a.height, 0, 1);
-            P({
-              h: k.h,
+            D({
+              h: j.h,
               s: n,
               v: 1 - l
             })
-          }, [k.h, P]),
-          F = (0, l.useCallback)(e => {
-            if (N) return;
+          }, [j.h, D]),
+          z = (0, l.useCallback)(e => {
+            if (v) return;
             e.preventDefault();
             let t = e.pointerId;
-            O(e.clientX, e.clientY);
+            R(e.clientX, e.clientY);
             let a = e => {
-                e.pointerId === t && O(e.clientX, e.clientY)
+                e.pointerId === t && R(e.clientX, e.clientY)
               },
               n = e => {
                 e.pointerId === t && (document.removeEventListener("pointermove", a), document.removeEventListener("pointerup", n))
               };
             document.addEventListener("pointermove", a), document.addEventListener("pointerup", n)
-          }, [N, O]),
-          V = (0, l.useCallback)(e => {
-            P({
-              ...k,
+          }, [v, R]),
+          P = (0, l.useCallback)(e => {
+            D({
+              ...j,
               h: Number(e.target.value)
             })
-          }, [k, P]),
-          X = (0, l.useCallback)(() => {
-            N || j(e => (e || H(), !0))
-          }, [N, H]),
-          Y = (0, l.useCallback)(() => {
-            N || j(e => {
+          }, [j, D]),
+          H = (0, l.useCallback)(() => {
+            v || y(e => (e || W(), !0))
+          }, [v, W]),
+          T = (0, l.useCallback)(() => {
+            v || y(e => {
               let t = !e;
-              return t && H(), t
+              return t && W(), t
             })
-          }, [N, H]),
-          q = (0, l.useCallback)(async () => {
-            if (!N && G && void 0 !== window.EyeDropper && !M) try {
-              $(!0);
-              let e = new window.EyeDropper,
-                t = await e.open(),
-                a = b(t.sRGBHex);
-              a && P(h(a))
-            } catch (e) {} finally {
-              $(!1)
-            }
-          }, [N, M, G, P]);
-        (0, l.useEffect)(() => {
-          L(void 0 !== window.EyeDropper)
-        }, []);
-        let K = (0, s.A)(d().inputWrapperInput, o().textInput, c && o().textInputWithIcon, v),
-          Z = "undefined" != typeof document ? document.body : null,
-          J = !!(y && A && Z),
-          Q = J ? {
+          }, [v, W]),
+          O = (0, s.A)(d().inputWrapperInput, o().textInput, c && o().textInputWithIcon, m),
+          F = "undefined" != typeof document ? document.body : null,
+          V = !!(w && L && F),
+          X = V ? {
             position: "fixed",
-            left: `${I.left}px`,
-            top: `${I.top}px`,
-            width: `${I.width}px`
+            left: `${E.left}px`,
+            top: `${E.top}px`,
+            width: `${E.width}px`
           } : void 0,
-          ee = "string" == typeof e ? e : void 0,
-          et = (0, n.jsxs)("div", {
+          Y = "string" == typeof e ? e : void 0,
+          q = (0, n.jsxs)("div", {
             ref: g,
             className: o().panel,
-            style: Q,
+            style: X,
             children: [(0, n.jsxs)("div", {
-              ref: w,
+              ref: S,
               className: o().svArea,
               style: {
-                backgroundColor: `hsl(${k.h}, 100%, 50%)`
+                backgroundColor: `hsl(${j.h}, 100%, 50%)`
               },
-              onPointerDown: F,
+              onPointerDown: z,
               children: [(0, n.jsx)("div", {
                 className: o().svWhiteOverlay
               }), (0, n.jsx)("div", {
@@ -458,8 +441,8 @@
               }), (0, n.jsx)("div", {
                 className: o().svCursor,
                 style: {
-                  left: `${100*k.s}%`,
-                  top: `${(1-k.v)*100}%`
+                  left: `${100*j.s}%`,
+                  top: `${(1-j.v)*100}%`
                 }
               })]
             }), (0, n.jsx)("div", {
@@ -469,34 +452,34 @@
                 min: 0,
                 max: 360,
                 step: 1,
-                value: k.h,
-                onChange: V,
+                value: j.h,
+                onChange: P,
                 className: o().hueSlider,
-                disabled: N
+                disabled: v
               })
             })]
           });
         return (0, n.jsxs)("div", {
           className: d().inputContainerWrapper,
-          "data-dashboard-feature-label": ee,
+          "data-dashboard-feature-label": Y,
           children: [(0, n.jsx)("h1", {
             className: d().featureName,
             children: e
           }), (0, n.jsxs)("div", {
             className: (0, s.A)(d().inputWrapperDiv, o().wrapper),
-            ref: S,
+            ref: x,
             children: [(0, n.jsx)("button", {
               type: "button",
               className: o().leftSwatchButton,
-              onClick: Y,
+              onClick: T,
               style: {
-                cursor: N ? "not-allowed" : "pointer"
+                cursor: v ? "not-allowed" : "pointer"
               },
-              disabled: N,
+              disabled: v,
               children: (0, n.jsx)("span", {
                 className: o().colorSwatch,
                 style: {
-                  backgroundColor: z
+                  backgroundColor: A
                 }
               })
             }), c && (0, n.jsx)("span", {
@@ -508,22 +491,22 @@
               spellCheck: !1,
               inputMode: "text",
               maxLength: 7,
-              className: K,
+              className: O,
               placeholder: i,
-              value: B,
-              onChange: T,
-              onFocus: X,
-              onClick: X,
-              disabled: N,
-              style: _,
-              ...x
+              value: $,
+              onChange: B,
+              onFocus: H,
+              onClick: H,
+              disabled: v,
+              style: N,
+              ..._
             }), (0, n.jsx)("button", {
               type: "button",
               className: o().pickerButton,
-              onClick: G ? q : Y,
-              disabled: N || G && M,
-              children: m
-            }), y && (J && Z ? (0, r.createPortal)(et, Z) : et)]
+              onClick: T,
+              disabled: v,
+              children: h
+            }), w && (V && F ? (0, r.createPortal)(q, F) : q)]
           })]
         })
       }
@@ -575,9 +558,9 @@
         onFocus: _,
         onBlur: x,
         onKeyDown: S,
-        ...w
+        ...g
       }) {
-        let g = (0, r.useMemo)(() => Array.isArray(i) ? i.map(e => "string" == typeof e ? {
+        let w = (0, r.useMemo)(() => Array.isArray(i) ? i.map(e => "string" == typeof e ? {
             value: e,
             label: e
           } : e?.value === void 0 || e?.value === null ? null : {
@@ -587,18 +570,18 @@
           }).filter(e => !!e) : [], [i]),
           y = void 0 !== c,
           [j, k] = (0, r.useState)(o ?? null),
-          [E, C] = (0, r.useState)(!1),
-          [U, G] = (0, r.useState)(!1),
+          [U, C] = (0, r.useState)(!1),
+          [E, G] = (0, r.useState)(!1),
           [L, M] = (0, r.useState)(-1),
           $ = (0, r.useRef)(null),
           I = (0, r.useRef)(null),
-          D = (0, r.useRef)(null),
           A = (0, r.useRef)(null),
-          [W, B] = (0, r.useState)(null),
+          W = (0, r.useRef)(null),
+          [D, B] = (0, r.useState)(null),
           [R, z] = (0, r.useState)(!1),
-          H = (0, r.useId)(),
-          P = N ?? H,
-          T = `${P}-dropdown`,
+          P = (0, r.useId)(),
+          H = N ?? P,
+          T = `${H}-dropdown`,
           O = (0, r.useCallback)(() => {
             let e = I.current;
             if (!e) return;
@@ -616,28 +599,28 @@
         }, []);
         let F = y ? c ?? null : j,
           V = null == F ? "" : String(F),
-          X = g.find(e => e.value === F) ?? null,
+          X = w.find(e => e.value === F) ?? null,
           Y = !!X || null != F && "" != `${F}`;
         (0, r.useEffect)(() => {
-          E ? M(X && !X.disabled ? g.findIndex(e => e.value === X.value) : g.findIndex(e => !e.disabled)) : M(-1)
-        }, [E, g, X]), (0, r.useEffect)(() => {
-          if (E) return O(), window.addEventListener("resize", O), window.addEventListener("scroll", O, !0), () => {
+          U ? M(X && !X.disabled ? w.findIndex(e => e.value === X.value) : w.findIndex(e => !e.disabled)) : M(-1)
+        }, [U, w, X]), (0, r.useEffect)(() => {
+          if (U) return O(), window.addEventListener("resize", O), window.addEventListener("scroll", O, !0), () => {
             window.removeEventListener("resize", O), window.removeEventListener("scroll", O, !0)
           }
-        }, [E, O]), (0, r.useEffect)(() => {
-          if (!E) return;
+        }, [U, O]), (0, r.useEffect)(() => {
+          if (!U) return;
           let e = e => {
             let t = e.target,
               a = $.current?.contains(t),
-              n = A.current?.contains(t);
+              n = W.current?.contains(t);
             a || n || C(!1)
           };
           return document.addEventListener("mousedown", e), document.addEventListener("touchstart", e), () => {
             document.removeEventListener("mousedown", e), document.removeEventListener("touchstart", e)
           }
-        }, [E]), (0, r.useEffect)(() => {
-          if (!E || L < 0) return;
-          let e = D.current,
+        }, [U]), (0, r.useEffect)(() => {
+          if (!U || L < 0) return;
+          let e = A.current,
             t = e?.children[L];
           if (e && t) {
             let a = t.offsetTop,
@@ -646,42 +629,42 @@
               r = l + e.clientHeight;
             a < l ? e.scrollTop = a : n > r && (e.scrollTop = n - e.clientHeight)
           }
-        }, [L, E]);
+        }, [L, U]);
         let q = e => {
-            let t = g[e];
+            let t = w[e];
             if (t && !t.disabled) {
               var a;
               a = t.value, y || k(a), u?.(a), C(!1)
             }
           },
           K = e => {
-            if (!g.length || !g.some(e => !e.disabled)) return;
+            if (!w.length || !w.some(e => !e.disabled)) return;
             let t = L;
-            for (let a = 0; a < g.length; a += 1)
-              if (t = (t + e + g.length) % g.length, !g[t].disabled) {
+            for (let a = 0; a < w.length; a += 1)
+              if (t = (t + e + w.length) % w.length, !w[t].disabled) {
                 M(t);
                 break
               }
           },
           Z = X?.label ?? (Y ? String(F ?? "") : a),
           J = (0, n.jsx)("div", {
-            ref: A,
+            ref: W,
             className: (0, l.A)(d().dropdown, p),
-            "data-open": E,
+            "data-open": U,
             id: T,
             style: {
               position: "fixed",
-              width: W?.width,
-              left: W?.left,
-              top: W?.top
+              width: D?.width,
+              left: D?.left,
+              top: D?.top
             },
-            children: g.length > 0 ? (0, n.jsx)("ul", {
-              ref: D,
+            children: w.length > 0 ? (0, n.jsx)("ul", {
+              ref: A,
               className: d().optionList,
               style: {
                 maxHeight: f
               },
-              children: g.map((e, t) => {
+              children: w.map((e, t) => {
                 let a = `${T}-option-${t}`,
                   l = t === L,
                   r = e.value === F;
@@ -722,16 +705,16 @@
             required: v
           }), (0, n.jsxs)("div", {
             className: (0, l.A)(d().shell, b),
-            "data-open": E,
-            "data-focused": U,
+            "data-open": U,
+            "data-focused": E,
             "data-disabled": h,
             ref: I,
             children: [t && (0, n.jsx)("span", {
               className: d().iconSlot,
               children: t
             }), (0, n.jsx)("button", {
-              ...w,
-              id: P,
+              ...g,
+              id: H,
               type: "button",
               className: (0, l.A)(d().trigger, t ? d().triggerWithIcon : void 0),
               onFocus: e => {
@@ -748,7 +731,7 @@
                 })
               },
               onKeyDown: e => {
-                h || ("ArrowDown" === e.key ? (e.preventDefault(), E ? K(1) : (O(), C(!0))) : "ArrowUp" === e.key ? (e.preventDefault(), E ? K(-1) : (O(), C(!0))) : "Enter" === e.key || " " === e.key ? (e.preventDefault(), E ? L >= 0 && q(L) : (O(), C(!0))) : "Escape" === e.key ? E && (e.preventDefault(), C(!1)) : "Tab" === e.key && C(!1)), S?.(e)
+                h || ("ArrowDown" === e.key ? (e.preventDefault(), U ? K(1) : (O(), C(!0))) : "ArrowUp" === e.key ? (e.preventDefault(), U ? K(-1) : (O(), C(!0))) : "Enter" === e.key || " " === e.key ? (e.preventDefault(), U ? L >= 0 && q(L) : (O(), C(!0))) : "Escape" === e.key ? U && (e.preventDefault(), C(!1)) : "Tab" === e.key && C(!1)), S?.(e)
               },
               disabled: h,
               children: (0, n.jsx)("span", {

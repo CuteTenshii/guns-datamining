@@ -339,7 +339,7 @@
     30184: (e, a, t) => {
       "use strict";
       t.d(a, {
-        A: () => S
+        A: () => m
       });
       var o = t(95155),
         c = t(12115),
@@ -358,11 +358,6 @@
           return t ? `#${t}` : a.startsWith("#") ? "#" : ""
         },
         p = e => {
-          if (/^#[0-9a-f]{6}$/i.test(e)) return e.toLowerCase();
-          if (/^#[0-9a-f]{3}$/i.test(e)) return `#${e.slice(1).split("").map(e=>`${e}${e}`).join("")}`.toLowerCase();
-          return null
-        },
-        _ = e => {
           let a, t, o, c, s, n, l, {
             r,
             g: d,
@@ -378,7 +373,7 @@
             v: s
           }
         },
-        m = (0, o.jsx)("svg", {
+        _ = (0, o.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "19",
           height: "19",
@@ -389,83 +384,85 @@
           })
         });
 
-      function S({
+      function m({
         featureName: e,
         onChangeFunction: a,
         value: t,
         placeholder: l = "#000000",
         icon: d,
-        className: S,
-        disabled: g,
-        style: N,
-        ...v
+        className: m,
+        disabled: S,
+        style: g,
+        ...N
       }) {
-        let U = (0, c.useRef)(null),
+        let v = (0, c.useRef)(null),
+          U = (0, c.useRef)(null),
           x = (0, c.useRef)(null),
-          y = (0, c.useRef)(null),
-          [k, G] = (0, c.useState)(!1),
-          [C, j] = (0, c.useState)(() => _(u)),
-          [w, M] = (0, c.useState)(u),
-          [A, E] = (0, c.useState)(!1),
-          [I, L] = (0, c.useState)(!1),
-          [B, R] = (0, c.useState)({
+          [y, k] = (0, c.useState)(!1),
+          [G, C] = (0, c.useState)(() => p(u)),
+          [j, w] = (0, c.useState)(u),
+          [M, A] = (0, c.useState)({
             left: 0,
             top: 0,
             width: 220
           }),
-          [T, $] = (0, c.useState)(!1),
-          D = h("string" == typeof t ? t : ""),
-          F = (0, c.useMemo)(() => D ? p(D) : null, [D]),
-          O = F ?? w;
+          [I, E] = (0, c.useState)(!1),
+          L = h("string" == typeof t ? t : ""),
+          B = (0, c.useMemo)(() => L ? (e => {
+            if (/^#[0-9a-f]{6}$/i.test(e)) return e.toLowerCase();
+            if (/^#[0-9a-f]{3}$/i.test(e)) return `#${e.slice(1).split("").map(e=>`${e}${e}`).join("")}`.toLowerCase();
+            return null
+          })(L) : null, [L]),
+          R = B ?? j;
         (0, c.useEffect)(() => {
-          F && M(F)
-        }, [F]), (0, c.useEffect)(() => {
-          j(_(O))
-        }, [O]), (0, c.useEffect)(() => {
-          $(!0)
+          B && w(B)
+        }, [B]), (0, c.useEffect)(() => {
+          C(p(R))
+        }, [R]), (0, c.useEffect)(() => {
+          E(!0)
         }, []);
-        let W = (0, c.useCallback)(() => {
-          if (!U.current) return;
-          let e = U.current.getBoundingClientRect(),
+        let T = (0, c.useCallback)(() => {
+          if (!v.current) return;
+          let e = v.current.getBoundingClientRect(),
             a = Math.min(270, e.width),
-            t = y.current?.offsetHeight ?? 260,
+            t = x.current?.offsetHeight ?? 260,
             o = e.bottom + 10;
           if (o + t > window.innerHeight - 12) {
             let a = e.top - 10 - t;
             a >= 12 && (o = a)
           }
           let c = window.innerWidth - a - 12;
-          R({
+          A({
             left: b(e.left, 12, Math.max(12, c)),
             top: o,
             width: a
           })
         }, []);
         (0, c.useLayoutEffect)(() => {
-          if (!k) return;
+          if (!y) return;
           let e = () => {
-            W()
+            T()
           };
           return e(), window.addEventListener("resize", e), window.addEventListener("scroll", e, !0), () => {
             window.removeEventListener("resize", e), window.removeEventListener("scroll", e, !0)
           }
-        }, [k, W]), (0, c.useEffect)(() => {
-          if (!k) return;
+        }, [y, T]), (0, c.useEffect)(() => {
+          if (!y) return;
           let e = e => {
               let a = e.target,
-                t = U.current,
-                o = y.current;
-              t && t.contains(a) || o && o.contains(a) || G(!1)
+                t = v.current,
+                o = x.current;
+              t && t.contains(a) || o && o.contains(a) || k(!1)
             },
             a = e => {
-              "Escape" === e.key && G(!1)
+              "Escape" === e.key && k(!1)
             };
           return document.addEventListener("mousedown", e), document.addEventListener("keydown", a), () => {
             document.removeEventListener("mousedown", e), document.removeEventListener("keydown", a)
           }
-        }, [k]);
-        let P = (0, c.useCallback)(e => {
-            j(e);
+        }, [y]);
+        let $ = (0, c.useCallback)(e => {
+            C(e);
             let t = (e => {
               let a, {
                 r: t,
@@ -497,86 +494,72 @@
               });
               return a = e => e.toString(16).padStart(2, "0"), `#${a(t)}${a(o)}${a(c)}`
             })(e);
-            M(t), a?.(t)
+            w(t), a?.(t)
           }, [a]),
-          H = (0, c.useCallback)(e => {
+          F = (0, c.useCallback)(e => {
             let t = h(e.target.value);
             a?.(t)
           }, [a]),
-          z = (0, c.useCallback)((e, a) => {
-            if (!x.current) return;
-            let t = x.current.getBoundingClientRect(),
+          O = (0, c.useCallback)((e, a) => {
+            if (!U.current) return;
+            let t = U.current.getBoundingClientRect(),
               o = b((e - t.left) / t.width, 0, 1),
               c = b((a - t.top) / t.height, 0, 1);
-            P({
-              h: C.h,
+            $({
+              h: G.h,
               s: o,
               v: 1 - c
             })
-          }, [C.h, P]),
-          q = (0, c.useCallback)(e => {
-            if (g) return;
+          }, [G.h, $]),
+          D = (0, c.useCallback)(e => {
+            if (S) return;
             e.preventDefault();
             let a = e.pointerId;
-            z(e.clientX, e.clientY);
+            O(e.clientX, e.clientY);
             let t = e => {
-                e.pointerId === a && z(e.clientX, e.clientY)
+                e.pointerId === a && O(e.clientX, e.clientY)
               },
               o = e => {
                 e.pointerId === a && (document.removeEventListener("pointermove", t), document.removeEventListener("pointerup", o))
               };
             document.addEventListener("pointermove", t), document.addEventListener("pointerup", o)
-          }, [g, z]),
-          V = (0, c.useCallback)(e => {
-            P({
-              ...C,
+          }, [S, O]),
+          W = (0, c.useCallback)(e => {
+            $({
+              ...G,
               h: Number(e.target.value)
             })
-          }, [C, P]),
-          X = (0, c.useCallback)(() => {
-            g || G(e => (e || W(), !0))
-          }, [g, W]),
-          J = (0, c.useCallback)(() => {
-            g || G(e => {
+          }, [G, $]),
+          P = (0, c.useCallback)(() => {
+            S || k(e => (e || T(), !0))
+          }, [S, T]),
+          H = (0, c.useCallback)(() => {
+            S || k(e => {
               let a = !e;
-              return a && W(), a
+              return a && T(), a
             })
-          }, [g, W]),
-          K = (0, c.useCallback)(async () => {
-            if (!g && A && void 0 !== window.EyeDropper && !I) try {
-              L(!0);
-              let e = new window.EyeDropper,
-                a = await e.open(),
-                t = p(a.sRGBHex);
-              t && P(_(t))
-            } catch (e) {} finally {
-              L(!1)
-            }
-          }, [g, I, A, P]);
-        (0, c.useEffect)(() => {
-          E(void 0 !== window.EyeDropper)
-        }, []);
-        let Y = (0, n.A)(r().inputWrapperInput, f().textInput, d && f().textInputWithIcon, S),
-          Z = "undefined" != typeof document ? document.body : null,
-          Q = !!(k && T && Z),
-          ee = Q ? {
+          }, [S, T]),
+          z = (0, n.A)(r().inputWrapperInput, f().textInput, d && f().textInputWithIcon, m),
+          q = "undefined" != typeof document ? document.body : null,
+          V = !!(y && I && q),
+          X = V ? {
             position: "fixed",
-            left: `${B.left}px`,
-            top: `${B.top}px`,
-            width: `${B.width}px`
+            left: `${M.left}px`,
+            top: `${M.top}px`,
+            width: `${M.width}px`
           } : void 0,
-          ea = "string" == typeof e ? e : void 0,
-          et = (0, o.jsxs)("div", {
-            ref: y,
+          J = "string" == typeof e ? e : void 0,
+          K = (0, o.jsxs)("div", {
+            ref: x,
             className: f().panel,
-            style: ee,
+            style: X,
             children: [(0, o.jsxs)("div", {
-              ref: x,
+              ref: U,
               className: f().svArea,
               style: {
-                backgroundColor: `hsl(${C.h}, 100%, 50%)`
+                backgroundColor: `hsl(${G.h}, 100%, 50%)`
               },
-              onPointerDown: q,
+              onPointerDown: D,
               children: [(0, o.jsx)("div", {
                 className: f().svWhiteOverlay
               }), (0, o.jsx)("div", {
@@ -584,8 +567,8 @@
               }), (0, o.jsx)("div", {
                 className: f().svCursor,
                 style: {
-                  left: `${100*C.s}%`,
-                  top: `${(1-C.v)*100}%`
+                  left: `${100*G.s}%`,
+                  top: `${(1-G.v)*100}%`
                 }
               })]
             }), (0, o.jsx)("div", {
@@ -595,34 +578,34 @@
                 min: 0,
                 max: 360,
                 step: 1,
-                value: C.h,
-                onChange: V,
+                value: G.h,
+                onChange: W,
                 className: f().hueSlider,
-                disabled: g
+                disabled: S
               })
             })]
           });
         return (0, o.jsxs)("div", {
           className: r().inputContainerWrapper,
-          "data-dashboard-feature-label": ea,
+          "data-dashboard-feature-label": J,
           children: [(0, o.jsx)("h1", {
             className: r().featureName,
             children: e
           }), (0, o.jsxs)("div", {
             className: (0, n.A)(r().inputWrapperDiv, f().wrapper),
-            ref: U,
+            ref: v,
             children: [(0, o.jsx)("button", {
               type: "button",
               className: f().leftSwatchButton,
-              onClick: J,
+              onClick: H,
               style: {
-                cursor: g ? "not-allowed" : "pointer"
+                cursor: S ? "not-allowed" : "pointer"
               },
-              disabled: g,
+              disabled: S,
               children: (0, o.jsx)("span", {
                 className: f().colorSwatch,
                 style: {
-                  backgroundColor: O
+                  backgroundColor: R
                 }
               })
             }), d && (0, o.jsx)("span", {
@@ -634,22 +617,22 @@
               spellCheck: !1,
               inputMode: "text",
               maxLength: 7,
-              className: Y,
+              className: z,
               placeholder: l,
-              value: D,
-              onChange: H,
-              onFocus: X,
-              onClick: X,
-              disabled: g,
-              style: N,
-              ...v
+              value: L,
+              onChange: F,
+              onFocus: P,
+              onClick: P,
+              disabled: S,
+              style: g,
+              ...N
             }), (0, o.jsx)("button", {
               type: "button",
               className: f().pickerButton,
-              onClick: A ? K : J,
-              disabled: g || A && I,
-              children: m
-            }), k && (Q && Z ? (0, s.createPortal)(et, Z) : et)]
+              onClick: H,
+              disabled: S,
+              children: _
+            }), y && (V && q ? (0, s.createPortal)(K, q) : K)]
           })]
         })
       }
@@ -719,7 +702,7 @@
     82461: (e, a, t) => {
       "use strict";
       t.r(a), t.d(a, {
-        default: () => F
+        default: () => O
       });
       var o = t(95155),
         c = t(12115),
@@ -1104,24 +1087,24 @@
           [S, g] = (0, c.useState)(() => _ ? _.value : ""),
           [N, j] = (0, c.useState)(),
           [w, M] = (0, c.useState)(!1),
-          [A, E] = (0, c.useState)(b),
-          [I, L] = (0, c.useState)(t ?? "link"),
+          [A, I] = (0, c.useState)(b),
+          [E, L] = (0, c.useState)(t ?? "link"),
           [B, R] = (0, c.useState)(_?.glow_color || "#a3a3a3"),
           T = !!A,
           $ = "custom_url" !== e ? S.replace("https://" + r.Uy[e], "") : S.replace("https://", "");
-        async function D(t) {
+        async function F(t) {
           let o = "custom_url" === e && T ? B : "",
-            c = await m(e, $, a, I, f, M, N || A, o);
+            c = await m(e, $, a, E, f, M, N || A, o);
           t.target.style.pointerEvents = "none", c ? (d.oR.success(h("dashboard.links.social_edit.save_success")), u(!1)) : t.target.style.pointerEvents = "all"
         }
-        let F = async e => {
+        let O = async e => {
           var a;
           let t;
           e.target.disabled = !0;
           let o = e.target.files?.[0];
           if (!o) return;
           let c = y.nB.icon,
-            s = O(o.name).toLowerCase();
+            s = D(o.name).toLowerCase();
           if (!c.includes(s)) {
             d.oR.error(h("dashboard.links.social_edit.invalid_file")), e.target.disabled = !1, e.target.value = "";
             return
@@ -1133,11 +1116,11 @@
             R("#a3a3a3")
           }
           j(o), a = o, (t = new FileReader).onload = function(e) {
-            E(e.target.result)
+            I(e.target.result)
           }, t.readAsDataURL(a)
         };
 
-        function O(e) {
+        function D(e) {
           return "." + e.substring(e.lastIndexOf(".") + 1)
         }
         let W = e => {
@@ -1158,10 +1141,10 @@
                     children: [(0, o.jsxs)("div", {
                       className: n().fileBadge,
                       children: [(0, o.jsx)("span", {
-                        children: O(N && N.name ? N.name : A).toUpperCase()
+                        children: D(N && N.name ? N.name : A).toUpperCase()
                       }), (0, o.jsx)("span", {
                         onClick: function() {
-                          E(""), j(""), R("#a3a3a3")
+                          I(""), j(""), R("#a3a3a3")
                         },
                         children: l.A.deleteFile
                       })]
@@ -1180,7 +1163,7 @@
                       type: "file",
                       accept: C.vJ.icon.map(e => e).join(", "),
                       onChange: e => {
-                        F(e)
+                        O(e)
                       }
                     })]
                   })
@@ -1199,16 +1182,16 @@
                 element: (0, o.jsxs)("div", {
                   className: n().socialModeSelection,
                   children: [(0, o.jsxs)("span", {
-                    className: `${n().socialModeSelectionButton} ${"link"===I&&n().active}`,
+                    className: `${n().socialModeSelectionButton} ${"link"===E&&n().active}`,
                     onClick: () => W("link"),
                     children: [l.A.link, " ", h("dashboard.links.social_edit.mode.link_option")]
                   }), (0, o.jsxs)("span", {
-                    className: `${n().socialModeSelectionButton} ${"text"===I&&n().active}`,
+                    className: `${n().socialModeSelectionButton} ${"text"===E&&n().active}`,
                     onClick: () => W("text"),
                     children: [l.A.text, " ", h("dashboard.links.social_edit.mode.text_option")]
                   })]
                 })
-              }), "link" === I ? (0, o.jsx)(U.A, {
+              }), "link" === E ? (0, o.jsx)(U.A, {
                 onChangeFunction: e => {
                   g(e.target.value)
                 },
@@ -1230,7 +1213,7 @@
             className: n().socialSaveButtonWrapper,
             children: [(0, o.jsxs)("span", {
               className: n().socialSaveButton,
-              onClick: D,
+              onClick: F,
               children: [w && l.A.loading, " ", h("dashboard.links.social_edit.save_button")]
             }), (0, o.jsx)("a", {
               href: "https://help.guns.lol/getting-started/adding-links",
@@ -1254,12 +1237,12 @@
           [S, g] = (0, c.useState)(!1),
           [j, w] = (0, c.useState)(!1),
           [M, A] = (0, c.useState)("link"),
-          [E, I] = (0, c.useState)("#a3a3a3");
+          [I, E] = (0, c.useState)("#a3a3a3");
         async function L(o) {
           if (!j) {
             w(!0), o.target.style.pointerEvents = "none";
             try {
-              let o = "custom_url" === e && _ ? E : "";
+              let o = "custom_url" === e && _ ? I : "";
               await N(e, u, a, M, h, g, o) && t(!1)
             } finally {
               o.target.style.pointerEvents = "all", w(!1)
@@ -1280,9 +1263,9 @@
           }
           try {
             let e = await v(o);
-            I(e)
+            E(e)
           } catch (e) {
-            I("#a3a3a3")
+            E("#a3a3a3")
           }
           p(o), a = o, (t = new FileReader).onload = function(e) {
             m(e.target.result)
@@ -1326,7 +1309,7 @@
                         children: R(h.name).toUpperCase()
                       }), (0, o.jsx)("span", {
                         onClick: function() {
-                          m(""), p(""), I("#a3a3a3")
+                          m(""), p(""), E("#a3a3a3")
                         },
                         children: l.A.deleteFile
                       })]
@@ -1339,8 +1322,8 @@
                 })]
               }), !!_ && (0, o.jsx)(k.A, {
                 featureName: s("dashboard.links.social_add.icon_glow.label"),
-                onChangeFunction: I,
-                value: E,
+                onChangeFunction: E,
+                value: I,
                 placeholder: s("dashboard.links.social_add.icon_glow.placeholder")
               })]
             }), (0, o.jsxs)("div", {
@@ -1394,9 +1377,9 @@
       }
       var M = t(44923),
         A = t(87256),
-        E = t(39768);
+        I = t(39768);
 
-      function I({
+      function E({
         socials: e,
         setSocials: a,
         setCurrentModal: t,
@@ -1491,7 +1474,7 @@
             animateLayoutChanges: () => !1
           }),
           m = {
-            transform: E.Ks.Transform.toString(h),
+            transform: I.Ks.Transform.toString(h),
             transition: p,
             opacity: +!_
           },
@@ -1552,8 +1535,8 @@
         R = t.n(B),
         T = t(54834),
         $ = t(61778),
-        D = t(57776);
-      let F = ({
+        F = t(57776);
+      let O = ({
         data: e
       }) => {
         let a = (0, G.kj)(),
@@ -1625,7 +1608,7 @@
                 }, c)
               }, c))
             })]
-          }), (0, o.jsx)(D.A, {
+          }), (0, o.jsx)(F.A, {
             opened: b,
             onClose: () => h(!1),
             title: m,
@@ -1646,7 +1629,7 @@
             })
           }), (0, o.jsx)("div", {
             className: n().displaySocialsWrapper,
-            children: (0, o.jsx)(I, {
+            children: (0, o.jsx)(E, {
               socials: f,
               setSocials: u,
               setCurrentModal: _,

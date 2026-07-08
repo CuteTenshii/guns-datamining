@@ -45,8 +45,8 @@
           [p, b] = (0, i.useState)(e.timestamp),
           f = (0, i.useMemo)(() => r("dashboard.imagehost.settings.embed.editor.examples.file_name"), [r]),
           y = (0, i.useMemo)(() => r("dashboard.imagehost.settings.embed.editor.examples.file_size"), [r]),
-          w = (0, i.useMemo)(() => r("dashboard.imagehost.settings.embed.editor.preview.username"), [r]),
-          C = (0, i.useMemo)(() => r("dashboard.imagehost.settings.embed.editor.preview.timestamp"), [r]),
+          C = (0, i.useMemo)(() => r("dashboard.imagehost.settings.embed.editor.preview.username"), [r]),
+          w = (0, i.useMemo)(() => r("dashboard.imagehost.settings.embed.editor.preview.timestamp"), [r]),
           k = (0, i.useCallback)(e => {
             let s = new Date(Date.now()).toLocaleString(d || "en", {
               day: "2-digit",
@@ -170,10 +170,10 @@
                 children: [(0, a.jsxs)("div", {
                   children: [(0, a.jsx)("span", {
                     className: x().username,
-                    children: w
+                    children: C
                   }), (0, a.jsx)("span", {
                     className: x().timestamp,
-                    children: C
+                    children: w
                   })]
                 }), (0, a.jsx)("span", {
                   className: x().link,
@@ -215,7 +215,7 @@
                 }), p && (0, a.jsx)("div", {
                   className: x().embedTimestamp,
                   children: (0, a.jsx)("h1", {
-                    children: C
+                    children: w
                   })
                 })]
               })
@@ -223,9 +223,9 @@
           })]
         })
       }
-      var w = t(57776);
-      let C = "https://guns.lol",
-        k = e => C ? `${C}${e}` : e,
+      var C = t(57776);
+      let w = "https://guns.lol",
+        k = e => w ? `${w}${e}` : e,
         S = ({
           data: e
         }) => {
@@ -234,11 +234,11 @@
             [c, f] = (0, i.useState)(""),
             [x, v] = (0, i.useState)(!1),
             [_, j] = (0, i.useState)(!1),
-            [C, S] = (0, i.useState)(!1),
+            [w, S] = (0, i.useState)(!1),
             [E, U] = (0, i.useState)(""),
             [A, G] = (0, i.useState)(!1),
             [L, I] = (0, i.useState)("i.guns.lol"),
-            [R, M] = (0, i.useState)({
+            [M, R] = (0, i.useState)({
               title: "",
               author: "",
               author_url: "",
@@ -278,7 +278,7 @@
                     hideExtension: !!s.hide_extension,
                     showEmbed: !!s.show_embed
                   };
-                H(t.totalUploads || 0), f(n.filenameLength), v(n.anonymousUploads), j(n.hideExtension), S(n.showEmbed), U(s.secret_key || ""), I(i), M({
+                H(t.totalUploads || 0), f(n.filenameLength), v(n.anonymousUploads), j(n.hideExtension), S(n.showEmbed), U(s.secret_key || ""), I(i), R({
                   title: a.title || "",
                   author: a.author || "",
                   author_url: a.author_url || "",
@@ -295,8 +295,8 @@
           }, [V]), (0, i.useEffect)(() => {
             if (!B) return void D(!1);
             let e = !1;
-            "number" != typeof c || Number.isNaN(c) ? e = !0 : c !== B.filenameLength && (e = !0), (x !== B.anonymousUploads || _ !== B.hideExtension || C !== B.showEmbed) && (e = !0), D(e)
-          }, [c, x, _, C, B]);
+            "number" != typeof c || Number.isNaN(c) ? e = !0 : c !== B.filenameLength && (e = !0), (x !== B.anonymousUploads || _ !== B.hideExtension || w !== B.showEmbed) && (e = !0), D(e)
+          }, [c, x, _, w, B]);
           let X = (0, i.useCallback)(() => {
               B && (f(B.filenameLength), v(B.anonymousUploads), j(B.hideExtension), S(B.showEmbed), D(!1), O(K))
             }, [B, K]),
@@ -304,8 +304,8 @@
               filenameLength: c,
               anonymousUploads: x,
               hideExtension: _,
-              showEmbed: C
-            }, [c, x, _, C]),
+              showEmbed: w
+            }, [c, x, _, w]),
             Z = (0, i.useCallback)(async () => {
               if (!Y) return void m.oR.error(s("dashboard.imagehost.settings.errors.invalid_length"));
               if (Y.filenameLength < 5 || Y.filenameLength > 50) return void m.oR.error(s("dashboard.imagehost.settings.errors.length_range"));
@@ -390,7 +390,7 @@
                   })]
                 })
               })
-            }), (0, a.jsxs)(w.A, {
+            }), (0, a.jsxs)(C.A, {
               opened: T,
               onClose: () => $(!1),
               title: s("dashboard.imagehost.settings.embed.modal_title"),
@@ -438,7 +438,7 @@
                   })
                 })]
               }), (0, a.jsx)(y, {
-                embedConfig: R,
+                embedConfig: M,
                 domain: L,
                 username: e.username,
                 totalUploads: F
@@ -501,8 +501,8 @@
                       id: "show-discord-embed",
                       featureName: s("dashboard.imagehost.settings.general.show_embed"),
                       onChangeFunction: e => S(e.currentTarget.checked),
-                      defaultChecked: C,
-                      checked: C
+                      defaultChecked: w,
+                      checked: w
                     })]
                   })]
                 }), (0, a.jsxs)("div", {
@@ -584,7 +584,7 @@
     30184: (e, s, t) => {
       "use strict";
       t.d(s, {
-        A: () => f
+        A: () => b
       });
       var a = t(95155),
         i = t(12115),
@@ -603,11 +603,6 @@
           return t ? `#${t}` : s.startsWith("#") ? "#" : ""
         },
         p = e => {
-          if (/^#[0-9a-f]{6}$/i.test(e)) return e.toLowerCase();
-          if (/^#[0-9a-f]{3}$/i.test(e)) return `#${e.slice(1).split("").map(e=>`${e}${e}`).join("")}`.toLowerCase();
-          return null
-        },
-        g = e => {
           let s, t, a, i, n, r, d, {
             r: o,
             g: l,
@@ -623,7 +618,7 @@
             v: n
           }
         },
-        b = (0, a.jsx)("svg", {
+        g = (0, a.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "19",
           height: "19",
@@ -634,72 +629,74 @@
           })
         });
 
-      function f({
+      function b({
         featureName: e,
         onChangeFunction: s,
         value: t,
         placeholder: d = "#000000",
         icon: l,
-        className: f,
-        disabled: x,
-        style: v,
-        ..._
+        className: b,
+        disabled: f,
+        style: x,
+        ...v
       }) {
-        let j = (0, i.useRef)(null),
+        let _ = (0, i.useRef)(null),
+          j = (0, i.useRef)(null),
           N = (0, i.useRef)(null),
-          y = (0, i.useRef)(null),
-          [w, C] = (0, i.useState)(!1),
-          [k, S] = (0, i.useState)(() => g(h)),
-          [E, U] = (0, i.useState)(h),
-          [A, G] = (0, i.useState)(!1),
-          [L, I] = (0, i.useState)(!1),
-          [R, M] = (0, i.useState)({
+          [y, C] = (0, i.useState)(!1),
+          [w, k] = (0, i.useState)(() => p(h)),
+          [S, E] = (0, i.useState)(h),
+          [U, A] = (0, i.useState)({
             left: 0,
             top: 0,
             width: 220
           }),
-          [T, $] = (0, i.useState)(!1),
-          B = m("string" == typeof t ? t : ""),
-          P = (0, i.useMemo)(() => B ? p(B) : null, [B]),
-          W = P ?? E;
+          [G, L] = (0, i.useState)(!1),
+          I = m("string" == typeof t ? t : ""),
+          M = (0, i.useMemo)(() => I ? (e => {
+            if (/^#[0-9a-f]{6}$/i.test(e)) return e.toLowerCase();
+            if (/^#[0-9a-f]{3}$/i.test(e)) return `#${e.slice(1).split("").map(e=>`${e}${e}`).join("")}`.toLowerCase();
+            return null
+          })(I) : null, [I]),
+          R = M ?? S;
         (0, i.useEffect)(() => {
-          P && U(P)
-        }, [P]), (0, i.useEffect)(() => {
-          S(g(W))
-        }, [W]), (0, i.useEffect)(() => {
-          $(!0)
+          M && E(M)
+        }, [M]), (0, i.useEffect)(() => {
+          k(p(R))
+        }, [R]), (0, i.useEffect)(() => {
+          L(!0)
         }, []);
-        let D = (0, i.useCallback)(() => {
-          if (!j.current) return;
-          let e = j.current.getBoundingClientRect(),
+        let T = (0, i.useCallback)(() => {
+          if (!_.current) return;
+          let e = _.current.getBoundingClientRect(),
             s = Math.min(270, e.width),
-            t = y.current?.offsetHeight ?? 260,
+            t = N.current?.offsetHeight ?? 260,
             a = e.bottom + 10;
           if (a + t > window.innerHeight - 12) {
             let s = e.top - 10 - t;
             s >= 12 && (a = s)
           }
           let i = window.innerWidth - s - 12;
-          M({
+          A({
             left: u(e.left, 12, Math.max(12, i)),
             top: a,
             width: s
           })
         }, []);
         (0, i.useLayoutEffect)(() => {
-          if (!w) return;
+          if (!y) return;
           let e = () => {
-            D()
+            T()
           };
           return e(), window.addEventListener("resize", e), window.addEventListener("scroll", e, !0), () => {
             window.removeEventListener("resize", e), window.removeEventListener("scroll", e, !0)
           }
-        }, [w, D]), (0, i.useEffect)(() => {
-          if (!w) return;
+        }, [y, T]), (0, i.useEffect)(() => {
+          if (!y) return;
           let e = e => {
               let s = e.target,
-                t = j.current,
-                a = y.current;
+                t = _.current,
+                a = N.current;
               t && t.contains(s) || a && a.contains(s) || C(!1)
             },
             s = e => {
@@ -708,9 +705,9 @@
           return document.addEventListener("mousedown", e), document.addEventListener("keydown", s), () => {
             document.removeEventListener("mousedown", e), document.removeEventListener("keydown", s)
           }
-        }, [w]);
-        let K = (0, i.useCallback)(e => {
-            S(e);
+        }, [y]);
+        let $ = (0, i.useCallback)(e => {
+            k(e);
             let t = (e => {
               let s, {
                 r: t,
@@ -742,86 +739,72 @@
               });
               return s = e => e.toString(16).padStart(2, "0"), `#${s(t)}${s(a)}${s(i)}`
             })(e);
-            U(t), s?.(t)
+            E(t), s?.(t)
           }, [s]),
-          z = (0, i.useCallback)(e => {
+          B = (0, i.useCallback)(e => {
             let t = m(e.target.value);
             s?.(t)
           }, [s]),
-          O = (0, i.useCallback)((e, s) => {
-            if (!N.current) return;
-            let t = N.current.getBoundingClientRect(),
+          P = (0, i.useCallback)((e, s) => {
+            if (!j.current) return;
+            let t = j.current.getBoundingClientRect(),
               a = u((e - t.left) / t.width, 0, 1),
               i = u((s - t.top) / t.height, 0, 1);
-            K({
-              h: k.h,
+            $({
+              h: w.h,
               s: a,
               v: 1 - i
             })
-          }, [k.h, K]),
-          F = (0, i.useCallback)(e => {
-            if (x) return;
+          }, [w.h, $]),
+          W = (0, i.useCallback)(e => {
+            if (f) return;
             e.preventDefault();
             let s = e.pointerId;
-            O(e.clientX, e.clientY);
+            P(e.clientX, e.clientY);
             let t = e => {
-                e.pointerId === s && O(e.clientX, e.clientY)
+                e.pointerId === s && P(e.clientX, e.clientY)
               },
               a = e => {
                 e.pointerId === s && (document.removeEventListener("pointermove", t), document.removeEventListener("pointerup", a))
               };
             document.addEventListener("pointermove", t), document.addEventListener("pointerup", a)
-          }, [x, O]),
-          H = (0, i.useCallback)(e => {
-            K({
-              ...k,
+          }, [f, P]),
+          D = (0, i.useCallback)(e => {
+            $({
+              ...w,
               h: Number(e.target.value)
             })
-          }, [k, K]),
-          J = (0, i.useCallback)(() => {
-            x || C(e => (e || D(), !0))
-          }, [x, D]),
-          Q = (0, i.useCallback)(() => {
-            x || C(e => {
+          }, [w, $]),
+          K = (0, i.useCallback)(() => {
+            f || C(e => (e || T(), !0))
+          }, [f, T]),
+          z = (0, i.useCallback)(() => {
+            f || C(e => {
               let s = !e;
-              return s && D(), s
+              return s && T(), s
             })
-          }, [x, D]),
-          V = (0, i.useCallback)(async () => {
-            if (!x && A && void 0 !== window.EyeDropper && !L) try {
-              I(!0);
-              let e = new window.EyeDropper,
-                s = await e.open(),
-                t = p(s.sRGBHex);
-              t && K(g(t))
-            } catch (e) {} finally {
-              I(!1)
-            }
-          }, [x, L, A, K]);
-        (0, i.useEffect)(() => {
-          G(void 0 !== window.EyeDropper)
-        }, []);
-        let X = (0, r.A)(o().inputWrapperInput, c().textInput, l && c().textInputWithIcon, f),
-          Y = "undefined" != typeof document ? document.body : null,
-          Z = !!(w && T && Y),
-          q = Z ? {
+          }, [f, T]),
+          O = (0, r.A)(o().inputWrapperInput, c().textInput, l && c().textInputWithIcon, b),
+          F = "undefined" != typeof document ? document.body : null,
+          H = !!(y && G && F),
+          J = H ? {
             position: "fixed",
-            left: `${R.left}px`,
-            top: `${R.top}px`,
-            width: `${R.width}px`
+            left: `${U.left}px`,
+            top: `${U.top}px`,
+            width: `${U.width}px`
           } : void 0,
-          ee = "string" == typeof e ? e : void 0,
-          es = (0, a.jsxs)("div", {
-            ref: y,
+          Q = "string" == typeof e ? e : void 0,
+          V = (0, a.jsxs)("div", {
+            ref: N,
             className: c().panel,
-            style: q,
+            style: J,
             children: [(0, a.jsxs)("div", {
-              ref: N,
+              ref: j,
               className: c().svArea,
               style: {
-                backgroundColor: `hsl(${k.h}, 100%, 50%)`
+                backgroundColor: `hsl(${w.h}, 100%, 50%)`
               },
-              onPointerDown: F,
+              onPointerDown: W,
               children: [(0, a.jsx)("div", {
                 className: c().svWhiteOverlay
               }), (0, a.jsx)("div", {
@@ -829,8 +812,8 @@
               }), (0, a.jsx)("div", {
                 className: c().svCursor,
                 style: {
-                  left: `${100*k.s}%`,
-                  top: `${(1-k.v)*100}%`
+                  left: `${100*w.s}%`,
+                  top: `${(1-w.v)*100}%`
                 }
               })]
             }), (0, a.jsx)("div", {
@@ -840,34 +823,34 @@
                 min: 0,
                 max: 360,
                 step: 1,
-                value: k.h,
-                onChange: H,
+                value: w.h,
+                onChange: D,
                 className: c().hueSlider,
-                disabled: x
+                disabled: f
               })
             })]
           });
         return (0, a.jsxs)("div", {
           className: o().inputContainerWrapper,
-          "data-dashboard-feature-label": ee,
+          "data-dashboard-feature-label": Q,
           children: [(0, a.jsx)("h1", {
             className: o().featureName,
             children: e
           }), (0, a.jsxs)("div", {
             className: (0, r.A)(o().inputWrapperDiv, c().wrapper),
-            ref: j,
+            ref: _,
             children: [(0, a.jsx)("button", {
               type: "button",
               className: c().leftSwatchButton,
-              onClick: Q,
+              onClick: z,
               style: {
-                cursor: x ? "not-allowed" : "pointer"
+                cursor: f ? "not-allowed" : "pointer"
               },
-              disabled: x,
+              disabled: f,
               children: (0, a.jsx)("span", {
                 className: c().colorSwatch,
                 style: {
-                  backgroundColor: W
+                  backgroundColor: R
                 }
               })
             }), l && (0, a.jsx)("span", {
@@ -879,22 +862,22 @@
               spellCheck: !1,
               inputMode: "text",
               maxLength: 7,
-              className: X,
+              className: O,
               placeholder: d,
-              value: B,
-              onChange: z,
-              onFocus: J,
-              onClick: J,
-              disabled: x,
-              style: v,
-              ..._
+              value: I,
+              onChange: B,
+              onFocus: K,
+              onClick: K,
+              disabled: f,
+              style: x,
+              ...v
             }), (0, a.jsx)("button", {
               type: "button",
               className: c().pickerButton,
-              onClick: A ? V : Q,
-              disabled: x || A && L,
-              children: b
-            }), w && (Z && Y ? (0, n.createPortal)(es, Y) : es)]
+              onClick: z,
+              disabled: f,
+              children: g
+            }), y && (H && F ? (0, n.createPortal)(V, F) : V)]
           })]
         })
       }
@@ -1029,32 +1012,32 @@
         mode: l = "sync",
         propagate: c = !1
       }) => {
-        let [u, f] = (0, m.xQ)(c), x = (0, i.useMemo)(() => g(e), [e]), v = c && !u ? [] : x.map(p), _ = (0, i.useRef)(!0), j = (0, i.useRef)(x), N = (0, r.M)(() => new Map), [y, w] = (0, i.useState)(x), [C, k] = (0, i.useState)(x);
+        let [u, f] = (0, m.xQ)(c), x = (0, i.useMemo)(() => g(e), [e]), v = c && !u ? [] : x.map(p), _ = (0, i.useRef)(!0), j = (0, i.useRef)(x), N = (0, r.M)(() => new Map), [y, C] = (0, i.useState)(x), [w, k] = (0, i.useState)(x);
         (0, b.E)(() => {
           _.current = !1, j.current = x;
-          for (let e = 0; e < C.length; e++) {
-            let s = p(C[e]);
+          for (let e = 0; e < w.length; e++) {
+            let s = p(w[e]);
             v.includes(s) ? N.delete(s) : !0 !== N.get(s) && N.set(s, !1)
           }
-        }, [C, v.length, v.join("-")]);
+        }, [w, v.length, v.join("-")]);
         let S = [];
         if (x !== y) {
           let e = [...x];
-          for (let s = 0; s < C.length; s++) {
-            let t = C[s],
+          for (let s = 0; s < w.length; s++) {
+            let t = w[s],
               a = p(t);
             v.includes(a) || (e.splice(s, 0, t), S.push(t))
           }
-          "wait" === l && S.length && (e = S), k(g(e)), w(x);
+          "wait" === l && S.length && (e = S), k(g(e)), C(x);
           return
         }
         let {
           forceRender: E
         } = (0, i.useContext)(n.L);
         return (0, a.jsx)(a.Fragment, {
-          children: C.map(e => {
+          children: w.map(e => {
             let i = p(e),
-              n = (!c || !!u) && (x === C || v.includes(i));
+              n = (!c || !!u) && (x === w || v.includes(i));
             return (0, a.jsx)(h, {
               isPresent: n,
               initial: (!_.current || !!t) && void 0,
