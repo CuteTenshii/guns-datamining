@@ -8,6 +8,10 @@ const BASE_URL = 'https://guns.lol';
 const USER_AGENT =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36';
 
+// Referenced only by relative path via `new URL(..., import.meta.url)` inside the
+// wasm-bindgen glue (gpp_gunslol.js), so it never appears as a scannable URL literal.
+const EXTRA_ASSETS = ['https://assets.guns.lol/wasm/gpp_gunslol_bg.wasm'];
+
 let clearance: string | null = null;
 
 function makeHeaders(): Record<string, string> {
@@ -68,6 +72,25 @@ async function fetchAsset(url: string) {
   console.log(`Saved asset: ${filePath}`);
 }
 
+async function processAssetUrls(urls: Iterable<string>, seen: Set<string>) {
+  for (const url of urls) {
+    if (seen.has(url)) continue;
+    seen.add(url);
+    await fetchAsset(url);
+  }
+}
+
+function extractAssetUrlsFromText(text: string): string[] {
+  const urls = new Set<string>();
+  for (const match of text.matchAll(/https?:\/\/assets\.guns\.lol[^\s"'`<>)\\]+/g)) {
+    if (!isConcreteAssetUrl(match[0])) continue;
+    try {
+      urls.add(normalizeAssetUrl(new URL(match[0]).toString()));
+    } catch {}
+  }
+  return [...urls];
+}
+
 async function processPage(path: string, seen: Set<string>) {
   const res = await fetchWithRetry(`${BASE_URL}${path}`, { headers: makeHeaders() });
   if (!res.ok) {
@@ -91,6 +114,7 @@ async function processPage(path: string, seen: Set<string>) {
     seen.add(url);
     const content = await fetchText(url);
     await saveBeautified(url, content, false);
+    await processAssetUrls(extractAssetUrlsFromText(content), seen);
 
     if (new URL(url).pathname.includes('/chunks/webpack')) {
       for (const { url: discoveredUrl, path } of parseWebpackManifest(content)) {
@@ -98,6 +122,7 @@ async function processPage(path: string, seen: Set<string>) {
         seen.add(discoveredUrl);
         const discoveredContent = await fetchText(discoveredUrl);
         await saveBeautified(discoveredUrl, discoveredContent, discoveredUrl.endsWith('.css'), path);
+        await processAssetUrls(extractAssetUrlsFromText(discoveredContent), seen);
       }
     }
   }
@@ -114,14 +139,12 @@ async function processPage(path: string, seen: Set<string>) {
     if (seen.has(url)) continue;
     seen.add(url);
     const cssPath = `/_next/static/css/${pageName}-${cssIndex++}.css`;
-    await saveBeautified(url, await fetchText(url), true, cssPath);
+    const cssContent = await fetchText(url);
+    await saveBeautified(url, cssContent, true, cssPath);
+    await processAssetUrls(extractAssetUrlsFromText(cssContent), seen);
   }
 
-  for (const url of extractAssetUrls($, html)) {
-    if (seen.has(url)) continue;
-    seen.add(url);
-    await fetchAsset(url);
-  }
+  await processAssetUrls(extractAssetUrls($, html), seen);
 }
 
 async function main() {
@@ -144,6 +167,8 @@ async function main() {
   for (const path of paths) {
     await processPage(path, seen);
   }
+
+  await processAssetUrls(EXTRA_ASSETS, seen);
 }
 
 function parseWebpackManifest(content: string): Array<{ url: string; path: string }> {
@@ -216,12 +241,19 @@ function extractAssetUrls($: cheerio.CheerioAPI, html: string): string[] {
   });
 
   for (const match of html.matchAll(/https?:\/\/assets\.guns\.lol[^\s"'`<>)]+/g)) {
+    if (!isConcreteAssetUrl(match[0])) continue;
     try {
       urls.add(normalizeAssetUrl(new URL(match[0]).toString()));
     } catch {}
   }
 
   return [...urls];
+}
+
+// Rejects URLs pulled from source that are actually template literals with
+// unresolved interpolations, e.g. `https://assets.guns.lol/${P}.png`.
+function isConcreteAssetUrl(raw: string): boolean {
+  return !/\$\{|%7[bd]/i.test(raw);
 }
 
 function normalizeAssetUrl(url: string): string {
