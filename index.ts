@@ -12,6 +12,18 @@ const USER_AGENT =
 // wasm-bindgen glue (gpp_gunslol.js), so it never appears as a scannable URL literal.
 const EXTRA_ASSETS = ['https://assets.guns.lol/wasm/gpp_gunslol_bg.wasm'];
 
+// Keep only genuine text-flow tags inline; let button/svg/img/etc. break onto their
+// own lines so chains like `</svg><span>…</button><button>…` are readable.
+const HTML_BEAUTIFY_OPTIONS: Parameters<typeof beautify.html>[1] = {
+  indent_size: 2,
+  wrap_line_length: 120,
+  inline: [
+    'abbr', 'b', 'bdi', 'bdo', 'br', 'cite', 'code', 'data', 'dfn', 'em',
+    'i', 'kbd', 'mark', 'q', 'rp', 'rt', 'ruby', 's', 'samp', 'small', 'span',
+    'strong', 'sub', 'sup', 'time', 'u', 'var', 'wbr',
+  ],
+};
+
 let clearance: string | null = null;
 
 function makeHeaders(): Record<string, string> {
@@ -91,6 +103,41 @@ function extractAssetUrlsFromText(text: string): string[] {
   return [...urls];
 }
 
+// The guns.lol PoW/Turnstile bootstrap embeds a per-request nonce, token, and
+// timestamp (plus a random hydration id), which would make every saved page diff
+// on each run. Redact just those values while keeping the script structure.
+function redactVolatileTokens($: cheerio.CheerioAPI) {
+  $('script:not([src])').each((_, el) => {
+    let text = $(el).text();
+    // PoW/Turnstile bootstrap: per-request nonce, token, timestamp, hydration id.
+    if (text.includes('_gs_sets')) {
+      text = text
+        .replace(/(_n:\s*')[^']*/g, '$1REDACTED')
+        .replace(/(o09:\s*')[^']*/g, '$1REDACTED')
+        .replace(/(_2xa:\s*')[^']*/g, '$1REDACTED')
+        .replace(/(_org_ts:\s*\\?")\d+/g, '$1REDACTED')
+        .replace(/("id":\s*")_gpp_[a-z0-9]+/gi, '$1_gpp_REDACTED');
+    }
+    // RSC flight data serializes the same view count that changes constantly.
+    if (text.includes('page_views')) {
+      text = text.replace(/(page_views\\?":\s*)\d+/g, '$1REDACTED');
+    }
+    $(el).text(text);
+  });
+  $('.cf-turnstile[data-cdata]').attr('data-cdata', 'REDACTED');
+
+  // Profile view counter (`<eye icon> 75,578` before the "Profile Views" tooltip)
+  // changes constantly; redact the number so only structural page changes show up.
+  $('span').each((_, el) => {
+    if ($(el).text().trim() !== 'Profile Views') return;
+    $(el).prev().contents().each((_, node) => {
+      if (node.type === 'text' && /\d/.test(node.data ?? '')) {
+        node.data = (node.data ?? '').replace(/[\d,]+/g, 'REDACTED');
+      }
+    });
+  });
+}
+
 async function processPage(path: string, seen: Set<string>) {
   const res = await fetchWithRetry(`${BASE_URL}${path}`, { headers: makeHeaders() });
   if (!res.ok) {
@@ -102,6 +149,17 @@ async function processPage(path: string, seen: Set<string>) {
 
   const html = await res.text();
   const $ = cheerio.load(html);
+
+  // Strip Cloudflare-injected scripts (email obfuscation + challenge-platform/rocket loader).
+  $('script[src*="/cdn-cgi/"]').remove();
+  $('script:not([src])').each((_, el) => {
+    if (/__CF\$cv\$params|\/cdn-cgi\/challenge-platform\//.test($(el).text())) $(el).remove();
+  });
+
+  redactVolatileTokens($);
+
+  const pageName = path === '/' ? 'index' : path.slice(1).replace(/\//g, '-');
+  await saveFile(`./output/pages/${pageName}.html`, beautify.html($.html(), HTML_BEAUTIFY_OPTIONS));
 
   const scriptUrls: string[] = [];
   $('script[src]').each((_, el) => {
@@ -133,7 +191,6 @@ async function processPage(path: string, seen: Set<string>) {
     if (href) cssUrls.push(new URL(href, BASE_URL).toString());
   });
 
-  const pageName = path === '/' ? 'index' : path.slice(1).replace(/\//g, '-');
   let cssIndex = 0;
   for (const url of cssUrls) {
     if (seen.has(url)) continue;
@@ -160,7 +217,7 @@ async function main() {
 
   const seen = new Set<string>();
   const paths = [
-    '/', '/tenshii', '/pricing', '/leaderboard', '/login', '/register', '/reset', '/terms', '/privacy',
+    '/', '/$', '/pricing', '/leaderboard', '/login', '/register', '/reset', '/terms', '/privacy',
     '/terms/copyright', '/sent', '/reset', '/logout', '/verify/a', '/reset/a', '/password/success', '/recovery',
     '/recovery/start', '/recovery/finalize', '/recovery/cancel',
   ];
