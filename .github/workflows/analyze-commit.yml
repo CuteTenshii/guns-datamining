@@ -1,0 +1,39 @@
+name: Analyze commit
+
+# Commits pushed by the "Get latest files" workflow use the default GITHUB_TOKEN,
+# which by design does NOT trigger `on: push`. So we react to that workflow
+# finishing instead, and analyze whatever it committed to master.
+on:
+  workflow_run:
+    workflows: ["Get latest files"]
+    types: [completed]
+
+permissions:
+  contents: write # required to create commit comments
+
+jobs:
+  analyze:
+    name: Analyze
+    # Only run when the fetch workflow succeeded.
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          ref: master
+          fetch-depth: 0 # need history back to the base commit for the diff
+
+      - uses: oven-sh/setup-bun@v2
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Analyze commit
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          # The tip master was at when the fetch run started = parent of the new commit.
+          BASE_SHA: ${{ github.event.workflow_run.head_sha }}
+        run: bun run analyze-commit.ts

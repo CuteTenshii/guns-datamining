@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.112.1",
     "cheerio": "^1.2.0",
     "js-beautify": "^1.15.4"
   },
