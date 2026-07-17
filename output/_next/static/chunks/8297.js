@@ -6068,9 +6068,13 @@ void main() {
             a = null,
             s = !1,
             n = 0,
-            i = null,
-            o = () => "active" === document.documentElement.getAttribute(te),
-            l = (t = window.scrollY + .5 * (window.innerHeight || 0)) => {
+            i = !1,
+            o = 0,
+            l = 0,
+            c = 0,
+            d = null,
+            u = () => "active" === document.documentElement.getAttribute(te),
+            m = (t = window.scrollY + .5 * (window.innerHeight || 0)) => {
               let r = 0,
                 a = 1 / 0;
               for (let s = 0; s < e.length; s++) {
@@ -6079,7 +6083,7 @@ void main() {
               }
               return r
             },
-            c = () => {
+            f = () => {
               var t, r;
               let a = Math.max(window.innerHeight || 1, 1),
                 s = Math.max(document.documentElement.scrollHeight - a, 1);
@@ -6087,12 +6091,12 @@ void main() {
               let n = Math.min((e[1]?.offsetTop ?? 1 / 0) - Math.max(12, .04 * a), Math.max(24, .16 * a));
               r = window.scrollY < n, j.current !== r && (j.current = r, C(r))
             },
-            d = e => {
+            p = e => {
               if (!e) return !0;
               let t = Math.max(window.innerHeight || 1, 1);
               return e.offsetHeight <= 1.03 * t
             },
-            u = t => {
+            h = t => {
               let r = Math.max(0, Math.min(e.length - 1, t)),
                 n = e[r].offsetTop,
                 i = window.scrollY,
@@ -6107,54 +6111,62 @@ void main() {
                   window.scrollTo({
                     top: e,
                     behavior: "auto"
-                  }), c()
+                  }), f()
                 },
                 onComplete: () => {
-                  s = !1, a = null, c()
+                  s = !1, a = null, f()
                 }
               })
             },
-            m = () => {
-              o() || (c(), null !== r && window.clearTimeout(r), r = window.setTimeout(() => {
+            g = () => {
+              u() || (f(), null !== r && window.clearTimeout(r), r = window.setTimeout(() => {
                 if (s) return;
-                let t = l();
-                if (!d(e[t])) return;
+                let t = m();
+                if (!p(e[t])) return;
                 let r = e[t]?.offsetTop ?? window.scrollY;
-                Math.abs(window.scrollY - r) <= Math.max(20, Math.round(.03 * (window.innerHeight || 0))) || u(t)
+                Math.abs(window.scrollY - r) <= Math.max(20, Math.round(.03 * (window.innerHeight || 0))) || h(t)
               }, 150))
             },
-            f = t => {
-              if (o()) {
-                t.preventDefault(), n = 0;
+            x = t => {
+              if (0 === t.deltaY) return;
+              let r = window.performance.now(),
+                f = Math.abs(t.deltaY),
+                g = Math.abs(l),
+                x = 0 !== l && Math.sign(t.deltaY) !== Math.sign(l);
+              c = g > 0 && f >= 1.15 * g && f - g >= 1 ? c + 1 : 0;
+              let v = i && r - o >= 300 && (x && f >= 10 || f >= Math.max(12, 1.8 * g) || c >= 2 && f >= 10);
+              if (l = t.deltaY, null !== d && window.clearTimeout(d), d = window.setTimeout(() => {
+                  n = 0, i = !1, l = 0, c = 0
+                }, 200), u()) {
+                t.preventDefault(), n = 0, i || (o = r), i = !0;
                 return
               }
-              if (7 > Math.abs(t.deltaY) || (n += t.deltaY, null !== i && window.clearTimeout(i), i = window.setTimeout(() => {
-                  n = 0
-                }, 150), 72 > Math.abs(n))) return;
-              let r = l();
-              if (!d(e[r])) {
+              if (i && !v) return void t.preventDefault();
+              if (v && (i = !1, n = 0, c = 0), 7 > Math.abs(t.deltaY) || 72 > Math.abs(n += t.deltaY)) return;
+              let y = m();
+              if (!p(e[y])) {
                 n = 0;
                 return
               }
-              let c = n > 0 ? 1 : -1;
-              n = 0, t.preventDefault(), a && (a.stop(), a = null, s = !1), u(r + c)
+              let b = n > 0 ? 1 : -1;
+              n = 0, i = !0, o = r, c = 0, t.preventDefault(), a && (a.stop(), a = null, s = !1), h(y + b)
             },
-            p = () => {
-              c(), s || u(l())
+            v = () => {
+              f(), s || h(m())
             },
-            h = e => {
-              u("number" == typeof e.detail?.targetIndex ? e.detail.targetIndex : 1)
+            y = e => {
+              h("number" == typeof e.detail?.targetIndex ? e.detail.targetIndex : 1)
             };
-          return (c(), t) ? (window.addEventListener("scroll", c, {
+          return (f(), t) ? (window.addEventListener("scroll", f, {
             passive: !0
-          }), window.addEventListener("resize", c), () => {
-            window.removeEventListener("scroll", c), window.removeEventListener("resize", c)
-          }) : (window.addEventListener("scroll", m, {
+          }), window.addEventListener("resize", f), () => {
+            window.removeEventListener("scroll", f), window.removeEventListener("resize", f)
+          }) : (window.addEventListener("scroll", g, {
             passive: !0
-          }), window.addEventListener("wheel", f, {
+          }), window.addEventListener("wheel", x, {
             passive: !1
-          }), window.addEventListener("resize", p), window.addEventListener(e7, h), () => {
-            window.removeEventListener("scroll", m), window.removeEventListener("wheel", f), window.removeEventListener("resize", p), window.removeEventListener(e7, h), null !== r && (window.clearTimeout(r), r = null), null !== i && (window.clearTimeout(i), i = null), a && (a.stop(), a = null)
+          }), window.addEventListener("resize", v), window.addEventListener(e7, y), () => {
+            window.removeEventListener("scroll", g), window.removeEventListener("wheel", x), window.removeEventListener("resize", v), window.removeEventListener(e7, y), null !== r && (window.clearTimeout(r), r = null), null !== d && (window.clearTimeout(d), d = null), a && (a.stop(), a = null)
           })
         }, [y.length]), (0, a.jsxs)("div", {
           ref: b,
