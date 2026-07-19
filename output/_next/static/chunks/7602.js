@@ -115,12 +115,12 @@
         N: () => N
       });
       var t = r(95155),
-        d = r(12115),
-        o = r(39551),
-        c = r(28819),
-        n = r(15131),
+        o = r(12115),
+        d = r(39551),
+        n = r(28819),
+        c = r(15131),
         s = r(24866);
-      class i extends d.Component {
+      class i extends o.Component {
         getSnapshotBeforeUpdate(e) {
           let a = this.props.childRef.current;
           if (a && e.isPresent && !this.props.isPresent) {
@@ -139,33 +139,33 @@
         children: e,
         isPresent: a
       }) {
-        let r = (0, d.useId)(),
-          o = (0, d.useRef)(null),
-          c = (0, d.useRef)({
+        let r = (0, o.useId)(),
+          d = (0, o.useRef)(null),
+          n = (0, o.useRef)({
             width: 0,
             height: 0,
             top: 0,
             left: 0
           }),
           {
-            nonce: n
-          } = (0, d.useContext)(s.Q);
-        return (0, d.useInsertionEffect)(() => {
+            nonce: c
+          } = (0, o.useContext)(s.Q);
+        return (0, o.useInsertionEffect)(() => {
           let {
             width: e,
             height: t,
-            top: d,
+            top: o,
             left: s
-          } = c.current;
-          if (a || !o.current || !e || !t) return;
-          o.current.dataset.motionPopId = r;
+          } = n.current;
+          if (a || !d.current || !e || !t) return;
+          d.current.dataset.motionPopId = r;
           let i = document.createElement("style");
-          return n && (i.nonce = n), document.head.appendChild(i), i.sheet && i.sheet.insertRule(`
+          return c && (i.nonce = c), document.head.appendChild(i), i.sheet && i.sheet.insertRule(`
           [data-motion-pop-id="${r}"] {
             position: absolute !important;
             width: ${e}px !important;
             height: ${t}px !important;
-            top: ${d}px !important;
+            top: ${o}px !important;
             left: ${s}px !important;
           }
         `), () => {
@@ -173,10 +173,10 @@
           }
         }, [a]), (0, t.jsx)(i, {
           isPresent: a,
-          childRef: o,
-          sizeRef: c,
-          children: d.cloneElement(e, {
-            ref: o
+          childRef: d,
+          sizeRef: n,
+          children: o.cloneElement(e, {
+            ref: d
           })
         })
       }
@@ -184,19 +184,19 @@
         children: e,
         initial: a,
         isPresent: r,
-        onExitComplete: o,
+        onExitComplete: d,
         custom: s,
         presenceAffectsLayout: i,
         mode: l
       }) => {
-        let _ = (0, c.M)(u),
-          p = (0, d.useId)(),
-          b = (0, d.useCallback)(e => {
+        let _ = (0, n.M)(u),
+          p = (0, o.useId)(),
+          b = (0, o.useCallback)(e => {
             for (let a of (_.set(e, !0), _.values()))
               if (!a) return;
-            o && o()
-          }, [_, o]),
-          S = (0, d.useMemo)(() => ({
+            d && d()
+          }, [_, d]),
+          S = (0, o.useMemo)(() => ({
             id: p,
             initial: a,
             isPresent: r,
@@ -204,14 +204,14 @@
             onExitComplete: b,
             register: e => (_.set(e, !1), () => _.delete(e))
           }), i ? [Math.random(), b] : [r, b]);
-        return (0, d.useMemo)(() => {
+        return (0, o.useMemo)(() => {
           _.forEach((e, a) => _.set(a, !1))
-        }, [r]), d.useEffect(() => {
-          r || _.size || !o || o()
+        }, [r]), o.useEffect(() => {
+          r || _.size || !d || d()
         }, [r]), "popLayout" === l && (e = (0, t.jsx)(f, {
           isPresent: r,
           children: e
-        })), (0, t.jsx)(n.t.Provider, {
+        })), (0, t.jsx)(c.t.Provider, {
           value: S,
           children: e
         })
@@ -225,8 +225,8 @@
 
       function b(e) {
         let a = [];
-        return d.Children.forEach(e, e => {
-          (0, d.isValidElement)(e) && a.push(e)
+        return o.Children.forEach(e, e => {
+          (0, o.isValidElement)(e) && a.push(e)
         }), a
       }
       var S = r(4524);
@@ -234,12 +234,12 @@
         children: e,
         custom: a,
         initial: r = !0,
-        onExitComplete: n,
+        onExitComplete: c,
         presenceAffectsLayout: s = !0,
         mode: i = "sync",
         propagate: f = !1
       }) => {
-        let [u, N] = (0, _.xQ)(f), U = (0, d.useMemo)(() => b(e), [e]), G = f && !u ? [] : U.map(p), h = (0, d.useRef)(!0), m = (0, d.useRef)(U), g = (0, c.M)(() => new Map), [v, C] = (0, d.useState)(U), [y, w] = (0, d.useState)(U);
+        let [u, N] = (0, _.xQ)(f), U = (0, o.useMemo)(() => b(e), [e]), G = f && !u ? [] : U.map(p), h = (0, o.useRef)(!0), m = (0, o.useRef)(U), g = (0, n.M)(() => new Map), [v, C] = (0, o.useState)(U), [y, w] = (0, o.useState)(U);
         (0, S.E)(() => {
           h.current = !1, m.current = U;
           for (let e = 0; e < y.length; e++) {
@@ -260,27 +260,27 @@
         }
         let {
           forceRender: E
-        } = (0, d.useContext)(o.L);
+        } = (0, o.useContext)(d.L);
         return (0, t.jsx)(t.Fragment, {
           children: y.map(e => {
-            let d = p(e),
-              o = (!f || !!u) && (U === y || G.includes(d));
+            let o = p(e),
+              d = (!f || !!u) && (U === y || G.includes(o));
             return (0, t.jsx)(l, {
-              isPresent: o,
+              isPresent: d,
               initial: (!h.current || !!r) && void 0,
-              custom: o ? void 0 : a,
+              custom: d ? void 0 : a,
               presenceAffectsLayout: s,
               mode: i,
-              onExitComplete: o ? void 0 : () => {
-                if (!g.has(d)) return;
-                g.set(d, !0);
+              onExitComplete: d ? void 0 : () => {
+                if (!g.has(o)) return;
+                g.set(o, !0);
                 let e = !0;
                 g.forEach(a => {
                   a || (e = !1)
-                }), e && (null == E || E(), w(m.current), f && (null == N || N()), n && n())
+                }), e && (null == E || E(), w(m.current), f && (null == N || N()), c && c())
               },
               children: e
-            }, d)
+            }, o)
           })
         })
       }
@@ -293,54 +293,54 @@
         I9: () => p,
         _Y: () => s,
         h3: () => l,
-        iN: () => n,
+        iN: () => c,
         l4: () => u,
         qc: () => f,
-        vH: () => c
+        vH: () => n
       });
       var t = r(66609),
-        d = r(45941);
-      async function o(e) {
+        o = r(45941);
+      async function d(e) {
         return new Promise((a, r) => {
           let t = new Image,
-            d = new FileReader;
-          d.onload = e => {
+            o = new FileReader;
+          o.onload = e => {
             t.src = e.target.result
           }, t.onload = () => {
             let r = t.width,
-              d = t.height;
-            if (r > 50 || d > 50) {
+              o = t.height;
+            if (r > 50 || o > 50) {
               let r = document.createElement("canvas"),
-                d = r.getContext("2d");
-              r.width = 32, r.height = 32, d.drawImage(t, 0, 0, 32, 32), r.toBlob(r => {
+                o = r.getContext("2d");
+              r.width = 32, r.height = 32, o.drawImage(t, 0, 0, 32, 32), r.toBlob(r => {
                 a(new File([r], e.name, {
                   type: e.type
                 }))
               }, e.type)
             } else a(e)
-          }, t.onerror = e => r(e), d.onerror = e => r(e), d.readAsDataURL(e)
+          }, t.onerror = e => r(e), o.onerror = e => r(e), o.readAsDataURL(e)
         })
       }
-      let c = (e, a) => {
-        let r = d.o2[a],
-          o = e.name.split(".").pop().toLowerCase() || "";
-        return (d.nB[a] || []).includes("." + o.toLowerCase()) ? !r || !(e.size / 1e6 > r) || (t.oR.error(`Could not upload file. Max file size is ${r}MB`), null) : (t.oR.error("Invalid file type."), null)
+      let n = (e, a) => {
+        let r = o.o2[a],
+          d = e.name.split(".").pop().toLowerCase() || "";
+        return (o.nB[a] || []).includes("." + d.toLowerCase()) ? !r || !(e.size / 1e6 > r) || (t.oR.error(`Could not upload file. Max file size is ${r}MB`), null) : (t.oR.error("Invalid file type."), null)
       };
-      async function n(e, a, r) {
+      async function c(e, a, r) {
         try {
-          if (!c(a, e)) return null;
-          "cursor" === e && (a = await o(a));
-          let d = new FormData;
-          d.append(e, a);
-          let n = await fetch(`https://guns.lol/api/dashboard/customize/upload/${e}`, {
+          if (!n(a, e)) return null;
+          "cursor" === e && (a = await d(a));
+          let o = new FormData;
+          o.append(e, a);
+          let c = await fetch(`https://guns.lol/api/dashboard/customize/upload/${e}`, {
               method: "POST",
-              body: d
+              body: o
             }),
-            s = await n.json();
-          if (n.ok) return t.oR.success(r("dashboard.customize.assets.upload_success", {
+            s = await c.json();
+          if (c.ok) return t.oR.success(r("dashboard.customize.assets.upload_success", {
             type: e
           })), s.url;
-          return t.oR.error(s.error), console.error("Failed to upload file:", n.statusText), null
+          return t.oR.error(s.error), console.error("Failed to upload file:", c.statusText), null
         } catch (e) {
           return t.oR.error(JSON.parse(e.request.response).error), console.error("Error uploading file:", e), null
         }
@@ -356,11 +356,13 @@
           return t.oR.error(`Failed to remove ${e}`), console.error("Error removing file:", a), null
         }
       }
-      async function i(e, a, r, o) {
+      async function i(e, a, r, d) {
+        if (!e) return t.oR.error("Please enter an audio title."), null;
+        if (e.length > 30) return t.oR.error("Audio title must be less than 30 characters."), null;
         if (!a) return t.oR.error("Please select an audio file."), null;
-        let n = d.o2.cover;
-        if (r && r.size / 1e6 > n) return t.oR.error(`Could not upload file. Max audio cover size is ${n}MB`), null;
-        if (!c(a, "audio")) return null;
+        let c = o.o2.cover;
+        if (r && r.size / 1e6 > c) return t.oR.error(`Could not upload file. Max audio cover size is ${c}MB`), null;
+        if (!n(a, "audio")) return null;
         let s = new FormData;
         s.append("audio", a), s.append("cover", r), s.append("title", e);
         let i = await fetch("https://guns.lol/api/dashboard/customize/upload/audio", {
@@ -368,7 +370,7 @@
             body: s
           }),
           f = await i.json();
-        return i.ok ? (t.oR.success("Successfully uploaded audio."), o(f.audios), !0) : (t.oR.error(f.error), console.error("Failed to upload file:", f.error), null)
+        return i.ok ? (t.oR.success("Successfully uploaded audio."), d(f.audios), !0) : (t.oR.error(f.error), console.error("Failed to upload file:", f.error), null)
       }
       async function f(e, a) {
         let r = await fetch("https://guns.lol/api/dashboard/customize/remove/audio", {
@@ -377,8 +379,8 @@
               id: e
             })
           }),
-          d = await r.json();
-        return r.ok ? (a(d.audios), !0) : (t.oR.error(d.error), console.error(d.error), null)
+          o = await r.json();
+        return r.ok ? (a(o.audios), !0) : (t.oR.error(o.error), console.error(o.error), null)
       }
       async function l(e, a) {
         let r = await fetch("https://guns.lol/api/dashboard/customize/audio/active", {
@@ -387,20 +389,20 @@
               id: e
             })
           }),
-          d = await r.json();
-        return r.ok ? (t.oR.success("Successfully set audio as active."), a(d.audios), !0) : (t.oR.error(d.error), console.error(d.error), null)
+          o = await r.json();
+        return r.ok ? (t.oR.success("Successfully set audio as active."), a(o.audios), !0) : (t.oR.error(o.error), console.error(o.error), null)
       }
-      async function u(e, a, r, o) {
-        let c = d.o2.cover;
-        if (r && r.size / 1e6 > c) return t.oR.error(`Could not upload file. Max file size is ${c}MB`), null;
-        let n = new FormData;
-        n.append("cover", r), n.append("id", e), n.append("title", a);
+      async function u(e, a, r, d) {
+        let n = o.o2.cover;
+        if (r && r.size / 1e6 > n) return t.oR.error(`Could not upload file. Max file size is ${n}MB`), null;
+        let c = new FormData;
+        c.append("cover", r), c.append("id", e), c.append("title", a);
         let s = await fetch("https://guns.lol/api/dashboard/customize/audio/details", {
             method: "POST",
-            body: n
+            body: c
           }),
           i = await s.json();
-        return s.ok ? (t.oR.success("Successfully changed audio details."), o(i.audios), !0) : (t.oR.error(i.error), console.error(i.error), null)
+        return s.ok ? (t.oR.success("Successfully changed audio details."), d(i.audios), !0) : (t.oR.error(i.error), console.error(i.error), null)
       }
       async function _(e, a) {
         let r = await fetch("https://guns.lol/api/dashboard/customize/audio/settings", {
@@ -409,8 +411,8 @@
               shuffle_audios: e
             })
           }),
-          d = await r.json();
-        return r.ok ? (t.oR.success(`Successfully ${e?"enabled":"disabled"} shuffle songs.`), a(e), !0) : (t.oR.error(d.error), console.error(d.error), null)
+          o = await r.json();
+        return r.ok ? (t.oR.success(`Successfully ${e?"enabled":"disabled"} shuffle songs.`), a(e), !0) : (t.oR.error(o.error), console.error(o.error), null)
       }
       async function p(e, a) {
         let r = await fetch("https://guns.lol/api/dashboard/customize/audio/settings", {
@@ -419,8 +421,8 @@
               audio_player: e
             })
           }),
-          d = await r.json();
-        return r.ok ? (t.oR.success(`Successfully ${e?"enabled":"disabled"} audio player.`), a(e), !0) : (t.oR.error(d.error), console.error(d.error), null)
+          o = await r.json();
+        return r.ok ? (t.oR.success(`Successfully ${e?"enabled":"disabled"} audio player.`), a(e), !0) : (t.oR.error(o.error), console.error(o.error), null)
       }
     }
   }

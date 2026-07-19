@@ -157,8 +157,8 @@
         m = a(41458),
         d = a(50686),
         p = a(98241),
-        u = a.n(p),
-        h = a(54834),
+        h = a.n(p),
+        u = a(54834),
         f = a(79157),
         x = a(13699),
         _ = a(81934),
@@ -255,9 +255,9 @@
             richColors: !0,
             position: "top-center",
             theme: "dark",
-            className: u().toasterStyles,
+            className: h().toasterStyles,
             icons: {
-              success: h.A.successToast
+              success: u.A.successToast
             },
             visibleToasts: 2
           }), (0, r.jsxs)(n.A, {
@@ -271,7 +271,16 @@
                   className: s().heroDescription,
                   children: (0, r.jsxs)("div", {
                     className: s().heroDescriptionInner,
-                    children: [(0, r.jsx)("h1", {
+                    children: [(0, r.jsx)(_.A, {
+                      href: "/pricing",
+                      style: {
+                        textDecoration: "none"
+                      },
+                      children: (0, r.jsx)("span", {
+                        className: s().summerPromo,
+                        children: C("common.other.summer_promo")
+                      })
+                    }), (0, r.jsx)("h1", {
                       children: C("pricing.hero.title")
                     }), (0, r.jsx)("h3", {
                       children: C("pricing.hero.description")
@@ -319,7 +328,9 @@
                       }), (0, r.jsxs)("div", {
                         className: s().price,
                         children: [(0, r.jsxs)("h1", {
-                          children: ["7,99€", (0, r.jsxs)("span", {
+                          children: [(0, r.jsx)("s", {
+                            children: "7,99€"
+                          }), " 6,79€", (0, r.jsxs)("span", {
                             children: ["/", C("common.pricing.lifetime_text")]
                           })]
                         }), (0, r.jsx)("span", {
@@ -403,7 +414,7 @@
                       children: [(0, r.jsx)("h1", {
                         children: C("common.pricing.premium_plan.name")
                       }), (0, r.jsxs)("h1", {
-                        children: ["7,99€", (0, r.jsxs)("span", {
+                        children: ["6,79€", (0, r.jsxs)("span", {
                           children: ["/", C("common.pricing.lifetime_text")]
                         })]
                       }), G ? (0, r.jsx)("span", {
@@ -506,7 +517,9 @@
                     }), (0, r.jsxs)("div", {
                       className: s().price,
                       children: [(0, r.jsxs)("h1", {
-                        children: ["8,99€", (0, r.jsxs)("span", {
+                        children: [(0, r.jsx)("s", {
+                          children: "8,99€"
+                        }), " 7,65€", (0, r.jsxs)("span", {
                           children: ["/", C("common.pricing.lifetime_text")]
                         })]
                       }), (0, r.jsx)("span", {
@@ -555,7 +568,9 @@
                     }), (0, r.jsxs)("div", {
                       className: s().price,
                       children: [(0, r.jsxs)("h1", {
-                        children: ["4,99€", (0, r.jsxs)("span", {
+                        children: [(0, r.jsx)("s", {
+                          children: "4,99€"
+                        }), " 4,25€", (0, r.jsxs)("span", {
                           children: ["/", C("common.pricing.lifetime_text")]
                         })]
                       }), (0, r.jsx)("span", {
@@ -602,7 +617,9 @@
                     }), (0, r.jsxs)("div", {
                       className: s().price,
                       children: [(0, r.jsxs)("h1", {
-                        children: ["14,99€", (0, r.jsxs)("span", {
+                        children: [(0, r.jsx)("s", {
+                          children: "14,99€"
+                        }), " 12,75€", (0, r.jsxs)("span", {
                           children: ["/", C("common.pricing.lifetime_text")]
                         })]
                       }), (0, r.jsx)("span", {
@@ -665,9 +682,9 @@
           [a, s] = (0, c.useState)(1),
           [d, p] = (0, c.useState)(!1);
 
-        function u(e) {
-          let i = 8.99 * e ** .95,
-            a = 8.99 * e,
+        function h(e) {
+          let i = 7.65 * e ** .95,
+            a = 7.65 * e,
             r = (1 - i / a) * 100;
           return {
             totalPrice: parseFloat(i.toFixed(2)),
@@ -675,21 +692,21 @@
             discountPercent: parseFloat(r.toFixed(0))
           }
         }
-        let h = async e => {
+        let u = async e => {
           p(!0)
         }, f = a > 1 ? (0, r.jsxs)(r.Fragment, {
-          children: [u(a).totalPrice, "€ ", (0, r.jsxs)("s", {
-            children: [u(a).rawPrice, "€"]
+          children: [h(a).totalPrice, "€ ", (0, r.jsxs)("s", {
+            children: [h(a).rawPrice, "€"]
           })]
         }) : (0, r.jsxs)(r.Fragment, {
-          children: [u(a).totalPrice, "€"]
+          children: [h(a).totalPrice, "€"]
         });
         return (0, r.jsx)(r.Fragment, {
           children: d ? (0, r.jsx)(o.A, {
             type: "customBadge",
             customBadgeData: {
               amount: a,
-              totalPrice: u(a).totalPrice
+              totalPrice: h(a).totalPrice
             },
             purchaseSource: e
           }) : (0, r.jsxs)("div", {
@@ -707,13 +724,13 @@
                 children: i("modals.custom_badge.information_text")
               }), (0, r.jsx)("h3", {
                 children: i("modals.custom_badge.description", {
-                  percentage: u(a).discountPercent,
+                  percentage: h(a).discountPercent,
                   quantity: a
                 })
               })]
             }), (0, r.jsx)("span", {
               className: n().CustomBadgePurchaseModalButton,
-              onClick: h,
+              onClick: u,
               children: i("modals.custom_badge.purchase_text", {
                 price: f
               })
@@ -790,7 +807,7 @@
         otherProductsDescription: "GUNS__7d-3d489a2f-ffd15105-1c4e6ac6",
         pricingProduct: "GUNS__bd-cb2a76b5-babb4383-30f2bcec",
         productButtons: "GUNS__ff-b4daf737-8f949ac1-cee0cf61",
-        easterPromo: "GUNS__8f-881f3166-cb84f790-c4ed3bf9"
+        summerPromo: "GUNS__59-f4588d3c-a4055a80-ef58f684"
       }
     },
     95331: (e, i, a) => {

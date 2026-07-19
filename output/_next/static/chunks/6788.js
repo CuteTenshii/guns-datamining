@@ -62,22 +62,22 @@
         placeholder: o,
         icon: s,
         prefix: d,
-        prefixLength: f,
-        viewPassword: l,
+        prefixLength: l,
+        viewPassword: f,
         onKeyPress: u,
         isImageUrl: m,
         type: _ = "text",
         ...b
       }) {
-        let [p, h] = (0, n.useState)(!!l), {
+        let [p, h] = (0, n.useState)(!!f), {
           onInput: g,
           onChange: N,
           maxLength: S,
           ...G
-        } = b, U = S ?? (l || "password" === _ ? 72 : void 0);
+        } = b, U = S ?? (f || "password" === _ ? 72 : void 0);
         return (0, n.useEffect)(() => {
-          h(!!l)
-        }, [l]), (0, r.jsxs)("div", {
+          h(!!f)
+        }, [f]), (0, r.jsxs)("div", {
           className: i().inputContainerWrapper,
           "data-dashboard-feature-label": "string" == typeof e ? e : void 0,
           children: [e && (0, r.jsx)("h1", {
@@ -97,19 +97,19 @@
               }) : s, d && (0, r.jsx)("h1", {
                 children: d
               })]
-            }), l && (0, r.jsx)("p", {
+            }), f && (0, r.jsx)("p", {
               onClick: () => {
                 h(!p)
               },
               children: p ? c.A.hidePassword : c.A.views
             }), (0, r.jsx)("input", {
               autoCorrect: "off",
-              type: l ? p ? "password" : "text" : _,
+              type: f ? p ? "password" : "text" : _,
               onKeyDown: u,
               value: t,
               style: {
-                paddingLeft: d ? f : "",
-                paddingRight: l ? 47 : ""
+                paddingLeft: d ? l : "",
+                paddingRight: f ? 47 : ""
               },
               placeholder: o,
               className: i().inputWrapperInput,
@@ -135,8 +135,8 @@
         c = t(37897),
         s = t(12115),
         d = t(58295),
-        f = t(66609),
-        l = t(50686),
+        l = t(66609),
+        f = t(50686),
         u = t(91801),
         m = t.n(u),
         _ = t(97478),
@@ -151,8 +151,8 @@
         let n = (0, p.kj)();
 
         function o(e) {
-          let a = 7.99 * e ** .95,
-            t = 7.99 * e,
+          let a = 8.99 * .9 * e ** .95,
+            t = 8.99 * e,
             r = (1 - a / t) * 100;
           return {
             totalPrice: parseFloat(a.toFixed(2)),
@@ -238,8 +238,8 @@
           }),
           L = '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M11 12q-1.65 0-2.825-1.175T7 8t1.175-2.825T11 4t2.825 1.175T15 8t-1.175 2.825T11 12m11.1 11.5l-3.2-3.2q-.525.3-1.125.5T16.5 21q-1.875 0-3.187-1.312T12 16.5t1.313-3.187T16.5 12t3.188 1.313T21 16.5q0 .675-.2 1.275t-.5 1.125l3.2 3.2zM16.5 19q1.05 0 1.775-.725T19 16.5t-.725-1.775T16.5 14t-1.775.725T14 16.5t.725 1.775T16.5 19m-5.475-6q-1.05 1.55-1.05 3.5t1.05 3.5H3v-2.775q0-.85.425-1.575t1.175-1.1q1.275-.65 2.875-1.1t3.55-.45"></path></svg>',
           E = async (e, a = !1) => {
-            if (!G) return void f.oR.error(u("modals.gift.error_gift_username"));
-            if (!j) return void f.oR.error(u("modals.gift.error_gift_product"));
+            if (!G) return void l.oR.error(u("modals.gift.error_gift_username"));
+            if (!j) return void l.oR.error(u("modals.gift.error_gift_product"));
             let t = await $(e, !1);
             (w.found || t) && (a ? M(!0) : B(!0))
           }, $ = async (e, a = !0) => {
@@ -252,7 +252,7 @@
                   })
                 }),
                 r = await t.json();
-              if (!t.ok) return e.target.innerHTML = a ? L : u("modals.gift.continue_button"), f.oR.error(r.error), null;
+              if (!t.ok) return e.target.innerHTML = a ? L : u("modals.gift.continue_button"), l.oR.error(r.error), null;
               {
                 let t = {
                   displayName: r.display_name,
@@ -269,7 +269,7 @@
             continueFunction: E,
             customBadgeData: P,
             setCustomBadgeData: A
-          }) : (0, r.jsx)(l.A, {
+          }) : (0, r.jsx)(f.A, {
             type: j,
             gift: !0,
             giftMessage: v,
@@ -363,8 +363,10 @@
                         })]
                       }), (0, r.jsx)("span", {
                         className: i().priceText,
-                        children: (0, r.jsx)("strong", {
-                          children: "14,99€"
+                        children: (0, r.jsxs)("strong", {
+                          children: [(0, r.jsx)("s", {
+                            children: "14,99€"
+                          }), " 13,49€"]
                         })
                       })]
                     }), (0, r.jsxs)("div", {
@@ -379,8 +381,10 @@
                         })]
                       }), (0, r.jsx)("span", {
                         className: i().priceText,
-                        children: (0, r.jsx)("strong", {
-                          children: "8,99€"
+                        children: (0, r.jsxs)("strong", {
+                          children: [(0, r.jsx)("s", {
+                            children: "8,99€"
+                          }), " 8,09€"]
                         })
                       })]
                     }), (0, r.jsxs)("div", {
@@ -396,11 +400,11 @@
                         }), (0, r.jsx)("h3", {
                           children: u("modals.gift.gift_premium")
                         })]
-                      }), (0, r.jsx)("span", {
+                      }), (0, r.jsxs)("span", {
                         className: i().priceText,
-                        children: (0, r.jsx)("strong", {
-                          children: "7,19€"
-                        })
+                        children: [(0, r.jsx)("s", {
+                          children: "7,99€"
+                        }), " 7,19€"]
                       })]
                     }), (0, r.jsxs)("div", {
                       className: `${i().giftContainer} ${"imagehost"===j&&i().selectedGift}`,
@@ -414,8 +418,10 @@
                         })]
                       }), (0, r.jsx)("span", {
                         className: i().priceText,
-                        children: (0, r.jsx)("strong", {
-                          children: "4,99€"
+                        children: (0, r.jsxs)("strong", {
+                          children: [(0, r.jsx)("s", {
+                            children: "4,99€"
+                          }), " 4,49€"]
                         })
                       })]
                     })]
@@ -494,7 +500,7 @@
       }
       var s = t(66609),
         d = t(12115);
-      async function f(e, a, t, r, n = "unknown", o = "en") {
+      async function l(e, a, t, r, n = "unknown", o = "en") {
         let i = await fetch("https://guns.lol/api/billing/giftCheckout", {
             method: "POST",
             body: JSON.stringify({
@@ -516,7 +522,7 @@
           message: c.error
         }
       }
-      async function l(e, a, t, r, n = "unknown") {
+      async function f(e, a, t, r, n = "unknown") {
         let o = await fetch("https://guns.lol/api/billing/giftCryptoCheckout", {
             method: "POST",
             body: JSON.stringify({
@@ -580,11 +586,11 @@
           y = {
             premiumlifetime: {
               name: `${N("common.pricing.premium_plan.name")} ${N("common.pricing.lifetime_text")}`,
-              price: t ? "7,19€" : "7,99€"
+              price: t ? "6,49€" : "6,79€"
             },
             imagehost: {
               name: N("common.pricing.imagehost_plan.name"),
-              price: "4,99€"
+              price: t ? "4,49€" : "4,25€"
             },
             donation: {
               name: N("common.pricing.donation.name"),
@@ -592,7 +598,7 @@
             },
             verified: {
               name: N("common.pricing.verified.name"),
-              price: "14,99€"
+              price: t ? "13,49€" : "12,75€"
             },
             credits: {
               name: `${b?.amount}x ${N("common.pricing.custom_badge_credits.name")}`,
@@ -616,7 +622,7 @@
             let d = null;
             try {
               let r = !!(t && _);
-              "card" === G ? d = r ? await f(e, _, n ?? "", p, g, S) : await c(e, a, b, p, h, g, S) : "crypto" === G && (d = r ? await l(e, _, n ?? "", p, g) : await u(e, a, b, p, h, g))
+              "card" === G ? d = r ? await l(e, _, n ?? "", p, g, S) : await c(e, a, b, p, h, g, S) : "crypto" === G && (d = r ? await f(e, _, n ?? "", p, g) : await u(e, a, b, p, h, g))
             } catch (e) {
               s.oR.error(N("modals.payment_methods.unknown_error"))
             }
@@ -627,6 +633,17 @@
         return (0, r.jsxs)("div", {
           className: o().paymentMethods,
           children: [(0, r.jsxs)("div", {
+            className: o().summerSale,
+            children: [(0, r.jsx)("h1", {
+              children: N("common.other.summer_payment_modal_title")
+            }), (0, r.jsx)("h3", {
+              children: N("common.other.summer_payment_modal_description", {
+                percentage: (0, r.jsx)("b", {
+                  children: t ? "10%" : "15%"
+                })
+              })
+            })]
+          }), (0, r.jsxs)("div", {
             className: o().product,
             children: [i.A.cart, (0, r.jsxs)("div", {
               className: o().productInformation,
@@ -684,8 +701,8 @@
         onCloseButtonClick: i,
         onEscapeClose: s,
         title: d,
-        centered: f = !0,
-        size: l = "auto",
+        centered: l = !0,
+        size: f = "auto",
         closeOnOverlayClick: u = !0,
         withCloseButton: m = !0,
         centerTitle: _ = !1,
@@ -767,13 +784,13 @@
               passive: !0
             }), () => window.removeEventListener("touchstart", e)
           }, [g]), !g || !U) return null;
-        let T = "number" == typeof l ? `${l}px` : l,
+        let T = "number" == typeof f ? `${f}px` : f,
           M = {};
         T && "auto" !== T ? M.maxWidth = T : (M.width = "fit-content", M.maxWidth = "clamp(100%, 100%, 850px)", M.boxSizing = "border-box");
         let P = S ? "closing" : "open",
           A = (0, r.jsx)("div", {
             className: c().overlay,
-            "data-centered": f,
+            "data-centered": l,
             "data-state": P,
             onMouseDown: e => {
               j.current = e.target === e.currentTarget
@@ -840,8 +857,8 @@
         placement: t = "top",
         delay: i = 110,
         offset: d = 10,
-        maxWidth: f = 260,
-        className: l,
+        maxWidth: l = 260,
+        className: f,
         tooltipClassName: u,
         hideTooltip: m = !1,
         pageTooltipStyles: _ = !1
@@ -896,10 +913,10 @@
             }
             let c = window.innerWidth - n.width - 8,
               s = window.innerHeight - n.height - 8,
-              f = n.width >= window.innerWidth ? 8 : T(i, 8, Math.max(8, c));
+              l = n.width >= window.innerWidth ? 8 : T(i, 8, Math.max(8, c));
             S({
               top: n.height >= window.innerHeight ? 8 : T(o, 8, Math.max(8, s)),
-              left: f
+              left: l
             })
           }, [d, t]);
         (0, o.useLayoutEffect)(() => {
@@ -931,7 +948,7 @@
           }
         }, [m, B, h, b]);
         let A = {
-            "--tooltip-max-width": "number" == typeof f ? `${f}px` : f,
+            "--tooltip-max-width": "number" == typeof l ? `${l}px` : l,
             top: `${N.top}px`,
             left: `${N.left}px`
           },
@@ -949,7 +966,7 @@
           });
         return (0, r.jsxs)("span", {
           ref: x,
-          className: `${c().wrapper} ${l??""}`,
+          className: `${c().wrapper} ${f??""}`,
           onMouseEnter: () => k(),
           onMouseLeave: () => B(),
           onFocusCapture: () => k(),
@@ -1126,6 +1143,9 @@
         featureSearchResultHint: "GUNS__ed-e483fd6a-d0253001-abe29fc2",
         featureSearchResultLocked: "GUNS__47-92c92754-9035965e-dfa2e8d9",
         featureSearchEmpty: "GUNS__e6-439efccd-f45e41cc-8e4eb41d",
+        summerSale: "GUNS__c3-e11c3b04-098c6224-08d4f346",
+        summerSaleNotification: "GUNS__93-13fe080a-b7401420-11a9ee00",
+        summerSaleButtons: "GUNS__26-3e97cb94-604a9dd6-13163772",
         "dashboard-feature-search-highlight-ring": "GUNS__36-4f537d43-7a5a8fae-f449c6b8",
         "dashboard-feature-search-highlight-reduced": "GUNS__d4-f530fdd8-0f3c880b-a393d6f9"
       }

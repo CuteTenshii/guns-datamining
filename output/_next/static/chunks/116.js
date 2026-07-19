@@ -375,7 +375,9 @@
                 children: [(0, n.jsxs)("div", {
                   className: o().price,
                   children: [(0, n.jsxs)("h1", {
-                    children: ["7,99€", (0, n.jsxs)("span", {
+                    children: [(0, n.jsx)("s", {
+                      children: "7,99€"
+                    }), " 6,79€", (0, n.jsxs)("span", {
                       children: ["/", s("common.pricing.lifetime_text")]
                     })]
                   }), (0, n.jsx)("span", {

@@ -1257,6 +1257,17 @@ html.rtl .GUNS__cb-1d3ba140-c368c53f-01467a29 {
   padding-left: 83px !important
 }
 
+.GUNS__3e-f895c787-6c1da2b5-56145b74 {
+  background-color: #ffc83d47;
+  border: 2px solid #ffc83d2b;
+  border-radius: 25px;
+  padding: 6px 15px;
+  color: #fafafa;
+  font-weight: 450;
+  width: fit-content;
+  display: block
+}
+
 .GUNS__c6-e065363c-9ee19f9c-6ec3f15e {
   display: flex;
   justify-content: center;
@@ -2511,9 +2522,9 @@ html.rtl .GUNS__f8-56131356-52714b53-b7c81d2d {
   }
 }
 
-.GUNS__8f-881f3166-cb84f790-c4ed3bf9 {
-  background-color: #da69ff3a;
-  border: 2px solid #9c4fb880;
+.GUNS__59-f4588d3c-a4055a80-ef58f684 {
+  background-color: #ffc83d47;
+  border: 2px solid #ffc83d2b;
   border-radius: 25px;
   padding: 6px 15px;
   color: #fafafa;

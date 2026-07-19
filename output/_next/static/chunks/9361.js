@@ -994,7 +994,8 @@
                   },
                   value: D,
                   placeholder: a("dashboard.customize.audio.add.title_placeholder"),
-                  icon: d.audio
+                  icon: d.audio,
+                  maxLength: 30
                 })]
               }), (0, r.jsxs)("span", {
                 className: o().addAudioButton,
@@ -1071,7 +1072,8 @@
                   },
                   value: W.currentTitle,
                   placeholder: a("dashboard.customize.audio.add.title_placeholder"),
-                  icon: d.audio
+                  icon: d.audio,
+                  maxLength: 30
                 })]
               }), (0, r.jsxs)("span", {
                 className: o().addAudioButton,

@@ -134,8 +134,8 @@
         r = s(59791),
         c = s.n(r),
         l = s(81382),
-        t = s(87974),
-        n = s(12115),
+        n = s(87974),
+        t = s(12115),
         d = s(60884);
       let o = ({
         children: e,
@@ -176,14 +176,14 @@
         let a = e.statsData,
           s = e.tokenData,
           r = (0, _.kj)(),
-          [d, m] = (0, n.useState)(""),
-          [x, u] = (0, n.useState)(null),
+          [d, m] = (0, t.useState)(""),
+          [x, u] = (0, t.useState)(null),
           b = (1e4 * Math.round(a.users / 1e4)).toLocaleString("en-US"),
           g = (1e5 * Math.round(a.views / 1e5)).toLocaleString("en-US"),
           N = (1e4 * Math.round(a.uploads / 1e4)).toLocaleString("en-US"),
           j = (100 * Math.round(a.premium / 100)).toLocaleString("en-US"),
           w = x && x < 768 ? .3 : .6;
-        return (0, n.useEffect)(() => {
+        return (0, t.useEffect)(() => {
           document.querySelectorAll(`.${c().elementAnimation}`).forEach((e, a) => {
             setTimeout(() => {
               e.classList.add(c().expandAnimation)
@@ -206,7 +206,16 @@
                   className: `${c().heroContentWrapper} ${c().elementAnimation}`,
                   children: [(0, i.jsxs)("div", {
                     className: c().heroContent,
-                    children: [(0, i.jsx)("h1", {
+                    children: [(0, i.jsx)(f.A, {
+                      href: "/pricing",
+                      style: {
+                        textDecoration: "none"
+                      },
+                      children: (0, i.jsx)("span", {
+                        className: c().summerPromo,
+                        children: r("common.other.summer_promo")
+                      })
+                    }), (0, i.jsx)("h1", {
                       children: r("landing.hero.title")
                     }), (0, i.jsx)("p", {
                       children: r("landing.hero.description")
@@ -259,7 +268,7 @@
                         }), (0, i.jsx)("span", {
                           children: r("landing.stats.profile_views")
                         })]
-                      }), t.A.profileViews]
+                      }), n.A.profileViews]
                     }), (0, i.jsxs)("div", {
                       className: c().statisticBox,
                       children: [(0, i.jsxs)("div", {
@@ -269,7 +278,7 @@
                         }), (0, i.jsx)("span", {
                           children: r("landing.stats.users")
                         })]
-                      }), t.A.users]
+                      }), n.A.users]
                     }), (0, i.jsxs)("div", {
                       className: c().statisticBox,
                       children: [(0, i.jsxs)("div", {
@@ -279,7 +288,7 @@
                         }), (0, i.jsx)("span", {
                           children: r("landing.stats.file_uploads")
                         })]
-                      }), t.A.fileUploads]
+                      }), n.A.fileUploads]
                     }), (0, i.jsxs)("div", {
                       className: c().statisticBox,
                       children: [(0, i.jsxs)("div", {
@@ -289,7 +298,7 @@
                         }), (0, i.jsx)("span", {
                           children: r("landing.stats.subscribers")
                         })]
-                      }), t.A.subscribers]
+                      }), n.A.subscribers]
                     })]
                   })]
                 }), (0, i.jsxs)("div", {
@@ -378,7 +387,9 @@
                     }), (0, i.jsxs)("div", {
                       className: p().price,
                       children: [(0, i.jsxs)("h1", {
-                        children: ["7,99€", (0, i.jsxs)("span", {
+                        children: [(0, i.jsx)("s", {
+                          children: "7,99€"
+                        }), " 6,79€", (0, i.jsxs)("span", {
                           children: ["/", r("common.pricing.lifetime_text")]
                         })]
                       }), (0, i.jsx)("span", {
@@ -494,7 +505,7 @@
         otherProductsDescription: "GUNS__7d-3d489a2f-ffd15105-1c4e6ac6",
         pricingProduct: "GUNS__bd-cb2a76b5-babb4383-30f2bcec",
         productButtons: "GUNS__ff-b4daf737-8f949ac1-cee0cf61",
-        easterPromo: "GUNS__8f-881f3166-cb84f790-c4ed3bf9"
+        summerPromo: "GUNS__59-f4588d3c-a4055a80-ef58f684"
       }
     }
   },

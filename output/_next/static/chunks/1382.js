@@ -199,7 +199,8 @@
         lifetimeText: "GUNS__95-13c6f6f2-63d08707-3593bd0e",
         claimProfileWrapper: "GUNS__92-082b721a-fd3d4ca3-8430337f",
         claimProfileText: "GUNS__2d-da8b047c-8651e0f1-bcfefd46",
-        claimProfileBox: "GUNS__73-c1fc5bbd-2ecf6cf0-642ab41e"
+        claimProfileBox: "GUNS__73-c1fc5bbd-2ecf6cf0-642ab41e",
+        summerPromo: "GUNS__3e-f895c787-6c1da2b5-56145b74"
       }
     },
     66348: e => {
