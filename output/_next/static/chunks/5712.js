@@ -364,23 +364,24 @@
         animationClass: c,
         setAudioPlayer: d,
         audioContainerRef: u,
-        discordWidgetRef: m
+        discordWidgetRef: m,
+        onEnter: f
       }) {
-        let f = (0, n.useRef)(null),
-          p = (0, n.useRef)(!1),
-          h = (0, n.useRef)({}),
+        let p = (0, n.useRef)(null),
+          h = (0, n.useRef)(!1),
           g = (0, n.useRef)({}),
-          x = (0, n.useRef)(null),
+          x = (0, n.useRef)({}),
           v = (0, n.useRef)(null),
           y = (0, n.useRef)(null),
           b = (0, n.useRef)(null),
-          j = () => {
-            b.current && (document.body.style.overflow = b.current.body, document.documentElement.style.overflow = b.current.html, b.current = null)
-          },
-          _ = e => {
-            e.current.timeoutId && (window.clearTimeout(e.current.timeoutId), e.current.timeoutId = void 0), e.current.detachListeners && (e.current.detachListeners?.(), e.current.detachListeners = void 0)
+          j = (0, n.useRef)(null),
+          _ = () => {
+            j.current && (document.body.style.overflow = j.current.body, document.documentElement.style.overflow = j.current.html, j.current = null)
           },
           w = e => {
+            e.current.timeoutId && (window.clearTimeout(e.current.timeoutId), e.current.timeoutId = void 0), e.current.detachListeners && (e.current.detachListeners?.(), e.current.detachListeners = void 0)
+          },
+          S = e => {
             d({
               playing: !e.paused,
               duration: e.duration || 0,
@@ -388,13 +389,13 @@
               ref: e
             })
           };
-        (0, n.useEffect)(() => (document.documentElement.setAttribute(l, "active"), b.current = {
+        (0, n.useEffect)(() => (document.documentElement.setAttribute(l, "active"), j.current = {
           body: document.body.style.overflow,
           html: document.documentElement.style.overflow
         }, document.body.style.overflow = "hidden", document.documentElement.style.overflow = "hidden", () => {
-          null !== y.current && (window.clearTimeout(y.current), y.current = null), document.documentElement.removeAttribute(l), j(), _(h), _(g), t.current && x.current && t.current.removeEventListener("timeupdate", x.current)
+          null !== b.current && (window.clearTimeout(b.current), b.current = null), document.documentElement.removeAttribute(l), _(), w(g), w(x), t.current && v.current && t.current.removeEventListener("timeupdate", v.current)
         }), [t]);
-        let S = e => {
+        let N = e => {
           if (e) {
             if (e === s().fadeUp || e === s().scaleFade) {
               o.current?.classList.add(e), u.current?.classList.add(e), m?.current?.classList.add(e);
@@ -408,16 +409,16 @@
           }
         };
         (0, n.useEffect)(() => {
-          p.current && c && c !== v.current && (S(c), v.current = c)
+          h.current && c && c !== y.current && (N(c), y.current = c)
         }, [c]);
-        let N = (e, t = !1, r) => {
-          let a = t ? g : h;
-          _(a);
+        let C = (e, t = !1, r) => {
+          let a = t ? x : g;
+          w(a);
           let n = 0,
             i = e => {
               if (t && e instanceof HTMLAudioElement) {
                 let t;
-                w(e), x.current && e.removeEventListener("timeupdate", x.current), x.current = t = () => w(e), e.addEventListener("timeupdate", t)
+                S(e), v.current && e.removeEventListener("timeupdate", v.current), v.current = t = () => S(e), e.addEventListener("timeupdate", t)
               }
             },
             s = e => {
@@ -428,7 +429,7 @@
               }) : i(e)
             },
             o = (e = !1) => {
-              n >= 40 || (n += 1, _(a), a.current.timeoutId = window.setTimeout(() => {
+              n >= 40 || (n += 1, w(a), a.current.timeoutId = window.setTimeout(() => {
                 a.current.timeoutId = void 0, l(e)
               }, 350))
             },
@@ -440,7 +441,7 @@
               else {
                 let e;
                 e = () => {
-                  _(a), s(r)
+                  w(a), s(r)
                 }, r.addEventListener("loadeddata", e, {
                   once: !0
                 }), r.addEventListener("canplay", e, {
@@ -456,15 +457,15 @@
           children: (0, a.jsx)("div", {
             className: s().clickToEnterOverlay,
             onClick: () => {
-              p.current || (f.current && (f.current.classList.add(s().hide), f.current.style.pointerEvents = "none", document.documentElement.removeAttribute(l), j(), y.current = window.setTimeout(() => {
-                f.current && (f.current.style.display = "none"), y.current = null
-              }, 650)), S(c), v.current = c, p.current = !0), N(e, !1, {
+              h.current || (p.current && (p.current.classList.add(s().hide), p.current.style.pointerEvents = "none", document.documentElement.removeAttribute(l), _(), b.current = window.setTimeout(() => {
+                p.current && (p.current.style.display = "none"), b.current = null
+              }, 650)), N(c), y.current = c, h.current = !0, f?.()), C(e, !1, {
                 eager: !0
-              }), N(t, !0, {
+              }), C(t, !0, {
                 eager: !0
               })
             },
-            ref: f,
+            ref: p,
             children: (0, a.jsx)("div", {
               className: s().clickToEnterText,
               style: i.clickToEnter,
@@ -4330,126 +4331,127 @@ void main() {
 
       function eB({
         animationStartClass: e,
-        audioPlayer: t,
-        setAudioData: r,
-        audioData: i,
-        setAudioPlayer: o,
-        audioContainerRef: l,
-        currentFont: c,
-        audioList: d,
-        setVolume: u,
-        fontSize: m,
-        profileBorderClass: f = "",
-        profileBorderEffect: h = "shimmer",
-        revealContent: g = !1,
-        revealOrder: x = 1,
-        lyricsConfig: v = null
+        activeAnimationClass: t = "",
+        audioPlayer: r,
+        setAudioData: i,
+        audioData: o,
+        setAudioPlayer: l,
+        audioContainerRef: c,
+        currentFont: d,
+        audioList: u,
+        setVolume: m,
+        fontSize: f,
+        profileBorderClass: h = "",
+        profileBorderEffect: g = "shimmer",
+        revealContent: x = !1,
+        revealOrder: v = 1,
+        lyricsConfig: y = null
       }) {
-        let y = e => {
+        let b = e => {
             if (isNaN(e) || e === 1 / 0) return "--:--";
             let t = Math.floor(e / 60),
               r = Math.floor(e % 60);
             return isNaN(t) || isNaN(r) ? "--:--" : `${t}:${r<10?`0${r}`:r}`
           },
-          b = p({
-            font: c,
-            fontSize: m
+          j = p({
+            font: d,
+            fontSize: f
           }),
-          j = y(t.currentTime),
-          _ = y(t.duration),
-          w = Number.isFinite(t.duration) && t.duration > 0 ? Math.min(Math.max(t.currentTime / t.duration * 100, 0), 100) : 0,
-          S = (0, n.useRef)(!1),
-          [N, C] = (0, n.useState)(Number(t.currentTime || 0)),
-          k = g ? "" : e,
-          A = (e, t, r) => g ? {
+          _ = b(r.currentTime),
+          w = b(r.duration),
+          S = Number.isFinite(r.duration) && r.duration > 0 ? Math.min(Math.max(r.currentTime / r.duration * 100, 0), 100) : 0,
+          N = (0, n.useRef)(!1),
+          [C, k] = (0, n.useState)(Number(r.currentTime || 0)),
+          A = x ? "" : `${e} ${t}`,
+          $ = (e, t, r) => x ? {
             "data-reveal-part": e,
             style: {
               ...r,
-              "--portfolioRevealOrder": x + t
+              "--portfolioRevealOrder": v + t
             }
           } : r ? {
             style: r
           } : {},
-          $ = (0, n.useRef)({
+          T = (0, n.useRef)({
             activePointerId: null,
             wasPlaying: !1,
             barRect: null,
             lastClientX: null
           }),
-          T = v?.lyrics_track_map && "object" == typeof v.lyrics_track_map ? v.lyrics_track_map : {},
-          P = T[String(i?.id ?? "")] || T.__single__ || null,
-          U = (0, n.useMemo)(() => (0, eE.O5)(String(P?.synced_lyrics || "")), [P?.synced_lyrics]),
-          E = (0, n.useMemo)(() => (0, eE.L$)(U, N + .045), [U, N]),
-          z = E >= 0 ? U[E] : null,
-          M = (0, n.useMemo)(() => (0, eE.r$)(z?.words, N + .045), [z?.words, N]),
-          I = E >= 0 ? E : 0,
-          B = g && v?.show_lyrics === !0;
+          P = y?.lyrics_track_map && "object" == typeof y.lyrics_track_map ? y.lyrics_track_map : {},
+          U = P[String(o?.id ?? "")] || P.__single__ || null,
+          E = (0, n.useMemo)(() => (0, eE.O5)(String(U?.synced_lyrics || "")), [U?.synced_lyrics]),
+          z = (0, n.useMemo)(() => (0, eE.L$)(E, C + .045), [E, C]),
+          M = z >= 0 ? E[z] : null,
+          I = (0, n.useMemo)(() => (0, eE.r$)(M?.words, C + .045), [M?.words, C]),
+          B = z >= 0 ? z : 0,
+          L = x && y?.show_lyrics === !0;
         (0, n.useEffect)(() => {
-          let e = t.ref;
-          if (!B || !e || !t.playing) return void C(Number(t.currentTime || e?.currentTime || 0));
-          let r = 0,
+          let e = r.ref;
+          if (!L || !e || !r.playing) return void k(Number(r.currentTime || e?.currentTime || 0));
+          let t = 0,
             a = -1,
             n = () => {
-              let t = Number(e.currentTime || 0);
-              Math.abs(t - a) >= .018 && (a = t, C(t)), r = requestAnimationFrame(n)
+              let r = Number(e.currentTime || 0);
+              Math.abs(r - a) >= .018 && (a = r, k(r)), t = requestAnimationFrame(n)
             };
-          return n(), () => cancelAnimationFrame(r)
-        }, [t.currentTime, t.playing, t.ref, B]);
-        let L = e => {
+          return n(), () => cancelAnimationFrame(t)
+        }, [r.currentTime, r.playing, r.ref, L]);
+        let W = e => {
             if (!e || "object" != typeof e) return !1;
-            let t = T[String(e.id ?? "")] || T.__single__;
+            let t = P[String(e.id ?? "")] || P.__single__;
             return "string" == typeof t?.synced_lyrics && t.synced_lyrics.trim().length > 0
           },
-          W = e => {
-            if (!Array.isArray(d) || 0 === d.length) return null;
-            let t = d.length,
-              r = d.findIndex(e => e.id === i.id),
-              a = r >= 0 ? r : d.findIndex(e => e.url === i.url),
+          D = e => {
+            if (!Array.isArray(u) || 0 === u.length) return null;
+            let t = u.length,
+              r = u.findIndex(e => e.id === o.id),
+              a = r >= 0 ? r : u.findIndex(e => e.url === o.url),
               n = a >= 0 ? a : 0;
             for (let r = 1; r < t; r++) {
-              let a = d[(n + e * r + t) % t];
-              if (L(a)) return a
+              let a = u[(n + e * r + t) % t];
+              if (W(a)) return a
             }
             return null
           },
-          D = e => {
-            let r = t.ref,
-              a = r?.duration || t.duration;
-            if (!r || !Number.isFinite(a) || a <= 0) return;
+          F = e => {
+            let t = r.ref,
+              a = t?.duration || r.duration;
+            if (!t || !Number.isFinite(a) || a <= 0) return;
             let n = Math.min(Math.max(e, 0), a);
-            r.currentTime = n, o(e => ({
+            t.currentTime = n, l(e => ({
               ...e,
               currentTime: n,
               duration: a,
-              ref: r
+              ref: t
             }))
           },
-          F = e => {
-            let r = $.current.barRect,
-              a = t.ref?.duration || t.duration;
-            if (!r || !Number.isFinite(a) || a <= 0) return;
-            let n = r.width > 0 ? (e - r.left) / r.width : 0;
-            $.current.lastClientX = e, D(n * a)
+          R = e => {
+            let t = T.current.barRect,
+              a = r.ref?.duration || r.duration;
+            if (!t || !Number.isFinite(a) || a <= 0) return;
+            let n = t.width > 0 ? (e - t.left) / t.width : 0;
+            T.current.lastClientX = e, F(n * a)
           },
-          R = (e, r = !0) => {
-            let a = t.ref,
-              n = $.current.activePointerId === e.pointerId && $.current.wasPlaying;
-            $.current.activePointerId === e.pointerId && (e.preventDefault(), F(r ? e.clientX : $.current.lastClientX ?? e.clientX)), e.currentTarget.hasPointerCapture(e.pointerId) && e.currentTarget.releasePointerCapture(e.pointerId), $.current = {
+          G = (e, t = !0) => {
+            let a = r.ref,
+              n = T.current.activePointerId === e.pointerId && T.current.wasPlaying;
+            T.current.activePointerId === e.pointerId && (e.preventDefault(), R(t ? e.clientX : T.current.lastClientX ?? e.clientX)), e.currentTarget.hasPointerCapture(e.pointerId) && e.currentTarget.releasePointerCapture(e.pointerId), T.current = {
               activePointerId: null,
               wasPlaying: !1,
               barRect: null,
               lastClientX: null
-            }, a && n && G(a).then(e => {
-              e && o(e => ({
+            }, a && n && H(a).then(e => {
+              e && l(e => ({
                 ...e,
                 playing: !0,
                 ref: a
               }))
             })
           },
-          G = e => {
+          H = e => {
             let t = e.play();
-            return t && "function" == typeof t.then ? t.then(() => !0).catch(t => (o(e => ({
+            return t && "function" == typeof t.then ? t.then(() => !0).catch(t => (l(e => ({
               ...e,
               playing: !1
             })), t?.name === "NotSupportedError" ? console.warn("Audio playback failed: unsupported source/codec.", {
@@ -4457,89 +4459,89 @@ void main() {
               error: t
             }) : console.warn("Audio playback failed.", t), !1)) : Promise.resolve(!0)
           },
-          H = () => {
-            if (!t.ref || !Array.isArray(d) || 0 === d.length) return;
-            let e = d.findIndex(e => e.id === i.id);
-            if (1 === d.length) {
-              t.ref.currentTime = 0;
-              return
-            }
-            if (B) {
-              let e = W(-1);
-              if (!e) return;
-              V(e);
-              return
-            }
-            V(0 === e ? d[d.length - 1] : d[e - 1])
-          },
           O = () => {
-            if (!t.ref || !Array.isArray(d) || 0 === d.length) return;
-            let e = d.findIndex(e => e.id === i.id);
-            if (1 === d.length) {
-              t.ref.currentTime = 0;
+            if (!r.ref || !Array.isArray(u) || 0 === u.length) return;
+            let e = u.findIndex(e => e.id === o.id);
+            if (1 === u.length) {
+              r.ref.currentTime = 0;
               return
             }
-            if (B) {
-              let e = W(1);
+            if (L) {
+              let e = D(-1);
               if (!e) return;
-              V(e);
+              q(e);
               return
             }
-            V(e === d.length - 1 ? d[0] : d[e + 1])
+            q(0 === e ? u[u.length - 1] : u[e - 1])
           },
-          V = e => {
-            let a = t.ref;
-            if (!a) return;
-            let n = () => {
-                o(e => ({
+          V = () => {
+            if (!r.ref || !Array.isArray(u) || 0 === u.length) return;
+            let e = u.findIndex(e => e.id === o.id);
+            if (1 === u.length) {
+              r.ref.currentTime = 0;
+              return
+            }
+            if (L) {
+              let e = D(1);
+              if (!e) return;
+              q(e);
+              return
+            }
+            q(e === u.length - 1 ? u[0] : u[e + 1])
+          },
+          q = e => {
+            let t = r.ref;
+            if (!t) return;
+            let a = () => {
+                l(e => ({
                   ...e,
-                  currentTime: a.currentTime,
-                  duration: a.duration,
-                  ref: a
+                  currentTime: t.currentTime,
+                  duration: t.duration,
+                  ref: t
                 }))
               },
-              i = () => {
-                G(a).then(e => {
-                  e && (o(e => ({
+              n = () => {
+                H(t).then(e => {
+                  e && (l(e => ({
                     ...e,
                     playing: !0,
-                    ref: a
-                  })), u({
+                    ref: t
+                  })), m({
                     muted: !1,
                     volume: 100
-                  }), a.addEventListener("timeupdate", n))
-                }), a.removeEventListener("canplaythrough", i)
+                  }), t.addEventListener("timeupdate", a))
+                }), t.removeEventListener("canplaythrough", n)
               };
-            a.pause(), a.removeEventListener("timeupdate", n), a.removeEventListener("canplaythrough", i), a.src.includes(e.url) || (a.src = e.url), a.currentTime = 0, a.volume = .25, a.loop = !0, r({
+            t.pause(), t.removeEventListener("timeupdate", a), t.removeEventListener("canplaythrough", n), t.src.includes(e.url) || (t.src = e.url), t.currentTime = 0, t.volume = .25, t.loop = !0, i({
               ...e,
               url: e.url,
               title: e.title,
               cover: e.cover,
               id: e.id
-            }), o(e => ({
+            }), l(e => ({
               ...e,
               playing: !1,
               currentTime: 0,
               duration: 0,
-              ref: a
-            })), a.readyState >= 3 ? i() : a.addEventListener("canplaythrough", i)
+              ref: t
+            })), t.readyState >= 3 ? n() : t.addEventListener("canplaythrough", n)
           },
-          q = e => {
-            S.current || (S.current = !0, e(), setTimeout(() => {
-              S.current = !1
+          Y = e => {
+            N.current || (N.current = !0, e(), setTimeout(() => {
+              N.current = !1
             }, 250))
           };
         return (0, a.jsxs)("div", {
-          className: `${s().audioPlayer} ${k} ${f}`,
-          ref: l,
-          children: [f && !B && (0, a.jsx)(eI, {
-            effect: h
-          }), B && (0, a.jsxs)("div", {
+          className: `${s().audioPlayer} ${A} ${h}`,
+          ref: c,
+          children: [h && !L && (0, a.jsx)(eI, {
+            effect: g
+          }), L && (0, a.jsxs)("div", {
             className: s().audioLyricsBackdropLayer,
-            children: [i.cover && (0, a.jsx)("div", {
+            children: [o.cover && (0, a.jsx)("div", {
               className: s().audioLyricsCoverBackdrop,
               style: {
-                backgroundImage: `url("${i.cover}")`
+                backgroundImage: `url("${o.cover}")`
               }
             }), (0, a.jsx)("span", {
               className: s().audioLyricsBlobPrimary
@@ -4548,67 +4550,67 @@ void main() {
             })]
           }), (0, a.jsxs)("div", {
             className: s().audioPlayerInner,
-            children: [i.cover && "" !== i.cover ? (0, a.jsx)("img", {
-              src: i.cover,
-              ...A("audio-cover", 0, {
+            children: [o.cover && "" !== o.cover ? (0, a.jsx)("img", {
+              src: o.cover,
+              ...$("audio-cover", 0, {
                 borderRadius: "calc(var(--containerRadius) - 10px)"
               }),
               alt: "",
               className: s().audioCover
             }) : (0, a.jsx)("span", {
               className: s().audioIcon,
-              ...A("audio-icon", 0, {
+              ...$("audio-icon", 0, {
                 borderRadius: "calc(var(--containerRadius) - 10px)"
               }),
               children: eP.A.audioIcon
             }), (0, a.jsxs)("div", {
               className: `${s().audioContainer}`,
-              ...A("audio-controls", 1),
+              ...$("audio-controls", 1),
               children: [(0, a.jsx)("h1", {
                 className: s().audioTitle,
-                style: b.audioPlayerTitle,
-                children: i.title
+                style: j.audioPlayerTitle,
+                children: o.title
               }), (0, a.jsxs)("div", {
                 className: s().audioControls,
                 children: [(0, a.jsxs)("div", {
                   className: s().audioProgressBarWrapper,
                   children: [(0, a.jsx)("span", {
-                    style: b.audioPlayerControls,
-                    children: j
+                    style: j.audioPlayerControls,
+                    children: _
                   }), (0, a.jsx)("div", {
                     className: s().audioProgressBar,
                     tabIndex: 0,
                     "aria-valuemin": 0,
-                    "aria-valuemax": Math.round(t.duration || 0),
-                    "aria-valuenow": Math.round(t.currentTime || 0),
+                    "aria-valuemax": Math.round(r.duration || 0),
+                    "aria-valuenow": Math.round(r.currentTime || 0),
                     onPointerDown: e => {
-                      let r = t.ref;
-                      if (!r) return;
+                      let t = r.ref;
+                      if (!t) return;
                       e.preventDefault();
                       let a = e.currentTarget.getBoundingClientRect();
-                      $.current = {
+                      T.current = {
                         activePointerId: e.pointerId,
-                        wasPlaying: !r.paused,
+                        wasPlaying: !t.paused,
                         barRect: {
                           left: a.left,
                           width: a.width
                         },
                         lastClientX: e.clientX
-                      }, r.paused || (r.pause(), o(e => ({
+                      }, t.paused || (t.pause(), l(e => ({
                         ...e,
                         playing: !1,
-                        ref: r
-                      }))), e.currentTarget.setPointerCapture(e.pointerId), F(e.clientX)
+                        ref: t
+                      }))), e.currentTarget.setPointerCapture(e.pointerId), R(e.clientX)
                     },
                     onPointerMove: e => {
-                      1 === e.buttons && $.current.activePointerId === e.pointerId && (e.preventDefault(), F(e.clientX))
+                      1 === e.buttons && T.current.activePointerId === e.pointerId && (e.preventDefault(), R(e.clientX))
                     },
-                    onPointerUp: e => R(e),
-                    onPointerCancel: e => R(e, !1),
-                    onLostPointerCapture: e => R(e, !1),
+                    onPointerUp: e => G(e),
+                    onPointerCancel: e => G(e, !1),
+                    onLostPointerCapture: e => G(e, !1),
                     onKeyDown: e => {
-                      let r = t.ref?.duration || t.duration;
-                      Number.isFinite(r) && !(r <= 0) && ("ArrowLeft" === e.key || "ArrowDown" === e.key ? (e.preventDefault(), D(t.currentTime - 5)) : "ArrowRight" === e.key || "ArrowUp" === e.key ? (e.preventDefault(), D(t.currentTime + 5)) : "Home" === e.key ? (e.preventDefault(), D(0)) : "End" === e.key && (e.preventDefault(), D(r)))
+                      let t = r.ref?.duration || r.duration;
+                      Number.isFinite(t) && !(t <= 0) && ("ArrowLeft" === e.key || "ArrowDown" === e.key ? (e.preventDefault(), F(r.currentTime - 5)) : "ArrowRight" === e.key || "ArrowUp" === e.key ? (e.preventDefault(), F(r.currentTime + 5)) : "Home" === e.key ? (e.preventDefault(), F(0)) : "End" === e.key && (e.preventDefault(), F(t)))
                     },
                     children: (0, a.jsxs)("div", {
                       className: s().audioProgressTrack,
@@ -4617,59 +4619,59 @@ void main() {
                       }), (0, a.jsx)("div", {
                         className: s().audioProgressPlaying,
                         style: {
-                          width: w + "%"
+                          width: S + "%"
                         }
                       }), (0, a.jsx)("div", {
                         className: s().audioProgressThumb,
                         style: {
-                          left: w + "%"
+                          left: S + "%"
                         }
                       })]
                     })
                   }), (0, a.jsx)("span", {
-                    style: b.audioPlayerControls,
-                    children: _
+                    style: j.audioPlayerControls,
+                    children: w
                   })]
                 }), (0, a.jsxs)("div", {
                   className: s().controlButtons,
                   children: [(0, a.jsx)("span", {
                     className: s().sideControlButton,
-                    onClick: () => q(H),
+                    onClick: () => Y(O),
                     children: eP.A.skipBackward
                   }), (0, a.jsx)("span", {
                     className: s().mainControlButton,
                     onClick: () => {
-                      let e = t.ref;
-                      e && (t.playing ? (e.pause(), o(e => ({
+                      let e = r.ref;
+                      e && (r.playing ? (e.pause(), l(e => ({
                         ...e,
                         playing: !1
-                      }))) : G(e).then(e => {
-                        e && o(e => ({
+                      }))) : H(e).then(e => {
+                        e && l(e => ({
                           ...e,
                           playing: !0
                         }))
                       }))
                     },
-                    children: t.playing ? eP.A.pause : eP.A.play
+                    children: r.playing ? eP.A.pause : eP.A.play
                   }), (0, a.jsx)("span", {
                     className: s().sideControlButton,
-                    onClick: () => q(O),
+                    onClick: () => Y(V),
                     children: eP.A.skipForward
                   })]
                 })]
               })]
             })]
-          }), B && (0, a.jsx)("div", {
+          }), L && (0, a.jsx)("div", {
             className: s().audioLyricsShell,
-            ...A("audio-lyrics", 2),
-            children: U.length > 0 ? (0, a.jsx)("div", {
+            ...$("audio-lyrics", 2),
+            children: E.length > 0 ? (0, a.jsx)("div", {
               className: s().audioLyricsViewport,
-              children: U.map((e, t) => {
-                let r = t - I,
+              children: E.map((e, t) => {
+                let r = t - B,
                   n = Math.abs(r);
                 if (n > 8) return null;
-                let i = t === E,
-                  o = E >= 0 && t < E,
+                let i = t === z,
+                  o = z >= 0 && t < z,
                   l = {
                     "--lyrics-line-offset": String(r)
                   };
@@ -4681,8 +4683,8 @@ void main() {
                     className: `${s().audioLyricsLineText} ${s().audioLyricsLineTextEnhanced}`,
                     children: e.words.map((e, t) => {
                       var r;
-                      let n, o = i && t === M,
-                        l = i && M >= 0 && t < M,
+                      let n, o = i && t === I,
+                        l = i && I >= 0 && t < I,
                         c = (n = String((r = e.text) || "").match(/^(\W*)(.*?)([\s.,!?;:)"'\]]*)$/), {
                           prefix: n?.[1] || "",
                           body: n?.[2] || r,
@@ -4716,53 +4718,54 @@ void main() {
         premiumConfig: r,
         presenceInformation: n,
         animationStartClass: i,
-        setAudioData: o,
-        audioData: l,
-        audioPlayer: c,
-        setAudioPlayer: d,
-        audioContainerRef: u,
-        setVolume: m,
-        profileBorderClass: f = "",
-        profileBorderEffect: h
+        activeAnimationClass: o = "",
+        setAudioData: l,
+        audioData: c,
+        audioPlayer: d,
+        setAudioPlayer: u,
+        audioContainerRef: m,
+        setVolume: f,
+        profileBorderClass: h = "",
+        profileBorderEffect: g
       }) {
-        let g = p({
+        let x = p({
             font: r.font,
             fontSize: r.font_size
           }),
-          x = eg(n),
-          v = x.avatar || "",
-          y = t.use_discord_avatar && v ? v : t.avatar,
-          b = "" !== t.display_name ? t.display_name : e.username,
-          j = x.avatarDecoration || "",
-          _ = t.user_badges,
-          w = t.custom_badges,
-          S = _.length > 0 && _[0] && "string" == typeof _[0],
-          N = w.length > 0 && "string" == typeof w[0][0],
-          C = _.length > 0 && S || !S && _.some(e => !0 === e.enabled),
+          v = eg(n),
+          y = v.avatar || "",
+          b = t.use_discord_avatar && y ? y : t.avatar,
+          j = "" !== t.display_name ? t.display_name : e.username,
+          _ = v.avatarDecoration || "",
+          w = t.user_badges,
+          S = t.custom_badges,
+          N = w.length > 0 && w[0] && "string" == typeof w[0],
+          C = S.length > 0 && "string" == typeof S[0][0],
           k = w.length > 0 && N || !N && w.some(e => !0 === e.enabled),
-          A = r.typewriter_speed ?? 5,
-          $ = r.typewriter_delete_speed ?? 7,
-          T = !!(t.discord_avatar_decoration && j),
-          P = i === s().unfoldStart,
-          U = t.username_effects,
-          E = t.text_color,
-          z = !!("" !== t.avatar || t.use_discord_avatar && v);
+          A = S.length > 0 && C || !C && S.some(e => !0 === e.enabled),
+          $ = r.typewriter_speed ?? 5,
+          T = r.typewriter_delete_speed ?? 7,
+          P = !!(t.discord_avatar_decoration && _),
+          U = i === s().unfoldStart,
+          E = t.username_effects,
+          z = t.text_color,
+          M = !!("" !== t.avatar || t.use_discord_avatar && y);
         return (0, a.jsx)(a.Fragment, {
           children: (0, a.jsxs)("div", {
             className: eT().userInformation,
-            children: [z && (0, a.jsxs)("div", {
+            children: [M && (0, a.jsxs)("div", {
               className: s().avatarWrapper,
-              children: [T && (0, a.jsx)("img", {
-                src: j,
+              children: [P && (0, a.jsx)("img", {
+                src: _,
                 alt: "",
                 className: s().avatarDecorationLayout3
               }), (0, a.jsx)("img", {
-                src: y,
+                src: b,
                 alt: "",
                 className: eT().avatar
               })]
             }), (0, a.jsxs)("div", {
-              className: `${eT().userDescription} ${P&&i}`,
+              className: `${eT().userDescription} ${U&&i}`,
               children: [(0, a.jsx)(ea.A, {
                 content: `UID ${e.uid.toLocaleString("en-US")}`,
                 offset: 0,
@@ -4771,15 +4774,15 @@ void main() {
                   children: [(0, a.jsx)("style", {
                     children: `
                                         .username-typewriter .Typewriter {
-                                            font-size: ${g.username.fontSize};
-                                            font-weight: ${g.username.fontWeight};
+                                            font-size: ${x.username.fontSize};
+                                            font-weight: ${x.username.fontWeight};
                                         }
                                     `
                   }), (0, a.jsx)("div", {
                     className: "username-typewriter",
                     children: (0, a.jsx)(et(), {
                       options: {
-                        strings: [b],
+                        strings: [j],
                         autoStart: !0,
                         loop: !0,
                         wrapperClassName: eT().username,
@@ -4789,18 +4792,18 @@ void main() {
                       }
                     })
                   })]
-                }) : "fuzzy" === U || "shuffle" === U ? (0, a.jsx)(ej.A, {
-                  username: b,
-                  usernameEffect: U,
-                  fontSize: g.username.fontSize,
-                  textColor: E,
+                }) : "fuzzy" === E || "shuffle" === E ? (0, a.jsx)(ej.A, {
+                  username: j,
+                  usernameEffect: E,
+                  fontSize: x.username.fontSize,
+                  textColor: z,
                   marginBottom: "7px"
                 }) : (0, a.jsx)("h1", {
                   className: `${eT().username} ${"rgb"===t.username_effects&&s().rainbowName}`,
-                  style: g.username,
-                  children: b
+                  style: x.username,
+                  children: j
                 })
-              }), !(!C && !k) && (0, a.jsx)("div", {
+              }), !(!k && !A) && (0, a.jsx)("div", {
                 className: eT().badgeContainerWrapper,
                 children: (0, a.jsx)(en, {
                   config: t,
@@ -4808,14 +4811,14 @@ void main() {
                 })
               }), ("" !== t.description || 0 !== r.typewriter.length) && (0, a.jsx)("h3", {
                 className: eT().description,
-                style: g.description,
+                style: x.description,
                 children: r.typewriter_enabled && 0 !== r.typewriter.length ? (0, a.jsx)(et(), {
                   options: {
                     strings: r.typewriter,
                     autoStart: !0,
                     loop: !0,
-                    delay: 600 / A,
-                    deleteSpeed: 600 / $,
+                    delay: 600 / $,
+                    deleteSpeed: 600 / T,
                     pauseFor: 900,
                     stringSplitter: tM
                   }
@@ -4825,12 +4828,12 @@ void main() {
                 pageTooltipStyles: !0,
                 children: (0, a.jsxs)("span", {
                   className: s().locationMarker,
-                  style: g.locationMarker,
+                  style: x.locationMarker,
                   children: [X.A.locationMarker, " ", t.location]
                 })
               })]
             }), t.socials.length > 0 && (0, a.jsx)("div", {
-              className: `${eT().socialWrapper} ${P&&i}`,
+              className: `${eT().socialWrapper} ${U&&i}`,
               children: (0, a.jsx)(ef, {
                 socials: t.socials,
                 isMonochrome: t.monochrome,
@@ -4840,24 +4843,25 @@ void main() {
                 username: e.username,
                 fontSize: r.font_size
               })
-            }), t.audio_player && "" !== l.url && (0, a.jsx)("div", {
+            }), t.audio_player && "" !== c.url && (0, a.jsx)("div", {
               className: eT().audioPlayerWrapper,
               children: (0, a.jsx)(eB, {
                 animationStartClass: i,
-                audioPlayer: c,
-                setAudioData: o,
-                audioData: l,
-                setAudioPlayer: d,
-                audioContainerRef: u,
+                activeAnimationClass: o,
+                audioPlayer: d,
+                setAudioData: l,
+                audioData: c,
+                setAudioPlayer: u,
+                audioContainerRef: m,
                 currentFont: r.font,
                 audioList: t.audio,
-                setVolume: m,
+                setVolume: f,
                 fontSize: r.font_size,
-                profileBorderClass: f,
-                profileBorderEffect: h
+                profileBorderClass: h,
+                profileBorderEffect: g
               })
             }), r.buttons.length > 0 && (0, a.jsx)("div", {
-              className: `${eT().buttonWrapper} ${P&&i}`,
+              className: `${eT().buttonWrapper} ${U&&i}`,
               children: (0, a.jsx)(eU, {
                 buttons: r.buttons,
                 showUrl: r.show_url,
@@ -7215,35 +7219,35 @@ void main() {
           title: "",
           cover: "",
           id: ""
-        }), T = (0, n.useRef)(null), P = (0, n.useRef)(null), U = (0, n.useRef)(null), E = (0, n.useRef)(null), z = (0, n.useRef)(null), M = p({
+        }), [T, P] = (0, n.useState)(!1), U = (0, n.useRef)(null), E = (0, n.useRef)(null), z = (0, n.useRef)(null), M = (0, n.useRef)(null), I = (0, n.useRef)(null), B = p({
           font: S.font,
           fontSize: S.font_size
-        }), I = _.user_badges, B = e.discord?.user_badges ? I.includes("server_booster") || I.find(e => "server_booster" === e.name) ? [...e.discord.user_badges, "Server Booster"] : e.discord.user_badges : [], L = _.discord_presence_settings || {
+        }), L = _.user_badges, W = e.discord?.user_badges ? L.includes("server_booster") || L.find(e => "server_booster" === e.name) ? [...e.discord.user_badges, "Server Booster"] : e.discord.user_badges : [], D = _.discord_presence_settings || {
           show_badges: !0,
           show_guild_tag: !0,
           idle_text: ""
-        }, W = e.discord ? {
+        }, F = e.discord ? {
           id: ex(e.discord.id),
           username: e.discord.username,
           user_badges: e.discord.user_badges || []
-        } : null, D = _.text_color, F = S.border_opacity ?? .3, R = tI(S.border_color, F), G = S.border_style ?? "static", H = "dashed" === G ? "dashed" : "solid", O = `${S.border_width}px ${H} ${R}`, V = `2px solid ${tI(S.border_color,F)}`, q = ["shimmer", "pulse"].includes(G) ? G : null, Y = S.border_enabled && !!q, Q = Y ? s().shimmerProfileBorder : "", K = eg(d), ee = _.use_discord_avatar && e.discord ? K.avatar : _.avatar, et = "simplistic" === S.layout ? {
+        } : null, R = _.text_color, G = S.border_opacity ?? .3, H = tI(S.border_color, G), O = S.border_style ?? "static", V = "dashed" === O ? "dashed" : "solid", q = `${S.border_width}px ${V} ${H}`, Y = `2px solid ${tI(S.border_color,G)}`, Q = ["shimmer", "pulse"].includes(O) ? O : null, K = S.border_enabled && !!Q, ee = K ? s().shimmerProfileBorder : "", et = eg(d), er = _.use_discord_avatar && e.discord ? et.avatar : _.avatar, ea = "simplistic" === S.layout ? {
           justifyContent: "initial"
-        } : "sleek" === S.layout && ee ? {
+        } : "sleek" === S.layout && er ? {
           paddingTop: "100px"
-        } : {}, er = "portfolio" === S.layout ? S.portfolio_border_radius ?? S.border_radius : S.border_radius, ea = {
-          "--presenceUsernameColor": D,
-          "--presenceStatusColor": tI(D, .7),
-          "--presenceContainerBackground": _.swap_colors ? tI(_.color, .2) : tI(D, .07),
-          "--presenceContainerBorder": _.swap_colors ? `2px solid ${tI(_.color,.1)}` : `2px solid ${tI(D,.05)}`,
-          "--discordServerMembers": tI(D, .6),
-          "--secondTabBackground": _.swap_colors ? tI(_.color, .2) : tI(D, .07),
-          "--secondTabBorder": _.swap_colors ? `2px solid ${tI(_.color,.1)}` : `2px solid ${tI(D,.05)}`,
-          "--discordMissingIcon": tI(D, .25),
-          "--modernLayoutSeperator": tI(D, .12),
-          "--modernLayoutSeperatorBorder": tI(D, .12),
+        } : {}, en = "portfolio" === S.layout ? S.portfolio_border_radius ?? S.border_radius : S.border_radius, ei = {
+          "--presenceUsernameColor": R,
+          "--presenceStatusColor": tI(R, .7),
+          "--presenceContainerBackground": _.swap_colors ? tI(_.color, .2) : tI(R, .07),
+          "--presenceContainerBorder": _.swap_colors ? `2px solid ${tI(_.color,.1)}` : `2px solid ${tI(R,.05)}`,
+          "--discordServerMembers": tI(R, .6),
+          "--secondTabBackground": _.swap_colors ? tI(_.color, .2) : tI(R, .07),
+          "--secondTabBorder": _.swap_colors ? `2px solid ${tI(_.color,.1)}` : `2px solid ${tI(R,.05)}`,
+          "--discordMissingIcon": tI(R, .25),
+          "--modernLayoutSeperator": tI(R, .12),
+          "--modernLayoutSeperatorBorder": tI(R, .12),
           "--discordAvatarBorder": `2px solid ${tI(_.color,.15)}`,
-          "--badgeContainerBackground": _.swap_colors ? tI(_.color, .2) : tI(D, .08),
-          "--badgeContainerBorder": `2px solid ${tI(_.swap_colors?_.color:D,.04)}`,
+          "--badgeContainerBackground": _.swap_colors ? tI(_.color, .2) : tI(R, .08),
+          "--badgeContainerBorder": `2px solid ${tI(_.swap_colors?_.color:R,.04)}`,
           "--userBadge": {
             default: "20.5px",
             modern: "18px",
@@ -7251,23 +7255,23 @@ void main() {
             sleek: "20px",
             portfolio: "20px"
           } [S.layout],
-          "--textColor": D,
-          "--textColorDarker": tI(D, .5),
+          "--textColor": R,
+          "--textColorDarker": tI(R, .5),
           "--iconColor": _.icon_color,
           "--backgroundColor": _.bg_color,
-          "--joinStatus": tI(D, .65),
-          "--audioPlayerBar": tI(D, .35),
-          "--avatarBorder": S.border_enabled ? V : `2px solid ${tI(_.color,.4)}`,
+          "--joinStatus": tI(R, .65),
+          "--audioPlayerBar": tI(R, .35),
+          "--avatarBorder": S.border_enabled ? Y : `2px solid ${tI(_.color,.4)}`,
           "--containerColor": tI(_.color, _.opacity),
           "--containerBlur": `${_.blur}px`,
           "--containerGradient": _.profile_gradient && `linear-gradient(25deg, ${tI(_.gradient_1,_.opacity)}, ${tI(_.gradient_2,_.opacity)})`,
           "--containerBackgroundImage": _.profile_gradient && `linear-gradient(25deg, ${tI(_.gradient_1,_.opacity)}, ${tI(_.gradient_2,_.opacity)})`,
-          "--containerBorder": S.border_enabled && (Y ? "none" : O),
+          "--containerBorder": S.border_enabled && (K ? "none" : q),
           "--containerBackgroundClip": "border-box",
           "--containerBackgroundOrigin": "border-box",
           "--profileBorderWidth": `${S.border_width}px`,
-          "--profileBorderColor": R,
-          "--containerRadius": `${er}px`,
+          "--profileBorderColor": H,
+          "--containerRadius": `${en}px`,
           "--containerWidth": {
             default: "40rem",
             modern: "44rem",
@@ -7284,38 +7288,38 @@ void main() {
           } [S.layout],
           "--volumeBackgroundcolor": tI(_.color, 0 !== _.opacity ? _.opacity : .2),
           "--volumeBorder": `2px solid ${tI(_.color,0!==_.opacity?_.opacity-.1*_.opacity:.05)}`,
-          "--colorUsernameGlow": _.username_glow && `0px 0px 16.5px ${D}`,
+          "--colorUsernameGlow": _.username_glow && `0px 0px 16.5px ${R}`,
           "--usernameEffects": (() => {
             let e = _.username_effects;
             if (!(!e || ["rgb", "rainbow", "none", "typewriter", "fuzzy", "shuffle"].includes(e))) return `url(https://assets.guns.lol/${e.startsWith("sparkle_")?e:`sparkle_${e}`}.gif)`
           })(),
-          "--buttonBackground": tI(D, .22),
-          "--buttonBorder": `2px solid ${tI(D,.12)}`,
+          "--buttonBackground": tI(R, .22),
+          "--buttonBorder": `2px solid ${tI(R,.12)}`,
           "--buttonRadius": `${S.button_border_radius}px`,
           "--buttonAlign": S.text_align,
-          "--buttonBackgroundHover": tI(D, .32),
-          "--buttonBorderHover": `2px solid ${tI(D,.25)}`,
-          "--buttonUrlColor": tI(D, .65),
-          "--buttonShadow": S.button_shadow && `${tI(D,.22)} 0px 0px 15px`,
-          "--profileViewsContainerBorder": `2px solid ${R}`,
+          "--buttonBackgroundHover": tI(R, .32),
+          "--buttonBorderHover": `2px solid ${tI(R,.25)}`,
+          "--buttonUrlColor": tI(R, .65),
+          "--buttonShadow": S.button_shadow && `${tI(R,.22)} 0px 0px 15px`,
+          "--profileViewsContainerBorder": `2px solid ${H}`,
           "--templatePreviewContainerBackground": tI(_.color, .4),
-          "--platformTextColor": tI(D, .4),
-          "--secondTabWidgetDescription": tI(D, .6),
-          "--audioIconBackground": tI(D, .2),
-          "--progessBarFull": tI(D, .3),
-          "--progessBarPlaying": D,
-          "--controlButtonsOther": tI(D, .5),
-          "--controlButtonPlaying": D,
-          "--controlTextColor": tI(D, .7),
-          "--modernLayoutBottomLeftDivider": tI(D, .14),
-          "--sleekLayoutTopRightDivider": tI(D, .14)
-        }, en = e.premium ? "unfold" === S.animation ? s().unfoldStart : "fade" === S.animation ? s().fadeUpStart : "pop" === S.animation ? s().scaleFadeStart : s().fadeUpStart : s().fadeUpStart, ei = e.premium ? "unfold" === S.animation ? s().unfold : "fade" === S.animation ? s().fadeUp : "pop" === S.animation ? s().scaleFade : s().fadeUp : s().fadeUp, es = {
-          modern: `${s().userContainer} ${en} ${Q}`,
-          default: `${s().userContainer} ${en} ${Q}`,
-          simplistic: `${s().userContainerLayout3} ${en}`,
-          sleek: `${s().userContainerLayout4} ${en} ${Q}`,
-          portfolio: `${s().userContainer} ${en} ${Q}`
-        }, eo = i.templateInfo, el = eo?.user_information?.username;
+          "--platformTextColor": tI(R, .4),
+          "--secondTabWidgetDescription": tI(R, .6),
+          "--audioIconBackground": tI(R, .2),
+          "--progessBarFull": tI(R, .3),
+          "--progessBarPlaying": R,
+          "--controlButtonsOther": tI(R, .5),
+          "--controlButtonPlaying": R,
+          "--controlTextColor": tI(R, .7),
+          "--modernLayoutBottomLeftDivider": tI(R, .14),
+          "--sleekLayoutTopRightDivider": tI(R, .14)
+        }, es = e.premium ? "unfold" === S.animation ? s().unfoldStart : "fade" === S.animation ? s().fadeUpStart : "pop" === S.animation ? s().scaleFadeStart : s().fadeUpStart : s().fadeUpStart, eo = e.premium ? "unfold" === S.animation ? s().unfold : "fade" === S.animation ? s().fadeUp : "pop" === S.animation ? s().scaleFade : s().fadeUp : s().fadeUp, el = {
+          modern: `${s().userContainer} ${es} ${ee}`,
+          default: `${s().userContainer} ${es} ${ee}`,
+          simplistic: `${s().userContainerLayout3} ${es}`,
+          sleek: `${s().userContainerLayout4} ${es} ${ee}`,
+          portfolio: `${s().userContainer} ${es} ${ee}`
+        }, ec = i.templateInfo, ed = ec?.user_information?.username;
         (0, n.useEffect)(() => {
           var t;
           let r, a;
@@ -7323,34 +7327,34 @@ void main() {
             r === t.length && (a = !1), 0 === r && (a = !0);
             let e = 0 === (r = a ? r + 1 : r - 1) ? "" : t.slice(0, r);
             document.title = "@" + e
-          }, 380)), ed || ef(_.url) || (ei === s().fadeUp ? setTimeout(function() {
-            U.current && U.current.classList.add(s().fadeUp), E.current && E.current?.classList.add(s().fadeUp), z.current && z.current?.classList.add(s().fadeUp)
-          }, 350) : ei === s().unfold ? document.querySelectorAll(`.${s().unfoldStart}`).forEach((e, t) => {
+          }, 380)), em || eh(_.url) || (eo === s().fadeUp ? setTimeout(function() {
+            z.current && z.current.classList.add(s().fadeUp), M.current && M.current?.classList.add(s().fadeUp), I.current && I.current?.classList.add(s().fadeUp)
+          }, 350) : eo === s().unfold ? document.querySelectorAll(`.${s().unfoldStart}`).forEach((e, t) => {
             setTimeout(() => {
               e.classList.add(s().unfold)
             }, 300 * t)
-          }) : ei === s().scaleFade && setTimeout(function() {
-            U.current && U.current.classList.add(s().scaleFade), E.current && E.current?.classList.add(s().scaleFade), z.current && z.current?.classList.add(s().scaleFade)
+          }) : eo === s().scaleFade && setTimeout(function() {
+            z.current && z.current.classList.add(s().scaleFade), M.current && M.current?.classList.add(s().scaleFade), I.current && I.current?.classList.add(s().scaleFade)
           }, 350))
         }, [r, _]), (0, n.useEffect)(() => {
           let e = navigator.userAgent.toLowerCase();
           v(/iphone|ipod|android.*mobile|windows phone|blackberry|bb10/.test(e) || /ipad|tablet|android(?!.*mobile)/.test(e) || navigator.maxTouchPoints > 1 && /macintosh/.test(e))
         }, []);
-        let ec = "string" == typeof _.audio,
-          [ed, eu] = (0, n.useState)(ec ? "" !== _.audio : _.audio.length > 0),
-          em = () => {
+        let eu = "string" == typeof _.audio,
+          [em, ef] = (0, n.useState)(eu ? "" !== _.audio : _.audio.length > 0),
+          ep = () => {
             let e = !y.muted,
               t = C.ref;
             0 === y.volume && y.muted ? (b({
               ...y,
               muted: !1,
               volume: 100
-            }), t && (t.muted = !1, t.volume = .25), !ed && T.current && (T.current.muted = !1, T.current.volume = .25)) : (b({
+            }), t && (t.muted = !1, t.volume = .25), !em && U.current && (U.current.muted = !1, U.current.volume = .25)) : (b({
               ...y,
               muted: e
-            }), t && (t.muted = e, e || (t.volume = y.volume / 100 * .25)), !ed && T.current && (T.current.muted = e, e || (T.current.volume = y.volume / 100 * .25)))
+            }), t && (t.muted = e, e || (t.volume = y.volume / 100 * .25)), !em && U.current && (U.current.muted = e, e || (U.current.volume = y.volume / 100 * .25)))
           },
-          ef = e => {
+          eh = e => {
             for (let t of [".mp4", ".mov", ".avi", ".m4v", ".webm", ".mkv"])
               if (e.endsWith(t)) return !0;
             return !1
@@ -7393,7 +7397,7 @@ void main() {
                 ...o
               }));
               let c = s?.audio;
-              "string" == typeof c ? eu("" !== c) : Array.isArray(c) && eu(c.length > 0)
+              "string" == typeof c ? ef("" !== c) : Array.isArray(c) && ef(c.length > 0)
             } catch (e) {
               console.error("Error fetching template preview:", e), l({
                 templatePreview: !0,
@@ -7422,7 +7426,7 @@ void main() {
                 body: JSON.stringify({
                   type: t,
                   discordId: r,
-                  fallbackIdentity: W
+                  fallbackIdentity: F
                 })
               }),
               n = await a.json();
@@ -7445,26 +7449,27 @@ void main() {
               backgroundUrl: _.url,
               audio: _.audio,
               shuffleAudios: _.shuffle_audios,
-              videoTagRef: T,
-              audioTagRef: P,
+              videoTagRef: U,
+              audioTagRef: E,
               audioData: A,
               setAudioData: $
-            }), (ed || ef(_.url)) && (0, a.jsx)(c, {
-              videoTagRef: T,
-              audioTagRef: P,
+            }), (em || eh(_.url)) && (0, a.jsx)(c, {
+              videoTagRef: U,
+              audioTagRef: E,
               clickToEnterText: "" === S.page_enter_text ? "click to enter..." : S.page_enter_text,
-              userFont: M,
-              userContainerRef: U,
-              animationClass: ei,
+              userFont: B,
+              userContainerRef: z,
+              animationClass: eo,
               setAudioPlayer: k,
-              audioContainerRef: E,
-              discordWidgetRef: z
+              audioContainerRef: M,
+              discordWidgetRef: I,
+              onEnter: () => P(!0)
             }), (0, a.jsx)(Z, {
               backgroundEffects: _.background_effects,
               backgroundEffectsColor: _.background_effects_color,
               cursorEffects: S.cursor_effects,
               cursorEffectsColor: S.effects_color,
-              textColor: D,
+              textColor: R,
               backgroundColor: _.bg_color,
               cursorUrl: _.custom_cursor
             }), (0, a.jsx)(J.A, {
@@ -7476,17 +7481,17 @@ void main() {
                 backgroundColor: _.bg_color
               }
             }), (0, a.jsxs)("div", {
-              style: ea,
-              children: [_.volume_control && (ef(_.url) || ed) && !x && (0, a.jsxs)("div", {
+              style: ei,
+              children: [_.volume_control && (eh(_.url) || em) && !x && (0, a.jsxs)("div", {
                 className: s().volumeButton,
                 style: {
                   zIndex: "portfolio" === S.layout ? "2" : "1"
                 },
                 children: [y.muted ? (0, a.jsx)("span", {
-                  onClick: em,
+                  onClick: ep,
                   children: X.A.muted
                 }) : (0, a.jsx)("span", {
-                  onClick: em,
+                  onClick: ep,
                   children: X.A.unmuted
                 }), (0, a.jsxs)("div", {
                   className: s().volumeSlider,
@@ -7517,7 +7522,7 @@ void main() {
                       b({
                         volume: e,
                         muted: t
-                      }), r && (r.volume = e / 100 * .25, r.muted = t), !ed && T.current && (T.current.volume = e / 100 * .25, T.current.muted = t)
+                      }), r && (r.volume = e / 100 * .25, r.muted = t), !em && U.current && (U.current.volume = e / 100 * .25, U.current.muted = t)
                     },
                     step: 1,
                     max: 100,
@@ -7528,7 +7533,7 @@ void main() {
                 username: e.username
               }), i.templatePreview && (0, a.jsx)(tU, {
                 templateInfo: i.templateInfo,
-                templateAuthorName: el || "Unknown",
+                templateAuthorName: ed || "Unknown",
                 templateData: i,
                 textColor: S.text_color
               }), (0, a.jsx)("div", {
@@ -7539,18 +7544,18 @@ void main() {
                     config: _,
                     premiumConfig: S,
                     presenceInformation: d,
-                    animationStartClass: en,
+                    animationStartClass: es,
                     isTemplatePreview: i.templatePreview,
                     discordLoading: m,
-                    discordBadges: B,
-                    profileBorderClass: Q,
-                    profileBorderEffect: q,
-                    profileBorderEffectEnabled: Y,
+                    discordBadges: W,
+                    profileBorderClass: ee,
+                    profileBorderEffect: Q,
+                    profileBorderEffectEnabled: K,
                     audioPlayer: C,
                     setAudioData: $,
                     audioData: A,
                     setAudioPlayer: k,
-                    audioContainerRef: E,
+                    audioContainerRef: M,
                     setVolume: b
                   }), (0, a.jsx)("style", {
                     children: `
@@ -7567,7 +7572,7 @@ void main() {
                   })]
                 }) : (0, a.jsxs)("div", {
                   className: s().userContainerWrapper,
-                  style: et,
+                  style: ea,
                   children: ["simplistic" === S.layout && (0, a.jsx)("div", {
                     className: s().profileViewsContainer,
                     children: (0, a.jsx)(eb, {
@@ -7576,8 +7581,8 @@ void main() {
                       premiumConfig: S,
                       views: _.page_views,
                       containerBorderRadius: S.border_radius,
-                      isUnfold: en === s().unfoldStart,
-                      animationStartClass: en,
+                      isUnfold: es === s().unfoldStart,
+                      animationStartClass: es,
                       isTemplatePreview: i.templatePreview
                     })
                   }), S.parallax_animation ? (0, a.jsxs)(eX.A, {
@@ -7600,19 +7605,19 @@ void main() {
                       zIndex: 1
                     },
                     children: [(0, a.jsxs)("div", {
-                      className: es[S.layout],
+                      className: el[S.layout],
                       style: {
-                        position: Y ? "relative" : "initial"
+                        position: K ? "relative" : "initial"
                       },
-                      ref: U,
-                      children: [Y && q && (0, a.jsx)(eI, {
-                        effect: q
+                      ref: z,
+                      children: [K && Q && (0, a.jsx)(eI, {
+                        effect: Q
                       }), "default" === S.layout ? (0, a.jsx)(e_, {
                         userData: e,
                         config: _,
                         premiumConfig: S,
                         presenceInformation: d,
-                        animationStartClass: en,
+                        animationStartClass: es,
                         isTemplatePreview: i.templatePreview,
                         discordLoading: m
                       }) : "modern" === S.layout ? (0, a.jsx)(eA, {
@@ -7620,7 +7625,7 @@ void main() {
                         config: _,
                         premiumConfig: S,
                         presenceInformation: d,
-                        animationStartClass: en,
+                        animationStartClass: es,
                         isTemplatePreview: i.templatePreview,
                         discordLoading: m
                       }) : "simplistic" === S.layout ? (0, a.jsx)(eL, {
@@ -7628,48 +7633,50 @@ void main() {
                         config: _,
                         premiumConfig: S,
                         presenceInformation: d,
-                        animationStartClass: en,
+                        animationStartClass: es,
+                        activeAnimationClass: T ? eo : "",
                         setAudioData: $,
                         audioData: A,
                         audioPlayer: C,
                         setAudioPlayer: k,
-                        audioContainerRef: E,
+                        audioContainerRef: M,
                         setVolume: b,
-                        profileBorderClass: Q,
-                        profileBorderEffect: q
+                        profileBorderClass: ee,
+                        profileBorderEffect: Q
                       }) : (0, a.jsx)(e0, {
                         userData: e,
                         config: _,
                         premiumConfig: S,
                         presenceInformation: d,
-                        animationStartClass: en,
+                        animationStartClass: es,
                         isTemplatePreview: i.templatePreview
                       })]
                     }), "enabled" === _.presence && "sleek" === S.layout && (0, a.jsx)(t$, {
                       loading: m,
                       presenceInformation: d,
                       font: S.font,
-                      discordUserBadges: B,
+                      discordUserBadges: W,
                       discordData: e.discord,
                       fontSize: S.font_size,
-                      animationStartClass: en,
-                      discordWidgetRef: z,
-                      discordPresenceSettings: L,
-                      profileBorderClass: Q,
-                      profileBorderEffect: q
+                      animationStartClass: es,
+                      discordWidgetRef: I,
+                      discordPresenceSettings: D,
+                      profileBorderClass: ee,
+                      profileBorderEffect: Q
                     }), _.audio_player && "" !== A.url && "simplistic" !== S.layout && (0, a.jsx)(eB, {
-                      animationStartClass: en,
+                      animationStartClass: es,
+                      activeAnimationClass: T ? eo : "",
                       audioPlayer: C,
                       setAudioData: $,
                       audioData: A,
                       setAudioPlayer: k,
-                      audioContainerRef: E,
+                      audioContainerRef: M,
                       currentFont: S.font,
                       audioList: _.audio,
                       setVolume: b,
                       fontSize: S.font_size,
-                      profileBorderClass: Q,
-                      profileBorderEffect: q
+                      profileBorderClass: ee,
+                      profileBorderEffect: Q
                     })]
                   }) : (0, a.jsxs)("div", {
                     className: s().usernameContainerFlex,
@@ -7678,16 +7685,16 @@ void main() {
                       zIndex: 1
                     },
                     children: [(0, a.jsxs)("div", {
-                      className: es[S.layout],
-                      ref: U,
-                      children: [Y && q && (0, a.jsx)(eI, {
-                        effect: q
+                      className: el[S.layout],
+                      ref: z,
+                      children: [K && Q && (0, a.jsx)(eI, {
+                        effect: Q
                       }), "default" === S.layout ? (0, a.jsx)(e_, {
                         userData: e,
                         config: _,
                         premiumConfig: S,
                         presenceInformation: d,
-                        animationStartClass: en,
+                        animationStartClass: es,
                         isTemplatePreview: i.templatePreview,
                         discordLoading: m
                       }) : "modern" === S.layout ? (0, a.jsx)(eA, {
@@ -7695,7 +7702,7 @@ void main() {
                         config: _,
                         premiumConfig: S,
                         presenceInformation: d,
-                        animationStartClass: en,
+                        animationStartClass: es,
                         isTemplatePreview: i.templatePreview,
                         discordLoading: m
                       }) : "simplistic" === S.layout ? (0, a.jsx)(eL, {
@@ -7703,48 +7710,50 @@ void main() {
                         config: _,
                         premiumConfig: S,
                         presenceInformation: d,
-                        animationStartClass: en,
+                        animationStartClass: es,
+                        activeAnimationClass: T ? eo : "",
                         setAudioData: $,
                         audioData: A,
                         audioPlayer: C,
                         setAudioPlayer: k,
-                        audioContainerRef: E,
+                        audioContainerRef: M,
                         setVolume: b,
-                        profileBorderClass: Q,
-                        profileBorderEffect: q
+                        profileBorderClass: ee,
+                        profileBorderEffect: Q
                       }) : (0, a.jsx)(e0, {
                         userData: e,
                         config: _,
                         premiumConfig: S,
                         presenceInformation: d,
-                        animationStartClass: en,
+                        animationStartClass: es,
                         isTemplatePreview: i.templatePreview
                       })]
                     }), "enabled" === _.presence && "sleek" === S.layout && (0, a.jsx)(t$, {
                       loading: m,
                       presenceInformation: d,
                       font: S.font,
-                      discordUserBadges: B,
+                      discordUserBadges: W,
                       discordData: e.discord,
                       fontSize: S.font_size,
-                      animationStartClass: en,
-                      discordWidgetRef: z,
-                      discordPresenceSettings: L,
-                      profileBorderClass: Q,
-                      profileBorderEffect: q
+                      animationStartClass: es,
+                      discordWidgetRef: I,
+                      discordPresenceSettings: D,
+                      profileBorderClass: ee,
+                      profileBorderEffect: Q
                     }), _.audio_player && "" !== A.url && "simplistic" !== S.layout && (0, a.jsx)(eB, {
-                      animationStartClass: en,
+                      animationStartClass: es,
+                      activeAnimationClass: T ? eo : "",
                       audioPlayer: C,
                       setAudioData: $,
                       audioData: A,
                       setAudioPlayer: k,
-                      audioContainerRef: E,
+                      audioContainerRef: M,
                       currentFont: S.font,
                       audioList: _.audio,
                       setVolume: b,
                       fontSize: S.font_size,
-                      profileBorderClass: Q,
-                      profileBorderEffect: q
+                      profileBorderClass: ee,
+                      profileBorderEffect: Q
                     })]
                   })]
                 })
