@@ -52,6 +52,18 @@
                 children: "You can control non-essential cookies in your browser settings, but disabling essential cookies or Cloudflare security cookies may affect access or performance of the Service."
               })]
             }),
+            "Cloudflare Turnstile": (0, r.jsxs)(r.Fragment, {
+              children: [(0, r.jsx)("p", {
+                children: "We use Cloudflare Turnstile on certain forms and account actions to help distinguish human visitors from automated traffic and to prevent spam, fraud, and abuse."
+              }), (0, r.jsxs)("p", {
+                children: ["In providing Turnstile, Cloudflare may process client-side signals such as your network address, TLS fingerprint, browser user-agent header, sitekey, and the associated website origin. Cloudflare processes these signals as described in its", " ", (0, r.jsx)("a", {
+                  href: "https://www.cloudflare.com/turnstile-privacy-policy/",
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                  children: "Turnstile Privacy Addendum"
+                }), "."]
+              })]
+            }),
             "How We Use Your Information": (0, r.jsx)(r.Fragment, {
               children: (0, r.jsx)("p", {
                 children: "We use the information described above to operate and improve guns.lol; authenticate users and maintain secure sessions; display public profiles and links; measure page views and link performance without cookies; detect and debug website errors; monitor service health and reliability; prevent fraud, spam, and abuse; provide support; process purchases and subscriptions; comply with legal obligations; and enforce our Terms of Service. Diagnostic and telemetry data are used only to maintain and improve performance and security."
@@ -185,7 +197,7 @@
                     }), "."]
                   }), (0, r.jsx)("span", {
                     className: a().lastUpdate,
-                    children: "Last updated: 2025/11/09"
+                    children: "Last updated: 2026/07/27"
                   })]
                 })]
               })
