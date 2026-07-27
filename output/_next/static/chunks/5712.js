@@ -5409,17 +5409,18 @@ void main() {
           let e = Array.from(b.current.querySelectorAll(`.${e4().portfolioReveal}`));
           if (e.length <= 1) return;
           let t = window.matchMedia?.("(pointer: coarse)").matches === !0,
-            r = null,
+            r = /Macintosh|Mac OS X/.test(window.navigator.userAgent),
             a = null,
-            n = !1,
-            i = 0,
-            s = !1,
-            o = 0,
+            n = null,
+            i = !1,
+            s = 0,
+            o = !1,
             l = 0,
             c = 0,
-            d = null,
-            u = () => "active" === document.documentElement.getAttribute(e9),
-            m = (t = window.scrollY + .5 * (window.innerHeight || 0)) => {
+            d = 0,
+            u = null,
+            m = () => "active" === document.documentElement.getAttribute(e9),
+            f = (t = window.scrollY + .5 * (window.innerHeight || 0)) => {
               let r = 0,
                 a = 1 / 0;
               for (let n = 0; n < e.length; n++) {
@@ -5428,7 +5429,7 @@ void main() {
               }
               return r
             },
-            f = () => {
+            p = () => {
               var t, r;
               let a = Math.max(window.innerHeight || 1, 1),
                 n = Math.max(document.documentElement.scrollHeight - a, 1);
@@ -5436,82 +5437,82 @@ void main() {
               let i = Math.min((e[1]?.offsetTop ?? 1 / 0) - Math.max(12, .04 * a), Math.max(24, .16 * a));
               r = window.scrollY < i, _.current !== r && (_.current = r, C(r))
             },
-            p = e => {
+            h = e => {
               if (!e) return !0;
               let t = Math.max(window.innerHeight || 1, 1);
               return e.offsetHeight <= 1.03 * t
             },
-            h = t => {
+            g = t => {
               let r = Math.max(0, Math.min(e.length - 1, t)),
-                i = e[r].offsetTop,
+                a = e[r].offsetTop,
                 s = window.scrollY,
-                o = i - s;
+                o = a - s;
               if (2 > Math.abs(o)) return;
-              a && (a.stop(), a = null), n = !0;
+              n && (n.stop(), n = null), i = !0;
               let l = Math.min(2.1, Math.max(1.1, 1.1 + .18 * Math.min(Math.abs(o) / Math.max(window.innerHeight || 1, 1), 2.4)));
-              a = (0, e1.i)(s, i, {
+              n = (0, e1.i)(s, a, {
                 duration: l,
                 ease: [.16, 1, .3, 1],
                 onUpdate: e => {
                   window.scrollTo({
                     top: e,
                     behavior: "auto"
-                  }), f()
+                  }), p()
                 },
                 onComplete: () => {
-                  n = !1, a = null, f()
+                  i = !1, n = null, p()
                 }
               })
             },
-            g = () => {
-              u() || (f(), null !== r && window.clearTimeout(r), r = window.setTimeout(() => {
-                if (n) return;
-                let t = m();
-                if (!p(e[t])) return;
+            x = () => {
+              m() || (p(), null !== a && window.clearTimeout(a), a = window.setTimeout(() => {
+                if (i) return;
+                let t = f();
+                if (!h(e[t])) return;
                 let r = e[t]?.offsetTop ?? window.scrollY;
-                Math.abs(window.scrollY - r) <= Math.max(20, Math.round(.03 * (window.innerHeight || 0))) || h(t)
+                Math.abs(window.scrollY - r) <= Math.max(20, Math.round(.03 * (window.innerHeight || 0))) || g(t)
               }, 150))
             },
-            x = t => {
+            v = t => {
               if (0 === t.deltaY) return;
-              let r = window.performance.now(),
-                f = Math.abs(t.deltaY),
-                g = Math.abs(l),
-                x = 0 !== l && Math.sign(t.deltaY) !== Math.sign(l);
-              c = g > 0 && f >= 1.15 * g && f - g >= 1 ? c + 1 : 0;
-              let v = s && r - o >= 300 && (x && f >= 10 || f >= Math.max(12, 1.8 * g) || c >= 2 && f >= 10);
-              if (l = t.deltaY, null !== d && window.clearTimeout(d), d = window.setTimeout(() => {
-                  i = 0, s = !1, l = 0, c = 0
-                }, 200), u()) {
-                t.preventDefault(), i = 0, s || (o = r), s = !0;
+              let a = window.performance.now(),
+                p = Math.abs(t.deltaY),
+                x = Math.abs(c),
+                v = 0 !== c && Math.sign(t.deltaY) !== Math.sign(c);
+              d = x > 0 && p >= 1.15 * x && p - x >= 1 ? d + 1 : 0;
+              let y = o && a - l >= 300 && (v && p >= 10 || p >= Math.max(12, 1.8 * x) || d >= 2 && p >= 10);
+              if (c = t.deltaY, null !== u && window.clearTimeout(u), u = window.setTimeout(() => {
+                  s = 0, o = !1, c = 0, d = 0
+                }, 200), m()) {
+                t.preventDefault(), s = 0, o || (l = a), o = !0;
                 return
               }
-              if (s && !v) return void t.preventDefault();
-              if (v && (s = !1, i = 0, c = 0), 7 > Math.abs(t.deltaY) || 72 > Math.abs(i += t.deltaY)) return;
-              let y = m();
-              if (!p(e[y])) {
-                i = 0;
+              if (r && o && !y) return void t.preventDefault();
+              if (y ? (o = !1, s = 0, d = 0) : r || (o = !1), 7 > Math.abs(t.deltaY) || 72 > Math.abs(s += t.deltaY)) return;
+              let b = f();
+              if (!h(e[b])) {
+                s = 0;
                 return
               }
-              let b = i > 0 ? 1 : -1;
-              i = 0, s = !0, o = r, c = 0, t.preventDefault(), a && (a.stop(), a = null, n = !1), h(y + b)
+              let j = s > 0 ? 1 : -1;
+              s = 0, o = r, l = a, d = 0, t.preventDefault(), n && (n.stop(), n = null, i = !1), g(b + j)
             },
-            v = () => {
-              f(), n || h(m())
+            y = () => {
+              p(), i || g(f())
             },
-            y = e => {
-              h("number" == typeof e.detail?.targetIndex ? e.detail.targetIndex : 1)
+            w = e => {
+              g("number" == typeof e.detail?.targetIndex ? e.detail.targetIndex : 1)
             };
-          return (f(), t) ? (window.addEventListener("scroll", f, {
+          return (p(), t) ? (window.addEventListener("scroll", p, {
             passive: !0
-          }), window.addEventListener("resize", f), () => {
-            window.removeEventListener("scroll", f), window.removeEventListener("resize", f)
-          }) : (window.addEventListener("scroll", g, {
+          }), window.addEventListener("resize", p), () => {
+            window.removeEventListener("scroll", p), window.removeEventListener("resize", p)
+          }) : (window.addEventListener("scroll", x, {
             passive: !0
-          }), window.addEventListener("wheel", x, {
+          }), window.addEventListener("wheel", v, {
             passive: !1
-          }), window.addEventListener("resize", v), window.addEventListener(e7, y), () => {
-            window.removeEventListener("scroll", g), window.removeEventListener("wheel", x), window.removeEventListener("resize", v), window.removeEventListener(e7, y), null !== r && (window.clearTimeout(r), r = null), null !== d && (window.clearTimeout(d), d = null), a && (a.stop(), a = null)
+          }), window.addEventListener("resize", y), window.addEventListener(e7, w), () => {
+            window.removeEventListener("scroll", x), window.removeEventListener("wheel", v), window.removeEventListener("resize", y), window.removeEventListener(e7, w), null !== a && (window.clearTimeout(a), a = null), null !== u && (window.clearTimeout(u), u = null), n && (n.stop(), n = null)
           })
         }, [y.length]), (0, a.jsxs)("div", {
           ref: b,
