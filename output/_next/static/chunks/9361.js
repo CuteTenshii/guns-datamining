@@ -672,25 +672,39 @@
           el && URL.revokeObjectURL(el.objectUrl)
         }, [el]);
         let eD = (0, t.useMemo)(() => {
-          if (!el) return null;
-          let e = Math.max(340 / el.naturalWidth, 340 / el.naturalHeight) * em;
-          return {
-            widthRatio: el.naturalWidth * e / 340,
-            heightRatio: el.naturalHeight * e / 340
-          }
-        }, [el, em]);
-        (0, t.useMemo)(() => (em - 1) / 3 * 100, [em]), (0, t.useMemo)(() => (ep - -180) / 360 * 100, [ep]);
-        let eI = (0, t.useMemo)(() => .001 > Math.abs(em - 1), [em]),
+            if (!el) return null;
+            let e = Math.max(340 / el.naturalWidth, 340 / el.naturalHeight) * em;
+            return {
+              widthRatio: el.naturalWidth * e / 340,
+              heightRatio: el.naturalHeight * e / 340
+            }
+          }, [el, em]),
+          eI = (0, t.useMemo)(() => .001 > Math.abs(em - 1), [em]),
           eW = (0, t.useMemo)(() => .1 > Math.abs(ep), [ep]),
           e$ = async () => {
-            et || (U ? (ei(!0), await (0, u.C9)(D, U, es, P) && (F("audioManager"), O(void 0), I(""), ea(""), er(null)), ei(!1)) : c.oR.error(a("dashboard.customize.audio.errors.select_file")))
+            if (!et) {
+              if (!U) return void c.oR.error(a("dashboard.customize.audio.errors.select_file"));
+              ei(!0);
+              try {
+                await (0, u.C9)(D, U, es, P) && (F("audioManager"), O(void 0), I(""), ea(""), er(null))
+              } finally {
+                ei(!1)
+              }
+            }
           }, eU = async (e, a) => {
             await (0, u.qc)(e, a)
           }, eO = async () => {
-            eo || (en(!0), await (0, u.l4)(W.id, W.currentTitle, K ?? Z, P) && (F("audioManager"), $({
-              id: "",
-              currentTitle: ""
-            }), X(""), Q(null)), en(!1))
+            if (!eo) {
+              en(!0);
+              try {
+                await (0, u.l4)(W.id, W.currentTitle, K ?? Z, P) && (F("audioManager"), $({
+                  id: "",
+                  currentTitle: ""
+                }), X(""), Q(null))
+              } finally {
+                en(!1)
+              }
+            }
           }, eG = async e => {
             let a = e.currentTarget.checked;
             await (0, u.F_)(a, L)

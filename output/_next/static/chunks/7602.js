@@ -239,32 +239,32 @@
         mode: i = "sync",
         propagate: f = !1
       }) => {
-        let [u, N] = (0, _.xQ)(f), U = (0, o.useMemo)(() => b(e), [e]), G = f && !u ? [] : U.map(p), h = (0, o.useRef)(!0), m = (0, o.useRef)(U), g = (0, n.M)(() => new Map), [v, C] = (0, o.useState)(U), [y, w] = (0, o.useState)(U);
+        let [u, N] = (0, _.xQ)(f), U = (0, o.useMemo)(() => b(e), [e]), G = f && !u ? [] : U.map(p), h = (0, o.useRef)(!0), m = (0, o.useRef)(U), g = (0, n.M)(() => new Map), [C, v] = (0, o.useState)(U), [w, y] = (0, o.useState)(U);
         (0, S.E)(() => {
           h.current = !1, m.current = U;
-          for (let e = 0; e < y.length; e++) {
-            let a = p(y[e]);
+          for (let e = 0; e < w.length; e++) {
+            let a = p(w[e]);
             G.includes(a) ? g.delete(a) : !0 !== g.get(a) && g.set(a, !1)
           }
-        }, [y, G.length, G.join("-")]);
-        let R = [];
-        if (U !== v) {
+        }, [w, G.length, G.join("-")]);
+        let E = [];
+        if (U !== C) {
           let e = [...U];
-          for (let a = 0; a < y.length; a++) {
-            let r = y[a],
+          for (let a = 0; a < w.length; a++) {
+            let r = w[a],
               t = p(r);
-            G.includes(t) || (e.splice(a, 0, r), R.push(r))
+            G.includes(t) || (e.splice(a, 0, r), E.push(r))
           }
-          "wait" === i && R.length && (e = R), w(b(e)), C(U);
+          "wait" === i && E.length && (e = E), y(b(e)), v(U);
           return
         }
         let {
-          forceRender: E
+          forceRender: R
         } = (0, o.useContext)(d.L);
         return (0, t.jsx)(t.Fragment, {
-          children: y.map(e => {
+          children: w.map(e => {
             let o = p(e),
-              d = (!f || !!u) && (U === y || G.includes(o));
+              d = (!f || !!u) && (U === w || G.includes(o));
             return (0, t.jsx)(l, {
               isPresent: d,
               initial: (!h.current || !!r) && void 0,
@@ -277,7 +277,7 @@
                 let e = !0;
                 g.forEach(a => {
                   a || (e = !1)
-                }), e && (null == E || E(), w(m.current), f && (null == N || N()), c && c())
+                }), e && (null == R || R(), y(m.current), f && (null == N || N()), c && c())
               },
               children: e
             }, o)
@@ -288,19 +288,50 @@
     39818: (e, a, r) => {
       "use strict";
       r.d(a, {
-        C9: () => i,
-        F_: () => _,
-        I9: () => p,
-        _Y: () => s,
-        h3: () => l,
-        iN: () => c,
-        l4: () => u,
-        qc: () => f,
-        vH: () => n
+        C9: () => _,
+        F_: () => N,
+        I9: () => U,
+        _Y: () => u,
+        h3: () => b,
+        iN: () => l,
+        l4: () => S,
+        qc: () => p,
+        vH: () => f
       });
       var t = r(66609),
         o = r(45941);
-      async function d(e) {
+      class d extends Error {
+        constructor() {
+          super("Upload timed out."), this.name = "UploadTimeoutError"
+        }
+      }
+      let n = e => Math.min(18e5, Math.max(12e4, 12e4 + Math.max(0, e) / 65536 * 1e3));
+      async function c(e, a, r) {
+        let t = new AbortController,
+          o = window.setTimeout(() => t.abort(), r);
+        try {
+          let r = await fetch(e, {
+              method: "POST",
+              body: a,
+              signal: t.signal
+            }),
+            o = await r.json();
+          return {
+            response: r,
+            data: o
+          }
+        } catch (e) {
+          if (t.signal.aborted) throw new d;
+          throw e
+        } finally {
+          window.clearTimeout(o)
+        }
+      }
+
+      function s(e) {
+        e instanceof d ? t.oR.error("Upload timed out. Please check your connection and try again.") : t.oR.error("Could not upload file. Please try again.")
+      }
+      async function i(e) {
         return new Promise((a, r) => {
           let t = new Image,
             o = new FileReader;
@@ -321,31 +352,30 @@
           }, t.onerror = e => r(e), o.onerror = e => r(e), o.readAsDataURL(e)
         })
       }
-      let n = (e, a) => {
+      let f = (e, a) => {
         let r = o.o2[a],
           d = e.name.split(".").pop().toLowerCase() || "";
         return (o.nB[a] || []).includes("." + d.toLowerCase()) ? !r || !(e.size / 1e6 > r) || (t.oR.error(`Could not upload file. Max file size is ${r}MB`), null) : (t.oR.error("Invalid file type."), null)
       };
-      async function c(e, a, r) {
+      async function l(e, a, r) {
         try {
-          if (!n(a, e)) return null;
-          "cursor" === e && (a = await d(a));
+          if (!f(a, e)) return null;
+          "cursor" === e && (a = await i(a));
           let o = new FormData;
           o.append(e, a);
-          let c = await fetch(`https://guns.lol/api/dashboard/customize/upload/${e}`, {
-              method: "POST",
-              body: o
-            }),
-            s = await c.json();
-          if (c.ok) return t.oR.success(r("dashboard.customize.assets.upload_success", {
+          let {
+            response: d,
+            data: s
+          } = await c(`https://guns.lol/api/dashboard/customize/upload/${e}`, o, n(a.size));
+          if (d.ok) return t.oR.success(r("dashboard.customize.assets.upload_success", {
             type: e
           })), s.url;
-          return t.oR.error(s.error), console.error("Failed to upload file:", c.statusText), null
+          return t.oR.error(s.error), console.error("Failed to upload file:", d.statusText), null
         } catch (e) {
-          return t.oR.error(JSON.parse(e.request.response).error), console.error("Error uploading file:", e), null
+          return s(e), console.error("Error uploading file:", e), null
         }
       }
-      async function s(e) {
+      async function u(e) {
         try {
           let a = await fetch(`https://guns.lol/api/dashboard/customize/remove/${e}`, {
             method: "POST"
@@ -356,23 +386,27 @@
           return t.oR.error(`Failed to remove ${e}`), console.error("Error removing file:", a), null
         }
       }
-      async function i(e, a, r, d) {
+      async function _(e, a, r, d) {
         if (!e) return t.oR.error("Please enter an audio title."), null;
         if (e.length > 30) return t.oR.error("Audio title must be less than 30 characters."), null;
         if (!a) return t.oR.error("Please select an audio file."), null;
-        let c = o.o2.cover;
-        if (r && r.size / 1e6 > c) return t.oR.error(`Could not upload file. Max audio cover size is ${c}MB`), null;
-        if (!n(a, "audio")) return null;
-        let s = new FormData;
-        s.append("audio", a), s.append("cover", r), s.append("title", e);
-        let i = await fetch("https://guns.lol/api/dashboard/customize/upload/audio", {
-            method: "POST",
-            body: s
-          }),
-          f = await i.json();
-        return i.ok ? (t.oR.success("Successfully uploaded audio."), d(f.audios), !0) : (t.oR.error(f.error), console.error("Failed to upload file:", f.error), null)
+        let i = o.o2.cover;
+        if (r && r.size / 1e6 > i) return t.oR.error(`Could not upload file. Max audio cover size is ${i}MB`), null;
+        if (!f(a, "audio")) return null;
+        try {
+          let o = new FormData;
+          o.append("audio", a), o.append("cover", r), o.append("title", e);
+          let {
+            response: s,
+            data: i
+          } = await c("https://guns.lol/api/dashboard/customize/upload/audio", o, n(a.size + (r instanceof File ? r.size : 0)));
+          if (s.ok) return t.oR.success("Successfully uploaded audio."), d(i.audios), !0;
+          return t.oR.error(i.error), console.error("Failed to upload file:", i.error), null
+        } catch (e) {
+          return s(e), console.error("Error uploading audio:", e), null
+        }
       }
-      async function f(e, a) {
+      async function p(e, a) {
         let r = await fetch("https://guns.lol/api/dashboard/customize/remove/audio", {
             method: "POST",
             body: JSON.stringify({
@@ -382,7 +416,7 @@
           o = await r.json();
         return r.ok ? (a(o.audios), !0) : (t.oR.error(o.error), console.error(o.error), null)
       }
-      async function l(e, a) {
+      async function b(e, a) {
         let r = await fetch("https://guns.lol/api/dashboard/customize/audio/active", {
             method: "POST",
             body: JSON.stringify({
@@ -392,19 +426,23 @@
           o = await r.json();
         return r.ok ? (t.oR.success("Successfully set audio as active."), a(o.audios), !0) : (t.oR.error(o.error), console.error(o.error), null)
       }
-      async function u(e, a, r, d) {
-        let n = o.o2.cover;
-        if (r && r.size / 1e6 > n) return t.oR.error(`Could not upload file. Max file size is ${n}MB`), null;
-        let c = new FormData;
-        c.append("cover", r), c.append("id", e), c.append("title", a);
-        let s = await fetch("https://guns.lol/api/dashboard/customize/audio/details", {
-            method: "POST",
-            body: c
-          }),
-          i = await s.json();
-        return s.ok ? (t.oR.success("Successfully changed audio details."), d(i.audios), !0) : (t.oR.error(i.error), console.error(i.error), null)
+      async function S(e, a, r, d) {
+        let i = o.o2.cover;
+        if (r && r.size / 1e6 > i) return t.oR.error(`Could not upload file. Max file size is ${i}MB`), null;
+        try {
+          let o = new FormData;
+          o.append("cover", r), o.append("id", e), o.append("title", a);
+          let {
+            response: s,
+            data: i
+          } = await c("https://guns.lol/api/dashboard/customize/audio/details", o, n(r instanceof File ? r.size : 0));
+          if (!s.ok) return t.oR.error(i.error), console.error(i.error), null;
+          return t.oR.success("Successfully changed audio details."), d(i.audios), !0
+        } catch (e) {
+          return s(e), console.error("Error updating audio details:", e), null
+        }
       }
-      async function _(e, a) {
+      async function N(e, a) {
         let r = await fetch("https://guns.lol/api/dashboard/customize/audio/settings", {
             method: "POST",
             body: JSON.stringify({
@@ -414,7 +452,7 @@
           o = await r.json();
         return r.ok ? (t.oR.success(`Successfully ${e?"enabled":"disabled"} shuffle songs.`), a(e), !0) : (t.oR.error(o.error), console.error(o.error), null)
       }
-      async function p(e, a) {
+      async function U(e, a) {
         let r = await fetch("https://guns.lol/api/dashboard/customize/audio/settings", {
             method: "POST",
             body: JSON.stringify({

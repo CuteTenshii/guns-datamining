@@ -1,96 +1,37 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [8039], {
-    48219: (e, r, t) => {
-      Promise.resolve().then(t.bind(t, 87460))
-    },
-    50768: (e, r, t) => {
+    16201: (e, r, t) => {
       "use strict";
       t.d(r, {
-        R: () => x,
-        s: () => I
+        R: () => y,
+        s: () => v
       });
-      let n = !1,
-        a = [/loading chunk/i, /chunkloaderror/i, /chunk loading failed/i, /failed to fetch dynamically imported module/i, /importing a module script failed/i],
-        o = ["chrome-extension:", "moz-extension:", "safari-extension:"],
-        s = new Set(["window_error", "unhandled_rejection", "global_error_boundary"]),
-        i = new Set(["SCRIPT", "LINK", "IMG", "IFRAME", "VIDEO", "AUDIO", "SOURCE"]),
-        l = [/extension context invalidated/i, /window\.__firefox__\.reader/i, /contentwindow is null/i, /contentwindow\.document/i, /can't access property ["']document["'],\s*[a-z]\.contentwindow is null/i, /cannot read propert(?:y|ies) of null \(reading ['"]document['"]\)/i, /cannot read property ['"]document['"] of null/i, /cannot prefetch.*cannot be converted to a url/i, /window\.webkit\.messagehandlers/i, /failed to execute ['"]removechild['"] on ['"]node['"]/i, /null is not an object \(evaluating ['"][^'"]*\.parentnode\.removechild['"]\)/i, /(?:getresult|xbrowser|swbrowser) is not defined/i, /can't find variable:\s*getresult/i, /a0_0x[0-9a-f]+ is not defined/i, /internal json-rpc error/i, /"code"\s*:\s*-32603/i, /the play\(\) request was interrupted/i, /error creating webgl context/i, /turnstile/i],
-        d = [/execute_auto_fill/i, /needinjectcss/i, /_getownpropertydescriptor/i, /<anonymous>:\d+:\d+/i],
-        c = new Set(["failed to fetch", "load failed", "a network error occurred.", "networkerror when attempting to fetch resource.", "the operation was aborted.", "the user aborted a request."]),
-        u = [/the string did not match the expected pattern/i, /json\.parse: unexpected character/i, /unexpected token '<'/i, /unexpected end of json input/i],
-        m = [/\/_next\/static\//i, /webpack-internal:\/\//i, /https?:\/\/(?:www\.)?guns\.lol\/_next\//i, /https?:\/\/(?:www\.)?guns\.lol\/app\//i],
-        f = e => !!e && o.some(r => e.startsWith(r)),
-        g = e => !!e && o.some(r => e.includes(r)),
-        p = e => !!e && a.some(r => r.test(e)),
-        h = (e, r) => e.tags?.includes(r) ?? !1,
-        w = (...e) => {
-          let r = e.filter(Boolean).join("\n");
-          return !!r && l.some(e => e.test(r))
-        },
-        b = e => {
-          let r = (e ?? "").trim().replace(/^uncaught\s+/i, "").replace(/^(?:typeerror|referenceerror|syntaxerror|networkerror|aborterror):\s*/i, "").toLowerCase();
-          return c.has(r)
-        },
-        _ = e => !!e && u.some(r => r.test(e)),
-        k = (...e) => {
-          let r = e.filter(Boolean).join("\n");
-          return !!r && m.some(e => e.test(r))
-        },
-        y = e => {
-          if (w(e.message, e.stack, e.filename)) return !0;
-          if (k(e.stack, e.filename)) return !1;
-          let r = [e.message, e.stack, e.filename].filter(Boolean).join("\n");
-          return d.some(e => e.test(r))
-        },
-        v = e => {
-          if (e instanceof Error) return {
-            message: e.message,
-            name: e.name,
-            stack: e.stack ?? null
-          };
-          if ("string" == typeof e) return {
-            message: e,
-            name: "Error",
-            stack: null
-          };
-          if ("object" == typeof e && "message" in e) {
-            let r = e.message,
-              t = e.name,
-              n = e.stack;
-            if ("string" == typeof r) return {
-              message: r,
-              name: "string" == typeof t ? t : "Error",
-              stack: "string" == typeof n ? n : null
-            }
-          }
-          try {
-            return {
-              message: JSON.stringify(e, null, 2),
-              name: "Error",
-              stack: null
-            }
-          } catch {
-            return {
-              message: String(e),
-              name: "Error",
-              stack: null
-            }
-          }
-        },
-        x = () => {
-          n || (n = !0, window.addEventListener("error", e => {
-            var r;
-            let t, n, a;
-            if (n = (r = e).error, a = r.filename ?? null, !(!((t = r.target) && "tagName" in t && i.has(t.tagName.toUpperCase()) || p(r.message) || p(n?.message) || p(n?.name) || "Script error." === r.message && !a || f(a) || g(n?.stack) || w(r.message, n?.message, n?.name, n?.stack, a) || y({
-                message: r.message ?? n?.message,
-                stack: n?.stack,
-                filename: a
-              })) && k(n?.stack, a))) return;
-            let o = e.error;
-            I({
-              message: e.message ?? o?.message ?? "Unknown window error",
-              name: o?.name ?? "Error",
-              stack: o?.stack ?? null,
+      let n = new Set(["window_error", "unhandled_rejection", "global_error_boundary"]),
+        o = new Set(["aborted", "connection closed", "the operation was aborted", "the user aborted a request", "request aborted"]),
+        a = new Set(["failed to fetch", "load failed", "a network error occurred", "networkerror when attempting to fetch resource"]),
+        i = ["chrome-extension:", "moz-extension:", "safari-extension:"],
+        s = [/\/_next\/static\//i, /webpack-internal:\/\//i, /https?:\/\/(?:www\.)?guns\.lol\/_next\//i, /https?:\/\/(?:www\.)?guns\.lol\/app\//i],
+        l = [/loading chunk/i, /chunkloaderror/i, /chunk loading failed/i, /failed to fetch dynamically imported module/i, /importing a module script failed/i],
+        d = [/extension context invalidated/i, /window\.__firefox__\.reader/i, /contentwindow is null/i, /contentwindow\.document/i, /can't access property ["']document["'],\s*[a-z]\.contentwindow is null/i, /cannot read propert(?:y|ies) of null \(reading ['"]document['"]\)/i, /cannot read property ['"]document['"] of null/i, /cannot prefetch.*cannot be converted to a url/i, /window\.webkit\.messagehandlers/i, /failed to execute ['"]removechild['"] on ['"]node['"]/i, /null is not an object \(evaluating ['"][^'"]*\.parentnode\.removechild['"]\)/i, /(?:getresult|xbrowser|swbrowser) is not defined/i, /can't find variable:\s*getresult/i, /a0_0x[0-9a-f]+ is not defined/i, /internal json-rpc error/i, /"code"\s*:\s*-32603/i, /the play\(\) request was interrupted/i, /error creating webgl context/i],
+        c = [/intl\.segmenter is not a constructor/i, /undefined is not a constructor \(evaluating ['"]new intl\.segmenter/i, /cannot read propert(?:y|ies) of undefined \(reading ['"]response['"]\)/i, /undefined is not an object \(evaluating ['"][^'"]*\.request\.response['"]\)/i, /can't access property ["']response["'],\s*[^\s]+\.request is undefined/i, /can't find variable:\s*filereader/i, /worker is not a constructor/i, /null is not an object \(evaluating ['"]localstorage\.getitem/i, /permission denied to access property ["'](?:correspondinguseelement|nodetype|__reactfiber\$)/i, /blocked a frame with origin .* from accessing a cross-origin frame/i, /(?:cannot read propert(?:y|ies) of null|null is not an object).*getboundingclientrect/i, /(?:cannot read propert(?:y|ies) of null|null is not an object).*appendchild/i, /failed to execute ['"]insertbefore['"] on ['"]node['"].*not a child of this node/i, /node\.removechild: the node to be removed is not a child of this node/i, /(?:cannot read propert(?:y|ies) of null|null is not an object).*removechild/i, /can't access property ["']removechild["'],\s*[^\s]+\.parentnode is null/i, /uniformlocations(?:\.foreach)?/i, /elm\.events\.push is not a function/i],
+        u = [/the string did not match the expected pattern/i, /json\.parse: unexpected character/i],
+        m = [/execute_auto_fill/i, /needinjectcss/i, /_getownpropertydescriptor/i, /<anonymous>:\d+:\d+/i],
+        f = [/^uri error\.?$/i, /json parse error:\s*unexpected eof/i, /input buffer contains unsupported image format/i, /input image exceeds pixel limit/i, /expected positive integer for (?:width|height) but received 0 of type number/i, /vipsjpeg:\s*(?:premature end|invalid sos parameters)/i, /pngload_buffer:\s*libspng read error/i, /heif: error while loading plugin: support for this compression format has not been built in/i, /^source:\s*bad seek to /im],
+        p = [/^ffmpeg version /i, ...f],
+        g = e => (e ?? "").trim().replace(/^uncaught\s+/i, "").replace(/^(?:error|typeerror|referenceerror|syntaxerror|networkerror|aborterror):\s*/i, "").replace(/\.+$/, "").toLowerCase(),
+        h = (...e) => e.filter(e => !!e).join("\n"),
+        w = (e, r) => e.some(e => e.test(r)),
+        b = !1,
+        _ = new Set(["SCRIPT", "LINK", "IMG", "IFRAME", "VIDEO", "AUDIO", "SOURCE"]),
+        y = () => {
+          b || (b = !0, window.addEventListener("error", e => {
+            let r;
+            if ((r = e.target) && "tagName" in r && _.has(r.tagName.toUpperCase())) return;
+            let t = e.error;
+            v({
+              message: e.message || t?.message || "Unknown window error",
+              name: t?.name ?? "Error",
+              stack: t?.stack ?? null,
               severity: "error",
               componentStack: null,
               route: window.location.pathname,
@@ -103,17 +44,43 @@
             })
           }), window.addEventListener("unhandledrejection", e => {
             let r = e.reason;
-            if ((e => {
-                if (!e || e && "object" == typeof e && "isTrusted" in e && !("message" in e) && !("stack" in e)) return !0;
-                let {
+            if (!r || r && "object" == typeof r && "isTrusted" in r && !("message" in r) && !("stack" in r)) return;
+            let t = (e => {
+              if (e instanceof Error) return {
+                message: e.message,
+                name: e.name,
+                stack: e.stack ?? null
+              };
+              if ("string" == typeof e) return {
+                message: e,
+                name: "Error",
+                stack: null
+              };
+              if ("object" == typeof e && "message" in e) {
+                let r = e.message,
+                  t = e.name,
+                  n = e.stack;
+                if ("string" == typeof r) return {
                   message: r,
-                  name: t,
-                  stack: n
-                } = v(e);
-                return !(!(!r || "{}" === r || p(r) || p(t) || g(n) || w(r, t, n) || b(r) || _(r)) && n && k(n))
-              })(r)) return;
-            let t = v(r);
-            I({
+                  name: "string" == typeof t ? t : "Error",
+                  stack: "string" == typeof n ? n : null
+                }
+              }
+              try {
+                return {
+                  message: JSON.stringify(e, null, 2) ?? String(e),
+                  name: "Error",
+                  stack: null
+                }
+              } catch {
+                return {
+                  message: String(e),
+                  name: "Error",
+                  stack: null
+                }
+              }
+            })(r);
+            t.message && "{}" !== t.message && v({
               message: t.message,
               name: t.name,
               stack: t.stack,
@@ -126,13 +93,22 @@
             })
           }))
         },
-        I = async e => {
-          let r, t, n, a, o, i, l, d = j(e);
-          if (t = d.tags?.some(e => s.has(e)) ?? !1, n = d.message, a = d.name ?? null, o = d.stack ?? null, i = d.componentStack ?? null, l = "string" == typeof d.metadata?.filename ? d.metadata.filename : null, p(n) || p(a) || p(o) || g(o) || f(l) || w(n, a, o, i, l) || t && (b(n) || _(n)) || t && y({
-              message: n,
-              stack: o,
-              filename: l
-            }) || h(d, "window_error") && !k(o, l) || h(d, "unhandled_rejection") && (!o || !k(o)) || 0) return {
+        v = async e => {
+          let r, t, b = k(e);
+          if (t = "string" == typeof b.metadata?.filename ? b.metadata.filename : null, (e => {
+              var r;
+              let t, b, _, y, v, k, x, j, I, N, S = g(e.message);
+              if (o.has(S) || e.name?.toLowerCase() === "aborterror") return !0;
+              return "frontend" === e.source ? (b = (r = e).message ?? "", _ = r.name ?? "", y = r.tags ?? [], v = h(b, _, r.stack, r.componentStack, r.filename), k = w(s, h(r.stack, r.filename)), x = y.some(e => n.has(e)), !!(w(l, v) || (t = h(r.stack, r.filename).toLowerCase(), i.some(e => t.includes(e)) || w(d, v) || w(c, v)) || x && (a.has(g(b)) || w(u, b) || !k && w(m, v)) || y.includes("window_error") && ("script error" === g(b) && !r.filename || !k)) || !!y.includes("unhandled_rejection") && (!r.stack || !k)) : (j = e.tags ?? [], N = h(I = e.message ?? "", e.name, e.stack), j.includes("asset_compression") ? w(p, N) : j.includes("unhandled_route_error") && w(f, I))
+            })({
+              source: "frontend",
+              message: b.message,
+              name: b.name,
+              stack: b.stack,
+              componentStack: b.componentStack,
+              filename: t,
+              tags: b.tags
+            })) return {
             eventId: null,
             errorId: null
           };
@@ -142,14 +118,14 @@
                 headers: {
                   "Content-Type": "application/json"
                 },
-                body: JSON.stringify(d),
+                body: JSON.stringify(b),
                 keepalive: !0
               }), 401 === r.status && (r = await fetch("/api/telemetry/errorsP", {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json"
                 },
-                body: JSON.stringify(d),
+                body: JSON.stringify(b),
                 keepalive: !0
               })), !r.ok) return {
               eventId: null,
@@ -168,7 +144,7 @@
                   }
                 }))
               }
-              return console.error(`[telemetry] error=${t??"none"} event=${r??"none"} route=${d.route}`), {
+              return console.error(`[telemetry] error=${t??"none"} event=${r??"none"} route=${b.route}`), {
                 eventId: r,
                 errorId: t
               }
@@ -180,19 +156,19 @@
             eventId: null,
             errorId: null
           }
-        }, j = e => {
-          let r = N(),
+        }, k = e => {
+          let r = x(),
             t = e.route ?? window.location.pathname,
-            n = E(t ?? "/"),
-            a = S("undefined" != typeof navigator ? navigator.userAgent ?? null : null),
-            o = e.viewport ?? {
+            n = I(t ?? "/"),
+            o = j("undefined" != typeof navigator ? navigator.userAgent ?? null : null),
+            a = e.viewport ?? {
               width: window.innerWidth,
               height: window.innerHeight
             },
-            s = {
+            i = {
               ...e.metadata ?? {},
-              ...a ? {
-                environment: a
+              ...o ? {
+                environment: o
               } : {},
               rawRoute: t,
               normalizedRoute: n
@@ -201,10 +177,10 @@
             ...e,
             href: r,
             route: n,
-            viewport: o,
-            metadata: s
+            viewport: a,
+            metadata: i
           }
-        }, N = () => {
+        }, x = () => {
           try {
             let {
               pathname: e
@@ -213,22 +189,25 @@
           } catch {
             return null
           }
-        }, S = e => {
+        }, j = e => {
           if (!e) return null;
           let r = e.toLowerCase(),
             t = "unknown",
             n = "unknown",
-            a = "desktop";
-          return /edg\//.test(r) ? t = "edge" : /chrome\//.test(r) ? t = "chrome" : /safari\//.test(r) && !/chrome\//.test(r) ? t = "safari" : /firefox\//.test(r) ? t = "firefox" : /msie|trident/.test(r) && (t = "ie"), /windows nt/.test(r) ? n = "windows" : /mac os x/.test(r) ? n = "macos" : /android/.test(r) ? n = "android" : /iphone|ipad|ipod/.test(r) ? n = "ios" : /linux/.test(r) && (n = "linux"), /bot|crawler|spider|crawling/.test(r) ? a = "bot" : /ipad/.test(r) ? a = "tablet" : /iphone|android.+mobile/.test(r) && (a = "mobile"), {
+            o = "desktop";
+          return /edg\//.test(r) ? t = "edge" : /chrome\//.test(r) ? t = "chrome" : /safari\//.test(r) && !/chrome\//.test(r) ? t = "safari" : /firefox\//.test(r) ? t = "firefox" : /msie|trident/.test(r) && (t = "ie"), /windows nt/.test(r) ? n = "windows" : /mac os x/.test(r) ? n = "macos" : /android/.test(r) ? n = "android" : /iphone|ipad|ipod/.test(r) ? n = "ios" : /linux/.test(r) && (n = "linux"), /bot|crawler|spider|crawling/.test(r) ? o = "bot" : /ipad/.test(r) ? o = "tablet" : /iphone|android.+mobile/.test(r) && (o = "mobile"), {
             browser: t,
             os: n,
-            device: a
+            device: o
           }
-        }, E = e => {
+        }, I = e => {
           if (!e) return "/";
           let [r] = e.split(/[?#]/, 1), t = r.split("/").map(e => e ? /^[0-9]+$/.test(e) && e.length >= 3 ? ":int" : /^[0-9a-f]{16,}$/i.test(e) ? ":hex" : /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(e) ? ":uuid" : /^[0-9a-z_-]{12,}$/i.test(e) ? ":id" : /^\d{4}-\d{2}-\d{2}$/.test(e) ? ":date" : e : e).join("/");
           return t.startsWith("/") ? t : `/${t}`
         }
+    },
+    48219: (e, r, t) => {
+      Promise.resolve().then(t.bind(t, 87460))
     },
     70063: () => {},
     87460: (e, r, t) => {
@@ -237,24 +216,24 @@
         default: () => m
       });
       var n = t(95155),
-        a = t(12115);
+        o = t(12115);
       t(70063);
-      var o = t(98241),
-        s = t.n(o),
-        i = t(98410),
-        l = t.n(i),
+      var a = t(98241),
+        i = t.n(a),
+        s = t(98410),
+        l = t.n(s),
         d = t(54834),
-        c = t(50768),
+        c = t(16201),
         u = t(38256);
 
       function m({
         error: e
       }) {
         let r = (0, u.kj)(),
-          [t, o] = (0, a.useState)(null),
-          [i, m] = (0, a.useState)(null),
-          f = (0, a.useRef)(!1);
-        return (0, a.useEffect)(() => {
+          [t, a] = (0, o.useState)(null),
+          [s, m] = (0, o.useState)(null),
+          f = (0, o.useRef)(!1);
+        return (0, o.useEffect)(() => {
           f.current || (f.current = !0, (0, c.s)({
             message: e?.message ?? "Global error boundary triggered",
             name: e?.name ?? "GlobalErrorBoundary",
@@ -270,36 +249,36 @@
             eventId: e,
             errorId: r
           }) => {
-            e && o(e), r && m(r)
+            e && a(e), r && m(r)
           }))
         }, [e]), (0, n.jsxs)("div", {
-          className: s().containerWrapper,
+          className: i().containerWrapper,
           children: [(0, n.jsxs)("div", {
-            className: `${s().container} ${l().card}`,
+            className: `${i().container} ${l().card}`,
             children: [(0, n.jsx)("div", {
-              className: s().headIcon,
+              className: i().headIcon,
               children: d.A.error
             }), (0, n.jsx)("h1", {
-              className: s().headline,
+              className: i().headline,
               children: r("errors.frontend.global_error.title")
             }), (0, n.jsx)("h3", {
-              className: `${s().subheadline} ${l().subtitle}`,
+              className: `${i().subheadline} ${l().subtitle}`,
               children: r("errors.frontend.global_error.message")
             }), (0, n.jsxs)("div", {
               className: l().buttonRow,
               children: [(0, n.jsx)("button", {
                 type: "button",
                 onClick: () => window.location.reload(),
-                className: `${s().button} ${s().buttonPrimary}`,
+                className: `${i().button} ${i().buttonPrimary}`,
                 children: r("errors.frontend.global_error.reload_page")
               }), (0, n.jsx)("a", {
                 href: "https://status.guns.lol",
                 target: "_blank",
-                className: `${s().button} ${s().buttonSecondary}`,
+                className: `${i().button} ${i().buttonSecondary}`,
                 children: r("errors.frontend.global_error.check_status")
               })]
             })]
-          }), i && t && (0, n.jsx)("div", {
+          }), s && t && (0, n.jsx)("div", {
             className: l().errorInformationContainer,
             children: (0, n.jsxs)("div", {
               className: l().errorInformationList,
@@ -310,7 +289,7 @@
                   children: "Error ID"
                 }), (0, n.jsx)("span", {
                   className: l().errorInformationValue,
-                  children: i
+                  children: s
                 })]
               }), (0, n.jsxs)("div", {
                 className: l().errorInformationCard,
