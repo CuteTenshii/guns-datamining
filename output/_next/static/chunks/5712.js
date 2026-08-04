@@ -7205,7 +7205,8 @@ void main() {
             templateId: "",
             error: null,
             isUnlisted: !1,
-            templateInfo: null
+            templateInfo: null,
+            previewDiscord: null
           }),
           [d, u] = (0, n.useState)({}),
           [m, f] = (0, n.useState)(!1),
@@ -7231,32 +7232,35 @@ void main() {
         }), [T, P] = (0, n.useState)(!1), U = (0, n.useRef)(null), E = (0, n.useRef)(null), z = (0, n.useRef)(null), M = (0, n.useRef)(null), I = (0, n.useRef)(null), B = p({
           font: S.font,
           fontSize: S.font_size
-        }), L = _.user_badges, W = e.discord?.user_badges ? L.includes("server_booster") || L.find(e => "server_booster" === e.name) ? [...e.discord.user_badges, "Server Booster"] : e.discord.user_badges : [], D = _.discord_presence_settings || {
+        }), L = o.templatePreview ? o.previewDiscord : e.discord, W = o.templatePreview ? {
+          ...e,
+          discord: L
+        } : e, D = _.user_badges, F = L?.user_badges ? D.includes("server_booster") || D.find(e => "server_booster" === e.name) ? [...L.user_badges, "Server Booster"] : L.user_badges : [], R = _.discord_presence_settings || {
           show_badges: !0,
           show_guild_tag: !0,
           idle_text: ""
-        }, F = e.discord ? {
-          id: ex(e.discord.id),
-          username: e.discord.username,
-          user_badges: e.discord.user_badges || []
-        } : null, R = _.text_color, G = S.border_opacity ?? .3, H = tI(S.border_color, G), O = S.border_style ?? "static", V = "dashed" === O ? "dashed" : "solid", q = `${S.border_width}px ${V} ${H}`, Y = `2px solid ${tI(S.border_color,G)}`, Q = ["shimmer", "pulse"].includes(O) ? O : null, K = S.border_enabled && !!Q, ee = K ? i().shimmerProfileBorder : "", et = eg(d), er = _.use_discord_avatar && e.discord ? et.avatar : _.avatar, ea = "simplistic" === S.layout ? {
+        }, G = L ? {
+          id: ex(L.id),
+          username: L.username,
+          user_badges: L.user_badges || []
+        } : null, H = _.text_color, O = S.border_opacity ?? .3, V = tI(S.border_color, O), q = S.border_style ?? "static", Y = "dashed" === q ? "dashed" : "solid", Q = `${S.border_width}px ${Y} ${V}`, K = `2px solid ${tI(S.border_color,O)}`, ee = ["shimmer", "pulse"].includes(q) ? q : null, et = S.border_enabled && !!ee, er = et ? i().shimmerProfileBorder : "", ea = eg(d), en = _.use_discord_avatar && L ? ea.avatar : _.avatar, eo = "simplistic" === S.layout ? {
           justifyContent: "initial"
-        } : "sleek" === S.layout && er ? {
+        } : "sleek" === S.layout && en ? {
           paddingTop: "100px"
-        } : {}, en = "portfolio" === S.layout ? S.portfolio_border_radius ?? S.border_radius : S.border_radius, eo = {
-          "--presenceUsernameColor": R,
-          "--presenceStatusColor": tI(R, .7),
-          "--presenceContainerBackground": _.swap_colors ? tI(_.color, .2) : tI(R, .07),
-          "--presenceContainerBorder": _.swap_colors ? `2px solid ${tI(_.color,.1)}` : `2px solid ${tI(R,.05)}`,
-          "--discordServerMembers": tI(R, .6),
-          "--secondTabBackground": _.swap_colors ? tI(_.color, .2) : tI(R, .07),
-          "--secondTabBorder": _.swap_colors ? `2px solid ${tI(_.color,.1)}` : `2px solid ${tI(R,.05)}`,
-          "--discordMissingIcon": tI(R, .25),
-          "--modernLayoutSeperator": tI(R, .12),
-          "--modernLayoutSeperatorBorder": tI(R, .12),
+        } : {}, ei = "portfolio" === S.layout ? S.portfolio_border_radius ?? S.border_radius : S.border_radius, es = {
+          "--presenceUsernameColor": H,
+          "--presenceStatusColor": tI(H, .7),
+          "--presenceContainerBackground": _.swap_colors ? tI(_.color, .2) : tI(H, .07),
+          "--presenceContainerBorder": _.swap_colors ? `2px solid ${tI(_.color,.1)}` : `2px solid ${tI(H,.05)}`,
+          "--discordServerMembers": tI(H, .6),
+          "--secondTabBackground": _.swap_colors ? tI(_.color, .2) : tI(H, .07),
+          "--secondTabBorder": _.swap_colors ? `2px solid ${tI(_.color,.1)}` : `2px solid ${tI(H,.05)}`,
+          "--discordMissingIcon": tI(H, .25),
+          "--modernLayoutSeperator": tI(H, .12),
+          "--modernLayoutSeperatorBorder": tI(H, .12),
           "--discordAvatarBorder": `2px solid ${tI(_.color,.15)}`,
-          "--badgeContainerBackground": _.swap_colors ? tI(_.color, .2) : tI(R, .08),
-          "--badgeContainerBorder": `2px solid ${tI(_.swap_colors?_.color:R,.04)}`,
+          "--badgeContainerBackground": _.swap_colors ? tI(_.color, .2) : tI(H, .08),
+          "--badgeContainerBorder": `2px solid ${tI(_.swap_colors?_.color:H,.04)}`,
           "--userBadge": {
             default: "20.5px",
             modern: "18px",
@@ -7264,23 +7268,23 @@ void main() {
             sleek: "20px",
             portfolio: "20px"
           } [S.layout],
-          "--textColor": R,
-          "--textColorDarker": tI(R, .5),
+          "--textColor": H,
+          "--textColorDarker": tI(H, .5),
           "--iconColor": _.icon_color,
           "--backgroundColor": _.bg_color,
-          "--joinStatus": tI(R, .65),
-          "--audioPlayerBar": tI(R, .35),
-          "--avatarBorder": S.border_enabled ? Y : `2px solid ${tI(_.color,.4)}`,
+          "--joinStatus": tI(H, .65),
+          "--audioPlayerBar": tI(H, .35),
+          "--avatarBorder": S.border_enabled ? K : `2px solid ${tI(_.color,.4)}`,
           "--containerColor": tI(_.color, _.opacity),
           "--containerBlur": `${_.blur}px`,
           "--containerGradient": _.profile_gradient && `linear-gradient(25deg, ${tI(_.gradient_1,_.opacity)}, ${tI(_.gradient_2,_.opacity)})`,
           "--containerBackgroundImage": _.profile_gradient && `linear-gradient(25deg, ${tI(_.gradient_1,_.opacity)}, ${tI(_.gradient_2,_.opacity)})`,
-          "--containerBorder": S.border_enabled && (K ? "none" : q),
+          "--containerBorder": S.border_enabled && (et ? "none" : Q),
           "--containerBackgroundClip": "border-box",
           "--containerBackgroundOrigin": "border-box",
           "--profileBorderWidth": `${S.border_width}px`,
-          "--profileBorderColor": H,
-          "--containerRadius": `${en}px`,
+          "--profileBorderColor": V,
+          "--containerRadius": `${ei}px`,
           "--containerWidth": {
             default: "40rem",
             modern: "44rem",
@@ -7297,38 +7301,38 @@ void main() {
           } [S.layout],
           "--volumeBackgroundcolor": tI(_.color, 0 !== _.opacity ? _.opacity : .2),
           "--volumeBorder": `2px solid ${tI(_.color,0!==_.opacity?_.opacity-.1*_.opacity:.05)}`,
-          "--colorUsernameGlow": _.username_glow && `0px 0px 16.5px ${R}`,
+          "--colorUsernameGlow": _.username_glow && `0px 0px 16.5px ${H}`,
           "--usernameEffects": (() => {
             let e = _.username_effects;
             if (!(!e || ["rgb", "rainbow", "none", "typewriter", "fuzzy", "shuffle"].includes(e))) return `url(https://assets.guns.lol/${e.startsWith("sparkle_")?e:`sparkle_${e}`}.gif)`
           })(),
-          "--buttonBackground": tI(R, .22),
-          "--buttonBorder": `2px solid ${tI(R,.12)}`,
+          "--buttonBackground": tI(H, .22),
+          "--buttonBorder": `2px solid ${tI(H,.12)}`,
           "--buttonRadius": `${S.button_border_radius}px`,
           "--buttonAlign": S.text_align,
-          "--buttonBackgroundHover": tI(R, .32),
-          "--buttonBorderHover": `2px solid ${tI(R,.25)}`,
-          "--buttonUrlColor": tI(R, .65),
-          "--buttonShadow": S.button_shadow && `${tI(R,.22)} 0px 0px 15px`,
-          "--profileViewsContainerBorder": `2px solid ${H}`,
+          "--buttonBackgroundHover": tI(H, .32),
+          "--buttonBorderHover": `2px solid ${tI(H,.25)}`,
+          "--buttonUrlColor": tI(H, .65),
+          "--buttonShadow": S.button_shadow && `${tI(H,.22)} 0px 0px 15px`,
+          "--profileViewsContainerBorder": `2px solid ${V}`,
           "--templatePreviewContainerBackground": tI(_.color, .4),
-          "--platformTextColor": tI(R, .4),
-          "--secondTabWidgetDescription": tI(R, .6),
-          "--audioIconBackground": tI(R, .2),
-          "--progessBarFull": tI(R, .3),
-          "--progessBarPlaying": R,
-          "--controlButtonsOther": tI(R, .5),
-          "--controlButtonPlaying": R,
-          "--controlTextColor": tI(R, .7),
-          "--modernLayoutBottomLeftDivider": tI(R, .14),
-          "--sleekLayoutTopRightDivider": tI(R, .14)
-        }, ei = e.premium ? "unfold" === S.animation ? i().unfoldStart : "fade" === S.animation ? i().fadeUpStart : "pop" === S.animation ? i().scaleFadeStart : i().fadeUpStart : i().fadeUpStart, es = e.premium ? "unfold" === S.animation ? i().unfold : "fade" === S.animation ? i().fadeUp : "pop" === S.animation ? i().scaleFade : i().fadeUp : i().fadeUp, el = {
-          modern: `${i().userContainer} ${ei} ${ee}`,
-          default: `${i().userContainer} ${ei} ${ee}`,
-          simplistic: `${i().userContainerLayout3} ${ei}`,
-          sleek: `${i().userContainerLayout4} ${ei} ${ee}`,
-          portfolio: `${i().userContainer} ${ei} ${ee}`
-        }, ec = o.templateInfo, ed = ec?.user_information?.username;
+          "--platformTextColor": tI(H, .4),
+          "--secondTabWidgetDescription": tI(H, .6),
+          "--audioIconBackground": tI(H, .2),
+          "--progessBarFull": tI(H, .3),
+          "--progessBarPlaying": H,
+          "--controlButtonsOther": tI(H, .5),
+          "--controlButtonPlaying": H,
+          "--controlTextColor": tI(H, .7),
+          "--modernLayoutBottomLeftDivider": tI(H, .14),
+          "--sleekLayoutTopRightDivider": tI(H, .14)
+        }, el = e.premium ? "unfold" === S.animation ? i().unfoldStart : "fade" === S.animation ? i().fadeUpStart : "pop" === S.animation ? i().scaleFadeStart : i().fadeUpStart : i().fadeUpStart, ec = e.premium ? "unfold" === S.animation ? i().unfold : "fade" === S.animation ? i().fadeUp : "pop" === S.animation ? i().scaleFade : i().fadeUp : i().fadeUp, ed = {
+          modern: `${i().userContainer} ${el} ${er}`,
+          default: `${i().userContainer} ${el} ${er}`,
+          simplistic: `${i().userContainerLayout3} ${el}`,
+          sleek: `${i().userContainerLayout4} ${el} ${er}`,
+          portfolio: `${i().userContainer} ${el} ${er}`
+        }, eu = o.templateInfo, em = eu?.user_information?.username;
         (0, n.useEffect)(() => {
           var t;
           let r, a;
@@ -7336,34 +7340,34 @@ void main() {
             r === t.length && (a = !1), 0 === r && (a = !0);
             let e = 0 === (r = a ? r + 1 : r - 1) ? "" : t.slice(0, r);
             document.title = "@" + e
-          }, 380)), em || eh(_.url) || (es === i().fadeUp ? setTimeout(function() {
+          }, 380)), ep || ey(_.url) || (ec === i().fadeUp ? setTimeout(function() {
             z.current && z.current.classList.add(i().fadeUp), M.current && M.current?.classList.add(i().fadeUp), I.current && I.current?.classList.add(i().fadeUp)
-          }, 350) : es === i().unfold ? document.querySelectorAll(`.${i().unfoldStart}`).forEach((e, t) => {
+          }, 350) : ec === i().unfold ? document.querySelectorAll(`.${i().unfoldStart}`).forEach((e, t) => {
             setTimeout(() => {
               e.classList.add(i().unfold)
             }, 300 * t)
-          }) : es === i().scaleFade && setTimeout(function() {
+          }) : ec === i().scaleFade && setTimeout(function() {
             z.current && z.current.classList.add(i().scaleFade), M.current && M.current?.classList.add(i().scaleFade), I.current && I.current?.classList.add(i().scaleFade)
           }, 350))
         }, [r, _]), (0, n.useEffect)(() => {
           let e = navigator.userAgent.toLowerCase();
           v(/iphone|ipod|android.*mobile|windows phone|blackberry|bb10/.test(e) || /ipad|tablet|android(?!.*mobile)/.test(e) || navigator.maxTouchPoints > 1 && /macintosh/.test(e))
         }, []);
-        let eu = "string" == typeof _.audio,
-          [em, ef] = (0, n.useState)(eu ? "" !== _.audio : _.audio.length > 0),
-          ep = () => {
+        let ef = "string" == typeof _.audio,
+          [ep, eh] = (0, n.useState)(ef ? "" !== _.audio : _.audio.length > 0),
+          ev = () => {
             let e = !y.muted,
               t = C.ref;
             0 === y.volume && y.muted ? (b({
               ...y,
               muted: !1,
               volume: 100
-            }), t && (t.muted = !1, t.volume = .25), !em && U.current && (U.current.muted = !1, U.current.volume = .25)) : (b({
+            }), t && (t.muted = !1, t.volume = .25), !ep && U.current && (U.current.muted = !1, U.current.volume = .25)) : (b({
               ...y,
               muted: e
-            }), t && (t.muted = e, e || (t.volume = y.volume / 100 * .25)), !em && U.current && (U.current.muted = e, e || (U.current.volume = y.volume / 100 * .25)))
+            }), t && (t.muted = e, e || (t.volume = y.volume / 100 * .25)), !ep && U.current && (U.current.muted = e, e || (U.current.volume = y.volume / 100 * .25)))
           },
-          eh = e => {
+          ey = e => {
             for (let t of [".mp4", ".mov", ".avi", ".m4v", ".webm", ".mkv"])
               if (e.endsWith(t)) return !0;
             return !1
@@ -7394,7 +7398,8 @@ void main() {
                   templateId: String(o),
                   error: r.error ?? null,
                   isUnlisted: "true" === n,
-                  templateInfo: a
+                  templateInfo: a,
+                  previewDiscord: r.preview_discord ?? null
                 }), r.error) return;
               let i = r.config || {},
                 s = r.premium || {};
@@ -7406,14 +7411,15 @@ void main() {
                 ...s
               }));
               let c = i?.audio;
-              "string" == typeof c ? ef("" !== c) : Array.isArray(c) && ef(c.length > 0)
+              "string" == typeof c ? eh("" !== c) : Array.isArray(c) && eh(c.length > 0)
             } catch (e) {
               console.error("Error fetching template preview:", e), l({
                 templatePreview: !0,
                 templateId: o || "",
                 error: "Unable to load template preview.",
                 isUnlisted: "true" === n,
-                templateInfo: null
+                templateInfo: null,
+                previewDiscord: null
               })
             }
           })() : l(e => e.templatePreview ? {
@@ -7421,28 +7427,37 @@ void main() {
             templateId: "",
             error: null,
             isUnlisted: !1,
-            templateInfo: null
+            templateInfo: null,
+            previewDiscord: null
           } : e)
         }, [r, t, g, e.premium]), (0, n.useEffect)(() => {
-          let t = async t => {
-            let r = ex(e.discord.id);
-            if (!r) return void f(!1);
-            let a = await fetch("https://guns.lol/api/service/discord", {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                  type: t,
-                  discordId: r,
-                  fallbackIdentity: F
-                })
-              }),
-              n = await a.json();
-            a.ok ? u(n) : console.error(`Error fetching Discord ${t}:`, n.error), f(!1)
-          };
-          e.discord && "enabled" === _.presence && !e.ban && e.verified ? (f(!0), t("presence")) : e.discord && _.use_discord_avatar && !e.ban && e.verified && t("avatar")
-        }, [e.discord?.id, _.presence, _.use_discord_avatar, e.ban, e.verified]), (0, a.jsxs)(a.Fragment, {
+          let t = new AbortController,
+            r = async e => {
+              let r = ex(L?.id);
+              if (!r) return void f(!1);
+              try {
+                let a = await fetch("https://guns.lol/api/service/discord", {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                      type: e,
+                      discordId: r,
+                      fallbackIdentity: G
+                    }),
+                    signal: t.signal
+                  }),
+                  n = await a.json();
+                a.ok ? u(n) : console.error(`Error fetching Discord ${e}:`, n.error)
+              } catch (r) {
+                t.signal.aborted || console.error(`Error fetching Discord ${e}:`, r)
+              } finally {
+                t.signal.aborted || f(!1)
+              }
+            };
+          return L && "enabled" === _.presence && !e.ban && e.verified ? (u({}), f(!0), r("presence")) : L && _.use_discord_avatar && !e.ban && e.verified ? r("avatar") : (u({}), f(!1)), () => t.abort()
+        }, [L?.id, L?.username, _.presence, _.use_discord_avatar, e.ban, e.verified]), (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)("style", {
             children: `
                 html {
@@ -7462,13 +7477,13 @@ void main() {
               audioTagRef: E,
               audioData: A,
               setAudioData: $
-            }), (em || eh(_.url)) && (0, a.jsx)(c, {
+            }), (ep || ey(_.url)) && (0, a.jsx)(c, {
               videoTagRef: U,
               audioTagRef: E,
               clickToEnterText: "" === S.page_enter_text ? "click to enter..." : S.page_enter_text,
               userFont: B,
               userContainerRef: z,
-              animationClass: es,
+              animationClass: ec,
               setAudioPlayer: k,
               audioContainerRef: M,
               discordWidgetRef: I,
@@ -7478,7 +7493,7 @@ void main() {
               backgroundEffectsColor: _.background_effects_color,
               cursorEffects: S.cursor_effects,
               cursorEffectsColor: S.effects_color,
-              textColor: R,
+              textColor: H,
               backgroundColor: _.bg_color,
               cursorUrl: _.custom_cursor
             }), (0, a.jsx)(J.A, {
@@ -7490,17 +7505,17 @@ void main() {
                 backgroundColor: _.bg_color
               }
             }), (0, a.jsxs)("div", {
-              style: eo,
-              children: [_.volume_control && (eh(_.url) || em) && !x && (0, a.jsxs)("div", {
+              style: es,
+              children: [_.volume_control && (ey(_.url) || ep) && !x && (0, a.jsxs)("div", {
                 className: i().volumeButton,
                 style: {
                   zIndex: "portfolio" === S.layout ? "2" : "1"
                 },
                 children: [y.muted ? (0, a.jsx)("span", {
-                  onClick: ep,
+                  onClick: ev,
                   children: X.A.muted
                 }) : (0, a.jsx)("span", {
-                  onClick: ep,
+                  onClick: ev,
                   children: X.A.unmuted
                 }), (0, a.jsxs)("div", {
                   className: i().volumeSlider,
@@ -7531,7 +7546,7 @@ void main() {
                       b({
                         volume: e,
                         muted: t
-                      }), r && (r.volume = e / 100 * .25, r.muted = t), !em && U.current && (U.current.volume = e / 100 * .25, U.current.muted = t)
+                      }), r && (r.volume = e / 100 * .25, r.muted = t), !ep && U.current && (U.current.volume = e / 100 * .25, U.current.muted = t)
                     },
                     step: 1,
                     max: 100,
@@ -7542,24 +7557,24 @@ void main() {
                 username: e.username
               }), o.templatePreview && (0, a.jsx)(tU, {
                 templateInfo: o.templateInfo,
-                templateAuthorName: ed || "Unknown",
+                templateAuthorName: em || "Unknown",
                 templateData: o,
                 textColor: S.text_color
               }), (0, a.jsx)("div", {
                 className: i().mainContainer,
                 children: "portfolio" === S.layout ? (0, a.jsxs)(a.Fragment, {
                   children: [(0, a.jsx)(to, {
-                    userData: e,
+                    userData: W,
                     config: _,
                     premiumConfig: S,
                     presenceInformation: d,
-                    animationStartClass: ei,
+                    animationStartClass: el,
                     isTemplatePreview: o.templatePreview,
                     discordLoading: m,
-                    discordBadges: W,
-                    profileBorderClass: ee,
-                    profileBorderEffect: Q,
-                    profileBorderEffectEnabled: K,
+                    discordBadges: F,
+                    profileBorderClass: er,
+                    profileBorderEffect: ee,
+                    profileBorderEffectEnabled: et,
                     audioPlayer: C,
                     setAudioData: $,
                     audioData: A,
@@ -7581,7 +7596,7 @@ void main() {
                   })]
                 }) : (0, a.jsxs)("div", {
                   className: i().userContainerWrapper,
-                  style: ea,
+                  style: eo,
                   children: ["simplistic" === S.layout && (0, a.jsx)("div", {
                     className: i().profileViewsContainer,
                     children: (0, a.jsx)(eb, {
@@ -7590,8 +7605,8 @@ void main() {
                       premiumConfig: S,
                       views: _.page_views,
                       containerBorderRadius: S.border_radius,
-                      isUnfold: ei === i().unfoldStart,
-                      animationStartClass: ei,
+                      isUnfold: el === i().unfoldStart,
+                      animationStartClass: el,
                       isTemplatePreview: o.templatePreview
                     })
                   }), S.parallax_animation ? (0, a.jsxs)(eX.A, {
@@ -7614,67 +7629,67 @@ void main() {
                       zIndex: 1
                     },
                     children: [(0, a.jsxs)("div", {
-                      className: el[S.layout],
+                      className: ed[S.layout],
                       style: {
-                        position: K ? "relative" : "initial"
+                        position: et ? "relative" : "initial"
                       },
                       ref: z,
-                      children: [K && Q && (0, a.jsx)(eI, {
-                        effect: Q
+                      children: [et && ee && (0, a.jsx)(eI, {
+                        effect: ee
                       }), "default" === S.layout ? (0, a.jsx)(e_, {
-                        userData: e,
+                        userData: W,
                         config: _,
                         premiumConfig: S,
                         presenceInformation: d,
-                        animationStartClass: ei,
+                        animationStartClass: el,
                         isTemplatePreview: o.templatePreview,
                         discordLoading: m
                       }) : "modern" === S.layout ? (0, a.jsx)(eA, {
-                        userData: e,
+                        userData: W,
                         config: _,
                         premiumConfig: S,
                         presenceInformation: d,
-                        animationStartClass: ei,
+                        animationStartClass: el,
                         isTemplatePreview: o.templatePreview,
                         discordLoading: m
                       }) : "simplistic" === S.layout ? (0, a.jsx)(eL, {
-                        userData: e,
+                        userData: W,
                         config: _,
                         premiumConfig: S,
                         presenceInformation: d,
-                        animationStartClass: ei,
-                        activeAnimationClass: T ? es : "",
+                        animationStartClass: el,
+                        activeAnimationClass: T ? ec : "",
                         setAudioData: $,
                         audioData: A,
                         audioPlayer: C,
                         setAudioPlayer: k,
                         audioContainerRef: M,
                         setVolume: b,
-                        profileBorderClass: ee,
-                        profileBorderEffect: Q
+                        profileBorderClass: er,
+                        profileBorderEffect: ee
                       }) : (0, a.jsx)(e0, {
-                        userData: e,
+                        userData: W,
                         config: _,
                         premiumConfig: S,
                         presenceInformation: d,
-                        animationStartClass: ei,
+                        animationStartClass: el,
                         isTemplatePreview: o.templatePreview
                       })]
                     }), "enabled" === _.presence && "sleek" === S.layout && (0, a.jsx)(t$, {
                       loading: m,
                       presenceInformation: d,
                       font: S.font,
-                      discordUserBadges: W,
-                      discordData: e.discord,
+                      discordUserBadges: F,
+                      discordData: L,
                       fontSize: S.font_size,
-                      animationStartClass: ei,
+                      animationStartClass: el,
                       discordWidgetRef: I,
-                      discordPresenceSettings: D,
-                      profileBorderClass: ee,
-                      profileBorderEffect: Q
+                      discordPresenceSettings: R,
+                      profileBorderClass: er,
+                      profileBorderEffect: ee
                     }), _.audio_player && "" !== A.url && "simplistic" !== S.layout && (0, a.jsx)(eB, {
-                      animationStartClass: ei,
-                      activeAnimationClass: T ? es : "",
+                      animationStartClass: el,
+                      activeAnimationClass: T ? ec : "",
                       audioPlayer: C,
                       setAudioData: $,
                       audioData: A,
@@ -7684,8 +7699,8 @@ void main() {
                       audioList: _.audio,
                       setVolume: b,
                       fontSize: S.font_size,
-                      profileBorderClass: ee,
-                      profileBorderEffect: Q
+                      profileBorderClass: er,
+                      profileBorderEffect: ee
                     })]
                   }) : (0, a.jsxs)("div", {
                     className: i().usernameContainerFlex,
@@ -7694,64 +7709,64 @@ void main() {
                       zIndex: 1
                     },
                     children: [(0, a.jsxs)("div", {
-                      className: el[S.layout],
+                      className: ed[S.layout],
                       ref: z,
-                      children: [K && Q && (0, a.jsx)(eI, {
-                        effect: Q
+                      children: [et && ee && (0, a.jsx)(eI, {
+                        effect: ee
                       }), "default" === S.layout ? (0, a.jsx)(e_, {
-                        userData: e,
+                        userData: W,
                         config: _,
                         premiumConfig: S,
                         presenceInformation: d,
-                        animationStartClass: ei,
+                        animationStartClass: el,
                         isTemplatePreview: o.templatePreview,
                         discordLoading: m
                       }) : "modern" === S.layout ? (0, a.jsx)(eA, {
-                        userData: e,
+                        userData: W,
                         config: _,
                         premiumConfig: S,
                         presenceInformation: d,
-                        animationStartClass: ei,
+                        animationStartClass: el,
                         isTemplatePreview: o.templatePreview,
                         discordLoading: m
                       }) : "simplistic" === S.layout ? (0, a.jsx)(eL, {
-                        userData: e,
+                        userData: W,
                         config: _,
                         premiumConfig: S,
                         presenceInformation: d,
-                        animationStartClass: ei,
-                        activeAnimationClass: T ? es : "",
+                        animationStartClass: el,
+                        activeAnimationClass: T ? ec : "",
                         setAudioData: $,
                         audioData: A,
                         audioPlayer: C,
                         setAudioPlayer: k,
                         audioContainerRef: M,
                         setVolume: b,
-                        profileBorderClass: ee,
-                        profileBorderEffect: Q
+                        profileBorderClass: er,
+                        profileBorderEffect: ee
                       }) : (0, a.jsx)(e0, {
-                        userData: e,
+                        userData: W,
                         config: _,
                         premiumConfig: S,
                         presenceInformation: d,
-                        animationStartClass: ei,
+                        animationStartClass: el,
                         isTemplatePreview: o.templatePreview
                       })]
                     }), "enabled" === _.presence && "sleek" === S.layout && (0, a.jsx)(t$, {
                       loading: m,
                       presenceInformation: d,
                       font: S.font,
-                      discordUserBadges: W,
-                      discordData: e.discord,
+                      discordUserBadges: F,
+                      discordData: L,
                       fontSize: S.font_size,
-                      animationStartClass: ei,
+                      animationStartClass: el,
                       discordWidgetRef: I,
-                      discordPresenceSettings: D,
-                      profileBorderClass: ee,
-                      profileBorderEffect: Q
+                      discordPresenceSettings: R,
+                      profileBorderClass: er,
+                      profileBorderEffect: ee
                     }), _.audio_player && "" !== A.url && "simplistic" !== S.layout && (0, a.jsx)(eB, {
-                      animationStartClass: ei,
-                      activeAnimationClass: T ? es : "",
+                      animationStartClass: el,
+                      activeAnimationClass: T ? ec : "",
                       audioPlayer: C,
                       setAudioData: $,
                       audioData: A,
@@ -7761,8 +7776,8 @@ void main() {
                       audioList: _.audio,
                       setVolume: b,
                       fontSize: S.font_size,
-                      profileBorderClass: ee,
-                      profileBorderEffect: Q
+                      profileBorderClass: er,
+                      profileBorderEffect: ee
                     })]
                   })]
                 })
