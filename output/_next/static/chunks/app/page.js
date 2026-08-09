@@ -1,17 +1,17 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [8974], {
-    9393: (e, a, s) => {
-      Promise.resolve().then(s.bind(s, 76436))
+    9393: (e, a, i) => {
+      Promise.resolve().then(i.bind(i, 76436))
     },
-    34023: (e, a, s) => {
+    34023: (e, a, i) => {
       "use strict";
-      s.d(a, {
+      i.d(a, {
         A: () => r
       });
-      var i = s(95155);
-      s(12115);
+      var s = i(95155);
+      i(12115);
       let r = {
-        cross: (0, i.jsx)("svg", {
+        cross: (0, s.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           style: {
             color: "rgb(194, 60, 60)"
@@ -19,14 +19,14 @@
           width: "1em",
           height: "1em",
           viewBox: "0 0 15 15",
-          children: (0, i.jsx)("path", {
+          children: (0, s.jsx)("path", {
             fill: "currentColor",
             fillRule: "evenodd",
             d: "M11.782 4.032a.575.575 0 1 0-.813-.814L7.5 6.687L4.032 3.218a.575.575 0 0 0-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 0 0 .814.814L7.5 8.313l3.469 3.469a.575.575 0 0 0 .813-.814L8.313 7.5z",
             clipRule: "evenodd"
           })
         }),
-        check: (0, i.jsx)("svg", {
+        check: (0, s.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           style: {
             color: "rgb(64, 184, 64)"
@@ -34,67 +34,67 @@
           width: "1em",
           height: "1em",
           viewBox: "0 0 24 24",
-          children: (0, i.jsx)("path", {
+          children: (0, s.jsx)("path", {
             fill: "currentColor",
             d: "M9 16.17L4.83 12l-1.42 1.41L9 19L21 7l-1.41-1.41z"
           })
         }),
-        arrowDown: (0, i.jsx)("svg", {
+        arrowDown: (0, s.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "1em",
           height: "1em",
           viewBox: "0 0 24 24",
-          children: (0, i.jsx)("path", {
+          children: (0, s.jsx)("path", {
             fill: "currentColor",
             d: "M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062"
           })
         }),
-        arrowUp: (0, i.jsx)("svg", {
+        arrowUp: (0, s.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "1em",
           height: "1em",
           viewBox: "0 0 24 24",
-          children: (0, i.jsx)("path", {
+          children: (0, s.jsx)("path", {
             fill: "currentColor",
             d: "m12 10.8l-3.9 3.9q-.275.275-.7.275t-.7-.275q-.275-.275-.275-.7t.275-.7l4.6-4.6q.3-.3.7-.3t.7.3l4.6 4.6q.275.275.275.7t-.275.7q-.275.275-.7.275t-.7-.275z"
           })
         }),
-        checkmark: (0, i.jsx)("svg", {
+        checkmark: (0, s.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "1em",
           height: "1em",
           viewBox: "6.43 7.43 11.15 8.57",
-          children: (0, i.jsx)("path", {
+          children: (0, s.jsx)("path", {
             fill: "currentColor",
             d: "m10 13.6l5.9-5.9q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7l-6.6 6.6q-.3.3-.7.3t-.7-.3l-2.6-2.6q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275z"
           })
         }),
-        premium: (0, i.jsx)("svg", {
+        premium: (0, s.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "1em",
           height: "1em",
           viewBox: "0 0 512 512",
-          children: (0, i.jsx)("path", {
+          children: (0, s.jsx)("path", {
             fill: "currentColor",
             d: "M121.72 32a4 4 0 0 0-3.72 5.56l2.3 5.43l40.7 94.9a4 4 0 0 0 6.88.82L243 38.4a4 4 0 0 0-3.2-6.4Zm298.21 26.06l-41.28 96.37a4 4 0 0 0 3.68 5.57h101a4 4 0 0 0 3.4-6.11L427 57.53a4 4 0 0 0-7.07.53M85 57.57l-59.71 96.32a4 4 0 0 0 3.4 6.11h101a4 4 0 0 0 3.67-5.58L92 58.1a4 4 0 0 0-7-.53M393.27 32H267.82a1.94 1.94 0 0 0-1.56 3.11l79.92 106.46a1.94 1.94 0 0 0 3.34-.4L391.6 43l3.4-8.34a1.92 1.92 0 0 0-1.7-2.66ZM239 448l-89.43-253.49A3.78 3.78 0 0 0 146 192H25.7a3.72 3.72 0 0 0-2.95 6l216 279.81a5.06 5.06 0 0 0 6.39 1.37a5 5 0 0 0 2.39-6.08Zm247.3-256H366a3.75 3.75 0 0 0-3.54 2.51l-98.2 278.16a5.21 5.21 0 0 0 2.42 6.31a5.22 5.22 0 0 0 6.61-1.39L489.25 198a3.72 3.72 0 0 0-2.95-6M259.2 78.93l56 74.67a4 4 0 0 1-3.2 6.4H200a4 4 0 0 1-3.2-6.4l56-74.67a4 4 0 0 1 6.4 0m-7 310.31l-67.7-191.91a4 4 0 0 1 3.77-5.33h135.46a4 4 0 0 1 3.77 5.33l-67.73 191.91a4 4 0 0 1-7.54 0Z"
           })
         }),
-        imagehost: (0, i.jsx)("svg", {
+        imagehost: (0, s.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "1em",
           height: "1em",
           viewBox: "0 0 16 16",
-          children: (0, i.jsx)("path", {
+          children: (0, s.jsx)("path", {
             fill: "currentColor",
             d: "m10.878.282l.348 1.071a2.205 2.205 0 0 0 1.398 1.397l1.072.348l.021.006a.423.423 0 0 1 0 .798l-1.071.348a2.208 2.208 0 0 0-1.399 1.397l-.348 1.07a.423.423 0 0 1-.798 0l-.348-1.07a2.204 2.204 0 0 0-1.399-1.403l-1.072-.348a.423.423 0 0 1 0-.798l1.072-.348a2.208 2.208 0 0 0 1.377-1.397l.348-1.07a.423.423 0 0 1 .799 0m4.905 7.931l-.765-.248a1.577 1.577 0 0 1-1-.999l-.248-.764a.302.302 0 0 0-.57 0l-.25.764a1.576 1.576 0 0 1-.983.999l-.765.248a.303.303 0 0 0 0 .57l.765.249a1.578 1.578 0 0 1 1 1.002l.248.764a.302.302 0 0 0 .57 0l.249-.764a1.576 1.576 0 0 1 .999-.999l.765-.248a.303.303 0 0 0 0-.57zM13.502 12a1.328 1.328 0 0 1-.746-.23c-.22-.16-.38-.371-.48-.621l-.26-.802a.519.519 0 0 0-.14-.22a.635.635 0 0 0-.22-.14l-.748-.246A3.001 3.001 0 0 1 5 9a3 3 0 0 1 3.846-2.88l-.053-.16c-.09-.23-.18-.36-.29-.47a1.311 1.311 0 0 0-.471-.291l-1.061-.35c-.3-.1-.54-.291-.71-.532a1.431 1.431 0 0 1-.208-1.207a1.5 1.5 0 0 0-.777.72L4.691 5H4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-.079a1.45 1.45 0 0 1-.498.079M10 9a2 2 0 1 1-4 0a2 2 0 0 1 4 0"
           })
         }),
-        arrowPlansDown: (0, i.jsx)("svg", {
+        arrowPlansDown: (0, s.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "1em",
           height: "1em",
           viewBox: "0 0 24 24",
-          children: (0, i.jsx)("path", {
+          children: (0, s.jsx)("path", {
             fill: "none",
             stroke: "currentColor",
             strokeLinecap: "round",
@@ -103,44 +103,88 @@
             d: "M12 4v16m0 0l6-6m-6 6l-6-6"
           })
         }),
-        verified: (0, i.jsx)("svg", {
+        verified: (0, s.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "1em",
           height: "1em",
           viewBox: "1 1.5 22 21",
-          children: (0, i.jsx)("path", {
+          children: (0, s.jsx)("path", {
             fill: "currentColor",
             d: "m8.6 22.5l-1.9-3.2l-3.6-.8l.35-3.7L1 12l2.45-2.8l-.35-3.7l3.6-.8l1.9-3.2L12 2.95l3.4-1.45l1.9 3.2l3.6.8l-.35 3.7L23 12l-2.45 2.8l.35 3.7l-3.6.8l-1.9 3.2l-3.4-1.45l-3.4 1.45Zm2.35-6.95L16.6 9.9l-1.4-1.45l-4.25 4.25l-2.15-2.1L7.4 12l3.55 3.55Z"
           })
         }),
-        customBadge: (0, i.jsx)("svg", {
+        customBadge: (0, s.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "1em",
           height: "1em",
           viewBox: "0 0 512 512",
-          children: (0, i.jsx)("path", {
+          children: (0, s.jsx)("path", {
             fill: "currentColor",
             d: "M208 512a24.84 24.84 0 0 1-23.34-16l-39.84-103.6a16.06 16.06 0 0 0-9.19-9.19L32 343.34a25 25 0 0 1 0-46.68l103.6-39.84a16.06 16.06 0 0 0 9.19-9.19L184.66 144a25 25 0 0 1 46.68 0l39.84 103.6a16.06 16.06 0 0 0 9.19 9.19l103 39.63a25.49 25.49 0 0 1 16.63 24.1a24.82 24.82 0 0 1-16 22.82l-103.6 39.84a16.06 16.06 0 0 0-9.19 9.19L231.34 496A24.84 24.84 0 0 1 208 512M88 176a14.67 14.67 0 0 1-13.69-9.4l-16.86-43.84a7.28 7.28 0 0 0-4.21-4.21L9.4 101.69a14.67 14.67 0 0 1 0-27.38l43.84-16.86a7.3 7.3 0 0 0 4.21-4.21L74.16 9.79A15 15 0 0 1 86.23.11a14.67 14.67 0 0 1 15.46 9.29l16.86 43.84a7.3 7.3 0 0 0 4.21 4.21l43.84 16.86a14.67 14.67 0 0 1 0 27.38l-43.84 16.86a7.28 7.28 0 0 0-4.21 4.21l-16.86 43.84A14.67 14.67 0 0 1 88 176m312 80a16 16 0 0 1-14.93-10.26l-22.84-59.37a8 8 0 0 0-4.6-4.6l-59.37-22.84a16 16 0 0 1 0-29.86l59.37-22.84a8 8 0 0 0 4.6-4.6l22.67-58.95a16.45 16.45 0 0 1 13.17-10.57a16 16 0 0 1 16.86 10.15l22.84 59.37a8 8 0 0 0 4.6 4.6l59.37 22.84a16 16 0 0 1 0 29.86l-59.37 22.84a8 8 0 0 0-4.6 4.6l-22.84 59.37A16 16 0 0 1 400 256"
           })
         })
       }
     },
-    76436: (e, a, s) => {
+    61836: (e, a, i) => {
       "use strict";
-      s.d(a, {
+      i.d(a, {
+        $g: () => r,
+        gP: () => c,
+        o3: () => l,
+        q9: () => s
+      });
+      let s = {
+        free: 0,
+        premium: 7.99,
+        premiumGift: 7.19,
+        imagehost: 4.99,
+        verified: 14.99,
+        customBadge: 8.99,
+        badgeCredit: 2.99,
+        aliasCredit: 4.99,
+        donationMinimum: 1,
+        donorBadgeMinimum: 10
+      };
+
+      function r(e) {
+        return `${e.toFixed(2).replace(/\.00$/,"").replace(".",",")}€`
+      }
+
+      function c(e) {
+        let a = s.badgeCredit * e ** .85,
+          i = s.badgeCredit * e;
+        return {
+          totalPrice: Number(a.toFixed(2)),
+          discountPercent: Number(((1 - a / i) * 100).toFixed(0))
+        }
+      }
+
+      function l(e) {
+        let a = s.customBadge * e ** .95,
+          i = s.customBadge * e;
+        return {
+          totalPrice: Number(a.toFixed(2)),
+          rawPrice: Number(i.toFixed(2)),
+          discountPercent: Number(((1 - a / i) * 100).toFixed(0))
+        }
+      }
+    },
+    76436: (e, a, i) => {
+      "use strict";
+      i.d(a, {
         default: () => x
       });
-      var i = s(95155),
-        r = s(59791),
-        c = s.n(r),
-        l = s(81382),
-        n = s(87974),
-        t = s(12115),
-        d = s(60884);
+      var s = i(95155),
+        r = i(59791),
+        c = i.n(r),
+        l = i(81382),
+        t = i(87974),
+        n = i(12115),
+        d = i(60884);
       let o = ({
         children: e,
         amount: a
-      }) => (0, i.jsx)(d.P.div, {
+      }) => (0, s.jsx)(d.P.div, {
         initial: {
           opacity: 0,
           y: -80,
@@ -164,160 +208,152 @@
         },
         children: e
       });
-      var m = s(86278),
-        p = s.n(m),
-        h = s(34023),
-        f = s(81934),
-        _ = s(38256);
+      var m = i(86278),
+        p = i.n(m),
+        h = i(34023),
+        f = i(81934),
+        _ = i(38256),
+        u = i(61836);
 
       function x({
         data: e
       }) {
         let a = e.statsData,
-          s = e.tokenData,
+          i = e.tokenData,
           r = (0, _.kj)(),
-          [d, m] = (0, t.useState)(""),
-          [x, u] = (0, t.useState)(null),
-          b = (1e4 * Math.round(a.users / 1e4)).toLocaleString("en-US"),
-          g = (1e5 * Math.round(a.views / 1e5)).toLocaleString("en-US"),
-          N = (1e4 * Math.round(a.uploads / 1e4)).toLocaleString("en-US"),
-          j = (100 * Math.round(a.premium / 100)).toLocaleString("en-US"),
-          w = x && x < 768 ? .3 : .6;
-        return (0, t.useEffect)(() => {
+          [d, m] = (0, n.useState)(""),
+          [x, b] = (0, n.useState)(null),
+          g = (1e4 * Math.round(a.users / 1e4)).toLocaleString("en-US"),
+          N = (1e5 * Math.round(a.views / 1e5)).toLocaleString("en-US"),
+          j = (1e4 * Math.round(a.uploads / 1e4)).toLocaleString("en-US"),
+          w = (100 * Math.round(a.premium / 100)).toLocaleString("en-US"),
+          v = x && x < 768 ? .3 : .6;
+        return (0, n.useEffect)(() => {
           document.querySelectorAll(`.${c().elementAnimation}`).forEach((e, a) => {
             setTimeout(() => {
               e.classList.add(c().expandAnimation)
             }, 350 + 300 * a)
-          }), u(window.innerWidth)
-        }, []), (0, i.jsx)(i.Fragment, {
-          children: (0, i.jsxs)(l.A, {
-            data: s,
+          }), b(window.innerWidth)
+        }, []), (0, s.jsx)(s.Fragment, {
+          children: (0, s.jsxs)(l.A, {
+            data: i,
             statsData: a,
-            children: [(0, i.jsx)("div", {
+            children: [(0, s.jsx)("div", {
               className: c().landingPage,
-              children: (0, i.jsxs)("div", {
+              children: (0, s.jsxs)("div", {
                 className: c().heroWrapper,
-                children: [(0, i.jsx)("img", {
+                children: [(0, s.jsx)("img", {
                   className: c().gunsGradient,
                   draggable: !1,
                   src: "https://assets.guns.lol/gradient_background.png",
                   alt: ""
-                }), (0, i.jsxs)("div", {
+                }), (0, s.jsxs)("div", {
                   className: `${c().heroContentWrapper} ${c().elementAnimation}`,
-                  children: [(0, i.jsxs)("div", {
+                  children: [(0, s.jsxs)("div", {
                     className: c().heroContent,
-                    children: [(0, i.jsx)(f.A, {
-                      href: "/pricing",
-                      style: {
-                        textDecoration: "none"
-                      },
-                      children: (0, i.jsx)("span", {
-                        className: c().summerPromo,
-                        children: r("common.other.summer_promo")
-                      })
-                    }), (0, i.jsx)("h1", {
+                    children: [(0, s.jsx)("h1", {
                       children: r("landing.hero.title")
-                    }), (0, i.jsx)("p", {
+                    }), (0, s.jsx)("p", {
                       children: r("landing.hero.description")
                     })]
-                  }), (0, i.jsxs)("div", {
+                  }), (0, s.jsxs)("div", {
                     className: c().heroButtons,
-                    children: [(0, i.jsx)(f.A, {
+                    children: [(0, s.jsx)(f.A, {
                       href: "/register?ref=landing_page_hero",
                       className: `${c().registerButton}`,
                       children: r("landing.hero.sign_up")
-                    }), (0, i.jsx)(f.A, {
+                    }), (0, s.jsx)(f.A, {
                       href: "/pricing",
                       className: `${c().pricingButton}`,
                       children: r("landing.hero.view_pricing")
                     })]
                   })]
-                }), (0, i.jsxs)("div", {
+                }), (0, s.jsxs)("div", {
                   className: `${c().heroShowcase} ${c().elementAnimation}`,
-                  children: [(0, i.jsx)("img", {
+                  children: [(0, s.jsx)("img", {
                     src: "https://assets.guns.lol/dashboard.png",
                     alt: ""
-                  }), (0, i.jsx)("img", {
+                  }), (0, s.jsx)("img", {
                     src: "https://assets.guns.lol/profile_showcase.png",
                     alt: ""
                   })]
                 })]
               })
-            }), (0, i.jsx)(o, {
-              amount: w,
-              children: (0, i.jsxs)("div", {
+            }), (0, s.jsx)(o, {
+              amount: v,
+              children: (0, s.jsxs)("div", {
                 className: `${c().statisticsShowcase} ${c().elementAnimation}`,
-                children: [(0, i.jsxs)("div", {
+                children: [(0, s.jsxs)("div", {
                   className: c().statisticsDescription,
-                  children: [(0, i.jsx)("h1", {
+                  children: [(0, s.jsx)("h1", {
                     children: r("landing.stats.title", {
-                      users: (0, i.jsx)("span", {
-                        children: b
+                      users: (0, s.jsx)("span", {
+                        children: g
                       })
                     })
-                  }), (0, i.jsx)("h3", {
+                  }), (0, s.jsx)("h3", {
                     children: r("landing.stats.description")
-                  }), (0, i.jsxs)("div", {
+                  }), (0, s.jsxs)("div", {
                     className: c().statisticBoxWrapper,
-                    children: [(0, i.jsxs)("div", {
+                    children: [(0, s.jsxs)("div", {
                       className: c().statisticBox,
-                      children: [(0, i.jsxs)("div", {
+                      children: [(0, s.jsxs)("div", {
                         className: c().boxWrapper,
-                        children: [(0, i.jsxs)("h1", {
-                          children: [g, "+"]
-                        }), (0, i.jsx)("span", {
+                        children: [(0, s.jsxs)("h1", {
+                          children: [N, "+"]
+                        }), (0, s.jsx)("span", {
                           children: r("landing.stats.profile_views")
                         })]
-                      }), n.A.profileViews]
-                    }), (0, i.jsxs)("div", {
+                      }), t.A.profileViews]
+                    }), (0, s.jsxs)("div", {
                       className: c().statisticBox,
-                      children: [(0, i.jsxs)("div", {
+                      children: [(0, s.jsxs)("div", {
                         className: c().boxWrapper,
-                        children: [(0, i.jsxs)("h1", {
-                          children: [b, "+"]
-                        }), (0, i.jsx)("span", {
+                        children: [(0, s.jsxs)("h1", {
+                          children: [g, "+"]
+                        }), (0, s.jsx)("span", {
                           children: r("landing.stats.users")
                         })]
-                      }), n.A.users]
-                    }), (0, i.jsxs)("div", {
+                      }), t.A.users]
+                    }), (0, s.jsxs)("div", {
                       className: c().statisticBox,
-                      children: [(0, i.jsxs)("div", {
+                      children: [(0, s.jsxs)("div", {
                         className: c().boxWrapper,
-                        children: [(0, i.jsxs)("h1", {
-                          children: [N, "+"]
-                        }), (0, i.jsx)("span", {
+                        children: [(0, s.jsxs)("h1", {
+                          children: [j, "+"]
+                        }), (0, s.jsx)("span", {
                           children: r("landing.stats.file_uploads")
                         })]
-                      }), n.A.fileUploads]
-                    }), (0, i.jsxs)("div", {
+                      }), t.A.fileUploads]
+                    }), (0, s.jsxs)("div", {
                       className: c().statisticBox,
-                      children: [(0, i.jsxs)("div", {
+                      children: [(0, s.jsxs)("div", {
                         className: c().boxWrapper,
-                        children: [(0, i.jsxs)("h1", {
-                          children: [j, "+"]
-                        }), (0, i.jsx)("span", {
+                        children: [(0, s.jsxs)("h1", {
+                          children: [w, "+"]
+                        }), (0, s.jsx)("span", {
                           children: r("landing.stats.subscribers")
                         })]
-                      }), n.A.subscribers]
+                      }), t.A.subscribers]
                     })]
                   })]
-                }), (0, i.jsxs)("div", {
+                }), (0, s.jsxs)("div", {
                   className: c().claimProfileWrapper,
-                  children: [(0, i.jsx)("h1", {
+                  children: [(0, s.jsx)("h1", {
                     className: c().claimProfileText,
                     children: r("landing.stats.claim_profile_text")
-                  }), (0, i.jsxs)("div", {
+                  }), (0, s.jsxs)("div", {
                     className: c().claimProfileBox,
-                    children: [(0, i.jsx)("div", {
+                    children: [(0, s.jsx)("div", {
                       className: c().inputContainerWrapper,
-                      children: (0, i.jsxs)("div", {
+                      children: (0, s.jsxs)("div", {
                         className: `${c().inputWrapperDiv} ${c().inputWrapperURL}`,
-                        children: [(0, i.jsx)("span", {
+                        children: [(0, s.jsx)("span", {
                           className: c().inputWrapperSpan,
-                          children: (0, i.jsx)("h1", {
+                          children: (0, s.jsx)("h1", {
                             children: "guns.lol/"
                           })
-                        }), (0, i.jsx)("input", {
+                        }), (0, s.jsx)("input", {
                           autoCorrect: "off",
                           value: d,
                           onInput: e => {
@@ -328,7 +364,7 @@
                           className: `${c().inputWrapperInput}`
                         })]
                       })
-                    }), (0, i.jsx)(f.A, {
+                    }), (0, s.jsx)(f.A, {
                       href: `/register?claim=${d}&ref=landing_page`,
                       className: `${c().claimNow}`,
                       children: r("landing.stats.claim_now_text")
@@ -336,95 +372,93 @@
                   })]
                 })]
               })
-            }), (0, i.jsx)(o, {
-              amount: w,
-              children: (0, i.jsxs)("div", {
+            }), (0, s.jsx)(o, {
+              amount: v,
+              children: (0, s.jsxs)("div", {
                 className: c().premiumShowcase,
-                children: [(0, i.jsx)("h1", {
+                children: [(0, s.jsx)("h1", {
                   className: c().premiumHeadingText,
                   children: r("landing.pricing.title", {
-                    subscribers: (0, i.jsxs)("span", {
-                      children: [j, "+"]
+                    subscribers: (0, s.jsxs)("span", {
+                      children: [w, "+"]
                     })
                   })
-                }), (0, i.jsxs)("div", {
+                }), (0, s.jsxs)("div", {
                   className: p().plans,
-                  children: [(0, i.jsxs)("div", {
+                  children: [(0, s.jsxs)("div", {
                     className: p().freePlan,
-                    children: [(0, i.jsx)("h1", {
+                    children: [(0, s.jsx)("h1", {
                       className: p().freePlanText,
                       children: r("common.pricing.free_plan.name")
-                    }), (0, i.jsx)("div", {
+                    }), (0, s.jsx)("div", {
                       className: p().price,
-                      children: (0, i.jsxs)("h1", {
-                        children: ["0€", (0, i.jsxs)("span", {
+                      children: (0, s.jsxs)("h1", {
+                        children: [(0, u.$g)(u.q9.free), (0, s.jsxs)("span", {
                           children: ["/", r("common.pricing.lifetime_text")]
                         })]
                       })
-                    }), (0, i.jsx)("h3", {
+                    }), (0, s.jsx)("h3", {
                       children: r("common.pricing.free_plan.description")
-                    }), (0, i.jsxs)("div", {
+                    }), (0, s.jsxs)("div", {
                       className: p().features,
-                      children: [(0, i.jsxs)("span", {
+                      children: [(0, s.jsxs)("span", {
                         children: [h.A.checkmark, " ", r("common.pricing.free_plan.features.basic_customization")]
-                      }), (0, i.jsxs)("span", {
+                      }), (0, s.jsxs)("span", {
                         children: [h.A.checkmark, " ", r("common.pricing.free_plan.features.profile_analytics")]
-                      }), (0, i.jsxs)("span", {
+                      }), (0, s.jsxs)("span", {
                         children: [h.A.checkmark, " ", r("common.pricing.free_plan.features.basic_effects")]
-                      }), (0, i.jsxs)("span", {
+                      }), (0, s.jsxs)("span", {
                         children: [h.A.checkmark, " ", r("common.pricing.free_plan.features.add_your_socials")]
                       })]
-                    }), (0, i.jsx)(f.A, {
+                    }), (0, s.jsx)(f.A, {
                       className: p().purchaseButton,
                       href: "/register?ref=landing_page_pricing",
                       children: r("common.pricing.free_plan.button")
                     })]
-                  }), (0, i.jsxs)("div", {
+                  }), (0, s.jsxs)("div", {
                     className: p().premium,
-                    children: [(0, i.jsxs)("h1", {
+                    children: [(0, s.jsxs)("h1", {
                       className: p().premiumText,
                       children: [h.A.premium, " ", r("common.pricing.premium_plan.name")]
-                    }), (0, i.jsxs)("div", {
+                    }), (0, s.jsxs)("div", {
                       className: p().price,
-                      children: [(0, i.jsxs)("h1", {
-                        children: [(0, i.jsx)("s", {
-                          children: "7,99€"
-                        }), " 6,79€", (0, i.jsxs)("span", {
+                      children: [(0, s.jsxs)("h1", {
+                        children: [(0, u.$g)(u.q9.premium), (0, s.jsxs)("span", {
                           children: ["/", r("common.pricing.lifetime_text")]
                         })]
-                      }), (0, i.jsx)("span", {
+                      }), (0, s.jsx)("span", {
                         className: p().lifetimeText,
                         children: r("common.pricing.lifetime_text_description")
                       })]
-                    }), (0, i.jsx)("h3", {
+                    }), (0, s.jsx)("h3", {
                       children: r("common.pricing.premium_plan.description")
-                    }), (0, i.jsxs)("div", {
+                    }), (0, s.jsxs)("div", {
                       className: p().features,
-                      children: [(0, i.jsxs)("span", {
+                      children: [(0, s.jsxs)("span", {
                         children: [h.A.checkmark, " ", r("common.pricing.premium_plan.features.exclusive_badge")]
-                      }), (0, i.jsxs)("span", {
+                      }), (0, s.jsxs)("span", {
                         children: [h.A.checkmark, " ", r("common.pricing.premium_plan.features.profile_layouts")]
-                      }), (0, i.jsxs)("span", {
+                      }), (0, s.jsxs)("span", {
                         children: [h.A.checkmark, " ", r("common.pricing.premium_plan.features.custom_fonts")]
-                      }), (0, i.jsxs)("span", {
+                      }), (0, s.jsxs)("span", {
                         children: [h.A.checkmark, " ", r("common.pricing.premium_plan.features.typewriter_animation")]
-                      }), (0, i.jsxs)("span", {
+                      }), (0, s.jsxs)("span", {
                         children: [h.A.checkmark, " ", r("common.pricing.premium_plan.features.special_profile_effects")]
-                      }), (0, i.jsxs)("span", {
+                      }), (0, s.jsxs)("span", {
                         children: [h.A.checkmark, " ", r("common.pricing.premium_plan.features.advanced_customization")]
-                      }), (0, i.jsxs)("span", {
+                      }), (0, s.jsxs)("span", {
                         children: [h.A.checkmark, " ", r("common.pricing.premium_plan.features.metadata_seo_customization")]
                       })]
-                    }), (0, i.jsx)(f.A, {
+                    }), (0, s.jsx)(f.A, {
                       className: p().purchaseButton,
                       href: "/pricing",
                       style: {
                         marginTop: "60px"
                       },
                       children: r("landing.pricing.premium_plan_button")
-                    }), (0, i.jsx)("div", {
+                    }), (0, s.jsx)("div", {
                       className: p().mostPopularWrapper,
-                      children: (0, i.jsx)("span", {
+                      children: (0, s.jsx)("span", {
                         className: p().mostPopular,
                         children: r("common.pricing.most_popular")
                       })
@@ -505,7 +539,7 @@
         otherProductsDescription: "GUNS__7d-3d489a2f-ffd15105-1c4e6ac6",
         pricingProduct: "GUNS__bd-cb2a76b5-babb4383-30f2bcec",
         productButtons: "GUNS__ff-b4daf737-8f949ac1-cee0cf61",
-        summerPromo: "GUNS__59-f4588d3c-a4055a80-ef58f684"
+        easterPromo: "GUNS__8f-881f3166-cb84f790-c4ed3bf9"
       }
     }
   },

@@ -145,7 +145,7 @@
     47461: (e, i, a) => {
       "use strict";
       a.d(i, {
-        default: () => j
+        default: () => N
       });
       var r = a(95155),
         c = a(86278),
@@ -153,8 +153,8 @@
         n = a(81382),
         t = a(12115),
         l = a(34023),
-        o = a(66609),
-        m = a(41458),
+        m = a(66609),
+        o = a(41458),
         d = a(50686),
         p = a(98241),
         h = a.n(p),
@@ -163,20 +163,21 @@
         x = a(13699),
         _ = a(81934),
         g = a(38256),
-        b = a(57776);
+        b = a(57776),
+        j = a(61836);
 
-      function j({
+      function N({
         data: e
       }) {
-        let [i, a] = (0, t.useState)(!1), [c, p] = (0, t.useState)(null), [j, N] = (0, t.useState)(null), v = (0, t.useRef)(null), w = (0, t.useRef)(null), k = (0, t.useRef)(null), S = e.statsData, A = e.tokenData, U = (0, t.useRef)(null), G = !!A.session && !!A.session.userId, [y, P] = (0, t.useState)(""), C = (0, g.kj)(), L = async e => {
-          P(e), a(!0)
-        }, B = () => {
+        let [i, a] = (0, t.useState)(!1), [c, p] = (0, t.useState)(null), [N, v] = (0, t.useState)(null), k = (0, t.useRef)(null), w = (0, t.useRef)(null), S = (0, t.useRef)(null), A = e.statsData, U = e.tokenData, G = (0, t.useRef)(null), y = !!U.session && !!U.session.userId, [P, C] = (0, t.useState)(""), L = (0, g.kj)(), B = async e => {
+          C(e), a(!0)
+        }, M = () => {
           w.current && (clearTimeout(w.current), w.current = null)
-        }, F = () => {
-          k.current = null, B(), null === c && N(null)
-        }, M = e => {
-          B(), p(i => i === e ? null : e), N(null), k.current = null
-        }, D = [{
+        }, D = () => {
+          S.current = null, M(), null === c && v(null)
+        }, F = e => {
+          M(), p(i => i === e ? null : e), v(null), S.current = null
+        }, q = [{
           key: "profile_layouts",
           premium: !0
         }, {
@@ -225,33 +226,33 @@
           key: e,
           premium: i
         }) => ({
-          name: C(`pricing.pricing_table_features.${e}.name`),
-          description: C(`pricing.pricing_table_features.${e}.description`),
+          name: L(`pricing.pricing_table_features.${e}.name`),
+          description: L(`pricing.pricing_table_features.${e}.description`),
           premium: i
-        })), T = c ?? j;
+        })), $ = c ?? N;
         return (0, t.useEffect)(() => {
           let e = window.location.hash;
           if (!e) return;
           let i = e.replace("#", "").toLowerCase();
-          ("imagehost" === i || "verified" === i || "custombadge" === i || "other" === i) && U.current && U.current.scrollIntoView({
+          ("imagehost" === i || "verified" === i || "custombadge" === i || "other" === i) && G.current && G.current.scrollIntoView({
             behavior: "smooth",
             block: "center"
           })
         }, []), (0, t.useEffect)(() => () => {
-          B()
+          M()
         }, []), (0, r.jsxs)(r.Fragment, {
           children: [(0, r.jsx)(b.A, {
             opened: i,
             onClose: () => a(!1),
-            title: C("common.pricing.payment_methods"),
+            title: L("common.pricing.payment_methods"),
             centered: !0,
-            children: "custombadge" === y ? (0, r.jsx)(f.A, {
+            children: "custombadge" === P ? (0, r.jsx)(f.A, {
               purchaseSource: x.v.pricing
             }) : (0, r.jsx)(d.A, {
-              type: y,
+              type: P,
               purchaseSource: x.v.pricing
             })
-          }), (0, r.jsx)(o.l$, {
+          }), (0, r.jsx)(m.l$, {
             richColors: !0,
             position: "top-center",
             theme: "dark",
@@ -261,8 +262,8 @@
             },
             visibleToasts: 2
           }), (0, r.jsxs)(n.A, {
-            data: A,
-            statsData: S,
+            data: U,
+            statsData: A,
             children: [(0, r.jsx)("div", {
               className: s().pricingPage,
               children: (0, r.jsxs)("div", {
@@ -271,19 +272,10 @@
                   className: s().heroDescription,
                   children: (0, r.jsxs)("div", {
                     className: s().heroDescriptionInner,
-                    children: [(0, r.jsx)(_.A, {
-                      href: "/pricing",
-                      style: {
-                        textDecoration: "none"
-                      },
-                      children: (0, r.jsx)("span", {
-                        className: s().summerPromo,
-                        children: C("common.other.summer_promo")
-                      })
-                    }), (0, r.jsx)("h1", {
-                      children: C("pricing.hero.title")
+                    children: [(0, r.jsx)("h1", {
+                      children: L("pricing.hero.title")
                     }), (0, r.jsx)("h3", {
-                      children: C("pricing.hero.description")
+                      children: L("pricing.hero.description")
                     })]
                   })
                 }), (0, r.jsxs)("div", {
@@ -294,114 +286,112 @@
                       className: s().freePlan,
                       children: [(0, r.jsx)("h1", {
                         className: s().freePlanText,
-                        children: C("common.pricing.free_plan.name")
+                        children: L("common.pricing.free_plan.name")
                       }), (0, r.jsx)("div", {
                         className: s().price,
                         children: (0, r.jsxs)("h1", {
-                          children: ["0€", (0, r.jsxs)("span", {
-                            children: ["/", C("common.pricing.lifetime_text")]
+                          children: [(0, j.$g)(j.q9.free), (0, r.jsxs)("span", {
+                            children: ["/", L("common.pricing.lifetime_text")]
                           })]
                         })
                       }), (0, r.jsx)("h3", {
-                        children: C("common.pricing.free_plan.description")
+                        children: L("common.pricing.free_plan.description")
                       }), (0, r.jsxs)("div", {
                         className: s().features,
                         children: [(0, r.jsxs)("span", {
-                          children: [l.A.checkmark, " ", C("common.pricing.free_plan.features.basic_customization")]
+                          children: [l.A.checkmark, " ", L("common.pricing.free_plan.features.basic_customization")]
                         }), (0, r.jsxs)("span", {
-                          children: [l.A.checkmark, " ", C("common.pricing.free_plan.features.profile_analytics")]
+                          children: [l.A.checkmark, " ", L("common.pricing.free_plan.features.profile_analytics")]
                         }), (0, r.jsxs)("span", {
-                          children: [l.A.checkmark, " ", C("common.pricing.free_plan.features.basic_effects")]
+                          children: [l.A.checkmark, " ", L("common.pricing.free_plan.features.basic_effects")]
                         }), (0, r.jsxs)("span", {
-                          children: [l.A.checkmark, " ", C("common.pricing.free_plan.features.add_your_socials")]
+                          children: [l.A.checkmark, " ", L("common.pricing.free_plan.features.add_your_socials")]
                         })]
                       }), (0, r.jsx)(_.A, {
                         className: s().purchaseButton,
                         href: "/register?ref=pricing_page",
-                        children: C("common.pricing.free_plan.button")
+                        children: L("common.pricing.free_plan.button")
                       })]
                     }), (0, r.jsxs)("div", {
                       className: s().premium,
                       children: [(0, r.jsxs)("h1", {
                         className: s().premiumText,
-                        children: [l.A.premium, " ", C("common.pricing.premium_plan.name")]
+                        children: [l.A.premium, " ", L("common.pricing.premium_plan.name")]
                       }), (0, r.jsxs)("div", {
                         className: s().price,
                         children: [(0, r.jsxs)("h1", {
-                          children: [(0, r.jsx)("s", {
-                            children: "7,99€"
-                          }), " 6,79€", (0, r.jsxs)("span", {
-                            children: ["/", C("common.pricing.lifetime_text")]
+                          children: [(0, j.$g)(j.q9.premium), (0, r.jsxs)("span", {
+                            children: ["/", L("common.pricing.lifetime_text")]
                           })]
                         }), (0, r.jsx)("span", {
                           className: s().lifetimeText,
-                          children: C("common.pricing.lifetime_text_description")
+                          children: L("common.pricing.lifetime_text_description")
                         })]
                       }), (0, r.jsx)("h3", {
-                        children: C("common.pricing.premium_plan.description")
+                        children: L("common.pricing.premium_plan.description")
                       }), (0, r.jsxs)("div", {
                         className: s().features,
                         children: [(0, r.jsxs)("span", {
-                          children: [l.A.checkmark, " ", C("common.pricing.premium_plan.features.exclusive_badge")]
+                          children: [l.A.checkmark, " ", L("common.pricing.premium_plan.features.exclusive_badge")]
                         }), (0, r.jsxs)("span", {
-                          children: [l.A.checkmark, " ", C("common.pricing.premium_plan.features.profile_layouts")]
+                          children: [l.A.checkmark, " ", L("common.pricing.premium_plan.features.profile_layouts")]
                         }), (0, r.jsxs)("span", {
-                          children: [l.A.checkmark, " ", C("common.pricing.premium_plan.features.custom_fonts")]
+                          children: [l.A.checkmark, " ", L("common.pricing.premium_plan.features.custom_fonts")]
                         }), (0, r.jsxs)("span", {
-                          children: [l.A.checkmark, " ", C("common.pricing.premium_plan.features.typewriter_animation")]
+                          children: [l.A.checkmark, " ", L("common.pricing.premium_plan.features.typewriter_animation")]
                         }), (0, r.jsxs)("span", {
-                          children: [l.A.checkmark, " ", C("common.pricing.premium_plan.features.special_profile_effects")]
+                          children: [l.A.checkmark, " ", L("common.pricing.premium_plan.features.special_profile_effects")]
                         }), (0, r.jsxs)("span", {
-                          children: [l.A.checkmark, " ", C("common.pricing.premium_plan.features.advanced_customization")]
+                          children: [l.A.checkmark, " ", L("common.pricing.premium_plan.features.advanced_customization")]
                         }), (0, r.jsxs)("span", {
-                          children: [l.A.checkmark, " ", C("common.pricing.premium_plan.features.metadata_seo_customization")]
+                          children: [l.A.checkmark, " ", L("common.pricing.premium_plan.features.metadata_seo_customization")]
                         })]
                       }), (0, r.jsxs)("div", {
                         className: s().planButtons,
-                        children: [G ? (0, r.jsx)("span", {
+                        children: [y ? (0, r.jsx)("span", {
                           className: s().purchaseButton,
-                          onClick: () => L("premiumLifetime"),
-                          children: C("common.pricing.premium_plan.button")
+                          onClick: () => B("premiumLifetime"),
+                          children: L("common.pricing.premium_plan.button")
                         }) : (0, r.jsx)(_.A, {
                           className: s().purchaseButton,
                           href: "/login?returnUri=/pricing",
-                          children: C("common.pricing.premium_plan.button")
-                        }), (0, r.jsx)(m.A, {
+                          children: L("common.pricing.premium_plan.button")
+                        }), (0, r.jsx)(o.A, {
                           defaultSelection: "premiumLifetime",
-                          redirectLogin: !G,
+                          redirectLogin: !y,
                           purchaseSource: x.j.pricing
                         })]
                       }), (0, r.jsx)("div", {
                         className: s().mostPopularWrapper,
                         children: (0, r.jsx)("span", {
                           className: s().mostPopular,
-                          children: C("common.pricing.most_popular")
+                          children: L("common.pricing.most_popular")
                         })
                       })]
                     })]
                   }), (0, r.jsxs)("span", {
                     onClick: () => {
-                      v.current && v.current.scrollIntoView({
+                      k.current && k.current.scrollIntoView({
                         behavior: "smooth",
                         block: "start"
                       })
                     },
-                    children: [C("pricing.explore_features"), " ", l.A.arrowPlansDown]
+                    children: [L("pricing.explore_features"), " ", l.A.arrowPlansDown]
                   })]
                 })]
               })
             }), (0, r.jsxs)("div", {
               className: s().allFeatures,
-              ref: v,
+              ref: k,
               style: {
                 paddingTop: "170px"
               },
               children: [(0, r.jsxs)("div", {
                 className: s().allFeaturesDescription,
                 children: [(0, r.jsx)("h1", {
-                  children: C("pricing.pricing_table_title")
+                  children: L("pricing.pricing_table_title")
                 }), (0, r.jsx)("h3", {
-                  children: C("pricing.pricing_table_description")
+                  children: L("pricing.pricing_table_description")
                 })]
               }), (0, r.jsx)("div", {
                 className: s().tableWrapper,
@@ -412,59 +402,59 @@
                     children: [(0, r.jsxs)("div", {
                       className: `${s().matrixPlanCard} ${s().matrixPlanCardPremium}`,
                       children: [(0, r.jsx)("h1", {
-                        children: C("common.pricing.premium_plan.name")
+                        children: L("common.pricing.premium_plan.name")
                       }), (0, r.jsxs)("h1", {
-                        children: ["6,79€", (0, r.jsxs)("span", {
-                          children: ["/", C("common.pricing.lifetime_text")]
+                        children: [(0, j.$g)(j.q9.premium), (0, r.jsxs)("span", {
+                          children: ["/", L("common.pricing.lifetime_text")]
                         })]
-                      }), G ? (0, r.jsx)("span", {
-                        onClick: () => L("premiumLifetime"),
-                        children: C("common.pricing.premium_plan.button")
+                      }), y ? (0, r.jsx)("span", {
+                        onClick: () => B("premiumLifetime"),
+                        children: L("common.pricing.premium_plan.button")
                       }) : (0, r.jsx)(_.A, {
                         href: "/login?returnUri=/pricing",
-                        children: C("common.pricing.premium_plan.button")
+                        children: L("common.pricing.premium_plan.button")
                       })]
                     }), (0, r.jsxs)("div", {
                       className: `${s().matrixPlanCard} ${s().matrixPlanCardFree}`,
                       children: [(0, r.jsx)("h1", {
-                        children: C("common.pricing.free_plan.name")
+                        children: L("common.pricing.free_plan.name")
                       }), (0, r.jsxs)("h1", {
-                        children: ["0€", (0, r.jsxs)("span", {
-                          children: ["/", C("common.pricing.lifetime_text")]
+                        children: [(0, j.$g)(j.q9.free), (0, r.jsxs)("span", {
+                          children: ["/", L("common.pricing.lifetime_text")]
                         })]
                       }), (0, r.jsx)(_.A, {
                         href: "/register?ref=pricing_page_table",
-                        children: C("common.pricing.free_plan.button")
+                        children: L("common.pricing.free_plan.button")
                       })]
                     })]
                   }), (0, r.jsx)("div", {
                     className: s().featuresMatrix,
-                    children: D.map((e, i) => (0, r.jsxs)("div", {
-                      className: `${s().matrixRow} ${T===i?s().matrixRowExpanded:""}`,
+                    children: q.map((e, i) => (0, r.jsxs)("div", {
+                      className: `${s().matrixRow} ${$===i?s().matrixRowExpanded:""}`,
                       onMouseEnter: () => {
-                        window.matchMedia("(hover: hover) and (pointer: fine)").matches && null === c && (k.current = i, B(), w.current = setTimeout(() => {
-                          k.current === i && null === c && N(i)
+                        window.matchMedia("(hover: hover) and (pointer: fine)").matches && null === c && (S.current = i, M(), w.current = setTimeout(() => {
+                          S.current === i && null === c && v(i)
                         }, 250))
                       },
-                      onMouseLeave: F,
-                      onClick: () => M(i),
+                      onMouseLeave: D,
+                      onClick: () => F(i),
                       role: "button",
                       tabIndex: 0,
                       onKeyDown: e => {
-                        ("Enter" === e.key || " " === e.key) && (e.preventDefault(), M(i))
+                        ("Enter" === e.key || " " === e.key) && (e.preventDefault(), F(i))
                       },
                       children: [(0, r.jsxs)("div", {
                         className: s().matrixFeatureContent,
                         children: [(0, r.jsxs)("div", {
                           className: s().matrixFeatureTitle,
                           children: [(0, r.jsx)("span", {
-                            className: `${s().matrixFeatureArrow} ${T===i?s().matrixFeatureArrowOpen:""}`,
+                            className: `${s().matrixFeatureArrow} ${$===i?s().matrixFeatureArrowOpen:""}`,
                             children: l.A.arrowDown
                           }), (0, r.jsx)("h1", {
                             children: e.name
                           })]
                         }), (0, r.jsx)("div", {
-                          className: `${s().matrixFeatureDescription} ${T===i?s().matrixFeatureDescriptionOpen:""}`,
+                          className: `${s().matrixFeatureDescription} ${$===i?s().matrixFeatureDescriptionOpen:""}`,
                           children: (0, r.jsx)("p", {
                             children: e.description
                           })
@@ -480,7 +470,7 @@
                         children: [(0, r.jsxs)("div", {
                           className: s().matrixMobilePlan,
                           children: [(0, r.jsx)("span", {
-                            children: C("common.pricing.premium_plan.name")
+                            children: L("common.pricing.premium_plan.name")
                           }), (0, r.jsx)("div", {
                             className: `${s().matrixAvailability} ${s().matrixAvailabilityPremium}`,
                             children: l.A.check
@@ -488,7 +478,7 @@
                         }), (0, r.jsxs)("div", {
                           className: s().matrixMobilePlan,
                           children: [(0, r.jsx)("span", {
-                            children: C("common.pricing.free_plan.name")
+                            children: L("common.pricing.free_plan.name")
                           }), (0, r.jsx)("div", {
                             className: s().matrixAvailability,
                             children: e.premium ? l.A.cross : l.A.check
@@ -501,11 +491,11 @@
               })]
             }), (0, r.jsxs)("div", {
               className: s().otherProducts,
-              ref: U,
+              ref: G,
               children: [(0, r.jsx)("div", {
                 className: s().otherProductsDescription,
                 children: (0, r.jsx)("h1", {
-                  children: C("pricing.other_products")
+                  children: L("pricing.other_products")
                 })
               }), (0, r.jsxs)("div", {
                 className: s().products,
@@ -513,99 +503,95 @@
                   className: s().pricingProduct,
                   children: [(0, r.jsxs)("div", {
                     children: [(0, r.jsxs)("h1", {
-                      children: [l.A.customBadge, " ", C("common.pricing.custom_badge.name")]
+                      children: [l.A.customBadge, " ", L("common.pricing.custom_badge.name")]
                     }), (0, r.jsxs)("div", {
                       className: s().price,
                       children: [(0, r.jsxs)("h1", {
-                        children: [(0, r.jsx)("s", {
-                          children: "8,99€"
-                        }), " 7,65€", (0, r.jsxs)("span", {
-                          children: ["/", C("common.pricing.lifetime_text")]
+                        children: [(0, j.$g)(j.q9.customBadge), (0, r.jsxs)("span", {
+                          children: ["/", L("common.pricing.lifetime_text")]
                         })]
                       }), (0, r.jsx)("span", {
                         className: s().lifetimeText,
-                        children: C("common.pricing.lifetime_text_description")
+                        children: L("common.pricing.lifetime_text_description")
                       })]
                     }), (0, r.jsx)("h3", {
-                      children: C("common.pricing.custom_badge.description")
+                      children: L("common.pricing.custom_badge.description")
                     }), (0, r.jsxs)("div", {
                       className: s().features,
                       children: [(0, r.jsxs)("span", {
-                        children: [l.A.checkmark, " ", C("common.pricing.custom_badge.features.custom")]
+                        children: [l.A.checkmark, " ", L("common.pricing.custom_badge.features.custom")]
                       }), (0, r.jsxs)("span", {
-                        children: [l.A.checkmark, " ", C("common.pricing.custom_badge.features.exclusive_appearance")]
+                        children: [l.A.checkmark, " ", L("common.pricing.custom_badge.features.exclusive_appearance")]
                       }), (0, r.jsxs)("span", {
-                        children: [l.A.checkmark, " ", C("common.pricing.custom_badge.features.editable_anytime")]
+                        children: [l.A.checkmark, " ", L("common.pricing.custom_badge.features.editable_anytime")]
                       })]
                     })]
                   }), (0, r.jsxs)("div", {
                     className: s().productButtons,
-                    children: [G ? (0, r.jsx)("span", {
+                    children: [y ? (0, r.jsx)("span", {
                       className: s().purchaseButton,
-                      onClick: () => L("custombadge"),
-                      children: C("common.pricing.custom_badge.button")
+                      onClick: () => B("custombadge"),
+                      children: L("common.pricing.custom_badge.button")
                     }) : (0, r.jsx)(_.A, {
                       className: s().purchaseButton,
                       href: "/login?returnUri=/pricing",
-                      children: C("common.pricing.custom_badge.button")
-                    }), (0, r.jsx)(m.A, {
+                      children: L("common.pricing.custom_badge.button")
+                    }), (0, r.jsx)(o.A, {
                       defaultSelection: "custombadge",
-                      redirectLogin: !G,
+                      redirectLogin: !y,
                       purchaseSource: x.j.pricing
                     })]
                   }), (0, r.jsx)("div", {
                     className: s().mostPopularWrapper,
                     children: (0, r.jsx)("span", {
                       className: s().mostPopular,
-                      children: C("common.pricing.custom_badge.new")
+                      children: L("common.pricing.custom_badge.new")
                     })
                   })]
                 }), (0, r.jsxs)("div", {
                   className: s().pricingProduct,
                   children: [(0, r.jsxs)("div", {
                     children: [(0, r.jsxs)("h1", {
-                      children: [l.A.imagehost, " ", C("common.pricing.imagehost_plan.name")]
+                      children: [l.A.imagehost, " ", L("common.pricing.imagehost_plan.name")]
                     }), (0, r.jsxs)("div", {
                       className: s().price,
                       children: [(0, r.jsxs)("h1", {
-                        children: [(0, r.jsx)("s", {
-                          children: "4,99€"
-                        }), " 4,25€", (0, r.jsxs)("span", {
-                          children: ["/", C("common.pricing.lifetime_text")]
+                        children: [(0, j.$g)(j.q9.imagehost), (0, r.jsxs)("span", {
+                          children: ["/", L("common.pricing.lifetime_text")]
                         })]
                       }), (0, r.jsx)("span", {
                         className: s().lifetimeText,
-                        children: C("common.pricing.lifetime_text_description")
+                        children: L("common.pricing.lifetime_text_description")
                       })]
                     }), (0, r.jsx)("h3", {
-                      children: C("common.pricing.imagehost_plan.description")
+                      children: L("common.pricing.imagehost_plan.description")
                     }), (0, r.jsxs)("div", {
                       className: s().features,
                       children: [(0, r.jsxs)("span", {
-                        children: [l.A.checkmark, " ", C("common.pricing.imagehost_plan.features.custom_domain")]
+                        children: [l.A.checkmark, " ", L("common.pricing.imagehost_plan.features.custom_domain")]
                       }), (0, r.jsxs)("span", {
-                        children: [l.A.checkmark, " ", C("common.pricing.imagehost_plan.features.public_domains")]
+                        children: [l.A.checkmark, " ", L("common.pricing.imagehost_plan.features.public_domains")]
                       }), (0, r.jsxs)("span", {
-                        children: [l.A.checkmark, " ", C("common.pricing.imagehost_plan.features.exclusive_badge")]
+                        children: [l.A.checkmark, " ", L("common.pricing.imagehost_plan.features.exclusive_badge")]
                       }), (0, r.jsxs)("span", {
-                        children: [l.A.checkmark, " ", C("common.pricing.imagehost_plan.features.fast_secure_uploads")]
+                        children: [l.A.checkmark, " ", L("common.pricing.imagehost_plan.features.fast_secure_uploads")]
                       }), (0, r.jsxs)("span", {
-                        children: [l.A.checkmark, " ", C("common.pricing.imagehost_plan.features.advanced_image_gallery")]
+                        children: [l.A.checkmark, " ", L("common.pricing.imagehost_plan.features.advanced_image_gallery")]
                       })]
                     })]
                   }), (0, r.jsxs)("div", {
                     className: s().productButtons,
-                    children: [G ? (0, r.jsx)("span", {
+                    children: [y ? (0, r.jsx)("span", {
                       className: s().purchaseButton,
-                      onClick: () => L("imagehost"),
-                      children: C("common.pricing.imagehost_plan.button")
+                      onClick: () => B("imagehost"),
+                      children: L("common.pricing.imagehost_plan.button")
                     }) : (0, r.jsx)(_.A, {
                       className: s().purchaseButton,
                       href: "/login?returnUri=/pricing",
-                      children: C("common.pricing.imagehost_plan.button")
-                    }), (0, r.jsx)(m.A, {
+                      children: L("common.pricing.imagehost_plan.button")
+                    }), (0, r.jsx)(o.A, {
                       defaultSelection: "imagehost",
-                      redirectLogin: !G,
+                      redirectLogin: !y,
                       purchaseSource: x.j.pricing
                     })]
                   })]
@@ -613,44 +599,42 @@
                   className: s().pricingProduct,
                   children: [(0, r.jsxs)("div", {
                     children: [(0, r.jsxs)("h1", {
-                      children: [l.A.verified, " ", C("common.pricing.verified.name")]
+                      children: [l.A.verified, " ", L("common.pricing.verified.name")]
                     }), (0, r.jsxs)("div", {
                       className: s().price,
                       children: [(0, r.jsxs)("h1", {
-                        children: [(0, r.jsx)("s", {
-                          children: "14,99€"
-                        }), " 12,75€", (0, r.jsxs)("span", {
-                          children: ["/", C("common.pricing.lifetime_text")]
+                        children: [(0, j.$g)(j.q9.verified), (0, r.jsxs)("span", {
+                          children: ["/", L("common.pricing.lifetime_text")]
                         })]
                       }), (0, r.jsx)("span", {
                         className: s().lifetimeText,
-                        children: C("common.pricing.lifetime_text_description")
+                        children: L("common.pricing.lifetime_text_description")
                       })]
                     }), (0, r.jsx)("h3", {
-                      children: C("common.pricing.verified.description")
+                      children: L("common.pricing.verified.description")
                     }), (0, r.jsxs)("div", {
                       className: s().features,
                       children: [(0, r.jsxs)("span", {
-                        children: [l.A.checkmark, " ", C("common.pricing.verified.features.exclusive_verified_badge")]
+                        children: [l.A.checkmark, " ", L("common.pricing.verified.features.exclusive_verified_badge")]
                       }), (0, r.jsxs)("span", {
-                        children: [l.A.checkmark, " ", C("common.pricing.verified.features.special_role")]
+                        children: [l.A.checkmark, " ", L("common.pricing.verified.features.special_role")]
                       }), (0, r.jsxs)("span", {
-                        children: [l.A.checkmark, " ", C("common.pricing.verified.features.trust_credibility")]
+                        children: [l.A.checkmark, " ", L("common.pricing.verified.features.trust_credibility")]
                       })]
                     })]
                   }), (0, r.jsxs)("div", {
                     className: s().productButtons,
-                    children: [G ? (0, r.jsx)("span", {
+                    children: [y ? (0, r.jsx)("span", {
                       className: s().purchaseButton,
-                      onClick: () => L("verified"),
-                      children: C("common.pricing.verified.button")
+                      onClick: () => B("verified"),
+                      children: L("common.pricing.verified.button")
                     }) : (0, r.jsx)(_.A, {
                       className: s().purchaseButton,
                       href: "/login?returnUri=/pricing",
-                      children: C("common.pricing.verified.button")
-                    }), (0, r.jsx)(m.A, {
+                      children: L("common.pricing.verified.button")
+                    }), (0, r.jsx)(o.A, {
                       defaultSelection: "verified",
-                      redirectLogin: !G,
+                      redirectLogin: !y,
                       purchaseSource: x.j.pricing
                     })]
                   })]
@@ -664,7 +648,7 @@
     79157: (e, i, a) => {
       "use strict";
       a.d(i, {
-        A: () => d
+        A: () => p
       });
       var r = a(95155),
         c = a(12115),
@@ -672,41 +656,31 @@
         n = a.n(s),
         t = a(97478),
         l = a(3434),
-        o = a(50686),
-        m = a(38256);
+        m = a(50686),
+        o = a(38256),
+        d = a(61836);
 
-      function d({
+      function p({
         purchaseSource: e = "unknown"
       }) {
-        let i = (0, m.kj)(),
+        let i = (0, o.kj)(),
           [a, s] = (0, c.useState)(1),
-          [d, p] = (0, c.useState)(!1);
-
-        function h(e) {
-          let i = 7.65 * e ** .95,
-            a = 7.65 * e,
-            r = (1 - i / a) * 100;
-          return {
-            totalPrice: parseFloat(i.toFixed(2)),
-            rawPrice: parseFloat(a.toFixed(2)),
-            discountPercent: parseFloat(r.toFixed(0))
-          }
-        }
-        let u = async e => {
-          p(!0)
-        }, f = a > 1 ? (0, r.jsxs)(r.Fragment, {
-          children: [h(a).totalPrice, "€ ", (0, r.jsxs)("s", {
-            children: [h(a).rawPrice, "€"]
-          })]
-        }) : (0, r.jsxs)(r.Fragment, {
-          children: [h(a).totalPrice, "€"]
-        });
+          [p, h] = (0, c.useState)(!1),
+          u = async e => {
+            h(!0)
+          }, f = a > 1 ? (0, r.jsxs)(r.Fragment, {
+            children: [(0, d.o3)(a).totalPrice, "€ ", (0, r.jsxs)("s", {
+              children: [(0, d.o3)(a).rawPrice, "€"]
+            })]
+          }) : (0, r.jsxs)(r.Fragment, {
+            children: [(0, d.o3)(a).totalPrice, "€"]
+          });
         return (0, r.jsx)(r.Fragment, {
-          children: d ? (0, r.jsx)(o.A, {
+          children: p ? (0, r.jsx)(m.A, {
             type: "customBadge",
             customBadgeData: {
               amount: a,
-              totalPrice: h(a).totalPrice
+              totalPrice: (0, d.o3)(a).totalPrice
             },
             purchaseSource: e
           }) : (0, r.jsxs)("div", {
@@ -724,7 +698,7 @@
                 children: i("modals.custom_badge.information_text")
               }), (0, r.jsx)("h3", {
                 children: i("modals.custom_badge.description", {
-                  percentage: h(a).discountPercent,
+                  percentage: (0, d.o3)(a).discountPercent,
                   quantity: a
                 })
               })]
@@ -807,7 +781,7 @@
         otherProductsDescription: "GUNS__7d-3d489a2f-ffd15105-1c4e6ac6",
         pricingProduct: "GUNS__bd-cb2a76b5-babb4383-30f2bcec",
         productButtons: "GUNS__ff-b4daf737-8f949ac1-cee0cf61",
-        summerPromo: "GUNS__59-f4588d3c-a4055a80-ef58f684"
+        easterPromo: "GUNS__8f-881f3166-cb84f790-c4ed3bf9"
       }
     },
     95331: (e, i, a) => {
