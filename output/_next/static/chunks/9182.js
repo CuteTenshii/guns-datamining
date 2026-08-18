@@ -1,5 +1,5 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [2552], {
+  [9182], {
     2805: e => {
       e.exports = {
         socialButtons: "GUNS__32-620ea355-a1cc4a11-0c360b6c",
@@ -21,83 +21,89 @@
         header: "GUNS__c6-de21a81f-58192bf7-b172e0ea",
         title: "GUNS__2a-e1e76140-19cae230-28ef5727",
         closeButton: "GUNS__8f-a6cb3991-90ec747f-4d7f9d93",
-        body: "GUNS__28-d82a957e-1d95260e-e1b07846"
+        body: "GUNS__28-d82a957e-1d95260e-e1b07846",
+        drawer: "GUNS__1e-a2cb22f3-a6b37ef1-2fe16456",
+        drawerHandleRow: "GUNS__60-2921f6d3-fbed4139-e99dd41a",
+        drawerHandle: "GUNS__90-f4bdf061-c1f315b9-62244f64",
+        visuallyHidden: "GUNS__9f-457904b5-64ff6868-ee8e9a39"
       }
     },
-    6768: (e, a, t) => {
+    6768: (e, t, a) => {
       "use strict";
-      t.d(a, {
+      a.d(t, {
         A: () => u
       });
-      var c = t(95155),
-        r = t(12115),
-        s = t(2805),
-        d = t.n(s),
-        n = t(14079),
-        l = t(38256);
-      let o = t(87358).env.NEXT_PUBLIC_API_URL || "https://guns.lol",
+      var c = a(95155),
+        r = a(12115),
+        s = a(2805),
+        n = a.n(s),
+        d = a(14079),
+        l = a(86891);
+      let o = a(87358).env.NEXT_PUBLIC_API_URL || "https://guns.lol",
         i = "guns_last_social_provider",
         f = "guns_last_social_used_at";
 
       function u({
         returnUri: e,
-        setError: a,
-        actionLabel: t = "continue",
+        setError: t,
+        actionLabel: a = "continue",
         usernameHint: s = "",
-        refParameter: u = ""
+        refParameter: u = "",
+        accountAddition: _ = !1
       }) {
-        let _ = (0, l.kj)(),
-          [b, h] = (0, r.useState)(null),
-          [m, p] = (0, r.useState)(null),
-          [N, w] = (0, r.useState)(""),
+        let b = (0, l.kj)(),
+          [h, m] = (0, r.useState)(null),
+          [p, w] = (0, r.useState)(null),
+          [N, v] = (0, r.useState)(""),
           g = {
             google: {
-              continue: _("auth.social.continue_with_google"),
-              signup: _("auth.social.signup_with_google"),
-              icon: n.A.google
+              continue: b("auth.social.continue_with_google"),
+              signup: b("auth.social.signup_with_google"),
+              icon: d.A.google
             }
           };
         (0, r.useEffect)(() => {
           let e = window.localStorage.getItem(i),
-            a = Number(window.localStorage.getItem(f) || "0");
-          "google" === e && a > 0 && (p("google"), w(_("auth.social.last_used")))
+            t = Number(window.localStorage.getItem(f) || "0");
+          "google" === e && t > 0 && (w("google"), v(b("auth.social.last_used")))
         }, []);
-        let S = async t => {
+        let S = async a => {
           try {
-            h(t), a?.("");
+            m(a), t?.("");
             {
               let e = Date.now();
-              window.localStorage.setItem(i, t), window.localStorage.setItem(f, String(e))
+              window.localStorage.setItem(i, a), window.localStorage.setItem(f, String(e))
             }
             let c = new URLSearchParams({
-                returnUri: e
-              }),
-              r = s.toLowerCase().replace(/[^a-z0-9._]/g, "").slice(0, 16);
+              returnUri: e
+            });
+            _ && c.set("accountAddition", "true");
+            let r = s.toLowerCase().replace(/[^a-z0-9._]/g, "").slice(0, 16);
             r && c.set("usernameHint", r), u && c.set("ref", u);
-            let d = await fetch(`${o}/api/auth/oauth/${t}/url?${c.toString()}`);
-            if (!d.ok) throw Error("Could not start sign-in");
-            let n = await d.json();
-            if (!n?.url) throw Error("Missing redirect url");
-            window.location.href = n.url
+            let n = await fetch(`${o}/api/auth/oauth/${a}/url?${c.toString()}`);
+            if (!n.ok) throw Error("Could not start sign-in");
+            let d = await n.json();
+            if (!d?.url) throw Error("Missing redirect url");
+            window.location.href = d.url
           } catch {
-            h(null), a?.(_("auth.social.error_start"))
+            m(null), t?.(b("auth.social.error_start"))
           }
         };
         return (0, c.jsx)("div", {
-          className: d().socialButtons,
+          className: n().socialButtons,
           children: ["google"].map(e => {
-            let a = g[e],
-              r = b === e;
+            let t = g[e],
+              r = h === e;
             return (0, c.jsxs)("button", {
               type: "button",
-              className: d().socialButton,
+              className: n().socialButton,
               onClick: () => S(e),
-              disabled: null !== b,
-              children: [a.icon, (0, c.jsx)("span", {
-                className: d().buttonText,
-                children: r ? _("auth.social.redirecting") : a[t]
-              }), "continue" === t && m === e && N && (0, c.jsx)("span", {
-                className: d().lastUsedBadge,
+              disabled: null !== h,
+              children: [t.icon, (0, c.jsx)("span", {
+                className: n().buttonText,
+                children: r ? b("auth.social.redirecting") : t[a]
+              }), "continue" === a && p === e && N && (0, c.jsx)("span", {
+                className: n().lastUsedBadge,
                 children: N
               })]
             }, e)
@@ -105,13 +111,270 @@
         })
       }
     },
-    14079: (e, a, t) => {
+    13782: (e, t, a) => {
       "use strict";
-      t.d(a, {
+      a.d(t, {
+        A: () => b
+      });
+      var c = a(95155),
+        r = a(12115),
+        s = a(47650),
+        n = a(5677),
+        d = a(5585),
+        l = a.n(d);
+      let o = "(max-width: 768px)",
+        i = e => {
+          if ("function" != typeof window.matchMedia) return () => void 0;
+          let t = window.matchMedia(o);
+          return "function" == typeof t.addEventListener ? (t.addEventListener("change", e), () => t.removeEventListener("change", e)) : (t.addListener(e), () => t.removeListener(e))
+        },
+        f = () => "function" == typeof window.matchMedia && window.matchMedia(o).matches,
+        u = () => !1,
+        _ = (0, c.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          width: "1em",
+          height: "1em",
+          viewBox: "7.43 7.45 9.15 9.15",
+          children: (0, c.jsx)("path", {
+            fill: "currentColor",
+            d: "m12 13.4l-2.9 2.9q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7l2.9-2.9l-2.9-2.875q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l2.9 2.9l2.875-2.9q.275-.275.7-.275t.7.275q.3.3.3.713t-.3.687L13.375 12l2.9 2.9q.275.275.275.7t-.275.7q-.3.3-.712.3t-.688-.3z"
+          })
+        });
+
+      function b({
+        opened: e,
+        onClose: t,
+        onOverlayClose: a,
+        onCloseButtonClick: d,
+        onEscapeClose: o,
+        title: b,
+        centered: h = !0,
+        size: m = "auto",
+        closeOnOverlayClick: p = !0,
+        withCloseButton: w = !0,
+        centerTitle: N = !1,
+        className: v,
+        bodyClassName: g,
+        mobileVariant: S = "drawer",
+        children: x
+      }) {
+        let [U, G] = (0, r.useState)(e), [y, j] = (0, r.useState)(!1), [C, T] = (0, r.useState)(null), k = (0, r.useRef)(null), B = (0, r.useRef)(null), L = (0, r.useRef)(null), E = (0, r.useRef)(null), q = (0, r.useRef)(!1), M = (0, r.useSyncExternalStore)(i, f, u) && "drawer" === S, A = e => {
+          if (!e) return !1;
+          let t = window.getComputedStyle(e).overflowY;
+          return e.scrollHeight > e.clientHeight + 1 && ("auto" === t || "scroll" === t)
+        }, $ = e => {
+          let t = B.current;
+          if (!t || !e) return null;
+          let a = e;
+          for (; a && t.contains(a);) {
+            if (A(a)) return a;
+            a = a.parentElement
+          }
+          return null
+        }, D = (e, t) => t < 0 ? e.scrollTop > 0 : !(t > 0) || e.scrollTop + e.clientHeight < e.scrollHeight, H = (0, r.useCallback)(e => {
+          "overlay" === e ? (a ?? t)() : "escape" === e ? (o ?? t)() : "button" === e ? (d ?? t)() : t()
+        }, [t, d, o, a]);
+        (0, r.useEffect)(() => {
+          if (e) {
+            G(!0), j(!1);
+            return
+          }
+          return j(!0), k.current = setTimeout(() => {
+            G(!1), j(!1)
+          }, M ? 320 : 250), () => {
+            k.current && (clearTimeout(k.current), k.current = null)
+          }
+        }, [M, e]), (0, r.useEffect)(() => {
+          if ("undefined" == typeof document) return;
+          let e = document.createElement("div");
+          return document.body.appendChild(e), T(e), () => {
+            document.body.removeChild(e), T(null)
+          }
+        }, []), (0, r.useEffect)(() => {
+          if (!U) return;
+          let e = e => {
+              if ("Escape" === e.key) {
+                if (M) return;
+                H("escape");
+                return
+              } ["ArrowUp", "ArrowDown", "PageUp", "PageDown", "Home", "End", " "].includes(e.key) && !B.current?.contains(e.target) && e.preventDefault()
+            },
+            t = e => {
+              let t = B.current;
+              if (!t) return void e.preventDefault();
+              let a = e.target;
+              if (!(a && t.contains(a))) return void e.preventDefault();
+              if (!M) {
+                if (e instanceof WheelEvent) {
+                  let t = $(a);
+                  t && D(t, e.deltaY) || e.preventDefault();
+                  return
+                }
+                if (e instanceof TouchEvent) {
+                  let t = e.touches[0]?.clientY ?? null,
+                    c = E.current;
+                  E.current = t;
+                  let r = $(a);
+                  r && D(r, null !== c && null !== t ? c - t : 0) || e.preventDefault()
+                }
+              }
+            },
+            a = {
+              passive: !1
+            };
+          return window.addEventListener("keydown", e, {
+            passive: !1
+          }), window.addEventListener("wheel", t, a), window.addEventListener("touchmove", t, a), () => {
+            window.removeEventListener("keydown", e), window.removeEventListener("wheel", t, a), window.removeEventListener("touchmove", t, a)
+          }
+        }, [M, D, $, U, H]), (0, r.useEffect)(() => {
+          if (!U) return;
+          let e = e => {
+            if (!B.current?.contains(e.target)) {
+              E.current = null;
+              return
+            }
+            E.current = e.touches[0]?.clientY ?? null
+          };
+          return window.addEventListener("touchstart", e, {
+            passive: !0
+          }), () => window.removeEventListener("touchstart", e)
+        }, [U]), (0, r.useEffect)(() => {
+          if (!M || !e || "undefined" == typeof document) return;
+          let t = document.body,
+            a = () => {
+              "none" === t.style.pointerEvents && t.style.removeProperty("pointer-events")
+            };
+          a();
+          let c = new MutationObserver(a);
+          return c.observe(t, {
+            attributes: !0,
+            attributeFilter: ["style"]
+          }), () => {
+            c.disconnect(), a()
+          }
+        }, [M, e]);
+        let I = y ? "closing" : "open",
+          W = N ? {
+            textAlign: "center",
+            width: "100%"
+          } : {},
+          R = b || w ? (0, c.jsxs)("div", {
+            className: l().header,
+            children: [b && (0, c.jsx)("h2", {
+              className: l().title,
+              style: W,
+              children: b
+            }), w && (0, c.jsx)("button", {
+              type: "button",
+              className: l().closeButton,
+              onClick: M ? () => H("button") : d ?? t,
+              children: _
+            })]
+          }) : null,
+          P = (0, r.useCallback)((e, t) => {
+            let a = Math.max(0, Math.min(1, t)),
+              c = L.current;
+            c && (c.style.transition = "none", c.style.opacity = `${1-a}`)
+          }, []),
+          z = (0, r.useCallback)((e, t) => {
+            let a = L.current;
+            a && (a.style.transition = `opacity ${t?.5:.3}s cubic-bezier(0.32, 0.72, 0, 1)`, a.style.opacity = t ? "1" : "0")
+          }, []);
+        if (M) return (0, c.jsx)(n._s.Root, {
+          open: e,
+          onOpenChange: e => {
+            e || H("drag")
+          },
+          modal: !1,
+          noBodyStyles: !0,
+          repositionInputs: !1,
+          onDrag: P,
+          onRelease: z,
+          children: (0, c.jsxs)(n._s.Portal, {
+            children: [(0, c.jsx)("div", {
+              ref: L,
+              className: l().overlay,
+              "data-variant": "drawer",
+              "data-state": e ? "open" : "closing",
+              onClick: () => {
+                p && H("overlay")
+              }
+            }), (0, c.jsxs)(n._s.Content, {
+              ref: B,
+              className: `${l().drawer} ${v??""}`,
+              onEscapeKeyDown: e => {
+                e.preventDefault(), H("escape")
+              },
+              onInteractOutside: e => e.preventDefault(),
+              children: [(0, c.jsx)("div", {
+                className: l().drawerHandleRow,
+                children: (0, c.jsx)(n._s.Handle, {
+                  className: l().drawerHandle
+                })
+              }), !b && (0, c.jsx)(n._s.Title, {
+                className: l().visuallyHidden,
+                children: "Dialog"
+              }), (b || w) && (0, c.jsxs)("div", {
+                className: l().header,
+                children: [b && (0, c.jsx)(n._s.Title, {
+                  asChild: !0,
+                  children: (0, c.jsx)("h2", {
+                    className: l().title,
+                    style: W,
+                    children: b
+                  })
+                }), w && (0, c.jsx)("button", {
+                  type: "button",
+                  className: l().closeButton,
+                  onClick: () => H("button"),
+                  children: _
+                })]
+              }), (0, c.jsx)("div", {
+                className: `${l().body} ${g??""}`,
+                children: x
+              })]
+            })]
+          })
+        });
+        if (!U || !C) return null;
+        let V = "number" == typeof m ? `${m}px` : m,
+          O = {};
+        V && "auto" !== V ? O.maxWidth = V : (O.width = "fit-content", O.maxWidth = "clamp(100%, 100%, 850px)", O.boxSizing = "border-box");
+        let Y = (0, c.jsx)("div", {
+          className: l().overlay,
+          "data-centered": h,
+          "data-state": I,
+          onMouseDown: e => {
+            q.current = e.target === e.currentTarget
+          },
+          onClick: e => {
+            let t = e.target === e.currentTarget,
+              a = p && t && q.current;
+            q.current = !1, a && H("overlay")
+          },
+          children: (0, c.jsxs)("div", {
+            className: `${l().modal} ${v??""}`,
+            "data-state": I,
+            style: O,
+            ref: B,
+            onClick: e => e.stopPropagation(),
+            children: [R, (0, c.jsx)("div", {
+              className: `${l().body} ${g??""}`,
+              children: x
+            })]
+          })
+        });
+        return (0, s.createPortal)(Y, C)
+      }
+    },
+    14079: (e, t, a) => {
+      "use strict";
+      a.d(t, {
         A: () => r
       });
-      var c = t(95155);
-      t(12115);
+      var c = a(95155);
+      a(12115);
       let r = {
         mfaToken: (0, c.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
@@ -238,6 +501,8 @@
       e.exports = {
         page: "GUNS__46-85dd92a2-f2354121-569442c3",
         panel: "GUNS__7b-a367b144-ef9b1f6d-e8949708",
+        embeddedPage: "GUNS__87-65222ec3-b5243866-c2d1f207",
+        embeddedPanel: "GUNS__7c-313613d4-6b77535b-2192a398",
         panelHeaderAction: "GUNS__f3-4ad71b9f-2dac4266-0398c8d4",
         brand: "GUNS__c3-0509edcf-2b9ff916-f83c6df9",
         brandLink: "GUNS__3c-c4bb5e38-d1897d45-fde07dac",
@@ -316,21 +581,21 @@
         footerContainer: "GUNS__f5-85f750c2-b172755c-dfcf1f52"
       }
     },
-    37897: (e, a, t) => {
+    37897: (e, t, a) => {
       "use strict";
-      t.d(a, {
+      a.d(t, {
         A: () => l
       });
-      var c = t(95155),
-        r = t(12115),
-        s = t(98241),
-        d = t.n(s),
-        n = t(54834);
+      var c = a(95155),
+        r = a(12115),
+        s = a(98241),
+        n = a.n(s),
+        d = a(54834);
 
       function l({
         featureName: e,
-        onChangeFunction: a,
-        value: t,
+        onChangeFunction: t,
+        value: a,
         placeholder: s,
         icon: l,
         prefix: o,
@@ -338,303 +603,149 @@
         viewPassword: f,
         onKeyPress: u,
         isImageUrl: _,
-        type: b = "text",
-        ...h
+        iconInside: b,
+        type: h = "text",
+        ...m
       }) {
-        let [m, p] = (0, r.useState)(!!f), {
+        let [p, w] = (0, r.useState)(!!f), {
           onInput: N,
-          onChange: w,
+          onChange: v,
           maxLength: g,
           ...S
-        } = h, v = g ?? (f || "password" === b ? 72 : void 0);
+        } = m, x = g ?? (f || "password" === h ? 72 : void 0);
         return (0, r.useEffect)(() => {
-          p(!!f)
+          w(!!f)
         }, [f]), (0, c.jsxs)("div", {
-          className: d().inputContainerWrapper,
+          className: n().inputContainerWrapper,
           "data-dashboard-feature-label": "string" == typeof e ? e : void 0,
           children: [e && (0, c.jsx)("h1", {
-            className: d().featureName,
+            className: n().featureName,
             children: e
           }), (0, c.jsxs)("div", {
-            className: `${d().inputWrapperDiv} ${o&&d().inputWrapperURL}`,
+            className: `${n().inputWrapperDiv} ${o&&n().inputWrapperURL} ${b&&n().inputWrapperIconInside}`,
             children: [(0, c.jsxs)("span", {
-              className: d().inputWrapperSpan,
+              className: n().inputWrapperSpan,
               style: {
-                position: o ? "absolute" : "static"
+                position: o || b ? "absolute" : "static"
               },
               children: [_ ? (0, c.jsx)("img", {
                 src: l,
                 alt: "icon",
-                className: d().inputWrapperIconImage
+                className: n().inputWrapperIconImage
               }) : l, o && (0, c.jsx)("h1", {
                 children: o
               })]
             }), f && (0, c.jsx)("p", {
               onClick: () => {
-                p(!m)
+                w(!p)
               },
-              children: m ? n.A.hidePassword : n.A.views
+              children: p ? d.A.hidePassword : d.A.views
             }), (0, c.jsx)("input", {
               autoCorrect: "off",
-              type: f ? m ? "password" : "text" : b,
+              type: f ? p ? "password" : "text" : h,
               onKeyDown: u,
-              value: t,
+              value: a,
               style: {
                 paddingLeft: o ? i : "",
                 paddingRight: f ? 47 : ""
               },
               placeholder: s,
-              className: d().inputWrapperInput,
+              className: n().inputWrapperInput,
               onInput: e => {
-                N?.(e), w?.(e), a?.(e)
+                N?.(e), v?.(e), t?.(e)
               },
-              maxLength: v,
+              maxLength: x,
               ...S
             })]
           })]
         })
       }
     },
-    57776: (e, a, t) => {
+    77570: (e, t, a) => {
       "use strict";
-      t.d(a, {
-        A: () => l
+      a.d(t, {
+        A: () => d
       });
-      var c = t(95155),
-        r = t(12115),
-        s = t(47650),
-        d = t(5585),
-        n = t.n(d);
+      var c = a(95155),
+        r = a(81934),
+        s = a(18943),
+        n = a.n(s);
 
-      function l({
-        opened: e,
-        onClose: a,
-        onOverlayClose: t,
-        onCloseButtonClick: d,
-        onEscapeClose: l,
-        title: o,
-        centered: i = !0,
-        size: f = "auto",
-        closeOnOverlayClick: u = !0,
-        withCloseButton: _ = !0,
-        centerTitle: b = !1,
-        className: h,
-        bodyClassName: m,
-        children: p
-      }) {
-        let [N, w] = (0, r.useState)(e), [g, S] = (0, r.useState)(!1), [v, U] = (0, r.useState)(null), x = (0, r.useRef)(null), G = (0, r.useRef)(null), j = (0, r.useRef)(null), y = (0, r.useRef)(!1), C = e => {
-          if (!e) return !1;
-          let a = window.getComputedStyle(e).overflowY;
-          return e.scrollHeight > e.clientHeight + 1 && ("auto" === a || "scroll" === a)
-        }, T = e => {
-          let a = G.current;
-          if (!a || !e) return null;
-          let t = e;
-          for (; t && a.contains(t);) {
-            if (C(t)) return t;
-            t = t.parentElement
-          }
-          return null
-        }, k = (e, a) => a < 0 ? e.scrollTop > 0 : !(a > 0) || e.scrollTop + e.clientHeight < e.scrollHeight;
-        if ((0, r.useEffect)(() => {
-            if (e) {
-              w(!0), S(!1);
-              return
-            }
-            return S(!0), x.current = setTimeout(() => {
-              w(!1), S(!1)
-            }, 180), () => {
-              x.current && (clearTimeout(x.current), x.current = null)
-            }
-          }, [e]), (0, r.useEffect)(() => {
-            if ("undefined" == typeof document) return;
-            let e = document.createElement("div");
-            return document.body.appendChild(e), U(e), () => {
-              document.body.removeChild(e), U(null)
-            }
-          }, []), (0, r.useEffect)(() => {
-            if (!N) return;
-            let e = e => {
-                "Escape" === e.key ? l ? l() : a() : ["ArrowUp", "ArrowDown", "PageUp", "PageDown", "Home", "End", " "].includes(e.key) && !G.current?.contains(e.target) && e.preventDefault()
-              },
-              t = e => {
-                let a = G.current;
-                if (!a) return void e.preventDefault();
-                let t = e.target;
-                if (!(t && a.contains(t))) return void e.preventDefault();
-                if (e instanceof WheelEvent) {
-                  let a = T(t);
-                  a && k(a, e.deltaY) || e.preventDefault();
-                  return
-                }
-                if (e instanceof TouchEvent) {
-                  let a = e.touches[0]?.clientY ?? null,
-                    c = j.current;
-                  j.current = a;
-                  let r = T(t);
-                  r && k(r, null !== c && null !== a ? c - a : 0) || e.preventDefault()
-                }
-              },
-              c = {
-                passive: !1
-              };
-            return window.addEventListener("keydown", e, {
-              passive: !1
-            }), window.addEventListener("wheel", t, c), window.addEventListener("touchmove", t, c), () => {
-              window.removeEventListener("keydown", e), window.removeEventListener("wheel", t, c), window.removeEventListener("touchmove", t, c)
-            }
-          }, [k, T, a, l, N]), (0, r.useEffect)(() => {
-            if (!N) return;
-            let e = e => {
-              if (!G.current?.contains(e.target)) {
-                j.current = null;
-                return
-              }
-              j.current = e.touches[0]?.clientY ?? null
-            };
-            return window.addEventListener("touchstart", e, {
-              passive: !0
-            }), () => window.removeEventListener("touchstart", e)
-          }, [N]), !N || !v) return null;
-        let B = "number" == typeof f ? `${f}px` : f,
-          L = {};
-        B && "auto" !== B ? L.maxWidth = B : (L.width = "fit-content", L.maxWidth = "clamp(100%, 100%, 850px)", L.boxSizing = "border-box");
-        let q = g ? "closing" : "open",
-          E = (0, c.jsx)("div", {
-            className: n().overlay,
-            "data-centered": i,
-            "data-state": q,
-            onMouseDown: e => {
-              y.current = e.target === e.currentTarget
-            },
-            onClick: e => {
-              let c = e.target === e.currentTarget,
-                r = u && c && y.current;
-              y.current = !1, r && (t ? t() : a())
-            },
-            children: (0, c.jsxs)("div", {
-              className: `${n().modal} ${h??""}`,
-              "data-state": q,
-              style: L,
-              ref: G,
-              onClick: e => e.stopPropagation(),
-              children: [(o || _) && (0, c.jsxs)("div", {
-                className: n().header,
-                children: [o && (0, c.jsx)("h2", {
-                  className: n().title,
-                  style: b ? {
-                    textAlign: "center",
-                    width: "100%"
-                  } : {},
-                  children: o
-                }), _ && (0, c.jsx)("button", {
-                  type: "button",
-                  className: n().closeButton,
-                  onClick: d ?? a,
-                  children: (0, c.jsx)("svg", {
-                    xmlns: "http://www.w3.org/2000/svg",
-                    width: "1em",
-                    height: "1em",
-                    viewBox: "7.43 7.45 9.15 9.15",
-                    children: (0, c.jsx)("path", {
-                      fill: "currentColor",
-                      d: "m12 13.4l-2.9 2.9q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7l2.9-2.9l-2.9-2.875q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l2.9 2.9l2.875-2.9q.275-.275.7-.275t.7.275q.3.3.3.713t-.3.687L13.375 12l2.9 2.9q.275.275.275.7t-.275.7q-.3.3-.712.3t-.688-.3z"
-                    })
-                  })
-                })]
-              }), (0, c.jsx)("div", {
-                className: `${n().body} ${m??""}`,
-                children: p
-              })]
-            })
-          });
-        return (0, s.createPortal)(E, v)
-      }
-    },
-    77570: (e, a, t) => {
-      "use strict";
-      t.d(a, {
-        A: () => n
-      });
-      var c = t(95155),
-        r = t(81934),
-        s = t(18943),
-        d = t.n(s);
-
-      function n({
+      function d({
         title: e,
-        subtitle: a,
-        headerAction: t,
+        subtitle: t,
+        headerAction: a,
         children: s,
-        footer: n,
-        legal: l
+        footer: d,
+        legal: l,
+        embedded: o = !1
       }) {
         return (0, c.jsx)("div", {
-          className: d().page,
+          className: o ? n().embeddedPage : n().page,
           children: (0, c.jsxs)("div", {
-            className: d().panel,
-            children: [t && (0, c.jsx)("div", {
-              className: d().panelHeaderAction,
-              children: t
+            className: o ? n().embeddedPanel : n().panel,
+            children: [a && (0, c.jsx)("div", {
+              className: n().panelHeaderAction,
+              children: a
             }), (0, c.jsxs)("div", {
-              className: d().brand,
-              children: [(0, c.jsx)(r.A, {
+              className: n().brand,
+              children: [!o && (0, c.jsx)(r.A, {
                 href: "/",
-                className: d().brandLink,
+                className: n().brandLink,
                 children: (0, c.jsx)("img", {
                   src: "https://assets.guns.lol/guns_logo_no_background_cropped.png",
                   alt: "guns.lol",
-                  className: d().brandLogo
+                  className: n().brandLogo
                 })
               }), (0, c.jsxs)("div", {
-                className: d().brandText,
+                className: n().brandText,
                 children: [(0, c.jsx)("h1", {
-                  className: d().title,
+                  className: n().title,
                   children: e
-                }), a && (0, c.jsx)("p", {
-                  className: d().subtitle,
-                  children: a
+                }), t && (0, c.jsx)("p", {
+                  className: n().subtitle,
+                  children: t
                 })]
               })]
             }), (0, c.jsx)("div", {
-              className: d().body,
+              className: n().body,
               children: s
-            }), n && (0, c.jsx)("div", {
-              className: d().footer,
-              children: n
+            }), d && (0, c.jsx)("div", {
+              className: n().footer,
+              children: d
             }), l && (0, c.jsx)("div", {
-              className: d().legal,
+              className: n().legal,
               children: l
             })]
           })
         })
       }
     },
-    81934: (e, a, t) => {
+    81934: (e, t, a) => {
       "use strict";
-      t.d(a, {
+      a.d(t, {
         A: () => s
       });
-      var c = t(95155),
-        r = t(38256);
+      var c = a(95155),
+        r = a(86891);
 
       function s({
         href: e,
-        asTag: a,
-        locale: t,
+        asTag: t,
+        locale: a,
         children: s,
-        ...d
+        ...n
       }) {
-        let n = t || (0, r.useLang)();
+        let d = a || (0, r.useLang)();
         if (e.startsWith("http://") || e.startsWith("https://") || e.startsWith("mailto:") || e.startsWith("tel:")) return (0, c.jsx)("a", {
           href: e,
-          ...d,
+          ...n,
           children: s
         });
-        let l = "en" == n ? `${e.startsWith("/")?"":"/"}${e}` : `/${n}${e.startsWith("/")?"":"/"}${e}`;
+        let l = "en" == d ? `${e.startsWith("/")?"":"/"}${e}` : `/${d}${e.startsWith("/")?"":"/"}${e}`;
         return (0, c.jsx)("a", {
           href: l,
-          ...d,
+          ...n,
           children: s
         })
       }

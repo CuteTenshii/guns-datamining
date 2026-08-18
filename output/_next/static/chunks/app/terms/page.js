@@ -8,15 +8,15 @@
       var i = r(95155);
       r(12115);
       var a = r(98241),
-        o = r.n(a),
-        s = r(81382),
-        n = r(38256);
+        n = r.n(a),
+        o = r(81382),
+        s = r(86891);
 
       function l({
         data: e
       }) {
-        let t = (0, n.useLang)(),
-          r = (0, n.kj)(),
+        let t = (0, s.useLang)(),
+          r = (0, s.kj)(),
           a = e?.statsData,
           l = e?.tokenData,
           c = {
@@ -119,7 +119,7 @@
             }),
             "Account Limitations and Usage": (0, i.jsxs)(i.Fragment, {
               children: [(0, i.jsx)("p", {
-                children: "Each person may create only one account. Attempts to create multiple accounts for the same individual may result in removal or consolidation of additional accounts without notice. Accounts are for individual use only; do not share your credentials or sell access."
+                children: "Each person may create and maintain up to three accounts. Attempts to create or maintain more than three accounts may result in removal or consolidation of accounts beyond this limit without notice. Accounts are for individual use only; do not share your credentials or sell access."
               }), (0, i.jsx)("p", {
                 children: "If we detect suspicious patterns such as coordinated abuse, reseller behavior, or evasion of prior enforcement, we may take action on all related accounts and associated payment methods."
               })]
@@ -166,7 +166,9 @@
             }),
             "No Refund Policy": (0, i.jsxs)(i.Fragment, {
               children: [(0, i.jsx)("p", {
-                children: "All payments made to guns.lol are final and non-refundable, except where a refund is required by applicable law. We do not provide refunds for change of mind, unused services, or partial use."
+                children: "All purchases are final and non-refundable. We do not issue refunds or credits for change of mind, accidental purchases, unused or partially used services, or missed subscription cancellations. Refunds are provided only when required by rights that cannot legally be waived."
+              }), (0, i.jsx)("p", {
+                children: "If you expressly consent to immediate delivery or performance and waive your statutory right of withdrawal during checkout, you lose that right to the fullest extent permitted by applicable law."
               }), (0, i.jsxs)("p", {
                 children: ["If a payment was processed incorrectly due to an error on our side, we may, at our sole discretion, issue a refund or account credit. To request a review, contact ", (0, i.jsx)("a", {
                   href: "mailto:support@guns.lol",
@@ -179,7 +181,7 @@
             Privacy: (0, i.jsxs)(i.Fragment, {
               children: [(0, i.jsxs)("p", {
                 children: ["Your use of the Service is subject to our", " ", (0, i.jsx)("a", {
-                  className: o().inlineLink,
+                  className: n().inlineLink,
                   href: "/privacy",
                   target: "_blank",
                   children: "Privacy Policy"
@@ -254,20 +256,20 @@
             })
           };
         return (0, i.jsx)(i.Fragment, {
-          children: (0, i.jsx)(s.A, {
+          children: (0, i.jsx)(o.default, {
             data: l,
             statsData: a,
             children: (0, i.jsx)("div", {
-              className: o().termsOfServiceWrapper,
+              className: n().termsOfServiceWrapper,
               children: (0, i.jsxs)("div", {
-                className: o().termsOfService,
+                className: n().termsOfService,
                 children: ["en" !== t && (0, i.jsx)("div", {
-                  className: o().notification,
+                  className: n().notification,
                   children: (0, i.jsx)("h1", {
                     children: r("common.legal.notification_text")
                   })
                 }), (0, i.jsxs)("div", {
-                  className: o().description,
+                  className: n().description,
                   children: [(0, i.jsx)("h1", {
                     children: "Terms of Service"
                   }), (0, i.jsx)("h3", {
@@ -276,22 +278,22 @@
                     children: ["By accessing or using guns.lol (the “Service”), you acknowledge that you have read, understood, and agree to be bound by these Terms of Service (“Terms”) and all applicable laws and regulations. Your continued use constitutes acceptance of any future modifications or updates to these Terms.", (0, i.jsx)("br", {}), (0, i.jsx)("br", {}), "All content, materials, and intellectual property made available through guns.lol are protected by copyright and other applicable intellectual property laws. Unauthorized use, reproduction, or distribution may result in account suspension or termination."]
                   })]
                 }), (0, i.jsxs)("div", {
-                  className: o().terms,
+                  className: n().terms,
                   children: [Object.entries(c).map(([e, t]) => (0, i.jsxs)("div", {
-                    className: o().term,
+                    className: n().term,
                     id: e.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
                     children: [(0, i.jsx)("h1", {
                       children: e
                     }), (0, i.jsx)("div", {
-                      className: o().termsValue,
+                      className: n().termsValue,
                       children: t
                     })]
                   }, e)), (0, i.jsxs)("div", {
-                    className: o().term,
+                    className: n().term,
                     children: [(0, i.jsx)("h1", {
                       children: "Contact"
                     }), (0, i.jsxs)("div", {
-                      className: o().termsValue,
+                      className: n().termsValue,
                       children: [(0, i.jsxs)("p", {
                         children: ["Questions or concerns? Contact ", (0, i.jsx)("a", {
                           href: "mailto:support@guns.lol",
@@ -304,8 +306,8 @@
                           children: "tco@guns.lol"
                         }), "."]
                       }), (0, i.jsx)("span", {
-                        className: o().lastUpdate,
-                        children: "Last updated: 2026/06/29"
+                        className: n().lastUpdate,
+                        children: "Last updated: 2026/08/17"
                       })]
                     })]
                   })]
@@ -318,9 +320,255 @@
     },
     24887: (e, t, r) => {
       Promise.resolve().then(r.bind(r, 15829))
+    },
+    28356: (e, t) => {
+      "use strict";
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
+      var r = {
+        cancelIdleCallback: function() {
+          return n
+        },
+        requestIdleCallback: function() {
+          return a
+        }
+      };
+      for (var i in r) Object.defineProperty(t, i, {
+        enumerable: !0,
+        get: r[i]
+      });
+      let a = "undefined" != typeof self && self.requestIdleCallback && self.requestIdleCallback.bind(window) || function(e) {
+          let t = Date.now();
+          return self.setTimeout(function() {
+            e({
+              didTimeout: !1,
+              timeRemaining: function() {
+                return Math.max(0, 50 - (Date.now() - t))
+              }
+            })
+          }, 1)
+        },
+        n = "undefined" != typeof self && self.cancelIdleCallback && self.cancelIdleCallback.bind(window) || function(e) {
+          return clearTimeout(e)
+        };
+      ("function" == typeof t.default || "object" == typeof t.default && null !== t.default) && void 0 === t.default.__esModule && (Object.defineProperty(t.default, "__esModule", {
+        value: !0
+      }), Object.assign(t.default, t), e.exports = t.default)
+    },
+    29722: (e, t, r) => {
+      "use strict";
+      r.d(t, {
+        A: () => i
+      });
+      let i = function() {
+        for (var e, t, r = 0, i = "", a = arguments.length; r < a; r++)(e = arguments[r]) && (t = function e(t) {
+          var r, i, a = "";
+          if ("string" == typeof t || "number" == typeof t) a += t;
+          else if ("object" == typeof t)
+            if (Array.isArray(t)) {
+              var n = t.length;
+              for (r = 0; r < n; r++) t[r] && (i = e(t[r])) && (a && (a += " "), a += i)
+            } else
+              for (i in t) t[i] && (a && (a += " "), a += i);
+          return a
+        }(e)) && (i && (i += " "), i += t);
+        return i
+      }
+    },
+    42593: (e, t, r) => {
+      "use strict";
+      Object.defineProperty(t, "__esModule", {
+        value: !0
+      });
+      var i = {
+        default: function() {
+          return b
+        },
+        handleClientScriptLoad: function() {
+          return f
+        },
+        initScriptLoader: function() {
+          return g
+        }
+      };
+      for (var a in i) Object.defineProperty(t, a, {
+        enumerable: !0,
+        get: i[a]
+      });
+      let n = r(73623),
+        o = r(66388),
+        s = r(95155),
+        l = n._(r(47650)),
+        c = o._(r(12115)),
+        d = r(75368),
+        u = r(3584),
+        h = r(28356),
+        p = new Map,
+        m = new Set,
+        y = e => {
+          let {
+            src: t,
+            id: r,
+            onLoad: i = () => {},
+            onReady: a = null,
+            dangerouslySetInnerHTML: n,
+            children: o = "",
+            strategy: s = "afterInteractive",
+            onError: c,
+            stylesheets: d
+          } = e, h = r || t;
+          if (h && m.has(h)) return;
+          if (p.has(t)) {
+            m.add(h), p.get(t).then(i, c);
+            return
+          }
+          let y = () => {
+              a && a(), m.add(h)
+            },
+            f = document.createElement("script"),
+            g = new Promise((e, t) => {
+              f.addEventListener("load", function(t) {
+                e(), i && i.call(this, t), y()
+              }), f.addEventListener("error", function(e) {
+                t(e)
+              })
+            }).catch(function(e) {
+              c && c(e)
+            });
+          n ? (f.innerHTML = n.__html || "", y()) : o ? (f.textContent = "string" == typeof o ? o : Array.isArray(o) ? o.join("") : "", y()) : t && (f.src = t, p.set(t, g)), (0, u.setAttributesFromProps)(f, e), "worker" === s && f.setAttribute("type", "text/partytown"), f.setAttribute("data-nscript", s), d && (e => {
+            if (l.default.preinit) return e.forEach(e => {
+              l.default.preinit(e, {
+                as: "style"
+              })
+            });
+            {
+              let t = document.head;
+              e.forEach(e => {
+                let r = document.createElement("link");
+                r.type = "text/css", r.rel = "stylesheet", r.href = e, t.appendChild(r)
+              })
+            }
+          })(d), document.body.appendChild(f)
+        };
+
+      function f(e) {
+        let {
+          strategy: t = "afterInteractive"
+        } = e;
+        "lazyOnload" === t ? window.addEventListener("load", () => {
+          (0, h.requestIdleCallback)(() => y(e))
+        }) : y(e)
+      }
+
+      function g(e) {
+        e.forEach(f), [...document.querySelectorAll('[data-nscript="beforeInteractive"]'), ...document.querySelectorAll('[data-nscript="beforePageRender"]')].forEach(e => {
+          let t = e.id || e.getAttribute("src");
+          m.add(t)
+        })
+      }
+
+      function v(e) {
+        let {
+          id: t,
+          src: r = "",
+          onLoad: i = () => {},
+          onReady: a = null,
+          strategy: n = "afterInteractive",
+          onError: o,
+          stylesheets: u,
+          ...p
+        } = e, {
+          updateScripts: f,
+          scripts: g,
+          getIsSsr: v,
+          appDir: b,
+          nonce: w
+        } = (0, c.useContext)(d.HeadManagerContext);
+        w = p.nonce || w;
+        let x = (0, c.useRef)(!1);
+        (0, c.useEffect)(() => {
+          let e = t || r;
+          x.current || (a && e && m.has(e) && a(), x.current = !0)
+        }, [a, t, r]);
+        let T = (0, c.useRef)(!1);
+        if ((0, c.useEffect)(() => {
+            if (!T.current) {
+              if ("afterInteractive" === n) y(e);
+              else "lazyOnload" === n && ("complete" === document.readyState ? (0, h.requestIdleCallback)(() => y(e)) : window.addEventListener("load", () => {
+                (0, h.requestIdleCallback)(() => y(e))
+              }));
+              T.current = !0
+            }
+          }, [e, n]), ("beforeInteractive" === n || "worker" === n) && (f ? (g[n] = (g[n] || []).concat([{
+            id: t,
+            src: r,
+            onLoad: i,
+            onReady: a,
+            onError: o,
+            ...p,
+            nonce: w
+          }]), f(g)) : v && v() ? m.add(t || r) : v && !v() && y({
+            ...e,
+            nonce: w
+          })), b) {
+          if (u && u.forEach(e => {
+              l.default.preinit(e, {
+                as: "style"
+              })
+            }), "beforeInteractive" === n)
+            if (!r) return p.dangerouslySetInnerHTML && (p.children = p.dangerouslySetInnerHTML.__html, delete p.dangerouslySetInnerHTML), (0, s.jsx)("script", {
+              nonce: w,
+              dangerouslySetInnerHTML: {
+                __html: `(self.__next_s=self.__next_s||[]).push(${JSON.stringify([0,{...p,id:t}])})`
+              }
+            });
+            else return l.default.preload(r, p.integrity ? {
+              as: "script",
+              integrity: p.integrity,
+              nonce: w,
+              crossOrigin: p.crossOrigin
+            } : {
+              as: "script",
+              nonce: w,
+              crossOrigin: p.crossOrigin
+            }), (0, s.jsx)("script", {
+              nonce: w,
+              dangerouslySetInnerHTML: {
+                __html: `(self.__next_s=self.__next_s||[]).push(${JSON.stringify([r,{...p,id:t}])})`
+              }
+            });
+          "afterInteractive" === n && r && l.default.preload(r, p.integrity ? {
+            as: "script",
+            integrity: p.integrity,
+            nonce: w,
+            crossOrigin: p.crossOrigin
+          } : {
+            as: "script",
+            nonce: w,
+            crossOrigin: p.crossOrigin
+          })
+        }
+        return null
+      }
+      Object.defineProperty(v, "__nextScript", {
+        value: !0
+      });
+      let b = v;
+      ("function" == typeof t.default || "object" == typeof t.default && null !== t.default) && void 0 === t.default.__esModule && (Object.defineProperty(t.default, "__esModule", {
+        value: !0
+      }), Object.assign(t.default, t), e.exports = t.default)
+    },
+    65596: (e, t, r) => {
+      "use strict";
+      r.d(t, {
+        default: () => a.a
+      });
+      var i = r(42593),
+        a = r.n(i)
     }
   },
   e => {
-    e.O(0, [4103, 9404, 8256, 5886, 226, 1382, 8441, 3794, 7358], () => e(e.s = 24887)), _N_E = e.O()
+    e.O(0, [379, 8604, 1899, 4236, 6609, 4293, 5810, 6891, 5886, 9182, 8481, 3434, 1378, 1382, 8441, 3794, 7358], () => e(e.s = 24887)), _N_E = e.O()
   }
 ]);

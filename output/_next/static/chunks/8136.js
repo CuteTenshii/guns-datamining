@@ -142,47 +142,68 @@
           [T, w] = (0, l.useState)(m ?? null),
           [S, C] = (0, l.useState)(!1),
           [k, $] = (0, l.useState)(!1),
-          [R, O] = (0, l.useState)(-1),
+          [R, M] = (0, l.useState)(-1),
+          O = (0, l.useRef)(null),
           q = (0, l.useRef)(null),
-          I = (0, l.useRef)(null),
           F = (0, l.useRef)(null),
-          L = (0, l.useRef)(null),
-          [B, M] = (0, l.useState)(null),
-          [D, E] = (0, l.useState)(!1),
-          U = (0, l.useId)(),
-          W = b ?? U,
-          P = `${W}-dropdown`,
+          I = (0, l.useRef)(null),
+          [L, B] = (0, l.useState)(null),
+          [E, D] = (0, l.useState)(!1),
+          W = (0, l.useId)(),
+          U = b ?? W,
+          P = `${U}-dropdown`,
           V = (0, l.useCallback)(() => {
-            let e = I.current;
+            let e = q.current;
             if (!e) return;
-            let a = e.getBoundingClientRect();
-            M({
-              left: a.left,
-              top: a.bottom + 9,
-              width: a.width
+            let a = e.getBoundingClientRect(),
+              t = window.visualViewport,
+              s = t?.offsetLeft ?? 0,
+              r = t?.offsetTop ?? 0,
+              l = t?.width ?? window.innerWidth,
+              i = r + (t?.height ?? window.innerHeight),
+              n = I.current,
+              d = F.current,
+              o = n && d ? Math.max(12, n.offsetHeight - d.clientHeight) : 16,
+              m = d?.scrollHeight ?? Math.max(40, 40 * N.length),
+              p = Math.min(m, c) + o,
+              h = Math.max(0, i - a.bottom - 9 - 8),
+              u = Math.max(0, a.top - r - 9 - 8),
+              v = p > h && u > h ? "top" : "bottom",
+              g = Math.max(40, Math.min(c, ("top" === v ? u : h) - o)),
+              f = Math.min(m, g) + o,
+              b = Math.min(a.width, Math.max(0, l - 16));
+            B({
+              left: Math.min(Math.max(a.left, s + 8), Math.max(s + 8, s + l - 8 - b)),
+              top: Math.min("top" === v ? Math.max(r + 8, a.top - 9 - f) : a.bottom + 9, Math.max(r + 8, i - 8 - f)),
+              width: b,
+              listMaxHeight: g,
+              placement: v
             })
-          }, []);
+          }, [c, N.length]);
         (0, l.useEffect)(() => {
           A || w(m ?? null)
         }, [m, A]), (0, l.useEffect)(() => {
-          E(!0)
+          D(!0)
         }, []);
-        let z = A ? o ?? null : T,
-          H = null == z ? "" : String(z),
-          G = N.find(e => e.value === z) ?? null,
-          J = !!G || null != z && "" != `${z}`;
+        let H = A ? o ?? null : T,
+          z = null == H ? "" : String(H),
+          G = N.find(e => e.value === H) ?? null,
+          J = !!G || null != H && "" != `${H}`;
         (0, l.useEffect)(() => {
-          S ? O(G && !G.disabled ? N.findIndex(e => e.value === G.value) : N.findIndex(e => !e.disabled)) : O(-1)
+          S ? M(G && !G.disabled ? N.findIndex(e => e.value === G.value) : N.findIndex(e => !e.disabled)) : M(-1)
         }, [S, N, G]), (0, l.useEffect)(() => {
-          if (S) return V(), window.addEventListener("resize", V), window.addEventListener("scroll", V, !0), () => {
-            window.removeEventListener("resize", V), window.removeEventListener("scroll", V, !0)
+          if (!S) return;
+          V();
+          let e = window.requestAnimationFrame(V);
+          return window.addEventListener("resize", V), window.addEventListener("scroll", V, !0), window.visualViewport?.addEventListener("resize", V), window.visualViewport?.addEventListener("scroll", V), () => {
+            window.cancelAnimationFrame(e), window.removeEventListener("resize", V), window.removeEventListener("scroll", V, !0), window.visualViewport?.removeEventListener("resize", V), window.visualViewport?.removeEventListener("scroll", V)
           }
         }, [S, V]), (0, l.useEffect)(() => {
           if (!S) return;
           let e = e => {
             let a = e.target,
-              t = q.current?.contains(a),
-              s = L.current?.contains(a);
+              t = O.current?.contains(a),
+              s = I.current?.contains(a);
             t || s || C(!1)
           };
           return document.addEventListener("mousedown", e), document.addEventListener("touchstart", e), () => {
@@ -212,32 +233,33 @@
             let a = R;
             for (let t = 0; t < N.length; t += 1)
               if (a = (a + e + N.length) % N.length, !N[a].disabled) {
-                O(a);
+                M(a);
                 break
               }
           },
-          Q = G?.label ?? (J ? String(z ?? "") : t),
+          Q = G?.label ?? (J ? String(H ?? "") : t),
           X = (0, s.jsx)("div", {
-            ref: L,
+            ref: I,
             className: (0, r.A)(d().dropdown, h),
             "data-open": S,
+            "data-placement": L?.placement ?? "bottom",
             id: P,
             style: {
               position: "fixed",
-              width: B?.width,
-              left: B?.left,
-              top: B?.top
+              width: L?.width,
+              left: L?.left,
+              top: L?.top
             },
             children: N.length > 0 ? (0, s.jsx)("ul", {
               ref: F,
               className: d().optionList,
               style: {
-                maxHeight: c
+                maxHeight: L?.listMaxHeight ?? c
               },
               children: N.map((e, a) => {
                 let t = `${P}-option-${a}`,
                   r = a === R,
-                  l = e.value === z;
+                  l = e.value === H;
                 return (0, s.jsx)("li", {
                   id: t,
                   "data-highlighted": r,
@@ -246,7 +268,7 @@
                   className: d().option,
                   onMouseDown: e => e.preventDefault(),
                   onMouseEnter: () => {
-                    e.disabled || O(a)
+                    e.disabled || M(a)
                   },
                   onClick: () => Z(a),
                   children: (0, s.jsx)("span", {
@@ -259,11 +281,11 @@
               children: "No options available"
             })
           }),
-          Y = D && "undefined" != typeof document ? (0, i.createPortal)(X, document.body) : null,
+          Y = E && "undefined" != typeof document ? (0, i.createPortal)(X, document.body) : null,
           ee = "string" == typeof e ? e : void 0;
         return (0, s.jsxs)("div", {
           className: d().container,
-          ref: q,
+          ref: O,
           "data-dashboard-feature-label": ee,
           children: [e && (0, s.jsx)("div", {
             className: d().label,
@@ -271,20 +293,20 @@
           }), g && (0, s.jsx)("input", {
             type: "hidden",
             name: g,
-            value: H,
+            value: z,
             required: f
           }), (0, s.jsxs)("div", {
             className: (0, r.A)(d().shell, u),
             "data-open": S,
             "data-focused": k,
             "data-disabled": v,
-            ref: I,
+            ref: q,
             children: [a && (0, s.jsx)("span", {
               className: d().iconSlot,
               children: a
             }), (0, s.jsx)("button", {
               ..._,
-              id: W,
+              id: U,
               type: "button",
               className: (0, r.A)(d().trigger, a ? d().triggerWithIcon : void 0),
               onFocus: e => {
@@ -292,7 +314,7 @@
               },
               onBlur: e => {
                 let a = e.relatedTarget;
-                a && q.current?.contains(a) || ($(!1), C(!1)), j?.(e)
+                a && O.current?.contains(a) || ($(!1), C(!1)), j?.(e)
               },
               onClick: () => {
                 v || C(e => {
@@ -339,8 +361,8 @@
         u = t(67421),
         v = t(37897),
         g = t(61778),
-        f = t(38256),
-        b = t(57776),
+        f = t(86891),
+        b = t(13782),
         x = t(99387),
         j = t(29483);
 
@@ -360,13 +382,13 @@
           }),
           [C, k] = (0, r.useState)(!1),
           [$, R] = (0, r.useState)(!1),
-          [O, q] = (0, r.useState)(""),
-          [I, F] = (0, r.useState)(""),
-          [L, B] = (0, r.useState)(null),
-          M = e.username,
-          D = new Date().getTime(),
-          [E, U] = (0, r.useState)(e.favorite_templates || []),
-          [W, P] = (0, r.useState)(!0),
+          [M, O] = (0, r.useState)(""),
+          [q, F] = (0, r.useState)(""),
+          [I, L] = (0, r.useState)(null),
+          B = e.username,
+          E = new Date().getTime(),
+          [D, W] = (0, r.useState)(e.favorite_templates || []),
+          [U, P] = (0, r.useState)(!0),
           V = {
             name: "",
             id: "",
@@ -377,12 +399,12 @@
               avatar: ""
             }
           },
-          [z, H] = (0, r.useState)(V),
+          [H, z] = (0, r.useState)(V),
           [G] = (0, j.A)(t, 600);
         (0, r.useEffect)(() => {
           C && G !== w.search && K(void 0, G)
         }, [C, G, w.search]);
-        let J = (0, r.useMemo)(() => "applyTemplate" === O ? z.premiumOnly && !e.premium ? a("dashboard.templates.shared.modal.apply.premium_only_title") : a("dashboard.templates.shared.modal.apply.title") : "authorFilter" === O ? a("dashboard.templates.library.modal.author_filter.title") : a("dashboard.templates.shared.modal.apply.title"), [O, z.premiumOnly, e.premium, a]),
+        let J = (0, r.useMemo)(() => "applyTemplate" === M ? H.premiumOnly && !e.premium ? a("dashboard.templates.shared.modal.apply.premium_only_title") : a("dashboard.templates.shared.modal.apply.title") : "authorFilter" === M ? a("dashboard.templates.library.modal.author_filter.title") : a("dashboard.templates.shared.modal.apply.title"), [M, H.premiumOnly, e.premium, a]),
           Z = (0, r.useMemo)(() => [{
             label: a("dashboard.templates.library.sort.options.newest"),
             value: "newest"
@@ -402,7 +424,7 @@
           K = async (e, a) => {
             let s = "string" == typeof e ? e : n,
               r = "string" == typeof a ? a : t;
-            if (r === w.search && s === w.sort && (L?.username || "") === w.templateAuthor) return;
+            if (r === w.search && s === w.sort && (I?.username || "") === w.templateAuthor) return;
             T(!0), N(1);
             let l = await fetch("https://guns.lol/api/dashboard/templates/library", {
                 method: "POST",
@@ -413,7 +435,7 @@
                   page: 1,
                   sort: s,
                   search: r,
-                  templateAuthor: L?.username
+                  templateAuthor: I?.username
                 })
               }),
               i = await l.json();
@@ -422,7 +444,7 @@
             }, 500), S({
               search: r,
               sort: s,
-              templateAuthor: L?.username || ""
+              templateAuthor: I?.username || ""
             })
           }, Q = async e => {
             e.target.style.pointerEvents = "none", e.target.innerHTML = (0, h.qV)(m.A.loading);
@@ -436,7 +458,7 @@
                     page: _ + 1,
                     sort: n,
                     search: t,
-                    templateAuthor: L?.username
+                    templateAuthor: I?.username
                   })
                 }),
                 a = await e.json();
@@ -474,24 +496,24 @@
               })
             }),
             t = await a.json();
-          a.ok ? (c.oR.success(t.message), U(t.favorite_templates), "favorite" === t.type ? o?.filter(a => {
+          a.ok ? (c.oR.success(t.message), W(t.favorite_templates), "favorite" === t.type ? o?.filter(a => {
             a.id === e && (a.favorites += 1)
           }) : o?.filter(a => {
             a.id === e && a.favorites > 0 && (a.favorites -= 1)
           })) : c.oR.error(t.error)
         }, Y = async () => {
-          if ("" === I) return void c.oR.error(a("dashboard.templates.library.modal.author_filter.errors.username_required"));
+          if ("" === q) return void c.oR.error(a("dashboard.templates.library.modal.author_filter.errors.username_required"));
           let e = await fetch("https://guns.lol/api/dashboard/templates/templateAuthor", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json"
               },
               body: JSON.stringify({
-                username: I
+                username: q
               })
             }),
             t = await e.json();
-          e.ok ? B({
+          e.ok ? L({
             username: t.username,
             avatar: t.avatar,
             displayName: t.display_name
@@ -501,31 +523,31 @@
           children: [(0, s.jsx)(b.A, {
             opened: $,
             onClose: () => R(!1),
-            size: z.premiumOnly && !e.premium ? "auto" : "500px",
+            size: H.premiumOnly && !e.premium ? "auto" : "500px",
             title: J,
             centered: !0,
-            children: "applyTemplate" === O ? (0, s.jsx)(u.A, {
-              selectedTemplate: z,
+            children: "applyTemplate" === M ? (0, s.jsx)(u.A, {
+              selectedTemplate: H,
               userDetails: e,
               closeModal: () => R(!1)
-            }) : "authorFilter" === O && (0, s.jsx)("div", {
+            }) : "authorFilter" === M && (0, s.jsx)("div", {
               className: i().authorFilterContainer,
-              children: L ? (0, s.jsxs)("div", {
+              children: I ? (0, s.jsxs)("div", {
                 className: i().templateAuthorFilterInformationContainer,
                 children: [(0, s.jsxs)("div", {
                   className: i().templateAuthorFilterInformation,
                   children: [(0, s.jsx)("img", {
-                    src: L.avatar,
+                    src: I.avatar,
                     alt: "Avatar"
                   }), (0, s.jsxs)("div", {
                     className: i().templateAuthorFilterInformationText,
                     children: [(0, s.jsx)("h1", {
-                      children: L.displayName || L.username
+                      children: I.displayName || I.username
                     }), (0, s.jsx)("a", {
-                      href: `/${L.username}`,
+                      href: `/${I.username}`,
                       target: "_blank",
                       children: a("dashboard.templates.library.modal.author_filter.profile_link", {
-                        username: L.username
+                        username: I.username
                       })
                     })]
                   })]
@@ -539,7 +561,7 @@
                     children: a("dashboard.templates.library.modal.author_filter.search_templates_button")
                   }), (0, s.jsx)("span", {
                     onClick: () => {
-                      F(""), B(null)
+                      F(""), L(null)
                     },
                     className: i().authorFilterContainerButtonClose,
                     children: a("dashboard.templates.library.modal.author_filter.remove_button")
@@ -550,7 +572,7 @@
                   featureName: a("dashboard.templates.library.modal.author_filter.input_label"),
                   icon: m.A.defaultAvatar,
                   placeholder: a("dashboard.templates.library.modal.author_filter.input_placeholder"),
-                  value: I,
+                  value: q,
                   onChangeFunction: e => {
                     F(e.target.value)
                   }
@@ -618,9 +640,9 @@
               }), (0, s.jsx)("span", {
                 className: i().userFilter,
                 onClick: () => {
-                  H(V), q("authorFilter"), R(!0)
+                  z(V), O("authorFilter"), R(!0)
                 },
-                children: I ? m.A.userFilterActive : m.A.userFilter
+                children: q ? m.A.userFilterActive : m.A.userFilter
               })]
             })]
           }), (0, s.jsx)("div", {
@@ -648,11 +670,11 @@
                         children: [m.A.premium, " ", a("dashboard.templates.shared.badges.premium")]
                       })
                     }), (0, s.jsx)(g.A, {
-                      content: E.includes(e.id) ? a("dashboard.templates.shared.tooltips.unfavorite") : a("dashboard.templates.shared.tooltips.favorite"),
+                      content: D.includes(e.id) ? a("dashboard.templates.shared.tooltips.unfavorite") : a("dashboard.templates.shared.tooltips.favorite"),
                       children: (0, s.jsx)("span", {
                         onClick: () => X(e.id),
                         className: i().favoriteTemplate,
-                        children: E.includes(e.id) ? m.A.favoritedTemplate : m.A.favoriteTemplate
+                        children: D.includes(e.id) ? m.A.favoritedTemplate : m.A.favoriteTemplate
                       })
                     })]
                   }), (0, s.jsxs)("div", {
@@ -707,7 +729,7 @@
                         className: i().useTemplateButton,
                         onClick: () => {
                           var a, t, s, r, l, i;
-                          return a = e.id, t = e.name, s = e.premium_only, r = e.image, l = e.user_information.username, i = e.user_information.avatar, void(q("applyTemplate"), H({
+                          return a = e.id, t = e.name, s = e.premium_only, r = e.image, l = e.user_information.username, i = e.user_information.avatar, void(O("applyTemplate"), z({
                             name: t,
                             id: a,
                             premiumOnly: s,
@@ -735,7 +757,7 @@
                         content: a("dashboard.templates.shared.tooltips.preview"),
                         children: (0, s.jsx)("a", {
                           target: "_blank",
-                          href: `/${M}?templatePreview=true&templateId=${e.id}&t=${D}`,
+                          href: `/${B}?templatePreview=true&templateId=${e.id}&t=${E}`,
                           children: m.A.previewEye
                         })
                       })]
@@ -753,7 +775,7 @@
             })
           }), !A && (0, s.jsx)("div", {
             className: i().loadMoreContainer,
-            children: W && (0, s.jsxs)("span", {
+            children: U && (0, s.jsxs)("span", {
               className: i().loadMore,
               onClick: Q,
               children: [m.A.loadMore, " ", a("dashboard.templates.shared.actions.load_more")]
@@ -788,8 +810,8 @@
           }),
           [S, C] = (0, r.useState)(T.is_private ? "private" : T.is_unlisted ? "unlisted" : "public"),
           [k, $] = (0, r.useState)(!0),
-          [R, O] = (0, r.useState)(""),
-          [q, I] = (0, r.useState)({
+          [R, M] = (0, r.useState)(""),
+          [O, q] = (0, r.useState)({
             name: "",
             id: "",
             premiumOnly: !1,
@@ -825,11 +847,11 @@
           } finally {
             e.target.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M7 21q-.825 0-1.412-.587T5 19V6q-.425 0-.712-.288T4 5q0-.425.288-.712T5 4h4q0-.425.288-.712T10 3h4q.425 0 .713.288T15 4h4q.425 0 .713.288T20 5q0 .425-.288.713T19 6v13q0 .825-.587 1.413T17 21zm3-4q.425 0 .713-.288T11 16V9q0-.425-.288-.712T10 8q-.425 0-.712.288T9 9v7q0 .425.288.713T10 17m4 0q.425 0 .713-.288T15 16V9q0-.425-.288-.712T14 8q-.425 0-.712.288T13 9v7q0 .425.288.713T14 17"></path></svg> ${a("dashboard.templates.uploads.actions.delete")}`, e.target.style.pointerEvents = "auto"
           }
-        }, L = {
+        }, I = {
           delete: a("dashboard.templates.uploads.modals.delete.title"),
           visibility: a("dashboard.templates.uploads.modals.visibility.title"),
           edit: a("dashboard.templates.uploads.modals.edit.title")
-        }, B = async e => {
+        }, L = async e => {
           var t;
           let s;
           e.target.disabled = !0;
@@ -837,7 +859,7 @@
           if (!r) return e.target.disabled = !1, e.target.value = "", c.oR.error(a("dashboard.templates.uploads.errors.preview_required"));
           let l = N.nB.templateImage,
             i = N.o2.templateImage,
-            n = M(r.name);
+            n = B(r.name);
           return l.includes(n) ? r.size > 1e6 * i ? (e.target.disabled = !1, e.target.value = "", c.oR.error(a("dashboard.templates.uploads.errors.file_too_large", {
             size: i
           }))) : void(w(e => ({
@@ -852,10 +874,10 @@
           }, s.readAsDataURL(t)) : (e.target.disabled = !1, e.target.value = "", c.oR.error(a("dashboard.templates.uploads.errors.invalid_file_type")))
         };
 
-        function M(e) {
+        function B(e) {
           return "." + e.substring(e.lastIndexOf(".") + 1)
         }
-        let D = async () => {
+        let E = async () => {
           if ("" === T.name.trim()) return c.oR.error(a("dashboard.templates.uploads.errors.name_required"));
           if (T.name.length > 30) return c.oR.error(a("dashboard.templates.uploads.errors.name_too_long"));
           if (0 === T.tags.length) return c.oR.error(a("dashboard.templates.uploads.errors.tags_required"));
@@ -885,7 +907,7 @@
             file: null,
             unlisted_template_id: ""
           })) : c.oR.error(s.error)
-        }, E = () => {
+        }, D = () => {
           if ("" === R) return c.oR.error(a("dashboard.templates.uploads.errors.tag_required"));
           if (R.length > 15) return c.oR.error(a("dashboard.templates.uploads.errors.tag_too_long"));
           if (R.length < 3) return c.oR.error(a("dashboard.templates.uploads.errors.tag_too_short"));
@@ -896,8 +918,8 @@
           w(a => ({
             ...a,
             tags: [...a.tags, e]
-          })), O("")
-        }, U = async () => {
+          })), M("")
+        }, W = async () => {
           let e = await fetch("https://guns.lol/api/dashboard/templates/visibility", {
               method: "POST",
               body: JSON.stringify({
@@ -926,7 +948,7 @@
             file: null,
             unlisted_template_id: ""
           }))) : c.oR.error(a.error)
-        }, W = {
+        }, U = {
           public: a("dashboard.templates.uploads.visibility.public"),
           private: a("dashboard.templates.uploads.visibility.private"),
           unlisted: a("dashboard.templates.uploads.visibility.unlisted")
@@ -935,11 +957,11 @@
           children: ["use" === T.type ? (0, s.jsx)(b.A, {
             opened: j,
             onClose: () => y(!1),
-            size: q.premiumOnly && !e.premium ? "auto" : "500px",
-            title: q.premiumOnly && !e.premium ? a("dashboard.templates.shared.modal.apply.premium_only_title") : a("dashboard.templates.shared.modal.apply.title"),
+            size: O.premiumOnly && !e.premium ? "auto" : "500px",
+            title: O.premiumOnly && !e.premium ? a("dashboard.templates.shared.modal.apply.premium_only_title") : a("dashboard.templates.shared.modal.apply.title"),
             centered: !0,
             children: (0, s.jsx)(u.A, {
-              selectedTemplate: q,
+              selectedTemplate: O,
               userDetails: e,
               closeModal: () => y(!1)
             })
@@ -958,7 +980,7 @@
                 unlisted_template_id: ""
               })
             },
-            title: L[T.type],
+            title: I[T.type],
             centered: !0,
             size: "450px",
             children: "visibility" === T.type ? (0, s.jsxs)("div", {
@@ -976,7 +998,7 @@
                     onClick: () => {
                       "public" === S ? C("private") : "private" === S ? C("unlisted") : C("public")
                     },
-                    children: [m.A.templateVisibility, " ", W[S]]
+                    children: [m.A.templateVisibility, " ", U[S]]
                   })
                 })
               }), "unlisted" === S && T.unlisted_template_id && (0, s.jsxs)("div", {
@@ -1003,7 +1025,7 @@
                 })]
               }), (0, s.jsx)("span", {
                 className: i().visibilityButton,
-                onClick: U,
+                onClick: W,
                 children: a("dashboard.templates.uploads.actions.change_visibility")
               })]
             }) : "delete" === T.type ? (0, s.jsxs)(s.Fragment, {
@@ -1046,14 +1068,14 @@
                         type: "file",
                         accept: A.vJ.templateImage.map(e => e).join(", "),
                         onChange: e => {
-                          B(e)
+                          L(e)
                         }
                       })]
                     }) : (0, s.jsxs)(s.Fragment, {
                       children: [(0, s.jsxs)("div", {
                         className: i().fileBadge,
                         children: [(0, s.jsx)("span", {
-                          children: M(T.file?.name || T.image).toUpperCase()
+                          children: B(T.file?.name || T.image).toUpperCase()
                         }), (0, s.jsx)("span", {
                           onClick: function() {
                             w(e => ({
@@ -1097,15 +1119,15 @@
                         placeholder: a("dashboard.templates.uploads.edit.tags_placeholder"),
                         value: R,
                         onChangeFunction: e => {
-                          O(e.target.value)
+                          M(e.target.value)
                         },
                         onKeyPress: e => {
-                          "Enter" === e.key && (e.preventDefault(), E())
+                          "Enter" === e.key && (e.preventDefault(), D())
                         },
                         maxLength: 15
                       }), (0, s.jsx)("span", {
                         className: i().addTag,
-                        onClick: E,
+                        onClick: D,
                         children: m.A.addSign
                       })]
                     }), T.tags.length > 0 && (0, s.jsx)("div", {
@@ -1131,7 +1153,7 @@
                   })]
                 }), (0, s.jsxs)("span", {
                   className: i().createTemplateButton,
-                  onClick: D,
+                  onClick: E,
                   children: [m.A.editTemplate, " ", a("dashboard.templates.uploads.edit.save_button")]
                 })]
               })]
@@ -1242,7 +1264,7 @@
                               image: "",
                               file: null,
                               unlisted_template_id: ""
-                            }), I({
+                            }), q({
                               name: s,
                               id: a,
                               premiumOnly: r,
@@ -1723,15 +1745,15 @@
           [u, g] = (0, r.useState)(0),
           [j, C] = (0, r.useState)(0),
           [k, $] = (0, r.useState)(0),
-          [R, O] = (0, r.useState)(!1),
-          q = e.account_created + 604800 < Math.floor(Date.now() / 1e3),
-          [I, F] = (0, r.useState)(),
-          [L, B] = (0, r.useState)(""),
-          [M, D] = (0, r.useState)(""),
-          [E, U] = (0, r.useState)(""),
-          [W, P] = (0, r.useState)([]),
-          [V, z] = (0, r.useState)("public"),
-          [H, G] = (0, r.useState)(""),
+          [R, M] = (0, r.useState)(!1),
+          O = e.account_created + 604800 < Math.floor(Date.now() / 1e3),
+          [q, F] = (0, r.useState)(),
+          [I, L] = (0, r.useState)(""),
+          [B, E] = (0, r.useState)(""),
+          [D, W] = (0, r.useState)(""),
+          [U, P] = (0, r.useState)([]),
+          [V, H] = (0, r.useState)("public"),
+          [z, G] = (0, r.useState)(""),
           [J, Z] = (0, r.useState)(""),
           K = (t.premium !== N.$h || "string" != typeof t.audio && t.audio.length > 2 || "typewriter" === t.username_effects) && e.premium,
           [Q, X] = (0, r.useState)(K),
@@ -1747,7 +1769,7 @@
             return i.includes(n) ? r.size > 1024 * l * 1024 ? (e.target.disabled = !1, e.target.value = "", c.oR.error(a("dashboard.templates.errors.file_too_large", {
               size: l
             }))) : void(F(r), t = r, (s = new FileReader).onload = function(e) {
-              B(e.target.result)
+              L(e.target.result)
             }, s.readAsDataURL(t)) : (e.target.disabled = !1, e.target.value = "", c.oR.error(a("dashboard.templates.errors.invalid_file_type")))
           };
 
@@ -1776,18 +1798,18 @@
             2: "lastUsed",
             3: "uploads"
           },
-          es = () => "" === E ? c.oR.error(a("dashboard.templates.errors.tag_required")) : E.length > 15 ? c.oR.error(a("dashboard.templates.errors.tag_too_long")) : E.length < 3 ? c.oR.error(a("dashboard.templates.errors.tag_too_short")) : W.length >= 10 ? c.oR.error(a("dashboard.templates.errors.max_tags")) : W.includes(E) ? c.oR.error(a("dashboard.templates.errors.tag_exists")) : /^[a-zA-Z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/.test(E) ? void(P([...W, E.replace(/\s+/g, "")]), U("")) : c.oR.error(a("dashboard.templates.errors.tag_invalid_chars")),
+          es = () => "" === D ? c.oR.error(a("dashboard.templates.errors.tag_required")) : D.length > 15 ? c.oR.error(a("dashboard.templates.errors.tag_too_long")) : D.length < 3 ? c.oR.error(a("dashboard.templates.errors.tag_too_short")) : U.length >= 10 ? c.oR.error(a("dashboard.templates.errors.max_tags")) : U.includes(D) ? c.oR.error(a("dashboard.templates.errors.tag_exists")) : /^[a-zA-Z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/.test(D) ? void(P([...U, D.replace(/\s+/g, "")]), W("")) : c.oR.error(a("dashboard.templates.errors.tag_invalid_chars")),
           er = async e => {
             e.target.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"></animate></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"></animate><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"></animateTransform></path></g></svg>', e.target.style.pointerEvents = "none";
             try {
-              if ("" === M) return c.oR.error(a("dashboard.templates.errors.name_required"));
-              if (M.length > 30) return c.oR.error(a("dashboard.templates.errors.name_too_long"));
-              if (0 === W.length) return c.oR.error(a("dashboard.templates.errors.tags_required"));
-              if (W.length > 10) return c.oR.error(a("dashboard.templates.errors.max_tags"));
-              if (!I) return c.oR.error(a("dashboard.templates.errors.preview_required"));
-              if (!/^[a-zA-Z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/? ]*$/.test(M)) return c.oR.error(a("dashboard.templates.errors.name_invalid_chars"));
+              if ("" === B) return c.oR.error(a("dashboard.templates.errors.name_required"));
+              if (B.length > 30) return c.oR.error(a("dashboard.templates.errors.name_too_long"));
+              if (0 === U.length) return c.oR.error(a("dashboard.templates.errors.tags_required"));
+              if (U.length > 10) return c.oR.error(a("dashboard.templates.errors.max_tags"));
+              if (!q) return c.oR.error(a("dashboard.templates.errors.preview_required"));
+              if (!/^[a-zA-Z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/? ]*$/.test(B)) return c.oR.error(a("dashboard.templates.errors.name_invalid_chars"));
               let e = new FormData;
-              e.append("name", M), e.append("tags", JSON.stringify(W)), e.append("image", I), e.append("premium_only", Q.toString()), e.append("visibility", V);
+              e.append("name", B), e.append("tags", JSON.stringify(U)), e.append("image", q), e.append("premium_only", Q.toString()), e.append("visibility", V);
               let t = await fetch("https://guns.lol/api/dashboard/templates/create", {
                   method: "POST",
                   body: e
@@ -1799,7 +1821,7 @@
                   Z(s.unlistedTemplateId), G("unlistedTemplate"), el(), c.oR.success(s.message);
                   return
                 }
-                c.oR.success(s.message), O(!1), el(), location.reload()
+                c.oR.success(s.message), M(!1), el(), location.reload()
               } else c.oR.error(s.error)
             } finally {
               e.target.innerHTML = ` <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M11 17h2v-4h4v-2h-4V7h-2v4H7v2h4zm1 5q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"></path></svg> ${ed}`, setTimeout(() => {
@@ -1807,7 +1829,7 @@
               }, 1e3)
             }
           }, el = () => {
-            D(""), U(""), P([]), B(""), F(""), X(K), z("public")
+            E(""), W(""), P([]), L(""), F(""), X(K), H("public")
           };
         (0, r.useEffect)(() => {
           let e = window.location.hash;
@@ -1844,12 +1866,12 @@
             visibleToasts: 2
           }), (0, s.jsx)(b.A, {
             opened: R,
-            onClose: () => O(!1),
-            title: em[H],
+            onClose: () => M(!1),
+            title: em[z],
             centered: !0,
             size: "500px",
-            children: "createTemplate" === H ? (0, s.jsx)(s.Fragment, {
-              children: q ? (0, s.jsxs)("div", {
+            children: "createTemplate" === z ? (0, s.jsx)(s.Fragment, {
+              children: O ? (0, s.jsxs)("div", {
                 className: i().createTemplateContainerWrapper,
                 children: [(0, s.jsxs)("h3", {
                   className: i().createTemplateText,
@@ -1863,7 +1885,7 @@
                       children: a("dashboard.templates.form.preview.title")
                     }), (0, s.jsx)("div", {
                       className: i().previewUpload,
-                      children: "" === L ? (0, s.jsxs)(s.Fragment, {
+                      children: "" === I ? (0, s.jsxs)(s.Fragment, {
                         children: [(0, s.jsxs)("div", {
                           className: i().uploadCardText,
                           children: [m.A.image, (0, s.jsx)("h1", {
@@ -1880,15 +1902,15 @@
                         children: [(0, s.jsxs)("div", {
                           className: i().fileBadge,
                           children: [(0, s.jsx)("span", {
-                            children: ee(I.name).toUpperCase()
+                            children: ee(q.name).toUpperCase()
                           }), (0, s.jsx)("span", {
                             onClick: function() {
-                              B(""), F("")
+                              L(""), F("")
                             },
                             children: m.A.deleteFile
                           })]
                         }), (0, s.jsx)("img", {
-                          src: L,
+                          src: I,
                           alt: "Preview",
                           className: i().uploadCardImage
                         })]
@@ -1898,9 +1920,9 @@
                     featureName: a("dashboard.templates.form.name_label"),
                     icon: m.A.templateName,
                     placeholder: a("dashboard.templates.form.name_placeholder"),
-                    value: M,
+                    value: B,
                     onChangeFunction: e => {
-                      D(e.target.value)
+                      E(e.target.value)
                     },
                     maxLength: 30
                   }), (0, s.jsxs)("div", {
@@ -1915,9 +1937,9 @@
                         children: [(0, s.jsx)(v.A, {
                           icon: m.A.tags,
                           placeholder: a("dashboard.templates.form.tags.placeholder"),
-                          value: E,
+                          value: D,
                           onChangeFunction: e => {
-                            U(e.target.value)
+                            W(e.target.value)
                           },
                           onKeyPress: e => {
                             "Enter" === e.key && (e.preventDefault(), es())
@@ -1928,16 +1950,16 @@
                           onClick: es,
                           children: m.A.addSign
                         })]
-                      }), W.length > 0 && (0, s.jsx)("div", {
+                      }), U.length > 0 && (0, s.jsx)("div", {
                         className: i().templateTagsList,
-                        children: W.map((e, a) => (0, s.jsxs)("div", {
+                        children: U.map((e, a) => (0, s.jsxs)("div", {
                           className: i().tag,
                           children: [(0, s.jsx)("span", {
                             className: i().tagName,
                             children: e
                           }), (0, s.jsx)("span", {
                             onClick: () => {
-                              P(W.filter((e, t) => t !== a))
+                              P(U.filter((e, t) => t !== a))
                             },
                             className: i().removeTag,
                             children: m.A.removeTag
@@ -1952,7 +1974,7 @@
                       value: V,
                       data: ei,
                       onChangeFunction: e => {
-                        z(e)
+                        H(e)
                       },
                       icon: m.A.templateVisibility
                     })
@@ -1987,7 +2009,7 @@
                   children: a("dashboard.templates.modal.create.age_requirement.description")
                 })]
               })
-            }) : "unlistedTemplate" === H && (0, s.jsxs)("div", {
+            }) : "unlistedTemplate" === z && (0, s.jsxs)("div", {
               className: i().unlistedTemplateContainer,
               children: [(0, s.jsx)("h3", {
                 className: i().unlistedTemplateText,
@@ -2017,7 +2039,7 @@
               }), (0, s.jsx)("span", {
                 className: i().unlistedTemplateButton,
                 onClick: () => {
-                  O(!1), el(), G(""), Z("")
+                  M(!1), el(), G(""), Z("")
                 },
                 children: eo
               })]
@@ -2087,7 +2109,7 @@
             }), (0, s.jsxs)("span", {
               className: i().createTemplateButton,
               onClick: () => {
-                G("createTemplate"), O(!0)
+                G("createTemplate"), M(!0)
               },
               children: [m.A.addSign, " ", ed]
             })]

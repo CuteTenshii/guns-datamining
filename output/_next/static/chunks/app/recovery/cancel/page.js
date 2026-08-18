@@ -4,6 +4,8 @@
       e.exports = {
         page: "GUNS__46-85dd92a2-f2354121-569442c3",
         panel: "GUNS__7b-a367b144-ef9b1f6d-e8949708",
+        embeddedPage: "GUNS__87-65222ec3-b5243866-c2d1f207",
+        embeddedPanel: "GUNS__7c-313613d4-6b77535b-2192a398",
         panelHeaderAction: "GUNS__f3-4ad71b9f-2dac4266-0398c8d4",
         brand: "GUNS__c3-0509edcf-2b9ff916-f83c6df9",
         brandLink: "GUNS__3c-c4bb5e38-d1897d45-fde07dac",
@@ -124,7 +126,7 @@
         t = c(12115),
         r = c(73321),
         s = c(77570),
-        n = c(38256),
+        n = c(86891),
         _ = c(18943),
         f = c.n(_),
         b = c(49982),
@@ -270,18 +272,19 @@
         headerAction: c,
         children: r,
         footer: n,
-        legal: _
+        legal: _,
+        embedded: f = !1
       }) {
         return (0, d.jsx)("div", {
-          className: s().page,
+          className: f ? s().embeddedPage : s().page,
           children: (0, d.jsxs)("div", {
-            className: s().panel,
+            className: f ? s().embeddedPanel : s().panel,
             children: [c && (0, d.jsx)("div", {
               className: s().panelHeaderAction,
               children: c
             }), (0, d.jsxs)("div", {
               className: s().brand,
-              children: [(0, d.jsx)(t.A, {
+              children: [!f && (0, d.jsx)(t.A, {
                 href: "/",
                 className: s().brandLink,
                 children: (0, d.jsx)("img", {
@@ -319,7 +322,7 @@
         A: () => r
       });
       var d = c(95155),
-        t = c(38256);
+        t = c(86891);
 
       function r({
         href: e,
@@ -344,6 +347,6 @@
     }
   },
   e => {
-    e.O(0, [1406, 8256, 8441, 3794, 7358], () => e(e.s = 64143)), _N_E = e.O()
+    e.O(0, [379, 1899, 6891, 8441, 3794, 7358], () => e(e.s = 64143)), _N_E = e.O()
   }
 ]);

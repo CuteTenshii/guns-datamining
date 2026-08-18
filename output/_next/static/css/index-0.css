@@ -110,16 +110,24 @@ textarea {
 }
 
 html {
+  height: 100%;
   color-scheme: dark !important;
   forced-color-adjust: none !important
 }
 
-body,
-html {
-  height: 100%
+[data-vaul-drawer][data-vaul-drawer][data-state=closed] {
+  animation-duration: .32s
+}
+
+@media (prefers-reduced-motion:reduce) {
+  [data-vaul-drawer][data-vaul-drawer] {
+    animation-duration: 1ms !important;
+    transition-duration: 1ms !important
+  }
 }
 
 body {
+  height: 100%;
   min-height: 100%
 }
 

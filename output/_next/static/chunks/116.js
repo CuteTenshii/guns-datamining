@@ -181,7 +181,7 @@
           })
         })
       };
-      var d = a(38256);
+      var d = a(86891);
 
       function l({
         setOnboardingData: e
@@ -645,29 +645,55 @@
     61836: (e, s, a) => {
       "use strict";
       a.d(s, {
-        $g: () => n,
-        gP: () => r,
-        o3: () => o,
-        q9: () => t
+        $g: () => l,
+        KH: () => r,
+        YL: () => o,
+        Yi: () => n,
+        dd: () => d,
+        gP: () => c,
+        o3: () => h,
+        q9: () => t,
+        wH: () => i
       });
       let t = {
-        free: 0,
-        premium: 7.99,
-        premiumGift: 7.19,
-        imagehost: 4.99,
-        verified: 14.99,
-        customBadge: 8.99,
-        badgeCredit: 2.99,
-        aliasCredit: 4.99,
-        donationMinimum: 1,
-        donorBadgeMinimum: 10
-      };
+          free: 0,
+          premium: 7.99,
+          premiumGift: 7.19,
+          imagehost: 4.99,
+          verified: 14.99,
+          customBadge: 8.99,
+          badgeCredit: 2.99,
+          aliasCredit: 4.99,
+          donationMinimum: 1,
+          donorBadgeMinimum: 10
+        },
+        n = [{
+          gb: 5,
+          price: 4.99
+        }, {
+          gb: 10,
+          price: 9.99,
+          recommended: !0
+        }, {
+          gb: 25,
+          price: 19.99
+        }, {
+          gb: 50,
+          price: 34.99
+        }],
+        r = 5,
+        o = 200;
 
-      function n(e) {
+      function i(e) {
+        return !Number.isInteger(e) || e < r || e > o ? null : (100 * Math.ceil((e <= 10 ? 100 * e - 1 : e <= 25 ? 999 + Math.round(1e3 / 15 * (e - 10)) : e <= 50 ? 1999 + (e - 25) * 60 : 3499 + (e - 50) * 50) / 100) - 1) / 100
+      }
+      let d = 15;
+
+      function l(e) {
         return `${e.toFixed(2).replace(/\.00$/,"").replace(".",",")}€`
       }
 
-      function r(e) {
+      function c(e) {
         let s = t.badgeCredit * e ** .85,
           a = t.badgeCredit * e;
         return {
@@ -676,7 +702,7 @@
         }
       }
 
-      function o(e) {
+      function h(e) {
         let s = t.customBadge * e ** .95,
           a = t.customBadge * e;
         return {
@@ -685,6 +711,7 @@
           discountPercent: Number(((1 - s / a) * 100).toFixed(0))
         }
       }
+      t.premium, t.imagehost, t.verified, t.customBadge, t.aliasCredit
     },
     77328: e => {
       e.exports = {

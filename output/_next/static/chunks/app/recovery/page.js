@@ -6,16 +6,16 @@
     6237: (e, a, c) => {
       "use strict";
       c.d(a, {
-        default: () => b
+        default: () => i
       });
       var d = c(95155);
       c(12115);
       var t = c(77570),
         _ = c(81934),
-        f = c(38256),
+        f = c(86891),
         s = c(49982),
         r = c.n(s);
-      let i = [{
+      let b = [{
         id: "forgot_password",
         icon: (0, d.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
@@ -109,14 +109,14 @@
         })
       }];
 
-      function b() {
+      function i() {
         let e = (0, f.kj)();
         return (0, d.jsx)(t.A, {
           title: e("auth.recovery.selector.title"),
           subtitle: e("auth.recovery.selector.subtitle"),
           children: (0, d.jsx)("div", {
             className: r().recoveryCards,
-            children: i.map(a => {
+            children: b.map(a => {
               var c;
               return (0, d.jsxs)(_.A, {
                 href: "forgot_password" === (c = a.id) ? "/reset" : `/recovery/start?type=${c}`,
@@ -137,6 +137,8 @@
       e.exports = {
         page: "GUNS__46-85dd92a2-f2354121-569442c3",
         panel: "GUNS__7b-a367b144-ef9b1f6d-e8949708",
+        embeddedPage: "GUNS__87-65222ec3-b5243866-c2d1f207",
+        embeddedPanel: "GUNS__7c-313613d4-6b77535b-2192a398",
         panelHeaderAction: "GUNS__f3-4ad71b9f-2dac4266-0398c8d4",
         brand: "GUNS__c3-0509edcf-2b9ff916-f83c6df9",
         brandLink: "GUNS__3c-c4bb5e38-d1897d45-fde07dac",
@@ -264,18 +266,19 @@
         headerAction: c,
         children: _,
         footer: s,
-        legal: r
+        legal: r,
+        embedded: b = !1
       }) {
         return (0, d.jsx)("div", {
-          className: f().page,
+          className: b ? f().embeddedPage : f().page,
           children: (0, d.jsxs)("div", {
-            className: f().panel,
+            className: b ? f().embeddedPanel : f().panel,
             children: [c && (0, d.jsx)("div", {
               className: f().panelHeaderAction,
               children: c
             }), (0, d.jsxs)("div", {
               className: f().brand,
-              children: [(0, d.jsx)(t.A, {
+              children: [!b && (0, d.jsx)(t.A, {
                 href: "/",
                 className: f().brandLink,
                 children: (0, d.jsx)("img", {
@@ -313,7 +316,7 @@
         A: () => _
       });
       var d = c(95155),
-        t = c(38256);
+        t = c(86891);
 
       function _({
         href: e,
@@ -338,6 +341,6 @@
     }
   },
   e => {
-    e.O(0, [1406, 8256, 8441, 3794, 7358], () => e(e.s = 1011)), _N_E = e.O()
+    e.O(0, [379, 1899, 6891, 8441, 3794, 7358], () => e(e.s = 1011)), _N_E = e.O()
   }
 ]);

@@ -1,47 +1,32 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [1457], {
-    35223: (e, r, u) => {
+    35223: (e, t, c) => {
       "use strict";
-      u.d(r, {
-        default: () => n
+      c.d(t, {
+        default: () => o
       });
-      var t = u(95155),
-        s = u(73321),
-        a = u(12115);
+      var n = c(95155),
+        a = c(12115);
 
-      function n() {
+      function o() {
+        let e = (0, a.useRef)(!1);
         return (0, a.useEffect)(() => {
-          fetch("https://guns.lol/api/auth/logout"), (0, s.redirect)("/login")
-        }, []), (0, t.jsx)("div", {})
+          e.current || (e.current = !0, (async () => {
+            try {
+              let e = await fetch("https://guns.lol/api/auth/logout", {
+                  method: "POST"
+                }),
+                t = await e.json().catch(() => null);
+              window.location.replace(e.ok && t?.switched ? "/account" : "/login")
+            } catch {
+              window.location.replace("/login")
+            }
+          })())
+        }, []), (0, n.jsx)("div", {})
       }
     },
-    70325: (e, r, u) => {
-      Promise.resolve().then(u.bind(u, 35223))
-    },
-    73321: (e, r, u) => {
-      "use strict";
-      var t = u(74645);
-      u.o(t, "redirect") && u.d(r, {
-        redirect: function() {
-          return t.redirect
-        }
-      }), u.o(t, "useParams") && u.d(r, {
-        useParams: function() {
-          return t.useParams
-        }
-      }), u.o(t, "usePathname") && u.d(r, {
-        usePathname: function() {
-          return t.usePathname
-        }
-      }), u.o(t, "useRouter") && u.d(r, {
-        useRouter: function() {
-          return t.useRouter
-        }
-      }), u.o(t, "useSearchParams") && u.d(r, {
-        useSearchParams: function() {
-          return t.useSearchParams
-        }
-      })
+    70325: (e, t, c) => {
+      Promise.resolve().then(c.bind(c, 35223))
     }
   },
   e => {

@@ -4,6 +4,8 @@
       e.exports = {
         page: "GUNS__46-85dd92a2-f2354121-569442c3",
         panel: "GUNS__7b-a367b144-ef9b1f6d-e8949708",
+        embeddedPage: "GUNS__87-65222ec3-b5243866-c2d1f207",
+        embeddedPanel: "GUNS__7c-313613d4-6b77535b-2192a398",
         panelHeaderAction: "GUNS__f3-4ad71b9f-2dac4266-0398c8d4",
         brand: "GUNS__c3-0509edcf-2b9ff916-f83c6df9",
         brandLink: "GUNS__3c-c4bb5e38-d1897d45-fde07dac",
@@ -82,24 +84,24 @@
         footerContainer: "GUNS__f5-85f750c2-b172755c-dfcf1f52"
       }
     },
-    23937: (e, a, t) => {
-      Promise.resolve().then(t.bind(t, 96789))
+    23937: (e, a, d) => {
+      Promise.resolve().then(d.bind(d, 96789))
     },
-    37897: (e, a, t) => {
+    37897: (e, a, d) => {
       "use strict";
-      t.d(a, {
+      d.d(a, {
         A: () => _
       });
-      var c = t(95155),
-        d = t(12115),
-        r = t(98241),
-        s = t.n(r),
-        f = t(54834);
+      var c = d(95155),
+        t = d(12115),
+        r = d(98241),
+        s = d.n(r),
+        f = d(54834);
 
       function _({
         featureName: e,
         onChangeFunction: a,
-        value: t,
+        value: d,
         placeholder: r,
         icon: _,
         prefix: n,
@@ -107,17 +109,18 @@
         viewPassword: b,
         onKeyPress: o,
         isImageUrl: l,
-        type: u = "text",
-        ...N
+        iconInside: u,
+        type: N = "text",
+        ...S
       }) {
-        let [S, U] = (0, d.useState)(!!b), {
-          onInput: G,
-          onChange: p,
-          maxLength: h,
-          ...m
-        } = N, v = h ?? (b || "password" === u ? 72 : void 0);
-        return (0, d.useEffect)(() => {
-          U(!!b)
+        let [U, G] = (0, t.useState)(!!b), {
+          onInput: p,
+          onChange: h,
+          maxLength: m,
+          ...v
+        } = S, g = m ?? (b || "password" === N ? 72 : void 0);
+        return (0, t.useEffect)(() => {
+          G(!!b)
         }, [b]), (0, c.jsxs)("div", {
           className: s().inputContainerWrapper,
           "data-dashboard-feature-label": "string" == typeof e ? e : void 0,
@@ -125,11 +128,11 @@
             className: s().featureName,
             children: e
           }), (0, c.jsxs)("div", {
-            className: `${s().inputWrapperDiv} ${n&&s().inputWrapperURL}`,
+            className: `${s().inputWrapperDiv} ${n&&s().inputWrapperURL} ${u&&s().inputWrapperIconInside}`,
             children: [(0, c.jsxs)("span", {
               className: s().inputWrapperSpan,
               style: {
-                position: n ? "absolute" : "static"
+                position: n || u ? "absolute" : "static"
               },
               children: [l ? (0, c.jsx)("img", {
                 src: _,
@@ -140,14 +143,14 @@
               })]
             }), b && (0, c.jsx)("p", {
               onClick: () => {
-                U(!S)
+                G(!U)
               },
-              children: S ? f.A.hidePassword : f.A.views
+              children: U ? f.A.hidePassword : f.A.views
             }), (0, c.jsx)("input", {
               autoCorrect: "off",
-              type: b ? S ? "password" : "text" : u,
+              type: b ? U ? "password" : "text" : N,
               onKeyDown: o,
-              value: t,
+              value: d,
               style: {
                 paddingLeft: n ? i : "",
                 paddingRight: b ? 47 : ""
@@ -155,10 +158,10 @@
               placeholder: r,
               className: s().inputWrapperInput,
               onInput: e => {
-                G?.(e), p?.(e), a?.(e)
+                p?.(e), h?.(e), a?.(e)
               },
-              maxLength: v,
-              ...m
+              maxLength: g,
+              ...v
             })]
           })]
         })
@@ -197,59 +200,60 @@
         inlineActionLink: "GUNS__d4-0f2b7dc1-d271521b-9c261c3b"
       }
     },
-    73321: (e, a, t) => {
+    73321: (e, a, d) => {
       "use strict";
-      var c = t(74645);
-      t.o(c, "redirect") && t.d(a, {
+      var c = d(74645);
+      d.o(c, "redirect") && d.d(a, {
         redirect: function() {
           return c.redirect
         }
-      }), t.o(c, "useParams") && t.d(a, {
+      }), d.o(c, "useParams") && d.d(a, {
         useParams: function() {
           return c.useParams
         }
-      }), t.o(c, "usePathname") && t.d(a, {
+      }), d.o(c, "usePathname") && d.d(a, {
         usePathname: function() {
           return c.usePathname
         }
-      }), t.o(c, "useRouter") && t.d(a, {
+      }), d.o(c, "useRouter") && d.d(a, {
         useRouter: function() {
           return c.useRouter
         }
-      }), t.o(c, "useSearchParams") && t.d(a, {
+      }), d.o(c, "useSearchParams") && d.d(a, {
         useSearchParams: function() {
           return c.useSearchParams
         }
       })
     },
-    77570: (e, a, t) => {
+    77570: (e, a, d) => {
       "use strict";
-      t.d(a, {
+      d.d(a, {
         A: () => f
       });
-      var c = t(95155),
-        d = t(81934),
-        r = t(18943),
-        s = t.n(r);
+      var c = d(95155),
+        t = d(81934),
+        r = d(18943),
+        s = d.n(r);
 
       function f({
         title: e,
         subtitle: a,
-        headerAction: t,
+        headerAction: d,
         children: r,
         footer: f,
-        legal: _
+        legal: _,
+        embedded: n = !1
       }) {
         return (0, c.jsx)("div", {
-          className: s().page,
+          className: n ? s().embeddedPage : s().page,
           children: (0, c.jsxs)("div", {
-            className: s().panel,
-            children: [t && (0, c.jsx)("div", {
+            className: n ? s().embeddedPanel : s().panel,
+            children: [d && (0, c.jsx)("div", {
               className: s().panelHeaderAction,
-              children: t
+              children: d
             }), (0, c.jsxs)("div", {
               className: s().brand,
-              children: [(0, c.jsx)(d.A, {
+              children: [!n && (0, c.jsx)(t.A, {
                 href: "/",
                 className: s().brandLink,
                 children: (0, c.jsx)("img", {
@@ -281,22 +285,22 @@
         })
       }
     },
-    81934: (e, a, t) => {
+    81934: (e, a, d) => {
       "use strict";
-      t.d(a, {
+      d.d(a, {
         A: () => r
       });
-      var c = t(95155),
-        d = t(38256);
+      var c = d(95155),
+        t = d(86891);
 
       function r({
         href: e,
         asTag: a,
-        locale: t,
+        locale: d,
         children: r,
         ...s
       }) {
-        let f = t || (0, d.useLang)();
+        let f = d || (0, t.useLang)();
         if (e.startsWith("http://") || e.startsWith("https://") || e.startsWith("mailto:") || e.startsWith("tel:")) return (0, c.jsx)("a", {
           href: e,
           ...s,
@@ -310,31 +314,31 @@
         })
       }
     },
-    96789: (e, a, t) => {
+    96789: (e, a, d) => {
       "use strict";
-      t.d(a, {
+      d.d(a, {
         default: () => u
       });
-      var c = t(95155),
-        d = t(12115),
-        r = t(73321),
-        s = t(77570),
-        f = t(37897),
-        _ = t(38256),
-        n = t(54834),
-        i = t(18943),
-        b = t.n(i),
-        o = t(49982),
-        l = t.n(o);
+      var c = d(95155),
+        t = d(12115),
+        r = d(73321),
+        s = d(77570),
+        f = d(37897),
+        _ = d(86891),
+        n = d(54834),
+        i = d(18943),
+        b = d.n(i),
+        o = d(49982),
+        l = d.n(o);
 
       function u() {
         let e = (0, _.kj)(),
           a = (0, r.useRouter)(),
-          t = (0, r.useSearchParams)().get("type") || "lost_2fa_device",
-          [i, o] = (0, d.useState)(""),
-          [u, N] = (0, d.useState)(!1),
-          [S, U] = (0, d.useState)(""),
-          [G, p] = (0, d.useState)(""),
+          d = (0, r.useSearchParams)().get("type") || "lost_2fa_device",
+          [i, o] = (0, t.useState)(""),
+          [u, N] = (0, t.useState)(!1),
+          [S, U] = (0, t.useState)(""),
+          [G, p] = (0, t.useState)(""),
           h = async c => {
             if (c.preventDefault(), !i.trim()) return void U(e("auth.recovery.start.errors.identifier_required"));
             try {
@@ -345,14 +349,14 @@
                     "Content-Type": "application/json"
                   },
                   body: JSON.stringify({
-                    recoveryType: t,
+                    recoveryType: d,
                     identifier: i.trim()
                   })
                 }),
-                d = await c.json();
-              if (!c.ok) return void U(d.error || e("auth.recovery.start.errors.unable_start"));
-              if (!d.attemptId) return void p(d.message);
-              let r = `/recovery/start/evidence?attempt=${encodeURIComponent(d.attemptId)}`;
+                t = await c.json();
+              if (!c.ok) return void U(t.error || e("auth.recovery.start.errors.unable_start"));
+              if (!t.attemptId) return void p(t.message);
+              let r = `/recovery/start/evidence?attempt=${encodeURIComponent(t.attemptId)}`;
               a.push(r)
             } catch {
               U(e("auth.recovery.start.errors.unable_start"))
@@ -403,6 +407,6 @@
     }
   },
   e => {
-    e.O(0, [1406, 4103, 8256, 5886, 8441, 3794, 7358], () => e(e.s = 23937)), _N_E = e.O()
+    e.O(0, [379, 1899, 6891, 5886, 8441, 3794, 7358], () => e(e.s = 23937)), _N_E = e.O()
   }
 ]);

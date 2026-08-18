@@ -1,5 +1,5 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [2461], {
+  [7563], {
     7029: e => {
       e.exports = {
         socialSelection: "GUNS__71-e7e80b1c-c93ba8c9-0102ad6c",
@@ -78,6 +78,9 @@
         lastfmCard: "GUNS__e5-b19b920c-0ab8a305-7e391165",
         lastfmModalSocial: "GUNS__9f-de7f3bab-1d715250-c76901fe",
         lastfm: "GUNS__3a-8b41098b-5e1ceee7-e951db21",
+        statsfmCard: "GUNS__59-c86d6a75-23ef85ce-c5df930b",
+        statsfmModalSocial: "GUNS__e1-956998c6-b5c14516-bc8ca084",
+        statsfm: "GUNS__a8-79bae289-87ae3ae4-3e924c3d",
         facebookCard: "GUNS__60-459eae80-bc6549f8-52cb7b47",
         facebookModalSocial: "GUNS__1a-e2392fe0-e269f505-773742c5",
         facebook: "GUNS__a1-e0b890c5-ba422947-4d519765",
@@ -225,7 +228,8 @@
           playstation: "PlayStation",
           xbox: "Xbox",
           tellonym: "Tellonym",
-          bluesky: "Bluesky"
+          bluesky: "Bluesky",
+          statsfm: "stats.fm"
         },
         c = {
           playstation: {
@@ -286,7 +290,8 @@
           playstation: "",
           xbox: "xbox.com/play/user/",
           tellonym: "tellonym.me/",
-          bluesky: "bsky.app/profile/"
+          bluesky: "bsky.app/profile/",
+          statsfm: "stats.fm/"
         },
         l = {
           snapchat: 178,
@@ -333,7 +338,8 @@
           playstation: 0,
           xbox: 184,
           tellonym: 132,
-          bluesky: 159
+          bluesky: 159,
+          statsfm: 102
         }
     },
     30184: (e, a, t) => {
@@ -406,22 +412,22 @@
             top: 0,
             width: 220
           }),
-          [I, E] = (0, c.useState)(!1),
+          [E, I] = (0, c.useState)(!1),
           L = h("string" == typeof t ? t : ""),
           B = (0, c.useMemo)(() => L ? (e => {
             if (/^#[0-9a-f]{6}$/i.test(e)) return e.toLowerCase();
             if (/^#[0-9a-f]{3}$/i.test(e)) return `#${e.slice(1).split("").map(e=>`${e}${e}`).join("")}`.toLowerCase();
             return null
           })(L) : null, [L]),
-          R = B ?? j;
+          F = B ?? j;
         (0, c.useEffect)(() => {
           B && w(B)
         }, [B]), (0, c.useEffect)(() => {
-          C(p(R))
-        }, [R]), (0, c.useEffect)(() => {
-          E(!0)
+          C(p(F))
+        }, [F]), (0, c.useEffect)(() => {
+          I(!0)
         }, []);
-        let T = (0, c.useCallback)(() => {
+        let R = (0, c.useCallback)(() => {
           if (!v.current) return;
           let e = v.current.getBoundingClientRect(),
             a = Math.min(270, e.width),
@@ -441,12 +447,12 @@
         (0, c.useLayoutEffect)(() => {
           if (!y) return;
           let e = () => {
-            T()
+            R()
           };
           return e(), window.addEventListener("resize", e), window.addEventListener("scroll", e, !0), () => {
             window.removeEventListener("resize", e), window.removeEventListener("scroll", e, !0)
           }
-        }, [y, T]), (0, c.useEffect)(() => {
+        }, [y, R]), (0, c.useEffect)(() => {
           if (!y) return;
           let e = e => {
               let a = e.target,
@@ -461,7 +467,7 @@
             document.removeEventListener("mousedown", e), document.removeEventListener("keydown", a)
           }
         }, [y]);
-        let $ = (0, c.useCallback)(e => {
+        let T = (0, c.useCallback)(e => {
             C(e);
             let t = (e => {
               let a, {
@@ -496,7 +502,7 @@
             })(e);
             w(t), a?.(t)
           }, [a]),
-          F = (0, c.useCallback)(e => {
+          $ = (0, c.useCallback)(e => {
             let t = h(e.target.value);
             a?.(t)
           }, [a]),
@@ -505,12 +511,12 @@
             let t = U.current.getBoundingClientRect(),
               o = b((e - t.left) / t.width, 0, 1),
               c = b((a - t.top) / t.height, 0, 1);
-            $({
+            T({
               h: G.h,
               s: o,
               v: 1 - c
             })
-          }, [G.h, $]),
+          }, [G.h, T]),
           D = (0, c.useCallback)(e => {
             if (S) return;
             e.preventDefault();
@@ -525,23 +531,23 @@
             document.addEventListener("pointermove", t), document.addEventListener("pointerup", o)
           }, [S, O]),
           W = (0, c.useCallback)(e => {
-            $({
+            T({
               ...G,
               h: Number(e.target.value)
             })
-          }, [G, $]),
+          }, [G, T]),
           P = (0, c.useCallback)(() => {
-            S || k(e => (e || T(), !0))
-          }, [S, T]),
-          H = (0, c.useCallback)(() => {
+            S || k(e => (e || R(), !0))
+          }, [S, R]),
+          z = (0, c.useCallback)(() => {
             S || k(e => {
               let a = !e;
-              return a && T(), a
+              return a && R(), a
             })
-          }, [S, T]),
-          z = (0, n.A)(r().inputWrapperInput, f().textInput, d && f().textInputWithIcon, m),
+          }, [S, R]),
+          H = (0, n.A)(r().inputWrapperInput, f().textInput, d && f().textInputWithIcon, m),
           q = "undefined" != typeof document ? document.body : null,
-          V = !!(y && I && q),
+          V = !!(y && E && q),
           X = V ? {
             position: "fixed",
             left: `${M.left}px`,
@@ -553,6 +559,7 @@
             ref: x,
             className: f().panel,
             style: X,
+            "data-vaul-no-drag": !0,
             children: [(0, o.jsxs)("div", {
               ref: U,
               className: f().svArea,
@@ -597,7 +604,7 @@
             children: [(0, o.jsx)("button", {
               type: "button",
               className: f().leftSwatchButton,
-              onClick: H,
+              onClick: z,
               style: {
                 cursor: S ? "not-allowed" : "pointer"
               },
@@ -605,7 +612,7 @@
               children: (0, o.jsx)("span", {
                 className: f().colorSwatch,
                 style: {
-                  backgroundColor: R
+                  backgroundColor: F
                 }
               })
             }), d && (0, o.jsx)("span", {
@@ -617,10 +624,10 @@
               spellCheck: !1,
               inputMode: "text",
               maxLength: 7,
-              className: z,
+              className: H,
               placeholder: l,
               value: L,
-              onChange: F,
+              onChange: $,
               onFocus: P,
               onClick: P,
               disabled: S,
@@ -629,7 +636,7 @@
             }), (0, o.jsx)("button", {
               type: "button",
               className: f().pickerButton,
-              onClick: H,
+              onClick: z,
               disabled: S,
               children: _
             }), y && (V && q ? (0, s.createPortal)(K, q) : K)]
@@ -699,10 +706,10 @@
         hueSlider: "GUNS__6c-f4fedfd4-da5b3cbc-6c77e2c2"
       }
     },
-    82461: (e, a, t) => {
+    67563: (e, a, t) => {
       "use strict";
       t.r(a), t.d(a, {
-        default: () => O
+        default: () => W
       });
       var o = t(95155),
         c = t(12115),
@@ -1069,10 +1076,16 @@
         x = t(57157),
         y = t(45941),
         k = t(30184),
-        G = t(38256),
+        G = t(86891),
         C = t(12521);
+      let j = /(?:\b[a-z][a-z\d+.-]*:\/\/|\b(?:javascript|data|vbscript|file):|(?:^|[\s([{"'`<])(?:\/\/|www\.)[^\s]+|(?:^|[\s([{"'`<])(?:localhost|\d{1,3}(?:\.\d{1,3}){3}|(?:[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?\.)+[a-z]{2,63})(?::\d{1,5})?(?:[/?#][^\s]*)?)/i;
 
-      function j({
+      function w(e) {
+        let a = e.normalize("NFKC").replace(/[\u200B-\u200D\uFEFF]/g, "");
+        return j.test(a)
+      }
+
+      function M({
         social: e,
         id: a,
         socialMode: t,
@@ -1086,25 +1099,26 @@
           _ = s.find(t => t.social === e && t.id === a),
           [S, g] = (0, c.useState)(() => _ ? _.value : ""),
           [N, j] = (0, c.useState)(),
-          [w, M] = (0, c.useState)(!1),
-          [A, I] = (0, c.useState)(b),
-          [E, L] = (0, c.useState)(t ?? "link"),
-          [B, R] = (0, c.useState)(_?.glow_color || "#a3a3a3"),
-          T = !!A,
+          [M, A] = (0, c.useState)(!1),
+          [E, I] = (0, c.useState)(b),
+          [L, B] = (0, c.useState)(t ?? "link"),
+          [F, R] = (0, c.useState)(_?.glow_color || "#a3a3a3"),
+          T = !!E,
           $ = "custom_url" !== e ? S.replace("https://" + r.Uy[e], "") : S.replace("https://", "");
-        async function F(t) {
-          let o = "custom_url" === e && T ? B : "",
-            c = await m(e, $, a, E, f, M, N || A, o);
+        async function O(t) {
+          if ("text" === L && w($)) return void d.oR.error(h("dashboard.links.errors.text_mode_url"));
+          let o = "custom_url" === e && T ? F : "",
+            c = await m(e, $, a, L, f, A, N || E, o);
           t.target.style.pointerEvents = "none", c ? (d.oR.success(h("dashboard.links.social_edit.save_success")), u(!1)) : t.target.style.pointerEvents = "all"
         }
-        let O = async e => {
+        let D = async e => {
           var a;
           let t;
           e.target.disabled = !0;
           let o = e.target.files?.[0];
           if (!o) return;
           let c = y.nB.icon,
-            s = D(o.name).toLowerCase();
+            s = W(o.name).toLowerCase();
           if (!c.includes(s)) {
             d.oR.error(h("dashboard.links.social_edit.invalid_file")), e.target.disabled = !1, e.target.value = "";
             return
@@ -1120,11 +1134,11 @@
           }, t.readAsDataURL(a)
         };
 
-        function D(e) {
+        function W(e) {
           return "." + e.substring(e.lastIndexOf(".") + 1)
         }
-        let W = e => {
-          L(e)
+        let P = e => {
+          B(e)
         };
         return (0, o.jsxs)(o.Fragment, {
           children: [(0, o.jsxs)("div", {
@@ -1137,11 +1151,11 @@
                   children: h("dashboard.links.social_edit.icon.label")
                 }), (0, o.jsx)("div", {
                   className: n().iconUpload,
-                  children: A ? (0, o.jsxs)(o.Fragment, {
+                  children: E ? (0, o.jsxs)(o.Fragment, {
                     children: [(0, o.jsxs)("div", {
                       className: n().fileBadge,
                       children: [(0, o.jsx)("span", {
-                        children: D(N && N.name ? N.name : A).toUpperCase()
+                        children: W(N && N.name ? N.name : E).toUpperCase()
                       }), (0, o.jsx)("span", {
                         onClick: function() {
                           I(""), j(""), R("#a3a3a3")
@@ -1149,7 +1163,7 @@
                         children: l.A.deleteFile
                       })]
                     }), (0, o.jsx)("img", {
-                      src: A,
+                      src: E,
                       alt: "Icon",
                       className: n().uploadCardImage
                     })]
@@ -1163,7 +1177,7 @@
                       type: "file",
                       accept: C.vJ.icon.map(e => e).join(", "),
                       onChange: e => {
-                        O(e)
+                        D(e)
                       }
                     })]
                   })
@@ -1171,7 +1185,7 @@
               }), T && (0, o.jsx)(k.A, {
                 featureName: h("dashboard.links.social_edit.icon_glow.label"),
                 onChangeFunction: R,
-                value: B,
+                value: F,
                 placeholder: h("dashboard.links.social_edit.icon_glow.placeholder")
               })]
             }), (0, o.jsxs)("div", {
@@ -1182,16 +1196,16 @@
                 element: (0, o.jsxs)("div", {
                   className: n().socialModeSelection,
                   children: [(0, o.jsxs)("span", {
-                    className: `${n().socialModeSelectionButton} ${"link"===E&&n().active}`,
-                    onClick: () => W("link"),
+                    className: `${n().socialModeSelectionButton} ${"link"===L&&n().active}`,
+                    onClick: () => P("link"),
                     children: [l.A.link, " ", h("dashboard.links.social_edit.mode.link_option")]
                   }), (0, o.jsxs)("span", {
-                    className: `${n().socialModeSelectionButton} ${"text"===E&&n().active}`,
-                    onClick: () => W("text"),
+                    className: `${n().socialModeSelectionButton} ${"text"===L&&n().active}`,
+                    onClick: () => P("text"),
                     children: [l.A.text, " ", h("dashboard.links.social_edit.mode.text_option")]
                   })]
                 })
-              }), "link" === E ? (0, o.jsx)(U.A, {
+              }), "link" === L ? (0, o.jsx)(U.A, {
                 onChangeFunction: e => {
                   g(e.target.value)
                 },
@@ -1213,8 +1227,8 @@
             className: n().socialSaveButtonWrapper,
             children: [(0, o.jsxs)("span", {
               className: n().socialSaveButton,
-              onClick: F,
-              children: [w && l.A.loading, " ", h("dashboard.links.social_edit.save_button")]
+              onClick: O,
+              children: [M && l.A.loading, " ", h("dashboard.links.social_edit.save_button")]
             }), (0, o.jsx)("a", {
               href: "https://help.guns.lol/getting-started/adding-links",
               target: "_blank",
@@ -1224,7 +1238,7 @@
         })
       }
 
-      function w({
+      function A({
         social: e,
         setSocials: a,
         setIsModalOpened: t
@@ -1235,21 +1249,22 @@
           [h, p] = (0, c.useState)(),
           [_, m] = (0, c.useState)(""),
           [S, g] = (0, c.useState)(!1),
-          [j, w] = (0, c.useState)(!1),
-          [M, A] = (0, c.useState)("link"),
-          [I, E] = (0, c.useState)("#a3a3a3");
-        async function L(o) {
+          [j, M] = (0, c.useState)(!1),
+          [A, E] = (0, c.useState)("link"),
+          [I, L] = (0, c.useState)("#a3a3a3");
+        async function B(o) {
           if (!j) {
-            w(!0), o.target.style.pointerEvents = "none";
+            if ("text" === A && w(u)) return void d.oR.error(s("dashboard.links.errors.text_mode_url"));
+            M(!0), o.target.style.pointerEvents = "none";
             try {
               let o = "custom_url" === e && _ ? I : "";
-              await N(e, u, a, M, h, g, o) && t(!1)
+              await N(e, u, a, A, h, g, o) && t(!1)
             } finally {
-              o.target.style.pointerEvents = "all", w(!1)
+              o.target.style.pointerEvents = "all", M(!1)
             }
           }
         }
-        let B = async e => {
+        let F = async e => {
           var a;
           let t;
           e.target.disabled = !0;
@@ -1263,9 +1278,9 @@
           }
           try {
             let e = await v(o);
-            E(e)
+            L(e)
           } catch (e) {
-            E("#a3a3a3")
+            L("#a3a3a3")
           }
           p(o), a = o, (t = new FileReader).onload = function(e) {
             m(e.target.result)
@@ -1276,7 +1291,7 @@
           return "." + e.substring(e.lastIndexOf(".") + 1)
         }
         let T = e => {
-          A(e)
+          E(e)
         };
         return (0, o.jsxs)(o.Fragment, {
           children: [(0, o.jsxs)("div", {
@@ -1299,7 +1314,7 @@
                       type: "file",
                       accept: C.vJ.icon.map(e => e).join(", "),
                       onChange: e => {
-                        B(e)
+                        F(e)
                       }
                     })]
                   }) : (0, o.jsxs)(o.Fragment, {
@@ -1309,7 +1324,7 @@
                         children: R(h.name).toUpperCase()
                       }), (0, o.jsx)("span", {
                         onClick: function() {
-                          m(""), p(""), E("#a3a3a3")
+                          m(""), p(""), L("#a3a3a3")
                         },
                         children: l.A.deleteFile
                       })]
@@ -1322,7 +1337,7 @@
                 })]
               }), !!_ && (0, o.jsx)(k.A, {
                 featureName: s("dashboard.links.social_add.icon_glow.label"),
-                onChangeFunction: E,
+                onChangeFunction: L,
                 value: I,
                 placeholder: s("dashboard.links.social_add.icon_glow.placeholder")
               })]
@@ -1334,16 +1349,16 @@
                 element: (0, o.jsxs)("div", {
                   className: n().socialModeSelection,
                   children: [(0, o.jsxs)("span", {
-                    className: `${n().socialModeSelectionButton} ${"link"===M&&n().active}`,
+                    className: `${n().socialModeSelectionButton} ${"link"===A&&n().active}`,
                     onClick: () => T("link"),
                     children: [l.A.link, " ", s("dashboard.links.social_add.mode.link_option")]
                   }), (0, o.jsxs)("span", {
-                    className: `${n().socialModeSelectionButton} ${"text"===M&&n().active}`,
+                    className: `${n().socialModeSelectionButton} ${"text"===A&&n().active}`,
                     onClick: () => T("text"),
                     children: [l.A.text, " ", s("dashboard.links.social_add.mode.text_option")]
                   })]
                 })
-              }), "link" === M ? (0, o.jsx)(U.A, {
+              }), "link" === A ? (0, o.jsx)(U.A, {
                 onChangeFunction: e => {
                   b(e.target.value)
                 },
@@ -1365,7 +1380,7 @@
             className: n().socialSaveButtonWrapper,
             children: [(0, o.jsxs)("span", {
               className: n().socialSaveButton,
-              onClick: L,
+              onClick: B,
               children: [S && l.A.loading, " ", s("dashboard.links.social_add.save_button")]
             }), (0, o.jsx)("a", {
               href: "https://help.guns.lol/getting-started/adding-links",
@@ -1375,11 +1390,11 @@
           })]
         })
       }
-      var M = t(44923),
-        A = t(87256),
-        I = t(39768);
+      var E = t(44923),
+        I = t(87256),
+        L = t(39768);
 
-      function E({
+      function B({
         socials: e,
         setSocials: a,
         setCurrentModal: t,
@@ -1394,7 +1409,7 @@
         }, []), (0, c.useEffect)(() => {
           f(e)
         }, [e]);
-        let _ = (0, M.FR)((0, M.MS)(M.AN, {
+        let _ = (0, E.FR)((0, E.MS)(E.AN, {
             activationConstraint: {
               distance: 10
             }
@@ -1408,11 +1423,12 @@
             if (!o || t.id === o.id) return;
             let c = r.findIndex(e => e.id === t.id),
               s = r.findIndex(e => e.id === o.id);
-            if (s === c) return;
-            let n = (0, A.VE)(r, c, s),
+            if (-1 === c || -1 === s || s === c) return;
+            let n = (0, I.VE)(r, c, s),
               u = n.map(e => ({
                 id: e.id
-              })); - 1 !== c && -1 !== s && (f(n), a(n)), (await fetch("https://guns.lol/api/dashboard/links/order", {
+              }));
+            f(n), a(n), (await fetch("https://guns.lol/api/dashboard/links/order", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json"
@@ -1422,9 +1438,9 @@
               })
             })).ok || d.oR.error(l("dashboard.links.badge_list.errors.socials_order"))
           };
-        return h ? (0, o.jsxs)(M.Mp, {
+        return h ? (0, o.jsxs)(E.Mp, {
           sensors: _,
-          collisionDetection: M.fp,
+          collisionDetection: E.fp,
           onDragStart: e => {
             let {
               active: a
@@ -1432,20 +1448,21 @@
             t && b(t)
           },
           onDragEnd: m,
-          children: [(0, o.jsx)(A.gB, {
+          children: [(0, o.jsx)(I.gB, {
             items: r.map(e => e.id),
-            strategy: A.vl,
+            strategy: I.vl,
             children: (0, o.jsx)("div", {
               className: n().displaySocials,
-              children: r.map(e => (0, o.jsx)(L, {
+              "data-vaul-no-drag": !0,
+              children: r.map(e => (0, o.jsx)(F, {
                 item: e,
                 setIsModalOpened: s,
                 setCurrentModal: t,
                 setSocials: a
               }, e.id))
             })
-          }), (0, o.jsx)(M.Hd, {
-            children: u && (0, o.jsx)(L, {
+          }), (0, o.jsx)(E.Hd, {
+            children: u && (0, o.jsx)(F, {
               item: u,
               setIsModalOpened: s,
               setCurrentModal: t,
@@ -1455,7 +1472,7 @@
         }) : null
       }
 
-      function L({
+      function F({
         item: e,
         setIsModalOpened: a,
         setCurrentModal: t,
@@ -1469,12 +1486,12 @@
             transform: h,
             transition: p,
             isDragging: _
-          } = (0, A.gl)({
+          } = (0, I.gl)({
             id: e.id,
             animateLayoutChanges: () => !1
           }),
           m = {
-            transform: I.Ks.Transform.toString(h),
+            transform: L.Ks.Transform.toString(h),
             transition: p,
             opacity: +!_
           },
@@ -1531,12 +1548,12 @@
           })]
         })
       }
-      var B = t(98241),
-        R = t.n(B),
-        T = t(54834),
-        $ = t(61778),
-        F = t(57776);
-      let O = ({
+      var R = t(98241),
+        T = t.n(R),
+        $ = t(54834),
+        O = t(61778),
+        D = t(13782);
+      let W = ({
         data: e
       }) => {
         let a = (0, G.kj)(),
@@ -1566,9 +1583,9 @@
             richColors: !0,
             position: "top-center",
             theme: "dark",
-            className: R().toasterStyles,
+            className: T().toasterStyles,
             icons: {
-              success: T.A.successToast
+              success: $.A.successToast
             },
             visibleToasts: 2
           }), (0, o.jsxs)("div", {
@@ -1582,7 +1599,7 @@
               })]
             }), (0, o.jsx)("div", {
               className: n().socialSelectionContainer,
-              children: Object.entries(l.A).map(([e, t], c) => !s.includes(e) && (0, o.jsx)($.A, {
+              children: Object.entries(l.A).map(([e, t], c) => !s.includes(e) && (0, o.jsx)(O.A, {
                 content: S(e),
                 children: (0, o.jsx)("div", {
                   onClick: () => {
@@ -1608,13 +1625,13 @@
                 }, c)
               }, c))
             })]
-          }), (0, o.jsx)(F.A, {
+          }), (0, o.jsx)(D.A, {
             opened: b,
             onClose: () => h(!1),
             title: m,
             centered: !0,
             size: "430px",
-            children: "edit" === p.category ? (0, o.jsx)(j, {
+            children: "edit" === p.category ? (0, o.jsx)(M, {
               social: p.social,
               id: p.id,
               socialMode: p.mode,
@@ -1622,14 +1639,14 @@
               socialsConfig: f,
               setSocials: u,
               setIsModalOpened: h
-            }) : "social" === p.category && (0, o.jsx)(w, {
+            }) : "social" === p.category && (0, o.jsx)(A, {
               social: p.social,
               setSocials: u,
               setIsModalOpened: h
             })
           }), (0, o.jsx)("div", {
             className: n().displaySocialsWrapper,
-            children: (0, o.jsx)(E, {
+            children: (0, o.jsx)(B, {
               socials: f,
               setSocials: u,
               setCurrentModal: _,

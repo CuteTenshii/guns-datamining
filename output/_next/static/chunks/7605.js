@@ -1,9 +1,9 @@
 "use strict";
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [3957], {
+  [7605], {
     17440: (e, a, o) => {
       o.d(a, {
-        h: () => s
+        h: () => n
       });
       var i = o(71558),
         r = o(77599);
@@ -11,7 +11,7 @@
           hex: e.hex,
           path: e.path
         }),
-        n = {
+        t = {
           python: l(i.FRF),
           javascript: l(i.wAf),
           typescript: l(i.k8A),
@@ -109,16 +109,16 @@
           neovim: l(i.T84)
         };
 
-      function s(e) {
+      function n(e) {
         let a = "string" == typeof e ? (0, r.RU)(e) : e;
-        return a ? n[a.id] : void 0
+        return a ? t[a.id] : void 0
       }
     },
     55442: (e, a, o) => {
       o.d(a, {
-        L$: () => t,
-        O5: () => s,
-        h6: () => m,
+        L$: () => s,
+        O5: () => n,
+        h6: () => d,
         r$: () => c
       });
       let i = /\[(\d{1,3}):(\d{2})(?:\.(\d{1,3}))?\]/g,
@@ -127,50 +127,50 @@
       function l(e, a, o = "0") {
         let i = Number(e || 0),
           r = Number(a || 0),
-          n = Number((o + "00").slice(0, 3));
-        return Number.isFinite(i) && Number.isFinite(r) && Number.isFinite(n) ? Math.max(0, (60 * i + r) * 1e3 + n) : null
+          t = Number((o + "00").slice(0, 3));
+        return Number.isFinite(i) && Number.isFinite(r) && Number.isFinite(t) ? Math.max(0, (60 * i + r) * 1e3 + t) : null
       }
 
-      function n(e) {
+      function t(e) {
         return String(e || "").replace(i, "").replace(r, "").replace(/\s+/g, " ").trim()
       }
 
-      function s(e) {
+      function n(e) {
         if (!e) return [];
         let a = [];
         for (let o of String(e).split(/\r?\n/)) {
           let e = o.trim();
           if (!e) continue;
-          let s = Array.from(e.matchAll(i));
-          if (0 === s.length) continue;
-          let t = e.replace(i, "").trim(),
-            c = n(t) || "...",
-            m = function(e) {
+          let n = Array.from(e.matchAll(i));
+          if (0 === n.length) continue;
+          let s = e.replace(i, "").trim(),
+            c = t(s) || "...",
+            d = function(e) {
               let a = Array.from(e.matchAll(r));
               if (0 === a.length) return [];
               let o = [];
               for (let i = 0; i < a.length; i++) {
                 let r = a[i],
-                  n = a[i + 1],
-                  s = l(r[1], r[2], r[3] || "0");
-                if (null === s || "number" != typeof r.index) continue;
-                let t = r.index + r[0].length,
-                  c = "number" == typeof n?.index ? n.index : e.length,
-                  m = e.slice(t, c).replace(/\s+/g, " ").trim();
-                m && o.push({
-                  timeMs: s,
-                  text: m
+                  t = a[i + 1],
+                  n = l(r[1], r[2], r[3] || "0");
+                if (null === n || "number" != typeof r.index) continue;
+                let s = r.index + r[0].length,
+                  c = "number" == typeof t?.index ? t.index : e.length,
+                  d = e.slice(s, c).replace(/\s+/g, " ").trim();
+                d && o.push({
+                  timeMs: n,
+                  text: d
                 })
               }
               return o
-            }(t);
-          for (let e of s) {
+            }(s);
+          for (let e of n) {
             let o = l(e[1], e[2], e[3] || "0");
             null !== o && a.push({
               timeMs: o,
               text: c,
-              ...m.length > 0 ? {
-                words: m
+              ...d.length > 0 ? {
+                words: d
               } : {}
             })
           }
@@ -178,7 +178,7 @@
         return a.sort((e, a) => e.timeMs - a.timeMs)
       }
 
-      function t(e, a) {
+      function s(e, a) {
         if (0 === e.length || !Number.isFinite(a) || a < 0) return -1;
         let o = 1e3 * a,
           i = -1;
@@ -198,21 +198,21 @@
         return i
       }
 
-      function m(e) {
+      function d(e) {
         let a = [];
         for (let o of String(e || "").split(/\r?\n/)) {
           let e = o.trim();
           if (!e) continue;
           let r = Array.from(e.matchAll(i));
           if (0 === r.length) continue;
-          let s = e.replace(i, "").trim() || "...",
-            t = n(s) || "...";
+          let n = e.replace(i, "").trim() || "...",
+            s = t(n) || "...";
           for (let e of r) {
             let o = l(e[1], e[2], e[3] || "0");
             null !== o && a.push({
               timeMs: o,
-              syncedText: s,
-              plainText: t
+              syncedText: n,
+              plainText: s
             })
           }
         }
@@ -693,6 +693,93 @@
             score: 0
           }).filter(e => e.score > 0);
         return r.sort((e, a) => a.score - e.score), r.slice(0, a).map(e => e.s)
+      }
+    },
+    85737: (e, a, o) => {
+      o.d(a, {
+        BT: () => t,
+        PJ: () => d,
+        Pp: () => n,
+        cG: () => s,
+        iz: () => l,
+        jW: () => r,
+        oO: () => c
+      });
+      let i = ["youtube", "spotify", "discord", "telegram", "roblox", "github", "lastfm", "timezone", "weather"],
+        r = {
+          type: "discord_presence",
+          value: "",
+          clock_face_style: "dark",
+          clock_hidden: !1,
+          clock_time_format: "24h"
+        },
+        l = {
+          show_badges: !0,
+          show_guild_tag: !0,
+          idle_text: ""
+        },
+        t = e => "discord_presence" !== e;
+
+      function n(e) {
+        return e && "object" == typeof e ? {
+          type: new Set(["discord_presence", ...i]).has(e.type) ? e.type : "discord_presence",
+          value: "string" == typeof e.value ? e.value : "",
+          clock_face_style: "light" === e.clock_face_style ? "light" : "dark",
+          clock_hidden: !0 === e.clock_hidden,
+          clock_time_format: "12h" === e.clock_time_format ? "12h" : "24h"
+        } : {
+          ...r
+        }
+      }
+
+      function s(e) {
+        return t(e.type) && e.value ? {
+          second_tab_enabled: !0,
+          second_tab: {
+            [e.type]: e.value
+          },
+          clock_face_style: e.clock_face_style,
+          clock_hidden: e.clock_hidden,
+          clock_time_format: e.clock_time_format
+        } : null
+      }
+
+      function c(e) {
+        if (!e || "object" != typeof e) return null;
+        let a = e.second_tab;
+        if (!0 !== e.second_tab_enabled || !a) return null;
+        let o = Object.keys(a)[0];
+        return o && i.includes(o) && "string" == typeof a[o] ? n({
+          type: o,
+          value: a[o],
+          clock_face_style: e.clock_face_style,
+          clock_hidden: e.clock_hidden,
+          clock_time_format: e.clock_time_format
+        }) : null
+      }
+
+      function d(e, a) {
+        if ("discord_presence" === e) return !0;
+        let o = a.trim();
+        if (!o) return !1;
+        if ("timezone" === e) try {
+          return Intl.DateTimeFormat(void 0, {
+            timeZone: o
+          }), !0
+        } catch {
+          return !1
+        }
+        return "weather" === e ? o.length >= 2 && o.length <= 100 : ({
+          youtube: /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.?be)\/.+$/,
+          spotify: /^(?:https?:\/\/)?(?:open\.spotify\.com\/)(?:intl-[a-zA-Z]+\/)?(album|track|playlist|show|episode)[\/:].+/,
+          discord: /^(?:https?:\/\/)?(?:www\.)?(?:discord\.gg|discord\.com\/invite)\/[a-zA-Z0-9-]+$/,
+          telegram: /^(https?:\/\/)?(www\.)?t\.me\/.+$/,
+          roblox: /^(https?:\/\/)?(www\.)?roblox\.com\/users\/\d+\/profile$/,
+          github: /^(https?:\/\/)?(www\.)?github\.com\/.+$/,
+          lastfm: /^(https?:\/\/)?(www\.)?last\.fm\/user\/[a-zA-Z0-9_-]+$/,
+          timezone: /^$/,
+          weather: /^$/
+        })[e].test(o)
       }
     }
   }

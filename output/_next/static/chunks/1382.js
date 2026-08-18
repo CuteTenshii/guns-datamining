@@ -9,16 +9,16 @@
         s = r(12115),
         t = r(67361),
         l = r.n(t);
-      let c = (0, s.createContext)(null),
-        n = (0, s.createContext)(null),
+      let n = (0, s.createContext)(null),
+        c = (0, s.createContext)(null),
         i = (...e) => e.filter(Boolean).join(" "),
         d = () => {
-          let e = (0, s.useContext)(c);
+          let e = (0, s.useContext)(n);
           if (!e) throw Error("Accordion components must be used within <Accordion>");
           return e
         },
         f = () => {
-          let e = (0, s.useContext)(n);
+          let e = (0, s.useContext)(c);
           if (!e) throw Error("Accordion.Item subcomponents must be used within <Accordion.Item>");
           return e
         },
@@ -28,15 +28,15 @@
           value: a,
           defaultValue: r,
           multiple: t = !1,
-          onChange: n,
+          onChange: c,
           className: d = "",
           ...f
         }) => {
           let m = void 0 !== a,
             _ = m ? h(a, t) : null,
-            [u, g] = (0, s.useState)(() => h(r, t)),
-            p = m ? _ : u,
-            b = (0, s.useCallback)(e => t ? Array.isArray(p) && p.includes(e) : p === e, [p, t]),
+            [u, p] = (0, s.useState)(() => h(r, t)),
+            g = m ? _ : u,
+            b = (0, s.useCallback)(e => t ? Array.isArray(g) && g.includes(e) : g === e, [g, t]),
             x = (0, s.useCallback)(e => {
               let a = ((e, a, r) => {
                 if (r) {
@@ -44,16 +44,16 @@
                   return r.includes(a) ? r.filter(e => e !== a) : [...r, a]
                 }
                 return e === a ? null : a
-              })(p, e, t);
-              m || g(a), n?.(a)
-            }, [p, m, t, n]),
+              })(g, e, t);
+              m || p(a), c?.(a)
+            }, [g, m, t, c]),
             v = (0, s.useMemo)(() => ({
               multiple: t,
-              currentValue: p,
+              currentValue: g,
               toggleItem: x,
               isItemActive: b
-            }), [t, p, x, b]);
-          return (0, o.jsx)(c.Provider, {
+            }), [t, g, x, b]);
+          return (0, o.jsx)(n.Provider, {
             value: v,
             children: (0, o.jsx)("div", {
               className: i(l().accordion, d),
@@ -68,17 +68,17 @@
             className: r = "",
             ...t
           }) => {
-            let c = d(),
+            let n = d(),
               f = (0, s.useId)(),
               h = (0, s.useRef)(`${f}-control`),
               m = (0, s.useRef)(`${f}-panel`),
-              _ = c.isItemActive(e),
+              _ = n.isItemActive(e),
               u = (0, s.useMemo)(() => ({
                 value: e,
                 controlIdRef: h,
                 panelIdRef: m
               }), [e]);
-            return (0, o.jsx)(n.Provider, {
+            return (0, o.jsx)(c.Provider, {
               value: u,
               children: (0, o.jsx)("div", {
                 ...t,
@@ -94,8 +94,8 @@
             onClick: r,
             disabled: s,
             id: t,
-            ...c
-          }, n) {
+            ...n
+          }, c) {
             let h = d(),
               m = f(),
               _ = t ?? m.controlIdRef.current;
@@ -103,9 +103,9 @@
             let u = h.isItemActive(m.value);
             return (0, o.jsx)("button", {
               type: "button",
-              ...c,
+              ...n,
               id: _,
-              ref: n,
+              ref: c,
               className: i(l().control, a),
               "data-active": u || void 0,
               disabled: s,
@@ -120,21 +120,21 @@
             className: a = "",
             id: r,
             ...t
-          }, c) {
-            let n = d(),
+          }, n) {
+            let c = d(),
               h = f(),
               m = r ?? h.panelIdRef.current;
             h.panelIdRef.current = m;
-            let _ = n.isItemActive(h.value),
+            let _ = c.isItemActive(h.value),
               u = (0, s.useRef)(null),
-              [g, p] = (0, s.useState)(0),
+              [p, g] = (0, s.useState)(0),
               [b, x] = (0, s.useState)(!1);
             (0, s.useEffect)(() => {
               let e = u.current;
               if (!e) return;
               let a = window,
                 r = () => {
-                  p(e.scrollHeight), x(!0)
+                  g(e.scrollHeight), x(!0)
                 };
               if (r(), void 0 !== a.ResizeObserver) {
                 let o = new a.ResizeObserver(r);
@@ -142,11 +142,11 @@
               }
               return a.addEventListener("resize", r), () => a.removeEventListener("resize", r)
             }, []);
-            let v = _ ? b && g > 0 ? `${g}px` : void 0 : "0px";
+            let v = _ ? b && p > 0 ? `${p}px` : void 0 : "0px";
             return (0, o.jsx)("div", {
               ...t,
               id: m,
-              ref: c,
+              ref: n,
               className: i(l().panel, a),
               "data-active": _ || void 0,
               children: (0, o.jsx)("div", {
@@ -211,6 +211,17 @@
         desktopNav: "GUNS__9c-1b110717-08d59f07-19dfc81c",
         desktopNavExpanded: "GUNS__36-ebbde89e-3b82e7dd-dac3e187",
         highlightedLink: "GUNS__c7-17b55098-2139b184-17b416ab",
+        profileMenu: "GUNS__b0-5cc17b8f-248e6be8-d9f50fee",
+        profileTrigger: "GUNS__b3-bf332235-78d56602-59baa2e9",
+        profileAvatar: "GUNS__06-bf263b6a-20cb6452-7c51de02",
+        profileAvatarSkeleton: "GUNS__a4-0f093713-de25c02a-6203d737",
+        profileAvatarLoading: "GUNS__94-7bc60abb-ba4d8783-7affff01",
+        profileName: "GUNS__7a-04748350-7821d11b-1b7910ad",
+        profileChevron: "GUNS__95-67e13132-7c729ad9-e823f6e4",
+        profileDropdown: "GUNS__b1-0b45c183-425d054f-9b9aee99",
+        profileDropdownIdentity: "GUNS__54-557fc119-2e4d3a62-5fe99d25",
+        profileDropdownLinks: "GUNS__3a-56b52f91-79decc76-2864882e",
+        profileLogout: "GUNS__96-0a86018e-55eb90e5-40ce6ff3",
         mobileMenuButton: "GUNS__23-59a63120-8128ba23-43435f8e",
         forceMobileNav: "GUNS__6e-eb80bb0e-5e5cc83d-92ecfc6c",
         footerWrapper: "GUNS__8a-55f36e8c-7ff850f4-1f55d9aa",
@@ -226,6 +237,13 @@
         mobileNavigation: "GUNS__19-a56973e4-616b3edb-a6855eea",
         mobileNavigationOpen: "GUNS__3f-f498f077-023f4c88-b5b794a6",
         mobileNavGroup: "GUNS__2c-faa1674c-b6a68ac8-3271b2d6",
+        mobileProfileMenu: "GUNS__e4-7a03ee4b-e64ae7ae-4c589697",
+        mobileProfileIdentity: "GUNS__0d-658826de-9ae64104-4766f23e",
+        mobileProfileTitle: "GUNS__1c-d2d8835e-72acdc90-b037c3a3",
+        mobileProfileChevron: "GUNS__27-3563c5f4-00866b5c-6794dd56",
+        mobileProfileAction: "GUNS__f6-c882c134-8f787974-c409302f",
+        profileAccountSwitcher: "GUNS__00-aec90c00-d3f46d40-1d3378ab",
+        mobileProfileActions: "GUNS__2a-083fb00c-d02b1dd8-609ec744",
         mobileNavLanguage: "GUNS__19-31507ed5-da71c665-cd3529bd",
         blurBackground: "GUNS__0a-cf4f17a0-69e001e3-b019eb5d",
         gunsBanner: "GUNS__17-7c3870b1-1fb5ab50-6b7cc3e8",
@@ -262,19 +280,19 @@
     81382: (e, a, r) => {
       "use strict";
       r.d(a, {
-        A: () => p
+        default: () => v
       });
       var o = r(95155),
         s = r(66348),
         t = r.n(s),
         l = r(59791),
-        c = r.n(l),
-        n = r(54834),
+        n = r.n(l),
+        c = r(54834),
         i = r(12115),
         d = r(22834),
         f = r(66493),
         h = r(81934),
-        m = r(38256);
+        m = r(86891);
 
       function _({
         formattedUsers: e
@@ -283,7 +301,7 @@
           r = new Date().getFullYear(),
           [s, l] = (0, i.useState)(""),
           [_, u] = (0, i.useState)("up"),
-          g = [{
+          p = [{
             question: a("common.footer.faq.question_1"),
             answer: a("common.footer.faq.answer_1")
           }, {
@@ -319,18 +337,18 @@
             u((await e.json()).currentStatus)
           })()
         }, []);
-        let p = {
+        let g = {
           up: (0, o.jsx)("span", {
             className: t().statusUp,
-            children: n.A.statusDot
+            children: c.A.statusDot
           }),
           down: (0, o.jsx)("span", {
             className: t().statusDown,
-            children: n.A.statusDot
+            children: c.A.statusDot
           }),
           partial: (0, o.jsx)("span", {
             className: t().statusPartial,
-            children: n.A.statusDot
+            children: c.A.statusDot
           })
         };
         return (0, o.jsxs)("div", {
@@ -340,7 +358,7 @@
               className: t().faqText,
               children: a("common.footer.faq.title")
             }), (0, o.jsx)(d.n, {
-              children: g
+              children: p
             })]
           }), (0, o.jsxs)("div", {
             className: t().footerWrapper,
@@ -359,11 +377,11 @@
                   }), (0, o.jsxs)("div", {
                     className: t().gunsBannerButtons,
                     children: [(0, o.jsx)("div", {
-                      className: c().inputContainerWrapper,
+                      className: n().inputContainerWrapper,
                       children: (0, o.jsxs)("div", {
-                        className: `${c().inputWrapperDiv} ${c().inputWrapperURL}`,
+                        className: `${n().inputWrapperDiv} ${n().inputWrapperURL}`,
                         children: [(0, o.jsx)("span", {
-                          className: `${c().inputWrapperSpan}`,
+                          className: `${n().inputWrapperSpan}`,
                           style: {
                             position: "absolute"
                           },
@@ -378,12 +396,12 @@
                           },
                           type: "text",
                           placeholder: a("common.footer.banner.claim_input_placeholder"),
-                          className: c().inputWrapperInput
+                          className: n().inputWrapperInput
                         })]
                       })
                     }), (0, o.jsx)(h.A, {
                       href: `/register?claim=${s}&ref=guns_footer_banner`,
-                      className: `${c().claimNow}`,
+                      className: `${n().claimNow}`,
                       children: a("common.footer.banner.claim_now_text")
                     })]
                   })]
@@ -414,7 +432,7 @@
                         target: "_blank",
                         children: (0, o.jsxs)("span", {
                           className: t().systemStatus,
-                          children: [p[_], " ", a("common.footer.banner.system_status_text")]
+                          children: [g[_], " ", a("common.footer.banner.system_status_text")]
                         })
                       })]
                     }), (0, o.jsx)("span", {
@@ -469,6 +487,9 @@
                           href: "https://help.guns.lol/changelog",
                           target: "_blank",
                           children: a("common.footer.footer_categories_links.changelog")
+                        }), (0, o.jsx)(h.A, {
+                          href: "/compare",
+                          children: a("common.footer.footer_categories_links.comparisons")
                         }), (0, o.jsx)("a", {
                           href: "/account/redeem",
                           children: a("common.footer.footer_categories_links.redeem_code")
@@ -542,19 +563,19 @@
                     children: [(0, o.jsx)("a", {
                       href: "https://discord.gg/guns",
                       target: "_blank",
-                      children: n.A.discord
+                      children: c.A.discord
                     }), (0, o.jsx)("a", {
                       href: "https://tiktok.com/@guns.lol",
                       target: "_blank",
-                      children: n.A.tiktok
+                      children: c.A.tiktok
                     }), (0, o.jsx)("a", {
                       href: "https://x.com/gunsdotlol",
                       target: "_blank",
-                      children: n.A.x
+                      children: c.A.x
                     }), (0, o.jsx)("a", {
                       href: "https://t.me/gunsbio",
                       target: "_blank",
-                      children: n.A.telegram
+                      children: c.A.telegram
                     })]
                   })]
                 })]
@@ -563,80 +584,176 @@
           })]
         })
       }
-      var u = r(87974);
+      var u = r(87974),
+        p = r(3434),
+        g = r(81576),
+        b = r(55454);
 
-      function g({
+      function x({
         data: e
       }) {
-        let a = !!e?.session?.userId,
-          [r, s] = (0, i.useState)(!1),
-          [l, c] = (0, i.useState)(!1),
-          n = (0, i.useRef)(null),
-          d = (0, i.useRef)(null),
-          h = (0, m.kj)(),
-          _ = (0, m.VJ)(),
-          g = (0, i.useMemo)(() => [{
-            label: h("common.header.navigation.help_center"),
+        let a = "string" == typeof e?.session?.userId ? e.session.userId : "",
+          r = !!a,
+          s = "string" == typeof e?.session?.username ? e.session.username : "",
+          l = s.trim().charAt(0).toUpperCase() || "?",
+          [n, c] = (0, i.useState)(!1),
+          [d, h] = (0, i.useState)(""),
+          [_, x] = (0, i.useState)(r),
+          [v, N] = (0, i.useState)(!1),
+          [j, w] = (0, i.useState)(!1),
+          [S, U] = (0, i.useState)(!1),
+          G = (0, i.useRef)(null),
+          k = (0, i.useRef)(null),
+          A = (0, m.kj)(),
+          C = (0, m.VJ)();
+        (0, i.useEffect)(() => {
+          if (h(""), x(!!a), !a) return;
+          let e = !1;
+          return fetch("https://guns.lol/api/auth/avatar").then(async e => ({
+            response: e,
+            data: await e.json().catch(() => null)
+          })).then(({
+            response: a,
+            data: r
+          }) => {
+            !e && a.ok && "string" == typeof r?.avatar && r.avatar.trim() && h(r.avatar.trim())
+          }).catch(() => void 0).finally(() => {
+            e || x(!1)
+          }), () => {
+            e = !0
+          }
+        }, [a]);
+        let y = (0, i.useMemo)(() => [{
+            label: A("common.header.navigation.help_center"),
             href: "https://help.guns.lol",
             external: !0
           }, {
-            label: h("common.header.navigation.discord"),
+            label: A("common.header.navigation.discord"),
             href: "https://discord.gg/guns",
             external: !0
           }, {
-            label: h("common.header.navigation.leaderboard"),
-            href: "/leaderboard"
+            label: A("common.header.navigation.comparisons"),
+            href: C("/compare")
           }, {
-            label: h("common.header.navigation.pricing"),
-            href: _("/pricing")
+            label: A("common.header.navigation.leaderboard"),
+            href: C("/leaderboard")
+          }, {
+            label: A("common.header.navigation.pricing"),
+            href: C("/pricing")
           }], []),
-          p = a ? [{
-            label: h("common.header.navigation.dashboard"),
-            href: "/account",
-            highlighted: !0
-          }] : [{
-            label: h("common.header.navigation.login"),
-            href: _("/login")
+          L = r ? [] : [{
+            label: A("common.header.navigation.login"),
+            href: C("/login")
           }, {
-            label: h("common.header.navigation.sign_up"),
-            href: _("/register?ref=header"),
+            label: A("common.header.navigation.sign_up"),
+            href: C("/register?ref=header"),
             highlighted: !0
           }],
-          b = a ? t().desktopNav : t().desktopNavExpanded,
-          x = e => (0, o.jsx)("a", {
+          M = r ? t().desktopNav : t().desktopNavExpanded,
+          B = e => (0, o.jsx)("a", {
             href: e.href,
             target: e.external ? "_blank" : void 0,
             rel: e.external ? "noreferrer" : void 0,
             className: e.highlighted ? t().highlightedLink : void 0,
             children: e.label
-          }, e.label);
+          }, e.label),
+          q = (0, o.jsx)("span", {
+            className: t().profileAvatar,
+            children: _ ? (0, o.jsx)("span", {
+              className: t().profileAvatarSkeleton
+            }) : d ? (0, o.jsx)("img", {
+              src: d,
+              alt: ""
+            }) : l
+          }),
+          W = (0, o.jsxs)(o.Fragment, {
+            children: [(0, o.jsx)("a", {
+              href: "/account",
+              onClick: () => N(!1),
+              children: A("common.header.navigation.dashboard")
+            }), (0, o.jsx)("a", {
+              href: s ? `/${s}` : "/account",
+              target: s ? "_blank" : void 0,
+              rel: s ? "noreferrer" : void 0,
+              onClick: () => N(!1),
+              children: A("dashboard.navigation.quick_links.my_page")
+            }), (0, o.jsx)("button", {
+              type: "button",
+              className: t().profileAccountSwitcher,
+              onClick: () => {
+                N(!1), w(!0)
+              },
+              children: A("dashboard.navigation.quick_menu.switch_accounts")
+            }), (0, o.jsx)("a", {
+              href: "/logout",
+              className: t().profileLogout,
+              onClick: () => N(!1),
+              children: A("dashboard.navigation.quick_menu.logout")
+            })]
+          }),
+          Z = (0, o.jsxs)("div", {
+            className: t().mobileProfileMenu,
+            children: [(0, o.jsxs)("a", {
+              href: "/account",
+              className: t().mobileProfileIdentity,
+              onClick: () => c(!1),
+              children: [(0, o.jsx)("span", {
+                className: t().mobileProfileTitle,
+                children: A("common.header.navigation.dashboard")
+              }), (0, o.jsx)("span", {
+                className: t().mobileProfileChevron
+              })]
+            }), (0, o.jsxs)("div", {
+              className: t().mobileProfileActions,
+              children: [(0, o.jsxs)("a", {
+                href: s ? `/${s}` : "/account",
+                className: t().mobileProfileAction,
+                target: s ? "_blank" : void 0,
+                rel: s ? "noreferrer" : void 0,
+                onClick: () => c(!1),
+                children: [p.A.externalLink, A("dashboard.navigation.quick_links.my_page")]
+              }), (0, o.jsx)("button", {
+                type: "button",
+                className: t().profileAccountSwitcher,
+                onClick: () => {
+                  w(!0)
+                },
+                children: p.A.account
+              }), (0, o.jsx)("a", {
+                href: "/logout",
+                className: `${t().mobileProfileAction} ${t().profileLogout}`,
+                onClick: () => c(!1),
+                children: p.A.logout
+              })]
+            })]
+          });
         (0, i.useEffect)(() => {
           let e = () => {
-            if (!n.current || !d.current) return;
-            let e = n.current.getBoundingClientRect(),
-              a = d.current.getBoundingClientRect();
-            0 === a.width ? c(!0) : c(a.left - e.right < 24)
+            if (!G.current || !k.current) return;
+            let e = G.current.getBoundingClientRect(),
+              a = k.current.getBoundingClientRect();
+            0 === a.width ? U(!0) : U(a.left - e.right < 24)
           };
           e(), window.addEventListener("resize", e);
           let a = null;
-          return "undefined" != typeof ResizeObserver && (a = new ResizeObserver(e), n.current && a.observe(n.current), d.current && a.observe(d.current)), () => {
+          return "undefined" != typeof ResizeObserver && (a = new ResizeObserver(e), G.current && a.observe(G.current), k.current && a.observe(k.current)), () => {
             window.removeEventListener("resize", e), a?.disconnect()
           }
-        }, [a]);
-        let v = (0, i.useRef)(l),
-          N = [t().header, r ? t().active : "", l ? t().forceMobileNav : ""].filter(Boolean).join(" ");
+        }, [r]);
+        let H = (0, i.useRef)(S),
+          P = [t().header, n ? t().active : "", S ? t().forceMobileNav : ""].filter(Boolean).join(" ");
         return (0, i.useEffect)(() => {
-          v.current && !l && s(!1), v.current = l
-        }, [l]), (0, o.jsx)("header", {
-          className: `${t().headerWrapper} ${r?t().headerWrapperActive:""}`,
-          children: (0, o.jsxs)("div", {
-            className: N,
+          H.current && !S && c(!1), H.current = S
+        }, [S]), (0, o.jsxs)("header", {
+          className: `${t().headerWrapper} ${n?t().headerWrapperActive:""}`,
+          children: [(0, o.jsxs)("div", {
+            className: P,
             children: [(0, o.jsx)("div", {
               className: t().blurBackground
             }), (0, o.jsx)("a", {
               href: "/",
               className: t().leftSideHeader,
-              ref: n,
+              ref: G,
               children: (0, o.jsxs)("div", {
                 className: t().logo,
                 children: [(0, o.jsx)("img", {
@@ -649,38 +766,70 @@
                 })]
               })
             }), (0, o.jsxs)("nav", {
-              className: b,
-              ref: d,
-              children: [g.map(x), p.map(x)]
+              className: M,
+              ref: k,
+              children: [y.map(B), L.map(B), r && (0, o.jsxs)(g.Ay, {
+                className: t().profileMenu,
+                width: 210,
+                position: "bottom",
+                opened: v,
+                onOpenChange: N,
+                children: [(0, o.jsx)(g.Ay.Target, {
+                  children: (0, o.jsxs)("button", {
+                    type: "button",
+                    className: t().profileTrigger,
+                    children: [q, (0, o.jsx)("span", {
+                      className: t().profileName,
+                      children: A("common.header.navigation.dashboard")
+                    }), (0, o.jsx)("span", {
+                      className: t().profileChevron
+                    })]
+                  })
+                }), (0, o.jsxs)(g.Ay.Dropdown, {
+                  className: t().profileDropdown,
+                  children: [(0, o.jsxs)("div", {
+                    className: t().profileDropdownIdentity,
+                    children: [q, (0, o.jsx)("span", {
+                      children: s || A("common.header.navigation.dashboard")
+                    })]
+                  }), (0, o.jsx)("div", {
+                    className: t().profileDropdownLinks,
+                    children: W
+                  })]
+                })]
+              })]
             }), (0, o.jsx)("span", {
               className: t().mobileMenuButton,
-              onClick: () => s(e => !e),
+              onClick: () => c(e => !e),
               children: u.A.hamburger
             }), (0, o.jsxs)("div", {
-              className: `${t().mobileNavigation} ${r?t().mobileNavigationOpen:""}`,
+              className: `${t().mobileNavigation} ${n?t().mobileNavigationOpen:""}`,
               children: [(0, o.jsx)("div", {
                 className: t().mobileNavGroup,
-                children: g.map(x)
+                children: y.map(B)
               }), (0, o.jsxs)("div", {
                 className: t().mobileNavGroup,
                 children: [(0, o.jsx)("div", {
                   className: t().mobileNavLanguage,
                   children: (0, o.jsx)(f.A, {})
-                }), p.map(x)]
+                }), L.map(B), r && Z]
               })]
             })]
-          })
+          }), (0, o.jsx)(b.A, {
+            opened: j,
+            onClose: () => w(!1)
+          })]
         })
       }
 
-      function p({
+      function v({
         children: e,
         data: a,
         statsData: r
       }) {
         let s = (1e4 * Math.round(r.users / 1e4)).toLocaleString("en-US");
         return (0, o.jsxs)(o.Fragment, {
-          children: [(0, o.jsx)(g, {
+          children: [(0, o.jsx)(x, {
             data: a
           }), e, (0, o.jsx)(_, {
             formattedUsers: s

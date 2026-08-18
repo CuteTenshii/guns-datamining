@@ -1,160 +1,160 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [1410], {
-    25997: (a, e, l) => {
+    25997: (e, a, t) => {
       "use strict";
-      l.d(e, {
+      t.d(a, {
         default: () => o
       });
-      var t = l(95155),
-        s = l(12115),
-        r = l(81382),
-        d = l(86623),
-        i = l.n(d),
-        c = l(34023),
-        n = l(38256);
+      var l = t(95155),
+        r = t(12115),
+        n = t(81382),
+        s = t(86623),
+        i = t.n(s),
+        d = t(34023),
+        c = t(86891);
 
       function o({
-        data: a
+        data: e
       }) {
-        let e = a?.tokenData,
-          l = a?.statsData,
-          [d, o] = (0, s.useState)("all"),
-          [h, m] = (0, s.useState)(null),
-          [w, b] = (0, s.useState)(!0),
-          [p, x] = (0, s.useState)(null),
-          _ = (0, n.kj)();
-        (0, s.useEffect)(() => {
-          let a = !0;
+        let a = e?.tokenData,
+          t = e?.statsData,
+          [s, o] = (0, r.useState)("all"),
+          [f, u] = (0, r.useState)(null),
+          [h, m] = (0, r.useState)(!0),
+          [p, b] = (0, r.useState)(null),
+          _ = (0, c.kj)();
+        (0, r.useEffect)(() => {
+          let e = !0;
           return (async () => {
             try {
-              b(!0);
-              let e = await fetch("/api/leaderboard/views", {
+              m(!0);
+              let a = await fetch("/api/leaderboard/views", {
                   method: "GET",
                   headers: {
                     "Content-Type": "application/json"
                   }
                 }),
-                l = await e.json();
-              if (!a) return;
-              !e.ok || l?.error ? x(l?.error) : (m(l), x(null))
-            } catch (e) {
-              if (!a) return;
-              x(e?.message)
+                t = await a.json();
+              if (!e) return;
+              !a.ok || t?.error ? b(t?.error) : (u(t), b(null))
+            } catch (a) {
+              if (!e) return;
+              b(a?.message)
             } finally {
-              a && b(!1)
+              e && m(!1)
             }
           })(), () => {
-            a = !1
+            e = !1
           }
         }, []);
-        let f = h?.allTime || [],
-          v = h?.month || [],
-          N = (0, s.useMemo)(() => "all" === d ? f : v, [d, f, v]),
-          u = _("all" === d ? "leaderboard.hero.description_alltime" : "leaderboard.hero.description_thismonth");
-        return (0, t.jsx)(r.A, {
-          data: e,
-          statsData: l,
-          children: (0, t.jsx)("div", {
+        let w = f?.allTime || [],
+          v = f?.month || [],
+          g = (0, r.useMemo)(() => "all" === s ? w : v, [s, w, v]),
+          x = _("all" === s ? "leaderboard.hero.description_alltime" : "leaderboard.hero.description_thismonth");
+        return (0, l.jsx)(n.default, {
+          data: a,
+          statsData: t,
+          children: (0, l.jsx)("div", {
             className: i().leaderboardPage,
-            children: (0, t.jsxs)("div", {
+            children: (0, l.jsxs)("div", {
               className: i().container,
-              children: [(0, t.jsxs)("div", {
+              children: [(0, l.jsxs)("div", {
                 className: i().hero,
-                children: [(0, t.jsx)("h1", {
+                children: [(0, l.jsx)("h1", {
                   className: i().title,
                   children: _("leaderboard.hero.title")
-                }), (0, t.jsx)("p", {
+                }), (0, l.jsx)("p", {
                   className: i().subtitle,
-                  children: u
-                }), (0, t.jsxs)("div", {
+                  children: x
+                }), (0, l.jsxs)("div", {
                   className: i().tabs,
-                  children: [(0, t.jsx)("button", {
-                    className: `${i().tabButton} ${"all"===d?i().tabActive:""}`,
+                  children: [(0, l.jsx)("button", {
+                    className: `${i().tabButton} ${"all"===s?i().tabActive:""}`,
                     onClick: () => o("all"),
                     type: "button",
                     children: _("leaderboard.hero.tab_alltime")
-                  }), (0, t.jsx)("button", {
-                    className: `${i().tabButton} ${"month"===d?i().tabActive:""}`,
+                  }), (0, l.jsx)("button", {
+                    className: `${i().tabButton} ${"month"===s?i().tabActive:""}`,
                     onClick: () => o("month"),
                     type: "button",
                     children: _("leaderboard.hero.tab_thismonth")
                   })]
                 })]
-              }), (0, t.jsxs)("div", {
+              }), (0, l.jsxs)("div", {
                 className: i().listWrapper,
-                children: [(0, t.jsxs)("div", {
+                children: [(0, l.jsxs)("div", {
                   className: i().listHeader,
-                  children: [(0, t.jsx)("span", {
+                  children: [(0, l.jsx)("span", {
                     children: "#"
-                  }), (0, t.jsx)("span", {
+                  }), (0, l.jsx)("span", {
                     children: _("leaderboard.table.profile_row_title")
-                  }), (0, t.jsx)("span", {
+                  }), (0, l.jsx)("span", {
                     style: {
                       textAlign: "right"
                     },
                     children: _("leaderboard.table.views_row_title")
                   })]
-                }), w ? (0, t.jsx)("div", {
+                }), h ? (0, l.jsx)("div", {
                   className: i().emptyState,
                   children: _("leaderboard.table.leaderboard_loading_text")
-                }) : p ? (0, t.jsx)("div", {
+                }) : p ? (0, l.jsx)("div", {
                   className: i().emptyState,
                   children: p
-                }) : 0 === N.length ? (0, t.jsx)("div", {
+                }) : 0 === g.length ? (0, l.jsx)("div", {
                   className: i().emptyState,
                   children: _("leaderboard.table.no_data_text")
-                }) : (0, t.jsx)(t.Fragment, {
-                  children: N.map((a, e) => {
-                    let l = e < 3 ? i().rankTop : "",
-                      s = 0 === e ? i().rowTop1 : 1 === e ? i().rowTop2 : 2 === e ? i().rowTop3 : "",
-                      r = a.displayName || a.username || "Unknown",
-                      d = a.username || "unknown",
-                      n = "number" == typeof a.views ? a.views.toLocaleString("en-US") : "0",
-                      o = r ? r.slice(0, 1) : "?",
-                      h = !!a.premium;
-                    return (0, t.jsx)("a", {
-                      href: `/${d}`,
+                }) : (0, l.jsx)(l.Fragment, {
+                  children: g.map((e, a) => {
+                    let t = a < 3 ? i().rankTop : "",
+                      r = 0 === a ? i().rowTop1 : 1 === a ? i().rowTop2 : 2 === a ? i().rowTop3 : "",
+                      n = e.displayName || e.username || "Unknown",
+                      s = e.username || "unknown",
+                      c = "number" == typeof e.views ? e.views.toLocaleString("en-US") : "0",
+                      o = n ? n.slice(0, 1) : "?",
+                      f = !!e.premium;
+                    return (0, l.jsx)("a", {
+                      href: `/${s}`,
                       className: i().rowLink,
                       target: "_blank",
-                      children: (0, t.jsxs)("div", {
-                        className: `${i().row} ${s}`,
-                        children: [(0, t.jsx)("span", {
-                          className: `${i().rank} ${l}`,
-                          children: e + 1
-                        }), (0, t.jsxs)("div", {
+                      children: (0, l.jsxs)("div", {
+                        className: `${i().row} ${r}`,
+                        children: [(0, l.jsx)("span", {
+                          className: `${i().rank} ${t}`,
+                          children: a + 1
+                        }), (0, l.jsxs)("div", {
                           className: i().profile,
-                          children: [a.avatar ? (0, t.jsx)("img", {
+                          children: [e.avatar ? (0, l.jsx)("img", {
                             className: i().avatar,
-                            src: a.avatar,
+                            src: e.avatar,
                             alt: ""
-                          }) : (0, t.jsx)("div", {
+                          }) : (0, l.jsx)("div", {
                             className: i().avatarFallback,
                             children: o
-                          }), (0, t.jsxs)("div", {
+                          }), (0, l.jsxs)("div", {
                             className: i().nameBlock,
-                            children: [(0, t.jsxs)("div", {
+                            children: [(0, l.jsxs)("div", {
                               className: i().displayLine,
-                              children: [(0, t.jsx)("h1", {
+                              children: [(0, l.jsx)("h1", {
                                 className: i().displayName,
-                                children: r
-                              }), h && (0, t.jsx)("span", {
+                                children: n
+                              }), f && (0, l.jsx)("span", {
                                 className: i().premiumBadge,
-                                children: (0, t.jsx)("span", {
+                                children: (0, l.jsx)("span", {
                                   className: i().premiumIcon,
-                                  children: c.A.premium
+                                  children: d.A.premium
                                 })
                               })]
-                            }), (0, t.jsxs)("span", {
+                            }), (0, l.jsxs)("span", {
                               className: i().username,
-                              children: ["@", d]
+                              children: ["@", s]
                             })]
                           })]
-                        }), (0, t.jsx)("span", {
+                        }), (0, l.jsx)("span", {
                           className: i().views,
-                          children: n
+                          children: c
                         })]
-                      }, `${d}-${e}`)
-                    }, `${d}-${e}`)
+                      }, `${s}-${a}`)
+                    }, `${s}-${a}`)
                   })
                 })]
               })]
@@ -163,15 +163,70 @@
         })
       }
     },
-    34023: (a, e, l) => {
+    28356: (e, a) => {
       "use strict";
-      l.d(e, {
-        A: () => s
+      Object.defineProperty(a, "__esModule", {
+        value: !0
       });
-      var t = l(95155);
-      l(12115);
-      let s = {
-        cross: (0, t.jsx)("svg", {
+      var t = {
+        cancelIdleCallback: function() {
+          return n
+        },
+        requestIdleCallback: function() {
+          return r
+        }
+      };
+      for (var l in t) Object.defineProperty(a, l, {
+        enumerable: !0,
+        get: t[l]
+      });
+      let r = "undefined" != typeof self && self.requestIdleCallback && self.requestIdleCallback.bind(window) || function(e) {
+          let a = Date.now();
+          return self.setTimeout(function() {
+            e({
+              didTimeout: !1,
+              timeRemaining: function() {
+                return Math.max(0, 50 - (Date.now() - a))
+              }
+            })
+          }, 1)
+        },
+        n = "undefined" != typeof self && self.cancelIdleCallback && self.cancelIdleCallback.bind(window) || function(e) {
+          return clearTimeout(e)
+        };
+      ("function" == typeof a.default || "object" == typeof a.default && null !== a.default) && void 0 === a.default.__esModule && (Object.defineProperty(a.default, "__esModule", {
+        value: !0
+      }), Object.assign(a.default, a), e.exports = a.default)
+    },
+    29722: (e, a, t) => {
+      "use strict";
+      t.d(a, {
+        A: () => l
+      });
+      let l = function() {
+        for (var e, a, t = 0, l = "", r = arguments.length; t < r; t++)(e = arguments[t]) && (a = function e(a) {
+          var t, l, r = "";
+          if ("string" == typeof a || "number" == typeof a) r += a;
+          else if ("object" == typeof a)
+            if (Array.isArray(a)) {
+              var n = a.length;
+              for (t = 0; t < n; t++) a[t] && (l = e(a[t])) && (r && (r += " "), r += l)
+            } else
+              for (l in a) a[l] && (r && (r += " "), r += l);
+          return r
+        }(e)) && (l && (l += " "), l += a);
+        return l
+      }
+    },
+    34023: (e, a, t) => {
+      "use strict";
+      t.d(a, {
+        A: () => r
+      });
+      var l = t(95155);
+      t(12115);
+      let r = {
+        cross: (0, l.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           style: {
             color: "rgb(194, 60, 60)"
@@ -179,14 +234,14 @@
           width: "1em",
           height: "1em",
           viewBox: "0 0 15 15",
-          children: (0, t.jsx)("path", {
+          children: (0, l.jsx)("path", {
             fill: "currentColor",
             fillRule: "evenodd",
             d: "M11.782 4.032a.575.575 0 1 0-.813-.814L7.5 6.687L4.032 3.218a.575.575 0 0 0-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 0 0 .814.814L7.5 8.313l3.469 3.469a.575.575 0 0 0 .813-.814L8.313 7.5z",
             clipRule: "evenodd"
           })
         }),
-        check: (0, t.jsx)("svg", {
+        check: (0, l.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           style: {
             color: "rgb(64, 184, 64)"
@@ -194,67 +249,67 @@
           width: "1em",
           height: "1em",
           viewBox: "0 0 24 24",
-          children: (0, t.jsx)("path", {
+          children: (0, l.jsx)("path", {
             fill: "currentColor",
             d: "M9 16.17L4.83 12l-1.42 1.41L9 19L21 7l-1.41-1.41z"
           })
         }),
-        arrowDown: (0, t.jsx)("svg", {
+        arrowDown: (0, l.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "1em",
           height: "1em",
           viewBox: "0 0 24 24",
-          children: (0, t.jsx)("path", {
+          children: (0, l.jsx)("path", {
             fill: "currentColor",
             d: "M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062"
           })
         }),
-        arrowUp: (0, t.jsx)("svg", {
+        arrowUp: (0, l.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "1em",
           height: "1em",
           viewBox: "0 0 24 24",
-          children: (0, t.jsx)("path", {
+          children: (0, l.jsx)("path", {
             fill: "currentColor",
             d: "m12 10.8l-3.9 3.9q-.275.275-.7.275t-.7-.275q-.275-.275-.275-.7t.275-.7l4.6-4.6q.3-.3.7-.3t.7.3l4.6 4.6q.275.275.275.7t-.275.7q-.275.275-.7.275t-.7-.275z"
           })
         }),
-        checkmark: (0, t.jsx)("svg", {
+        checkmark: (0, l.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "1em",
           height: "1em",
           viewBox: "6.43 7.43 11.15 8.57",
-          children: (0, t.jsx)("path", {
+          children: (0, l.jsx)("path", {
             fill: "currentColor",
             d: "m10 13.6l5.9-5.9q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7l-6.6 6.6q-.3.3-.7.3t-.7-.3l-2.6-2.6q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275z"
           })
         }),
-        premium: (0, t.jsx)("svg", {
+        premium: (0, l.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "1em",
           height: "1em",
           viewBox: "0 0 512 512",
-          children: (0, t.jsx)("path", {
+          children: (0, l.jsx)("path", {
             fill: "currentColor",
             d: "M121.72 32a4 4 0 0 0-3.72 5.56l2.3 5.43l40.7 94.9a4 4 0 0 0 6.88.82L243 38.4a4 4 0 0 0-3.2-6.4Zm298.21 26.06l-41.28 96.37a4 4 0 0 0 3.68 5.57h101a4 4 0 0 0 3.4-6.11L427 57.53a4 4 0 0 0-7.07.53M85 57.57l-59.71 96.32a4 4 0 0 0 3.4 6.11h101a4 4 0 0 0 3.67-5.58L92 58.1a4 4 0 0 0-7-.53M393.27 32H267.82a1.94 1.94 0 0 0-1.56 3.11l79.92 106.46a1.94 1.94 0 0 0 3.34-.4L391.6 43l3.4-8.34a1.92 1.92 0 0 0-1.7-2.66ZM239 448l-89.43-253.49A3.78 3.78 0 0 0 146 192H25.7a3.72 3.72 0 0 0-2.95 6l216 279.81a5.06 5.06 0 0 0 6.39 1.37a5 5 0 0 0 2.39-6.08Zm247.3-256H366a3.75 3.75 0 0 0-3.54 2.51l-98.2 278.16a5.21 5.21 0 0 0 2.42 6.31a5.22 5.22 0 0 0 6.61-1.39L489.25 198a3.72 3.72 0 0 0-2.95-6M259.2 78.93l56 74.67a4 4 0 0 1-3.2 6.4H200a4 4 0 0 1-3.2-6.4l56-74.67a4 4 0 0 1 6.4 0m-7 310.31l-67.7-191.91a4 4 0 0 1 3.77-5.33h135.46a4 4 0 0 1 3.77 5.33l-67.73 191.91a4 4 0 0 1-7.54 0Z"
           })
         }),
-        imagehost: (0, t.jsx)("svg", {
+        imagehost: (0, l.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "1em",
           height: "1em",
           viewBox: "0 0 16 16",
-          children: (0, t.jsx)("path", {
+          children: (0, l.jsx)("path", {
             fill: "currentColor",
             d: "m10.878.282l.348 1.071a2.205 2.205 0 0 0 1.398 1.397l1.072.348l.021.006a.423.423 0 0 1 0 .798l-1.071.348a2.208 2.208 0 0 0-1.399 1.397l-.348 1.07a.423.423 0 0 1-.798 0l-.348-1.07a2.204 2.204 0 0 0-1.399-1.403l-1.072-.348a.423.423 0 0 1 0-.798l1.072-.348a2.208 2.208 0 0 0 1.377-1.397l.348-1.07a.423.423 0 0 1 .799 0m4.905 7.931l-.765-.248a1.577 1.577 0 0 1-1-.999l-.248-.764a.302.302 0 0 0-.57 0l-.25.764a1.576 1.576 0 0 1-.983.999l-.765.248a.303.303 0 0 0 0 .57l.765.249a1.578 1.578 0 0 1 1 1.002l.248.764a.302.302 0 0 0 .57 0l.249-.764a1.576 1.576 0 0 1 .999-.999l.765-.248a.303.303 0 0 0 0-.57zM13.502 12a1.328 1.328 0 0 1-.746-.23c-.22-.16-.38-.371-.48-.621l-.26-.802a.519.519 0 0 0-.14-.22a.635.635 0 0 0-.22-.14l-.748-.246A3.001 3.001 0 0 1 5 9a3 3 0 0 1 3.846-2.88l-.053-.16c-.09-.23-.18-.36-.29-.47a1.311 1.311 0 0 0-.471-.291l-1.061-.35c-.3-.1-.54-.291-.71-.532a1.431 1.431 0 0 1-.208-1.207a1.5 1.5 0 0 0-.777.72L4.691 5H4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-.079a1.45 1.45 0 0 1-.498.079M10 9a2 2 0 1 1-4 0a2 2 0 0 1 4 0"
           })
         }),
-        arrowPlansDown: (0, t.jsx)("svg", {
+        arrowPlansDown: (0, l.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "1em",
           height: "1em",
           viewBox: "0 0 24 24",
-          children: (0, t.jsx)("path", {
+          children: (0, l.jsx)("path", {
             fill: "none",
             stroke: "currentColor",
             strokeLinecap: "round",
@@ -263,33 +318,224 @@
             d: "M12 4v16m0 0l6-6m-6 6l-6-6"
           })
         }),
-        verified: (0, t.jsx)("svg", {
+        verified: (0, l.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "1em",
           height: "1em",
           viewBox: "1 1.5 22 21",
-          children: (0, t.jsx)("path", {
+          children: (0, l.jsx)("path", {
             fill: "currentColor",
             d: "m8.6 22.5l-1.9-3.2l-3.6-.8l.35-3.7L1 12l2.45-2.8l-.35-3.7l3.6-.8l1.9-3.2L12 2.95l3.4-1.45l1.9 3.2l3.6.8l-.35 3.7L23 12l-2.45 2.8l.35 3.7l-3.6.8l-1.9 3.2l-3.4-1.45l-3.4 1.45Zm2.35-6.95L16.6 9.9l-1.4-1.45l-4.25 4.25l-2.15-2.1L7.4 12l3.55 3.55Z"
           })
         }),
-        customBadge: (0, t.jsx)("svg", {
+        customBadge: (0, l.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "1em",
           height: "1em",
           viewBox: "0 0 512 512",
-          children: (0, t.jsx)("path", {
+          children: (0, l.jsx)("path", {
             fill: "currentColor",
             d: "M208 512a24.84 24.84 0 0 1-23.34-16l-39.84-103.6a16.06 16.06 0 0 0-9.19-9.19L32 343.34a25 25 0 0 1 0-46.68l103.6-39.84a16.06 16.06 0 0 0 9.19-9.19L184.66 144a25 25 0 0 1 46.68 0l39.84 103.6a16.06 16.06 0 0 0 9.19 9.19l103 39.63a25.49 25.49 0 0 1 16.63 24.1a24.82 24.82 0 0 1-16 22.82l-103.6 39.84a16.06 16.06 0 0 0-9.19 9.19L231.34 496A24.84 24.84 0 0 1 208 512M88 176a14.67 14.67 0 0 1-13.69-9.4l-16.86-43.84a7.28 7.28 0 0 0-4.21-4.21L9.4 101.69a14.67 14.67 0 0 1 0-27.38l43.84-16.86a7.3 7.3 0 0 0 4.21-4.21L74.16 9.79A15 15 0 0 1 86.23.11a14.67 14.67 0 0 1 15.46 9.29l16.86 43.84a7.3 7.3 0 0 0 4.21 4.21l43.84 16.86a14.67 14.67 0 0 1 0 27.38l-43.84 16.86a7.28 7.28 0 0 0-4.21 4.21l-16.86 43.84A14.67 14.67 0 0 1 88 176m312 80a16 16 0 0 1-14.93-10.26l-22.84-59.37a8 8 0 0 0-4.6-4.6l-59.37-22.84a16 16 0 0 1 0-29.86l59.37-22.84a8 8 0 0 0 4.6-4.6l22.67-58.95a16.45 16.45 0 0 1 13.17-10.57a16 16 0 0 1 16.86 10.15l22.84 59.37a8 8 0 0 0 4.6 4.6l59.37 22.84a16 16 0 0 1 0 29.86l-59.37 22.84a8 8 0 0 0-4.6 4.6l-22.84 59.37A16 16 0 0 1 400 256"
           })
         })
       }
     },
-    41143: (a, e, l) => {
-      Promise.resolve().then(l.bind(l, 25997))
+    41143: (e, a, t) => {
+      Promise.resolve().then(t.bind(t, 25997))
     },
-    86623: a => {
-      a.exports = {
+    42593: (e, a, t) => {
+      "use strict";
+      Object.defineProperty(a, "__esModule", {
+        value: !0
+      });
+      var l = {
+        default: function() {
+          return v
+        },
+        handleClientScriptLoad: function() {
+          return b
+        },
+        initScriptLoader: function() {
+          return _
+        }
+      };
+      for (var r in l) Object.defineProperty(a, r, {
+        enumerable: !0,
+        get: l[r]
+      });
+      let n = t(73623),
+        s = t(66388),
+        i = t(95155),
+        d = n._(t(47650)),
+        c = s._(t(12115)),
+        o = t(75368),
+        f = t(3584),
+        u = t(28356),
+        h = new Map,
+        m = new Set,
+        p = e => {
+          let {
+            src: a,
+            id: t,
+            onLoad: l = () => {},
+            onReady: r = null,
+            dangerouslySetInnerHTML: n,
+            children: s = "",
+            strategy: i = "afterInteractive",
+            onError: c,
+            stylesheets: o
+          } = e, u = t || a;
+          if (u && m.has(u)) return;
+          if (h.has(a)) {
+            m.add(u), h.get(a).then(l, c);
+            return
+          }
+          let p = () => {
+              r && r(), m.add(u)
+            },
+            b = document.createElement("script"),
+            _ = new Promise((e, a) => {
+              b.addEventListener("load", function(a) {
+                e(), l && l.call(this, a), p()
+              }), b.addEventListener("error", function(e) {
+                a(e)
+              })
+            }).catch(function(e) {
+              c && c(e)
+            });
+          n ? (b.innerHTML = n.__html || "", p()) : s ? (b.textContent = "string" == typeof s ? s : Array.isArray(s) ? s.join("") : "", p()) : a && (b.src = a, h.set(a, _)), (0, f.setAttributesFromProps)(b, e), "worker" === i && b.setAttribute("type", "text/partytown"), b.setAttribute("data-nscript", i), o && (e => {
+            if (d.default.preinit) return e.forEach(e => {
+              d.default.preinit(e, {
+                as: "style"
+              })
+            });
+            {
+              let a = document.head;
+              e.forEach(e => {
+                let t = document.createElement("link");
+                t.type = "text/css", t.rel = "stylesheet", t.href = e, a.appendChild(t)
+              })
+            }
+          })(o), document.body.appendChild(b)
+        };
+
+      function b(e) {
+        let {
+          strategy: a = "afterInteractive"
+        } = e;
+        "lazyOnload" === a ? window.addEventListener("load", () => {
+          (0, u.requestIdleCallback)(() => p(e))
+        }) : p(e)
+      }
+
+      function _(e) {
+        e.forEach(b), [...document.querySelectorAll('[data-nscript="beforeInteractive"]'), ...document.querySelectorAll('[data-nscript="beforePageRender"]')].forEach(e => {
+          let a = e.id || e.getAttribute("src");
+          m.add(a)
+        })
+      }
+
+      function w(e) {
+        let {
+          id: a,
+          src: t = "",
+          onLoad: l = () => {},
+          onReady: r = null,
+          strategy: n = "afterInteractive",
+          onError: s,
+          stylesheets: f,
+          ...h
+        } = e, {
+          updateScripts: b,
+          scripts: _,
+          getIsSsr: w,
+          appDir: v,
+          nonce: g
+        } = (0, c.useContext)(o.HeadManagerContext);
+        g = h.nonce || g;
+        let x = (0, c.useRef)(!1);
+        (0, c.useEffect)(() => {
+          let e = a || t;
+          x.current || (r && e && m.has(e) && r(), x.current = !0)
+        }, [r, a, t]);
+        let j = (0, c.useRef)(!1);
+        if ((0, c.useEffect)(() => {
+            if (!j.current) {
+              if ("afterInteractive" === n) p(e);
+              else "lazyOnload" === n && ("complete" === document.readyState ? (0, u.requestIdleCallback)(() => p(e)) : window.addEventListener("load", () => {
+                (0, u.requestIdleCallback)(() => p(e))
+              }));
+              j.current = !0
+            }
+          }, [e, n]), ("beforeInteractive" === n || "worker" === n) && (b ? (_[n] = (_[n] || []).concat([{
+            id: a,
+            src: t,
+            onLoad: l,
+            onReady: r,
+            onError: s,
+            ...h,
+            nonce: g
+          }]), b(_)) : w && w() ? m.add(a || t) : w && !w() && p({
+            ...e,
+            nonce: g
+          })), v) {
+          if (f && f.forEach(e => {
+              d.default.preinit(e, {
+                as: "style"
+              })
+            }), "beforeInteractive" === n)
+            if (!t) return h.dangerouslySetInnerHTML && (h.children = h.dangerouslySetInnerHTML.__html, delete h.dangerouslySetInnerHTML), (0, i.jsx)("script", {
+              nonce: g,
+              dangerouslySetInnerHTML: {
+                __html: `(self.__next_s=self.__next_s||[]).push(${JSON.stringify([0,{...h,id:a}])})`
+              }
+            });
+            else return d.default.preload(t, h.integrity ? {
+              as: "script",
+              integrity: h.integrity,
+              nonce: g,
+              crossOrigin: h.crossOrigin
+            } : {
+              as: "script",
+              nonce: g,
+              crossOrigin: h.crossOrigin
+            }), (0, i.jsx)("script", {
+              nonce: g,
+              dangerouslySetInnerHTML: {
+                __html: `(self.__next_s=self.__next_s||[]).push(${JSON.stringify([t,{...h,id:a}])})`
+              }
+            });
+          "afterInteractive" === n && t && d.default.preload(t, h.integrity ? {
+            as: "script",
+            integrity: h.integrity,
+            nonce: g,
+            crossOrigin: h.crossOrigin
+          } : {
+            as: "script",
+            nonce: g,
+            crossOrigin: h.crossOrigin
+          })
+        }
+        return null
+      }
+      Object.defineProperty(w, "__nextScript", {
+        value: !0
+      });
+      let v = w;
+      ("function" == typeof a.default || "object" == typeof a.default && null !== a.default) && void 0 === a.default.__esModule && (Object.defineProperty(a.default, "__esModule", {
+        value: !0
+      }), Object.assign(a.default, a), e.exports = a.default)
+    },
+    65596: (e, a, t) => {
+      "use strict";
+      t.d(a, {
+        default: () => r.a
+      });
+      var l = t(42593),
+        r = t.n(l)
+    },
+    86623: e => {
+      e.exports = {
         leaderboardPage: "GUNS__89-92329f75-e22c6b44-ae361b60",
         container: "GUNS__29-c69bcec5-dd3777f5-fadc73f9",
         hero: "GUNS__d0-33bece04-100471f1-292c5ada",
@@ -321,7 +567,7 @@
       }
     }
   },
-  a => {
-    a.O(0, [9404, 4103, 6992, 8256, 5886, 226, 1382, 8441, 3794, 7358], () => a(a.s = 41143)), _N_E = a.O()
+  e => {
+    e.O(0, [8604, 1899, 379, 4236, 6992, 6609, 4293, 5810, 6891, 5886, 9182, 8481, 3434, 1378, 1382, 8441, 3794, 7358], () => e(e.s = 41143)), _N_E = e.O()
   }
 ]);

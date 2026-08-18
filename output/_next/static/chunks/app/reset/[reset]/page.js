@@ -25,17 +25,18 @@
         viewPassword: l,
         onKeyPress: h,
         isImageUrl: p,
-        type: m = "text",
-        ..._
+        iconInside: m,
+        type: _ = "text",
+        ...f
       }) {
-        let [f, x] = (0, a.useState)(!!l), {
-          onInput: j,
-          onChange: v,
-          maxLength: w,
-          ...N
-        } = _, g = w ?? (l || "password" === m ? 72 : void 0);
+        let [x, j] = (0, a.useState)(!!l), {
+          onInput: v,
+          onChange: w,
+          maxLength: N,
+          ...g
+        } = f, b = N ?? (l || "password" === _ ? 72 : void 0);
         return (0, a.useEffect)(() => {
-          x(!!l)
+          j(!!l)
         }, [l]), (0, r.jsxs)("div", {
           className: i().inputContainerWrapper,
           "data-dashboard-feature-label": "string" == typeof e ? e : void 0,
@@ -43,11 +44,11 @@
             className: i().featureName,
             children: e
           }), (0, r.jsxs)("div", {
-            className: `${i().inputWrapperDiv} ${d&&i().inputWrapperURL}`,
+            className: `${i().inputWrapperDiv} ${d&&i().inputWrapperURL} ${m&&i().inputWrapperIconInside}`,
             children: [(0, r.jsxs)("span", {
               className: i().inputWrapperSpan,
               style: {
-                position: d ? "absolute" : "static"
+                position: d || m ? "absolute" : "static"
               },
               children: [p ? (0, r.jsx)("img", {
                 src: o,
@@ -58,12 +59,12 @@
               })]
             }), l && (0, r.jsx)("p", {
               onClick: () => {
-                x(!f)
+                j(!x)
               },
-              children: f ? c.A.hidePassword : c.A.views
+              children: x ? c.A.hidePassword : c.A.views
             }), (0, r.jsx)("input", {
               autoCorrect: "off",
-              type: l ? f ? "password" : "text" : m,
+              type: l ? x ? "password" : "text" : _,
               onKeyDown: h,
               value: t,
               style: {
@@ -73,10 +74,10 @@
               placeholder: n,
               className: i().inputWrapperInput,
               onInput: e => {
-                j?.(e), v?.(e), s?.(e)
+                v?.(e), w?.(e), s?.(e)
               },
-              maxLength: g,
-              ...N
+              maxLength: b,
+              ...g
             })]
           })]
         })
@@ -130,7 +131,7 @@
         d = t(37897),
         u = t(54834),
         l = t(73321),
-        h = t(38256);
+        h = t(86891);
 
       function p() {
         let e = (0, h.kj)(),
@@ -249,7 +250,7 @@
         A: () => n
       });
       var r = t(95155),
-        a = t(38256);
+        a = t(86891);
 
       function n({
         href: e,
@@ -274,6 +275,6 @@
     }
   },
   e => {
-    e.O(0, [4103, 5439, 8256, 5886, 8441, 3794, 7358], () => e(e.s = 33237)), _N_E = e.O()
+    e.O(0, [379, 5439, 6891, 5886, 8441, 3794, 7358], () => e(e.s = 33237)), _N_E = e.O()
   }
 ]);

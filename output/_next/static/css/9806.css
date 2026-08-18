@@ -208,6 +208,12 @@
   color: #b90000 !important
 }
 
+.GUNS__59-c86d6a75-23ef85ce-c5df930b svg,
+.GUNS__a8-79bae289-87ae3ae4-3e924c3d,
+.GUNS__e1-956998c6-b5c14516-bc8ca084 svg {
+  color: #1ed760 !important
+}
+
 .GUNS__1a-e2392fe0-e269f505-773742c5 svg,
 .GUNS__60-459eae80-bc6549f8-52cb7b47 svg,
 .GUNS__a1-e0b890c5-ba422947-4d519765 {
@@ -668,7 +674,7 @@
   margin-top: 7px;
   display: flex;
   flex-direction: column;
-  gap: 5px
+  gap: 10px
 }
 
 .GUNS__bb-986c2c5b-26372320-1ae3ecb2 span.GUNS__a4-0291bf80-670e57cc-a3eb54a6 {

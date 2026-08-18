@@ -6,7 +6,7 @@
         dO: () => o,
         vJ: () => t
       });
-      let d = ["cursor", "background", "avatar", "cover", "icon", "audio", "banner", "metadata", "font", "templateImage", "badge", "imagehostUpload"],
+      let d = ["cursor", "background", "avatar", "cover", "icon", "audio", "clickSound", "banner", "metadata", "font", "templateImage", "badge", "imagehostUpload"],
         i = {
           cursor: {
             exts: ["png", "jpg", "jpeg", "webp", "gif", "cur"],
@@ -37,6 +37,11 @@
             exts: ["mp3", "aac", "m4a"],
             mimes: ["audio/mpeg", "audio/mp3", "audio/aac", "audio/x-aac", "audio/vnd.dlna.adts", "audio/adts", "audio/mp4", "audio/mp4a-latm", "audio/x-m4a", "audio/m4a"],
             maxMB: 10
+          },
+          clickSound: {
+            exts: ["mp3", "aac", "m4a", "ogg", "opus", "wav"],
+            mimes: ["audio/mpeg", "audio/mp3", "audio/aac", "audio/x-aac", "audio/vnd.dlna.adts", "audio/adts", "audio/mp4", "audio/mp4a-latm", "audio/x-m4a", "audio/m4a", "audio/ogg", "audio/ogg; codecs=opus", "audio/opus", "application/ogg", "audio/wav", "audio/wave", "audio/x-wav"],
+            maxMB: 1
           },
           banner: {
             exts: ["gif", "webp", "png", "jpg", "jpeg"],
@@ -347,17 +352,17 @@
     45941: (e, a, c) => {
       "use strict";
       c.d(a, {
-        nB: () => r,
+        nB: () => l,
         $h: () => o,
         hR: () => t,
-        o2: () => l
+        o2: () => r
       });
       var d = c(12521);
-      let i = JSON.parse('{"n":{"socials":[],"user_badges":[],"custom_badges":[],"color":"#1b1b1b","text_color":"#ffffff","icon_color":"#ffffff","bg_color":"#080808","gradient_1":"#881c9c","gradient_2":"#0d0d0d","profile_gradient":false,"use_discord_avatar":false,"volume_control":false,"badge_glow":true,"social_glow":true,"username_glow":true,"swap_colors":false,"monochrome":true,"animated_title":false,"shuffle_audios":false,"audio_player":false,"location":"","discord_avatar_decoration":true,"page_views":0,"blur":10,"opacity":0.5,"url":"","audio":[],"avatar":"","custom_cursor":"","description":"","presence":"","discord_presence_settings":{"show_badges":true,"show_guild_tag":true,"idle_text":""},"display_name":"","background_effects":"","background_effects_color":"#ffffff","username_effects":"","premium":{"effects_color":"#ffffff","badge_color":"#ffffff","border_color":"#ffffff","typewriter_enabled":false,"typewriter_speed":5,"typewriter_delete_speed":7,"typewriter":[],"hide_views":false,"border_enabled":false,"border_style":"static","border_opacity":0.3,"second_tab_enabled":false,"monochrome_badges":false,"animation":"fade","parallax_animation":false,"join_date":"relative","border_width":2,"border_radius":20,"avatar_radius":35,"links_position":"center","portfolio_border_radius":20,"second_tab":{},"cursor_effects":"","font":"satoshi","page_enter_text":"","layout":"default","portfolio_modules":[{"id":"portfolio-top-hero","type":"hero","visible":true,"settings":{"hero_style":"classic","show_avatar":true,"show_buttons":true}},{"id":"portfolio-about","type":"about","visible":true,"settings":{"title":"About me","description":"","secondary_description":"","cards":[]}},{"id":"portfolio-projects","type":"projects","visible":true,"settings":{"title":"Featured projects","projects":[]}}],"banner":"","buttons":[],"show_url":false,"text_align":"center","button_shadow":false,"button_border_radius":12,"metadata":{"title":"","description":"","image":"","favicon":"","information_overlay":false}}}}'),
+      let i = JSON.parse('{"n":{"socials":[],"user_badges":[],"custom_badges":[],"color":"#1b1b1b","text_color":"#ffffff","icon_color":"#ffffff","bg_color":"#080808","gradient_1":"#881c9c","gradient_2":"#0d0d0d","profile_gradient":false,"use_discord_avatar":false,"volume_control":false,"badge_glow":true,"social_glow":true,"username_glow":true,"swap_colors":false,"monochrome":true,"animated_title":false,"shuffle_audios":false,"audio_player":false,"location":"","discord_avatar_decoration":true,"page_views":0,"blur":10,"opacity":0.5,"url":"","audio":[],"avatar":"","custom_cursor":"","description":"","presence":"","profile_widget":{"type":"discord_presence","value":"","clock_face_style":"dark","clock_hidden":false,"clock_time_format":"24h"},"discord_presence_settings":{"show_badges":true,"show_guild_tag":true,"idle_text":""},"display_name":"","background_effects":"","background_effects_color":"#ffffff","username_effects":"","premium":{"effects_color":"#ffffff","badge_color":"#ffffff","border_color":"#ffffff","typewriter_enabled":false,"typewriter_speed":5,"typewriter_delete_speed":7,"typewriter":[],"hide_views":false,"border_enabled":false,"border_style":"static","border_opacity":0.3,"second_tab_enabled":false,"monochrome_badges":false,"animation":"fade","parallax_animation":false,"join_date":"relative","border_width":2,"border_radius":20,"avatar_radius":35,"links_position":"center","portfolio_border_radius":20,"second_tab":{},"cursor_effects":"","font":"satoshi","page_enter_text":"","page_enter_subtitle":"","page_enter_icon":"","click_sound":"none","click_sound_custom_url":"","layout":"default","portfolio_modules":[{"id":"portfolio-top-hero","type":"hero","visible":true,"settings":{"hero_style":"classic","show_avatar":true,"show_buttons":true}},{"id":"portfolio-about","type":"about","visible":true,"settings":{"title":"About me","description":"","secondary_description":"","cards":[]}}],"banner":"","buttons":[],"show_url":false,"text_align":"center","button_shadow":false,"button_border_radius":12,"metadata":{"title":"","description":"","image":"","favicon":"","information_overlay":false}}}}'),
         t = i.n,
         o = i.n.premium,
-        r = d.vJ,
-        l = d.dO
+        l = d.vJ,
+        r = d.dO
     },
     79153: e => {
       e.exports = {
@@ -379,6 +384,8 @@
         clickToEnterOverlay: "GUNS__43-018c3d03-bfee722b-0ec7977f",
         hide: "GUNS__da-7d43e412-1de3c2c1-729cfd30",
         clickToEnterText: "GUNS__33-613bee8a-0ca69d49-3acca887",
+        clickToEnterIcon: "GUNS__c3-7c2d363e-3190af56-29588533",
+        clickToEnterSubtitle: "GUNS__4f-8ef1a7a6-6b8dbf9f-47eced6f",
         blurredBackground: "GUNS__03-a8d36bde-920436ac-7222df83",
         nightTime: "GUNS__fe-90c33375-be430095-db3c34ad",
         oldTV: "GUNS__77-70062015-4f1e8389-1cd37cad",
@@ -428,6 +435,7 @@
         kick: "GUNS__69-4df23b80-c874b496-372b7f7e",
         pinterest: "GUNS__6e-d4cd0233-539ee7a8-4a633a0a",
         lastfm: "GUNS__29-3598a3a1-ab2b9dc5-c5fb0ab4",
+        statsfm: "GUNS__49-d3b03053-8de489f8-4899f11f",
         applemusic: "GUNS__e0-84ce514f-acead882-5fbb8011",
         facebook: "GUNS__be-44dca6cb-3a3d69c2-a1046a3a",
         payhip: "GUNS__40-e66924c5-ed8eb45c-b210a5b9",
@@ -589,7 +597,7 @@
         spanClassName: t,
         opts: o
       }) {
-        let [r, l] = (0, i.useState)(!1), f = (0, i.useRef)(null);
+        let [l, r] = (0, i.useState)(!1), f = (0, i.useRef)(null);
         (0, i.useEffect)(() => () => {
           f.current && clearTimeout(f.current)
         }, []);
@@ -612,7 +620,7 @@
             return await _()
           }, [_, !0, s, e]),
           m = (0, i.useCallback)(async () => {
-            await b() && (l(!0), f.current && clearTimeout(f.current), f.current = setTimeout(() => l(!1), a))
+            await b() && (r(!0), f.current && clearTimeout(f.current), f.current = setTimeout(() => r(!1), a))
           }, [b, a]),
           n = (0, d.jsx)("span", {
             onClick: () => {
@@ -623,11 +631,11 @@
             onKeyDown: e => {
               ("Enter" === e.key || " " === e.key) && (e.preventDefault(), m())
             },
-            children: r ? o?.copiedIcon ?? o?.copiedText ?? "Copied" : o?.copyIcon ?? o?.copyText ?? "Copy"
+            children: l ? o?.copiedIcon ?? o?.copiedText ?? "Copied" : o?.copyIcon ?? o?.copyText ?? "Copy"
           });
         return "function" == typeof c ? (0, d.jsx)(d.Fragment, {
           children: c({
-            copied: r,
+            copied: l,
             copy: m,
             isSupported: s
           })

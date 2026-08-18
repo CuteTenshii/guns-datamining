@@ -45,6 +45,7 @@
         lastFMWidget: "GUNS__bd-e92b00ca-9eb00356-5ce8a4c0",
         lastFMInformationWrapper: "GUNS__97-630e62e1-fe1df78c-c81c0c80",
         lastFMIcon: "GUNS__85-56fa012e-1f3ed114-dcefa7ab",
+        lastFMAvatar: "GUNS__ac-e59b0014-b007b025-adc9095f",
         lastFMInformation: "GUNS__b7-e834c5b9-cbc48e44-8e62a7b5",
         bottomLeftWrapper: "GUNS__b5-2c1955de-c7c90dbe-7e692e06",
         bottomLeftDivider: "GUNS__b4-cc604dc9-84b91bee-3249add0",
@@ -57,7 +58,19 @@
         timezoneSeparator: "GUNS__64-e47e733a-15dbb969-59727756",
         timezoneAmPm: "GUNS__ac-6d99abd2-9163eea9-f407a0b2",
         timezoneVisitor: "GUNS__2d-3ed180da-8cae80a6-b7cbecb2",
-        clockHand: "GUNS__0f-eff9d74e-4a852b12-89c268b9"
+        clockHand: "GUNS__0f-eff9d74e-4a852b12-89c268b9",
+        weatherWidget: "GUNS__64-d411599c-182fe39b-3971a64b",
+        weatherCurrent: "GUNS__8e-29417fc8-04f780e1-da2a0bea",
+        weatherGlyph: "GUNS__80-54d71f6e-e7be44e5-4d000d99",
+        weatherInfo: "GUNS__56-18a3cea3-974332b6-194ce6b0",
+        weatherLocation: "GUNS__35-4e363847-59ec18fe-2a8ea2f9",
+        weatherCondition: "GUNS__31-b46a1e26-e94f942e-79f185dc",
+        weatherTemperatureRow: "GUNS__d2-825aa34d-77bd54bc-8045b696",
+        weatherDetails: "GUNS__9c-996ec7c1-1aac5ac3-a0a00681",
+        weatherTemperature: "GUNS__f7-6addcbca-c0625854-40f38141",
+        weatherDetailsViewport: "GUNS__13-06379d09-65abdb83-bcf91832",
+        weatherWidgetName: "GUNS__44-0c2915e7-1022a717-9331092f",
+        weatherError: "GUNS__b9-6c234c7c-f50ae14c-ba46274b"
       }
     },
     98542: (e, c, t) => {
@@ -67,8 +80,8 @@
       });
       var r = t(95155);
       t(12115);
-      var l = t(50786),
-        i = t.n(l);
+      var a = t(50786),
+        l = t.n(a);
       let d = {
         profileViews: (0, r.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
@@ -329,7 +342,7 @@
           width: "1em",
           height: "1em",
           viewBox: "0 0 24 24",
-          className: i().verifiedGuild,
+          className: l().verifiedGuild,
           children: (0, r.jsx)("path", {
             fill: "currentColor",
             d: "m23 12l-2.44-2.79l.34-3.69l-3.61-.82l-1.89-3.2L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5l.34 3.7L1 12l2.44 2.79l-.34 3.7l3.61.82L8.6 22.5l3.4-1.47l3.4 1.46l1.89-3.19l3.61-.82l-.34-3.69zm-12.91 4.72l-3.8-3.81l1.48-1.48l2.32 2.33l5.85-5.87l1.48 1.48z"
@@ -341,7 +354,7 @@
           viewBox: "0 -0.05 16 15.25",
           "aria-hidden": "false",
           xmlns: "http://www.w3.org/2000/svg",
-          className: i().partneredGuild,
+          className: l().partneredGuild,
           children: [(0, r.jsx)("path", {
             fill: "currentColor",
             fillRule: "evenodd",
@@ -366,6 +379,16 @@
             "stroke-linejoin": "round",
             "stroke-width": "1.5",
             d: "M12 4v16m0 0l6-6m-6 6l-6-6"
+          })
+        }),
+        weather: (0, r.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          width: "1em",
+          height: "1em",
+          viewBox: "0 0 24 24",
+          children: (0, r.jsx)("path", {
+            fill: "currentColor",
+            d: "M11.438 22.575Q11 22.15 11 21.525q0-.3.113-.575t.337-.475l.7-.65q.15-.125.35-.125t.35.125l.7.65q.225.2.337.475t.113.575q0 .625-.437 1.05T12.5 23t-1.062-.425m-2.913-1.6Q8.3 20.75 8.3 20.45t.225-.525l1.9-1.9q.225-.225.525-.225t.525.225t.225.525t-.225.525l-1.9 1.9q-.225.225-.525.225t-.525-.225m6.625-1.325l-.8-.8q-.15-.15-.15-.35t.15-.35l.8-.8q.15-.15.35-.15t.35.15l.8.8q.15.15.15.35t-.15.35l-.8.8q-.15.15-.35.15t-.35-.15m-7.5-.8l-.8.8q-.15.15-.35.15t-.35-.15l-.8-.8q-.15-.15-.15-.35t.15-.35l.8-.8q.15-.15.35-.15t.35.15l.8.8q.15.15.15.35t-.15.35M7.5 16q-2.275 0-3.888-1.612T2 10.5q0-2.075 1.375-3.625t3.4-1.825q.8-1.425 2.188-2.238T12 2q2.25 0 3.913 1.438t2.012 3.587q1.725.15 2.9 1.425T22 11.5q0 1.875-1.312 3.188T17.5 16z"
           })
         })
       }
