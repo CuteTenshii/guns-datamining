@@ -11,10 +11,6 @@ const BASE_URL = 'https://guns.lol';
 const USER_AGENT =
   'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)';
 
-// Referenced only by relative path via `new URL(..., import.meta.url)` inside the
-// wasm-bindgen glue (gpp_gunslol.js), so it never appears as a scannable URL literal.
-const EXTRA_ASSETS = ['https://assets.guns.lol/wasm/gpp_gunslol_bg.wasm'];
-
 // Keep only genuine text-flow tags inline; let button/svg/img/etc. break onto their
 // own lines so chains like `</svg><span>…</button><button>…` are readable.
 const HTML_BEAUTIFY_OPTIONS: Parameters<typeof beautify.html>[1] = {
@@ -275,14 +271,13 @@ async function main() {
   const seen = new Set<string>();
   const paths = [
     '/', '/$', '/pricing', '/leaderboard', '/login', '/register', '/reset', '/terms', '/privacy',
-    '/terms/copyright', '/sent', '/reset', '/logout', '/verify/a', '/reset/a', '/password/success', '/recovery',
-    '/recovery/start', '/recovery/finalize', '/recovery/cancel',
+    '/terms/copyright', '/sent', '/logout', '/verify/a', '/reset/a', '/password/success', '/recovery',
+    '/recovery/start', '/recovery/finalize', '/recovery/cancel', '/compare', '/compare/linktree',
+    '/compare/carrd', '/compare/beacons'
   ];
   for (const path of paths) {
     await processPage(path, seen);
   }
-
-  await processAssetUrls(EXTRA_ASSETS, seen);
 }
 
 function parseWebpackManifest(content: string): Array<{ url: string; path: string }> {
