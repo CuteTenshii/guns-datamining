@@ -908,7 +908,8 @@
 }
 
 .GUNS__91-995f437a-7f77430e-b1af7e7f img {
-  display: block;
+  display: inline-block;
+  vertical-align: top;
   width: auto;
   max-width: min(100%, 600px);
   max-height: 420px;

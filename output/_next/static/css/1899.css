@@ -4000,7 +4000,9 @@ html.rtl .GUNS__d9-e226e07f-f18301ba-9c54b47c {
 .GUNS__12-c6ff35b4-d8e9ce86-c54fc94e {
   display: flex;
   flex-direction: column;
-  gap: 8px
+  gap: 8px;
+  max-height: 420px;
+  overflow-y: auto
 }
 
 .GUNS__5b-c50ede60-ba0171ac-394d66cf {
