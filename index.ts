@@ -191,6 +191,28 @@ function decodeCfEmail(hex: string): string {
   return email;
 }
 
+// Sitemap locs are locale-prefixed (e.g. `/en/pricing`), but we only ever scrape
+// the bare default-locale path, so strip the locale segment before deduping.
+function stripLocalePrefix(pathname: string): string {
+  return pathname.replace(/^\/[a-z]{2}(?=\/|$)/, '') || '/';
+}
+
+async function fetchSitemapPaths(): Promise<string[]> {
+  const xml = await fetchText(`${BASE_URL}/sitemap.xml`);
+  if (!xml) return [];
+
+  const paths = new Set<string>();
+  const $ = cheerio.load(xml, { xmlMode: true });
+  $('url > loc').each((_, el) => {
+    const loc = $(el).text().trim();
+    if (!loc) return;
+    try {
+      paths.add(stripLocalePrefix(new URL(loc).pathname));
+    } catch {}
+  });
+  return [...paths];
+}
+
 async function processPage(path: string, seen: Set<string>) {
   const res = await fetchWithRetry(`${BASE_URL}${path}`, { headers: makeHeaders() });
   if (!res.ok) {
@@ -269,12 +291,16 @@ async function main() {
   }
 
   const seen = new Set<string>();
-  const paths = [
+  // Auth/utility flows aren't in the public sitemap, so they stay hardcoded. The
+  // sitemap is layered on top (rather than replacing this list) so a temporary
+  // fetch failure or shape change there can't silently drop pages from the scrape.
+  const hardcodedPaths = [
     '/', '/$', '/pricing', '/leaderboard', '/login', '/register', '/reset', '/terms', '/privacy',
     '/terms/copyright', '/sent', '/logout', '/verify/a', '/reset/a', '/password/success', '/recovery',
     '/recovery/start', '/recovery/finalize', '/recovery/cancel', '/compare', '/compare/linktree',
     '/compare/carrd', '/compare/beacons'
   ];
+  const paths = [...new Set([...hardcodedPaths, ...(await fetchSitemapPaths())])];
   for (const path of paths) {
     await processPage(path, seen);
   }
