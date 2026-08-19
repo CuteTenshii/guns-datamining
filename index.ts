@@ -298,7 +298,7 @@ async function main() {
     '/', '/$', '/pricing', '/leaderboard', '/login', '/register', '/reset', '/terms', '/privacy',
     '/terms/copyright', '/sent', '/logout', '/verify/a', '/reset/a', '/password/success', '/recovery',
     '/recovery/start', '/recovery/finalize', '/recovery/cancel', '/compare', '/compare/linktree',
-    '/compare/carrd', '/compare/beacons'
+    '/compare/carrd', '/compare/beacons', '/gift/a'
   ];
   const paths = [...new Set([...hardcodedPaths, ...(await fetchSitemapPaths())])];
   for (const path of paths) {
