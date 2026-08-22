@@ -217,234 +217,442 @@
     }
   </style>
   <div
-    style="--presenceUsernameColor:#FFFFFF;--presenceStatusColor:rgba(255, 255, 255, 0.7);--presenceContainerBackground:rgba(255, 255, 255, 0.07);--presenceContainerBorder:2px solid rgba(255, 255, 255, 0.05);--discordServerMembers:rgba(255, 255, 255, 0.6);--secondTabBackground:rgba(255, 255, 255, 0.07);--secondTabBorder:2px solid rgba(255, 255, 255, 0.05);--discordMissingIcon:rgba(255, 255, 255, 0.25);--modernLayoutSeperator:rgba(255, 255, 255, 0.12);--modernLayoutSeperatorBorder:rgba(255, 255, 255, 0.12);--discordAvatarBorder:2px solid rgba(28, 28, 28, 0.15);--badgeContainerBackground:rgba(255, 255, 255, 0.08);--badgeContainerBorder:2px solid rgba(255, 255, 255, 0.04);--userBadge:20px;--textColor:#FFFFFF;--textColorDarker:rgba(255, 255, 255, 0.5);--iconColor:#ffffff;--backgroundColor:#1b1b1b;--joinStatus:rgba(255, 255, 255, 0.65);--audioPlayerBar:rgba(255, 255, 255, 0.35);--avatarBorder:2px solid rgba(39, 39, 39, 0.2);--containerColor:rgba(28, 28, 28, 0.4);--containerBlur:25px;--containerBorder:2px solid rgba(39, 39, 39, 0.2);--containerBackgroundClip:border-box;--containerBackgroundOrigin:border-box;--profileBorderWidth:2px;--profileBorderColor:rgba(39, 39, 39, 0.2);--containerRadius:40px;--containerWidth:64rem;--containerPadding:26px;--volumeBackgroundcolor:rgba(28, 28, 28, 0.4);--volumeBorder:2px solid rgba(28, 28, 28, 0.36);--colorUsernameGlow:0px 0px 16.5px #FFFFFF;--buttonBackground:rgba(255, 255, 255, 0.22);--buttonBorder:2px solid rgba(255, 255, 255, 0.12);--buttonRadius:20px;--buttonAlign:center;--buttonBackgroundHover:rgba(255, 255, 255, 0.32);--buttonBorderHover:2px solid rgba(255, 255, 255, 0.25);--buttonUrlColor:rgba(255, 255, 255, 0.65);--buttonShadow:rgba(255, 255, 255, 0.22) 0px 0px 15px;--profileViewsContainerBorder:2px solid rgba(39, 39, 39, 0.2);--templatePreviewContainerBackground:rgba(28, 28, 28, 0.4);--platformTextColor:rgba(255, 255, 255, 0.4);--secondTabWidgetDescription:rgba(255, 255, 255, 0.6);--audioIconBackground:rgba(255, 255, 255, 0.2);--progessBarFull:rgba(255, 255, 255, 0.3);--progessBarPlaying:#FFFFFF;--controlButtonsOther:rgba(255, 255, 255, 0.5);--controlButtonPlaying:#FFFFFF;--controlTextColor:rgba(255, 255, 255, 0.7);--modernLayoutBottomLeftDivider:rgba(255, 255, 255, 0.14);--sleekLayoutTopRightDivider:rgba(255, 255, 255, 0.14)">
+    style="--presenceUsernameColor:#FFFFFF;--presenceStatusColor:rgba(255, 255, 255, 0.7);--presenceContainerBackground:rgba(255, 255, 255, 0.07);--presenceContainerBorder:2px solid rgba(255, 255, 255, 0.05);--discordServerMembers:rgba(255, 255, 255, 0.6);--secondTabBackground:rgba(255, 255, 255, 0.07);--secondTabBorder:2px solid rgba(255, 255, 255, 0.05);--discordMissingIcon:rgba(255, 255, 255, 0.25);--modernLayoutSeperator:rgba(255, 255, 255, 0.12);--modernLayoutSeperatorBorder:rgba(255, 255, 255, 0.12);--discordAvatarBorder:2px solid rgba(28, 28, 28, 0.15);--badgeContainerBackground:rgba(255, 255, 255, 0.08);--badgeContainerBorder:2px solid rgba(255, 255, 255, 0.04);--userBadge:18px;--textColor:#FFFFFF;--textColorDarker:rgba(255, 255, 255, 0.5);--iconColor:#ffffff;--backgroundColor:#1b1b1b;--joinStatus:rgba(255, 255, 255, 0.65);--audioPlayerBar:rgba(255, 255, 255, 0.35);--avatarBorder:2px solid rgba(39, 39, 39, 0.2);--containerColor:rgba(28, 28, 28, 0.4);--containerBlur:25px;--containerBorder:2px solid rgba(39, 39, 39, 0.2);--containerBackgroundClip:border-box;--containerBackgroundOrigin:border-box;--profileBorderWidth:2px;--profileBorderColor:rgba(39, 39, 39, 0.2);--containerRadius:10px;--containerWidth:44rem;--containerPadding:26px;--volumeBackgroundcolor:rgba(28, 28, 28, 0.4);--volumeBorder:2px solid rgba(28, 28, 28, 0.36);--colorUsernameGlow:0px 0px 16.5px #FFFFFF;--buttonBackground:rgba(255, 255, 255, 0.22);--buttonBorder:2px solid rgba(255, 255, 255, 0.12);--buttonRadius:20px;--buttonAlign:center;--buttonBackgroundHover:rgba(255, 255, 255, 0.32);--buttonBorderHover:2px solid rgba(255, 255, 255, 0.25);--buttonUrlColor:rgba(255, 255, 255, 0.65);--buttonShadow:rgba(255, 255, 255, 0.22) 0px 0px 15px;--profileViewsContainerBorder:2px solid rgba(39, 39, 39, 0.2);--templatePreviewContainerBackground:rgba(28, 28, 28, 0.4);--platformTextColor:rgba(255, 255, 255, 0.4);--secondTabWidgetDescription:rgba(255, 255, 255, 0.6);--audioIconBackground:rgba(255, 255, 255, 0.2);--progessBarFull:rgba(255, 255, 255, 0.3);--progessBarPlaying:#FFFFFF;--controlButtonsOther:rgba(255, 255, 255, 0.5);--controlButtonPlaying:#FFFFFF;--controlTextColor:rgba(255, 255, 255, 0.7);--modernLayoutBottomLeftDivider:rgba(255, 255, 255, 0.14);--sleekLayoutTopRightDivider:rgba(255, 255, 255, 0.14)">
     <div class="GUNS__93-3c334130-83cd226e-15ccda62">
-      <div class="GUNS__7b-ad72801c-d3bb8b46-0894ec4e" data-compact-top-audio="false"
-        style="--portfolioSectionGapScaled:110px;--portfolioModuleMaxWidth:72rem;--portfolioModuleAudioWidth:64rem;--portfolioModuleGap18:18px;--portfolioModuleGap10:10px;--portfolioModuleGap8:8px;--portfolioModuleGap7:7px;--portfolioModuleGap6:6px;--portfolioModuleGap5:5px;--portfolioModuleHeadingFont:36px;--portfolioModuleBodyFont:16px;--portfolioModuleProjectTitleFont:34px;--portfolioModuleProjectVisitFont:18px;--portfolioModuleTagFont:12px;--portfolioModuleSkillFont:14px;--portfolioModuleTextCardPadding:28px;--portfolioModuleProjectPadding:30px;--portfolioModuleProjectHeight:300px;--portfolioModuleProjectHeroHeight:560px;--portfolioModuleTagInset:12px;--portfolioModuleTagInsetDouble:24px;--portfolioModuleTagPaddingY:4px;--portfolioModuleProjectTagDot:8px;--portfolioModuleProjectTagIcon:12px;--portfolioModuleSkillIcon:15px;--portfolioModuleSkillPaddingX:14px;--portfolioModuleCustomH1:28px;--portfolioModuleCustomH2:23px;--portfolioModuleCustomH3:19px">
-        <div class="GUNS__91-10a31676-9447bfb7-f8a8c061"><span data-active="true"></span><span
-            data-active="false"></span><span data-active="false"></span></div>
-        <div class="GUNS__a7-42c2b4ef-18d7dfdb-651f60fe" data-animation="pop" data-reveal-active="false"
-          data-reveal-done="false">
-          <div class="GUNS__07-9f3b6c9b-13597119-0404b65e GUNS__33-289b5a49-64aef540-cb964a41" data-animation="pop"
-            data-hero-style="centered">
-            <div style="width:100%;position:relative">
-              <div class="GUNS__18-7c2472f2-6a2c59bb-c9c39e70 ">
-                <div class="GUNS__74-a07b26e4-6436fb8c-6bb9433f" data-reveal-part="hero-identity"
-                  style="--portfolioRevealOrder:2">
-                  <div class="GUNS__33-b5793ec5-987171cd-0a2c255f">
-                    <div class="GUNS__60-f6e4b357-041933b3-bab21af8" data-reveal-part="hero-avatar"
-                      style="--portfolioRevealOrder:2">
-                      <img src="https://r2.guns.lol/4b7e4800-6721-4737-8b5b-5fc39de2e2b4.webp" alt="hris avatar"
-                        class="GUNS__5f-efece4b5-517a4ed2-4257cacf">
+      <div class="GUNS__19-00d4b0cd-85c65e72-e5392a5f">
+        <div
+          style="position:relative;width:100%;align-items:center;max-width:var(--containerWidth);display:flex;justify-content:center;flex-direction:column;gap:15px;z-index:1">
+          <div class="GUNS__82-8f867934-3ea339fa-6da81ad0 GUNS__a1-7ec1ec9e-91e5e879-4b3738bc "
+            style="position:initial">
+            <div class="GUNS__68-654881f2-2d95c827-edc8d064 false">
+              <div class="GUNS__33-b5793ec5-987171cd-0a2c255f">
+                <img src="https://r2.guns.lol/4b7e4800-6721-4737-8b5b-5fc39de2e2b4.webp" alt=""
+                  class="GUNS__d0-a03a3017-5c7cd9d4-8198ae15">
+              </div>
+              <div class="GUNS__20-cf1aa4f0-a3d1c36b-322555dc">
+                <div class="GUNS__5b-5ccebcfd-dc33bdae-0206e64a"><span class="GUNS__ba-7f5364ea-c3a36c5d-b0f3d011 ">
+                    <h1 style="font-weight:600;font-size:36px;line-height:41px" class="false">hris</h1><span
+                      class="GUNS__ca-42ad2aff-c7e7db33-534468e1 "
+                      style="--tooltip-max-width:260px;top:0px;left:0px;border-color:#1a1a1a33;background-color:#14141463"
+                      data-visible="false" data-placement="top">UID -1</span>
+                  </span>
+                  <div class="GUNS__ad-72202e03-c9fc57d0-e66456c1"><span class="GUNS__ba-7f5364ea-c3a36c5d-b0f3d011 ">
+                      <div class="GUNS__33-a7e3be74-7ba891f5-11c92848">
+                        <style>
+                          .GUNS__98-c7e54d6b-fb3d4664-5ec7d4e0 {
+                            color: #ffffff !important;
+                            filter: drop-shadow(#ffffff 0 0 2.5px) !important;
+                          }
+                        </style>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="GUNS__98-c7e54d6b-fb3d4664-5ec7d4e0" width="1em"
+                          height="1em" viewBox="2.3 2 19.39 20">
+                          <path fill="currentColor"
+                            d="m16.06 13.09l5.63 5.59l-3.32 3.28l-5.59-5.59v-.92l2.36-2.36h.92m.91-2.53L16 9.6l-4.79 4.8v1.97L5.58 22L2.3 18.68l5.59-5.59h1.97l.78-.78L6.8 8.46H5.5L2.69 5.62L5.31 3l2.8 2.8v1.31L12 10.95l2.66-2.66l-.96-1.01L15 5.97h-2.66l-.65-.65L15 2l.66.66v2.66L16.97 4l3.28 3.28c1.09 1.1 1.09 2.89 0 3.98l-1.97-2.01l-1.31 1.31Z">
+                          </path>
+                        </svg>
+                      </div><span class="GUNS__ca-42ad2aff-c7e7db33-534468e1 "
+                        style="--tooltip-max-width:260px;top:0px;left:0px;border-color:#1a1a1a33;background-color:#14141463"
+                        data-visible="false" data-placement="top">Staff</span>
+                    </span><span class="GUNS__ba-7f5364ea-c3a36c5d-b0f3d011 ">
+                      <div class="GUNS__33-a7e3be74-7ba891f5-11c92848">
+                        <style>
+                          .GUNS__46-f4c370e0-1800e369-2015148a {
+                            color: #ffffff !important;
+                            filter: drop-shadow(#ffffff 0 0 2.5px) !important;
+                          }
+                        </style>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="GUNS__46-f4c370e0-1800e369-2015148a" width="1em"
+                          height="1em" viewBox="4 3.41 16 17.59">
+                          <path fill="currentColor"
+                            d="M19 8h-1.81a5.985 5.985 0 0 0-1.82-1.96l.93-.93a.996.996 0 1 0-1.41-1.41l-1.47 1.47C12.96 5.06 12.49 5 12 5s-.96.06-1.41.17L9.11 3.7A.996.996 0 1 0 7.7 5.11l.92.93C7.88 6.55 7.26 7.22 6.81 8H5c-.55 0-1 .45-1 1s.45 1 1 1h1.09c-.05.33-.09.66-.09 1v1H5c-.55 0-1 .45-1 1s.45 1 1 1h1v1c0 .34.04.67.09 1H5c-.55 0-1 .45-1 1s.45 1 1 1h1.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H19c.55 0 1-.45 1-1s-.45-1-1-1h-1.09c.05-.33.09-.66.09-1v-1h1c.55 0 1-.45 1-1s-.45-1-1-1h-1v-1c0-.34-.04-.67-.09-1H19c.55 0 1-.45 1-1s-.45-1-1-1m-6 8h-2c-.55 0-1-.45-1-1s.45-1 1-1h2c.55 0 1 .45 1 1s-.45 1-1 1m0-4h-2c-.55 0-1-.45-1-1s.45-1 1-1h2c.55 0 1 .45 1 1s-.45 1-1 1">
+                          </path>
+                        </svg>
+                      </div><span class="GUNS__ca-42ad2aff-c7e7db33-534468e1 "
+                        style="--tooltip-max-width:260px;top:0px;left:0px;border-color:#1a1a1a33;background-color:#14141463"
+                        data-visible="false" data-placement="top">Bug Hunter</span>
+                    </span><span class="GUNS__ba-7f5364ea-c3a36c5d-b0f3d011 ">
+                      <div class="GUNS__33-a7e3be74-7ba891f5-11c92848">
+                        <style>
+                          .GUNS__19-13832121-b8da038f-714354b8 {
+                            color: #ffffff !important;
+                            filter: drop-shadow(#ffffff 0 0 2.5px) !important;
+                          }
+                        </style>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="GUNS__19-13832121-b8da038f-714354b8" width="1em"
+                          height="1em" viewBox="1 1.5 22 21">
+                          <path fill="currentColor"
+                            d="m8.6 22.5l-1.9-3.2l-3.6-.8l.35-3.7L1 12l2.45-2.8l-.35-3.7l3.6-.8l1.9-3.2L12 2.95l3.4-1.45l1.9 3.2l3.6.8l-.35 3.7L23 12l-2.45 2.8l.35 3.7l-3.6.8l-1.9 3.2l-3.4-1.45l-3.4 1.45Zm2.35-6.95L16.6 9.9l-1.4-1.45l-4.25 4.25l-2.15-2.1L7.4 12l3.55 3.55Z">
+                          </path>
+                        </svg>
+                      </div><span class="GUNS__ca-42ad2aff-c7e7db33-534468e1 "
+                        style="--tooltip-max-width:260px;top:0px;left:0px;border-color:#1a1a1a33;background-color:#14141463"
+                        data-visible="false" data-placement="top">Verified</span>
+                    </span><span class="GUNS__ba-7f5364ea-c3a36c5d-b0f3d011 ">
+                      <div class="GUNS__33-a7e3be74-7ba891f5-11c92848">
+                        <style>
+                          .GUNS__5f-e5422176-af07e3f8-08f9c8cf {
+                            color: #ffffff !important;
+                            filter: drop-shadow(#ffffff 0 0 2.5px) !important;
+                          }
+                        </style>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="GUNS__5f-e5422176-af07e3f8-08f9c8cf" width="1em"
+                          height="1em" viewBox="4.39 2 15.22 20.97">
+                          <path fill="currentColor"
+                            d="m12 8.5l2.116 5.088l5.492.44l-4.184 3.585l1.278 5.36L12 20.1l-4.702 2.872l1.278-5.36l-4.184-3.584l5.492-.44L12 8.5ZM8 2v9H6V2h2Zm10 0v9h-2V2h2Zm-5 0v5h-2V2h2Z">
+                          </path>
+                        </svg>
+                      </div><span class="GUNS__ca-42ad2aff-c7e7db33-534468e1 "
+                        style="--tooltip-max-width:260px;top:0px;left:0px;border-color:#1a1a1a33;background-color:#14141463"
+                        data-visible="false" data-placement="top">OG</span>
+                    </span><span class="GUNS__ba-7f5364ea-c3a36c5d-b0f3d011 ">
+                      <div class="GUNS__33-a7e3be74-7ba891f5-11c92848">
+                        <style>
+                          .GUNS__4f-7c6fbece-d65a892a-3f141269 {
+                            color: #ffffff !important;
+                            filter: drop-shadow(#ffffff 0 0 2.5px) !important;
+                          }
+                        </style>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="GUNS__4f-7c6fbece-d65a892a-3f141269" width="1em"
+                          height="1em" viewBox="0 0 24 24">
+                          <path fill="currentColor"
+                            d="M12 5q-.425 0-.712-.288T11 4V2q0-.425.288-.712T12 1q.425 0 .713.288T13 2v2q0 .425-.288.713T12 5m4.95 2.05q-.275-.275-.275-.687t.275-.713l1.4-1.425q.3-.3.712-.3t.713.3q.275.275.275.7t-.275.7L18.35 7.05q-.275.275-.7.275t-.7-.275M20 13q-.425 0-.713-.288T19 12q0-.425.288-.712T20 11h2q.425 0 .713.288T23 12q0 .425-.288.713T22 13zm-8 10q-.425 0-.712-.288T11 22v-2q0-.425.288-.712T12 19q.425 0 .713.288T13 20v2q0 .425-.288.713T12 23M5.65 7.05l-1.425-1.4q-.3-.3-.3-.725t.3-.7q.275-.275.7-.275t.7.275L7.05 5.65q.275.275.275.7t-.275.7q-.3.275-.7.275t-.7-.275m12.7 12.725l-1.4-1.425q-.275-.3-.275-.712t.275-.688q.275-.275.688-.275t.712.275l1.425 1.4q.3.275.288.7t-.288.725q-.3.3-.725.3t-.7-.3M2 13q-.425 0-.712-.288T1 12q0-.425.288-.712T2 11h2q.425 0 .713.288T5 12q0 .425-.288.713T4 13zm2.225 6.775q-.275-.275-.275-.7t.275-.7L5.65 16.95q.275-.275.687-.275t.713.275q.3.3.3.713t-.3.712l-1.4 1.4q-.3.3-.725.3t-.7-.3M12 18q-2.5 0-4.25-1.75T6 12q0-2.5 1.75-4.25T12 6q2.5 0 4.25 1.75T18 12q0 2.5-1.75 4.25T12 18">
+                          </path>
+                        </svg>
+                      </div><span class="GUNS__ca-42ad2aff-c7e7db33-534468e1 "
+                        style="--tooltip-max-width:260px;top:0px;left:0px;border-color:#1a1a1a33;background-color:#14141463"
+                        data-visible="false" data-placement="top">Summer 2026</span>
+                    </span></div>
+                </div>
+                <h3 style="font-weight:570;font-size:17px">
+                  <div class="Typewriter" data-testid="typewriter-wrapper"></div>
+                </h3>
+              </div>
+            </div>
+            <style>
+              .GUNS__a1-9c55e2ff-0953f188-17d83a59 {
+                max-width: initial;
+              }
+
+              .GUNS__2a-d679d135-4e3a6433-2b23b826 {
+                display: none;
+              }
+
+              .GUNS__db-1a74e7b1-7ff34e35-f82e47c3 {
+                justify-content: space-between;
+                width: 100%;
+              }
+
+              @media (max-width: 720px) {
+                .GUNS__23-d1532451-80b443b7-1fd2e1ec {
+                  max-width: 100%
+                }
+
+                .GUNS__2a-d679d135-4e3a6433-2b23b826 {
+                  display: inline;
+                }
+
+
+                .GUNS__c4-f43c3818-a4559919-0525361e {
+                  margin-top: 0px !important;
+                }
+              }
+
+              @media (max-width: 430px) {
+                .GUNS__82-8f867934-3ea339fa-6da81ad0 {
+                  width: 100% !important;
+                }
+
+                .GUNS__7a-b515ab01-32744781-bd9f9596 {
+                  width: 100% !important;
+                }
+              }
+            </style>
+            <div class="GUNS__c8-2ddcc21a-fe149540-a5a4fd1a false">
+              <div class="GUNS__3e-d2630f2a-2f031ef0-e87676b0">
+                <div class="GUNS__cd-3193c8e5-8820fa55-78f07199">
+                  <div class="GUNS__a1-9c55e2ff-0953f188-17d83a59" style="margin-top:20px">
+                    <div class="GUNS__e8-95f42e11-9c2d5921-9ac513b5">
+                      <h1 style="font-weight:550;font-size:18.5px">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48">
+                          <defs>
+                            <mask id="ipTError0">
+                              <path fill="#555" fill-rule="evenodd" stroke="#fff" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="4"
+                                d="m6 11l5-5l13 13L37 6l5 5l-13 13l13 13l-5 5l-13-13l-13 13l-5-5l13-13z"
+                                clip-rule="evenodd"></path>
+                            </mask>
+                          </defs>
+                          <path fill="currentColor" d="M0 0h48v48H0z" mask="url(#ipTError0)"></path>
+                        </svg> User Not found
+                      </h1>
+                      <h3 style="font-weight:400;font-size:13.5px">Join <a href="https://discord.gg/guns"
+                          target="_blank">discord.gg/guns</a> to display your status</h3>
                     </div>
                   </div>
                 </div>
-                <div class="GUNS__58-21193694-fe5d6591-fbd81464">
-                  <div class="GUNS__2f-d8370fad-3038f469-2e916cdf" data-reveal-part="hero-title"
-                    style="--portfolioRevealOrder:2">
-                    <div class="GUNS__05-5309d41d-2d976092-500695a1">
-                      <div class="GUNS__d2-ba3d2def-d2760e65-3ed7811a"><span
-                          class="GUNS__ba-7f5364ea-c3a36c5d-b0f3d011 ">
-                          <h1 style="font-weight:700;font-size:36px">hris</h1><span
-                            class="GUNS__ca-42ad2aff-c7e7db33-534468e1 "
-                            style="--tooltip-max-width:260px;top:0px;left:0px;border-color:#1a1a1a33;background-color:#14141463"
-                            data-visible="false" data-placement="top">UID -1</span>
-                        </span></div>
-                      <div class="GUNS__fa-9eb5df22-bc7e6d38-f7b031fa">
-                        <div class="GUNS__ad-72202e03-c9fc57d0-e66456c1 GUNS__a2-b2b4814e-6b1224a6-275d5630">
-                          <div class="GUNS__f7-a57a2f04-fa294a61-f4d92e2e">
-                            <div class="GUNS__f5-a3fa5675-121435b7-c6f8a1c8"><span
-                                class="GUNS__ba-7f5364ea-c3a36c5d-b0f3d011 ">
-                                <div class="GUNS__33-a7e3be74-7ba891f5-11c92848">
-                                  <style>
-                                    .GUNS__98-c7e54d6b-fb3d4664-5ec7d4e0 {
-                                      color: #ffffff !important;
-                                      filter: drop-shadow(#ffffff 0 0 2.5px) !important;
-                                    }
-                                  </style>
-                                  <svg xmlns="http://www.w3.org/2000/svg" class="GUNS__98-c7e54d6b-fb3d4664-5ec7d4e0"
-                                    width="1em" height="1em" viewBox="2.3 2 19.39 20">
-                                    <path fill="currentColor"
-                                      d="m16.06 13.09l5.63 5.59l-3.32 3.28l-5.59-5.59v-.92l2.36-2.36h.92m.91-2.53L16 9.6l-4.79 4.8v1.97L5.58 22L2.3 18.68l5.59-5.59h1.97l.78-.78L6.8 8.46H5.5L2.69 5.62L5.31 3l2.8 2.8v1.31L12 10.95l2.66-2.66l-.96-1.01L15 5.97h-2.66l-.65-.65L15 2l.66.66v2.66L16.97 4l3.28 3.28c1.09 1.1 1.09 2.89 0 3.98l-1.97-2.01l-1.31 1.31Z">
-                                    </path>
-                                  </svg>
-                                </div><span class="GUNS__ca-42ad2aff-c7e7db33-534468e1 "
-                                  style="--tooltip-max-width:260px;top:0px;left:0px;border-color:#1a1a1a33;background-color:#14141463"
-                                  data-visible="false" data-placement="top">Staff</span>
-                              </span><span class="GUNS__ba-7f5364ea-c3a36c5d-b0f3d011 ">
-                                <div class="GUNS__33-a7e3be74-7ba891f5-11c92848">
-                                  <style>
-                                    .GUNS__46-f4c370e0-1800e369-2015148a {
-                                      color: #ffffff !important;
-                                      filter: drop-shadow(#ffffff 0 0 2.5px) !important;
-                                    }
-                                  </style>
-                                  <svg xmlns="http://www.w3.org/2000/svg" class="GUNS__46-f4c370e0-1800e369-2015148a"
-                                    width="1em" height="1em" viewBox="4 3.41 16 17.59">
-                                    <path fill="currentColor"
-                                      d="M19 8h-1.81a5.985 5.985 0 0 0-1.82-1.96l.93-.93a.996.996 0 1 0-1.41-1.41l-1.47 1.47C12.96 5.06 12.49 5 12 5s-.96.06-1.41.17L9.11 3.7A.996.996 0 1 0 7.7 5.11l.92.93C7.88 6.55 7.26 7.22 6.81 8H5c-.55 0-1 .45-1 1s.45 1 1 1h1.09c-.05.33-.09.66-.09 1v1H5c-.55 0-1 .45-1 1s.45 1 1 1h1v1c0 .34.04.67.09 1H5c-.55 0-1 .45-1 1s.45 1 1 1h1.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H19c.55 0 1-.45 1-1s-.45-1-1-1h-1.09c.05-.33.09-.66.09-1v-1h1c.55 0 1-.45 1-1s-.45-1-1-1h-1v-1c0-.34-.04-.67-.09-1H19c.55 0 1-.45 1-1s-.45-1-1-1m-6 8h-2c-.55 0-1-.45-1-1s.45-1 1-1h2c.55 0 1 .45 1 1s-.45 1-1 1m0-4h-2c-.55 0-1-.45-1-1s.45-1 1-1h2c.55 0 1 .45 1 1s-.45 1-1 1">
-                                    </path>
-                                  </svg>
-                                </div><span class="GUNS__ca-42ad2aff-c7e7db33-534468e1 "
-                                  style="--tooltip-max-width:260px;top:0px;left:0px;border-color:#1a1a1a33;background-color:#14141463"
-                                  data-visible="false" data-placement="top">Bug Hunter</span>
-                              </span><span class="GUNS__ba-7f5364ea-c3a36c5d-b0f3d011 ">
-                                <div class="GUNS__33-a7e3be74-7ba891f5-11c92848">
-                                  <style>
-                                    .GUNS__19-13832121-b8da038f-714354b8 {
-                                      color: #ffffff !important;
-                                      filter: drop-shadow(#ffffff 0 0 2.5px) !important;
-                                    }
-                                  </style>
-                                  <svg xmlns="http://www.w3.org/2000/svg" class="GUNS__19-13832121-b8da038f-714354b8"
-                                    width="1em" height="1em" viewBox="1 1.5 22 21">
-                                    <path fill="currentColor"
-                                      d="m8.6 22.5l-1.9-3.2l-3.6-.8l.35-3.7L1 12l2.45-2.8l-.35-3.7l3.6-.8l1.9-3.2L12 2.95l3.4-1.45l1.9 3.2l3.6.8l-.35 3.7L23 12l-2.45 2.8l.35 3.7l-3.6.8l-1.9 3.2l-3.4-1.45l-3.4 1.45Zm2.35-6.95L16.6 9.9l-1.4-1.45l-4.25 4.25l-2.15-2.1L7.4 12l3.55 3.55Z">
-                                    </path>
-                                  </svg>
-                                </div><span class="GUNS__ca-42ad2aff-c7e7db33-534468e1 "
-                                  style="--tooltip-max-width:260px;top:0px;left:0px;border-color:#1a1a1a33;background-color:#14141463"
-                                  data-visible="false" data-placement="top">Verified</span>
-                              </span><span class="GUNS__ba-7f5364ea-c3a36c5d-b0f3d011 ">
-                                <div class="GUNS__33-a7e3be74-7ba891f5-11c92848">
-                                  <style>
-                                    .GUNS__5f-e5422176-af07e3f8-08f9c8cf {
-                                      color: #ffffff !important;
-                                      filter: drop-shadow(#ffffff 0 0 2.5px) !important;
-                                    }
-                                  </style>
-                                  <svg xmlns="http://www.w3.org/2000/svg" class="GUNS__5f-e5422176-af07e3f8-08f9c8cf"
-                                    width="1em" height="1em" viewBox="4.39 2 15.22 20.97">
-                                    <path fill="currentColor"
-                                      d="m12 8.5l2.116 5.088l5.492.44l-4.184 3.585l1.278 5.36L12 20.1l-4.702 2.872l1.278-5.36l-4.184-3.584l5.492-.44L12 8.5ZM8 2v9H6V2h2Zm10 0v9h-2V2h2Zm-5 0v5h-2V2h2Z">
-                                    </path>
-                                  </svg>
-                                </div><span class="GUNS__ca-42ad2aff-c7e7db33-534468e1 "
-                                  style="--tooltip-max-width:260px;top:0px;left:0px;border-color:#1a1a1a33;background-color:#14141463"
-                                  data-visible="false" data-placement="top">OG</span>
-                              </span><span class="GUNS__ba-7f5364ea-c3a36c5d-b0f3d011 ">
-                                <div class="GUNS__33-a7e3be74-7ba891f5-11c92848">
-                                  <style>
-                                    .GUNS__4f-7c6fbece-d65a892a-3f141269 {
-                                      color: #ffffff !important;
-                                      filter: drop-shadow(#ffffff 0 0 2.5px) !important;
-                                    }
-                                  </style>
-                                  <svg xmlns="http://www.w3.org/2000/svg" class="GUNS__4f-7c6fbece-d65a892a-3f141269"
-                                    width="1em" height="1em" viewBox="0 0 24 24">
-                                    <path fill="currentColor"
-                                      d="M12 5q-.425 0-.712-.288T11 4V2q0-.425.288-.712T12 1q.425 0 .713.288T13 2v2q0 .425-.288.713T12 5m4.95 2.05q-.275-.275-.275-.687t.275-.713l1.4-1.425q.3-.3.712-.3t.713.3q.275.275.275.7t-.275.7L18.35 7.05q-.275.275-.7.275t-.7-.275M20 13q-.425 0-.713-.288T19 12q0-.425.288-.712T20 11h2q.425 0 .713.288T23 12q0 .425-.288.713T22 13zm-8 10q-.425 0-.712-.288T11 22v-2q0-.425.288-.712T12 19q.425 0 .713.288T13 20v2q0 .425-.288.713T12 23M5.65 7.05l-1.425-1.4q-.3-.3-.3-.725t.3-.7q.275-.275.7-.275t.7.275L7.05 5.65q.275.275.275.7t-.275.7q-.3.275-.7.275t-.7-.275m12.7 12.725l-1.4-1.425q-.275-.3-.275-.712t.275-.688q.275-.275.688-.275t.712.275l1.425 1.4q.3.275.288.7t-.288.725q-.3.3-.725.3t-.7-.3M2 13q-.425 0-.712-.288T1 12q0-.425.288-.712T2 11h2q.425 0 .713.288T5 12q0 .425-.288.713T4 13zm2.225 6.775q-.275-.275-.275-.7t.275-.7L5.65 16.95q.275-.275.687-.275t.713.275q.3.3.3.713t-.3.712l-1.4 1.4q-.3.3-.725.3t-.7-.3M12 18q-2.5 0-4.25-1.75T6 12q0-2.5 1.75-4.25T12 6q2.5 0 4.25 1.75T18 12q0 2.5-1.75 4.25T12 18">
-                                    </path>
-                                  </svg>
-                                </div><span class="GUNS__ca-42ad2aff-c7e7db33-534468e1 "
-                                  style="--tooltip-max-width:260px;top:0px;left:0px;border-color:#1a1a1a33;background-color:#14141463"
-                                  data-visible="false" data-placement="top">Summer 2026</span>
-                              </span></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="GUNS__81-7438d2df-c0161f48-3f3200e7"
-                    style="font-weight:570;font-size:17px;--portfolioRevealOrder:3" data-reveal-part="hero-description">
-                    <div class="Typewriter" data-testid="typewriter-wrapper"></div>
-                  </div>
-                  <div class="GUNS__20-140cbab4-d4407d14-80413a1e" data-reveal-part="hero-actions"
-                    style="--portfolioRevealOrder:4">
-                    <div class="GUNS__d7-fb8c6083-4dc99f7b-a375925f"
-                      style="justify-content:center;align-items:center;margin-top:30px;width:100%;max-width:100%">
-                      <div class="GUNS__8b-14239d9a-1d4a3e5a-6c1a2be6 GUNS__58-3b8ebb61-4f516613-30a21ee9">
-                        <style>
-                          .GUNS__58-3b8ebb61-4f516613-30a21ee9 svg {
-                            color: #ffffff !important;
-                            filter: drop-shadow(#ffffff 1px 0 7px) !important;
-                          }
-                        </style>
-                        <a href="https://discord.com/invite/guns" target="_blank"
-                          rel="nofollow ugc noopener noreferrer">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                            viewBox="1.96 4.26 20.03 15.53">
-                            <path fill="currentColor"
-                              d="M14.82 4.26a10.14 10.14 0 0 0-.53 1.1a14.66 14.66 0 0 0-4.58 0a10.14 10.14 0 0 0-.53-1.1a16 16 0 0 0-4.13 1.3a17.33 17.33 0 0 0-3 11.59a16.6 16.6 0 0 0 5.07 2.59A12.89 12.89 0 0 0 8.23 18a9.65 9.65 0 0 1-1.71-.83a3.39 3.39 0 0 0 .42-.33a11.66 11.66 0 0 0 10.12 0q.21.18.42.33a10.84 10.84 0 0 1-1.71.84a12.41 12.41 0 0 0 1.08 1.78a16.44 16.44 0 0 0 5.06-2.59a17.22 17.22 0 0 0-3-11.59a16.09 16.09 0 0 0-4.09-1.35zM8.68 14.81a1.94 1.94 0 0 1-1.8-2a1.93 1.93 0 0 1 1.8-2a1.93 1.93 0 0 1 1.8 2a1.93 1.93 0 0 1-1.8 2zm6.64 0a1.94 1.94 0 0 1-1.8-2a1.93 1.93 0 0 1 1.8-2a1.92 1.92 0 0 1 1.8 2a1.92 1.92 0 0 1-1.8 2z">
-                            </path>
+                <div class="GUNS__cd-3193c8e5-8820fa55-78f07199">
+                  <div class="GUNS__c4-f43c3818-a4559919-0525361e ">
+                    <div class="GUNS__ff-068e59b5-c326696e-2305f40a"><span class="GUNS__ba-7f5364ea-c3a36c5d-b0f3d011 ">
+                        <div class="GUNS__e6-5d8f1c80-d1204ac5-e260ea3d">
+                          <svg width="70" height="70" viewBox="0 0 70 70" style="flex-shrink:0">
+                            <circle cx="35" cy="35" r="33" fill="#141414" stroke="#303030" stroke-width="1.5"></circle>
+                            <line x1="35" y1="12" x2="35" y2="5" stroke="#555555" stroke-width="2"
+                              stroke-linecap="round"></line>
+                            <line x1="37.8223" y1="8.1479" x2="38.1359" y2="5.1643" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="40.6136" y1="8.59" x2="41.2374" y2="5.6556" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="43.3435" y1="9.3215" x2="44.2705" y2="6.4683" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="45.9819" y1="10.3343" x2="47.2021" y2="7.5936" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="46.5" y1="15.0814" x2="50" y2="9.0192" stroke="#555555" stroke-width="2"
+                              stroke-linecap="round"></line>
+                            <line x1="50.8702" y1="13.1565" x2="52.6336" y2="10.7295" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="53.0665" y1="14.9351" x2="55.0739" y2="12.7057" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="55.0649" y1="16.9335" x2="57.2943" y2="14.9261" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="56.8435" y1="19.1298" x2="59.2705" y2="17.3664" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="54.9186" y1="23.5" x2="60.9808" y2="20" stroke="#555555" stroke-width="2"
+                              stroke-linecap="round"></line>
+                            <line x1="59.6657" y1="24.0181" x2="62.4064" y2="22.7979" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="60.6785" y1="26.6565" x2="63.5317" y2="25.7295" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="61.41" y1="29.3864" x2="64.3444" y2="28.7626" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="61.8521" y1="32.1777" x2="64.8357" y2="31.8641" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="58" y1="35" x2="65" y2="35" stroke="#555555" stroke-width="2"
+                              stroke-linecap="round"></line>
+                            <line x1="61.8521" y1="37.8223" x2="64.8357" y2="38.1359" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="61.41" y1="40.6136" x2="64.3444" y2="41.2374" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="60.6785" y1="43.3435" x2="63.5317" y2="44.2705" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="59.6657" y1="45.9819" x2="62.4064" y2="47.2021" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="54.9186" y1="46.5" x2="60.9808" y2="50" stroke="#555555" stroke-width="2"
+                              stroke-linecap="round"></line>
+                            <line x1="56.8435" y1="50.8702" x2="59.2705" y2="52.6336" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="55.0649" y1="53.0665" x2="57.2943" y2="55.0739" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="53.0665" y1="55.0649" x2="55.0739" y2="57.2943" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="50.8702" y1="56.8435" x2="52.6336" y2="59.2705" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="46.5" y1="54.9186" x2="50" y2="60.9808" stroke="#555555" stroke-width="2"
+                              stroke-linecap="round"></line>
+                            <line x1="45.9819" y1="59.6657" x2="47.2021" y2="62.4064" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="43.3435" y1="60.6785" x2="44.2705" y2="63.5317" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="40.6136" y1="61.41" x2="41.2374" y2="64.3444" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="37.8223" y1="61.8521" x2="38.1359" y2="64.8357" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="35" y1="58" x2="35" y2="65" stroke="#555555" stroke-width="2"
+                              stroke-linecap="round"></line>
+                            <line x1="32.1777" y1="61.8521" x2="31.8641" y2="64.8357" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="29.3864" y1="61.41" x2="28.7626" y2="64.3444" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="26.6565" y1="60.6785" x2="25.7295" y2="63.5317" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="24.0181" y1="59.6657" x2="22.7979" y2="62.4064" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="23.5" y1="54.9186" x2="20" y2="60.9808" stroke="#555555" stroke-width="2"
+                              stroke-linecap="round"></line>
+                            <line x1="19.1298" y1="56.8435" x2="17.3664" y2="59.2705" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="16.9335" y1="55.0649" x2="14.9261" y2="57.2943" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="14.9351" y1="53.0665" x2="12.7057" y2="55.0739" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="13.1565" y1="50.8702" x2="10.7295" y2="52.6336" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="15.0814" y1="46.5" x2="9.0192" y2="50" stroke="#555555" stroke-width="2"
+                              stroke-linecap="round"></line>
+                            <line x1="10.3343" y1="45.9819" x2="7.5936" y2="47.2021" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="9.3215" y1="43.3435" x2="6.4683" y2="44.2705" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="8.59" y1="40.6136" x2="5.6556" y2="41.2374" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="8.1479" y1="37.8223" x2="5.1643" y2="38.1359" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="12" y1="35" x2="5" y2="35" stroke="#555555" stroke-width="2"
+                              stroke-linecap="round"></line>
+                            <line x1="8.1479" y1="32.1777" x2="5.1643" y2="31.8641" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="8.59" y1="29.3864" x2="5.6556" y2="28.7626" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="9.3215" y1="26.6565" x2="6.4683" y2="25.7295" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="10.3343" y1="24.0181" x2="7.5936" y2="22.7979" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="15.0814" y1="23.5" x2="9.0192" y2="20" stroke="#555555" stroke-width="2"
+                              stroke-linecap="round"></line>
+                            <line x1="13.1565" y1="19.1298" x2="10.7295" y2="17.3664" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="14.9351" y1="16.9335" x2="12.7057" y2="14.9261" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="16.9335" y1="14.9351" x2="14.9261" y2="12.7057" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="19.1298" y1="13.1565" x2="17.3664" y2="10.7295" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="23.5" y1="15.0814" x2="20" y2="9.0192" stroke="#555555" stroke-width="2"
+                              stroke-linecap="round"></line>
+                            <line x1="24.0181" y1="10.3343" x2="22.7979" y2="7.5936" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="26.6565" y1="9.3215" x2="25.7295" y2="6.4683" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="29.3864" y1="8.59" x2="28.7626" y2="5.6556" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <line x1="32.1777" y1="8.1479" x2="31.8641" y2="5.1643" stroke="#2e2e2e" stroke-width="1"
+                              stroke-linecap="round"></line>
+                            <g class="GUNS__0f-eff9d74e-4a852b12-89c268b9"
+                              style="transform:rotate(30deg);transition:transform 0.4s ease">
+                              <line x1="35" y1="35" x2="35" y2="16" stroke="#f0f0f0" stroke-width="3.5"
+                                stroke-linecap="round"></line>
+                              <line x1="35" y1="35" x2="35" y2="41" stroke="#f0f0f0" stroke-width="3.5"
+                                stroke-linecap="round"></line>
+                            </g>
+                            <g class="GUNS__0f-eff9d74e-4a852b12-89c268b9"
+                              style="transform:rotate(0deg);transition:transform 0.3s ease">
+                              <line x1="35" y1="35" x2="35" y2="9" stroke="#f0f0f0" stroke-width="2.2"
+                                stroke-linecap="round"></line>
+                              <line x1="35" y1="35" x2="35" y2="42" stroke="#f0f0f0" stroke-width="2.2"
+                                stroke-linecap="round"></line>
+                            </g>
+                            <g class="GUNS__0f-eff9d74e-4a852b12-89c268b9"
+                              style="transform:rotate(0deg);transition:none">
+                              <line x1="35" y1="35" x2="35" y2="7" stroke="#f04040" stroke-width="1.3"
+                                stroke-linecap="round"></line>
+                              <line x1="35" y1="35" x2="35" y2="44" stroke="#f04040" stroke-width="1.3"
+                                stroke-linecap="round"></line>
+                            </g>
+                            <circle cx="35" cy="35" r="3" fill="#f04040"></circle>
+                            <circle cx="35" cy="35" r="1.5" fill="#f0f0f0"></circle>
                           </svg>
-                        </a>
-                      </div>
-                      <div class="GUNS__8b-14239d9a-1d4a3e5a-6c1a2be6 GUNS__2f-40ce629f-b477c768-a2a32e61">
-                        <style>
-                          .GUNS__2f-40ce629f-b477c768-a2a32e61 svg {
-                            color: #ffffff !important;
-                            filter: drop-shadow(#ffffff 1px 0 7px) !important;
-                          }
-                        </style>
-                        <a href="https://github.com/hriiss" target="_blank" rel="nofollow ugc noopener noreferrer">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="2.05 2 19.95 19.46">
-                            <path fill="currentColor" fill-rule="evenodd"
-                              d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974c0 4.406 2.857 8.145 6.821 9.465c.499.09.679-.217.679-.481c0-.237-.008-.865-.011-1.696c-2.775.602-3.361-1.338-3.361-1.338c-.452-1.152-1.107-1.459-1.107-1.459c-.905-.619.069-.605.069-.605c1.002.07 1.527 1.028 1.527 1.028c.89 1.524 2.336 1.084 2.902.829c.091-.645.351-1.085.635-1.334c-2.214-.251-4.542-1.107-4.542-4.93c0-1.087.389-1.979 1.024-2.675c-.101-.253-.446-1.268.099-2.64c0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336a9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021c.545 1.372.203 2.387.099 2.64c.64.696 1.024 1.587 1.024 2.675c0 3.833-2.33 4.675-4.552 4.922c.355.308.675.916.675 1.846c0 1.334-.012 2.41-.012 2.737c0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974C22 6.465 17.535 2 12.026 2z"
-                              clip-rule="evenodd"></path>
-                          </svg>
-                        </a>
-                      </div>
-                      <div class="GUNS__8b-14239d9a-1d4a3e5a-6c1a2be6 GUNS__3b-1cb6ec0e-012cd99b-30cb4670">
-                        <style>
-                          .GUNS__3b-1cb6ec0e-012cd99b-30cb4670 svg {
-                            color: #ffffff !important;
-                            filter: drop-shadow(#ffffff 1px 0 7px) !important;
-                          }
-                        </style><!--$!-->
-                        <template data-dgst="BAILOUT_TO_CLIENT_SIDE_RENDERING"></template><!--/$-->
-                      </div>
-                      <div class="GUNS__8b-14239d9a-1d4a3e5a-6c1a2be6 GUNS__c0-fa073b95-f6e17abb-4e226f06">
-                        <style>
-                          .GUNS__c0-fa073b95-f6e17abb-4e226f06 svg {
-                            color: #ffffff !important;
-                            filter: drop-shadow(#ffffff 1px 0 7px) !important;
-                          }
-                        </style>
-                        <a href="https://t.me/gunsbio" target="_blank" rel="nofollow ugc noopener noreferrer">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="2 3.61 20.02 16.79">
-                            <path fill="currentColor"
-                              d="m20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42l10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001l-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15l4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z">
-                            </path>
-                          </svg>
-                        </a>
-                      </div>
-                      <div class="GUNS__8b-14239d9a-1d4a3e5a-6c1a2be6 GUNS__ac-5e04c885-8b02028c-f4d94447">
-                        <style>
-                          .GUNS__ac-5e04c885-8b02028c-f4d94447 svg {
-                            color: #ffffff !important;
-                            filter: drop-shadow(#ffffff 1px 0 7px) !important;
-                          }
-                        </style>
-                        <a href="https://hris.sh" target="_blank" rel="nofollow ugc noopener noreferrer">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="2 2 28 28">
-                            <path fill="currentColor"
-                              d="M11 16c0-1.393.078-2.734.222-4h9.556c.144 1.266.222 2.607.222 4c0 1.393-.078 2.734-.222 4h-9.556A35.485 35.485 0 0 1 11 16Zm-1.79 4A37.618 37.618 0 0 1 9 16c0-1.379.073-2.72.21-4H2.58A14.002 14.002 0 0 0 2 16c0 1.39.203 2.733.58 4h6.63Zm-5.863 2h6.138c.314 1.86.771 3.547 1.344 4.978c.369.922.793 1.758 1.272 2.472A14.036 14.036 0 0 1 3.347 22Zm8.168 0h8.97c-.29 1.6-.69 3.032-1.17 4.235c-.516 1.288-1.104 2.262-1.706 2.9c-.6.634-1.144.865-1.609.865c-.465 0-1.009-.231-1.609-.866c-.602-.637-1.19-1.611-1.705-2.899c-.481-1.203-.881-2.636-1.171-4.235Zm11 0c-.314 1.86-.771 3.547-1.344 4.978c-.369.922-.793 1.758-1.272 2.472A14.036 14.036 0 0 0 28.653 22h-6.138Zm6.905-2c.377-1.267.58-2.61.58-4c0-1.39-.203-2.733-.58-4h-6.63c.137 1.28.21 2.621.21 4s-.073 2.72-.21 4h6.63ZM19.314 5.765c.481 1.203.881 2.636 1.171 4.235h-8.97c.29-1.6.69-3.032 1.17-4.235c.516-1.288 1.104-2.263 1.706-2.9c.598-.631 1.14-.863 1.604-.865h.008c.464 0 1.007.233 1.606.866c.602.636 1.19 1.611 1.705 2.899ZM22.515 10h6.138a14.036 14.036 0 0 0-8.754-7.45c.479.714.903 1.55 1.272 2.472c.573 1.431 1.03 3.118 1.344 4.978ZM3.347 10h6.138c.314-1.86.771-3.547 1.344-4.978c.369-.922.793-1.758 1.272-2.472A14.036 14.036 0 0 0 3.347 10Z">
-                            </path>
-                          </svg>
-                        </a>
-                      </div>
+                        </div><span class="GUNS__ca-42ad2aff-c7e7db33-534468e1 "
+                          style="--tooltip-max-width:260px;top:0px;left:0px;border-color:#1a1a1a33;background-color:#14141463"
+                          data-visible="false" data-placement="top">Europe/Berlin</span>
+                      </span>
+                      <div class="GUNS__b8-54e72ad2-e1858671-fcdcdca9">
+                        <h1 class="GUNS__ce-0a5ba18b-76cb6152-03bb8e5f" style="font-weight:450;font-size:18px">--:--:--
+                        </h1>
+                        <h3 class="GUNS__11-96f4e304-69317103-886b6d13"><span>---</span><span
+                            class="GUNS__64-e47e733a-15dbb969-59727756">·</span><span>--</span></h3>
+                      </div><span class="GUNS__f0-2b552e4b-07366c7d-67b4c447">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"
+                          fill="currentColor">
+                          <path
+                            d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2m0 18a8 8 0 1 1 8-8a8 8 0 0 1-8 8m.5-13H11v6l5.25 3.15l.75-1.23l-4.5-2.67Z">
+                          </path>
+                        </svg> Timezone
+                      </span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="GUNS__38-301bcaaf-9d61b88f-afdbaa22">
-              <div class="GUNS__08-25508449-9c4a029c-41f12d14" style="display:inline-flex">
-                <div class="cf-turnstile" style="display:none" data-sitekey="0x4AAAAAAAgU7T2niLQD-TLm"
-                  data-callback="getToken" data-action="guns_view" data-cdata="REDACTED"></div>
-                <div class="GUNS__c4-52afb1ed-980a1997-1f6253bb GUNS__c7-1e65a0ea-695263de-4085cd09 false"><span
-                    class="GUNS__ba-7f5364ea-c3a36c5d-b0f3d011 "><span style="font-weight:550;font-size:14px">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                        <path fill="currentColor"
-                          d="M12 9a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5a5 5 0 0 1 5-5a5 5 0 0 1 5 5a5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5">
-                        </path>
-                      </svg> <!-- -->REDACTED
-                    </span><span class="GUNS__ca-42ad2aff-c7e7db33-534468e1 "
-                      style="--tooltip-max-width:260px;top:0px;left:0px;border-color:#1a1a1a33;background-color:#14141463"
-                      data-visible="false" data-placement="top">Profile Views</span></span></div>
-              </div><span class="GUNS__0d-72afd7f5-05c9e1d8-8763be9f">|</span><span
-                class="GUNS__ba-7f5364ea-c3a36c5d-b0f3d011 "><span class="GUNS__08-25508449-9c4a029c-41f12d14">
+            <div class="GUNS__cb-aac8fc7b-8bf66360-e777b6f4 false" style="margin-bottom:35px">
+              <div class="GUNS__d7-fb8c6083-4dc99f7b-a375925f" style="justify-content:flex-start">
+                <div class="GUNS__8b-14239d9a-1d4a3e5a-6c1a2be6 GUNS__58-3b8ebb61-4f516613-30a21ee9">
+                  <style>
+                    .GUNS__58-3b8ebb61-4f516613-30a21ee9 svg {
+                      color: #ffffff !important;
+                      filter: drop-shadow(#ffffff 1px 0 7px) !important;
+                    }
+                  </style>
+                  <a href="https://discord.com/invite/guns" target="_blank" rel="nofollow ugc noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="1.96 4.26 20.03 15.53">
+                      <path fill="currentColor"
+                        d="M14.82 4.26a10.14 10.14 0 0 0-.53 1.1a14.66 14.66 0 0 0-4.58 0a10.14 10.14 0 0 0-.53-1.1a16 16 0 0 0-4.13 1.3a17.33 17.33 0 0 0-3 11.59a16.6 16.6 0 0 0 5.07 2.59A12.89 12.89 0 0 0 8.23 18a9.65 9.65 0 0 1-1.71-.83a3.39 3.39 0 0 0 .42-.33a11.66 11.66 0 0 0 10.12 0q.21.18.42.33a10.84 10.84 0 0 1-1.71.84a12.41 12.41 0 0 0 1.08 1.78a16.44 16.44 0 0 0 5.06-2.59a17.22 17.22 0 0 0-3-11.59a16.09 16.09 0 0 0-4.09-1.35zM8.68 14.81a1.94 1.94 0 0 1-1.8-2a1.93 1.93 0 0 1 1.8-2a1.93 1.93 0 0 1 1.8 2a1.93 1.93 0 0 1-1.8 2zm6.64 0a1.94 1.94 0 0 1-1.8-2a1.93 1.93 0 0 1 1.8-2a1.92 1.92 0 0 1 1.8 2a1.92 1.92 0 0 1-1.8 2z">
+                      </path>
+                    </svg>
+                  </a>
+                </div>
+                <div class="GUNS__8b-14239d9a-1d4a3e5a-6c1a2be6 GUNS__2f-40ce629f-b477c768-a2a32e61">
+                  <style>
+                    .GUNS__2f-40ce629f-b477c768-a2a32e61 svg {
+                      color: #ffffff !important;
+                      filter: drop-shadow(#ffffff 1px 0 7px) !important;
+                    }
+                  </style>
+                  <a href="https://github.com/hriiss" target="_blank" rel="nofollow ugc noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="2.05 2 19.95 19.46">
+                      <path fill="currentColor" fill-rule="evenodd"
+                        d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974c0 4.406 2.857 8.145 6.821 9.465c.499.09.679-.217.679-.481c0-.237-.008-.865-.011-1.696c-2.775.602-3.361-1.338-3.361-1.338c-.452-1.152-1.107-1.459-1.107-1.459c-.905-.619.069-.605.069-.605c1.002.07 1.527 1.028 1.527 1.028c.89 1.524 2.336 1.084 2.902.829c.091-.645.351-1.085.635-1.334c-2.214-.251-4.542-1.107-4.542-4.93c0-1.087.389-1.979 1.024-2.675c-.101-.253-.446-1.268.099-2.64c0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336a9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021c.545 1.372.203 2.387.099 2.64c.64.696 1.024 1.587 1.024 2.675c0 3.833-2.33 4.675-4.552 4.922c.355.308.675.916.675 1.846c0 1.334-.012 2.41-.012 2.737c0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974C22 6.465 17.535 2 12.026 2z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                  </a>
+                </div>
+                <div class="GUNS__8b-14239d9a-1d4a3e5a-6c1a2be6 GUNS__3b-1cb6ec0e-012cd99b-30cb4670">
+                  <style>
+                    .GUNS__3b-1cb6ec0e-012cd99b-30cb4670 svg {
+                      color: #ffffff !important;
+                      filter: drop-shadow(#ffffff 1px 0 7px) !important;
+                    }
+                  </style><!--$!-->
+                  <template data-dgst="BAILOUT_TO_CLIENT_SIDE_RENDERING"></template><!--/$-->
+                </div>
+                <div class="GUNS__8b-14239d9a-1d4a3e5a-6c1a2be6 GUNS__c0-fa073b95-f6e17abb-4e226f06">
+                  <style>
+                    .GUNS__c0-fa073b95-f6e17abb-4e226f06 svg {
+                      color: #ffffff !important;
+                      filter: drop-shadow(#ffffff 1px 0 7px) !important;
+                    }
+                  </style>
+                  <a href="https://t.me/gunsbio" target="_blank" rel="nofollow ugc noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="2 3.61 20.02 16.79">
+                      <path fill="currentColor"
+                        d="m20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42l10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001l-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15l4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z">
+                      </path>
+                    </svg>
+                  </a>
+                </div>
+                <div class="GUNS__8b-14239d9a-1d4a3e5a-6c1a2be6 GUNS__ac-5e04c885-8b02028c-f4d94447">
+                  <style>
+                    .GUNS__ac-5e04c885-8b02028c-f4d94447 svg {
+                      color: #ffffff !important;
+                      filter: drop-shadow(#ffffff 1px 0 7px) !important;
+                    }
+                  </style>
+                  <a href="https://hris.sh" target="_blank" rel="nofollow ugc noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="2 2 28 28">
+                      <path fill="currentColor"
+                        d="M11 16c0-1.393.078-2.734.222-4h9.556c.144 1.266.222 2.607.222 4c0 1.393-.078 2.734-.222 4h-9.556A35.485 35.485 0 0 1 11 16Zm-1.79 4A37.618 37.618 0 0 1 9 16c0-1.379.073-2.72.21-4H2.58A14.002 14.002 0 0 0 2 16c0 1.39.203 2.733.58 4h6.63Zm-5.863 2h6.138c.314 1.86.771 3.547 1.344 4.978c.369.922.793 1.758 1.272 2.472A14.036 14.036 0 0 1 3.347 22Zm8.168 0h8.97c-.29 1.6-.69 3.032-1.17 4.235c-.516 1.288-1.104 2.262-1.706 2.9c-.6.634-1.144.865-1.609.865c-.465 0-1.009-.231-1.609-.866c-.602-.637-1.19-1.611-1.705-2.899c-.481-1.203-.881-2.636-1.171-4.235Zm11 0c-.314 1.86-.771 3.547-1.344 4.978c-.369.922-.793 1.758-1.272 2.472A14.036 14.036 0 0 0 28.653 22h-6.138Zm6.905-2c.377-1.267.58-2.61.58-4c0-1.39-.203-2.733-.58-4h-6.63c.137 1.28.21 2.621.21 4s-.073 2.72-.21 4h6.63ZM19.314 5.765c.481 1.203.881 2.636 1.171 4.235h-8.97c.29-1.6.69-3.032 1.17-4.235c.516-1.288 1.104-2.263 1.706-2.9c.598-.631 1.14-.863 1.604-.865h.008c.464 0 1.007.233 1.606.866c.602.636 1.19 1.611 1.705 2.899ZM22.515 10h6.138a14.036 14.036 0 0 0-8.754-7.45c.479.714.903 1.55 1.272 2.472c.573 1.431 1.03 3.118 1.344 4.978ZM3.347 10h6.138c.314-1.86.771-3.547 1.344-4.978c.369-.922.793-1.758 1.272-2.472A14.036 14.036 0 0 0 3.347 10Z">
+                      </path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="GUNS__b5-2c1955de-c7c90dbe-7e692e06 GUNS__5a-4122e465-a6c4d9a6-39808974 GUNS__db-9eb4dbd4-b432afd9-a56a924c false"
+              style="bottom:13px;left:18px">
+              <div class="cf-turnstile" style="display:none" data-sitekey="0x4AAAAAAAgU7T2niLQD-TLm"
+                data-callback="getToken" data-action="guns_view" data-cdata="REDACTED"></div>
+              <div class="GUNS__c4-52afb1ed-980a1997-1f6253bb  false" style="bottom:12px;left:15px"><span
+                  class="GUNS__ba-7f5364ea-c3a36c5d-b0f3d011 "><span style="font-weight:550;font-size:14px">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                      <path fill="currentColor"
+                        d="M12 9a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5a5 5 0 0 1 5-5a5 5 0 0 1 5 5a5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5">
+                      </path>
+                    </svg> <!-- -->REDACTED
+                  </span><span class="GUNS__ca-42ad2aff-c7e7db33-534468e1 "
+                    style="--tooltip-max-width:260px;top:0px;left:0px;border-color:#1a1a1a33;background-color:#14141463"
+                    data-visible="false" data-placement="top">Profile Views</span></span></div>
+              <div class="GUNS__b4-cc604dc9-84b91bee-3249add0"></div><span
+                class="GUNS__ba-7f5364ea-c3a36c5d-b0f3d011 "><span class="GUNS__c9-c79d2a8a-e67dc9c3-53182f6b"
+                  style="font-weight:450;font-size:15px">
                   <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="4 2 16 20">
                     <path fill="currentColor"
                       d="M12 12q.825 0 1.413-.587T14 10t-.587-1.412T12 8t-1.412.588T10 10t.588 1.413T12 12m0 10q-4.025-3.425-6.012-6.362T4 10.2q0-3.75 2.413-5.975T12 2t5.588 2.225T20 10.2q0 2.5-1.987 5.438T12 22">
@@ -454,345 +662,9 @@
                   style="--tooltip-max-width:260px;top:0px;left:0px;border-color:#1a1a1a33;background-color:#14141463"
                   data-visible="false" data-placement="top">Location</span></span>
             </div>
-            <button type="button" class="GUNS__1c-b0f698f7-d1505db6-7276de7d" data-visible="true"
-              data-reveal-part="scroll-indicator" style="--portfolioRevealOrder:6"><strong>Scroll for more</strong>
-              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                  stroke-width="1.5" d="M12 4v16m0 0l6-6m-6 6l-6-6"></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div class="GUNS__9d-aa0d7193-ab3c9d09-69855837">
-          <div class="GUNS__a7-42c2b4ef-18d7dfdb-651f60fe" data-animation="pop" data-reveal-active="false"
-            data-reveal-done="false">
-            <div class="GUNS__04-48c26bc6-e5a19dc2-c8288809 ">
-              <div class="GUNS__d3-da886a08-d0f07b56-afbb72f4" data-align="left" data-reveal-part="about-root"
-                style="--portfolioRevealOrder:1">
-                <h1>About me</h1>
-              </div>
-              <div style="display:contents">
-                <div class="GUNS__16-94b8553d-38030f74-0403fc6e " style="--portfolioRevealOrder:2"
-                  data-reveal-part="about-secondary">
-                  <div class="GUNS__70-7cf7bb9a-2028ce23-c344e5f1" data-align="left" data-link-style="underline"
-                    data-collapsed="false">
-                    <p>Hi. I own guns.lol.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="GUNS__75-0fd8ed4e-7fc51b4b-480b0bed" data-count="2">
-                <div class="GUNS__78-fd8143c6-c7385e6f-9b42faf4 ">
-                  <div class="GUNS__42-fc4a8ecb-0134cd8f-16509107" data-reveal-part="about-card-content"
-                    style="--portfolioRevealOrder:4">
-                    <style>
-                      .GUNS__db-1a74e7b1-7ff34e35-f82e47c3 {
-                        width: 100%;
-                        justify-content: space-between;
-                      }
-                    </style>
-                    <div class="GUNS__a1-9c55e2ff-0953f188-17d83a59" style="margin-top:20px">
-                      <div class="GUNS__e8-95f42e11-9c2d5921-9ac513b5">
-                        <h1 style="font-weight:550;font-size:18.5px">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48">
-                            <defs>
-                              <mask id="ipTError0">
-                                <path fill="#555" fill-rule="evenodd" stroke="#fff" stroke-linecap="round"
-                                  stroke-linejoin="round" stroke-width="4"
-                                  d="m6 11l5-5l13 13L37 6l5 5l-13 13l13 13l-5 5l-13-13l-13 13l-5-5l13-13z"
-                                  clip-rule="evenodd"></path>
-                              </mask>
-                            </defs>
-                            <path fill="currentColor" d="M0 0h48v48H0z" mask="url(#ipTError0)"></path>
-                          </svg> User Not found
-                        </h1>
-                        <h3 style="font-weight:400;font-size:13.5px">Join <a href="https://discord.gg/guns"
-                            target="_blank">discord.gg/guns</a> to display your status</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="GUNS__78-fd8143c6-c7385e6f-9b42faf4 ">
-                  <div class="GUNS__42-fc4a8ecb-0134cd8f-16509107" data-reveal-part="about-card-content"
-                    style="--portfolioRevealOrder:5">
-                    <style>
-                      .GUNS__db-1a74e7b1-7ff34e35-f82e47c3 {
-                        width: 100%;
-                        justify-content: space-between;
-                      }
-                    </style>
-                    <div class="GUNS__c4-f43c3818-a4559919-0525361e ">
-                      <div class="GUNS__ff-068e59b5-c326696e-2305f40a"><span
-                          class="GUNS__ba-7f5364ea-c3a36c5d-b0f3d011 ">
-                          <div class="GUNS__e6-5d8f1c80-d1204ac5-e260ea3d">
-                            <svg width="70" height="70" viewBox="0 0 70 70" style="flex-shrink:0">
-                              <circle cx="35" cy="35" r="33" fill="#141414" stroke="#303030" stroke-width="1.5">
-                              </circle>
-                              <line x1="35" y1="12" x2="35" y2="5" stroke="#555555" stroke-width="2"
-                                stroke-linecap="round"></line>
-                              <line x1="37.8223" y1="8.1479" x2="38.1359" y2="5.1643" stroke="#2e2e2e" stroke-width="1"
-                                stroke-linecap="round"></line>
-                              <line x1="40.6136" y1="8.59" x2="41.2374" y2="5.6556" stroke="#2e2e2e" stroke-width="1"
-                                stroke-linecap="round"></line>
-                              <line x1="43.3435" y1="9.3215" x2="44.2705" y2="6.4683" stroke="#2e2e2e" stroke-width="1"
-                                stroke-linecap="round"></line>
-                              <line x1="45.9819" y1="10.3343" x2="47.2021" y2="7.5936" stroke="#2e2e2e" stroke-width="1"
-                                stroke-linecap="round"></line>
-                              <line x1="46.5" y1="15.0814" x2="50" y2="9.0192" stroke="#555555" stroke-width="2"
-                                stroke-linecap="round"></line>
-                              <line x1="50.8702" y1="13.1565" x2="52.6336" y2="10.7295" stroke="#2e2e2e"
-                                stroke-width="1" stroke-linecap="round"></line>
-                              <line x1="53.0665" y1="14.9351" x2="55.0739" y2="12.7057" stroke="#2e2e2e"
-                                stroke-width="1" stroke-linecap="round"></line>
-                              <line x1="55.0649" y1="16.9335" x2="57.2943" y2="14.9261" stroke="#2e2e2e"
-                                stroke-width="1" stroke-linecap="round"></line>
-                              <line x1="56.8435" y1="19.1298" x2="59.2705" y2="17.3664" stroke="#2e2e2e"
-                                stroke-width="1" stroke-linecap="round"></line>
-                              <line x1="54.9186" y1="23.5" x2="60.9808" y2="20" stroke="#555555" stroke-width="2"
-                                stroke-linecap="round"></line>
-                              <line x1="59.6657" y1="24.0181" x2="62.4064" y2="22.7979" stroke="#2e2e2e"
-                                stroke-width="1" stroke-linecap="round"></line>
-                              <line x1="60.6785" y1="26.6565" x2="63.5317" y2="25.7295" stroke="#2e2e2e"
-                                stroke-width="1" stroke-linecap="round"></line>
-                              <line x1="61.41" y1="29.3864" x2="64.3444" y2="28.7626" stroke="#2e2e2e" stroke-width="1"
-                                stroke-linecap="round"></line>
-                              <line x1="61.8521" y1="32.1777" x2="64.8357" y2="31.8641" stroke="#2e2e2e"
-                                stroke-width="1" stroke-linecap="round"></line>
-                              <line x1="58" y1="35" x2="65" y2="35" stroke="#555555" stroke-width="2"
-                                stroke-linecap="round"></line>
-                              <line x1="61.8521" y1="37.8223" x2="64.8357" y2="38.1359" stroke="#2e2e2e"
-                                stroke-width="1" stroke-linecap="round"></line>
-                              <line x1="61.41" y1="40.6136" x2="64.3444" y2="41.2374" stroke="#2e2e2e" stroke-width="1"
-                                stroke-linecap="round"></line>
-                              <line x1="60.6785" y1="43.3435" x2="63.5317" y2="44.2705" stroke="#2e2e2e"
-                                stroke-width="1" stroke-linecap="round"></line>
-                              <line x1="59.6657" y1="45.9819" x2="62.4064" y2="47.2021" stroke="#2e2e2e"
-                                stroke-width="1" stroke-linecap="round"></line>
-                              <line x1="54.9186" y1="46.5" x2="60.9808" y2="50" stroke="#555555" stroke-width="2"
-                                stroke-linecap="round"></line>
-                              <line x1="56.8435" y1="50.8702" x2="59.2705" y2="52.6336" stroke="#2e2e2e"
-                                stroke-width="1" stroke-linecap="round"></line>
-                              <line x1="55.0649" y1="53.0665" x2="57.2943" y2="55.0739" stroke="#2e2e2e"
-                                stroke-width="1" stroke-linecap="round"></line>
-                              <line x1="53.0665" y1="55.0649" x2="55.0739" y2="57.2943" stroke="#2e2e2e"
-                                stroke-width="1" stroke-linecap="round"></line>
-                              <line x1="50.8702" y1="56.8435" x2="52.6336" y2="59.2705" stroke="#2e2e2e"
-                                stroke-width="1" stroke-linecap="round"></line>
-                              <line x1="46.5" y1="54.9186" x2="50" y2="60.9808" stroke="#555555" stroke-width="2"
-                                stroke-linecap="round"></line>
-                              <line x1="45.9819" y1="59.6657" x2="47.2021" y2="62.4064" stroke="#2e2e2e"
-                                stroke-width="1" stroke-linecap="round"></line>
-                              <line x1="43.3435" y1="60.6785" x2="44.2705" y2="63.5317" stroke="#2e2e2e"
-                                stroke-width="1" stroke-linecap="round"></line>
-                              <line x1="40.6136" y1="61.41" x2="41.2374" y2="64.3444" stroke="#2e2e2e" stroke-width="1"
-                                stroke-linecap="round"></line>
-                              <line x1="37.8223" y1="61.8521" x2="38.1359" y2="64.8357" stroke="#2e2e2e"
-                                stroke-width="1" stroke-linecap="round"></line>
-                              <line x1="35" y1="58" x2="35" y2="65" stroke="#555555" stroke-width="2"
-                                stroke-linecap="round"></line>
-                              <line x1="32.1777" y1="61.8521" x2="31.8641" y2="64.8357" stroke="#2e2e2e"
-                                stroke-width="1" stroke-linecap="round"></line>
-                              <line x1="29.3864" y1="61.41" x2="28.7626" y2="64.3444" stroke="#2e2e2e" stroke-width="1"
-                                stroke-linecap="round"></line>
-                              <line x1="26.6565" y1="60.6785" x2="25.7295" y2="63.5317" stroke="#2e2e2e"
-                                stroke-width="1" stroke-linecap="round"></line>
-                              <line x1="24.0181" y1="59.6657" x2="22.7979" y2="62.4064" stroke="#2e2e2e"
-                                stroke-width="1" stroke-linecap="round"></line>
-                              <line x1="23.5" y1="54.9186" x2="20" y2="60.9808" stroke="#555555" stroke-width="2"
-                                stroke-linecap="round"></line>
-                              <line x1="19.1298" y1="56.8435" x2="17.3664" y2="59.2705" stroke="#2e2e2e"
-                                stroke-width="1" stroke-linecap="round"></line>
-                              <line x1="16.9335" y1="55.0649" x2="14.9261" y2="57.2943" stroke="#2e2e2e"
-                                stroke-width="1" stroke-linecap="round"></line>
-                              <line x1="14.9351" y1="53.0665" x2="12.7057" y2="55.0739" stroke="#2e2e2e"
-                                stroke-width="1" stroke-linecap="round"></line>
-                              <line x1="13.1565" y1="50.8702" x2="10.7295" y2="52.6336" stroke="#2e2e2e"
-                                stroke-width="1" stroke-linecap="round"></line>
-                              <line x1="15.0814" y1="46.5" x2="9.0192" y2="50" stroke="#555555" stroke-width="2"
-                                stroke-linecap="round"></line>
-                              <line x1="10.3343" y1="45.9819" x2="7.5936" y2="47.2021" stroke="#2e2e2e" stroke-width="1"
-                                stroke-linecap="round"></line>
-                              <line x1="9.3215" y1="43.3435" x2="6.4683" y2="44.2705" stroke="#2e2e2e" stroke-width="1"
-                                stroke-linecap="round"></line>
-                              <line x1="8.59" y1="40.6136" x2="5.6556" y2="41.2374" stroke="#2e2e2e" stroke-width="1"
-                                stroke-linecap="round"></line>
-                              <line x1="8.1479" y1="37.8223" x2="5.1643" y2="38.1359" stroke="#2e2e2e" stroke-width="1"
-                                stroke-linecap="round"></line>
-                              <line x1="12" y1="35" x2="5" y2="35" stroke="#555555" stroke-width="2"
-                                stroke-linecap="round"></line>
-                              <line x1="8.1479" y1="32.1777" x2="5.1643" y2="31.8641" stroke="#2e2e2e" stroke-width="1"
-                                stroke-linecap="round"></line>
-                              <line x1="8.59" y1="29.3864" x2="5.6556" y2="28.7626" stroke="#2e2e2e" stroke-width="1"
-                                stroke-linecap="round"></line>
-                              <line x1="9.3215" y1="26.6565" x2="6.4683" y2="25.7295" stroke="#2e2e2e" stroke-width="1"
-                                stroke-linecap="round"></line>
-                              <line x1="10.3343" y1="24.0181" x2="7.5936" y2="22.7979" stroke="#2e2e2e" stroke-width="1"
-                                stroke-linecap="round"></line>
-                              <line x1="15.0814" y1="23.5" x2="9.0192" y2="20" stroke="#555555" stroke-width="2"
-                                stroke-linecap="round"></line>
-                              <line x1="13.1565" y1="19.1298" x2="10.7295" y2="17.3664" stroke="#2e2e2e"
-                                stroke-width="1" stroke-linecap="round"></line>
-                              <line x1="14.9351" y1="16.9335" x2="12.7057" y2="14.9261" stroke="#2e2e2e"
-                                stroke-width="1" stroke-linecap="round"></line>
-                              <line x1="16.9335" y1="14.9351" x2="14.9261" y2="12.7057" stroke="#2e2e2e"
-                                stroke-width="1" stroke-linecap="round"></line>
-                              <line x1="19.1298" y1="13.1565" x2="17.3664" y2="10.7295" stroke="#2e2e2e"
-                                stroke-width="1" stroke-linecap="round"></line>
-                              <line x1="23.5" y1="15.0814" x2="20" y2="9.0192" stroke="#555555" stroke-width="2"
-                                stroke-linecap="round"></line>
-                              <line x1="24.0181" y1="10.3343" x2="22.7979" y2="7.5936" stroke="#2e2e2e" stroke-width="1"
-                                stroke-linecap="round"></line>
-                              <line x1="26.6565" y1="9.3215" x2="25.7295" y2="6.4683" stroke="#2e2e2e" stroke-width="1"
-                                stroke-linecap="round"></line>
-                              <line x1="29.3864" y1="8.59" x2="28.7626" y2="5.6556" stroke="#2e2e2e" stroke-width="1"
-                                stroke-linecap="round"></line>
-                              <line x1="32.1777" y1="8.1479" x2="31.8641" y2="5.1643" stroke="#2e2e2e" stroke-width="1"
-                                stroke-linecap="round"></line>
-                              <g class="GUNS__0f-eff9d74e-4a852b12-89c268b9"
-                                style="transform:rotate(30deg);transition:transform 0.4s ease">
-                                <line x1="35" y1="35" x2="35" y2="16" stroke="#f0f0f0" stroke-width="3.5"
-                                  stroke-linecap="round"></line>
-                                <line x1="35" y1="35" x2="35" y2="41" stroke="#f0f0f0" stroke-width="3.5"
-                                  stroke-linecap="round"></line>
-                              </g>
-                              <g class="GUNS__0f-eff9d74e-4a852b12-89c268b9"
-                                style="transform:rotate(0deg);transition:transform 0.3s ease">
-                                <line x1="35" y1="35" x2="35" y2="9" stroke="#f0f0f0" stroke-width="2.2"
-                                  stroke-linecap="round"></line>
-                                <line x1="35" y1="35" x2="35" y2="42" stroke="#f0f0f0" stroke-width="2.2"
-                                  stroke-linecap="round"></line>
-                              </g>
-                              <g class="GUNS__0f-eff9d74e-4a852b12-89c268b9"
-                                style="transform:rotate(0deg);transition:none">
-                                <line x1="35" y1="35" x2="35" y2="7" stroke="#f04040" stroke-width="1.3"
-                                  stroke-linecap="round"></line>
-                                <line x1="35" y1="35" x2="35" y2="44" stroke="#f04040" stroke-width="1.3"
-                                  stroke-linecap="round"></line>
-                              </g>
-                              <circle cx="35" cy="35" r="3" fill="#f04040"></circle>
-                              <circle cx="35" cy="35" r="1.5" fill="#f0f0f0"></circle>
-                            </svg>
-                          </div><span class="GUNS__ca-42ad2aff-c7e7db33-534468e1 "
-                            style="--tooltip-max-width:260px;top:0px;left:0px;border-color:#1a1a1a33;background-color:#14141463"
-                            data-visible="false" data-placement="top">Europe/Berlin</span>
-                        </span>
-                        <div class="GUNS__b8-54e72ad2-e1858671-fcdcdca9">
-                          <h1 class="GUNS__ce-0a5ba18b-76cb6152-03bb8e5f" style="font-weight:450;font-size:18px">
-                            --:--:--</h1>
-                          <h3 class="GUNS__11-96f4e304-69317103-886b6d13"><span>---</span><span
-                              class="GUNS__64-e47e733a-15dbb969-59727756">·</span><span>--</span></h3>
-                        </div><span class="GUNS__f0-2b552e4b-07366c7d-67b4c447">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"
-                            fill="currentColor">
-                            <path
-                              d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2m0 18a8 8 0 1 1 8-8a8 8 0 0 1-8 8m.5-13H11v6l5.25 3.15l.75-1.23l-4.5-2.67Z">
-                            </path>
-                          </svg> Timezone
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="GUNS__8c-afdd5c2e-0a88e335-5e9756c2" data-reveal-part="about-tags"
-                style="--portfolioRevealOrder:3"><span class="GUNS__08-f3542ffc-cbe67775-602210e2"
-                  data-reveal-part="about-tag-item" style="--portfolioRevealOrder:4">
-                  <svg class="GUNS__55-8b362b41-7e82c10b-7570fbe6" role="img" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg" style="fill:currentColor">
-                    <path
-                      d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z">
-                    </path>
-                  </svg>Python
-                </span><span class="GUNS__08-f3542ffc-cbe67775-602210e2" data-reveal-part="about-tag-item"
-                  style="--portfolioRevealOrder:5">
-                  <svg class="GUNS__55-8b362b41-7e82c10b-7570fbe6" role="img" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg" style="fill:currentColor">
-                    <path
-                      d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z">
-                    </path>
-                  </svg>JavaScript
-                </span><span class="GUNS__08-f3542ffc-cbe67775-602210e2" data-reveal-part="about-tag-item"
-                  style="--portfolioRevealOrder:6">
-                  <svg class="GUNS__55-8b362b41-7e82c10b-7570fbe6" role="img" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg" style="fill:currentColor">
-                    <path
-                      d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z">
-                    </path>
-                  </svg>TypeScript
-                </span><span class="GUNS__08-f3542ffc-cbe67775-602210e2" data-reveal-part="about-tag-item"
-                  style="--portfolioRevealOrder:7">
-                  <svg class="GUNS__55-8b362b41-7e82c10b-7570fbe6" role="img" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg" style="fill:currentColor">
-                    <path
-                      d="M1.811 10.231c-.047 0-.058-.023-.035-.059l.246-.315c.023-.035.081-.058.128-.058h4.172c.046 0 .058.035.035.07l-.199.303c-.023.036-.082.07-.117.07zM.047 11.306c-.047 0-.059-.023-.035-.058l.245-.316c.023-.035.082-.058.129-.058h5.328c.047 0 .07.035.058.07l-.093.28c-.012.047-.058.07-.105.07zm2.828 1.075c-.047 0-.059-.035-.035-.07l.163-.292c.023-.035.07-.07.117-.07h2.337c.047 0 .07.035.07.082l-.023.28c0 .047-.047.082-.082.082zm12.129-2.36c-.736.187-1.239.327-1.963.514-.176.046-.187.058-.34-.117-.174-.199-.303-.327-.548-.444-.737-.362-1.45-.257-2.115.175-.795.514-1.204 1.274-1.192 2.22.011.935.654 1.706 1.577 1.835.795.105 1.46-.175 1.987-.77.105-.13.198-.27.315-.434H10.47c-.245 0-.304-.152-.222-.35.152-.362.432-.97.596-1.274a.315.315 0 01.292-.187h4.253c-.023.316-.023.631-.07.947a4.983 4.983 0 01-.958 2.29c-.841 1.11-1.94 1.8-3.33 1.986-1.145.152-2.209-.07-3.143-.77-.865-.655-1.356-1.52-1.484-2.595-.152-1.274.222-2.419.993-3.424.83-1.086 1.928-1.776 3.272-2.02 1.098-.2 2.15-.07 3.096.571.62.41 1.063.97 1.356 1.648.07.105.023.164-.117.2m3.868 6.461c-1.064-.024-2.034-.328-2.852-1.029a3.665 3.665 0 01-1.262-2.255c-.21-1.32.152-2.489.947-3.529.853-1.122 1.881-1.706 3.272-1.95 1.192-.21 2.314-.095 3.33.595.923.63 1.496 1.484 1.648 2.605.198 1.578-.257 2.863-1.344 3.962-.771.783-1.718 1.273-2.805 1.495-.315.06-.63.07-.934.106zm2.78-4.72c-.011-.153-.011-.27-.034-.387-.21-1.157-1.274-1.81-2.384-1.554-1.087.245-1.788.935-2.045 2.033-.21.912.234 1.835 1.075 2.21.643.28 1.285.244 1.905-.07.923-.48 1.425-1.228 1.484-2.233z">
-                    </path>
-                  </svg>Go
-                </span></div>
-            </div>
-          </div>
-          <div class="GUNS__a7-42c2b4ef-18d7dfdb-651f60fe" data-animation="pop" data-reveal-active="false"
-            data-reveal-done="false">
-            <div class="GUNS__04-48c26bc6-e5a19dc2-c8288809 ">
-              <div class="GUNS__d3-da886a08-d0f07b56-afbb72f4" data-reveal-part="projects-root"
-                style="--portfolioRevealOrder:1">
-                <h1>My Projects</h1>
-              </div>
-              <div class="GUNS__8f-05ab8dd3-96722b99-ecfc33d7" data-count="1" data-reveal-part="projects-grid"
-                style="--portfolioRevealOrder:2">
-                <div style="display:contents">
-                  <a class="GUNS__91-d071a5c5-39582cb6-db02233d " style="--portfolioRevealOrder:3"
-                    href="https://guns.lol/" target="_blank" rel="nofollow ugc noopener noreferrer"
-                    data-project-index="0" data-tag-position="top_left" data-text-align="bottom_left"
-                    data-hover="visit_overlay" data-reveal-part="project-card-item">
-                    <div class="GUNS__12-ec678af2-524b7369-2844fe5a"
-                      style="background-image:url(&quot;https://r2.guns.lol/e2d82907-ea0f-4164-a641-2585609474f1.webp&quot;)">
-                    </div>
-                    <div class="GUNS__f5-10340946-79523511-349521b9"></div>
-                    <div class="GUNS__5b-448926bc-f360f850-e5ade1a0"><span class="GUNS__37-b100a3e7-104f9f4c-8e713728">
-                        <svg class="GUNS__46-b913928d-c62289b7-8de4dc58" viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg" style="fill:currentColor">
-                          <path
-                            d="M18.665 21.978C16.758 23.255 14.465 24 12 24 5.377 24 0 18.623 0 12S5.377 0 12 0s12 5.377 12 12c0 3.583-1.574 6.801-4.067 9.001L9.219 7.2H7.2v9.596h1.615V9.251l9.85 12.727Zm-3.332-8.533 1.6 2.061V7.2h-1.6v6.245Z">
-                          </path>
-                        </svg>Next.js
-                      </span><span class="GUNS__37-b100a3e7-104f9f4c-8e713728">
-                        <svg class="GUNS__46-b913928d-c62289b7-8de4dc58" viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg" style="fill:currentColor">
-                          <path
-                            d="M22.71 13.145c-1.66 2.092-3.452 4.483-7.038 4.483-3.203 0-4.397-2.825-4.48-5.12.701 1.484 2.073 2.685 4.214 2.63 4.117-.133 6.94-3.852 6.94-7.239 0-4.05-3.022-6.972-8.268-6.972-3.752 0-8.4 1.428-11.455 3.685C2.59 6.937 3.885 9.958 4.35 9.626c2.648-1.904 4.748-3.13 6.784-3.744C8.12 9.244.886 17.05 0 18.425c.1 1.261 1.66 4.648 2.424 4.648.232 0 .431-.133.664-.365a100.49 100.49 0 0 0 5.54-6.765c.222 3.104 1.748 6.898 6.014 6.898 3.819 0 7.604-2.756 9.33-8.965.2-.764-.73-1.361-1.261-.73zm-4.349-5.013c0 1.959-1.926 2.922-3.685 2.922-.941 0-1.664-.247-2.235-.568 1.051-1.592 2.092-3.225 3.21-4.973 1.972.334 2.71 1.43 2.71 2.619z">
-                          </path>
-                        </svg>Redis
-                      </span><span class="GUNS__37-b100a3e7-104f9f4c-8e713728">
-                        <svg class="GUNS__46-b913928d-c62289b7-8de4dc58" viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg" style="fill:currentColor">
-                          <path
-                            d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z">
-                          </path>
-                        </svg>TypeScript
-                      </span></div>
-                    <div class="GUNS__b4-e3665cbf-d58c7f96-ee1096c3">
-                      <h2>guns.lol</h2>
-                      <p>Create feature-rich, customizable and modern link-in-bio pages with guns.lol.</p>
-                    </div>
-                    <div class="GUNS__f6-cca90b98-a68f3cbd-f663cc91">Visit</div>
-                  </a>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
-      <style>
-        body,
-        html {
-          scrollbar-width: none;
-          -ms-overflow-style: none;
-        }
-
-        body::-webkit-scrollbar,
-        html::-webkit-scrollbar {
-          display: none;
-        }
-      </style>
     </div>
   </div><!--$--><!--/$-->
   <script src="/_next/static/chunks/webpack-beae2c0408332109.js" id="_R_" async=""></script>
@@ -821,6 +693,11 @@
   </script>
   <script>
     self.__next_f.push([1,
+      "c:[[\"$\",\"title\",\"0\",{\"children\":\"@hris | guns.lol\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"guns.lol on top\"}],[\"$\",\"meta\",\"2\",{\"name\":\"application-name\",\"content\":\"guns.lol\"}],[\"$\",\"meta\",\"3\",{\"name\":\"author\",\"content\":\"@hris | guns.lol\"}],[\"$\",\"meta\",\"4\",{\"name\":\"generator\",\"content\":\"guns.lol\"}],[\"$\",\"meta\",\"5\",{\"name\":\"robots\",\"content\":\"index, follow\"}],[\"$\",\"link\",\"6\",{\"rel\":\"canonical\",\"href\":\"https://guns.lol/$\"}],[\"$\",\"meta\",\"7\",{\"property\":\"og:title\",\"content\":\"@hris | guns.lol\"}],[\"$\",\"meta\",\"8\",{\"property\":\"og:description\",\"content\":\"guns.lol on top\"}],[\"$\",\"meta\",\"9\",{\"property\":\"og:image\",\"content\":\"https://og.guns.lol/api/og?username=%24\u0026background=https%3A%2F%2Fr2.guns.lol%2F51a83f46-8e21-473c-925d-909ab9b0f1b3.png\"}],[\"$\",\"meta\",\"10\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"11\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"12\",{\"name\":\"twitter:title\",\"content\":\"@hris | guns.lol\"}],[\"$\",\"meta\",\"13\",{\"name\":\"twitter:description\",\"content\":\"guns.lol on top\"}],[\"$\",\"meta\",\"14\",{\"name\":\"twitter:image\",\"content\":\"https://og.guns.lol/api/og?username=%24\u0026background=https%3A%2F%2Fr2.guns.lol%2F51a83f46-8e21-473c-925d-909ab9b0f1b3.png\"}]]\n"
+    ])
+  </script>
+  <script>
+    self.__next_f.push([1,
       "15:I[70660,[\"8463\",\"static/chunks/ede5dfc2-1d68982e0ab606ec.js\",\"1831\",\"static/chunks/bd904a5c-aa6b2055d9135754.js\",\"4664\",\"static/chunks/a3cd4a83-6ef1daaf9d8d561f.js\",\"9367\",\"static/chunks/b536a0f1-5c52234ac76ab02c.js\",\"8413\",\"static/chunks/1329d575-137911efd96d5fd0.js\",\"6413\",\"static/chunks/f6211eb1-fde3d3265b53e700.js\",\"5592\",\"static/chunks/c15bf2b0-7d6c3f276061bcc4.js\",\"4293\",\"static/chunks/4293-04568d232320ec29.js\",\"5686\",\"static/chunks/5686-a956efc5a4b81bb0.js\",\"4564\",\"static/chunks/4564-83c32037d7a21f91.js\",\"2483\",\"static/chunks/2483-39988610834aa4de.js\",\"7740\",\"static/chunks/7740-58f42b2eb81aa177.js\",\"6891\",\"static/chunks/6891-ff9614ab68d2151f.js\",\"5886\",\"static/chunks/5886-f106612e712777f4.js\",\"5395\",\"static/chunks/5395-c0b50abc64c4d8b3.js\",\"2131\",\"static/chunks/2131-c22a4a3f42dc4d6a.js\",\"7605\",\"static/chunks/7605-69c20c4c745af625.js\",\"8542\",\"static/chunks/8542-13685f8015430178.js\",\"660\",\"static/chunks/660-48518bfbdf7f94e1.js\",\"1911\",\"static/chunks/app/%5Busername%5D/page-aeb575e56edd07a3.js\"],\"default\"]\n16:Tbdf,"
     ])
   </script>
@@ -839,12 +716,7 @@
   </script>
   <script>
     self.__next_f.push([1,
-      "5:[\"$\",\"$L15\",null,{\"data\":{\"_id\":\"669ed24472dbe23469257c3c\",\"username\":\"$$\",\"account_created\":1721684548,\"verified\":true,\"config\":{\"description\":\"\",\"color\":\"#1c1c1c\",\"text_color\":\"#FFFFFF\",\"bg_color\":\"#1b1b1b\",\"icon_color\":\"#ffffff\",\"gradient_1\":\"#881c9c\",\"gradient_2\":\"#0d0d0d\",\"profile_gradient\":false,\"presence\":\"enabled\",\"discord_presence_settings\":{\"show_badges\":true,\"show_guild_tag\":true,\"idle_text\":\"\"},\"audio\":[{\"url\":\"https://r2.guns.lol/66678710-76b0-4452-9758-6ac0bf2c2add.mp3\",\"title\":\"GREECE (feat. Drake)\",\"selected\":true,\"id\":\"15ba7979-445f-47b9-943b-8bd361c701fb\",\"cover\":\"https://r2.guns.lol/ad74523b-5587-4856-a68e-78ab8b9731d0.webp\"}],\"avatar\":\"https://r2.guns.lol/4b7e4800-6721-4737-8b5b-5fc39de2e2b4.webp\",\"custom_cursor\":\"\",\"url\":\"\",\"animated_title\":false,\"monochrome\":true,\"volume_control\":false,\"use_discord_avatar\":false,\"swap_colors\":false,\"social_glow\":true,\"badge_glow\":true,\"display_name\":\"hris\",\"background_effects\":\"night\",\"username_effects\":\"none\",\"shuffle_audios\":false,\"audio_player\":true,\"location\":\"guns.lol HQ\",\"username_glow\":true,\"discord_avatar_decoration\":false,\"blur\":25,\"opacity\":0.4,\"page_views\":REDACTED,\"user_badges\":[{\"name\":\"staff\",\"enabled\":true},{\"name\":\"second\",\"enabled\":false},{\"name\":\"third\",\"enabled\":false},{\"name\":\"bughunter\",\"enabled\":true},{\"name\":\"helper\",\"enabled\":false},{\"name\":\"christmas_2024\",\"enabled\":false},{\"name\":\"gifter\",\"enabled\":false},{\"name\":\"verified\",\"enabled\":true},{\"name\":\"the_million\",\"enabled\":false},{\"name\":\"hone\",\"enabled\":false},{\"name\":\"donor\",\"enabled\":false},{\"name\":\"christmas_2025\",\"enabled\":false},{\"name\":\"og\",\"enabled\":true},{\"name\":\"easter_2025\",\"enabled\":false},{\"name\":\"easter_2026\",\"enabled\":false},{\"name\":\"winner\",\"enabled\":false},{\"name\":\"imagehost_access\",\"enabled\":false},{\"name\":\"premium\",\"enabled\":false},{\"name\":\"summer_2026\",\"enabled\":true}],\"custom_badges\":[{\"name\":\"guns.lol\",\"icon\":\"https://r2.guns.lol/12a1319f-0b21-46d4-9647-93a083b75e4c.webp\",\"id\":\"34476241-5154-4e20-8d0c-57bd9bead1be\",\"enabled\":false,\"type\":\"ocb\"}],\"socials\":[{\"social\":\"discord\",\"value\":\"https://discord.com/invite/guns\",\"id\":\"cb2b00df-5e7c-4c0a-b7ea-39b8f69ded7f\",\"icon\":\"\",\"hidden\":false},{\"social\":\"github\",\"value\":\"https://github.com/hriiss\",\"id\":\"e3dbce23-fd6f-4cf2-881c-4b02e5c93069\",\"icon\":\"\",\"mode\":\"link\",\"hidden\":false},{\"social\":\"email\",\"value\":\"aHJpc0BndW5zLmxvbA==\",\"id\":\"aad7d1be-9361-4067-8d03-b363724ea4b4\",\"icon\":\"\",\"mode\":\"link\",\"hidden\":false},{\"social\":\"telegram\",\"value\":\"https://t.me/gunsbio\",\"id\":\"c8925e2c-886b-4565-b9c1-324b0c85a111\",\"icon\":\"\",\"mode\":\"link\",\"hidden\":false},{\"social\":\"custom_url\",\"value\":\"https://hris.sh\",\"id\":\"59734121-a485-45d2-b47d-1917914787c1\",\"icon\":\"\",\"mode\":\"link\",\"hidden\":false}],\"premium\":{\"effects_color\":\"#ffffff\",\"badge_color\":\"#ffffff\",\"cursor_effects\":\"particles\",\"font\":\"chillax\",\"font_size\":2,\"font_letter_spacing\":1,\"border_color\":\"#272727\",\"typewriter_enabled\":true,\"typewriter\":[\"guns.lol on top\",\"discord.gg/guns\"],\"typewriter_speed\":5,\"typewriter_delete_speed\":7,\"hide_views\":false,\"join_date\":\"none\",\"border_enabled\":true,\"second_tab_enabled\":true,\"second_tab\":{\"timezone\":\"Europe/Berlin\"},\"animation\":\"pop\",\"parallax_animation\":true,\"monochrome_badges\":true,\"border_width\":2,\"border_radius\":10,\"avatar_radius\":15,\"page_enter_text\":\"[ click ]\",\"layout\":\"portfolio\",\"banner\":\"\",\"show_url\":true,\"text_align\":\"center\",\"button_shadow\":true,\"button_border_radius\":20,\"buttons\":[{\"button_title\":\"Discord Server\",\"button_url\":\"https://discord.gg/guns\",\"button_icon\":\"https://r2.guns.lol/a4afc88a-8285-47d6-9810-2a57ce42109e.webp\",\"id\":\"18236be8-ae61-4be7-b7c4-e4fa02a6ed1a\"},{\"button_title\":\"Portfolio\",\"button_url\":\"https://example.com\",\"button_icon\":\"\",\"id\":\"786ea6d7-2d84-495a-9f2c-3f4f05c19626\"},{\"button_title\":\"23132\",\"button_url\":\"https://213132\",\"button_icon\":\"\",\"id\":\"afd53b53-47c7-43fd-9456-c8354f5507bb\"},{\"button_title\":\"312132\",\"button_url\":\"https://123321321\",\"button_icon\":\"https://r2.guns.lol/0fd14ebf-41cc-4fe9-902c-9381a391712e.webp\",\"id\":\"7b365e11-1f3e-4073-a05b-a69151c5b409\"},{\"button_title\":\"213312312\",\"button_url\":\"https://321312132\",\"button_icon\":\"https://r2.guns.lol/37b2988d-fe66-4f27-b73b-535ca8a43803.webp\",\"id\":\"b7f21ec1-a3f4-42bc-b365-3a341061245a\"}],\"metadata\":{\"title\":\"\",\"description\":\"\",\"image\":\"https://r2.guns.lol/51a83f46-8e21-473c-925d-909ab9b0f1b3.png\",\"favicon\":\"\",\"information_overlay\":true},\"links_position\":\"left\",\"clock_face_style\":\"dark\",\"clock_hidden\":false,\"clock_time_format\":\"24h\",\"border_opacity\":0.2,\"border_style\":\"static\",\"portfolio_audio_hidden\":false,\"portfolio_module_divider\":\"none\",\"portfolio_module_size\":85,\"portfolio_modules\":[{\"id\":\"portfolio-top-profile\",\"type\":\"hero\",\"visible\":true,\"settings\":{\"show_avatar\":true,\"show_buttons\":true,\"hero_style\":\"centered\"}},{\"id\":\"portfolio-1778247532441-5j8uhw\",\"type\":\"about\",\"visible\":true,\"settings\":{\"title\":\"About me\",\"description\":\"\",\"secondary_description\":\"Hi. I own guns.lol.\",\"tags\":[\"Python\",\"JavaScript\",\"TypeScript\",\"Go\"],\"cards\":[{\"type\":\"discord_presence\"},{\"type\":\"second_tab\",\"second_tab_config\":{\"second_tab_enabled\":true,\"second_tab\":{\"timezone\":\"Europe/Berlin\"},\"clock_face_style\":\"dark\",\"clock_hidden\":false,\"clock_time_format\":\"24h\"}}]}},{\"id\":\"portfolio-1780230933031-fw7vqq\",\"type\":\"audio\",\"visible\":true,\"settings\":{\"show_lyrics\":true,\"lyrics_track_map\":{\"15ba7979-445f-47b9-943b-8bd361c701fb\":{\"track_id\":\"15ba7979-445f-47b9-943b-8bd361c701fb\",\"track_title\":\"GREECE (feat. Drake)\",\"track_name\":\"GREECE (feat. Drake)\",\"artist_name\":\"DJ Khaled feat. Drake\",\"album_name\":\"GREECE (feat. Drake)\",\"synced_lyrics\":\"$16\",\"plain_lyrics\":\"$17\"}}}},{\"id\":\"portfolio-1778247562060-09qm94\",\"type\":\"projects\",\"visible\":true,\"settings\":{\"title\":\"My Projects\",\"projects\":[{\"id\":\"portfolio-1778247563333-lhms5s\",\"name\":\"guns.lol\",\"description\":\"Create feature-rich, customizable and modern link-in-bio pages with guns.lol.\",\"image\":\"https://r2.guns.lol/e2d82907-ea0f-4164-a641-2585609474f1.webp\",\"link\":\"https://guns.lol/\",\"tags\":[\"Next.js\",\"Redis\",\"TypeScript\"]}]}}],\"portfolio_scroll_progress\":\"none\",\"portfolio_section_gap\":34,\"portfolio_section_stagger\":\"together\",\"portfolio_border_radius\":40,\"page_enter_icon\":\"\",\"page_enter_subtitle\":\"\",\"click_sound\":\"mouse_click\",\"click_sound_custom_url\":\"\"},\"background_effects_color\":\"#ffffff\",\"profile_widget\":{\"type\":\"discord_presence\",\"value\":\"\",\"clock_face_style\":\"dark\",\"clock_hidden\":false,\"clock_time_format\":\"24h\"},\"beat_shake\":true,\"beat_shake_intensity\":3,\"beat_shake_sensitivity\":3},\"premium\":true,\"uid\":-1,\"aliases\":[\"hris.sh\",\"hris\"],\"deletion\":{\"scheduledForDeletion\":false},\"ban\":false,\"discord\":{\"username\":\"hris\",\"id\":\"1350644691237994621\",\"user_badges\":[]},\"_gpp_ch\":{REDACTED},\"success\":true,\"session\":null}}]\n"
-    ])
-  </script>
-  <script>
-    self.__next_f.push([1,
-      "c:[[\"$\",\"title\",\"0\",{\"children\":\"@hris | guns.lol\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"guns.lol on top\"}],[\"$\",\"meta\",\"2\",{\"name\":\"application-name\",\"content\":\"guns.lol\"}],[\"$\",\"meta\",\"3\",{\"name\":\"author\",\"content\":\"@hris | guns.lol\"}],[\"$\",\"meta\",\"4\",{\"name\":\"generator\",\"content\":\"guns.lol\"}],[\"$\",\"meta\",\"5\",{\"name\":\"robots\",\"content\":\"index, follow\"}],[\"$\",\"link\",\"6\",{\"rel\":\"canonical\",\"href\":\"https://guns.lol/$\"}],[\"$\",\"meta\",\"7\",{\"property\":\"og:title\",\"content\":\"@hris | guns.lol\"}],[\"$\",\"meta\",\"8\",{\"property\":\"og:description\",\"content\":\"guns.lol on top\"}],[\"$\",\"meta\",\"9\",{\"property\":\"og:image\",\"content\":\"https://og.guns.lol/api/og?username=%24\u0026background=https%3A%2F%2Fr2.guns.lol%2F51a83f46-8e21-473c-925d-909ab9b0f1b3.png\"}],[\"$\",\"meta\",\"10\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"11\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"12\",{\"name\":\"twitter:title\",\"content\":\"@hris | guns.lol\"}],[\"$\",\"meta\",\"13\",{\"name\":\"twitter:description\",\"content\":\"guns.lol on top\"}],[\"$\",\"meta\",\"14\",{\"name\":\"twitter:image\",\"content\":\"https://og.guns.lol/api/og?username=%24\u0026background=https%3A%2F%2Fr2.guns.lol%2F51a83f46-8e21-473c-925d-909ab9b0f1b3.png\"}]]\n"
+      "5:[\"$\",\"$L15\",null,{\"data\":{\"_id\":\"669ed24472dbe23469257c3c\",\"username\":\"$$\",\"account_created\":1721684548,\"verified\":true,\"config\":{\"description\":\"\",\"color\":\"#1c1c1c\",\"text_color\":\"#FFFFFF\",\"bg_color\":\"#1b1b1b\",\"icon_color\":\"#ffffff\",\"gradient_1\":\"#881c9c\",\"gradient_2\":\"#0d0d0d\",\"profile_gradient\":false,\"presence\":\"enabled\",\"discord_presence_settings\":{\"show_badges\":true,\"show_guild_tag\":true,\"idle_text\":\"\"},\"audio\":[{\"url\":\"https://r2.guns.lol/66678710-76b0-4452-9758-6ac0bf2c2add.mp3\",\"title\":\"GREECE (feat. Drake)\",\"selected\":true,\"id\":\"15ba7979-445f-47b9-943b-8bd361c701fb\",\"cover\":\"https://r2.guns.lol/ad74523b-5587-4856-a68e-78ab8b9731d0.webp\"}],\"avatar\":\"https://r2.guns.lol/4b7e4800-6721-4737-8b5b-5fc39de2e2b4.webp\",\"custom_cursor\":\"\",\"url\":\"\",\"animated_title\":false,\"monochrome\":true,\"volume_control\":false,\"use_discord_avatar\":false,\"swap_colors\":false,\"social_glow\":true,\"badge_glow\":true,\"display_name\":\"hris\",\"background_effects\":\"night\",\"username_effects\":\"none\",\"shuffle_audios\":false,\"audio_player\":true,\"location\":\"guns.lol HQ\",\"username_glow\":true,\"discord_avatar_decoration\":false,\"blur\":25,\"opacity\":0.4,\"page_views\":REDACTED,\"user_badges\":[{\"name\":\"staff\",\"enabled\":true},{\"name\":\"second\",\"enabled\":false},{\"name\":\"third\",\"enabled\":false},{\"name\":\"bughunter\",\"enabled\":true},{\"name\":\"helper\",\"enabled\":false},{\"name\":\"christmas_2024\",\"enabled\":false},{\"name\":\"gifter\",\"enabled\":false},{\"name\":\"verified\",\"enabled\":true},{\"name\":\"the_million\",\"enabled\":false},{\"name\":\"hone\",\"enabled\":false},{\"name\":\"donor\",\"enabled\":false},{\"name\":\"christmas_2025\",\"enabled\":false},{\"name\":\"og\",\"enabled\":true},{\"name\":\"easter_2025\",\"enabled\":false},{\"name\":\"easter_2026\",\"enabled\":false},{\"name\":\"winner\",\"enabled\":false},{\"name\":\"imagehost_access\",\"enabled\":false},{\"name\":\"premium\",\"enabled\":false},{\"name\":\"summer_2026\",\"enabled\":true}],\"custom_badges\":[{\"name\":\"guns.lol\",\"icon\":\"https://r2.guns.lol/12a1319f-0b21-46d4-9647-93a083b75e4c.webp\",\"id\":\"34476241-5154-4e20-8d0c-57bd9bead1be\",\"enabled\":false,\"type\":\"ocb\"}],\"socials\":[{\"social\":\"discord\",\"value\":\"https://discord.com/invite/guns\",\"id\":\"cb2b00df-5e7c-4c0a-b7ea-39b8f69ded7f\",\"icon\":\"\",\"hidden\":false},{\"social\":\"github\",\"value\":\"https://github.com/hriiss\",\"id\":\"e3dbce23-fd6f-4cf2-881c-4b02e5c93069\",\"icon\":\"\",\"mode\":\"link\",\"hidden\":false},{\"social\":\"email\",\"value\":\"aHJpc0BndW5zLmxvbA==\",\"id\":\"aad7d1be-9361-4067-8d03-b363724ea4b4\",\"icon\":\"\",\"mode\":\"link\",\"hidden\":false},{\"social\":\"telegram\",\"value\":\"https://t.me/gunsbio\",\"id\":\"c8925e2c-886b-4565-b9c1-324b0c85a111\",\"icon\":\"\",\"mode\":\"link\",\"hidden\":false},{\"social\":\"custom_url\",\"value\":\"https://hris.sh\",\"id\":\"59734121-a485-45d2-b47d-1917914787c1\",\"icon\":\"\",\"mode\":\"link\",\"hidden\":false}],\"premium\":{\"effects_color\":\"#ffffff\",\"badge_color\":\"#ffffff\",\"cursor_effects\":\"particles\",\"font\":\"chillax\",\"font_size\":2,\"font_letter_spacing\":1,\"border_color\":\"#272727\",\"typewriter_enabled\":true,\"typewriter\":[\"guns.lol on top\",\"discord.gg/guns\"],\"typewriter_speed\":5,\"typewriter_delete_speed\":7,\"hide_views\":false,\"join_date\":\"none\",\"border_enabled\":true,\"second_tab_enabled\":true,\"second_tab\":{\"timezone\":\"Europe/Berlin\"},\"animation\":\"pop\",\"parallax_animation\":true,\"monochrome_badges\":true,\"border_width\":2,\"border_radius\":10,\"avatar_radius\":15,\"page_enter_text\":\"[ click ]\",\"layout\":\"modern\",\"banner\":\"\",\"show_url\":true,\"text_align\":\"center\",\"button_shadow\":true,\"button_border_radius\":20,\"buttons\":[{\"button_title\":\"Discord Server\",\"button_url\":\"https://discord.gg/guns\",\"button_icon\":\"https://r2.guns.lol/a4afc88a-8285-47d6-9810-2a57ce42109e.webp\",\"id\":\"18236be8-ae61-4be7-b7c4-e4fa02a6ed1a\"},{\"button_title\":\"Portfolio\",\"button_url\":\"https://example.com\",\"button_icon\":\"\",\"id\":\"786ea6d7-2d84-495a-9f2c-3f4f05c19626\"},{\"button_title\":\"23132\",\"button_url\":\"https://213132\",\"button_icon\":\"\",\"id\":\"afd53b53-47c7-43fd-9456-c8354f5507bb\"},{\"button_title\":\"312132\",\"button_url\":\"https://123321321\",\"button_icon\":\"https://r2.guns.lol/0fd14ebf-41cc-4fe9-902c-9381a391712e.webp\",\"id\":\"7b365e11-1f3e-4073-a05b-a69151c5b409\"},{\"button_title\":\"213312312\",\"button_url\":\"https://321312132\",\"button_icon\":\"https://r2.guns.lol/37b2988d-fe66-4f27-b73b-535ca8a43803.webp\",\"id\":\"b7f21ec1-a3f4-42bc-b365-3a341061245a\"}],\"metadata\":{\"title\":\"\",\"description\":\"\",\"image\":\"https://r2.guns.lol/51a83f46-8e21-473c-925d-909ab9b0f1b3.png\",\"favicon\":\"\",\"information_overlay\":true},\"links_position\":\"left\",\"clock_face_style\":\"dark\",\"clock_hidden\":false,\"clock_time_format\":\"24h\",\"border_opacity\":0.2,\"border_style\":\"static\",\"portfolio_audio_hidden\":false,\"portfolio_module_divider\":\"none\",\"portfolio_module_size\":85,\"portfolio_modules\":[{\"id\":\"portfolio-top-profile\",\"type\":\"hero\",\"visible\":true,\"settings\":{\"show_avatar\":true,\"show_buttons\":true,\"hero_style\":\"centered\"}},{\"id\":\"portfolio-1778247532441-5j8uhw\",\"type\":\"about\",\"visible\":true,\"settings\":{\"title\":\"About me\",\"description\":\"\",\"secondary_description\":\"Hi. I own guns.lol.\",\"tags\":[\"Python\",\"JavaScript\",\"TypeScript\",\"Go\"],\"cards\":[{\"type\":\"discord_presence\"},{\"type\":\"second_tab\",\"second_tab_config\":{\"second_tab_enabled\":true,\"second_tab\":{\"timezone\":\"Europe/Berlin\"},\"clock_face_style\":\"dark\",\"clock_hidden\":false,\"clock_time_format\":\"24h\"}}]}},{\"id\":\"portfolio-1780230933031-fw7vqq\",\"type\":\"audio\",\"visible\":true,\"settings\":{\"show_lyrics\":true,\"lyrics_track_map\":{\"15ba7979-445f-47b9-943b-8bd361c701fb\":{\"track_id\":\"15ba7979-445f-47b9-943b-8bd361c701fb\",\"track_title\":\"GREECE (feat. Drake)\",\"track_name\":\"GREECE (feat. Drake)\",\"artist_name\":\"DJ Khaled feat. Drake\",\"album_name\":\"GREECE (feat. Drake)\",\"synced_lyrics\":\"$16\",\"plain_lyrics\":\"$17\"}}}},{\"id\":\"portfolio-1778247562060-09qm94\",\"type\":\"projects\",\"visible\":true,\"settings\":{\"title\":\"My Projects\",\"projects\":[{\"id\":\"portfolio-1778247563333-lhms5s\",\"name\":\"guns.lol\",\"description\":\"Create feature-rich, customizable and modern link-in-bio pages with guns.lol.\",\"image\":\"https://r2.guns.lol/e2d82907-ea0f-4164-a641-2585609474f1.webp\",\"link\":\"https://guns.lol/\",\"tags\":[\"Next.js\",\"Redis\",\"TypeScript\"]}]}}],\"portfolio_scroll_progress\":\"none\",\"portfolio_section_gap\":34,\"portfolio_section_stagger\":\"together\",\"portfolio_border_radius\":40,\"page_enter_icon\":\"\",\"page_enter_subtitle\":\"\",\"click_sound\":\"mouse_click\",\"click_sound_custom_url\":\"\"},\"background_effects_color\":\"#ffffff\",\"profile_widget\":{\"type\":\"discord_presence\",\"value\":\"\",\"clock_face_style\":\"dark\",\"clock_hidden\":false,\"clock_time_format\":\"24h\"},\"beat_shake\":true,\"beat_shake_intensity\":3,\"beat_shake_sensitivity\":3},\"premium\":true,\"uid\":-1,\"aliases\":[\"hris.sh\",\"hris\"],\"deletion\":{\"scheduledForDeletion\":false},\"ban\":false,\"discord\":{\"username\":\"hris\",\"id\":\"1350644691237994621\",\"user_badges\":[]},\"_gpp_ch\":{REDACTED},\"success\":true,\"session\":null}}]\n"
     ])
   </script>
   <script>
