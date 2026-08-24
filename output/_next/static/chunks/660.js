@@ -5316,7 +5316,8 @@ void main() {
                   discordUserBadges: W,
                   discordLoading: l,
                   widgetOverride: v,
-                  secondTabContext: "secondary"
+                  secondTabContext: "secondary",
+                  ignoreGlobalVisibility: !0
                 })
               })]
             })
