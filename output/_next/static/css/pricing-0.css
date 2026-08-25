@@ -1199,7 +1199,7 @@ html.rtl .GUNS__d8-26a669a3-c76077fb-d9f1319c {
 .GUNS__bd-5e7ba278-5e84ab96-5350d5a4 {
   display: flex;
   flex-direction: column;
-  min-width: 430px;
+  min-width: 400px;
   max-width: 100%;
   box-sizing: border-box
 }
