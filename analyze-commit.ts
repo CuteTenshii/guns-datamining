@@ -1,26 +1,26 @@
 import { execFileSync } from 'node:child_process';
 
-// Marker used to make posting idempotent — if a comment carrying it already
-// exists on the commit, we've analyzed it before and skip.
+// Marker used to make posting idempotent — if a comment carrying it already exists on the commit, we've analyzed it
+// before and skip.
 const MARKER = '<!-- deepseek-commit-analysis -->';
 
-// The full diff of mined site assets can be enormous (minified JS/wasm). Cap
-// what we hand to the model and tell it when we truncated. DeepSeek's context
-// window is tighter than the model this replaced, so the cap leaves headroom
-// for the prompt boilerplate plus the response.
+// The full diff of mined site assets can be enormous (minified JS/wasm). Cap what we hand to the model and tell it when
+// we truncated. DeepSeek's context window is tighter than the model this replaced, so the cap leaves headroom for the
+// prompt boilerplate plus the response.
 const MAX_PATCH_CHARS = 120_000;
 
-// DeepSeek exposes an OpenAI-compatible API. `deepseek-chat` (V3) is the
-// general-purpose model; `deepseek-reasoner` is the slower reasoning model.
+// DeepSeek exposes an OpenAI-compatible API. `deepseek-chat` (V3) is the general-purpose model; `deepseek-reasoner` is
+// the slower reasoning model.
 const DEEPSEEK_MODEL = 'deepseek-chat';
 const DEEPSEEK_BASE_URL = 'https://api.deepseek.com';
 // DeepSeek caps `deepseek-chat` output at 8192 tokens.
 const MAX_TOKENS = 8192;
 
-// A commit is only analyzed if it touches at least one JS chunk (application
-// logic). HTML-only commits (page snapshots) are skipped; when JS did change,
-// the whole diff — HTML included — is analyzed.
+// A commit is only analyzed if it touches application logic (a JS chunk) or the profile schema. HTML-only commits (page
+// snapshots) are skipped; once either gate opens, the whole diff — HTML included — is analyzed.
 const JS_FILE = /\.js$/;
+// Written by index.ts; a new profile feature surfaces here as a new field.
+const PROFILE_SCHEMA_FILE = 'output/profile-schema.json';
 
 const {
   GITHUB_REPOSITORY,
@@ -64,8 +64,8 @@ async function main() {
   }
 
   const head = git('rev-parse', 'HEAD');
-  // BASE_SHA is the tip the fetch workflow started from (the parent of the new
-  // commit). Fall back to the first parent of HEAD for local runs.
+  // BASE_SHA is the tip the fetch workflow started from (the parent of the new commit). Fall back to the first parent
+  // of HEAD for local runs.
   let base = process.env.BASE_SHA?.trim() || '';
   if (!base || base === head) {
     try {
@@ -80,16 +80,23 @@ async function main() {
   }
   console.log(`Analyzing ${base.slice(0, 12)}..${head.slice(0, 12)}`);
 
-  // Gate: only analyze when JS chunks changed. HTML-only churn (page snapshots)
-  // isn't worth a comment. When JS did change, analyze the whole diff below.
+  // Gate: only analyze when JS chunks or the profile schema changed. HTML-only churn (page snapshots) isn't worth a
+  // comment. Otherwise analyze the whole diff.
   const changedFiles = git('diff', '--name-only', base, head).split('\n').filter(Boolean);
   const jsFiles = changedFiles.filter((f) => JS_FILE.test(f));
-  console.log(`Changed files: ${changedFiles.length} total, ${jsFiles.length} JS chunk(s).`);
-  if (jsFiles.length === 0) {
-    console.log('No JS chunk changes (HTML/asset-only) — skipping analysis.');
+  // Pulled out separately: it sorts last in the full diff, so truncation drops it first.
+  const profileSchemaPatch = git('diff', base, head, '--', PROFILE_SCHEMA_FILE);
+  console.log(
+    `Changed files: ${changedFiles.length} total, ${jsFiles.length} JS chunk(s), ` +
+      `profile schema ${profileSchemaPatch ? 'changed' : 'unchanged'}.`,
+  );
+  if (jsFiles.length === 0 && !profileSchemaPatch) {
+    console.log('No JS chunk or profile schema changes (HTML/asset-only) — skipping analysis.');
     return;
   }
-  console.log(`JS files:\n  ${jsFiles.join('\n  ')}`);
+  if (jsFiles.length > 0) {
+    console.log(`JS files:\n  ${jsFiles.join('\n  ')}`);
+  }
 
   // Idempotency: don't double-comment if a run already analyzed this commit.
   if (!dryRun) {
@@ -103,7 +110,7 @@ async function main() {
   }
 
   const meta = git('log', '-1', '--format=%H%n%an <%ae>%n%cI%n%s%n%b', head);
-  // Analyze the full diff (HTML + JS + assets) now that the JS gate has passed.
+  // Analyze the full diff (HTML + JS + assets) now that a gate has passed.
   const stat = git('diff', '--stat', base, head);
   const nameStatus = git('diff', '--name-status', base, head);
   let patch = git('diff', base, head);
@@ -121,7 +128,24 @@ async function main() {
     return;
   }
 
-  const prompt = `You are a senior reverse-engineer reviewing an automated snapshot diff. This repository periodically scrapes the public website **guns.lol** (a bio/link page service) — its HTML pages, Next.js JS chunks, CSS, and static assets — and commits whatever changed. This commit changed at least one JS chunk, so it's worth a look; the diff below includes everything that changed (HTML included), not just the JS. Your job is to read it and explain, deeply, what actually changed on the site — with the client-side JavaScript as the primary focus.
+  const trigger = [
+    jsFiles.length > 0 ? 'at least one JS chunk' : '',
+    profileSchemaPatch ? 'the profile field schema' : '',
+  ].filter(Boolean).join(' and ');
+
+  const profileSchemaSection = profileSchemaPatch
+    ? `\nProfile schema diff (\`${PROFILE_SCHEMA_FILE}\`) — a normalized snapshot of the profile document guns.lol server-renders into every profile page: one entry per field path with its type, plus the site's full badge catalogue. A field or badge appearing here is a profile capability the backend already serves, often before it is announced or exposed in the UI:
+\`\`\`diff
+${profileSchemaPatch}
+\`\`\`
+`
+    : '';
+
+  const profileSchemaTask = profileSchemaPatch
+    ? `\n- **Profile fields** — walk the profile schema diff: every added, removed, or retyped field path, and every badge added or removed, each with what feature you think it backs. Separate genuinely new capabilities from artifacts of the profile owner editing their own page (adding a portfolio module of a type they hadn't used before makes its \`settings.*\` paths appear without anything new having shipped).`
+    : '';
+
+  const prompt = `You are a senior reverse-engineer reviewing an automated snapshot diff. This repository periodically scrapes the public website **guns.lol** (a bio/link page service) — its HTML pages, Next.js JS chunks, CSS, and static assets — and commits whatever changed. This commit changed ${trigger}, so it's worth a look; the diff below includes everything that changed (HTML included). Your job is to read it and explain, deeply, what actually changed on the site — with the client-side JavaScript as the primary focus.
 
 Focus on meaning, not mechanics. The reader wants to know what the site's operators shipped or altered, inferred from the diff.
 
@@ -133,7 +157,7 @@ ${stat}
 
 Files changed (name-status):
 ${nameStatus}
-
+${profileSchemaSection}
 Unified diff${truncated ? ` (TRUNCATED to first ${MAX_PATCH_CHARS} characters)` : ''}:
 \`\`\`diff
 ${patch}
@@ -142,7 +166,7 @@ ${patch}
 Write a GitHub-flavored-markdown analysis with these sections:
 
 - **TL;DR** — one or two sentences: the single most important thing that changed.
-- **What changed** — grouped, concrete bullets. Distinguish real product/behavior changes from noise (hashed asset filename churn, reordered attributes, whitespace, build-id bumps). Call out new/removed pages, routes, feature flags, UI copy, API endpoints or hosts, config values, and third-party integrations.
+- **What changed** — grouped, concrete bullets. Distinguish real product/behavior changes from noise (hashed asset filename churn, reordered attributes, whitespace, build-id bumps). Call out new/removed pages, routes, feature flags, UI copy, API endpoints or hosts, config values, and third-party integrations.${profileSchemaTask}
 - **Notable findings** — anything interesting to someone tracking this site: new features being staged, endpoints or parameters, tracking/analytics changes, security- or privacy-relevant changes, leaked internal names.
 - **Assessment** — is this a meaningful change or just churn? Anything worth watching next?
 
