@@ -1,18 +1,15 @@
 // Lifts the profile document embedded in the `/$` page's RSC flight data down to its field shape, so a newly shipped
 // profile feature shows up as one added line in the snapshot diff instead of buried in a minified page.
-import { mkdir, writeFile } from 'node:fs/promises';
-import { dirname } from 'node:path';
+import { isUuid } from './identifiers';
+import { outputPath, saveJson } from './output';
 
-// Also a literal in index.ts's `hardcodedPaths`: serve.py regex-parses that array for single-quoted strings, so an
-// identifier there would silently drop the route.
+// Also a literal in index.ts's `hardcodedPaths`, which is walked before this runs.
 export const PROFILE_PATH = '/$';
 
-const PROFILE_SCHEMA_FILE = './output/profile-schema.json';
+const PROFILE_SCHEMA_FILE = outputPath('profile-schema.json');
 
 // Injected by the PoW bootstrap, under per-build obfuscated keys.
 const NON_PROFILE_KEYS = new Set(['_gpp_ch']);
-
-const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
 // A flight row can span several `self.__next_f.push` calls, so join the chunks first.
 function extractFlightStream(html: string): string {
@@ -94,7 +91,7 @@ function describeType(value: unknown): string {
 // Generated ids used as keys (`lyrics_track_map`) are data, not schema.
 function isIdKeyedMap(value: Record<string, unknown>): boolean {
   const keys = Object.keys(value);
-  return keys.length > 0 && keys.every(key => UUID_RE.test(key));
+  return keys.length > 0 && keys.every(isUuid);
 }
 
 function collectFieldTypes(value: unknown, path: string, types: Map<string, Set<string>>) {
@@ -150,7 +147,6 @@ export async function saveProfileSchema(html: string, source: string) {
   }
 
   const schema = buildProfileSchema(data, source);
-  await mkdir(dirname(PROFILE_SCHEMA_FILE), { recursive: true });
-  await writeFile(PROFILE_SCHEMA_FILE, `${JSON.stringify(schema, null, 2)}\n`);
+  await saveJson(PROFILE_SCHEMA_FILE, schema);
   console.log(`Saved profile schema: ${PROFILE_SCHEMA_FILE} (${Object.keys(schema.fields).length} fields)`);
 }

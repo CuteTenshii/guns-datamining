@@ -20,7 +20,11 @@ jobs:
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
       - name: Fetch latest files
-        run: bun run index.ts
+        # Unset in forks and on any run without the secret: the scraper then skips the /account dashboard pages and
+        # mines only what is public. A set-but-refused session fails the job instead of committing a partial snapshot.
+        env:
+          GUNS_SESSION: ${{ secrets.GUNS_SESSION }}
+        run: bun run src/index.ts
 
       - name: Commit changes
         run: |

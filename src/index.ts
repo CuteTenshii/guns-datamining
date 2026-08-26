@@ -1,8 +1,15 @@
 import * as cheerio from 'cheerio';
-import { mkdir, rm, writeFile } from 'node:fs/promises';
-import { dirname } from 'node:path';
+import { rm } from 'node:fs/promises';
 import beautify from 'js-beautify';
+import { OUTPUT_DIR, outputPath, saveFile } from './output';
 import { PROFILE_PATH, saveProfileSchema } from './profile-schema';
+import {
+  DASHBOARD_PATHS,
+  isCrawlableDashboardPath,
+  isDashboardPath,
+  redactAccountDom,
+  redactAccountHtml,
+} from './dashboard';
 
 const ASSETS_HOST = 'assets.guns.lol';
 const BASE_URL = 'https://guns.lol';
@@ -23,30 +30,35 @@ const HTML_BEAUTIFY_OPTIONS: Parameters<typeof beautify.html>[1] = {
   ],
 };
 
+// The access token the dashboard needs, as the cookie value alone. Unset, the dashboard is skipped.
+const SESSION_COOKIE_NAME = '__guns_access_v1';
+const SESSION_TOKEN = process.env.GUNS_SESSION?.trim() || null;
+
 let clearance: string | null = null;
 
-function makeHeaders(): Record<string, string> {
+// Only dashboard requests carry the token. On a public page it comes back rendered for the account -- /login and
+// /register embed the whole account document -- and nothing outside the dashboard is redacted.
+function makeHeaders(signedIn = false): Record<string, string> {
+  const cookies: string[] = [];
+  if (clearance) cookies.push(`guns_clearance=${clearance}`);
+  if (signedIn && SESSION_TOKEN) cookies.push(`${SESSION_COOKIE_NAME}=${SESSION_TOKEN}`);
+
   return {
     'User-Agent': USER_AGENT,
-    ...(clearance ? { Cookie: `guns_clearance=${clearance}` } : {}),
+    ...(cookies.length > 0 ? { Cookie: cookies.join('; ') } : {}),
   };
-}
-
-async function saveFile(filePath: string, content: string | Buffer) {
-  await mkdir(dirname(filePath), { recursive: true });
-  await writeFile(filePath, content);
 }
 
 function stripBuildHash(pathname: string): string {
   return pathname.replace(/[.\-][0-9a-f]{16}(\.[a-z]+)$/i, '$1');
 }
 
-async function saveBeautified(url: string, content: string, isCSS: boolean, outputPath?: string) {
+async function saveBeautified(url: string, content: string, isCSS: boolean, savedAs?: string) {
   const formatted = isCSS
     ? beautify.css(content, { indent_size: 2 })
     : beautify.js(content, { indent_size: 2, space_in_empty_paren: true });
-  const pathname = outputPath ?? stripBuildHash(decodeURIComponent(new URL(url).pathname));
-  await saveFile(`./output${pathname}`, formatted);
+  const pathname = savedAs ?? stripBuildHash(decodeURIComponent(new URL(url).pathname));
+  await saveFile(outputPath(pathname), formatted);
 }
 
 async function fetchWithRetry(url: string, options?: RequestInit): Promise<Response> {
@@ -78,7 +90,7 @@ async function fetchAsset(url: string) {
     console.error(`Failed to fetch asset from ${url}: ${res.status} ${res.statusText}`);
     return;
   }
-  const filePath = `./output/assets${decodeURIComponent(new URL(url).pathname)}`;
+  const filePath = outputPath('assets', decodeURIComponent(new URL(url).pathname));
   await saveFile(filePath, Buffer.from(await res.arrayBuffer()));
   console.log(`Saved asset: ${filePath}`);
 }
@@ -195,6 +207,16 @@ function stripLocalePrefix(pathname: string): string {
   return pathname.replace(/^\/[a-z]{2}(?=\/|$)/, '') || '/';
 }
 
+// Checked before the scrape rather than at the first dashboard page, so a stale token costs one request, not a run.
+async function assertSessionValid() {
+  const url = `${BASE_URL}/api/ping`;
+  const res = await fetchWithRetry(url, { method: 'POST', headers: makeHeaders(true) });
+  if (res.ok) return;
+
+  console.error(`GUNS_SESSION rejected: ${url} -> ${res.status} ${res.statusText}. Refresh it.`);
+  return process.exit(1);
+}
+
 async function fetchSitemapPaths(): Promise<string[]> {
   const xml = await fetchText(`${BASE_URL}/sitemap.xml`);
   if (!xml) return [];
@@ -211,13 +233,26 @@ async function fetchSitemapPaths(): Promise<string[]> {
   return [...paths];
 }
 
-async function processPage(path: string, seen: Set<string>) {
-  const res = await fetchWithRetry(`${BASE_URL}${path}`, { headers: makeHeaders() });
+// Returns the dashboard paths the page links to, empty when there are none or the fetch failed.
+async function processPage(path: string, seen: Set<string>): Promise<string[]> {
+  const isDashboard = isDashboardPath(path);
+  const res = await fetchWithRetry(`${BASE_URL}${path}`, {
+    headers: makeHeaders(isDashboard),
+    // A refused session redirects to /login; following it would save that under the dashboard's name.
+    ...(isDashboard ? { redirect: 'manual' as const } : {}),
+  });
+
+  if (isDashboard && res.status >= 300 && res.status < 400) {
+    const location = res.headers.get('location') ?? '(no location)';
+    console.error(`Session refused: ${path} redirected to ${location}. Refresh GUNS_SESSION.`);
+    return process.exit(1);
+  }
+
   if (!res.ok) {
     if (res.status === 401) return process.exit(1);
 
     console.error(`Failed to fetch ${path}: ${res.status} ${res.statusText}`);
-    return;
+    return [];
   }
 
   const html = await res.text();
@@ -230,9 +265,12 @@ async function processPage(path: string, seen: Set<string>) {
   });
 
   redactVolatileTokens($);
+  if (isDashboard) redactAccountDom($);
 
   const pageName = path === '/' ? 'index' : path.slice(1).replace(/\//g, '-');
-  await saveFile(`./output/pages/${pageName}.html`, beautify.html($.html(), HTML_BEAUTIFY_OPTIONS));
+  // Untouched response too: redactVolatileTokens has already blanked values the scrub needs to find.
+  const serialized = isDashboard ? redactAccountHtml($.html(), html) : $.html();
+  await saveFile(outputPath('pages', `${pageName}.html`), beautify.html(serialized, HTML_BEAUTIFY_OPTIONS));
 
   // Uses the untouched response; redactVolatileTokens leaves `$` unparseable as JSON.
   if (path === PROFILE_PATH) await saveProfileSchema(html, `${BASE_URL}${path}`);
@@ -278,11 +316,11 @@ async function processPage(path: string, seen: Set<string>) {
   }
 
   await processAssetUrls(extractAssetUrls($, html), seen);
+
+  return extractDashboardPaths($);
 }
 
 async function main() {
-  await rm('./output', { recursive: true, force: true });
-
   const clearanceRes = await fetch(BASE_URL, {
     headers: { 'User-Agent': USER_AGENT },
     redirect: 'manual',
@@ -290,6 +328,11 @@ async function main() {
   if (clearanceRes.status === 307) {
     clearance = clearanceRes.headers.get('set-cookie')?.match(/guns_clearance=([^;]+)/)?.[1] ?? null;
   }
+
+  // Before the wipe: a stale token would otherwise delete the previous snapshot and leave nothing in its place.
+  if (SESSION_TOKEN) await assertSessionValid();
+
+  await rm(OUTPUT_DIR, { recursive: true, force: true });
 
   const seen = new Set<string>();
   // Auth/utility flows aren't in the public sitemap, so they stay hardcoded. The sitemap is layered on top (rather than
@@ -301,8 +344,26 @@ async function main() {
     '/compare/carrd', '/compare/beacons', '/gift/a'
   ];
   const paths = [...new Set([...hardcodedPaths, ...(await fetchSitemapPaths())])];
-  for (const path of paths) {
-    await processPage(path, seen);
+
+  // Known routes plus whatever the pages link to; the public header carries /account and /account/redeem.
+  const dashboardQueue = [...DASHBOARD_PATHS, ...paths.filter(isDashboardPath)];
+
+  for (const path of paths.filter(path => !isDashboardPath(path))) {
+    dashboardQueue.push(...(await processPage(path, seen)));
+  }
+
+  if (!SESSION_TOKEN) {
+    console.log(`GUNS_SESSION is not set; skipping the ${new Set(dashboardQueue).size} dashboard pages.`);
+    return;
+  }
+
+  const visited = new Set<string>();
+  while (dashboardQueue.length > 0) {
+    const path = dashboardQueue.shift()!;
+    if (visited.has(path)) continue;
+    visited.add(path);
+
+    dashboardQueue.push(...(await processPage(path, seen)));
   }
 }
 
@@ -383,6 +444,25 @@ function extractAssetUrls($: cheerio.CheerioAPI, html: string): string[] {
   }
 
   return [...urls];
+}
+
+// The dashboard's own navigation is the only place a route it gains later will be written down.
+function extractDashboardPaths($: cheerio.CheerioAPI): string[] {
+  const paths = new Set<string>();
+  const host = new URL(BASE_URL).hostname;
+
+  $('a[href]').each((_, el) => {
+    const href = $(el).attr('href');
+    if (!href) return;
+    try {
+      const url = new URL(href, BASE_URL);
+      if (url.hostname !== host) return;
+      const path = stripLocalePrefix(url.pathname.replace(/\/+$/, '') || '/');
+      if (isCrawlableDashboardPath(path)) paths.add(path);
+    } catch {}
+  });
+
+  return [...paths];
 }
 
 // Rejects URLs pulled from source that are actually template literals with unresolved interpolations, e.g.

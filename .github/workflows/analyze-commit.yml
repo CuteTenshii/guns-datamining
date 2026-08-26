@@ -36,4 +36,4 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
           # The tip master was at when the fetch run started = parent of the new commit.
           BASE_SHA: ${{ github.event.workflow_run.head_sha }}
-        run: bun run analyze-commit.ts
+        run: bun run src/analyze-commit.ts
