@@ -303,6 +303,7 @@
             }), (0, c.jsxs)(n._s.Content, {
               ref: B,
               className: `${l().drawer} ${v??""}`,
+              onClick: e => e.stopPropagation(),
               onEscapeKeyDown: e => {
                 e.preventDefault(), H("escape")
               },

@@ -65,7 +65,7 @@
         mobileVariant: g = "drawer",
         children: y
       }) {
-        let [S, E] = (0, r.useState)(e), [j, k] = (0, r.useState)(!1), [C, M] = (0, r.useState)(null), U = (0, r.useRef)(null), $ = (0, r.useRef)(null), G = (0, r.useRef)(null), L = (0, r.useRef)(null), D = (0, r.useRef)(!1), P = (0, r.useSyncExternalStore)(c, u, f) && "drawer" === g, H = e => {
+        let [S, E] = (0, r.useState)(e), [k, j] = (0, r.useState)(!1), [C, M] = (0, r.useState)(null), U = (0, r.useRef)(null), $ = (0, r.useRef)(null), G = (0, r.useRef)(null), L = (0, r.useRef)(null), D = (0, r.useRef)(!1), P = (0, r.useSyncExternalStore)(c, u, f) && "drawer" === g, H = e => {
           if (!e) return !1;
           let t = window.getComputedStyle(e).overflowY;
           return e.scrollHeight > e.clientHeight + 1 && ("auto" === t || "scroll" === t)
@@ -83,11 +83,11 @@
         }, [t, s, d, a]);
         (0, r.useEffect)(() => {
           if (e) {
-            E(!0), k(!1);
+            E(!0), j(!1);
             return
           }
-          return k(!0), U.current = setTimeout(() => {
-            E(!1), k(!1)
+          return j(!0), U.current = setTimeout(() => {
+            E(!1), j(!1)
           }, P ? 320 : 250), () => {
             U.current && (clearTimeout(U.current), U.current = null)
           }
@@ -161,7 +161,7 @@
             n.disconnect(), a()
           }
         }, [P, e]);
-        let A = j ? "closing" : "open",
+        let A = k ? "closing" : "open",
           B = N ? {
             textAlign: "center",
             width: "100%"
@@ -210,6 +210,7 @@
             }), (0, n.jsxs)(i._s.Content, {
               ref: $,
               className: `${o().drawer} ${x??""}`,
+              onClick: e => e.stopPropagation(),
               onEscapeKeyDown: e => {
                 e.preventDefault(), T("escape")
               },
@@ -318,10 +319,10 @@
       }) {
         let S = c(m, 0),
           E = c(h, 100),
-          j = c(p, 1) || 1,
-          k = a ?? i ?? S,
+          k = c(p, 1) || 1,
+          j = a ?? i ?? S,
           C = void 0 !== a,
-          [M, U] = (0, l.useState)(k),
+          [M, U] = (0, l.useState)(j),
           [$, G] = (0, l.useState)(!1),
           [L, D] = (0, l.useState)(!1);
         (0, l.useEffect)(() => {
@@ -390,7 +391,7 @@
                   type: "range",
                   min: S,
                   max: E,
-                  step: j,
+                  step: k,
                   value: H,
                   disabled: b,
                   className: d().range,
@@ -491,25 +492,25 @@
         let [p, b] = (0, l.useState)(!1), [v, w] = (0, l.useState)(!1), [N, x] = (0, l.useState)({
           top: 0,
           left: 0
-        }), [_, g] = (0, l.useState)(!1), y = (0, l.useRef)(null), S = (0, l.useRef)(null), E = (0, l.useRef)(null), j = h ? 25 + 30 * !!o : i;
+        }), [_, g] = (0, l.useState)(!1), y = (0, l.useRef)(null), S = (0, l.useRef)(null), E = (0, l.useRef)(null), k = h ? 25 + 30 * !!o : i;
         (0, l.useEffect)(() => {
           g(!0)
         }, []);
-        let k = (0, l.useCallback)(() => {
+        let j = (0, l.useCallback)(() => {
             y.current && (clearTimeout(y.current), y.current = null)
           }, []),
           C = (0, l.useCallback)(() => "undefined" != typeof document && "active" === document.documentElement.getAttribute("data-user-page-enter-transition"), []),
           M = (0, l.useCallback)(e => {
             if (m || C()) return;
             let t = e?.immediate ?? !1;
-            (k(), t || j <= 0) ? b(!0): y.current = setTimeout(() => b(!0), j)
-          }, [k, j, m, C]),
+            (j(), t || k <= 0) ? b(!0): y.current = setTimeout(() => b(!0), k)
+          }, [j, k, m, C]),
           U = (0, l.useCallback)(e => {
-            k(), e?.immediate, b(!1)
-          }, [k]);
+            j(), e?.immediate, b(!1)
+          }, [j]);
         (0, l.useEffect)(() => () => {
-          k()
-        }, [k]), (0, l.useEffect)(() => {
+          j()
+        }, [j]), (0, l.useEffect)(() => {
           m && U({
             immediate: !0
           })
