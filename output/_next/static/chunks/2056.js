@@ -516,7 +516,7 @@
             if (a.size > 5242880) return void c.oR.error(r("dashboard.premium.fonts.errors.max_size"));
             let o = await T(a);
             if (!o) return void c.oR.error(r("dashboard.premium.fonts.errors.invalid_font"));
-            let s = o.names.fullName?.en !== "false" ? o.names.fullName.en : r("dashboard.premium.fonts.custom_font_name"),
+            let s = o.names.fullName?.en || r("dashboard.premium.fonts.custom_font_name"),
               n = new FormData;
             n.append("font", a), n.append("fontName", s), n.append("fontWeight", o.tables.os2.usWeightClass), n.append("fontStyle", o.names.fontSubfamily?.en || "Regular");
             let i = await fetch("https://guns.lol/api/dashboard/premium/upload/font", {

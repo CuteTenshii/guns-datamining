@@ -51,20 +51,20 @@
         let d = (0, c.kj)(),
           f = (0, c.KX)(),
           [m, p] = (0, i.useState)(!1),
-          h = (0, o.usePathname)(),
-          g = (0, o.useSearchParams)(),
+          g = (0, o.usePathname)(),
+          h = (0, o.useSearchParams)(),
           w = (0, i.useMemo)(() => {
             var e;
-            return (e = h ?? n ?? "/") && "" !== e ? e.startsWith("/") ? e : `/${e}` : "/"
-          }, [h, n]),
+            return (e = g ?? n ?? "/") && "" !== e ? e.startsWith("/") ? e : `/${e}` : "/"
+          }, [g, n]),
           b = (0, i.useMemo)(() => {
             let e = (0, l.KM)(w, f);
             return "" === e ? "/" : e
           }, [w, f]),
           y = (0, i.useMemo)(() => {
-            let e = g?.toString?.() ?? "";
+            let e = h?.toString?.() ?? "";
             return e && e.length > 0 ? `?${e}` : a ?? ""
-          }, [g, a]),
+          }, [h, a]),
           _ = (0, i.useMemo)(() => t && f.includes(t) ? t : "en", [t, f]),
           v = (0, i.useMemo)(() => u(t), [t]),
           k = (0, i.useMemo)(() => u(e), [e]),
@@ -171,8 +171,8 @@
         f = [/execute_auto_fill/i, /needinjectcss/i, /_getownpropertydescriptor/i, /<anonymous>:\d+:\d+/i],
         m = [/^uri error\.?$/i, /json parse error:\s*unexpected eof/i, /input buffer contains unsupported image format/i, /input image exceeds pixel limit/i, /expected positive integer for (?:width|height) but received 0 of type number/i, /vipsjpeg:\s*(?:premature end|invalid sos parameters)/i, /pngload_buffer:\s*libspng read error/i, /heif: error while loading plugin: support for this compression format has not been built in/i, /^source:\s*bad seek to /im],
         p = [/^ffmpeg version /i, ...m],
-        h = e => (e ?? "").trim().replace(/^uncaught\s+/i, "").replace(/^(?:error|typeerror|referenceerror|syntaxerror|networkerror|aborterror):\s*/i, "").replace(/\.+$/, "").toLowerCase(),
-        g = (...e) => e.filter(e => !!e).join("\n"),
+        g = e => (e ?? "").trim().replace(/^uncaught\s+/i, "").replace(/^(?:error|typeerror|referenceerror|syntaxerror|networkerror|aborterror):\s*/i, "").replace(/\.+$/, "").toLowerCase(),
+        h = (...e) => e.filter(e => !!e).join("\n"),
         w = (e, t) => e.some(e => e.test(t)),
         b = !1,
         y = new Set(["SCRIPT", "LINK", "IMG", "IFRAME", "VIDEO", "AUDIO", "SOURCE"]),
@@ -250,9 +250,9 @@
           let t, n, b = k(e);
           if (n = "string" == typeof b.metadata?.filename ? b.metadata.filename : null, (e => {
               var t;
-              let n, b, y, _, v, k, x, j, S, I, E = h(e.message);
+              let n, b, y, _, v, k, x, j, S, I, E = g(e.message);
               if (i.has(E) || e.name?.toLowerCase() === "aborterror") return !0;
-              return "frontend" === e.source ? (b = (t = e).message ?? "", y = t.name ?? "", _ = t.tags ?? [], v = g(b, y, t.stack, t.componentStack, t.filename), k = w(s, g(t.stack, t.filename)), x = _.some(e => r.has(e)), !!(w(l, v) || (n = g(t.stack, t.filename).toLowerCase(), a.some(e => n.includes(e)) || w(c, v) || w(d, v)) || x && (o.has(h(b)) || w(u, b) || !k && w(f, v)) || _.includes("window_error") && ("script error" === h(b) && !t.filename || !k)) || !!_.includes("unhandled_rejection") && (!t.stack || !k)) : (j = e.tags ?? [], I = g(S = e.message ?? "", e.name, e.stack), j.includes("asset_compression") ? w(p, I) : j.includes("unhandled_route_error") && w(m, S))
+              return "frontend" === e.source ? (b = (t = e).message ?? "", y = t.name ?? "", _ = t.tags ?? [], v = h(b, y, t.stack, t.componentStack, t.filename), k = w(s, h(t.stack, t.filename)), x = _.some(e => r.has(e)), !!(t.name?.toLowerCase() === "datacloneerror" && /\/cdn-cgi\/challenge-platform\//i.test(v) || w(l, v) || (n = h(t.stack, t.filename).toLowerCase(), a.some(e => n.includes(e)) || w(c, v) || w(d, v)) || x && (o.has(g(b)) || w(u, b) || !k && w(f, v)) || _.includes("window_error") && ("script error" === g(b) && !t.filename || !k)) || !!_.includes("unhandled_rejection") && (!t.stack || !k)) : (j = e.tags ?? [], I = h(S = e.message ?? "", e.name, e.stack), j.includes("asset_compression") ? w(p, I) : j.includes("unhandled_route_error") && w(m, S))
             })({
               source: "frontend",
               message: b.message,
@@ -417,7 +417,7 @@
           return y
         },
         handleClientScriptLoad: function() {
-          return g
+          return h
         },
         initScriptLoader: function() {
           return w
@@ -437,7 +437,7 @@
         f = n(28356),
         m = new Map,
         p = new Set,
-        h = e => {
+        g = e => {
           let {
             src: t,
             id: n,
@@ -454,20 +454,20 @@
             p.add(f), m.get(t).then(r, c);
             return
           }
-          let h = () => {
+          let g = () => {
               i && i(), p.add(f)
             },
-            g = document.createElement("script"),
+            h = document.createElement("script"),
             w = new Promise((e, t) => {
-              g.addEventListener("load", function(t) {
-                e(), r && r.call(this, t), h()
-              }), g.addEventListener("error", function(e) {
+              h.addEventListener("load", function(t) {
+                e(), r && r.call(this, t), g()
+              }), h.addEventListener("error", function(e) {
                 t(e)
               })
             }).catch(function(e) {
               c && c(e)
             });
-          o ? (g.innerHTML = o.__html || "", h()) : a ? (g.textContent = "string" == typeof a ? a : Array.isArray(a) ? a.join("") : "", h()) : t && (g.src = t, m.set(t, w)), (0, u.setAttributesFromProps)(g, e), "worker" === s && g.setAttribute("type", "text/partytown"), g.setAttribute("data-nscript", s), d && (e => {
+          o ? (h.innerHTML = o.__html || "", g()) : a ? (h.textContent = "string" == typeof a ? a : Array.isArray(a) ? a.join("") : "", g()) : t && (h.src = t, m.set(t, w)), (0, u.setAttributesFromProps)(h, e), "worker" === s && h.setAttribute("type", "text/partytown"), h.setAttribute("data-nscript", s), d && (e => {
             if (l.default.preinit) return e.forEach(e => {
               l.default.preinit(e, {
                 as: "style"
@@ -480,20 +480,20 @@
                 n.type = "text/css", n.rel = "stylesheet", n.href = e, t.appendChild(n)
               })
             }
-          })(d), document.body.appendChild(g)
+          })(d), document.body.appendChild(h)
         };
 
-      function g(e) {
+      function h(e) {
         let {
           strategy: t = "afterInteractive"
         } = e;
         "lazyOnload" === t ? window.addEventListener("load", () => {
-          (0, f.requestIdleCallback)(() => h(e))
-        }) : h(e)
+          (0, f.requestIdleCallback)(() => g(e))
+        }) : g(e)
       }
 
       function w(e) {
-        e.forEach(g), [...document.querySelectorAll('[data-nscript="beforeInteractive"]'), ...document.querySelectorAll('[data-nscript="beforePageRender"]')].forEach(e => {
+        e.forEach(h), [...document.querySelectorAll('[data-nscript="beforeInteractive"]'), ...document.querySelectorAll('[data-nscript="beforePageRender"]')].forEach(e => {
           let t = e.id || e.getAttribute("src");
           p.add(t)
         })
@@ -510,7 +510,7 @@
           stylesheets: u,
           ...m
         } = e, {
-          updateScripts: g,
+          updateScripts: h,
           scripts: w,
           getIsSsr: b,
           appDir: y,
@@ -525,13 +525,13 @@
         let k = (0, c.useRef)(!1);
         if ((0, c.useEffect)(() => {
             if (!k.current) {
-              if ("afterInteractive" === o) h(e);
-              else "lazyOnload" === o && ("complete" === document.readyState ? (0, f.requestIdleCallback)(() => h(e)) : window.addEventListener("load", () => {
-                (0, f.requestIdleCallback)(() => h(e))
+              if ("afterInteractive" === o) g(e);
+              else "lazyOnload" === o && ("complete" === document.readyState ? (0, f.requestIdleCallback)(() => g(e)) : window.addEventListener("load", () => {
+                (0, f.requestIdleCallback)(() => g(e))
               }));
               k.current = !0
             }
-          }, [e, o]), ("beforeInteractive" === o || "worker" === o) && (g ? (w[o] = (w[o] || []).concat([{
+          }, [e, o]), ("beforeInteractive" === o || "worker" === o) && (h ? (w[o] = (w[o] || []).concat([{
             id: t,
             src: n,
             onLoad: r,
@@ -539,7 +539,7 @@
             onError: a,
             ...m,
             nonce: _
-          }]), g(w)) : b && b() ? p.add(t || n) : b && !b() && h({
+          }]), h(w)) : b && b() ? p.add(t || n) : b && !b() && g({
             ...e,
             nonce: _
           })), y) {

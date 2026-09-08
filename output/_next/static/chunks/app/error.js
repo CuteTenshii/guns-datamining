@@ -99,7 +99,7 @@
               var r;
               let t, b, _, y, v, k, x, j, I, N, S = g(e.message);
               if (o.has(S) || e.name?.toLowerCase() === "aborterror") return !0;
-              return "frontend" === e.source ? (b = (r = e).message ?? "", _ = r.name ?? "", y = r.tags ?? [], v = h(b, _, r.stack, r.componentStack, r.filename), k = w(s, h(r.stack, r.filename)), x = y.some(e => n.has(e)), !!(w(l, v) || (t = h(r.stack, r.filename).toLowerCase(), i.some(e => t.includes(e)) || w(d, v) || w(c, v)) || x && (a.has(g(b)) || w(u, b) || !k && w(m, v)) || y.includes("window_error") && ("script error" === g(b) && !r.filename || !k)) || !!y.includes("unhandled_rejection") && (!r.stack || !k)) : (j = e.tags ?? [], N = h(I = e.message ?? "", e.name, e.stack), j.includes("asset_compression") ? w(p, N) : j.includes("unhandled_route_error") && w(f, I))
+              return "frontend" === e.source ? (b = (r = e).message ?? "", _ = r.name ?? "", y = r.tags ?? [], v = h(b, _, r.stack, r.componentStack, r.filename), k = w(s, h(r.stack, r.filename)), x = y.some(e => n.has(e)), !!(r.name?.toLowerCase() === "datacloneerror" && /\/cdn-cgi\/challenge-platform\//i.test(v) || w(l, v) || (t = h(r.stack, r.filename).toLowerCase(), i.some(e => t.includes(e)) || w(d, v) || w(c, v)) || x && (a.has(g(b)) || w(u, b) || !k && w(m, v)) || y.includes("window_error") && ("script error" === g(b) && !r.filename || !k)) || !!y.includes("unhandled_rejection") && (!r.stack || !k)) : (j = e.tags ?? [], N = h(I = e.message ?? "", e.name, e.stack), j.includes("asset_compression") ? w(p, N) : j.includes("unhandled_route_error") && w(f, I))
             })({
               source: "frontend",
               message: b.message,
