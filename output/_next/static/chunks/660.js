@@ -4805,6 +4805,7 @@ void main() {
         };
         return "sleek" === l ? (0, a.jsx)("div", {
           className: `${eM().sleekWidget} ${c}`,
+          ref: d,
           children: (0, a.jsx)(eE, {
             config: v,
             premiumConfig: {
