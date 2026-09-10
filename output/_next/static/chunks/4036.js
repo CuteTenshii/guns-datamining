@@ -3,7 +3,7 @@
     4036: (e, a, t) => {
       "use strict";
       t.r(a), t.d(a, {
-        default: () => w
+        default: () => k
       });
       var s = t(95155),
         d = t(12115),
@@ -14,8 +14,8 @@
         l = t(86297),
         c = t(98241),
         b = t.n(c),
-        h = t(54834),
-        f = t(66609),
+        f = t(54834),
+        h = t(66609),
         _ = t(97478),
         m = t(81469),
         u = t(81576),
@@ -41,7 +41,7 @@
             description: e.description,
             color: e.color
           }),
-          [b, h] = (0, d.useState)(e.color),
+          [b, f] = (0, d.useState)(e.color),
           [_, u] = (0, d.useState)(e.timestamp),
           p = (0, d.useMemo)(() => n("dashboard.imagehost.settings.embed.editor.examples.file_name"), [n]),
           x = (0, d.useMemo)(() => n("dashboard.imagehost.settings.embed.editor.examples.file_size"), [n]),
@@ -86,7 +86,7 @@
                 body: a
               }),
               s = await t.json();
-            t.ok ? f.oR.success(n("dashboard.imagehost.settings.embed.editor.messages.save_success")) : f.oR.error(n("dashboard.imagehost.settings.embed.editor.messages.save_failed", {
+            t.ok ? h.oR.success(n("dashboard.imagehost.settings.embed.editor.messages.save_success")) : h.oR.error(n("dashboard.imagehost.settings.embed.editor.messages.save_failed", {
               error: s.error || ""
             }))
           };
@@ -148,7 +148,7 @@
               children: (0, s.jsx)(N.A, {
                 featureName: n("dashboard.imagehost.settings.embed.editor.fields.color"),
                 value: b,
-                onChangeFunction: h
+                onChangeFunction: f
               })
             }), (0, s.jsx)("div", {
               className: g().saveEmbedButtonContainer,
@@ -226,16 +226,16 @@
       var v = t(13782),
         j = t(7109);
       let C = "https://guns.lol",
-        y = e => C ? `${C}${e}` : e,
-        w = ({
+        y = "DELETE ALL",
+        w = e => C ? `${C}${e}` : e,
+        k = ({
           data: e
         }) => {
           let a = (0, G.kj)(),
-            t = a("dashboard.imagehost.settings.delete_all.confirmation_phrase"),
-            [o, c] = (0, d.useState)(!1),
-            [p, g] = (0, d.useState)(""),
-            [N, U] = (0, d.useState)(!1),
-            [C, w] = (0, d.useState)(!1),
+            [t, o] = (0, d.useState)(!1),
+            [c, p] = (0, d.useState)(""),
+            [g, N] = (0, d.useState)(!1),
+            [U, C] = (0, d.useState)(!1),
             [k, A] = (0, d.useState)(!1),
             [L, B] = (0, d.useState)(""),
             [E, T] = (0, d.useState)(!1),
@@ -263,12 +263,12 @@
             [er, el] = (0, d.useState)(null),
             ec = !!e.mfa,
             eb = !!e.has_password,
-            eh = (0, d.useMemo)(() => L ? E ? L : `${L.slice(0,5)}************` : a("dashboard.imagehost.settings.upload_key.loading"), [L, E, a]),
-            ef = (0, d.useCallback)(async e => {
+            ef = (0, d.useMemo)(() => L ? E ? L : `${L.slice(0,5)}************` : a("dashboard.imagehost.settings.upload_key.loading"), [L, E, a]),
+            eh = (0, d.useCallback)(async e => {
               if (e) try {
-                await navigator.clipboard.writeText(e), f.oR.success(a("dashboard.imagehost.settings.copy_success"))
+                await navigator.clipboard.writeText(e), h.oR.success(a("dashboard.imagehost.settings.copy_success"))
               } catch (e) {
-                f.oR.error(a("dashboard.imagehost.settings.copy_failed"))
+                h.oR.error(a("dashboard.imagehost.settings.copy_failed"))
               }
             }, [a]),
             e_ = (0, d.useCallback)(async (e = !0) => {
@@ -289,7 +289,7 @@
                     hideExtension: !!a.hide_extension,
                     showEmbed: !!a.show_embed
                   };
-                ei(t.totalUploads || 0), eo(t.totalFiles || 0), el(t.deletionJob || null), g(i.filenameLength), U(i.anonymousUploads), w(i.hideExtension), A(i.showEmbed), B(a.secret_key || ""), R(d), F({
+                ei(t.totalUploads || 0), eo(t.totalFiles || 0), el(t.deletionJob || null), p(i.filenameLength), N(i.anonymousUploads), C(i.hideExtension), A(i.showEmbed), B(a.secret_key || ""), R(d), F({
                   title: s.title || "",
                   author: s.author || "",
                   author_url: s.author_url || "",
@@ -297,7 +297,7 @@
                   color: s.color || "#2b2d31",
                   timestamp: "boolean" != typeof s.timestamp || s.timestamp
                 }), Y(i), ee(!1), e && es(ea)
-              } else f.oR.error(t.error)
+              } else h.oR.error(t.error)
             }, [ea]);
           (0, d.useEffect)(() => {
             es(ea)
@@ -308,7 +308,7 @@
             let e = !1,
               t = async () => {
                 try {
-                  let t = await fetch(y("/api/dashboard/imagehost/deleteAll/status"), {
+                  let t = await fetch(w("/api/dashboard/imagehost/deleteAll/status"), {
                       method: "POST",
                       headers: {
                         "Content-Type": "application/json"
@@ -317,7 +317,7 @@
                     s = await t.json();
                   if (!t.ok || e) return;
                   if (!s.deletionJob) {
-                    el(null), eo(0), f.oR.success(a("dashboard.imagehost.settings.delete_all.completed"));
+                    el(null), eo(0), h.oR.success(a("dashboard.imagehost.settings.delete_all.completed"));
                     return
                   }
                   el(s.deletionJob)
@@ -329,22 +329,22 @@
           }, [er, a]), (0, d.useEffect)(() => {
             if (!X) return void ee(!1);
             let e = !1;
-            "number" != typeof p || Number.isNaN(p) ? e = !0 : p !== X.filenameLength && (e = !0), (N !== X.anonymousUploads || C !== X.hideExtension || k !== X.showEmbed) && (e = !0), ee(e)
-          }, [p, N, C, k, X]);
+            "number" != typeof c || Number.isNaN(c) ? e = !0 : c !== X.filenameLength && (e = !0), (g !== X.anonymousUploads || U !== X.hideExtension || k !== X.showEmbed) && (e = !0), ee(e)
+          }, [c, g, U, k, X]);
           let em = (0, d.useCallback)(() => {
-              X && (g(X.filenameLength), U(X.anonymousUploads), w(X.hideExtension), A(X.showEmbed), ee(!1), es(ea))
+              X && (p(X.filenameLength), N(X.anonymousUploads), C(X.hideExtension), A(X.showEmbed), ee(!1), es(ea))
             }, [X, ea]),
-            eu = (0, d.useMemo)(() => "number" != typeof p || Number.isNaN(p) ? null : {
-              filenameLength: p,
-              anonymousUploads: N,
-              hideExtension: C,
+            eu = (0, d.useMemo)(() => "number" != typeof c || Number.isNaN(c) ? null : {
+              filenameLength: c,
+              anonymousUploads: g,
+              hideExtension: U,
               showEmbed: k
-            }, [p, N, C, k]),
+            }, [c, g, U, k]),
             ep = (0, d.useCallback)(async () => {
-              if (!eu) return void f.oR.error(a("dashboard.imagehost.settings.errors.invalid_length"));
-              if (eu.filenameLength < 5 || eu.filenameLength > 50) return void f.oR.error(a("dashboard.imagehost.settings.errors.length_range"));
+              if (!eu) return void h.oR.error(a("dashboard.imagehost.settings.errors.invalid_length"));
+              if (eu.filenameLength < 5 || eu.filenameLength > 50) return void h.oR.error(a("dashboard.imagehost.settings.errors.length_range"));
               es(a("dashboard.imagehost.settings.save_button_saving"));
-              let e = await fetch(y("/api/dashboard/imagehost"), {
+              let e = await fetch(w("/api/dashboard/imagehost"), {
                   method: "POST",
                   headers: {
                     "Content-Type": "application/json"
@@ -357,27 +357,27 @@
                   })
                 }),
                 t = await e.json();
-              e.ok ? (f.oR.success(a("dashboard.imagehost.settings.save_success")), Y(eu), ee(!1), es(a("dashboard.imagehost.settings.save_button_saved")), setTimeout(() => es(ea), 2e3)) : f.oR.error(t.error), es(ea)
+              e.ok ? (h.oR.success(a("dashboard.imagehost.settings.save_success")), Y(eu), ee(!1), es(a("dashboard.imagehost.settings.save_button_saved")), setTimeout(() => es(ea), 2e3)) : h.oR.error(t.error), es(ea)
             }, [eu, ea, a]),
             eg = (0, d.useCallback)(async () => {
-              c(!0);
-              let e = await fetch(y("/api/dashboard/imagehost/regenerate"), {
+              o(!0);
+              let e = await fetch(w("/api/dashboard/imagehost/regenerate"), {
                   method: "POST",
                   headers: {
                     "Content-Type": "application/json"
                   }
                 }),
                 t = await e.json();
-              e.ok ? (B(t.secretKey || ""), T(!1), f.oR.success(a("dashboard.imagehost.settings.regenerate_success"))) : f.oR.error(t.error), c(!1)
+              e.ok ? (B(t.secretKey || ""), T(!1), h.oR.success(a("dashboard.imagehost.settings.regenerate_success"))) : h.oR.error(t.error), o(!1)
             }, [a]),
             eN = (0, d.useCallback)(() => {
               q || ($(!1), O(""), z(""), V(""))
             }, [q]),
             eS = (0, d.useCallback)(async () => {
-              if (!K || J !== t || ec && !H.trim()) return void f.oR.error(a("dashboard.imagehost.settings.delete_all.errors.complete_verification"));
+              if (!K || J !== y || ec && !H.trim()) return void h.oR.error(a("dashboard.imagehost.settings.delete_all.errors.complete_verification"));
               Q(!0);
               try {
-                let e = await fetch(y("/api/dashboard/imagehost/deleteAll"), {
+                let e = await fetch(w("/api/dashboard/imagehost/deleteAll"), {
                     method: "POST",
                     headers: {
                       "Content-Type": "application/json"
@@ -389,22 +389,22 @@
                     })
                   }),
                   t = await e.json();
-                if (!e.ok) return void f.oR.error(t.error || a("dashboard.imagehost.settings.delete_all.errors.failed"));
-                t.deletionJob ? (el(t.deletionJob), f.oR.success(a("dashboard.imagehost.settings.delete_all.started"))) : (el(null), eo(0), f.oR.success(a("dashboard.imagehost.settings.delete_all.completed"))), $(!1), O(""), z(""), V("")
+                if (!e.ok) return void h.oR.error(t.error || a("dashboard.imagehost.settings.delete_all.errors.failed"));
+                t.deletionJob ? (el(t.deletionJob), h.oR.success(a("dashboard.imagehost.settings.delete_all.started"))) : (el(null), eo(0), h.oR.success(a("dashboard.imagehost.settings.delete_all.completed"))), $(!1), O(""), z(""), V("")
               } catch {
-                f.oR.error(a("dashboard.imagehost.settings.delete_all.errors.failed"))
+                h.oR.error(a("dashboard.imagehost.settings.delete_all.errors.failed"))
               } finally {
                 Q(!1)
               }
-            }, [t, J, H, K, ec, a]);
+            }, [J, H, K, ec, a]);
           return (0, s.jsxs)(s.Fragment, {
-            children: [(0, s.jsx)(f.l$, {
+            children: [(0, s.jsx)(h.l$, {
               richColors: !0,
               position: "top-center",
               theme: "dark",
               className: b().toasterStyles,
               icons: {
-                success: h.A.successToast
+                success: f.A.successToast
               },
               visibleToasts: 2
             }), (0, s.jsx)(i.N, {
@@ -547,7 +547,7 @@
                     disabled: q
                   }), (0, s.jsx)(S.A, {
                     featureName: a("dashboard.imagehost.settings.delete_all.confirmation_label"),
-                    placeholder: t,
+                    placeholder: y,
                     onChangeFunction: e => V(e.target.value),
                     value: J,
                     icon: j.A.warning,
@@ -557,7 +557,7 @@
                     type: "button",
                     className: r().deleteAllConfirmButton,
                     onClick: eS,
-                    disabled: q || !K || J !== t || ec && !H.trim(),
+                    disabled: q || !K || J !== y || ec && !H.trim(),
                     children: [q ? l.A.loading : l.A.wipeFiles, q ? a("dashboard.imagehost.settings.delete_all.deleting") : a("dashboard.imagehost.settings.delete_all.confirm_button")]
                   })]
                 }) : (0, s.jsxs)("div", {
@@ -591,10 +591,10 @@
                   }), (0, s.jsx)(_.A, {
                     id: "filename-length",
                     featureName: a("dashboard.imagehost.settings.general.filename_length"),
-                    value: p,
+                    value: c,
                     placeholder: 7,
                     onChangeFunction: e => {
-                      "number" == typeof e ? g(e) : "" === e && g("")
+                      "number" == typeof e ? p(e) : "" === e && p("")
                     },
                     min: 6,
                     max: 30,
@@ -613,15 +613,15 @@
                     children: [(0, s.jsx)(m.A, {
                       id: "anonymous-uploads",
                       featureName: a("dashboard.imagehost.settings.general.anonymous_uploads"),
-                      onChangeFunction: e => U(e.currentTarget.checked),
-                      defaultChecked: N,
-                      checked: N
+                      onChangeFunction: e => N(e.currentTarget.checked),
+                      defaultChecked: g,
+                      checked: g
                     }), (0, s.jsx)(m.A, {
                       id: "hide-file-extension",
                       featureName: a("dashboard.imagehost.settings.general.hide_extension"),
-                      onChangeFunction: e => w(e.currentTarget.checked),
-                      defaultChecked: C,
-                      checked: C
+                      onChangeFunction: e => C(e.currentTarget.checked),
+                      defaultChecked: U,
+                      checked: U
                     }), (0, s.jsx)(m.A, {
                       id: "show-discord-embed",
                       featureName: a("dashboard.imagehost.settings.general.show_embed"),
@@ -676,24 +676,24 @@
                       className: r().setupKeyRow,
                       children: [(0, s.jsx)("span", {
                         className: r().setupKeyValue,
-                        children: eh
+                        children: ef
                       }), (0, s.jsxs)("div", {
                         className: r().setupKeyActions,
                         children: [(0, s.jsxs)("span", {
                           className: r().uploadKeyButton,
                           onClick: () => T(e => !e),
-                          children: [E ? h.A.hidePassword : h.A.password, " ", E ? a("dashboard.imagehost.settings.upload_key.hide") : a("dashboard.imagehost.settings.upload_key.reveal")]
+                          children: [E ? f.A.hidePassword : f.A.password, " ", E ? a("dashboard.imagehost.settings.upload_key.hide") : a("dashboard.imagehost.settings.upload_key.reveal")]
                         }), (0, s.jsxs)("span", {
                           className: r().uploadKeyButton,
-                          onClick: () => ef(L),
-                          children: [h.A.copy, " ", a("dashboard.imagehost.settings.upload_key.copy")]
+                          onClick: () => eh(L),
+                          children: [f.A.copy, " ", a("dashboard.imagehost.settings.upload_key.copy")]
                         })]
                       })]
                     }), (0, s.jsxs)("span", {
                       className: r().regenerateButton,
                       onClick: eg,
-                      children: [o ? l.A.loading : l.A.regenerateKey, (0, s.jsx)("span", {
-                        children: o ? a("dashboard.imagehost.settings.upload_key.generating") : a("dashboard.imagehost.settings.upload_key.regenerate")
+                      children: [t ? l.A.loading : l.A.regenerateKey, (0, s.jsx)("span", {
+                        children: t ? a("dashboard.imagehost.settings.upload_key.generating") : a("dashboard.imagehost.settings.upload_key.regenerate")
                       })]
                     }), (0, s.jsx)("div", {
                       className: r().uploadKeyNote,
@@ -760,8 +760,8 @@
         l = t(65095),
         c = t.n(l);
       let b = "#1c1c1c",
-        h = (e, a, t) => Math.min(Math.max(e, a), t),
-        f = e => {
+        f = (e, a, t) => Math.min(Math.max(e, a), t),
+        h = e => {
           if (!e) return "";
           let a = e.trim(),
             t = a.replace(/^#/, "").replace(/[^0-9a-f]/gi, "").slice(0, 6).toLowerCase();
@@ -817,7 +817,7 @@
             width: 220
           }),
           [L, B] = (0, d.useState)(!1),
-          E = f("string" == typeof t ? t : ""),
+          E = h("string" == typeof t ? t : ""),
           T = (0, d.useMemo)(() => E ? (e => {
             if (/^#[0-9a-f]{6}$/i.test(e)) return e.toLowerCase();
             if (/^#[0-9a-f]{3}$/i.test(e)) return `#${e.slice(1).split("").map(e=>`${e}${e}`).join("")}`.toLowerCase();
@@ -843,7 +843,7 @@
           }
           let d = window.innerWidth - a - 12;
           A({
-            left: h(e.left, 12, Math.max(12, d)),
+            left: f(e.left, 12, Math.max(12, d)),
             top: s,
             width: a
           })
@@ -899,22 +899,22 @@
               })({
                 ...e,
                 h: (e.h % 360 + 360) % 360,
-                s: h(e.s, 0, 1),
-                v: h(e.v, 0, 1)
+                s: f(e.s, 0, 1),
+                v: f(e.v, 0, 1)
               });
               return a = e => e.toString(16).padStart(2, "0"), `#${a(t)}${a(s)}${a(d)}`
             })(e);
             w(t), a?.(t)
           }, [a]),
           F = (0, d.useCallback)(e => {
-            let t = f(e.target.value);
+            let t = h(e.target.value);
             a?.(t)
           }, [a]),
           W = (0, d.useCallback)((e, a) => {
             if (!U.current) return;
             let t = U.current.getBoundingClientRect(),
-              s = h((e - t.left) / t.width, 0, 1),
-              d = h((a - t.top) / t.height, 0, 1);
+              s = f((e - t.left) / t.width, 0, 1),
+              d = f((a - t.top) / t.height, 0, 1);
             M({
               h: j.h,
               s: s,
@@ -1128,25 +1128,25 @@
         presenceAffectsLayout: l,
         mode: b
       }) => {
-        let f = (0, n.M)(h),
+        let h = (0, n.M)(f),
           _ = (0, d.useId)(),
           m = (0, d.useCallback)(e => {
-            for (let a of (f.set(e, !0), f.values()))
+            for (let a of (h.set(e, !0), h.values()))
               if (!a) return;
             i && i()
-          }, [f, i]),
+          }, [h, i]),
           u = (0, d.useMemo)(() => ({
             id: _,
             initial: a,
             isPresent: t,
             custom: r,
             onExitComplete: m,
-            register: e => (f.set(e, !1), () => f.delete(e))
+            register: e => (h.set(e, !1), () => h.delete(e))
           }), l ? [Math.random(), m] : [t, m]);
         return (0, d.useMemo)(() => {
-          f.forEach((e, a) => f.set(a, !1))
+          h.forEach((e, a) => h.set(a, !1))
         }, [t]), d.useEffect(() => {
-          t || f.size || !i || i()
+          t || h.size || !i || i()
         }, [t]), "popLayout" === b && (e = (0, s.jsx)(c, {
           isPresent: t,
           children: e
@@ -1156,10 +1156,10 @@
         })
       };
 
-      function h() {
+      function f() {
         return new Map
       }
-      var f = t(79196);
+      var h = t(79196);
       let _ = e => e.key || "";
 
       function m(e) {
@@ -1178,7 +1178,7 @@
         mode: l = "sync",
         propagate: c = !1
       }) => {
-        let [h, p] = (0, f.xQ)(c), g = (0, d.useMemo)(() => m(e), [e]), N = c && !h ? [] : g.map(_), S = (0, d.useRef)(!0), U = (0, d.useRef)(g), G = (0, n.M)(() => new Map), [x, v] = (0, d.useState)(g), [j, C] = (0, d.useState)(g);
+        let [f, p] = (0, h.xQ)(c), g = (0, d.useMemo)(() => m(e), [e]), N = c && !f ? [] : g.map(_), S = (0, d.useRef)(!0), U = (0, d.useRef)(g), G = (0, n.M)(() => new Map), [x, v] = (0, d.useState)(g), [j, C] = (0, d.useState)(g);
         (0, u.E)(() => {
           S.current = !1, U.current = g;
           for (let e = 0; e < j.length; e++) {
@@ -1203,7 +1203,7 @@
         return (0, s.jsx)(s.Fragment, {
           children: j.map(e => {
             let d = _(e),
-              i = (!c || !!h) && (g === j || N.includes(d));
+              i = (!c || !!f) && (g === j || N.includes(d));
             return (0, s.jsx)(b, {
               isPresent: i,
               initial: (!S.current || !!t) && void 0,
@@ -1472,7 +1472,7 @@
     81469: (e, a, t) => {
       "use strict";
       t.d(a, {
-        A: () => h
+        A: () => f
       });
       var s = t(95155),
         d = t(29722),
@@ -1484,14 +1484,14 @@
         c = t(86891);
       let b = ["ar", "he", "fa", "ur"];
 
-      function h({
+      function f({
         featureName: e,
         onChangeFunction: a,
         className: t,
         id: n,
         onChange: r,
-        defaultChecked: h,
-        disabled: f,
+        defaultChecked: f,
+        disabled: h,
         ..._
       }) {
         let m = (0, c.useLang)(),
@@ -1511,15 +1511,15 @@
             },
             children: (0, s.jsxs)("label", {
               className: (0, d.A)(l().switch, t),
-              "data-disabled": f,
+              "data-disabled": h,
               "data-direction": p,
               children: [(0, s.jsx)("input", {
                 ..._,
                 id: n ?? u,
                 type: "checkbox",
                 className: l().input,
-                defaultChecked: h,
-                disabled: f,
+                defaultChecked: f,
+                disabled: h,
                 onChange: e => {
                   r?.(e), a?.(e)
                 }
