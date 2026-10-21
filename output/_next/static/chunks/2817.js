@@ -333,7 +333,7 @@
         return (0, a.jsxs)("span", {
           className: `${c().productLogo} ${e?c().productLogoCompact:""}`,
           children: [(0, a.jsx)("img", {
-            src: "https://assets.guns.lol/guns_logo_no_background_cropped.png",
+            src: "https://assets.guns.lol/guns_hw_logo_ver_2.png",
             alt: ""
           }), (0, a.jsxs)("span", {
             children: ["guns", (0, a.jsx)("span", {

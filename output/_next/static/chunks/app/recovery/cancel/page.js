@@ -126,23 +126,23 @@
         t = c(12115),
         r = c(73321),
         s = c(77570),
-        n = c(86891),
-        _ = c(18943),
-        f = c.n(_),
+        _ = c(86891),
+        n = c(18943),
+        f = c.n(n),
         b = c(49982),
         i = c.n(b);
 
       function o() {
-        let e = (0, n.kj)(),
+        let e = (0, _.kj)(),
           a = (0, r.useRouter)(),
           c = (0, r.useSearchParams)(),
-          _ = c.get("attempt") || "",
+          n = c.get("attempt") || "",
           b = c.get("token") || "",
           [o, l] = (0, t.useState)(!1),
           [u, N] = (0, t.useState)(""),
           [S, G] = (0, t.useState)(""),
           [U, h] = (0, t.useState)(!1),
-          m = (0, t.useMemo)(() => !!(_ && b), [_, b]),
+          m = (0, t.useMemo)(() => !!(n && b), [n, b]),
           p = async () => {
             if (m && !o && !U) try {
               l(!0), N(""), G("");
@@ -152,7 +152,7 @@
                     "Content-Type": "application/json"
                   },
                   body: JSON.stringify({
-                    attemptId: _,
+                    attemptId: n,
                     token: b
                   })
                 }),
@@ -259,20 +259,20 @@
     77570: (e, a, c) => {
       "use strict";
       c.d(a, {
-        A: () => n
+        A: () => _
       });
       var d = c(95155),
         t = c(81934),
         r = c(18943),
         s = c.n(r);
 
-      function n({
+      function _({
         title: e,
         subtitle: a,
         headerAction: c,
         children: r,
-        footer: n,
-        legal: _,
+        footer: _,
+        legal: n,
         embedded: f = !1
       }) {
         return (0, d.jsx)("div", {
@@ -288,7 +288,7 @@
                 href: "/",
                 className: s().brandLink,
                 children: (0, d.jsx)("img", {
-                  src: "https://assets.guns.lol/guns_logo_no_background_cropped.png",
+                  src: "https://assets.guns.lol/guns_hw_logo_ver_2.png",
                   alt: "guns.lol",
                   className: s().brandLogo
                 })
@@ -305,12 +305,12 @@
             }), (0, d.jsx)("div", {
               className: s().body,
               children: r
-            }), n && (0, d.jsx)("div", {
-              className: s().footer,
-              children: n
             }), _ && (0, d.jsx)("div", {
-              className: s().legal,
+              className: s().footer,
               children: _
+            }), n && (0, d.jsx)("div", {
+              className: s().legal,
+              children: n
             })]
           })
         })
@@ -331,15 +331,15 @@
         children: r,
         ...s
       }) {
-        let n = c || (0, t.useLang)();
+        let _ = c || (0, t.useLang)();
         if (e.startsWith("http://") || e.startsWith("https://") || e.startsWith("mailto:") || e.startsWith("tel:")) return (0, d.jsx)("a", {
           href: e,
           ...s,
           children: r
         });
-        let _ = "en" == n ? `${e.startsWith("/")?"":"/"}${e}` : `/${n}${e.startsWith("/")?"":"/"}${e}`;
+        let n = "en" == _ ? `${e.startsWith("/")?"":"/"}${e}` : `/${_}${e.startsWith("/")?"":"/"}${e}`;
         return (0, d.jsx)("a", {
-          href: _,
+          href: n,
           ...s,
           children: r
         })

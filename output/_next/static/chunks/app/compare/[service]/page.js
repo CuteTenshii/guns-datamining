@@ -51,7 +51,7 @@
               name: "guns.lol",
               logo: {
                 "@type": "ImageObject",
-                url: "https://assets.guns.lol/guns_logo_no_background_cropped.png"
+                url: "https://assets.guns.lol/guns_hw_logo_ver_2.png"
               }
             }
           }, {

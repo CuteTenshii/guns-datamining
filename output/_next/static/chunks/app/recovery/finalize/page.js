@@ -8,8 +8,8 @@
       c.d(a, {
         default: () => b
       });
-      var d = c(95155),
-        t = c(12115),
+      var t = c(95155),
+        d = c(12115),
         n = c(73321),
         i = c(77570),
         r = c(81934),
@@ -25,13 +25,13 @@
           c = (0, n.useSearchParams)(),
           f = c.get("attempt") || "",
           _ = c.get("token") || "",
-          [b, u] = (0, t.useState)(!1),
-          [N, S] = (0, t.useState)(""),
-          [h, m] = (0, t.useState)(!1),
-          [G, U] = (0, t.useState)(""),
-          [p, y] = (0, t.useState)(!1),
-          v = (0, t.useMemo)(() => !!(f && _), [f, _]);
-        (0, t.useEffect)(() => {
+          [b, u] = (0, d.useState)(!1),
+          [N, S] = (0, d.useState)(""),
+          [h, m] = (0, d.useState)(!1),
+          [G, U] = (0, d.useState)(""),
+          [p, y] = (0, d.useState)(!1),
+          v = (0, d.useMemo)(() => !!(f && _), [f, _]);
+        (0, d.useEffect)(() => {
           (async () => {
             if (v) try {
               y(!0);
@@ -79,32 +79,32 @@
             u(!1)
           }
         };
-        return v ? h ? (0, d.jsx)(i.A, {
+        return v ? h ? (0, t.jsx)(i.A, {
           title: e("auth.recovery.finalize.done_title"),
           subtitle: e("auth.recovery.finalize.done_subtitle"),
-          children: (0, d.jsx)("div", {
+          children: (0, t.jsx)("div", {
             className: l().actions,
-            children: (0, d.jsx)("button", {
+            children: (0, t.jsx)("button", {
               className: l().primaryButton,
               type: "button",
               onClick: () => a.push("/login"),
               children: e("auth.recovery.finalize.go_to_login")
             })
           })
-        }) : (0, d.jsx)(i.A, {
+        }) : (0, t.jsx)(i.A, {
           title: e("auth.recovery.finalize.title"),
           subtitle: e("auth.recovery.finalize.subtitle"),
-          children: (0, d.jsxs)("div", {
+          children: (0, t.jsxs)("div", {
             className: o().startContainer,
-            children: [(0, d.jsxs)("div", {
+            children: [(0, t.jsxs)("div", {
               className: o().finalizeChangesPanel,
-              children: [(0, d.jsx)("h3", {
+              children: [(0, t.jsx)("h3", {
                 className: o().finalizeChangesTitle,
                 children: e("auth.recovery.finalize.changes_title")
-              }), p ? (0, d.jsx)("p", {
+              }), p ? (0, t.jsx)("p", {
                 className: o().finalizeChangesLoading,
                 children: e("auth.recovery.finalize.loading_changes")
-              }) : (0, d.jsx)("ul", {
+              }) : (0, t.jsx)("ul", {
                 className: o().finalizeChangesList,
                 children: ("lost_email_access" === G ? [{
                   id: "new-email",
@@ -123,8 +123,8 @@
                   content: e("auth.recovery.finalize.planned.new_email")
                 }] : "compromised_account" === G ? [{
                   id: "password-reset",
-                  content: (0, d.jsxs)(d.Fragment, {
-                    children: [e("auth.recovery.finalize.planned.password_reset_prefix"), " ", " ", (0, d.jsx)(r.A, {
+                  content: (0, t.jsxs)(t.Fragment, {
+                    children: [e("auth.recovery.finalize.planned.password_reset_prefix"), " ", " ", (0, t.jsx)(r.A, {
                       href: "/reset",
                       className: o().inlineActionLink,
                       children: "/reset"
@@ -145,28 +145,28 @@
                 }] : [{
                   id: "default",
                   content: e("auth.recovery.finalize.planned.default")
-                }]).map(e => (0, d.jsxs)("li", {
+                }]).map(e => (0, t.jsxs)("li", {
                   className: o().finalizeChangesItem,
-                  children: [(0, d.jsx)("span", {
+                  children: [(0, t.jsx)("span", {
                     className: o().finalizeChangesDot,
                     children: "•"
-                  }), (0, d.jsx)("span", {
+                  }), (0, t.jsx)("span", {
                     children: e.content
                   })]
                 }, e.id))
               })]
-            }), N && (0, d.jsx)("div", {
+            }), N && (0, t.jsx)("div", {
               className: l().errorBanner,
               children: N
-            }), (0, d.jsxs)("div", {
+            }), (0, t.jsxs)("div", {
               className: l().actions,
-              children: [(0, d.jsx)("button", {
+              children: [(0, t.jsx)("button", {
                 className: l().secondaryButton,
                 type: "button",
                 onClick: () => a.push("/login"),
                 disabled: b,
                 children: e("auth.recovery.finalize.cancel")
-              }), (0, d.jsx)("button", {
+              }), (0, t.jsx)("button", {
                 className: l().primaryButton,
                 type: "button",
                 onClick: g,
@@ -175,15 +175,15 @@
               })]
             })]
           })
-        }) : (0, d.jsxs)(i.A, {
+        }) : (0, t.jsxs)(i.A, {
           title: e("auth.recovery.finalize.title"),
           subtitle: e("auth.recovery.finalize.subtitle_invalid"),
-          children: [(0, d.jsx)("div", {
+          children: [(0, t.jsx)("div", {
             className: l().errorBanner,
             children: e("auth.recovery.finalize.errors.missing_info")
-          }), (0, d.jsx)("div", {
+          }), (0, t.jsx)("div", {
             className: l().actions,
-            children: (0, d.jsx)("button", {
+            children: (0, t.jsx)("button", {
               className: l().primaryButton,
               type: "button",
               onClick: () => a.push("/recovery"),
@@ -312,26 +312,26 @@
     },
     73321: (e, a, c) => {
       "use strict";
-      var d = c(74645);
-      c.o(d, "redirect") && c.d(a, {
+      var t = c(74645);
+      c.o(t, "redirect") && c.d(a, {
         redirect: function() {
-          return d.redirect
+          return t.redirect
         }
-      }), c.o(d, "useParams") && c.d(a, {
+      }), c.o(t, "useParams") && c.d(a, {
         useParams: function() {
-          return d.useParams
+          return t.useParams
         }
-      }), c.o(d, "usePathname") && c.d(a, {
+      }), c.o(t, "usePathname") && c.d(a, {
         usePathname: function() {
-          return d.usePathname
+          return t.usePathname
         }
-      }), c.o(d, "useRouter") && c.d(a, {
+      }), c.o(t, "useRouter") && c.d(a, {
         useRouter: function() {
-          return d.useRouter
+          return t.useRouter
         }
-      }), c.o(d, "useSearchParams") && c.d(a, {
+      }), c.o(t, "useSearchParams") && c.d(a, {
         useSearchParams: function() {
-          return d.useSearchParams
+          return t.useSearchParams
         }
       })
     },
@@ -340,8 +340,8 @@
       c.d(a, {
         A: () => r
       });
-      var d = c(95155),
-        t = c(81934),
+      var t = c(95155),
+        d = c(81934),
         n = c(18943),
         i = c.n(n);
 
@@ -354,40 +354,40 @@
         legal: s,
         embedded: f = !1
       }) {
-        return (0, d.jsx)("div", {
+        return (0, t.jsx)("div", {
           className: f ? i().embeddedPage : i().page,
-          children: (0, d.jsxs)("div", {
+          children: (0, t.jsxs)("div", {
             className: f ? i().embeddedPanel : i().panel,
-            children: [c && (0, d.jsx)("div", {
+            children: [c && (0, t.jsx)("div", {
               className: i().panelHeaderAction,
               children: c
-            }), (0, d.jsxs)("div", {
+            }), (0, t.jsxs)("div", {
               className: i().brand,
-              children: [!f && (0, d.jsx)(t.A, {
+              children: [!f && (0, t.jsx)(d.A, {
                 href: "/",
                 className: i().brandLink,
-                children: (0, d.jsx)("img", {
-                  src: "https://assets.guns.lol/guns_logo_no_background_cropped.png",
+                children: (0, t.jsx)("img", {
+                  src: "https://assets.guns.lol/guns_hw_logo_ver_2.png",
                   alt: "guns.lol",
                   className: i().brandLogo
                 })
-              }), (0, d.jsxs)("div", {
+              }), (0, t.jsxs)("div", {
                 className: i().brandText,
-                children: [(0, d.jsx)("h1", {
+                children: [(0, t.jsx)("h1", {
                   className: i().title,
                   children: e
-                }), a && (0, d.jsx)("p", {
+                }), a && (0, t.jsx)("p", {
                   className: i().subtitle,
                   children: a
                 })]
               })]
-            }), (0, d.jsx)("div", {
+            }), (0, t.jsx)("div", {
               className: i().body,
               children: n
-            }), r && (0, d.jsx)("div", {
+            }), r && (0, t.jsx)("div", {
               className: i().footer,
               children: r
-            }), s && (0, d.jsx)("div", {
+            }), s && (0, t.jsx)("div", {
               className: i().legal,
               children: s
             })]
@@ -400,8 +400,8 @@
       c.d(a, {
         A: () => n
       });
-      var d = c(95155),
-        t = c(86891);
+      var t = c(95155),
+        d = c(86891);
 
       function n({
         href: e,
@@ -410,14 +410,14 @@
         children: n,
         ...i
       }) {
-        let r = c || (0, t.useLang)();
-        if (e.startsWith("http://") || e.startsWith("https://") || e.startsWith("mailto:") || e.startsWith("tel:")) return (0, d.jsx)("a", {
+        let r = c || (0, d.useLang)();
+        if (e.startsWith("http://") || e.startsWith("https://") || e.startsWith("mailto:") || e.startsWith("tel:")) return (0, t.jsx)("a", {
           href: e,
           ...i,
           children: n
         });
         let s = "en" == r ? `${e.startsWith("/")?"":"/"}${e}` : `/${r}${e.startsWith("/")?"":"/"}${e}`;
-        return (0, d.jsx)("a", {
+        return (0, t.jsx)("a", {
           href: s,
           ...i,
           children: n

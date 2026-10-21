@@ -39,8 +39,8 @@
         n = a.n(s),
         d = a(14079),
         l = a(86891);
-      let o = a(87358).env.NEXT_PUBLIC_API_URL || "https://guns.lol",
-        i = "guns_last_social_provider",
+      let i = a(87358).env.NEXT_PUBLIC_API_URL || "https://guns.lol",
+        o = "guns_last_social_provider",
         f = "guns_last_social_used_at";
 
       function u({
@@ -63,7 +63,7 @@
             }
           };
         (0, r.useEffect)(() => {
-          let e = window.localStorage.getItem(i),
+          let e = window.localStorage.getItem(o),
             t = Number(window.localStorage.getItem(f) || "0");
           "google" === e && t > 0 && (w("google"), v(b("auth.social.last_used")))
         }, []);
@@ -72,7 +72,7 @@
             m(a), t?.("");
             {
               let e = Date.now();
-              window.localStorage.setItem(i, a), window.localStorage.setItem(f, String(e))
+              window.localStorage.setItem(o, a), window.localStorage.setItem(f, String(e))
             }
             let c = new URLSearchParams({
               returnUri: e
@@ -80,7 +80,7 @@
             _ && c.set("accountAddition", "true");
             let r = s.toLowerCase().replace(/[^a-z0-9._]/g, "").slice(0, 16);
             r && c.set("usernameHint", r), u && c.set("ref", u);
-            let n = await fetch(`${o}/api/auth/oauth/${a}/url?${c.toString()}`);
+            let n = await fetch(`${i}/api/auth/oauth/${a}/url?${c.toString()}`);
             if (!n.ok) throw Error("Could not start sign-in");
             let d = await n.json();
             if (!d?.url) throw Error("Missing redirect url");
@@ -122,13 +122,13 @@
         n = a(5677),
         d = a(5585),
         l = a.n(d);
-      let o = "(max-width: 768px)",
-        i = e => {
+      let i = "(max-width: 768px)",
+        o = e => {
           if ("function" != typeof window.matchMedia) return () => void 0;
-          let t = window.matchMedia(o);
+          let t = window.matchMedia(i);
           return "function" == typeof t.addEventListener ? (t.addEventListener("change", e), () => t.removeEventListener("change", e)) : (t.addListener(e), () => t.removeListener(e))
         },
-        f = () => "function" == typeof window.matchMedia && window.matchMedia(o).matches,
+        f = () => "function" == typeof window.matchMedia && window.matchMedia(i).matches,
         u = () => !1,
         _ = (0, c.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
@@ -146,7 +146,7 @@
         onClose: t,
         onOverlayClose: a,
         onCloseButtonClick: d,
-        onEscapeClose: o,
+        onEscapeClose: i,
         title: b,
         centered: h = !0,
         size: m = "auto",
@@ -158,7 +158,7 @@
         mobileVariant: S = "drawer",
         children: x
       }) {
-        let [U, G] = (0, r.useState)(e), [y, j] = (0, r.useState)(!1), [C, T] = (0, r.useState)(null), k = (0, r.useRef)(null), B = (0, r.useRef)(null), L = (0, r.useRef)(null), E = (0, r.useRef)(null), q = (0, r.useRef)(!1), M = (0, r.useSyncExternalStore)(i, f, u) && "drawer" === S, A = e => {
+        let [U, G] = (0, r.useState)(e), [y, j] = (0, r.useState)(!1), [C, T] = (0, r.useState)(null), k = (0, r.useRef)(null), B = (0, r.useRef)(null), L = (0, r.useRef)(null), E = (0, r.useRef)(null), q = (0, r.useRef)(!1), M = (0, r.useSyncExternalStore)(o, f, u) && "drawer" === S, A = e => {
           if (!e) return !1;
           let t = window.getComputedStyle(e).overflowY;
           return e.scrollHeight > e.clientHeight + 1 && ("auto" === t || "scroll" === t)
@@ -172,8 +172,8 @@
           }
           return null
         }, D = (e, t) => t < 0 ? e.scrollTop > 0 : !(t > 0) || e.scrollTop + e.clientHeight < e.scrollHeight, H = (0, r.useCallback)(e => {
-          "overlay" === e ? (a ?? t)() : "escape" === e ? (o ?? t)() : "button" === e ? (d ?? t)() : t()
-        }, [t, d, o, a]);
+          "overlay" === e ? (a ?? t)() : "escape" === e ? (i ?? t)() : "button" === e ? (d ?? t)() : t()
+        }, [t, d, i, a]);
         (0, r.useEffect)(() => {
           if (e) {
             G(!0), j(!1);
@@ -599,8 +599,8 @@
         value: a,
         placeholder: s,
         icon: l,
-        prefix: o,
-        prefixLength: i,
+        prefix: i,
+        prefixLength: o,
         viewPassword: f,
         onKeyPress: u,
         isImageUrl: _,
@@ -623,18 +623,18 @@
             className: n().featureName,
             children: e
           }), (0, c.jsxs)("div", {
-            className: `${n().inputWrapperDiv} ${o&&n().inputWrapperURL} ${b&&n().inputWrapperIconInside}`,
+            className: `${n().inputWrapperDiv} ${i&&n().inputWrapperURL} ${b&&n().inputWrapperIconInside}`,
             children: [(0, c.jsxs)("span", {
               className: n().inputWrapperSpan,
               style: {
-                position: o || b ? "absolute" : "static"
+                position: i || b ? "absolute" : "static"
               },
               children: [_ ? (0, c.jsx)("img", {
                 src: l,
                 alt: "icon",
                 className: n().inputWrapperIconImage
-              }) : l, o && (0, c.jsx)("h1", {
-                children: o
+              }) : l, i && (0, c.jsx)("h1", {
+                children: i
               })]
             }), f && (0, c.jsx)("p", {
               onClick: () => {
@@ -647,7 +647,7 @@
               onKeyDown: u,
               value: a,
               style: {
-                paddingLeft: o ? i : "",
+                paddingLeft: i ? o : "",
                 paddingRight: f ? 47 : ""
               },
               placeholder: s,
@@ -679,22 +679,22 @@
         children: s,
         footer: d,
         legal: l,
-        embedded: o = !1
+        embedded: i = !1
       }) {
         return (0, c.jsx)("div", {
-          className: o ? n().embeddedPage : n().page,
+          className: i ? n().embeddedPage : n().page,
           children: (0, c.jsxs)("div", {
-            className: o ? n().embeddedPanel : n().panel,
+            className: i ? n().embeddedPanel : n().panel,
             children: [a && (0, c.jsx)("div", {
               className: n().panelHeaderAction,
               children: a
             }), (0, c.jsxs)("div", {
               className: n().brand,
-              children: [!o && (0, c.jsx)(r.A, {
+              children: [!i && (0, c.jsx)(r.A, {
                 href: "/",
                 className: n().brandLink,
                 children: (0, c.jsx)("img", {
-                  src: "https://assets.guns.lol/guns_logo_no_background_cropped.png",
+                  src: "https://assets.guns.lol/guns_hw_logo_ver_2.png",
                   alt: "guns.lol",
                   className: n().brandLogo
                 })

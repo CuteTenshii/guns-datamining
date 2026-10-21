@@ -20,8 +20,8 @@
         prefix: d,
         prefixLength: u,
         viewPassword: l,
-        onKeyPress: p,
-        isImageUrl: m,
+        onKeyPress: m,
+        isImageUrl: p,
         iconInside: h,
         type: f = "text",
         ..._
@@ -47,7 +47,7 @@
               style: {
                 position: d || h ? "absolute" : "static"
               },
-              children: [m ? (0, s.jsx)("img", {
+              children: [p ? (0, s.jsx)("img", {
                 src: c,
                 alt: "icon",
                 className: o().inputWrapperIconImage
@@ -62,7 +62,7 @@
             }), (0, s.jsx)("input", {
               autoCorrect: "off",
               type: l ? g ? "password" : "text" : f,
-              onKeyDown: p,
+              onKeyDown: m,
               value: r,
               style: {
                 paddingLeft: d ? u : "",
@@ -131,15 +131,15 @@
         d = r(54834),
         u = r(66609),
         l = r(37897),
-        p = r(86891),
-        m = r(73321);
+        m = r(86891),
+        p = r(73321);
 
       function h() {
-        let e = (0, p.kj)(),
+        let e = (0, m.kj)(),
           a = e("dashboard.account.redeem.redeem_button"),
           [r, n] = (0, t.useState)(""),
           [i, h] = (0, t.useState)(""),
-          f = (0, m.useSearchParams)().get("select") || "guns_premium",
+          f = (0, p.useSearchParams)().get("select") || "guns_premium",
           [_, g] = (0, t.useState)(f),
           b = async e => {
             let a = await fetch("https://guns.lol/api/account/redeem", {
@@ -199,7 +199,7 @@
                   className: `${o().selection} ${"guns_premium"===_?o().selected:""}`,
                   onClick: () => g("guns_premium"),
                   children: [(0, s.jsx)("img", {
-                    src: "https://assets.guns.lol/guns_logo_no_background_cropped.png",
+                    src: "https://assets.guns.lol/guns_hw_logo_ver_2.png",
                     alt: ""
                   }), (0, s.jsx)("h1", {
                     children: e("dashboard.account.redeem.premium_product")

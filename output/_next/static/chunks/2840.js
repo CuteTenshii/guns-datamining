@@ -1713,7 +1713,7 @@
                   children: (0, s.jsxs)("div", {
                     className: i().share,
                     children: [(0, s.jsx)("img", {
-                      src: "https://assets.guns.lol/guns_logo_no_background_cropped.png",
+                      src: "https://assets.guns.lol/guns_hw_logo_ver_2.png",
                       alt: ""
                     }), (0, s.jsxs)("span", {
                       children: ["guns.lol/", ej]
@@ -1859,7 +1859,7 @@
                     children: (0, s.jsxs)("div", {
                       className: i().dashboardLogo,
                       children: [(0, s.jsx)("img", {
-                        src: "https://assets.guns.lol/guns_logo_no_background_cropped.png",
+                        src: "https://assets.guns.lol/guns_hw_logo_ver_2.png",
                         alt: "guns.lol Logo",
                         draggable: "false"
                       }), (0, s.jsxs)("h1", {
@@ -2077,7 +2077,7 @@
             children: (0, s.jsxs)("div", {
               className: n().shareCardRow,
               children: [(0, s.jsx)("img", {
-                src: "https://assets.guns.lol/guns_logo_no_background_cropped.png",
+                src: "https://assets.guns.lol/guns_hw_logo_ver_2.png",
                 alt: ""
               }), (0, s.jsxs)("div", {
                 className: n().shareCardText,

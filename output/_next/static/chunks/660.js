@@ -7879,7 +7879,7 @@ void main() {
           }), (0, a.jsxs)("div", {
             className: `${i().promoBubble} ${o?i().bubbleOut:""}`,
             children: [(0, a.jsx)("img", {
-              src: "https://assets.guns.lol/guns_logo_no_background_cropped.png",
+              src: "https://assets.guns.lol/guns_hw_logo_ver_2.png",
               className: i().promoLogo
             }), (0, a.jsxs)("a", {
               href: "https://guns.lol/register?ref=promo_bubble",
