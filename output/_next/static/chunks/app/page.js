@@ -8,8 +8,8 @@
       var n = i(95155),
         a = i(59791),
         r = i.n(a),
-        t = i(81382),
-        c = i(87974),
+        c = i(81382),
+        t = i(87974),
         l = i(12115),
         d = i(60884);
       let m = ({
@@ -49,35 +49,26 @@
         f = i.n(j);
 
       function _() {
-        let e = (0, l.useRef)(null),
-          [s, a] = (0, l.useState)(!1),
-          r = (0, x.kj)();
+        let e = (0, l.useRef)(null);
         return (0, l.useEffect)(() => {
-          let n;
-          if (!e.current || s) return;
-          let a = e.current,
-            r = window.matchMedia("(prefers-reduced-motion: reduce)"),
-            t = !1,
+          let s;
+          if (!e.current) return;
+          let n = e.current,
+            a = window.matchMedia("(prefers-reduced-motion: reduce)"),
+            r = !1,
             c = () => {
-              document.hidden || r.matches ? n?.pause() : n?.resume()
+              document.hidden || a.matches ? s?.pause() : s?.resume()
             };
           return i.e(9254).then(i.bind(i, 59254)).then(({
             BatManager: e
           }) => {
-            t || ((n = new e(a)).makeBats(window.innerWidth < 600 ? 3 : 5), c())
-          }), r.addEventListener("change", c), document.addEventListener("visibilitychange", c), () => {
-            t = !0, r.removeEventListener("change", c), document.removeEventListener("visibilitychange", c), n?.destroy()
+            r || ((s = new e(n)).makeBats(window.innerWidth < 600 ? 3 : 5), c())
+          }), a.addEventListener("change", c), document.addEventListener("visibilitychange", c), () => {
+            r = !0, a.removeEventListener("change", c), document.removeEventListener("visibilitychange", c), s?.destroy()
           }
-        }, [s]), (0, n.jsxs)(n.Fragment, {
-          children: [(0, n.jsx)("div", {
-            className: f().bats,
-            ref: e
-          }), (0, n.jsx)("button", {
-            type: "button",
-            className: f().batControl,
-            onClick: () => a(e => !e),
-            children: r(s ? "common.halloween.resume_bats" : "common.halloween.pause_bats")
-          })]
+        }, []), (0, n.jsx)("div", {
+          className: f().bats,
+          ref: e
         })
       }
 
@@ -93,7 +84,7 @@
           v = (1e5 * Math.round(s.views / 1e5)).toLocaleString("en-US"),
           b = (1e4 * Math.round(s.uploads / 1e4)).toLocaleString("en-US"),
           k = (100 * Math.round(s.premium / 100)).toLocaleString("en-US"),
-          w = j && j < 768 ? .3 : .6;
+          A = j && j < 768 ? .3 : .6;
         return (0, l.useEffect)(() => {
           document.querySelectorAll(`.${r().elementAnimation}`).forEach((e, s) => {
             setTimeout(() => {
@@ -101,7 +92,7 @@
             }, 350 + 300 * s)
           }), f(window.innerWidth)
         }, []), (0, n.jsxs)(n.Fragment, {
-          children: [(0, n.jsx)(_, {}), (0, n.jsxs)(t.default, {
+          children: [(0, n.jsx)(_, {}), (0, n.jsxs)(c.default, {
             data: i,
             statsData: s,
             children: [(0, n.jsx)("div", {
@@ -146,7 +137,7 @@
                 })]
               })
             }), (0, n.jsx)(m, {
-              amount: w,
+              amount: A,
               children: (0, n.jsxs)("div", {
                 className: `${r().statisticsShowcase} ${r().elementAnimation}`,
                 children: [(0, n.jsxs)("div", {
@@ -170,7 +161,7 @@
                         }), (0, n.jsx)("span", {
                           children: a("landing.stats.profile_views")
                         })]
-                      }), c.A.profileViews]
+                      }), t.A.profileViews]
                     }), (0, n.jsxs)("div", {
                       className: r().statisticBox,
                       children: [(0, n.jsxs)("div", {
@@ -180,7 +171,7 @@
                         }), (0, n.jsx)("span", {
                           children: a("landing.stats.users")
                         })]
-                      }), c.A.users]
+                      }), t.A.users]
                     }), (0, n.jsxs)("div", {
                       className: r().statisticBox,
                       children: [(0, n.jsxs)("div", {
@@ -190,7 +181,7 @@
                         }), (0, n.jsx)("span", {
                           children: a("landing.stats.file_uploads")
                         })]
-                      }), c.A.fileUploads]
+                      }), t.A.fileUploads]
                     }), (0, n.jsxs)("div", {
                       className: r().statisticBox,
                       children: [(0, n.jsxs)("div", {
@@ -200,7 +191,7 @@
                         }), (0, n.jsx)("span", {
                           children: a("landing.stats.subscribers")
                         })]
-                      }), c.A.subscribers]
+                      }), t.A.subscribers]
                     })]
                   })]
                 }), (0, n.jsxs)("div", {
@@ -239,7 +230,7 @@
                 })]
               })
             }), (0, n.jsx)(m, {
-              amount: w,
+              amount: A,
               children: (0, n.jsxs)("div", {
                 className: r().premiumShowcase,
                 children: [(0, n.jsx)("h1", {
@@ -342,8 +333,7 @@
     },
     45827: e => {
       e.exports = {
-        bats: "GUNS__25-6223a480-d26fee40-5e2e7253",
-        batControl: "GUNS__78-bb23469f-15106458-6a73ce26"
+        bats: "GUNS__25-6223a480-d26fee40-5e2e7253"
       }
     },
     61836: (e, s, i) => {
@@ -351,13 +341,13 @@
       i.d(s, {
         $g: () => d,
         KH: () => r,
-        YL: () => t,
+        YL: () => c,
         Yi: () => a,
         dd: () => l,
         gP: () => m,
         o3: () => o,
         q9: () => n,
-        wH: () => c
+        wH: () => t
       });
       let n = {
           free: 0,
@@ -386,10 +376,10 @@
           price: 34.99
         }],
         r = 5,
-        t = 200;
+        c = 200;
 
-      function c(e) {
-        return !Number.isInteger(e) || e < r || e > t ? null : (100 * Math.ceil((e <= 10 ? 100 * e - 1 : e <= 25 ? 999 + Math.round(1e3 / 15 * (e - 10)) : e <= 50 ? 1999 + (e - 25) * 60 : 3499 + (e - 50) * 50) / 100) - 1) / 100
+      function t(e) {
+        return !Number.isInteger(e) || e < r || e > c ? null : (100 * Math.ceil((e <= 10 ? 100 * e - 1 : e <= 25 ? 999 + Math.round(1e3 / 15 * (e - 10)) : e <= 50 ? 1999 + (e - 25) * 60 : 3499 + (e - 50) * 50) / 100) - 1) / 100
       }
       let l = 15;
 
