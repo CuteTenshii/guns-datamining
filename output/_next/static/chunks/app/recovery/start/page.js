@@ -84,24 +84,24 @@
         footerContainer: "GUNS__f5-85f750c2-b172755c-dfcf1f52"
       }
     },
-    23937: (e, a, t) => {
-      Promise.resolve().then(t.bind(t, 96789))
+    23937: (e, a, d) => {
+      Promise.resolve().then(d.bind(d, 96789))
     },
-    37897: (e, a, t) => {
+    37897: (e, a, d) => {
       "use strict";
-      t.d(a, {
+      d.d(a, {
         A: () => _
       });
-      var d = t(95155),
-        c = t(12115),
-        r = t(98241),
-        s = t.n(r),
-        f = t(54834);
+      var c = d(95155),
+        t = d(12115),
+        r = d(98241),
+        s = d.n(r),
+        f = d(54834);
 
       function _({
         featureName: e,
         onChangeFunction: a,
-        value: t,
+        value: d,
         placeholder: r,
         icon: _,
         prefix: n,
@@ -113,44 +113,44 @@
         type: N = "text",
         ...S
       }) {
-        let [U, G] = (0, c.useState)(!!b), {
+        let [U, G] = (0, t.useState)(!!b), {
           onInput: p,
           onChange: h,
           maxLength: m,
           ...v
         } = S, g = m ?? (b || "password" === N ? 72 : void 0);
-        return (0, c.useEffect)(() => {
+        return (0, t.useEffect)(() => {
           G(!!b)
-        }, [b]), (0, d.jsxs)("div", {
+        }, [b]), (0, c.jsxs)("div", {
           className: s().inputContainerWrapper,
           "data-dashboard-feature-label": "string" == typeof e ? e : void 0,
-          children: [e && (0, d.jsx)("h1", {
+          children: [e && (0, c.jsx)("h1", {
             className: s().featureName,
             children: e
-          }), (0, d.jsxs)("div", {
+          }), (0, c.jsxs)("div", {
             className: `${s().inputWrapperDiv} ${n&&s().inputWrapperURL} ${u&&s().inputWrapperIconInside}`,
-            children: [(0, d.jsxs)("span", {
+            children: [(0, c.jsxs)("span", {
               className: s().inputWrapperSpan,
               style: {
                 position: n || u ? "absolute" : "static"
               },
-              children: [l ? (0, d.jsx)("img", {
+              children: [l ? (0, c.jsx)("img", {
                 src: _,
                 alt: "icon",
                 className: s().inputWrapperIconImage
-              }) : _, n && (0, d.jsx)("h1", {
+              }) : _, n && (0, c.jsx)("h1", {
                 children: n
               })]
-            }), b && (0, d.jsx)("p", {
+            }), b && (0, c.jsx)("p", {
               onClick: () => {
                 G(!U)
               },
               children: U ? f.A.hidePassword : f.A.views
-            }), (0, d.jsx)("input", {
+            }), (0, c.jsx)("input", {
               autoCorrect: "off",
               type: b ? U ? "password" : "text" : N,
               onKeyDown: o,
-              value: t,
+              value: d,
               style: {
                 paddingLeft: n ? i : "",
                 paddingRight: b ? 47 : ""
@@ -200,84 +200,84 @@
         inlineActionLink: "GUNS__d4-0f2b7dc1-d271521b-9c261c3b"
       }
     },
-    73321: (e, a, t) => {
+    73321: (e, a, d) => {
       "use strict";
-      var d = t(74645);
-      t.o(d, "redirect") && t.d(a, {
+      var c = d(74645);
+      d.o(c, "redirect") && d.d(a, {
         redirect: function() {
-          return d.redirect
+          return c.redirect
         }
-      }), t.o(d, "useParams") && t.d(a, {
+      }), d.o(c, "useParams") && d.d(a, {
         useParams: function() {
-          return d.useParams
+          return c.useParams
         }
-      }), t.o(d, "usePathname") && t.d(a, {
+      }), d.o(c, "usePathname") && d.d(a, {
         usePathname: function() {
-          return d.usePathname
+          return c.usePathname
         }
-      }), t.o(d, "useRouter") && t.d(a, {
+      }), d.o(c, "useRouter") && d.d(a, {
         useRouter: function() {
-          return d.useRouter
+          return c.useRouter
         }
-      }), t.o(d, "useSearchParams") && t.d(a, {
+      }), d.o(c, "useSearchParams") && d.d(a, {
         useSearchParams: function() {
-          return d.useSearchParams
+          return c.useSearchParams
         }
       })
     },
-    77570: (e, a, t) => {
+    77570: (e, a, d) => {
       "use strict";
-      t.d(a, {
+      d.d(a, {
         A: () => f
       });
-      var d = t(95155),
-        c = t(81934),
-        r = t(18943),
-        s = t.n(r);
+      var c = d(95155),
+        t = d(81934),
+        r = d(18943),
+        s = d.n(r);
 
       function f({
         title: e,
         subtitle: a,
-        headerAction: t,
+        headerAction: d,
         children: r,
         footer: f,
         legal: _,
         embedded: n = !1
       }) {
-        return (0, d.jsx)("div", {
+        return (0, c.jsx)("div", {
           className: n ? s().embeddedPage : s().page,
-          children: (0, d.jsxs)("div", {
+          children: (0, c.jsxs)("div", {
             className: n ? s().embeddedPanel : s().panel,
-            children: [t && (0, d.jsx)("div", {
+            children: [d && (0, c.jsx)("div", {
               className: s().panelHeaderAction,
-              children: t
-            }), (0, d.jsxs)("div", {
+              children: d
+            }), (0, c.jsxs)("div", {
               className: s().brand,
-              children: [!n && (0, d.jsx)(c.A, {
+              children: [!n && (0, c.jsx)(t.A, {
                 href: "/",
                 className: s().brandLink,
-                children: (0, d.jsx)("img", {
-                  src: "https://assets.guns.lol/guns_hw_logo_ver_2.png",
+                children: (0, c.jsx)("img", {
+                  src: "https://assets.guns.lol/guns_logo_no_background_cropped.png",
                   alt: "guns.lol",
                   className: s().brandLogo
                 })
-              }), (0, d.jsxs)("div", {
+              }), (0, c.jsxs)("div", {
                 className: s().brandText,
-                children: [(0, d.jsx)("h1", {
+                children: [(0, c.jsx)("h1", {
                   className: s().title,
                   children: e
-                }), a && (0, d.jsx)("p", {
+                }), a && (0, c.jsx)("p", {
                   className: s().subtitle,
                   children: a
                 })]
               })]
-            }), (0, d.jsx)("div", {
+            }), (0, c.jsx)("div", {
               className: s().body,
               children: r
-            }), f && (0, d.jsx)("div", {
+            }), f && (0, c.jsx)("div", {
               className: s().footer,
               children: f
-            }), _ && (0, d.jsx)("div", {
+            }), _ && (0, c.jsx)("div", {
               className: s().legal,
               children: _
             })]
@@ -285,78 +285,78 @@
         })
       }
     },
-    81934: (e, a, t) => {
+    81934: (e, a, d) => {
       "use strict";
-      t.d(a, {
+      d.d(a, {
         A: () => r
       });
-      var d = t(95155),
-        c = t(86891);
+      var c = d(95155),
+        t = d(86891);
 
       function r({
         href: e,
         asTag: a,
-        locale: t,
+        locale: d,
         children: r,
         ...s
       }) {
-        let f = t || (0, c.useLang)();
-        if (e.startsWith("http://") || e.startsWith("https://") || e.startsWith("mailto:") || e.startsWith("tel:")) return (0, d.jsx)("a", {
+        let f = d || (0, t.useLang)();
+        if (e.startsWith("http://") || e.startsWith("https://") || e.startsWith("mailto:") || e.startsWith("tel:")) return (0, c.jsx)("a", {
           href: e,
           ...s,
           children: r
         });
         let _ = "en" == f ? `${e.startsWith("/")?"":"/"}${e}` : `/${f}${e.startsWith("/")?"":"/"}${e}`;
-        return (0, d.jsx)("a", {
+        return (0, c.jsx)("a", {
           href: _,
           ...s,
           children: r
         })
       }
     },
-    96789: (e, a, t) => {
+    96789: (e, a, d) => {
       "use strict";
-      t.d(a, {
+      d.d(a, {
         default: () => u
       });
-      var d = t(95155),
-        c = t(12115),
-        r = t(73321),
-        s = t(77570),
-        f = t(37897),
-        _ = t(86891),
-        n = t(54834),
-        i = t(18943),
-        b = t.n(i),
-        o = t(49982),
-        l = t.n(o);
+      var c = d(95155),
+        t = d(12115),
+        r = d(73321),
+        s = d(77570),
+        f = d(37897),
+        _ = d(86891),
+        n = d(54834),
+        i = d(18943),
+        b = d.n(i),
+        o = d(49982),
+        l = d.n(o);
 
       function u() {
         let e = (0, _.kj)(),
           a = (0, r.useRouter)(),
-          t = (0, r.useSearchParams)().get("type") || "lost_2fa_device",
-          [i, o] = (0, c.useState)(""),
-          [u, N] = (0, c.useState)(!1),
-          [S, U] = (0, c.useState)(""),
-          [G, p] = (0, c.useState)(""),
-          h = async d => {
-            if (d.preventDefault(), !i.trim()) return void U(e("auth.recovery.start.errors.identifier_required"));
+          d = (0, r.useSearchParams)().get("type") || "lost_2fa_device",
+          [i, o] = (0, t.useState)(""),
+          [u, N] = (0, t.useState)(!1),
+          [S, U] = (0, t.useState)(""),
+          [G, p] = (0, t.useState)(""),
+          h = async c => {
+            if (c.preventDefault(), !i.trim()) return void U(e("auth.recovery.start.errors.identifier_required"));
             try {
               N(!0), U(""), p("");
-              let d = await fetch("/api/recovery/start", {
+              let c = await fetch("/api/recovery/start", {
                   method: "POST",
                   headers: {
                     "Content-Type": "application/json"
                   },
                   body: JSON.stringify({
-                    recoveryType: t,
+                    recoveryType: d,
                     identifier: i.trim()
                   })
                 }),
-                c = await d.json();
-              if (!d.ok) return void U(c.error || e("auth.recovery.start.errors.unable_start"));
-              if (!c.attemptId) return void p(c.message);
-              let r = `/recovery/start/evidence?attempt=${encodeURIComponent(c.attemptId)}`;
+                t = await c.json();
+              if (!c.ok) return void U(t.error || e("auth.recovery.start.errors.unable_start"));
+              if (!t.attemptId) return void p(t.message);
+              let r = `/recovery/start/evidence?attempt=${encodeURIComponent(t.attemptId)}`;
               a.push(r)
             } catch {
               U(e("auth.recovery.start.errors.unable_start"))
@@ -364,37 +364,37 @@
               N(!1)
             }
           };
-        return (0, d.jsx)(s.A, {
+        return (0, c.jsx)(s.A, {
           title: e("auth.recovery.start.title"),
           subtitle: e("auth.recovery.start.subtitle"),
-          children: (0, d.jsxs)("form", {
+          children: (0, c.jsxs)("form", {
             onSubmit: h,
-            children: [(0, d.jsx)(f.A, {
+            children: [(0, c.jsx)(f.A, {
               featureName: e("auth.recovery.start.identifier_label"),
               value: i,
               onChangeFunction: e => o(e.target.value),
               placeholder: e("auth.recovery.start.identifier_placeholder"),
               icon: n.A.user
-            }), (0, d.jsx)("div", {
+            }), (0, c.jsx)("div", {
               className: l().recoveryHelper,
-              children: (0, d.jsx)("h1", {
+              children: (0, c.jsx)("h1", {
                 children: e("auth.recovery.start.helper")
               })
-            }), S && (0, d.jsx)("div", {
+            }), S && (0, c.jsx)("div", {
               className: b().errorBanner,
               style: {
                 marginTop: "15px"
               },
               children: S
-            }), G && (0, d.jsx)("p", {
+            }), G && (0, c.jsx)("p", {
               className: b().helperText,
               children: G
-            }), (0, d.jsx)("div", {
+            }), (0, c.jsx)("div", {
               className: b().actions,
               style: {
                 marginTop: 10
               },
-              children: (0, d.jsx)("button", {
+              children: (0, c.jsx)("button", {
                 className: b().primaryButton,
                 type: "submit",
                 disabled: u,

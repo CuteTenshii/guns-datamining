@@ -282,7 +282,7 @@
                 href: "/",
                 className: f().brandLink,
                 children: (0, d.jsx)("img", {
-                  src: "https://assets.guns.lol/guns_hw_logo_ver_2.png",
+                  src: "https://assets.guns.lol/guns_logo_no_background_cropped.png",
                   alt: "guns.lol",
                   className: f().brandLogo
                 })

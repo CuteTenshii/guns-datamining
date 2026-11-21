@@ -8,8 +8,8 @@
       var t = a(95155),
         n = a(12115),
         r = a(77328),
-        i = a.n(r);
-      let o = {
+        o = a.n(r);
+      let i = {
         sparkles: (0, t.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "1em",
@@ -198,42 +198,42 @@
             }), r(a)
           };
         return (0, t.jsxs)("div", {
-          className: i().onboardingSelection,
+          className: o().onboardingSelection,
           children: [(0, t.jsxs)("div", {
-            className: i().onboardingSelectionDescription,
+            className: o().onboardingSelectionDescription,
             children: [(0, t.jsx)("h1", {
               children: s("dashboard.onboarding.step1.title")
             }), (0, t.jsx)("h3", {
               children: s("dashboard.onboarding.step1.subtitle")
             })]
           }), (0, t.jsxs)("div", {
-            className: i().boxes,
+            className: o().boxes,
             children: [(0, t.jsx)("div", {
-              className: `${i().box} ${1===a&&i().selectedBox}`,
+              className: `${o().box} ${1===a&&o().selectedBox}`,
               onClick: () => h("searchEngine", 1),
               children: (0, t.jsxs)("span", {
-                children: [o.internet, " ", s("dashboard.onboarding.step1.options.search_engine")]
+                children: [i.internet, " ", s("dashboard.onboarding.step1.options.search_engine")]
               })
             }), (0, t.jsx)("div", {
-              className: `${i().box} ${2===a&&i().selectedBox}`,
+              className: `${o().box} ${2===a&&o().selectedBox}`,
               onClick: () => h("socialMediaProfile", 2),
               children: (0, t.jsxs)("span", {
-                children: [o.profile, " ", s("dashboard.onboarding.step1.options.social_profile")]
+                children: [i.profile, " ", s("dashboard.onboarding.step1.options.social_profile")]
               })
             }), (0, t.jsx)("div", {
-              className: `${i().box} ${3===a&&i().selectedBox}`,
+              className: `${o().box} ${3===a&&o().selectedBox}`,
               onClick: () => h("friend", 3),
               children: (0, t.jsxs)("span", {
-                children: [o.friend, " ", s("dashboard.onboarding.step1.options.friend")]
+                children: [i.friend, " ", s("dashboard.onboarding.step1.options.friend")]
               })
             }), (0, t.jsx)("div", {
-              className: `${i().box} ${4===a&&i().selectedBox}`,
+              className: `${o().box} ${4===a&&o().selectedBox}`,
               onClick: () => h("other", 4),
               children: (0, t.jsxs)("span", {
-                children: [o.other, " ", s("dashboard.onboarding.step1.options.other")]
+                children: [i.other, " ", s("dashboard.onboarding.step1.options.other")]
               })
             }), 4 === a && (0, t.jsx)("input", {
-              className: i().otherInput,
+              className: o().otherInput,
               placeholder: s("dashboard.onboarding.step1.other_placeholder"),
               type: "text",
               value: l,
@@ -265,9 +265,9 @@
             }), r(a)
           };
         return (0, t.jsxs)("div", {
-          className: i().onboardingSelection,
+          className: o().onboardingSelection,
           children: [(0, t.jsxs)("div", {
-            className: i().onboardingSelectionDescription,
+            className: o().onboardingSelectionDescription,
             children: [(0, t.jsx)("h1", {
               children: s("dashboard.onboarding.step2.title", {
                 brand: "guns.lol"
@@ -278,33 +278,33 @@
               })
             })]
           }), (0, t.jsxs)("div", {
-            className: i().boxes,
+            className: o().boxes,
             children: [(0, t.jsx)("div", {
-              className: `${i().box} ${1===a&&i().selectedBox}`,
+              className: `${o().box} ${1===a&&o().selectedBox}`,
               onClick: () => h("personalUse", 1),
               children: (0, t.jsxs)("span", {
-                children: [o.personal, " ", s("dashboard.onboarding.step2.options.personal")]
+                children: [i.personal, " ", s("dashboard.onboarding.step2.options.personal")]
               })
             }), (0, t.jsx)("div", {
-              className: `${i().box} ${2===a&&i().selectedBox}`,
+              className: `${o().box} ${2===a&&o().selectedBox}`,
               onClick: () => h("brandPromotion", 2),
               children: (0, t.jsxs)("span", {
-                children: [o.brand, " ", s("dashboard.onboarding.step2.options.brand")]
+                children: [i.brand, " ", s("dashboard.onboarding.step2.options.brand")]
               })
             }), (0, t.jsx)("div", {
-              className: `${i().box} ${3===a&&i().selectedBox}`,
+              className: `${o().box} ${3===a&&o().selectedBox}`,
               onClick: () => h("contentSharing", 3),
               children: (0, t.jsxs)("span", {
-                children: [o.share, " ", s("dashboard.onboarding.step2.options.content_sharing")]
+                children: [i.share, " ", s("dashboard.onboarding.step2.options.content_sharing")]
               })
             }), (0, t.jsx)("div", {
-              className: `${i().box} ${4===a&&i().selectedBox}`,
+              className: `${o().box} ${4===a&&o().selectedBox}`,
               onClick: () => h("other", 4),
               children: (0, t.jsxs)("span", {
-                children: [o.other, " ", s("dashboard.onboarding.step2.options.other")]
+                children: [i.other, " ", s("dashboard.onboarding.step2.options.other")]
               })
             }), 4 === a && (0, t.jsx)("input", {
-              className: i().otherInput,
+              className: o().otherInput,
               placeholder: s("dashboard.onboarding.step2.other_placeholder"),
               type: "text",
               value: l,
@@ -335,52 +335,52 @@
             }
           })
         }, []), (0, t.jsx)("div", {
-          className: i().premiumOnboarding,
+          className: o().premiumOnboarding,
           children: (0, t.jsxs)("div", {
-            className: i().onboardingSelection,
+            className: o().onboardingSelection,
             children: [(0, t.jsxs)("div", {
-              className: i().onboardingSelectionDescription,
+              className: o().onboardingSelectionDescription,
               children: [(0, t.jsx)("h1", {
                 children: s("dashboard.onboarding.step3.title")
               }), (0, t.jsx)("h3", {
                 children: s("dashboard.onboarding.step3.subtitle")
               })]
             }), (0, t.jsxs)("div", {
-              className: i().premium,
+              className: o().premium,
               children: [(0, t.jsxs)("div", {
-                className: i().premiumDescription,
+                className: o().premiumDescription,
                 children: [(0, t.jsx)("h1", {
                   children: s("common.pricing.premium_plan.name")
                 }), (0, t.jsx)("h3", {
                   children: s("common.pricing.premium_plan.description")
                 })]
               }), (0, t.jsxs)("div", {
-                className: i().features,
+                className: o().features,
                 children: [(0, t.jsxs)("span", {
-                  children: [o.checkmark, " ", s("common.pricing.premium_plan.features.exclusive_badge")]
+                  children: [i.checkmark, " ", s("common.pricing.premium_plan.features.exclusive_badge")]
                 }), (0, t.jsxs)("span", {
-                  children: [o.checkmark, " ", s("common.pricing.premium_plan.features.profile_layouts")]
+                  children: [i.checkmark, " ", s("common.pricing.premium_plan.features.profile_layouts")]
                 }), (0, t.jsxs)("span", {
-                  children: [o.checkmark, " ", s("common.pricing.premium_plan.features.custom_fonts")]
+                  children: [i.checkmark, " ", s("common.pricing.premium_plan.features.custom_fonts")]
                 }), (0, t.jsxs)("span", {
-                  children: [o.checkmark, " ", s("common.pricing.premium_plan.features.typewriter_animation")]
+                  children: [i.checkmark, " ", s("common.pricing.premium_plan.features.typewriter_animation")]
                 }), (0, t.jsxs)("span", {
-                  children: [o.checkmark, " ", s("common.pricing.premium_plan.features.special_profile_effects")]
+                  children: [i.checkmark, " ", s("common.pricing.premium_plan.features.special_profile_effects")]
                 }), (0, t.jsxs)("span", {
-                  children: [o.checkmark, " ", s("common.pricing.premium_plan.features.advanced_customization")]
+                  children: [i.checkmark, " ", s("common.pricing.premium_plan.features.advanced_customization")]
                 }), (0, t.jsxs)("span", {
-                  children: [o.checkmark, " ", s("common.pricing.premium_plan.features.metadata_seo_customization")]
+                  children: [i.checkmark, " ", s("common.pricing.premium_plan.features.metadata_seo_customization")]
                 })]
               }), (0, t.jsxs)("div", {
-                className: i().bottomWrapper,
+                className: o().bottomWrapper,
                 children: [(0, t.jsxs)("div", {
-                  className: i().price,
+                  className: o().price,
                   children: [(0, t.jsxs)("h1", {
                     children: [(0, p.$g)(p.q9.premium), (0, t.jsxs)("span", {
                       children: ["/", s("common.pricing.lifetime_text")]
                     })]
                   }), (0, t.jsx)("span", {
-                    className: i().lifetimeText,
+                    className: o().lifetimeText,
                     children: s("common.pricing.lifetime_text_description")
                   })]
                 }), (0, t.jsx)(h.A, {
@@ -408,20 +408,20 @@
             }
           })
         }, []), (0, t.jsxs)("div", {
-          className: i().onboardingSelection,
+          className: o().onboardingSelection,
           children: [(0, t.jsxs)("div", {
-            className: i().onboardingSelectionDescription,
+            className: o().onboardingSelectionDescription,
             children: [(0, t.jsxs)("h1", {
-              children: [o.confetti, " ", a("dashboard.onboarding.step4.title")]
+              children: [i.confetti, " ", a("dashboard.onboarding.step4.title")]
             }), (0, t.jsx)("h3", {
               children: a("dashboard.onboarding.step4.subtitle")
             })]
           }), (0, t.jsxs)("div", {
-            className: i().shareWrapper,
+            className: o().shareWrapper,
             children: [(0, t.jsxs)("div", {
-              className: i().share,
+              className: o().share,
               children: [(0, t.jsx)("img", {
-                src: "https://assets.guns.lol/guns_hw_logo_ver_2.png",
+                src: "https://assets.guns.lol/guns_logo_no_background_cropped.png",
                 alt: ""
               }), (0, t.jsxs)("span", {
                 children: ["guns.lol/", s]
@@ -432,10 +432,10 @@
                   copied: e,
                   copy: s
                 }) => (0, t.jsx)("div", {
-                  className: i().copyButtonWrapper,
+                  className: o().copyButtonWrapper,
                   onClick: s,
                   children: (0, t.jsx)("span", {
-                    className: i().copyButton,
+                    className: o().copyButton,
                     children: e ? a("dashboard.onboarding.step4.copy.copied") : a("dashboard.onboarding.step4.copy.default")
                   })
                 })
@@ -443,34 +443,34 @@
             }), (0, t.jsxs)("a", {
               href: `/${s}`,
               target: "_blank",
-              children: [a("dashboard.onboarding.step4.open_page"), " ", o.externalLink, " "]
+              children: [a("dashboard.onboarding.step4.open_page"), " ", i.externalLink, " "]
             })]
           }), (0, t.jsxs)("div", {
-            className: i().getStarted,
+            className: o().getStarted,
             children: [(0, t.jsx)("h1", {
               children: a("dashboard.onboarding.step4.quick_links.title")
             }), (0, t.jsxs)("div", {
-              className: i().links,
+              className: o().links,
               children: [(0, t.jsxs)("span", {
-                children: [a("dashboard.onboarding.step4.quick_links.account_overview"), " ", o.dot, " ", (0, t.jsx)("a", {
+                children: [a("dashboard.onboarding.step4.quick_links.account_overview"), " ", i.dot, " ", (0, t.jsx)("a", {
                   href: "/account",
                   target: "_blank",
                   children: "guns.lol/account"
                 })]
               }), (0, t.jsxs)("span", {
-                children: [a("dashboard.onboarding.step4.quick_links.customize"), " ", o.dot, " ", (0, t.jsx)("a", {
+                children: [a("dashboard.onboarding.step4.quick_links.customize"), " ", i.dot, " ", (0, t.jsx)("a", {
                   href: "/customize",
                   target: "_blank",
                   children: "guns.lol/customize"
                 })]
               }), (0, t.jsxs)("span", {
-                children: [a("dashboard.onboarding.step4.quick_links.links"), " ", o.dot, " ", (0, t.jsx)("a", {
+                children: [a("dashboard.onboarding.step4.quick_links.links"), " ", i.dot, " ", (0, t.jsx)("a", {
                   href: "/links",
                   target: "_blank",
                   children: "guns.lol/links"
                 })]
               }), (0, t.jsxs)("span", {
-                children: [a("dashboard.onboarding.step4.quick_links.templates"), " ", o.dot, " ", (0, t.jsx)("a", {
+                children: [a("dashboard.onboarding.step4.quick_links.templates"), " ", i.dot, " ", (0, t.jsx)("a", {
                   href: "/templates",
                   target: "_blank",
                   children: "guns.lol/templates"
@@ -478,25 +478,25 @@
               })]
             })]
           }), (0, t.jsxs)("div", {
-            className: i().getStarted,
+            className: o().getStarted,
             children: [(0, t.jsx)("h1", {
               children: a("dashboard.onboarding.step4.support.title")
             }), (0, t.jsxs)("div", {
-              className: i().buttons,
+              className: o().buttons,
               children: [(0, t.jsxs)("a", {
                 href: "mailto:support@guns.lol",
-                className: i().button,
-                children: [o.email, " ", a("dashboard.onboarding.step4.support.email")]
+                className: o().button,
+                children: [i.email, " ", a("dashboard.onboarding.step4.support.email")]
               }), (0, t.jsxs)("a", {
                 href: "https://discord.gg/guns",
-                className: i().button,
+                className: o().button,
                 target: "_blank",
-                children: [o.discord, " ", a("dashboard.onboarding.step4.support.discord")]
+                children: [i.discord, " ", a("dashboard.onboarding.step4.support.discord")]
               }), (0, t.jsxs)("a", {
                 href: "https://help.guns.lol",
-                className: i().button,
+                className: o().button,
                 target: "_blank",
-                children: [o.helpCenter, " ", a("dashboard.onboarding.step4.support.help_center")]
+                children: [i.helpCenter, " ", a("dashboard.onboarding.step4.support.help_center")]
               })]
             })]
           })]
@@ -568,15 +568,15 @@
             },
             visibleToasts: 2
           }), (0, t.jsxs)("div", {
-            className: i().onboarding,
+            className: o().onboarding,
             children: [(0, t.jsxs)("div", {
-              className: i().onboardingQuestion,
+              className: o().onboardingQuestion,
               children: [(0, t.jsxs)("div", {
-                className: i().onboardingHeader,
+                className: o().onboardingHeader,
                 children: [(0, t.jsxs)("div", {
-                  className: i().gunsLogo,
+                  className: o().gunsLogo,
                   children: [(0, t.jsx)("img", {
-                    src: "https://assets.guns.lol/guns_hw_logo_ver_2.png",
+                    src: "https://assets.guns.lol/guns_logo_no_background_cropped.png",
                     alt: ""
                   }), (0, t.jsxs)("h1", {
                     children: ["guns", (0, t.jsx)("span", {
@@ -584,19 +584,19 @@
                     }), "lol"]
                   })]
                 }), (0, t.jsx)("div", {
-                  className: i().progress,
+                  className: o().progress,
                   children: [1, 2, 3, 4].map((e, s) => (0, t.jsxs)("div", {
-                    className: i().stepContainer,
+                    className: o().stepContainer,
                     children: [(0, t.jsx)("span", {
-                      className: `${r===e?i().selectedStep:i().stepProgress}`,
+                      className: `${r===e?o().selectedStep:o().stepProgress}`,
                       children: e
                     }, e), 4 !== e && (0, t.jsx)("span", {
-                      className: i().line
+                      className: o().line
                     })]
                   }, s))
                 })]
               }), (0, t.jsxs)("div", {
-                className: i().onboardingQuestionPadding,
+                className: o().onboardingQuestionPadding,
                 children: [1 === r ? (0, t.jsx)(l, {
                   setOnboardingData: g
                 }) : 2 === r ? (0, t.jsx)(c, {
@@ -607,7 +607,7 @@
                   setOnboardingData: g,
                   username: e.username
                 }), (0, t.jsxs)("div", {
-                  className: i().onboardingButtons,
+                  className: o().onboardingButtons,
                   children: [(0, t.jsx)("span", {
                     onClick: T,
                     dangerouslySetInnerHTML: {
@@ -622,13 +622,13 @@
                 })]
               })]
             }), (0, t.jsx)("div", {
-              className: i().onboardingImage,
+              className: o().onboardingImage,
               children: (0, t.jsxs)("div", {
-                className: i().onboardingWrapper,
+                className: o().onboardingWrapper,
                 children: [(0, t.jsxs)("div", {
-                  className: i().onboardingImageDescription,
+                  className: o().onboardingImageDescription,
                   children: [(0, t.jsxs)("h1", {
-                    children: [o.sparkles, " ", s("dashboard.onboarding.hero.title")]
+                    children: [i.sparkles, " ", s("dashboard.onboarding.hero.title")]
                   }), (0, t.jsx)("h3", {
                     children: s("dashboard.onboarding.hero.subtitle")
                   })]
@@ -647,13 +647,13 @@
       a.d(s, {
         $g: () => l,
         KH: () => r,
-        YL: () => i,
+        YL: () => o,
         Yi: () => n,
         dd: () => d,
         gP: () => c,
         o3: () => h,
         q9: () => t,
-        wH: () => o
+        wH: () => i
       });
       let t = {
           free: 0,
@@ -682,10 +682,10 @@
           price: 34.99
         }],
         r = 5,
-        i = 200;
+        o = 200;
 
-      function o(e) {
-        return !Number.isInteger(e) || e < r || e > i ? null : (100 * Math.ceil((e <= 10 ? 100 * e - 1 : e <= 25 ? 999 + Math.round(1e3 / 15 * (e - 10)) : e <= 50 ? 1999 + (e - 25) * 60 : 3499 + (e - 50) * 50) / 100) - 1) / 100
+      function i(e) {
+        return !Number.isInteger(e) || e < r || e > o ? null : (100 * Math.ceil((e <= 10 ? 100 * e - 1 : e <= 25 ? 999 + Math.round(1e3 / 15 * (e - 10)) : e <= 50 ? 1999 + (e - 25) * 60 : 3499 + (e - 50) * 50) / 100) - 1) / 100
       }
       let d = 15;
 
@@ -766,9 +766,9 @@
         timeout: s = 2e3,
         children: a,
         spanClassName: r,
-        opts: i
+        opts: o
       }) {
-        let [o, d] = (0, n.useState)(!1), l = (0, n.useRef)(null);
+        let [i, d] = (0, n.useState)(!1), l = (0, n.useRef)(null);
         (0, n.useEffect)(() => () => {
           l.current && clearTimeout(l.current)
         }, []);
@@ -802,11 +802,11 @@
             onKeyDown: e => {
               ("Enter" === e.key || " " === e.key) && (e.preventDefault(), m())
             },
-            children: o ? i?.copiedIcon ?? i?.copiedText ?? "Copied" : i?.copyIcon ?? i?.copyText ?? "Copy"
+            children: i ? o?.copiedIcon ?? o?.copiedText ?? "Copied" : o?.copyIcon ?? o?.copyText ?? "Copy"
           });
         return "function" == typeof a ? (0, t.jsx)(t.Fragment, {
           children: a({
-            copied: o,
+            copied: i,
             copy: m,
             isSupported: c
           })

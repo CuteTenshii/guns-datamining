@@ -1262,31 +1262,3 @@ html.rtl .GUNS__f8-56131356-52714b53-b7c81d2d {
   width: fit-content;
   display: block
 }
-
-.GUNS__25-6223a480-d26fee40-5e2e7253 {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 10
-}
-
-.GUNS__25-6223a480-d26fee40-5e2e7253 img {
-  width: 38px;
-  height: 38px;
-  filter: invert(75%) sepia(15%) saturate(700%) hue-rotate(225deg);
-  opacity: .65
-}
-
-@media (max-width:600px) {
-  .GUNS__25-6223a480-d26fee40-5e2e7253 img {
-    width: 30px;
-    height: 30px
-  }
-}
-
-@media (prefers-reduced-motion:reduce) {
-  .GUNS__25-6223a480-d26fee40-5e2e7253 {
-    display: none
-  }
-}
