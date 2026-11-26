@@ -1,95 +1,18 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [5395], {
-    12521: (e, a, c) => {
+  [5041], {
+    15041: (e, c, a) => {
       "use strict";
-      c.d(a, {
-        dO: () => o,
-        vJ: () => t
+      a.d(c, {
+        A: () => b
       });
-      let d = ["cursor", "background", "avatar", "cover", "icon", "audio", "clickSound", "banner", "metadata", "font", "templateImage", "badge", "imagehostUpload"],
-        i = {
-          cursor: {
-            exts: ["png", "jpg", "jpeg", "webp", "gif", "cur"],
-            mimes: ["image/webp", "image/gif", "image/png", "image/jpeg", "image/jpg"],
-            maxMB: 5
-          },
-          background: {
-            exts: ["webp", "gif", "mp4", "m4v", "webm", "png", "jpg", "jpeg", "mov", "m4v", "mkv"],
-            mimes: ["image/webp", "image/gif", "video/mp4", "video/x-m4v", "video/webm", "image/png", "image/jpeg", "image/jpg", "video/quicktime", "video/x-matroska", "video/m4v", "video/mkv"],
-            maxMB: 100
-          },
-          avatar: {
-            exts: ["gif", "webp", "png", "jpg", "jpeg"],
-            mimes: ["image/gif", "image/webp", "image/png", "image/jpeg", "image/jpg"],
-            maxMB: 5
-          },
-          cover: {
-            exts: ["gif", "webp", "png", "jpg", "jpeg"],
-            mimes: ["image/gif", "image/webp", "image/png", "image/jpeg", "image/jpg"],
-            maxMB: 10
-          },
-          icon: {
-            exts: ["gif", "webp", "png", "jpg", "jpeg"],
-            mimes: ["image/gif", "image/webp", "image/png", "image/jpeg", "image/jpg"],
-            maxMB: 10
-          },
-          audio: {
-            exts: ["mp3", "aac", "m4a"],
-            mimes: ["audio/mpeg", "audio/mp3", "audio/aac", "audio/x-aac", "audio/vnd.dlna.adts", "audio/adts", "audio/mp4", "audio/mp4a-latm", "audio/x-m4a", "audio/m4a"],
-            maxMB: 10
-          },
-          clickSound: {
-            exts: ["mp3", "aac", "m4a", "ogg", "opus", "wav"],
-            mimes: ["audio/mpeg", "audio/mp3", "audio/aac", "audio/x-aac", "audio/vnd.dlna.adts", "audio/adts", "audio/mp4", "audio/mp4a-latm", "audio/x-m4a", "audio/m4a", "audio/ogg", "audio/ogg; codecs=opus", "audio/opus", "application/ogg", "audio/wav", "audio/wave", "audio/x-wav"],
-            maxMB: 1
-          },
-          banner: {
-            exts: ["gif", "webp", "png", "jpg", "jpeg"],
-            mimes: ["image/gif", "image/webp", "image/png", "image/jpeg", "image/jpg"],
-            maxMB: 10
-          },
-          metadata: {
-            exts: ["gif", "ico", "png", "jpeg", "jpg"],
-            mimes: ["image/gif", "image/vnd.microsoft.icon", "image/png", "image/jpeg", "image/jpg", "image/x-icon"],
-            maxMB: 10
-          },
-          font: {
-            exts: ["woff", "ttf", "otf"],
-            mimes: ["font/woff", "font/ttf", "font/otf"],
-            maxMB: 5
-          },
-          templateImage: {
-            exts: ["png", "jpg", "jpeg", "gif"],
-            mimes: ["image/gif", "image/png", "image/jpeg", "image/jpg"],
-            maxMB: 10
-          },
-          badge: {
-            exts: ["png", "jpg", "jpeg", "gif", "webp"],
-            mimes: ["image/png", "image/jpeg", "image/jpg", "image/gif", "image/webp"],
-            maxMB: 10
-          },
-          imagehostUpload: {
-            exts: ["jpeg", "png", "gif", "webp", "mp4", "m4v", "jpg", "mov", "webm"],
-            mimes: ["image/jpeg", "image/png", "image/gif", "image/webp", "video/mp4", "video/m4v", "video/x-m4v", "video/quicktime", "video/webm"]
-          }
-        },
-        t = Object.fromEntries(d.map(e => [e, i[e].exts.map(e => e.startsWith(".") ? e : `.${e}`)]));
-      Object.fromEntries(d.map(e => [e, [...i[e].exts]])), Object.fromEntries(d.map(e => [e, [...i[e].mimes]]));
-      let o = Object.fromEntries(d.filter(e => "imagehostUpload" !== e).map(e => [e, i[e].maxMB]))
-    },
-    15041: (e, a, c) => {
-      "use strict";
-      c.d(a, {
-        A: () => o
-      });
-      var d = c(95155);
-      c(12115);
-      var i = c(79153),
-        t = c.n(i);
-      let o = {
+      var d = a(95155);
+      a(12115);
+      var l = a(79153),
+        _ = a.n(l);
+      let b = {
         staff: (0, d.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
-          className: t().staff,
+          className: _().staff,
           width: "1em",
           height: "1em",
           viewBox: "2.3 2 19.39 20",
@@ -100,7 +23,7 @@
         }),
         premium: (0, d.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
-          className: t().premium,
+          className: _().premium,
           width: "1em",
           height: "1em",
           viewBox: "23 32 465 448",
@@ -111,7 +34,7 @@
         }),
         verified: (0, d.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
-          className: t().verified,
+          className: _().verified,
           width: "1em",
           height: "1em",
           viewBox: "1 1.5 22 21",
@@ -122,7 +45,7 @@
         }),
         donor: (0, d.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
-          className: t().donor,
+          className: _().donor,
           width: "1em",
           height: "1em",
           viewBox: "2.01 2.01 19.98 19.98",
@@ -133,7 +56,7 @@
         }),
         og: (0, d.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
-          className: t().og,
+          className: _().og,
           width: "1em",
           height: "1em",
           viewBox: "4.39 2 15.22 20.97",
@@ -144,7 +67,7 @@
         }),
         serverBooster: (0, d.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
-          className: t().serverBooster,
+          className: _().serverBooster,
           width: "1em",
           height: "1em",
           viewBox: "4.99 3 14 18",
@@ -155,7 +78,7 @@
         }),
         winner: (0, d.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
-          className: t().winner,
+          className: _().winner,
           width: "1em",
           height: "1em",
           viewBox: "2 2 20 20.75",
@@ -172,7 +95,7 @@
         }),
         second: (0, d.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
-          className: t().second,
+          className: _().second,
           width: "1em",
           height: "1em",
           viewBox: "5 2 14 20",
@@ -189,7 +112,7 @@
         }),
         third: (0, d.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
-          className: t().third,
+          className: _().third,
           width: "1em",
           height: "1em",
           viewBox: "5 2 14 20",
@@ -206,7 +129,7 @@
         }),
         imagehost: (0, d.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
-          className: t().imageHost,
+          className: _().imageHost,
           width: "1em",
           height: "1em",
           viewBox: "2 2 20 20",
@@ -217,7 +140,7 @@
         }),
         bugHunter: (0, d.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
-          className: t().bugHunter,
+          className: _().bugHunter,
           width: "1em",
           height: "1em",
           viewBox: "4 3.41 16 17.59",
@@ -228,7 +151,7 @@
         }),
         christmas2024: (0, d.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
-          className: t().christmas2024,
+          className: _().christmas2024,
           width: "1em",
           height: "1em",
           viewBox: "0 0 14 14",
@@ -241,7 +164,7 @@
         }),
         helper: (0, d.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
-          className: t().helper,
+          className: _().helper,
           width: "1em",
           height: "1em",
           viewBox: "5 2 14 20",
@@ -252,7 +175,7 @@
         }),
         easter2025: (0, d.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
-          className: t().easter2025,
+          className: _().easter2025,
           width: "1em",
           height: "1em",
           viewBox: "4.5 2 15 19.99",
@@ -263,7 +186,7 @@
         }),
         gifter: (0, d.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
-          className: t().gifter,
+          className: _().gifter,
           width: "1em",
           height: "1em",
           viewBox: "2 2 16 16",
@@ -280,7 +203,7 @@
         }),
         theMillion: (0, d.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
-          className: t().theMillion,
+          className: _().theMillion,
           width: "1em",
           height: "1em",
           viewBox: "2.01 1 20.99 21",
@@ -294,7 +217,7 @@
         }),
         domainLegend: (0, d.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
-          className: t().domainLegend,
+          className: _().domainLegend,
           width: "1em",
           height: "1em",
           viewBox: "2.18 2.38 19.77 19.77",
@@ -305,7 +228,7 @@
         }),
         hone: (0, d.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
-          className: t().hone,
+          className: _().hone,
           width: "1em",
           height: "1em",
           viewBox: "2 3 20 17.35",
@@ -316,7 +239,7 @@
         }),
         christmas2025: (0, d.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
-          className: t().christmas2025,
+          className: _().christmas2025,
           width: "1em",
           height: "1em",
           viewBox: "2.7 2 18.61 20",
@@ -325,9 +248,23 @@
             d: "m20.79 13.95l-2.33.62l-2-1.13v-2.88l2-1.13l2.33.62l.52-1.93l-1.77-.47l.46-1.77l-1.93-.52l-.62 2.33l-2 1.13L13 7.38V5.12l1.71-1.71L13.29 2L12 3.29L10.71 2L9.29 3.41L11 5.12v2.26L8.5 8.82l-2-1.13l-.58-2.33L4 5.88l.47 1.77l-1.77.47l.52 1.93l2.33-.62l2 1.13v2.89l-2 1.13l-2.33-.62l-.52 1.93l1.77.47L4 18.12l1.93.52l.62-2.33l2-1.13L11 16.62v2.26l-1.71 1.71L10.71 22L12 20.71L13.29 22l1.41-1.41l-1.7-1.71v-2.26l2.5-1.45l2 1.13l.62 2.33l1.88-.51l-.47-1.77l1.77-.47zM9.5 10.56L12 9.11l2.5 1.45v2.88L12 14.89l-2.5-1.45z"
           })
         }),
+        blackWeek2026: (0, d.jsxs)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          className: _().blackWeek2026,
+          width: "1em",
+          height: "1em",
+          viewBox: "0 0 24 24",
+          children: [(0, d.jsx)("path", {
+            fill: "currentColor",
+            d: "M19.9 2.307a.483.483 0 0 0-.9 0l-.43 1.095a.48.48 0 0 1-.272.274l-1.091.432a.486.486 0 0 0 0 .903l1.091.432a.48.48 0 0 1 .272.273L19 6.81c.162.41.74.41.9 0l.43-1.095a.48.48 0 0 1 .273-.273l1.091-.432a.486.486 0 0 0 0-.903l-1.091-.432a.48.48 0 0 1-.273-.274zM16.033 8.13a.483.483 0 0 0-.9 0l-.157.399a.48.48 0 0 1-.272.273l-.398.158a.486.486 0 0 0 0 .903l.398.157c.125.05.223.148.272.274l.157.399c.161.41.739.41.9 0l.157-.4a.48.48 0 0 1 .272-.273l.398-.157a.486.486 0 0 0 0-.903l-.398-.158a.48.48 0 0 1-.272-.273z"
+          }), (0, d.jsx)("path", {
+            fill: "currentColor",
+            d: "M12 22c5.523 0 10-4.477 10-10c0-.463-.694-.54-.933-.143a6.5 6.5 0 1 1-8.924-8.924C12.54 2.693 12.463 2 12 2C6.477 2 2 6.477 2 12s4.477 10 10 10"
+          })]
+        }),
         summer2026: (0, d.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
-          className: t().summer2026,
+          className: _().summer2026,
           width: "1em",
           height: "1em",
           viewBox: "0 0 24 24",
@@ -338,7 +275,7 @@
         }),
         easter2026: (0, d.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
-          className: t().easter2026,
+          className: _().easter2026,
           width: "1em",
           height: "1em",
           viewBox: "5 2 14 19.5",
@@ -348,21 +285,6 @@
           })
         })
       }
-    },
-    45941: (e, a, c) => {
-      "use strict";
-      c.d(a, {
-        nB: () => l,
-        $h: () => o,
-        hR: () => t,
-        o2: () => r
-      });
-      var d = c(12521);
-      let i = JSON.parse('{"n":{"socials":[],"user_badges":[],"custom_badges":[],"color":"#1b1b1b","text_color":"#ffffff","icon_color":"#ffffff","bg_color":"#080808","gradient_1":"#881c9c","gradient_2":"#0d0d0d","profile_gradient":false,"use_discord_avatar":false,"volume_control":false,"badge_glow":true,"social_glow":true,"username_glow":true,"swap_colors":false,"monochrome":true,"animated_title":false,"shuffle_audios":false,"audio_player":false,"location":"","discord_avatar_decoration":true,"page_views":0,"blur":10,"opacity":0.5,"url":"","audio":[],"avatar":"","custom_cursor":"","description":"","presence":"","profile_widget":{"type":"discord_presence","value":"","clock_face_style":"dark","clock_hidden":false,"clock_time_format":"24h"},"discord_presence_settings":{"show_badges":true,"show_guild_tag":true,"idle_text":""},"display_name":"","background_effects":"","background_effects_color":"#ffffff","username_effects":"","premium":{"effects_color":"#ffffff","badge_color":"#ffffff","border_color":"#ffffff","typewriter_enabled":false,"typewriter_speed":5,"typewriter_delete_speed":7,"typewriter":[],"hide_views":false,"border_enabled":false,"border_style":"static","border_opacity":0.3,"second_tab_enabled":false,"monochrome_badges":false,"animation":"fade","parallax_animation":false,"join_date":"relative","border_width":2,"border_radius":20,"avatar_radius":35,"links_position":"center","portfolio_border_radius":20,"second_tab":{},"cursor_effects":"","font":"satoshi","page_enter_text":"","page_enter_subtitle":"","page_enter_icon":"","click_sound":"none","click_sound_custom_url":"","layout":"default","portfolio_modules":[{"id":"portfolio-top-hero","type":"hero","visible":true,"settings":{"hero_style":"classic","show_avatar":true,"show_buttons":true}},{"id":"portfolio-about","type":"about","visible":true,"settings":{"title":"About me","description":"","secondary_description":"","cards":[]}}],"banner":"","buttons":[],"show_url":false,"text_align":"center","button_shadow":false,"button_border_radius":12,"metadata":{"title":"","description":"","image":"","favicon":"","information_overlay":false}}}}'),
-        t = i.n,
-        o = i.n.premium,
-        l = d.vJ,
-        r = d.dO
     },
     79153: e => {
       e.exports = {
@@ -578,68 +500,9 @@
         fadeOut: "GUNS__95-3b858808-88130984-23b0f7f4",
         overlayExit: "GUNS__22-cd10bc5e-19b266bd-785fd4d3",
         audioPlayerInner: "GUNS__2d-2aa3552d-eb527a3b-5138acf3",
+        blackWeek2026: "GUNS__97-c91ee6e9-1c3e52cd-59ae2e00",
         zoomInSpin: "GUNS__d4-83c64042-656db435-1caac8e0",
         fadeIn: "GUNS__2f-b32f1c4e-17b0d833-f0c99168"
-      }
-    },
-    99387: (e, a, c) => {
-      "use strict";
-      c.d(a, {
-        A: () => t
-      });
-      var d = c(95155),
-        i = c(12115);
-
-      function t({
-        value: e,
-        timeout: a = 2e3,
-        children: c,
-        spanClassName: t,
-        opts: o
-      }) {
-        let [l, r] = (0, i.useState)(!1), f = (0, i.useRef)(null);
-        (0, i.useEffect)(() => () => {
-          f.current && clearTimeout(f.current)
-        }, []);
-        let s = (0, i.useMemo)(() => "undefined" != typeof navigator && !!navigator.clipboard, [!0]),
-          _ = (0, i.useCallback)(async () => {
-            if ("undefined" == typeof document) return !1;
-            try {
-              let a = document.createElement("textarea");
-              a.value = e, a.style.position = "fixed", a.style.opacity = "0", document.body.appendChild(a), a.focus(), a.select();
-              let c = document.execCommand("copy");
-              return document.body.removeChild(a), c
-            } catch {
-              return !1
-            }
-          }, [e]),
-          b = (0, i.useCallback)(async () => {
-            if (s && window.isSecureContext && navigator.clipboard) try {
-              return await navigator.clipboard.writeText(e), !0
-            } catch {}
-            return await _()
-          }, [_, !0, s, e]),
-          m = (0, i.useCallback)(async () => {
-            await b() && (r(!0), f.current && clearTimeout(f.current), f.current = setTimeout(() => r(!1), a))
-          }, [b, a]),
-          n = (0, d.jsx)("span", {
-            onClick: () => {
-              m()
-            },
-            className: t,
-            tabIndex: 0,
-            onKeyDown: e => {
-              ("Enter" === e.key || " " === e.key) && (e.preventDefault(), m())
-            },
-            children: l ? o?.copiedIcon ?? o?.copiedText ?? "Copied" : o?.copyIcon ?? o?.copyText ?? "Copy"
-          });
-        return "function" == typeof c ? (0, d.jsx)(d.Fragment, {
-          children: c({
-            copied: l,
-            copy: m,
-            isSupported: s
-          })
-        }) : n
       }
     }
   }

@@ -45,101 +45,103 @@
       "use strict";
       let t;
       s.r(a), s.d(a, {
-        default: () => z
+        default: () => X
       });
       var n = s(95155),
-        d = s(12115),
-        o = s(50163),
-        i = s.n(o),
-        r = s(66609),
-        c = s(7109),
-        l = s(15041),
-        u = s(33029),
-        m = s(58455),
-        h = s(81469),
-        b = s(98241),
-        g = s.n(b),
-        p = s(30184),
-        x = s(91801),
-        f = s.n(x),
-        j = s(3434),
-        v = s(97478),
-        _ = s(50686),
-        N = s(13699),
-        y = s(86891),
-        C = s(61836);
+        d = s(98028),
+        o = s(24795),
+        i = s(12115),
+        r = s(50163),
+        c = s.n(r),
+        l = s(66609),
+        u = s(7109),
+        m = s(15041),
+        h = s(33029),
+        b = s(58455),
+        g = s(81469),
+        p = s(98241),
+        x = s.n(p),
+        f = s(30184),
+        j = s(91801),
+        v = s.n(j),
+        _ = s(3434),
+        N = s(97478),
+        y = s(50686),
+        C = s(13699),
+        B = s(86891),
+        w = s(61836);
 
-      function B({
+      function k({
         isDonor: e
       }) {
-        let a = (0, y.kj)(),
-          [s, t] = (0, d.useState)(0),
-          [o, i] = (0, d.useState)(!1),
+        let a = (0, B.kj)(),
+          [s, t] = (0, i.useState)(0),
+          [d, o] = (0, i.useState)(!1),
           r = async () => {
-            s < C.q9.donationMinimum || i(!0)
+            s < w.q9.donationMinimum || o(!0)
           };
         return (0, n.jsx)(n.Fragment, {
-          children: o ? (0, n.jsx)(_.A, {
+          children: d ? (0, n.jsx)(y.A, {
             type: "donation",
             donationAmount: s,
-            purchaseSource: N.v.badges
+            purchaseSource: C.v.badges
           }) : (0, n.jsxs)("div", {
-            className: f().donation,
+            className: v().donation,
             children: [(0, n.jsx)("h3", {
               children: a("dashboard.account.badges.donation_modal.description")
             }), (0, n.jsxs)("div", {
-              className: f().donationAmount,
-              children: [(0, n.jsx)(v.A, {
+              className: v().donationAmount,
+              children: [(0, n.jsx)(N.A, {
                 featureName: a("dashboard.account.badges.donation_modal.amount_label"),
                 onChangeFunction: e => {
                   t(e)
                 },
-                min: C.q9.donationMinimum,
+                min: w.q9.donationMinimum,
                 max: 1e4,
                 step: .01,
                 value: s,
-                placeholder: C.q9.donorBadgeMinimum,
-                icon: j.A.donation
-              }), s < C.q9.donorBadgeMinimum && !e ? (0, n.jsx)("h3", {
-                className: f().donateMoreText,
+                placeholder: w.q9.donorBadgeMinimum,
+                icon: _.A.donation
+              }), s < w.q9.donorBadgeMinimum && !e ? (0, n.jsx)("h3", {
+                className: v().donateMoreText,
                 children: a("dashboard.account.badges.donation_modal.badge_requirement", {
-                  amount: (C.q9.donorBadgeMinimum - s).toFixed(2)
+                  amount: (w.q9.donorBadgeMinimum - s).toFixed(2)
                 })
               }) : e && (0, n.jsx)("h3", {
-                className: f().alreadyDonatedText,
+                className: v().alreadyDonatedText,
                 children: a("dashboard.account.badges.donation_modal.already_donor")
               })]
             }), (0, n.jsx)("button", {
-              className: f().payButton,
+              className: v().payButton,
               onClick: r,
               children: a("dashboard.account.badges.donation_modal.pay_button")
             })]
           })
         })
       }
-      var w = s(57157),
-        S = s(44923),
-        A = s(87256),
-        k = s(39768);
+      var S = s(57157),
+        A = s(44923),
+        P = s(87256),
+        E = s(39768);
 
-      function P({
+      function T({
         badges: e,
         setBadges: a,
         badgeIcons: s,
         iconNameMapper: t,
-        badgeNameMapper: o,
-        handleBadgeToggle: c
+        badgeNameMapper: d,
+        handleBadgeToggle: o
       }) {
-        let l = (0, y.kj)(),
-          [u, m] = (0, d.useState)(e),
-          [h, b] = (0, d.useState)(null),
-          [g, p] = (0, d.useState)(!1);
-        (0, d.useEffect)(() => {
+        let r = (0, B.kj)(),
+          [u, m] = (0, i.useState)(e),
+          [h, b] = (0, i.useState)(null),
+          [g, p] = (0, i.useState)(!1);
+        (0, i.useEffect)(() => {
           p(!0)
-        }, []), (0, d.useEffect)(() => {
+        }, []), (0, i.useEffect)(() => {
           m(e)
         }, [e]);
-        let x = (0, S.FR)((0, S.MS)(S.AN, {
+        let x = (0, A.FR)((0, A.MS)(A.AN, {
             activationConstraint: {
               distance: 10
             }
@@ -154,7 +156,7 @@
             let n = u.findIndex(e => e.name === s.id),
               d = u.findIndex(e => e.name === t.id);
             if (-1 === n || -1 === d || d === n) return;
-            let o = (0, A.VE)(u, n, d),
+            let o = (0, P.VE)(u, n, d),
               i = o.map(e => e.isString ? e.name : {
                 name: e.name
               });
@@ -167,11 +169,11 @@
                 newOrder: i,
                 type: "userBadge"
               })
-            })).ok || r.oR.error(l("dashboard.account.errors.badge_order"))
+            })).ok || l.oR.error(r("dashboard.account.errors.badge_order"))
           };
-        return g ? (0, n.jsxs)(S.Mp, {
+        return g ? (0, n.jsxs)(A.Mp, {
           sensors: x,
-          collisionDetection: S.fp,
+          collisionDetection: A.fp,
           onDragStart: e => {
             let {
               active: a
@@ -179,36 +181,36 @@
             s && b(s)
           },
           onDragEnd: f,
-          children: [(0, n.jsx)(A.gB, {
+          children: [(0, n.jsx)(P.gB, {
             items: u.map(e => e.name),
-            strategy: A.vl,
+            strategy: P.vl,
             children: (0, n.jsx)("div", {
-              className: i().userBadgesContainer,
+              className: c().userBadgesContainer,
               "data-vaul-no-drag": !0,
-              children: u.map((e, d) => (0, n.jsx)(E, {
+              children: u.map((e, i) => (0, n.jsx)(M, {
                 item: e,
                 setBadges: a,
                 badgeIcons: s,
                 iconNameMapper: t,
-                badgeNameMapper: o,
-                handleBadgeToggle: c
-              }, d))
+                badgeNameMapper: d,
+                handleBadgeToggle: o
+              }, i))
             })
-          }), (0, n.jsx)(S.Hd, {
-            children: h && (0, n.jsx)(E, {
+          }), (0, n.jsx)(A.Hd, {
+            children: h && (0, n.jsx)(M, {
               item: h,
               setBadges: a,
               badgeIcons: s,
               iconNameMapper: t,
-              badgeNameMapper: o,
-              handleBadgeToggle: c,
+              badgeNameMapper: d,
+              handleBadgeToggle: o,
               isOverlay: !0
             })
           })]
         }) : null
       }
 
-      function E({
+      function M({
         item: e,
         badgeIcons: a,
         iconNameMapper: s,
@@ -217,40 +219,40 @@
         isOverlay: o = !1
       }) {
         let {
-          attributes: r,
-          listeners: l,
-          setNodeRef: u,
+          attributes: i,
+          listeners: r,
+          setNodeRef: l,
           transform: m,
-          transition: b,
-          isDragging: g
-        } = (0, A.gl)({
+          transition: h,
+          isDragging: b
+        } = (0, P.gl)({
           id: e.name,
           animateLayoutChanges: () => !1
         }), p = {
-          transform: k.Ks.Transform.toString(m),
-          transition: b,
-          opacity: +!g
+          transform: E.Ks.Transform.toString(m),
+          transition: h,
+          opacity: +!b
         };
         return (0, n.jsxs)("div", {
-          ref: u,
+          ref: l,
           style: p,
-          className: i().myBadge,
+          className: c().myBadge,
           children: [(0, n.jsx)("div", {
-            className: i().dragHandleContainer,
+            className: c().dragHandleContainer,
+            ...i,
             ...r,
-            ...l,
-            children: c.A.dragHandle
+            children: u.A.dragHandle
           }), (0, n.jsxs)("div", {
-            className: i().myBadgeSwitchWrapper,
+            className: c().myBadgeSwitchWrapper,
             children: [(0, n.jsxs)("div", {
-              className: i().myBadgeWrapper,
+              className: c().myBadgeWrapper,
               children: [(0, n.jsx)("div", {
-                className: i().badgeIcon,
+                className: c().badgeIcon,
                 children: a[s[e.name]]
               }), (0, n.jsx)("h1", {
                 children: t[e.name]
               })]
-            }), (0, n.jsx)(h.A, {
+            }), (0, n.jsx)(g.A, {
               featureName: "",
               onChangeFunction: a => d(a, e.name),
               checked: e.enabled
@@ -259,23 +261,23 @@
         })
       }
 
-      function T({
+      function R({
         customBadges: e,
         setCustomBadges: a,
         handleCustomBadgeEdit: s,
         handleCustomBadgeToggle: t,
-        isPremium: o
+        isPremium: d
       }) {
-        let c = (0, y.kj)(),
-          [l, u] = (0, d.useState)(e),
-          [m, h] = (0, d.useState)(null),
-          [b, g] = (0, d.useState)(!1);
-        (0, d.useEffect)(() => {
+        let o = (0, B.kj)(),
+          [r, u] = (0, i.useState)(e),
+          [m, h] = (0, i.useState)(null),
+          [b, g] = (0, i.useState)(!1);
+        (0, i.useEffect)(() => {
           g(!0)
-        }, []), (0, d.useEffect)(() => {
+        }, []), (0, i.useEffect)(() => {
           u(e)
         }, [e]);
-        let p = (0, S.FR)((0, S.MS)(S.AN, {
+        let p = (0, A.FR)((0, A.MS)(A.AN, {
             activationConstraint: {
               distance: 10
             }
@@ -287,62 +289,62 @@
               over: t
             } = e;
             if (!t || s.id === t.id) return;
-            let n = l.findIndex(e => e.id === s.id),
-              d = l.findIndex(e => e.id === t.id);
+            let n = r.findIndex(e => e.id === s.id),
+              d = r.findIndex(e => e.id === t.id);
             if (-1 === n || -1 === d || d === n) return;
-            let o = (0, A.VE)(l, n, d),
-              i = o.map(e => e.isString ? [e.name, e.icon] : {
+            let i = (0, P.VE)(r, n, d),
+              c = i.map(e => e.isString ? [e.name, e.icon] : {
                 id: e.id
               });
-            u(o), a(o), (await fetch("https://guns.lol/api/account/badges/order", {
+            u(i), a(i), (await fetch("https://guns.lol/api/account/badges/order", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json"
               },
               body: JSON.stringify({
-                newOrder: i,
+                newOrder: c,
                 type: "customBadge"
               })
-            })).ok || r.oR.error(c("dashboard.account.errors.badge_order"))
+            })).ok || l.oR.error(o("dashboard.account.errors.badge_order"))
           };
-        return b ? (0, n.jsxs)(S.Mp, {
+        return b ? (0, n.jsxs)(A.Mp, {
           sensors: p,
-          collisionDetection: S.fp,
+          collisionDetection: A.fp,
           onDragStart: e => {
             let {
               active: a
-            } = e, s = l.find(e => e.id === a.id);
+            } = e, s = r.find(e => e.id === a.id);
             s && h(s)
           },
           onDragEnd: x,
-          children: [(0, n.jsx)(A.gB, {
-            items: l.map(e => e.id),
-            strategy: A.vl,
+          children: [(0, n.jsx)(P.gB, {
+            items: r.map(e => e.id),
+            strategy: P.vl,
             children: (0, n.jsx)("div", {
-              className: i().userBadgesContainer,
+              className: c().userBadgesContainer,
               "data-vaul-no-drag": !0,
-              children: l.map(e => (0, n.jsx)(M, {
+              children: r.map(e => (0, n.jsx)(O, {
                 item: e,
                 setCustomBadges: a,
                 handleCustomBadgeToggle: t,
                 handleCustomBadgeEdit: s,
-                isPremium: o
+                isPremium: d
               }, e.id))
             })
-          }), (0, n.jsx)(S.Hd, {
-            children: m && (0, n.jsx)(M, {
+          }), (0, n.jsx)(A.Hd, {
+            children: m && (0, n.jsx)(O, {
               item: m,
               setCustomBadges: a,
               handleCustomBadgeToggle: t,
               handleCustomBadgeEdit: s,
               isOverlay: !0,
-              isPremium: o
+              isPremium: d
             })
           })]
         }) : null
       }
 
-      function M({
+      function O({
         item: e,
         setCustomBadges: a,
         handleCustomBadgeEdit: s,
@@ -351,41 +353,41 @@
         isOverlay: o = !1
       }) {
         let {
-          attributes: r,
-          listeners: l,
-          setNodeRef: u,
+          attributes: i,
+          listeners: r,
+          setNodeRef: l,
           transform: m,
-          transition: b,
-          isDragging: g
-        } = (0, A.gl)({
+          transition: h,
+          isDragging: b
+        } = (0, P.gl)({
           id: e.id,
           animateLayoutChanges: () => !1
         }), p = {
-          transform: k.Ks.Transform.toString(m),
-          transition: b,
-          opacity: +!g
+          transform: E.Ks.Transform.toString(m),
+          transition: h,
+          opacity: +!b
         };
         return (0, n.jsxs)("div", {
-          ref: u,
+          ref: l,
           style: p,
-          className: i().myBadge,
+          className: c().myBadge,
           children: [d && (0, n.jsx)("div", {
-            className: i().dragHandleContainer,
+            className: c().dragHandleContainer,
+            ...i,
             ...r,
-            ...l,
             style: {
               height: "69px"
             },
-            children: c.A.dragHandle
+            children: u.A.dragHandle
           }), (0, n.jsxs)("div", {
-            className: i().myBadgeSwitchWrapper,
+            className: c().myBadgeSwitchWrapper,
             style: {
               height: "69px"
             },
             children: [(0, n.jsxs)("div", {
-              className: i().myBadgeWrapper,
+              className: c().myBadgeWrapper,
               children: [(0, n.jsx)("div", {
-                className: i().badgeIcon,
+                className: c().badgeIcon,
                 children: (0, n.jsx)("img", {
                   src: e.icon,
                   alt: "Custom Badge Icon"
@@ -394,35 +396,35 @@
                 children: e.name
               })]
             }), (0, n.jsxs)("div", {
-              className: i().customBadgeActionsWrapper,
-              children: [d && (0, n.jsx)(h.A, {
+              className: c().customBadgeActionsWrapper,
+              children: [d && (0, n.jsx)(g.A, {
                 featureName: "",
                 onChangeFunction: a => t(a, e.isString ? e.name : e.id),
                 checked: e.enabled
               }), (0, n.jsx)("span", {
-                className: i().customBadgeSettings,
+                className: c().customBadgeSettings,
                 onClick: () => s({
                   ...e,
                   originalName: e.name
                 }),
-                children: c.A.editBadge
+                children: u.A.editBadge
               })]
             })]
           })]
         })
       }
-      let R = "undefined" != typeof crypto && crypto.randomUUID && crypto.randomUUID.bind(crypto),
-        O = new Uint8Array(16),
-        $ = [];
-      for (let e = 0; e < 256; ++e) $.push((e + 256).toString(16).slice(1));
-      let I = function(e, a, s) {
-        if (R && !a && !e) return R();
+      let $ = "undefined" != typeof crypto && crypto.randomUUID && crypto.randomUUID.bind(crypto),
+        I = new Uint8Array(16),
+        L = [];
+      for (let e = 0; e < 256; ++e) L.push((e + 256).toString(16).slice(1));
+      let D = function(e, a, s) {
+        if ($ && !a && !e) return $();
         let n = (e = e || {}).random ?? e.rng?.() ?? function() {
           if (!t) {
             if ("undefined" == typeof crypto || !crypto.getRandomValues) throw Error("crypto.getRandomValues() not supported. See https://github.com/uuidjs/uuid#getrandomvalues-not-supported");
             t = crypto.getRandomValues.bind(crypto)
           }
-          return t(O)
+          return t(I)
         }();
         if (n.length < 16) throw Error("Random bytes length must be >= 16");
         if (n[6] = 15 & n[6] | 64, n[8] = 63 & n[8] | 128, a) {
@@ -431,140 +433,138 @@
           return a
         }
         return function(e, a = 0) {
-          return ($[e[a + 0]] + $[e[a + 1]] + $[e[a + 2]] + $[e[a + 3]] + "-" + $[e[a + 4]] + $[e[a + 5]] + "-" + $[e[a + 6]] + $[e[a + 7]] + "-" + $[e[a + 8]] + $[e[a + 9]] + "-" + $[e[a + 10]] + $[e[a + 11]] + $[e[a + 12]] + $[e[a + 13]] + $[e[a + 14]] + $[e[a + 15]]).toLowerCase()
+          return (L[e[a + 0]] + L[e[a + 1]] + L[e[a + 2]] + L[e[a + 3]] + "-" + L[e[a + 4]] + L[e[a + 5]] + "-" + L[e[a + 6]] + L[e[a + 7]] + "-" + L[e[a + 8]] + L[e[a + 9]] + "-" + L[e[a + 10]] + L[e[a + 11]] + L[e[a + 12]] + L[e[a + 13]] + L[e[a + 14]] + L[e[a + 15]]).toLowerCase()
         }(n)
       };
-      var L = s(54834),
-        D = s(41458);
+      var U = s(54834),
+        W = s(41458);
 
-      function U() {
-        let e = (0, y.kj)(),
-          [a, s] = (0, d.useState)(1),
-          [t, o] = (0, d.useState)(!1),
-          [r, l] = (0, d.useState)(!1),
-          u = async e => {
-            l(!0)
-          };
+      function F() {
+        let e = (0, B.kj)();
+        (0, d.u)();
+        let [a, s] = (0, i.useState)(1), [t, o] = (0, i.useState)(!1), [r, l] = (0, i.useState)(!1), m = async e => {
+          l(!0)
+        };
         return (0, n.jsx)(n.Fragment, {
-          children: r ? (0, n.jsx)(_.A, {
+          children: r ? (0, n.jsx)(y.A, {
             type: "credits",
             creditsData: {
               amount: a,
-              totalPrice: (0, C.gP)(a).totalPrice
+              totalPrice: (0, w.gP)(a).totalPrice
             },
-            purchaseSource: N.v.badges
+            purchaseSource: C.v.badges
           }) : (0, n.jsxs)("div", {
-            className: i().creditsContainer,
+            className: c().creditsContainer,
             children: [(0, n.jsxs)("div", {
-              className: i().creditsDescription,
+              className: c().creditsDescription,
               children: [(0, n.jsx)("h1", {
                 children: e("dashboard.account.badges.custom.credits_modal.title")
               }), (0, n.jsx)("h3", {
                 children: e("dashboard.account.badges.custom.credits_modal.subtitle")
               })]
             }), (0, n.jsxs)("div", {
-              className: i().creditsOptions,
+              className: c().creditsOptions,
               children: [(0, n.jsx)("h1", {
-                className: i().creditsTitle,
+                className: c().creditsTitle,
                 children: e("dashboard.account.badges.custom.credits_modal.question")
               }), (0, n.jsxs)("div", {
-                className: i().preselectedAmounts,
+                className: c().preselectedAmounts,
                 children: [
                   [1, 3, 5].map(d => {
-                    let r = (0, C.gP)(d).totalPrice,
-                      c = (0, C.gP)(d).discountPercent;
+                    let i = (0, w.gP)(d).totalPrice,
+                      r = (0, w.gP)(d).discountPercent;
                     return (0, n.jsxs)("div", {
-                      className: `${i().preselectedAmount} ${a===d&&!t&&i().active}`,
+                      className: `${c().preselectedAmount} ${a===d&&!t&&c().active}`,
                       onClick: () => {
                         o(!1), s(d)
                       },
                       children: [(0, n.jsx)("span", {
-                        className: i().amountText,
+                        className: c().amountText,
                         children: e("dashboard.account.badges.custom.credits_modal.credit_label", {
                           amount: d,
                           creditsForm: 1 === d ? e("dashboard.account.badges.custom.credits_modal.credit_single") : e("dashboard.account.badges.custom.credits_modal.credit_multiple")
                         })
                       }), (0, n.jsxs)("div", {
-                        className: i().creditsPriceWrapper,
+                        className: c().creditsPriceWrapper,
                         children: [(0, n.jsx)("span", {
-                          className: i().priceDiscount,
+                          className: c().priceDiscount,
                           style: {
-                            opacity: +(c > 0)
+                            opacity: +(r > 0)
                           },
                           children: e("dashboard.account.badges.custom.credits_modal.discount", {
-                            percent: c
+                            percent: r
                           })
                         }), (0, n.jsxs)("span", {
-                          className: i().priceText,
-                          children: [r, "€"]
+                          className: c().priceText,
+                          children: [i, "€"]
                         })]
                       })]
                     }, d)
                   }), (0, n.jsxs)("span", {
-                    className: `${i().customCreditsAmountButton} ${t&&i().active}`,
+                    className: `${c().customCreditsAmountButton} ${t&&c().active}`,
                     onClick: () => {
                       o(!0), s(1)
                     },
-                    children: [c.A.customAmount, " ", e("dashboard.account.badges.custom.credits_modal.custom_amount_button")]
+                    children: [u.A.customAmount, " ", e("dashboard.account.badges.custom.credits_modal.custom_amount_button")]
                   })
                 ]
               }), t && (0, n.jsxs)("div", {
-                className: i().customCreditsAmount,
+                className: c().customCreditsAmount,
                 children: [(0, n.jsxs)("h1", {
                   children: [e("dashboard.account.badges.custom.credits_modal.custom_amount_label"), " ", (0, n.jsx)("span", {
                     style: {
-                      opacity: +((0, C.gP)(a).discountPercent > 0)
+                      opacity: +((0, w.gP)(a).discountPercent > 0)
                     },
                     children: e("dashboard.account.badges.custom.credits_modal.discount", {
-                      percent: (0, C.gP)(a).discountPercent
+                      percent: (0, w.gP)(a).discountPercent
                     })
                   })]
-                }), (0, n.jsx)(v.A, {
+                }), (0, n.jsx)(N.A, {
                   value: a,
                   onChange: s,
-                  icon: c.A.shoppingBag,
+                  icon: u.A.shoppingBag,
                   min: 1,
                   max: 500
                 })]
               }), (0, n.jsx)("span", {
-                className: i().purchaseCreditsButton,
-                onClick: u,
+                className: c().purchaseCreditsButton,
+                onClick: m,
                 children: e("dashboard.account.badges.custom.credits_modal.purchase_button", {
-                  price: (0, C.gP)(a).totalPrice
+                  price: (0, w.gP)(a).totalPrice
                 })
               })]
             })]
           })
         })
       }
-      var F = s(37897),
-        W = s(98542),
-        G = s(79157),
-        H = s(45941),
-        q = s(13782),
-        J = s(12521);
-      let z = ({
+      var G = s(37897),
+        H = s(98542),
+        q = s(79157),
+        J = s(45941),
+        z = s(13782),
+        V = s(12521);
+      let X = ({
         data: e
       }) => {
         var a;
-        let s, t = (0, y.kj)(),
-          o = e.config,
-          [b, x] = (0, d.useState)(""),
-          [f, j] = (0, d.useState)(!1),
-          [v, S] = (0, d.useState)(!0),
-          A = (0, d.useRef)(null),
-          [k, E] = (0, d.useState)(null),
-          M = t("dashboard.account.badges.settings.save_button"),
-          [R, O] = (0, d.useState)(M),
-          [$, z] = (0, d.useState)(e.config.user_badges),
-          [V, X] = (0, d.useState)(e.config.custom_badges),
-          [K, Y] = (0, d.useState)({
+        let s, t = (0, B.kj)(),
+          r = e.config,
+          [p, j] = (0, i.useState)(""),
+          [v, _] = (0, i.useState)(!1),
+          [N, A] = (0, i.useState)(!0),
+          P = (0, i.useRef)(null),
+          [E, M] = (0, i.useState)(null),
+          O = t("dashboard.account.badges.settings.save_button"),
+          [$, I] = (0, i.useState)(O),
+          [L, X] = (0, i.useState)(e.config.user_badges),
+          [K, Y] = (0, i.useState)(e.config.custom_badges),
+          [Q, Z] = (0, i.useState)({
             originalName: "",
             name: "",
             icon: "",
             id: ""
           }),
-          Q = {
+          ee = {
             premium: t("dashboard.account.badges.modals.premium"),
             imagehost: t("dashboard.account.badges.modals.imagehost"),
             bugReport: t("dashboard.account.badges.modals.bug_report"),
@@ -578,77 +578,78 @@
             customBadgePreview: t("dashboard.account.badges.modals.custom_badge_preview"),
             customBadgePurchase: t("dashboard.account.badges.modals.custom_badge_purchase"),
             hone: t("dashboard.account.badges.modals.hone_badge")
-          } [b] || "",
-          Z = e.premium,
-          ee = e.imagehost_access;
-        (0, d.useEffect)(() => {
-          O(M)
-        }, [M]);
-        let ea = (s = {}, (a = ["server_booster", "verified", "donor", "helper", "domain_legend", "hone"]).forEach(e => {
+          } [p] || "",
+          ea = e.premium,
+          es = e.imagehost_access;
+        (0, i.useEffect)(() => {
+          I(O)
+        }, [O]);
+        let et = (s = {}, (a = ["server_booster", "verified", "donor", "helper", "domain_legend", "hone", "black_week_2026"]).forEach(e => {
             s[e] = !1
-          }), 0 === $.length || ("string" == typeof $[0] ? a.forEach(e => {
-            $.includes(e) && (s[e] = !0)
+          }), 0 === L.length || ("string" == typeof L[0] ? a.forEach(e => {
+            L.includes(e) && (s[e] = !0)
           }) : a.forEach(e => {
-            $.find(a => a.name === e) && (s[e] = !0)
+            L.find(a => a.name === e) && (s[e] = !0)
           })), s),
-          es = ea.server_booster,
-          et = ea.verified,
-          en = ea.donor,
-          ed = ea.helper,
-          eo = ea.domain_legend,
-          ei = ea.hone,
-          er = o.premium,
-          [ec, el] = (0, d.useState)(er.monochrome_badges),
-          [eu, em] = (0, d.useState)(er.badge_color),
-          [eh, eb] = (0, d.useState)(e.badge_credits ?? 1),
-          eg = [{
+          en = et.server_booster,
+          ed = et.verified,
+          eo = et.donor,
+          ei = et.helper,
+          er = et.domain_legend,
+          ec = et.hone,
+          el = (0, d.u)(),
+          eu = r.premium,
+          [em, eh] = (0, i.useState)(eu.monochrome_badges),
+          [eb, eg] = (0, i.useState)(eu.badge_color),
+          [ep, ex] = (0, i.useState)(e.badge_credits ?? 1),
+          ef = [{
             name: t("dashboard.account.badges.list.staff.name"),
             description: t("dashboard.account.badges.list.staff.description"),
-            icon: l.A.staff
+            icon: m.A.staff
           }, {
             name: t("dashboard.account.badges.list.helper.name"),
             description: t("dashboard.account.badges.list.helper.description"),
-            icon: l.A.helper,
+            icon: m.A.helper,
             button: {
               text: t("dashboard.account.badges.list.helper.button.text"),
               action: "https://discord.gg/guns",
-              isEnabled: !ed,
+              isEnabled: !ei,
               disabledText: t("dashboard.account.badges.list.helper.button.disabled")
             }
           }, {
             name: t("dashboard.account.badges.list.premium.name"),
             description: t("dashboard.account.badges.list.premium.description"),
-            icon: l.A.premium,
+            icon: m.A.premium,
             button: {
               text: t("dashboard.account.badges.list.premium.button.text"),
               action: function() {
-                x("premium"), j(!0)
+                j("premium"), _(!0)
               },
-              isEnabled: !Z,
+              isEnabled: !ea,
               disabledText: t("dashboard.account.badges.list.premium.button.disabled")
             }
           }, {
             name: t("dashboard.account.badges.list.verified.name"),
             description: t("dashboard.account.badges.list.verified.description"),
-            icon: l.A.verified,
+            icon: m.A.verified,
             button: {
               text: t("dashboard.account.badges.list.verified.button.text"),
               action: function() {
-                x("verified"), j(!0)
+                j("verified"), _(!0)
               },
-              isEnabled: !et,
+              isEnabled: !ed,
               disabledText: t("dashboard.account.badges.list.verified.button.disabled")
             }
           }, {
             name: t("dashboard.account.badges.list.donor.name"),
             description: t("dashboard.account.badges.list.donor.description", {
-              price: (0, C.$g)(C.q9.donorBadgeMinimum)
+              price: (0, w.$g)(w.q9.donorBadgeMinimum)
             }),
-            icon: l.A.donor,
+            icon: m.A.donor,
             button: {
               text: t("dashboard.account.badges.list.donor.button.text"),
               action: function() {
-                x("donation"), j(!0)
+                j("donation"), _(!0)
               },
               isEnabled: !0,
               disabledText: t("dashboard.account.badges.list.donor.button.disabled")
@@ -656,128 +657,140 @@
           }, {
             name: t("dashboard.account.badges.list.gifter.name"),
             description: t("dashboard.account.badges.list.gifter.description"),
-            icon: l.A.gifter,
+            icon: m.A.gifter,
             button: {
               text: t("dashboard.account.badges.list.gifter.button.text"),
               action: function() {
-                x("gift"), j(!0)
+                j("gift"), _(!0)
               },
               isEnabled: !0
             }
           }, {
             name: t("dashboard.account.badges.list.image_host.name"),
             description: t("dashboard.account.badges.list.image_host.description"),
-            icon: l.A.imagehost,
+            icon: m.A.imagehost,
             button: {
               text: t("dashboard.account.badges.list.image_host.button.text"),
               action: function() {
-                x("imagehost"), j(!0)
+                j("imagehost"), _(!0)
               },
-              isEnabled: !ee,
+              isEnabled: !es,
               disabledText: t("dashboard.account.badges.list.image_host.button.disabled")
             }
           }, {
             name: t("dashboard.account.badges.list.domain_legend.name"),
             description: t("dashboard.account.badges.list.domain_legend.description"),
-            icon: l.A.domainLegend,
+            icon: m.A.domainLegend,
             button: {
               text: t("dashboard.account.badges.list.domain_legend.button.text"),
               action: "/imagehost/domains",
-              isEnabled: !eo,
+              isEnabled: !er,
               disabledText: t("dashboard.account.badges.list.domain_legend.button.disabled")
             }
           }, {
             name: t("dashboard.account.badges.list.og.name"),
             description: t("dashboard.account.badges.list.og.description"),
-            icon: l.A.og
+            icon: m.A.og
           }, {
             name: t("dashboard.account.badges.list.server_booster.name"),
             description: t("dashboard.account.badges.list.server_booster.description"),
-            icon: l.A.serverBooster,
+            icon: m.A.serverBooster,
             button: {
               text: t("dashboard.account.badges.list.server_booster.button.text"),
               action: "https://discord.gg/guns",
-              isEnabled: !es,
+              isEnabled: !en,
               disabledText: t("dashboard.account.badges.list.server_booster.button.disabled")
             }
           }, {
             name: t("dashboard.account.badges.list.hone.name"),
             description: t("dashboard.account.badges.list.hone.description"),
-            icon: l.A.hone,
+            icon: m.A.hone,
             button: {
               text: t("dashboard.account.badges.list.hone.button.text"),
               action: function() {
-                x("hone"), j(!0)
+                j("hone"), _(!0)
               },
-              isEnabled: !ei,
+              isEnabled: !ec,
               disabledText: t("dashboard.account.badges.list.hone.button.disabled")
             }
           }, {
             name: t("dashboard.account.badges.list.bug_hunter.name"),
             description: t("dashboard.account.badges.list.bug_hunter.description"),
-            icon: l.A.bugHunter,
+            icon: m.A.bugHunter,
             button: {
               text: t("dashboard.account.badges.list.bug_hunter.button.text"),
               action: function() {
-                x("bugReport"), j(!0)
+                j("bugReport"), _(!0)
               },
               isEnabled: !0,
               disabledText: t("dashboard.account.badges.list.bug_hunter.button.disabled")
             }
           }, {
+            name: t("dashboard.account.badges.list.black_week_2026.name"),
+            description: t(el ? "dashboard.account.badges.list.black_week_2026.description" : "dashboard.account.badges.list.black_week_2026.description_expired"),
+            icon: m.A.blackWeek2026,
+            ...el ? {
+              button: {
+                text: t("dashboard.account.badges.list.black_week_2026.button.text"),
+                action: "https://guns.lol/pricing",
+                isEnabled: !et.black_week_2026,
+                disabledText: t("dashboard.account.badges.list.black_week_2026.button.disabled")
+              }
+            } : {}
+          }, {
             name: t("dashboard.account.badges.list.summer_2026.name"),
             description: t("dashboard.account.badges.list.summer_2026.description"),
-            icon: l.A.summer2026
+            icon: m.A.summer2026
           }, {
             name: t("dashboard.account.badges.list.easter_2026.name"),
             description: t("dashboard.account.badges.list.easter_2026.description"),
-            icon: l.A.easter2026
+            icon: m.A.easter2026
           }, {
             name: t("dashboard.account.badges.list.christmas_2025.name"),
             description: t("dashboard.account.badges.list.christmas_2025.description"),
-            icon: l.A.christmas2025
+            icon: m.A.christmas2025
           }, {
             name: t("dashboard.account.badges.list.easter_2025.name"),
             description: t("dashboard.account.badges.list.easter_2025.description"),
-            icon: l.A.easter2025
+            icon: m.A.easter2025
           }, {
             name: t("dashboard.account.badges.list.christmas_2024.name"),
             description: t("dashboard.account.badges.list.christmas_2024.description"),
-            icon: l.A.christmas2024
+            icon: m.A.christmas2024
           }, {
             name: t("dashboard.account.badges.list.the_million.name"),
             description: t("dashboard.account.badges.list.the_million.description"),
-            icon: l.A.theMillion
+            icon: m.A.theMillion
           }, {
             name: t("dashboard.account.badges.list.winner.name"),
             description: t("dashboard.account.badges.list.winner.description"),
-            icon: l.A.winner
+            icon: m.A.winner
           }, {
             name: t("dashboard.account.badges.list.second.name"),
             description: t("dashboard.account.badges.list.second.description"),
-            icon: l.A.second
+            icon: m.A.second
           }, {
             name: t("dashboard.account.badges.list.third.name"),
             description: t("dashboard.account.badges.list.third.description"),
-            icon: l.A.third
+            icon: m.A.third
           }];
-        (0, d.useEffect)(() => {
+        (0, i.useEffect)(() => {
           if ("undefined" == typeof ResizeObserver) return;
-          let e = A.current;
+          let e = P.current;
           if (!e) return;
           let a = () => {
-              E(e.scrollHeight)
+              M(e.scrollHeight)
             },
             s = new ResizeObserver(a);
           return s.observe(e), a(), () => {
             s.disconnect()
           }
-        }, []), (0, d.useEffect)(() => {
-          v && A.current && E(A.current.scrollHeight)
-        }, [v]);
-        let ep = async () => {
-          x("verifiedPaymentMethods")
-        }, ex = {
+        }, []), (0, i.useEffect)(() => {
+          N && P.current && M(P.current.scrollHeight)
+        }, [N]);
+        let ej = async () => {
+          j("verifiedPaymentMethods")
+        }, ev = {
           staff: t("dashboard.account.badges.list.staff.name"),
           premium: t("dashboard.account.badges.list.premium.name"),
           verified: t("dashboard.account.badges.list.verified.name"),
@@ -792,6 +805,7 @@
           christmas_2024: t("dashboard.account.badges.list.christmas_2024.name"),
           christmas_2025: t("dashboard.account.badges.list.christmas_2025.name"),
           domain_legend: t("dashboard.account.badges.list.domain_legend.name"),
+          black_week_2026: t("dashboard.account.badges.list.black_week_2026.name"),
           summer_2026: t("dashboard.account.badges.list.summer_2026.name"),
           easter_2025: t("dashboard.account.badges.list.easter_2025.name"),
           easter_2026: "Easter 2026",
@@ -799,7 +813,7 @@
           gifter: t("dashboard.account.badges.list.gifter.name"),
           the_million: t("dashboard.account.badges.list.the_million.name"),
           hone: t("dashboard.account.badges.list.hone.name")
-        }, ef = async (e, a) => {
+        }, e_ = async (e, a) => {
           let s = e.target.checked,
             t = await fetch("https://guns.lol/api/account/badges", {
               method: "POST",
@@ -809,101 +823,101 @@
               })
             }),
             n = await t.json();
-          t.ok ? (r.oR.success(n.message), z(n.badges)) : r.oR.error(n.error)
-        }, ej = async () => {
-          O(W.A.loading);
+          t.ok ? (l.oR.success(n.message), X(n.badges)) : l.oR.error(n.error)
+        }, eN = async () => {
+          I(H.A.loading);
           let e = await fetch("https://guns.lol/api/account/badges/settings", {
               method: "POST",
               body: JSON.stringify({
-                monochrome_badges: ec,
-                badge_color: eu
+                monochrome_badges: em,
+                badge_color: eb
               })
             }),
             a = await e.json();
-          e.ok ? (r.oR.success(a.message), setTimeout(() => {
-            O(M)
-          }, 500)) : (r.oR.error(a.error), setTimeout(() => {
-            O(M)
+          e.ok ? (l.oR.success(a.message), setTimeout(() => {
+            I(O)
+          }, 500)) : (l.oR.error(a.error), setTimeout(() => {
+            I(O)
           }, 500))
-        }, ev = v ? null !== k ? {
-          maxHeight: `${k}px`
+        }, ey = N ? null !== E ? {
+          maxHeight: `${E}px`
         } : {} : {
           maxHeight: "0px"
         };
-        (0, d.useEffect)(() => {
-          0 !== $.length && "string" == typeof $[0] && z($.map(e => ({
+        (0, i.useEffect)(() => {
+          0 !== L.length && "string" == typeof L[0] && X(L.map(e => ({
             name: e,
             enabled: !0,
             isString: !0
-          }))), 0 !== V.length && "string" == typeof V[0][0] && X(V.map(e => ({
+          }))), 0 !== K.length && "string" == typeof K[0][0] && Y(K.map(e => ({
             name: e[0],
             icon: e[1],
             enabled: !0,
-            id: I(),
+            id: D(),
             isString: !0
           })))
-        }, [V]);
-        let e_ = () => {
-            x("buyCredits"), j(!0)
+        }, [K]);
+        let eC = () => {
+            j("buyCredits"), _(!0)
           },
-          [eN, ey] = (0, d.useState)(null),
-          [eC, eB] = (0, d.useState)(""),
-          [ew, eS] = (0, d.useState)(null),
-          [eA, ek] = (0, d.useState)(""),
-          eP = async (e, a = !1) => {
+          [eB, ew] = (0, i.useState)(null),
+          [ek, eS] = (0, i.useState)(""),
+          [eA, eP] = (0, i.useState)(null),
+          [eE, eT] = (0, i.useState)(""),
+          eM = async (e, a = !1) => {
             e.target.disabled = !0;
             let s = e.target.files?.[0];
             if (!s) return;
-            let n = H.nB.badge,
-              d = eM(s.name).toLowerCase();
+            let n = J.nB.badge,
+              d = e$(s.name).toLowerCase();
             if (!n.includes(d)) {
-              r.oR.error(t("dashboard.account.badges.errors.invalid_file")), e.target.disabled = !1, e.target.value = "";
+              l.oR.error(t("dashboard.account.badges.errors.invalid_file")), e.target.disabled = !1, e.target.value = "";
               return
             }
-            a ? (eS(s), eT(s, !0)) : (ey(s), eT(s))
+            a ? (eP(s), eO(s, !0)) : (ew(s), eO(s))
           };
 
-        function eE(e = !1) {
-          e ? (ek(""), eS("")) : (eB(""), ey(""))
+        function eR(e = !1) {
+          e ? (eT(""), eP("")) : (eS(""), ew(""))
         }
 
-        function eT(e, a = !1) {
+        function eO(e, a = !1) {
           let s = new FileReader;
           s.onload = function(e) {
             let s = e.target.result;
-            a ? ek(s) : eB(s)
+            a ? eT(s) : eS(s)
           }, s.readAsDataURL(e)
         }
 
-        function eM(e) {
+        function e$(e) {
           return "." + e.substring(e.lastIndexOf(".") + 1)
         }
-        let eR = async e => {
-          Y(e), eB(e.icon), x("customBadgeEdit"), j(!0)
-        }, eO = async e => {
+        let eI = async e => {
+          Z(e), eS(e.icon), j("customBadgeEdit"), _(!0)
+        }, eL = async e => {
           e.target.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" strokeDasharray="15" strokeDashoffset="15" strokeLinecap="round" strokeWidth="2" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"></animate><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"></animateTransform></path></svg>';
           try {
-            if (eh <= 0) {
-              r.oR.error(t("dashboard.account.badges.errors.no_credits")), j(!1);
+            if (ep <= 0) {
+              l.oR.error(t("dashboard.account.badges.errors.no_credits")), _(!1);
               return
             }
             let e = new FormData;
-            e.append("originalName", K.originalName), e.append("name", K.name), e.append("icon", eN || K.icon), e.append("id", K.id);
+            e.append("originalName", Q.originalName), e.append("name", Q.name), e.append("icon", eB || Q.icon), e.append("id", Q.id);
             let a = await fetch("https://guns.lol/api/account/customBadges/edit", {
                 method: "POST",
                 body: e
               }),
               s = await a.json();
-            a.ok ? (r.oR.success(s.message), X(s.badges), Y({
+            a.ok ? (l.oR.success(s.message), Y(s.badges), Z({
               name: "",
               icon: "",
               id: "",
               originalName: ""
-            }), eB(""), ey(null), eb(s.badge_credits), j(!1)) : r.oR.error(s.error)
+            }), eS(""), ew(null), ex(s.badge_credits), _(!1)) : l.oR.error(s.error)
           } finally {
             e.target.innerHTML = t("dashboard.account.badges.custom.notice.confirm")
           }
-        }, e$ = async (e, a) => {
+        }, eD = async (e, a) => {
           let s = e.target.checked,
             t = await fetch("https://guns.lol/api/account/customBadges", {
               method: "POST",
@@ -913,197 +927,199 @@
               })
             }),
             n = await t.json();
-          t.ok ? (r.oR.success(n.message), X(n.badges)) : r.oR.error(n.error)
-        }, eI = () => {
-          x("customBadgePurchase"), j(!0)
+          t.ok ? (l.oR.success(n.message), Y(n.badges)) : l.oR.error(n.error)
+        }, eU = () => {
+          j("customBadgePurchase"), _(!0)
         };
         return (0, n.jsxs)(n.Fragment, {
-          children: [(0, n.jsx)(q.A, {
-            opened: f,
-            onClose: () => j(!1),
-            title: Q,
+          children: [(0, n.jsx)(z.A, {
+            opened: v,
+            onClose: () => _(!1),
+            title: ee,
             centered: !0,
-            size: "customBadgeEdit" === b || "customBadgePreview" === b ? "450px" : "auto",
-            children: "premium" === b ? (0, n.jsx)(u.A, {}) : "imagehost" === b ? (0, n.jsx)(m.A, {}) : "donation" === b ? (0, n.jsx)(B, {
-              isDonor: en
-            }) : "verified" === b ? (0, n.jsxs)("div", {
-              className: i().verified,
+            size: "customBadgeEdit" === p || "customBadgePreview" === p ? "450px" : "auto",
+            children: "premium" === p ? (0, n.jsx)(h.A, {}) : "imagehost" === p ? (0, n.jsx)(b.A, {}) : "donation" === p ? (0, n.jsx)(k, {
+              isDonor: eo
+            }) : "verified" === p ? (0, n.jsxs)("div", {
+              className: c().verified,
               children: [(0, n.jsx)("h3", {
                 children: t("dashboard.account.badges.verified.description", {
                   strong: (0, n.jsx)("strong", {
-                    children: (0, C.$g)(C.q9.verified)
+                    children: (0, n.jsx)(o.A, {
+                      product: "verified"
+                    })
                   })
                 })
               }), (0, n.jsxs)("div", {
-                className: i().buyVerifiedOptions,
+                className: c().buyVerifiedOptions,
                 children: [(0, n.jsxs)("button", {
-                  onClick: ep,
-                  children: [c.A.purchase, " ", t("dashboard.account.badges.verified.purchase_button")]
+                  onClick: ej,
+                  children: [u.A.purchase, " ", t("dashboard.account.badges.verified.purchase_button")]
                 }), (0, n.jsxs)("a", {
                   href: "https://discord.gg/guns",
                   target: "_blank",
-                  children: [c.A.apply, " ", t("dashboard.account.badges.verified.apply_button")]
+                  children: [u.A.apply, " ", t("dashboard.account.badges.verified.apply_button")]
                 })]
               })]
-            }) : "bugReport" === b ? (0, n.jsxs)("div", {
-              className: i().bugReport,
+            }) : "bugReport" === p ? (0, n.jsxs)("div", {
+              className: c().bugReport,
               children: [(0, n.jsx)("h3", {
                 children: t("dashboard.account.badges.bug_report.description")
               }), (0, n.jsxs)("div", {
-                className: i().bugReportButtons,
+                className: c().bugReportButtons,
                 children: [(0, n.jsxs)("a", {
                   href: "https://discord.gg/guns",
                   target: "_blank",
-                  children: [c.A.discord, " ", t("dashboard.account.badges.bug_report.discord_button")]
+                  children: [u.A.discord, " ", t("dashboard.account.badges.bug_report.discord_button")]
                 }), (0, n.jsxs)("a", {
                   href: "mailto:support@guns.lol",
                   target: "_blank",
-                  children: [c.A.email, " ", t("dashboard.account.badges.bug_report.email_button")]
+                  children: [u.A.email, " ", t("dashboard.account.badges.bug_report.email_button")]
                 })]
               })]
-            }) : "verifiedPaymentMethods" === b ? (0, n.jsx)(_.A, {
+            }) : "verifiedPaymentMethods" === p ? (0, n.jsx)(y.A, {
               type: "verified",
-              purchaseSource: N.v.badges
-            }) : "gift" === b ? (0, n.jsx)(D.A, {
+              purchaseSource: C.v.badges
+            }) : "gift" === p ? (0, n.jsx)(W.A, {
               defaultSelection: "premiumLifetime",
               redirectLogin: !1,
               showGiftContainer: !0,
-              purchaseSource: N.j.badges
-            }) : "buyCredits" === b ? (0, n.jsx)(U, {}) : "customBadgeEdit" === b ? (0, n.jsx)("div", {
-              className: i().customBadgeEditContainer,
-              children: eh > 0 ? (0, n.jsxs)(n.Fragment, {
-                children: [(0, n.jsx)(F.A, {
+              purchaseSource: C.j.badges
+            }) : "buyCredits" === p ? (0, n.jsx)(F, {}) : "customBadgeEdit" === p ? (0, n.jsx)("div", {
+              className: c().customBadgeEditContainer,
+              children: ep > 0 ? (0, n.jsxs)(n.Fragment, {
+                children: [(0, n.jsx)(G.A, {
                   featureName: t("dashboard.account.badges.custom.edit.name_label"),
-                  onChangeFunction: e => Y({
-                    ...K,
+                  onChangeFunction: e => Z({
+                    ...Q,
                     name: e.target.value
                   }),
                   placeholder: t("dashboard.account.badges.custom.edit.name_placeholder"),
-                  value: K.name,
-                  icon: c.A.badgeName
+                  value: Q.name,
+                  icon: u.A.badgeName
                 }), (0, n.jsxs)("div", {
-                  className: i().iconUploadWrapper,
+                  className: c().iconUploadWrapper,
                   children: [(0, n.jsx)("h1", {
-                    className: i().uploaderHeadingText,
+                    className: c().uploaderHeadingText,
                     children: t("dashboard.account.badges.custom.edit.icon_label")
                   }), (0, n.jsx)("div", {
-                    className: i().iconUpload,
-                    children: "" === eC ? (0, n.jsxs)(n.Fragment, {
+                    className: c().iconUpload,
+                    children: "" === ek ? (0, n.jsxs)(n.Fragment, {
                       children: [(0, n.jsxs)("div", {
-                        className: i().uploadCardText,
-                        children: [c.A.image, (0, n.jsx)("h1", {
+                        className: c().uploadCardText,
+                        children: [u.A.image, (0, n.jsx)("h1", {
                           children: t("dashboard.account.badges.custom.edit.upload_prompt")
                         })]
                       }), (0, n.jsx)("input", {
                         type: "file",
-                        accept: J.vJ.badge.map(e => e).join(", "),
+                        accept: V.vJ.badge.map(e => e).join(", "),
                         onChange: e => {
-                          eP(e)
+                          eM(e)
                         }
                       })]
                     }) : (0, n.jsxs)(n.Fragment, {
                       children: [(0, n.jsxs)("div", {
-                        className: i().fileBadge,
+                        className: c().fileBadge,
                         children: [(0, n.jsx)("span", {
-                          children: eM(eN && eN.name ? eN.name : eC).toUpperCase()
+                          children: e$(eB && eB.name ? eB.name : ek).toUpperCase()
                         }), (0, n.jsx)("span", {
-                          onClick: () => eE(!1),
-                          children: c.A.deleteFile
+                          onClick: () => eR(!1),
+                          children: u.A.deleteFile
                         })]
                       }), (0, n.jsx)("img", {
-                        src: eC,
+                        src: ek,
                         alt: "Badge",
-                        className: i().uploadCardImage
+                        className: c().uploadCardImage
                       })]
                     })
                   })]
                 }), (0, n.jsxs)("div", {
-                  className: i().customBadgePreviewContainerWrapper,
+                  className: c().customBadgePreviewContainerWrapper,
                   children: [(0, n.jsx)("h1", {
-                    className: i().customBadgePreviewText,
+                    className: c().customBadgePreviewText,
                     children: t("dashboard.account.badges.custom.preview.title")
                   }), (0, n.jsx)("div", {
-                    className: i().customBadgePreviewDiv,
-                    children: "" !== eC ? (0, n.jsxs)(n.Fragment, {
+                    className: c().customBadgePreviewDiv,
+                    children: "" !== ek ? (0, n.jsxs)(n.Fragment, {
                       children: [(0, n.jsx)("h1", {
                         children: t("dashboard.account.badges.custom.preview.username")
                       }), (0, n.jsxs)("div", {
-                        className: i().customBadgePreviewContainer,
+                        className: c().customBadgePreviewContainer,
                         children: [(0, n.jsx)("div", {
-                          className: i().customBadgePreview,
-                          children: l.A.premium
+                          className: c().customBadgePreview,
+                          children: m.A.premium
                         }), (0, n.jsx)("div", {
-                          className: i().customBadgePreview,
-                          children: l.A.imagehost
+                          className: c().customBadgePreview,
+                          children: m.A.imagehost
                         }), (0, n.jsx)("div", {
-                          className: i().customBadgePreview,
-                          children: l.A.donor
+                          className: c().customBadgePreview,
+                          children: m.A.donor
                         }), (0, n.jsx)("div", {
-                          className: i().customBadgePreview,
+                          className: c().customBadgePreview,
                           children: (0, n.jsx)("img", {
-                            src: eC,
+                            src: ek,
                             alt: "Badge",
                             draggable: !1
                           })
                         })]
                       })]
                     }) : (0, n.jsx)("h1", {
-                      className: i().customBadgeIconText,
+                      className: c().customBadgeIconText,
                       children: t("dashboard.account.badges.custom.preview.no_icon")
                     })
                   })]
                 }), (0, n.jsxs)("div", {
-                  className: i().editCustomBadgeButtonWrapper,
+                  className: c().editCustomBadgeButtonWrapper,
                   children: [(0, n.jsxs)("div", {
-                    className: i().editCustomBadgeButtonContainer,
+                    className: c().editCustomBadgeButtonContainer,
                     children: [(0, n.jsx)("span", {
-                      className: i().editCustomBadgeButton,
+                      className: c().editCustomBadgeButton,
                       onClick: () => {
-                        eh <= 0 ? r.oR.error(t("dashboard.account.badges.errors.no_credits")) : ("" !== eC || eN) && "" !== K.name ? (x("customBadgeEditNotice"), j(!0)) : r.oR.error(t("dashboard.account.badges.errors.fill_fields"))
+                        ep <= 0 ? l.oR.error(t("dashboard.account.badges.errors.no_credits")) : ("" !== ek || eB) && "" !== Q.name ? (j("customBadgeEditNotice"), _(!0)) : l.oR.error(t("dashboard.account.badges.errors.fill_fields"))
                       },
                       children: t("dashboard.account.badges.custom.edit.save_button")
                     }), (0, n.jsx)("span", {
-                      className: i().editCustomBadgeButtonCancel,
-                      onClick: () => j(!1),
+                      className: c().editCustomBadgeButtonCancel,
+                      onClick: () => _(!1),
                       children: t("dashboard.account.badges.actions.cancel")
                     })]
                   }), (0, n.jsx)("span", {
-                    className: i().creditChargeNotice,
+                    className: c().creditChargeNotice,
                     children: t("dashboard.account.badges.custom.edit.credit_notice", {
-                      count: eh
+                      count: ep
                     })
                   })]
                 })]
               }) : (0, n.jsxs)("div", {
-                className: i().noCreditsNotice,
+                className: c().noCreditsNotice,
                 children: [(0, n.jsxs)("div", {
-                  className: i().noCreditsNoticeText,
+                  className: c().noCreditsNoticeText,
                   children: [(0, n.jsx)("h1", {
                     children: t("dashboard.account.badges.custom.no_credits.title")
                   }), (0, n.jsx)("h3", {
                     children: t("dashboard.account.badges.custom.no_credits.description")
                   })]
                 }), (0, n.jsx)("span", {
-                  className: i().buyCredits,
-                  onClick: e_,
+                  className: c().buyCredits,
+                  onClick: eC,
                   children: t("dashboard.account.badges.custom.no_credits.button")
                 })]
               })
-            }) : "customBadgeEditNotice" === b ? (0, n.jsxs)("div", {
-              className: i().customBadgeEditNoticeContainer,
+            }) : "customBadgeEditNotice" === p ? (0, n.jsxs)("div", {
+              className: c().customBadgeEditNoticeContainer,
               children: [(0, n.jsxs)("div", {
-                className: i().customBadgeEditNoticeText,
+                className: c().customBadgeEditNoticeText,
                 children: [(0, n.jsx)("h1", {
                   children: t("dashboard.account.badges.custom.notice.title")
                 }), (0, n.jsx)("h3", {
                   children: t("dashboard.account.badges.custom.notice.description")
                 })]
               }), (0, n.jsxs)("div", {
-                className: i().customBadgeGuidelinesContainer,
+                className: c().customBadgeGuidelinesContainer,
                 children: [(0, n.jsx)("h1", {
                   children: t("dashboard.account.badges.custom.notice.guidelines.title")
                 }), (0, n.jsxs)("ul", {
-                  className: i().customBadgeGuidelines,
+                  className: c().customBadgeGuidelines,
                   children: [(0, n.jsx)("li", {
                     children: t("dashboard.account.badges.custom.notice.guidelines.unique")
                   }), (0, n.jsx)("li", {
@@ -1113,129 +1129,129 @@
                   })]
                 })]
               }), (0, n.jsxs)("div", {
-                className: i().customBadgeEditNoticeActions,
+                className: c().customBadgeEditNoticeActions,
                 children: [(0, n.jsx)("span", {
-                  className: i().customBadgeEditNoticeConfirm,
-                  onClick: eO,
+                  className: c().customBadgeEditNoticeConfirm,
+                  onClick: eL,
                   children: t("dashboard.account.badges.custom.notice.confirm")
                 }), (0, n.jsx)("span", {
-                  className: i().customBadgeEditNoticeCancel,
-                  onClick: () => j(!1),
+                  className: c().customBadgeEditNoticeCancel,
+                  onClick: () => _(!1),
                   children: t("dashboard.account.badges.actions.cancel")
                 })]
               })]
-            }) : "customBadgePreview" === b ? (0, n.jsxs)("div", {
-              className: i().customBadgePreviewModal,
+            }) : "customBadgePreview" === p ? (0, n.jsxs)("div", {
+              className: c().customBadgePreviewModal,
               children: [(0, n.jsxs)("div", {
-                className: i().iconUploadWrapper,
+                className: c().iconUploadWrapper,
                 children: [(0, n.jsx)("h1", {
-                  className: i().uploaderHeadingText,
+                  className: c().uploaderHeadingText,
                   children: t("dashboard.account.badges.custom.edit.icon_label")
                 }), (0, n.jsx)("div", {
-                  className: i().iconUpload,
-                  children: "" === eA ? (0, n.jsxs)(n.Fragment, {
+                  className: c().iconUpload,
+                  children: "" === eE ? (0, n.jsxs)(n.Fragment, {
                     children: [(0, n.jsxs)("div", {
-                      className: i().uploadCardText,
-                      children: [c.A.image, (0, n.jsx)("h1", {
+                      className: c().uploadCardText,
+                      children: [u.A.image, (0, n.jsx)("h1", {
                         children: t("dashboard.account.badges.custom.edit.upload_prompt")
                       })]
                     }), (0, n.jsx)("input", {
                       type: "file",
-                      accept: J.vJ.badge.map(e => e).join(", "),
+                      accept: V.vJ.badge.map(e => e).join(", "),
                       onChange: e => {
-                        eP(e, !0)
+                        eM(e, !0)
                       }
                     })]
                   }) : (0, n.jsxs)(n.Fragment, {
                     children: [(0, n.jsxs)("div", {
-                      className: i().fileBadge,
+                      className: c().fileBadge,
                       children: [(0, n.jsx)("span", {
-                        children: eM(ew && ew.name ? ew.name : eA).toUpperCase()
+                        children: e$(eA && eA.name ? eA.name : eE).toUpperCase()
                       }), (0, n.jsx)("span", {
-                        onClick: () => eE(!0),
-                        children: c.A.deleteFile
+                        onClick: () => eR(!0),
+                        children: u.A.deleteFile
                       })]
                     }), (0, n.jsx)("img", {
-                      src: eA,
+                      src: eE,
                       alt: "Badge",
-                      className: i().uploadCardImage
+                      className: c().uploadCardImage
                     })]
                   })
                 })]
               }), (0, n.jsxs)("div", {
                 children: [(0, n.jsx)("h1", {
-                  className: i().customBadgePreviewText,
+                  className: c().customBadgePreviewText,
                   children: t("dashboard.account.badges.custom.preview.title")
                 }), (0, n.jsx)("div", {
-                  className: i().customBadgePreviewDiv,
-                  children: "" !== eA ? (0, n.jsxs)(n.Fragment, {
+                  className: c().customBadgePreviewDiv,
+                  children: "" !== eE ? (0, n.jsxs)(n.Fragment, {
                     children: [(0, n.jsx)("h1", {
                       children: t("dashboard.account.badges.custom.preview.username")
                     }), (0, n.jsxs)("div", {
-                      className: i().customBadgePreviewContainer,
+                      className: c().customBadgePreviewContainer,
                       children: [(0, n.jsx)("div", {
-                        className: i().customBadgePreview,
-                        children: l.A.premium
+                        className: c().customBadgePreview,
+                        children: m.A.premium
                       }), (0, n.jsx)("div", {
-                        className: i().customBadgePreview,
-                        children: l.A.imagehost
+                        className: c().customBadgePreview,
+                        children: m.A.imagehost
                       }), (0, n.jsx)("div", {
-                        className: i().customBadgePreview,
-                        children: l.A.donor
+                        className: c().customBadgePreview,
+                        children: m.A.donor
                       }), (0, n.jsx)("div", {
-                        className: i().customBadgePreview,
+                        className: c().customBadgePreview,
                         children: (0, n.jsx)("img", {
-                          src: eA,
+                          src: eE,
                           alt: "Badge",
                           draggable: !1
                         })
                       })]
                     })]
                   }) : (0, n.jsx)("h1", {
-                    className: i().customBadgeIconText,
+                    className: c().customBadgeIconText,
                     children: t("dashboard.account.badges.custom.preview.no_icon")
                   })
                 })]
               }), (0, n.jsx)("span", {
-                className: i().customBadgePreviewModalButton,
-                onClick: eI,
+                className: c().customBadgePreviewModalButton,
+                onClick: eU,
                 children: t("dashboard.account.badges.custom.preview.purchase_button")
               })]
-            }) : "customBadgePurchase" === b ? (0, n.jsx)(G.A, {
-              purchaseSource: N.v.badges
-            }) : "hone" === b && (0, n.jsxs)("div", {
-              className: i().honeModal,
+            }) : "customBadgePurchase" === p ? (0, n.jsx)(q.A, {
+              purchaseSource: C.v.badges
+            }) : "hone" === p && (0, n.jsxs)("div", {
+              className: c().honeModal,
               children: [(0, n.jsx)("h1", {
                 children: t("dashboard.account.badges.hone_badge.title")
               }), (0, n.jsx)("h3", {
                 children: t("dashboard.account.badges.hone_badge.description")
               }), (0, n.jsxs)("div", {
-                className: i().honeQuickActions,
+                className: c().honeQuickActions,
                 children: [(0, n.jsxs)("a", {
                   href: "https://hone.gg/a/guns",
                   target: "_blank",
                   rel: "noreferrer",
-                  className: i().honePrimary,
+                  className: c().honePrimary,
                   children: [(0, n.jsx)("img", {
                     src: "https://assets.guns.lol/hone_x_guns/Hone%20Icon%20Full%20Dark%404x.png",
                     alt: ""
                   }), " ", t("dashboard.account.badges.hone_badge.download_button")]
                 }), (0, n.jsxs)("a", {
                   href: "/account/redeem?select=hone_promo",
-                  className: i().honeGhost,
+                  className: c().honeGhost,
                   target: "_blank",
-                  children: [L.A.key, " ", t("dashboard.account.badges.hone_badge.redeem_button")]
+                  children: [U.A.key, " ", t("dashboard.account.badges.hone_badge.redeem_button")]
                 })]
               }), (0, n.jsx)("div", {
-                className: i().honeSteps,
+                className: c().honeSteps,
                 children: Array.from({
                   length: 5
                 }, (e, a) => {
                   let s = a + 1;
                   return (0, n.jsxs)("div", {
-                    className: i().honeStep,
+                    className: c().honeStep,
                     children: [(0, n.jsx)("span", {
-                      className: i().honeStepBadge,
+                      className: c().honeStepBadge,
                       children: s
                     }), (0, n.jsxs)("div", {
                       children: [(0, n.jsx)("h3", {
@@ -1253,50 +1269,50 @@
                   }, s)
                 })
               }), (0, n.jsx)("span", {
-                className: i().honePartner,
+                className: c().honePartner,
                 children: t("dashboard.account.badges.hone_badge.partner_notice")
               })]
             })
-          }), (0, n.jsx)(r.l$, {
+          }), (0, n.jsx)(l.l$, {
             richColors: !0,
             position: "top-center",
             theme: "dark",
-            className: g().toasterStyles,
+            className: x().toasterStyles,
             icons: {
-              success: L.A.successToast
+              success: U.A.successToast
             },
             visibleToasts: 2
           }), (0, n.jsxs)("div", {
-            className: i().containerGap,
+            className: c().containerGap,
             children: [(0, n.jsxs)("div", {
-              className: `${i().allBadgesContainer} ${!v?i().allBadgesCollapsed:""}`,
+              className: `${c().allBadgesContainer} ${!N?c().allBadgesCollapsed:""}`,
               children: [(0, n.jsxs)("div", {
-                className: i().badgeContainerHeading,
+                className: c().badgeContainerHeading,
                 children: [(0, n.jsx)("h1", {
-                  className: i().badgeText,
+                  className: c().badgeText,
                   children: t("dashboard.account.badges.sections.all_badges.title")
                 }), (0, n.jsx)("span", {
                   onClick: () => {
-                    S(!v)
+                    A(!N)
                   },
-                  className: `${i().badgeToggle} ${v?i().rotateArrow:""}`,
-                  children: c.A.arrowUp
+                  className: `${c().badgeToggle} ${N?c().rotateArrow:""}`,
+                  children: u.A.arrowUp
                 })]
               }), (0, n.jsx)("div", {
-                className: `${i().badgeCollapseWrapper} ${v?i().badgeCollapseOpen:i().badgeCollapseClosed}`,
-                style: ev,
+                className: `${c().badgeCollapseWrapper} ${N?c().badgeCollapseOpen:c().badgeCollapseClosed}`,
+                style: ey,
                 children: (0, n.jsx)("div", {
-                  ref: A,
-                  className: i().badgeContainer,
-                  children: eg.map((e, a) => (0, n.jsxs)("div", {
-                    className: i().badge,
+                  ref: P,
+                  className: c().badgeContainer,
+                  children: ef.map((e, a) => (0, n.jsxs)("div", {
+                    className: c().badge,
                     children: [(0, n.jsxs)("div", {
-                      className: i().badgeWrapper,
+                      className: c().badgeWrapper,
                       children: [(0, n.jsx)("div", {
-                        className: i().badgeIcon,
+                        className: c().badgeIcon,
                         children: e.icon
                       }), (0, n.jsxs)("div", {
-                        className: i().badgeTextContainer,
+                        className: c().badgeTextContainer,
                         children: [(0, n.jsx)("h1", {
                           children: e.name
                         }), (0, n.jsx)("h3", {
@@ -1304,16 +1320,16 @@
                         })]
                       })]
                     }), e.button && "function" == typeof e.button.action && e.button.isEnabled ? (0, n.jsx)("button", {
-                      className: i().badgeButton,
+                      className: c().badgeButton,
                       onClick: e.button.action,
                       children: e.button.text
                     }) : "string" == typeof e.button?.action && e.button?.isEnabled ? (0, n.jsx)("a", {
-                      className: i().badgeButton,
+                      className: c().badgeButton,
                       href: e.button.action,
                       target: "_blank",
                       children: e.button.text
                     }) : e.button && void 0 !== e.button.isEnabled && (0, n.jsx)("button", {
-                      className: i().badgeButtonDisabled,
+                      className: c().badgeButtonDisabled,
                       disabled: !0,
                       children: e.button.disabledText
                     })]
@@ -1321,79 +1337,79 @@
                 })
               })]
             }), (0, n.jsxs)("div", {
-              className: i().customBadgesContainer,
+              className: c().customBadgesContainer,
               children: [(0, n.jsxs)("h1", {
                 children: [t("dashboard.account.badges.custom.section.title"), " ", (0, n.jsxs)("span", {
-                  children: [c.A.sparkles, " ", t("dashboard.account.badges.custom.section.tag_new")]
+                  children: [u.A.sparkles, " ", t("dashboard.account.badges.custom.section.tag_new")]
                 })]
               }), (0, n.jsx)("h3", {
                 children: t("dashboard.account.badges.custom.section.description")
               }), (0, n.jsxs)("div", {
-                className: i().customBadgesContainerButtons,
+                className: c().customBadgesContainerButtons,
                 children: [(0, n.jsx)("span", {
-                  className: i().customBadgesContainerButton,
-                  onClick: eI,
+                  className: c().customBadgesContainerButton,
+                  onClick: eU,
                   children: t("dashboard.account.badges.custom.section.buttons.purchase")
                 }), (0, n.jsx)("span", {
-                  className: i().customBadgesContainerPreviewButton,
+                  className: c().customBadgesContainerPreviewButton,
                   onClick: () => {
-                    x("customBadgePreview"), j(!0)
+                    j("customBadgePreview"), _(!0)
                   },
                   children: t("dashboard.account.badges.custom.section.buttons.preview")
                 })]
               })]
-            }), (0 !== $.length || 0 !== V.length) && Z ? (0, n.jsxs)(n.Fragment, {
+            }), (0 !== L.length || 0 !== K.length) && ea ? (0, n.jsxs)(n.Fragment, {
               children: [(0, n.jsxs)("div", {
-                className: i().badgeSettings,
+                className: c().badgeSettings,
                 children: [(0, n.jsx)("h1", {
-                  className: i().badgeSettingsText,
+                  className: c().badgeSettingsText,
                   children: t("dashboard.account.badges.settings.title")
                 }), (0, n.jsx)("div", {
-                  className: g().featureContainer,
+                  className: x().featureContainer,
                   style: {
                     marginTop: 0
                   },
                   children: (0, n.jsx)("div", {
-                    className: i().generalComponentContainer,
+                    className: c().generalComponentContainer,
                     children: (0, n.jsx)("div", {
-                      className: i().generalComponentLeft,
+                      className: c().generalComponentLeft,
                       children: (0, n.jsxs)("div", {
-                        className: i().featureRow,
-                        children: [(0, n.jsx)(w.A, {
+                        className: c().featureRow,
+                        children: [(0, n.jsx)(S.A, {
                           featureName: t("dashboard.account.badges.settings.monochrome.label"),
                           helpDescription: t("dashboard.account.badges.settings.monochrome.description"),
-                          element: (0, n.jsx)(h.A, {
-                            onChangeFunction: e => el(e.currentTarget.checked),
-                            defaultChecked: ec
+                          element: (0, n.jsx)(g.A, {
+                            onChangeFunction: e => eh(e.currentTarget.checked),
+                            defaultChecked: em
                           })
-                        }), (0, n.jsx)(p.A, {
+                        }), (0, n.jsx)(f.A, {
                           featureName: t("dashboard.account.badges.settings.badge_color"),
-                          onChangeFunction: em,
-                          value: eu
+                          onChangeFunction: eg,
+                          value: eb
                         })]
                       })
                     })
                   })
                 }), (0, n.jsx)("span", {
-                  className: i().badgeSaveButton,
-                  onClick: ej,
-                  children: R
+                  className: c().badgeSaveButton,
+                  onClick: eN,
+                  children: $
                 })]
-              }), 0 !== $.length && (0, n.jsxs)("div", {
-                className: i().myBadgesContainer,
+              }), 0 !== L.length && (0, n.jsxs)("div", {
+                className: c().myBadgesContainer,
                 children: [(0, n.jsx)("h1", {
-                  className: i().myBadgesText,
+                  className: c().myBadgesText,
                   children: t("dashboard.account.badges.sections.my_badges.title")
                 }), (0, n.jsx)("style", {
                   children: `
-                                .${i().myBadgesContainer} .${g().inputContainerWrapper} {
+                                .${c().myBadgesContainer} .${x().inputContainerWrapper} {
                                     width: fit-content;
                                 }
                                 `
-                }), (0, n.jsx)(P, {
-                  badges: $,
-                  setBadges: z,
-                  badgeIcons: l.A,
+                }), (0, n.jsx)(T, {
+                  badges: L,
+                  setBadges: X,
+                  badgeIcons: m.A,
                   iconNameMapper: {
                     staff: "staff",
                     premium: "premium",
@@ -1409,6 +1425,7 @@
                     christmas_2024: "christmas2024",
                     christmas_2025: "christmas2025",
                     domain_legend: "domainLegend",
+                    black_week_2026: "blackWeek2026",
                     summer_2026: "summer2026",
                     easter_2025: "easter2025",
                     easter_2026: "easter2026",
@@ -1417,53 +1434,53 @@
                     the_million: "theMillion",
                     hone: "hone"
                   },
-                  badgeNameMapper: ex,
-                  handleBadgeToggle: ef
+                  badgeNameMapper: ev,
+                  handleBadgeToggle: e_
                 })]
               })]
-            }) : !Z && (0, n.jsxs)("div", {
-              className: i().upgradePremium,
+            }) : !ea && (0, n.jsxs)("div", {
+              className: c().upgradePremium,
               children: [(0, n.jsxs)("div", {
-                className: i().upgradePremiumDescription,
+                className: c().upgradePremiumDescription,
                 children: [(0, n.jsxs)("h1", {
-                  children: [c.A.premium, " ", t("dashboard.account.badges.upgrade.title")]
+                  children: [u.A.premium, " ", t("dashboard.account.badges.upgrade.title")]
                 }), (0, n.jsx)("h3", {
                   children: t("dashboard.account.badges.upgrade.description")
                 })]
               }), (0, n.jsx)("button", {
                 onClick: () => {
-                  x("premium"), j(!0)
+                  j("premium"), _(!0)
                 },
                 children: t("dashboard.account.badges.upgrade.button")
               })]
-            }), 0 !== V.length && (0, n.jsxs)("div", {
-              className: i().myBadgesContainer,
+            }), 0 !== K.length && (0, n.jsxs)("div", {
+              className: c().myBadgesContainer,
               children: [(0, n.jsxs)("h1", {
-                className: i().myBadgesText,
+                className: c().myBadgesText,
                 children: [t("dashboard.account.badges.custom.list.title"), (0, n.jsxs)("div", {
-                  className: i().badgeCreditsContainer,
+                  className: c().badgeCreditsContainer,
                   children: [(0, n.jsx)("span", {
-                    className: `${i().badgeCredits} ${0===eh&&i().red}`,
+                    className: `${c().badgeCredits} ${0===ep&&c().red}`,
                     children: t("dashboard.account.badges.custom.list.credits_left", {
-                      count: eh
+                      count: ep
                     })
                   }), (0, n.jsxs)("span", {
-                    className: i().buyBadgeCredits,
-                    onClick: e_,
-                    children: [c.A.shoppingBag, " ", t("dashboard.account.badges.custom.list.buy_button")]
+                    className: c().buyBadgeCredits,
+                    onClick: eC,
+                    children: [u.A.shoppingBag, " ", t("dashboard.account.badges.custom.list.buy_button")]
                   })]
                 })]
               }), (0, n.jsx)("style", {
                 children: `
-                                            .${i().myBadgesContainer} .${g().inputContainerWrapper} {
+                                            .${c().myBadgesContainer} .${x().inputContainerWrapper} {
                                                 width: fit-content;
                                             }
                                         `
-              }), (0, n.jsx)(T, {
-                customBadges: V,
-                setCustomBadges: X,
-                handleCustomBadgeToggle: e$,
-                handleCustomBadgeEdit: eR,
+              }), (0, n.jsx)(R, {
+                customBadges: K,
+                setCustomBadges: Y,
+                handleCustomBadgeToggle: eD,
+                handleCustomBadgeEdit: eI,
                 isPremium: e.premium
               })]
             })]
@@ -1472,7 +1489,7 @@
       }
     },
     27524: (e, a, s) => {
-      Promise.resolve().then(s.bind(s, 25272)), Promise.resolve().then(s.bind(s, 69783)), Promise.resolve().then(s.bind(s, 13770)), Promise.resolve().then(s.bind(s, 41112)), Promise.resolve().then(s.bind(s, 21957))
+      Promise.resolve().then(s.bind(s, 25272)), Promise.resolve().then(s.bind(s, 69783)), Promise.resolve().then(s.bind(s, 11152)), Promise.resolve().then(s.bind(s, 41112)), Promise.resolve().then(s.bind(s, 21957))
     },
     30184: (e, a, s) => {
       "use strict";
@@ -1538,8 +1555,8 @@
           N = (0, n.useRef)(null),
           [y, C] = (0, n.useState)(!1),
           [B, w] = (0, n.useState)(() => b(u)),
-          [S, A] = (0, n.useState)(u),
-          [k, P] = (0, n.useState)({
+          [k, S] = (0, n.useState)(u),
+          [A, P] = (0, n.useState)({
             left: 0,
             top: 0,
             width: 220
@@ -1551,9 +1568,9 @@
             if (/^#[0-9a-f]{3}$/i.test(e)) return `#${e.slice(1).split("").map(e=>`${e}${e}`).join("")}`.toLowerCase();
             return null
           })(M) : null, [M]),
-          O = R ?? S;
+          O = R ?? k;
         (0, n.useEffect)(() => {
-          R && A(R)
+          R && S(R)
         }, [R]), (0, n.useEffect)(() => {
           w(b(O))
         }, [O]), (0, n.useEffect)(() => {
@@ -1632,7 +1649,7 @@
               });
               return a = e => e.toString(16).padStart(2, "0"), `#${a(s)}${a(t)}${a(n)}`
             })(e);
-            A(s), a?.(s)
+            S(s), a?.(s)
           }, [a]),
           L = (0, n.useCallback)(e => {
             let s = h(e.target.value);
@@ -1662,13 +1679,13 @@
               };
             document.addEventListener("pointermove", s), document.addEventListener("pointerup", t)
           }, [x, D]),
-          F = (0, n.useCallback)(e => {
+          W = (0, n.useCallback)(e => {
             I({
               ...B,
               h: Number(e.target.value)
             })
           }, [B, I]),
-          W = (0, n.useCallback)(() => {
+          F = (0, n.useCallback)(() => {
             x || C(e => (e || $(), !0))
           }, [x, $]),
           G = (0, n.useCallback)(() => {
@@ -1682,9 +1699,9 @@
           J = !!(y && E && q),
           z = J ? {
             position: "fixed",
-            left: `${k.left}px`,
-            top: `${k.top}px`,
-            width: `${k.width}px`
+            left: `${A.left}px`,
+            top: `${A.top}px`,
+            width: `${A.width}px`
           } : void 0,
           V = "string" == typeof e ? e : void 0,
           X = (0, t.jsxs)("div", {
@@ -1718,7 +1735,7 @@
                 max: 360,
                 step: 1,
                 value: B.h,
-                onChange: F,
+                onChange: W,
                 className: l().hueSlider,
                 disabled: x
               })
@@ -1760,8 +1777,8 @@
               placeholder: i,
               value: M,
               onChange: L,
-              onFocus: W,
-              onClick: W,
+              onFocus: F,
+              onClick: F,
               disabled: x,
               style: f,
               ...j
@@ -1926,65 +1943,65 @@
     79157: (e, a, s) => {
       "use strict";
       s.d(a, {
-        A: () => m
+        A: () => h
       });
       var t = s(95155),
-        n = s(12115),
-        d = s(91801),
-        o = s.n(d),
-        i = s(97478),
-        r = s(3434),
-        c = s(50686),
-        l = s(86891),
-        u = s(61836);
+        n = s(98028),
+        d = s(12115),
+        o = s(91801),
+        i = s.n(o),
+        r = s(97478),
+        c = s(3434),
+        l = s(50686),
+        u = s(86891),
+        m = s(61836);
 
-      function m({
+      function h({
         purchaseSource: e = "unknown"
       }) {
-        let a = (0, l.kj)(),
-          [s, d] = (0, n.useState)(1),
-          [m, h] = (0, n.useState)(!1),
-          b = async e => {
-            h(!0)
-          }, g = s > 1 ? (0, t.jsxs)(t.Fragment, {
-            children: [(0, u.o3)(s).totalPrice, "€ ", (0, t.jsxs)("s", {
-              children: [(0, u.o3)(s).rawPrice, "€"]
-            })]
-          }) : (0, t.jsxs)(t.Fragment, {
-            children: [(0, u.o3)(s).totalPrice, "€"]
-          });
+        let a = (0, u.kj)();
+        (0, n.u)();
+        let [s, o] = (0, d.useState)(1), [h, b] = (0, d.useState)(!1), g = async e => {
+          b(!0)
+        }, p = s > 1 ? (0, t.jsxs)(t.Fragment, {
+          children: [(0, m.o3)(s).totalPrice, "€ ", (0, t.jsxs)("s", {
+            children: [(0, m.o3)(s).rawPrice, "€"]
+          })]
+        }) : (0, t.jsxs)(t.Fragment, {
+          children: [(0, m.o3)(s).totalPrice, "€"]
+        });
         return (0, t.jsx)(t.Fragment, {
-          children: m ? (0, t.jsx)(c.A, {
+          children: h ? (0, t.jsx)(l.A, {
             type: "customBadge",
             customBadgeData: {
               amount: s,
-              totalPrice: (0, u.o3)(s).totalPrice
+              totalPrice: (0, m.o3)(s).totalPrice
             },
             purchaseSource: e
           }) : (0, t.jsxs)("div", {
-            className: o().CustomBadgePurchaseModal,
-            children: [(0, t.jsx)(i.A, {
+            className: i().CustomBadgePurchaseModal,
+            children: [(0, t.jsx)(r.A, {
               featureName: a("modals.custom_badge.title"),
               max: 500,
               value: s,
               min: 1,
-              onChange: d,
-              icon: r.A.shoppingBag
+              onChange: o,
+              icon: c.A.shoppingBag
             }), (0, t.jsxs)("div", {
-              className: o().CustomBadgePurchaseModalDiscount,
+              className: i().CustomBadgePurchaseModalDiscount,
               children: [(0, t.jsx)("h1", {
                 children: a("modals.custom_badge.information_text")
               }), (0, t.jsx)("h3", {
                 children: a("modals.custom_badge.description", {
-                  percentage: (0, u.o3)(s).discountPercent,
+                  percentage: (0, m.o3)(s).discountPercent,
                   quantity: s
                 })
               })]
             }), (0, t.jsx)("span", {
-              className: o().CustomBadgePurchaseModalButton,
-              onClick: b,
+              className: i().CustomBadgePurchaseModalButton,
+              onClick: g,
               children: a("modals.custom_badge.purchase_text", {
-                price: g
+                price: p
               })
             })]
           })
@@ -2058,6 +2075,6 @@
     }
   },
   e => {
-    e.O(0, [8392, 7958, 6870, 379, 1899, 4236, 6609, 4293, 5810, 6746, 7256, 6891, 5886, 9182, 8481, 3434, 1378, 6788, 5395, 2840, 7109, 8542, 8441, 3794, 7358], () => e(e.s = 27524)), _N_E = e.O()
+    e.O(0, [8392, 8604, 1850, 379, 3785, 4236, 6609, 4293, 5810, 6746, 7256, 6891, 5886, 9182, 8481, 3434, 1378, 5041, 6788, 8246, 7109, 8542, 8441, 3794, 7358], () => e(e.s = 27524)), _N_E = e.O()
   }
 ]);

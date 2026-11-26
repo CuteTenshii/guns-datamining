@@ -3,39 +3,41 @@
     47461: (e, i, s) => {
       "use strict";
       s.d(i, {
-        default: () => k
+        default: () => A
       });
       var r = s(95155),
-        c = s(86278),
-        n = s.n(c),
-        a = s(81382),
-        m = s(12115),
-        t = s(34023),
-        l = s(66609),
-        o = s(41458),
-        p = s(50686),
-        d = s(98241),
-        u = s.n(d),
-        h = s(54834),
-        x = s(79157),
-        g = s(13699),
-        j = s(81934),
-        f = s(86891),
-        _ = s(13782),
-        v = s(61836);
+        c = s(79939),
+        n = s(24795),
+        a = s(86278),
+        t = s.n(a),
+        m = s(81382),
+        l = s(12115),
+        o = s(34023),
+        p = s(66609),
+        d = s(41458),
+        u = s(50686),
+        h = s(98241),
+        x = s.n(h),
+        g = s(54834),
+        j = s(79157),
+        f = s(13699),
+        _ = s(81934),
+        v = s(86891),
+        k = s(13782),
+        N = s(61836);
 
-      function k({
+      function A({
         data: e
       }) {
-        let [i, s] = (0, m.useState)(!1), [c, d] = (0, m.useState)(null), [k, N] = (0, m.useState)(null), b = (0, m.useRef)(null), A = (0, m.useRef)(null), y = (0, m.useRef)(null), P = e.statsData, w = e.tokenData, $ = (0, m.useRef)(null), B = !!w.session && !!w.session.userId, [C, S] = (0, m.useState)(""), D = (0, f.kj)(), F = async e => {
-          S(e), s(!0)
-        }, T = () => {
-          A.current && (clearTimeout(A.current), A.current = null)
-        }, M = () => {
-          y.current = null, T(), null === c && N(null)
-        }, L = e => {
-          T(), d(i => i === e ? null : e), N(null), y.current = null
-        }, q = [{
+        let [i, s] = (0, l.useState)(!1), [a, h] = (0, l.useState)(null), [A, b] = (0, l.useState)(null), y = (0, l.useRef)(null), P = (0, l.useRef)(null), w = (0, l.useRef)(null), B = e.statsData, C = e.tokenData, S = (0, l.useRef)(null), $ = !!C.session && !!C.session.userId, [D, F] = (0, l.useState)(""), T = (0, v.kj)(), M = async e => {
+          F(e), s(!0)
+        }, L = () => {
+          P.current && (clearTimeout(P.current), P.current = null)
+        }, E = () => {
+          w.current = null, L(), null === a && b(null)
+        }, R = e => {
+          L(), h(i => i === e ? null : e), b(null), w.current = null
+        }, z = [{
           key: "profile_layouts",
           premium: !0
         }, {
@@ -84,262 +86,266 @@
           key: e,
           premium: i
         }) => ({
-          name: D(`pricing.pricing_table_features.${e}.name`),
-          description: D(`pricing.pricing_table_features.${e}.description`),
+          name: T(`pricing.pricing_table_features.${e}.name`),
+          description: T(`pricing.pricing_table_features.${e}.description`),
           premium: i
-        })), E = c ?? k;
-        return (0, m.useEffect)(() => {
+        })), I = a ?? A;
+        return (0, l.useEffect)(() => {
           let e = window.location.hash;
           if (!e) return;
           let i = e.replace("#", "").toLowerCase();
-          ("imagehost" === i || "verified" === i || "custombadge" === i || "other" === i) && $.current && $.current.scrollIntoView({
+          ("imagehost" === i || "verified" === i || "custombadge" === i || "other" === i) && S.current && S.current.scrollIntoView({
             behavior: "smooth",
             block: "center"
           })
-        }, []), (0, m.useEffect)(() => () => {
-          T()
+        }, []), (0, l.useEffect)(() => () => {
+          L()
         }, []), (0, r.jsxs)(r.Fragment, {
-          children: [(0, r.jsx)(_.A, {
+          children: [(0, r.jsx)(k.A, {
             opened: i,
             onClose: () => s(!1),
-            title: D("common.pricing.payment_methods"),
+            title: T("common.pricing.payment_methods"),
             centered: !0,
-            children: "custombadge" === C ? (0, r.jsx)(x.A, {
-              purchaseSource: g.v.pricing
-            }) : (0, r.jsx)(p.A, {
-              type: C,
-              purchaseSource: g.v.pricing
+            children: "custombadge" === D ? (0, r.jsx)(j.A, {
+              purchaseSource: f.v.pricing
+            }) : (0, r.jsx)(u.A, {
+              type: D,
+              purchaseSource: f.v.pricing
             })
-          }), (0, r.jsx)(l.l$, {
+          }), (0, r.jsx)(p.l$, {
             richColors: !0,
             position: "top-center",
             theme: "dark",
-            className: u().toasterStyles,
+            className: x().toasterStyles,
             icons: {
-              success: h.A.successToast
+              success: g.A.successToast
             },
             visibleToasts: 2
-          }), (0, r.jsxs)(a.default, {
-            data: w,
-            statsData: P,
+          }), (0, r.jsxs)(m.default, {
+            data: C,
+            statsData: B,
             children: [(0, r.jsx)("div", {
-              className: n().pricingPage,
+              className: t().pricingPage,
               children: (0, r.jsxs)("div", {
-                className: n().pricingHero,
+                className: t().pricingHero,
                 children: [(0, r.jsx)("div", {
-                  className: n().heroDescription,
+                  className: t().heroDescription,
                   children: (0, r.jsxs)("div", {
-                    className: n().heroDescriptionInner,
-                    children: [(0, r.jsx)("h1", {
-                      children: D("pricing.hero.title")
+                    className: t().heroDescriptionInner,
+                    children: [(0, r.jsx)(c.A, {}), (0, r.jsx)("h1", {
+                      children: T("pricing.hero.title")
                     }), (0, r.jsx)("h3", {
-                      children: D("pricing.hero.description")
+                      children: T("pricing.hero.description")
                     })]
                   })
                 }), (0, r.jsxs)("div", {
-                  className: n().plansWrapper,
+                  className: t().plansWrapper,
                   children: [(0, r.jsxs)("div", {
-                    className: n().plans,
+                    className: t().plans,
                     children: [(0, r.jsxs)("div", {
-                      className: n().freePlan,
+                      className: t().freePlan,
                       children: [(0, r.jsx)("h1", {
-                        className: n().freePlanText,
-                        children: D("common.pricing.free_plan.name")
+                        className: t().freePlanText,
+                        children: T("common.pricing.free_plan.name")
                       }), (0, r.jsx)("div", {
-                        className: n().price,
+                        className: t().price,
                         children: (0, r.jsxs)("h1", {
-                          children: [(0, v.$g)(v.q9.free), (0, r.jsxs)("span", {
-                            children: ["/", D("common.pricing.lifetime_text")]
+                          children: [(0, N.$g)(N.q9.free), (0, r.jsxs)("span", {
+                            children: ["/", T("common.pricing.lifetime_text")]
                           })]
                         })
                       }), (0, r.jsx)("h3", {
-                        children: D("common.pricing.free_plan.description")
+                        children: T("common.pricing.free_plan.description")
                       }), (0, r.jsxs)("div", {
-                        className: n().features,
+                        className: t().features,
                         children: [(0, r.jsxs)("span", {
-                          children: [t.A.checkmark, " ", D("common.pricing.free_plan.features.basic_customization")]
+                          children: [o.A.checkmark, " ", T("common.pricing.free_plan.features.basic_customization")]
                         }), (0, r.jsxs)("span", {
-                          children: [t.A.checkmark, " ", D("common.pricing.free_plan.features.profile_analytics")]
+                          children: [o.A.checkmark, " ", T("common.pricing.free_plan.features.profile_analytics")]
                         }), (0, r.jsxs)("span", {
-                          children: [t.A.checkmark, " ", D("common.pricing.free_plan.features.basic_effects")]
+                          children: [o.A.checkmark, " ", T("common.pricing.free_plan.features.basic_effects")]
                         }), (0, r.jsxs)("span", {
-                          children: [t.A.checkmark, " ", D("common.pricing.free_plan.features.add_your_socials")]
+                          children: [o.A.checkmark, " ", T("common.pricing.free_plan.features.add_your_socials")]
                         })]
-                      }), (0, r.jsx)(j.A, {
-                        className: n().purchaseButton,
+                      }), (0, r.jsx)(_.A, {
+                        className: t().purchaseButton,
                         href: "/register?ref=pricing_page",
-                        children: D("common.pricing.free_plan.button")
+                        children: T("common.pricing.free_plan.button")
                       })]
                     }), (0, r.jsxs)("div", {
-                      className: n().premium,
+                      className: t().premium,
                       children: [(0, r.jsxs)("h1", {
-                        className: n().premiumText,
-                        children: [t.A.premium, " ", D("common.pricing.premium_plan.name")]
+                        className: t().premiumText,
+                        children: [o.A.premium, " ", T("common.pricing.premium_plan.name")]
                       }), (0, r.jsxs)("div", {
-                        className: n().price,
+                        className: t().price,
                         children: [(0, r.jsxs)("h1", {
-                          children: [(0, v.$g)(v.q9.premium), (0, r.jsxs)("span", {
-                            children: ["/", D("common.pricing.lifetime_text")]
+                          children: [(0, r.jsx)(n.A, {
+                            product: "premium"
+                          }), (0, r.jsxs)("span", {
+                            children: ["/", T("common.pricing.lifetime_text")]
                           })]
                         }), (0, r.jsx)("span", {
-                          className: n().lifetimeText,
-                          children: D("common.pricing.lifetime_text_description")
+                          className: t().lifetimeText,
+                          children: T("common.pricing.lifetime_text_description")
                         })]
                       }), (0, r.jsx)("h3", {
-                        children: D("common.pricing.premium_plan.description")
+                        children: T("common.pricing.premium_plan.description")
                       }), (0, r.jsxs)("div", {
-                        className: n().features,
+                        className: t().features,
                         children: [(0, r.jsxs)("span", {
-                          children: [t.A.checkmark, " ", D("common.pricing.premium_plan.features.exclusive_badge")]
+                          children: [o.A.checkmark, " ", T("common.pricing.premium_plan.features.exclusive_badge")]
                         }), (0, r.jsxs)("span", {
-                          children: [t.A.checkmark, " ", D("common.pricing.premium_plan.features.profile_layouts")]
+                          children: [o.A.checkmark, " ", T("common.pricing.premium_plan.features.profile_layouts")]
                         }), (0, r.jsxs)("span", {
-                          children: [t.A.checkmark, " ", D("common.pricing.premium_plan.features.custom_fonts")]
+                          children: [o.A.checkmark, " ", T("common.pricing.premium_plan.features.custom_fonts")]
                         }), (0, r.jsxs)("span", {
-                          children: [t.A.checkmark, " ", D("common.pricing.premium_plan.features.typewriter_animation")]
+                          children: [o.A.checkmark, " ", T("common.pricing.premium_plan.features.typewriter_animation")]
                         }), (0, r.jsxs)("span", {
-                          children: [t.A.checkmark, " ", D("common.pricing.premium_plan.features.special_profile_effects")]
+                          children: [o.A.checkmark, " ", T("common.pricing.premium_plan.features.special_profile_effects")]
                         }), (0, r.jsxs)("span", {
-                          children: [t.A.checkmark, " ", D("common.pricing.premium_plan.features.advanced_customization")]
+                          children: [o.A.checkmark, " ", T("common.pricing.premium_plan.features.advanced_customization")]
                         }), (0, r.jsxs)("span", {
-                          children: [t.A.checkmark, " ", D("common.pricing.premium_plan.features.metadata_seo_customization")]
+                          children: [o.A.checkmark, " ", T("common.pricing.premium_plan.features.metadata_seo_customization")]
                         })]
                       }), (0, r.jsxs)("div", {
-                        className: n().planButtons,
-                        children: [B ? (0, r.jsx)("span", {
-                          className: n().purchaseButton,
-                          onClick: () => F("premiumLifetime"),
-                          children: D("common.pricing.premium_plan.button")
-                        }) : (0, r.jsx)(j.A, {
-                          className: n().purchaseButton,
+                        className: t().planButtons,
+                        children: [$ ? (0, r.jsx)("span", {
+                          className: t().purchaseButton,
+                          onClick: () => M("premiumLifetime"),
+                          children: T("common.pricing.premium_plan.button")
+                        }) : (0, r.jsx)(_.A, {
+                          className: t().purchaseButton,
                           href: "/login?returnUri=/pricing",
-                          children: D("common.pricing.premium_plan.button")
-                        }), (0, r.jsx)(o.A, {
+                          children: T("common.pricing.premium_plan.button")
+                        }), (0, r.jsx)(d.A, {
                           defaultSelection: "premiumLifetime",
-                          redirectLogin: !B,
-                          purchaseSource: g.j.pricing
+                          redirectLogin: !$,
+                          purchaseSource: f.j.pricing
                         })]
                       }), (0, r.jsx)("div", {
-                        className: n().mostPopularWrapper,
+                        className: t().mostPopularWrapper,
                         children: (0, r.jsx)("span", {
-                          className: n().mostPopular,
-                          children: D("common.pricing.most_popular")
+                          className: t().mostPopular,
+                          children: T("common.pricing.most_popular")
                         })
                       })]
                     })]
                   }), (0, r.jsxs)("span", {
                     onClick: () => {
-                      b.current && b.current.scrollIntoView({
+                      y.current && y.current.scrollIntoView({
                         behavior: "smooth",
                         block: "start"
                       })
                     },
-                    children: [D("pricing.explore_features"), " ", t.A.arrowPlansDown]
+                    children: [T("pricing.explore_features"), " ", o.A.arrowPlansDown]
                   })]
                 })]
               })
             }), (0, r.jsxs)("div", {
-              className: n().allFeatures,
-              ref: b,
+              className: t().allFeatures,
+              ref: y,
               style: {
                 paddingTop: "170px"
               },
               children: [(0, r.jsxs)("div", {
-                className: n().allFeaturesDescription,
+                className: t().allFeaturesDescription,
                 children: [(0, r.jsx)("h1", {
-                  children: D("pricing.pricing_table_title")
+                  children: T("pricing.pricing_table_title")
                 }), (0, r.jsx)("h3", {
-                  children: D("pricing.pricing_table_description")
+                  children: T("pricing.pricing_table_description")
                 })]
               }), (0, r.jsx)("div", {
-                className: n().tableWrapper,
+                className: t().tableWrapper,
                 children: (0, r.jsxs)("div", {
-                  className: n().matrixShell,
+                  className: t().matrixShell,
                   children: [(0, r.jsxs)("div", {
-                    className: n().matrixHeader,
+                    className: t().matrixHeader,
                     children: [(0, r.jsxs)("div", {
-                      className: `${n().matrixPlanCard} ${n().matrixPlanCardPremium}`,
+                      className: `${t().matrixPlanCard} ${t().matrixPlanCardPremium}`,
                       children: [(0, r.jsx)("h1", {
-                        children: D("common.pricing.premium_plan.name")
+                        children: T("common.pricing.premium_plan.name")
                       }), (0, r.jsxs)("h1", {
-                        children: [(0, v.$g)(v.q9.premium), (0, r.jsxs)("span", {
-                          children: ["/", D("common.pricing.lifetime_text")]
+                        children: [(0, r.jsx)(n.A, {
+                          product: "premium"
+                        }), (0, r.jsxs)("span", {
+                          children: ["/", T("common.pricing.lifetime_text")]
                         })]
-                      }), B ? (0, r.jsx)("span", {
-                        onClick: () => F("premiumLifetime"),
-                        children: D("common.pricing.premium_plan.button")
-                      }) : (0, r.jsx)(j.A, {
+                      }), $ ? (0, r.jsx)("span", {
+                        onClick: () => M("premiumLifetime"),
+                        children: T("common.pricing.premium_plan.button")
+                      }) : (0, r.jsx)(_.A, {
                         href: "/login?returnUri=/pricing",
-                        children: D("common.pricing.premium_plan.button")
+                        children: T("common.pricing.premium_plan.button")
                       })]
                     }), (0, r.jsxs)("div", {
-                      className: `${n().matrixPlanCard} ${n().matrixPlanCardFree}`,
+                      className: `${t().matrixPlanCard} ${t().matrixPlanCardFree}`,
                       children: [(0, r.jsx)("h1", {
-                        children: D("common.pricing.free_plan.name")
+                        children: T("common.pricing.free_plan.name")
                       }), (0, r.jsxs)("h1", {
-                        children: [(0, v.$g)(v.q9.free), (0, r.jsxs)("span", {
-                          children: ["/", D("common.pricing.lifetime_text")]
+                        children: [(0, N.$g)(N.q9.free), (0, r.jsxs)("span", {
+                          children: ["/", T("common.pricing.lifetime_text")]
                         })]
-                      }), (0, r.jsx)(j.A, {
+                      }), (0, r.jsx)(_.A, {
                         href: "/register?ref=pricing_page_table",
-                        children: D("common.pricing.free_plan.button")
+                        children: T("common.pricing.free_plan.button")
                       })]
                     })]
                   }), (0, r.jsx)("div", {
-                    className: n().featuresMatrix,
-                    children: q.map((e, i) => (0, r.jsxs)("div", {
-                      className: `${n().matrixRow} ${E===i?n().matrixRowExpanded:""}`,
+                    className: t().featuresMatrix,
+                    children: z.map((e, i) => (0, r.jsxs)("div", {
+                      className: `${t().matrixRow} ${I===i?t().matrixRowExpanded:""}`,
                       onMouseEnter: () => {
-                        window.matchMedia("(hover: hover) and (pointer: fine)").matches && null === c && (y.current = i, T(), A.current = setTimeout(() => {
-                          y.current === i && null === c && N(i)
+                        window.matchMedia("(hover: hover) and (pointer: fine)").matches && null === a && (w.current = i, L(), P.current = setTimeout(() => {
+                          w.current === i && null === a && b(i)
                         }, 250))
                       },
-                      onMouseLeave: M,
-                      onClick: () => L(i),
+                      onMouseLeave: E,
+                      onClick: () => R(i),
                       role: "button",
                       tabIndex: 0,
                       onKeyDown: e => {
-                        ("Enter" === e.key || " " === e.key) && (e.preventDefault(), L(i))
+                        ("Enter" === e.key || " " === e.key) && (e.preventDefault(), R(i))
                       },
                       children: [(0, r.jsxs)("div", {
-                        className: n().matrixFeatureContent,
+                        className: t().matrixFeatureContent,
                         children: [(0, r.jsxs)("div", {
-                          className: n().matrixFeatureTitle,
+                          className: t().matrixFeatureTitle,
                           children: [(0, r.jsx)("span", {
-                            className: `${n().matrixFeatureArrow} ${E===i?n().matrixFeatureArrowOpen:""}`,
-                            children: t.A.arrowDown
+                            className: `${t().matrixFeatureArrow} ${I===i?t().matrixFeatureArrowOpen:""}`,
+                            children: o.A.arrowDown
                           }), (0, r.jsx)("h1", {
                             children: e.name
                           })]
                         }), (0, r.jsx)("div", {
-                          className: `${n().matrixFeatureDescription} ${E===i?n().matrixFeatureDescriptionOpen:""}`,
+                          className: `${t().matrixFeatureDescription} ${I===i?t().matrixFeatureDescriptionOpen:""}`,
                           children: (0, r.jsx)("p", {
                             children: e.description
                           })
                         })]
                       }), (0, r.jsx)("div", {
-                        className: `${n().matrixAvailability} ${n().matrixAvailabilityPremium}`,
-                        children: t.A.check
+                        className: `${t().matrixAvailability} ${t().matrixAvailabilityPremium}`,
+                        children: o.A.check
                       }), (0, r.jsx)("div", {
-                        className: n().matrixAvailability,
-                        children: e.premium ? t.A.cross : t.A.check
+                        className: t().matrixAvailability,
+                        children: e.premium ? o.A.cross : o.A.check
                       }), (0, r.jsxs)("div", {
-                        className: n().matrixMobileAvailability,
+                        className: t().matrixMobileAvailability,
                         children: [(0, r.jsxs)("div", {
-                          className: n().matrixMobilePlan,
+                          className: t().matrixMobilePlan,
                           children: [(0, r.jsx)("span", {
-                            children: D("common.pricing.premium_plan.name")
+                            children: T("common.pricing.premium_plan.name")
                           }), (0, r.jsx)("div", {
-                            className: `${n().matrixAvailability} ${n().matrixAvailabilityPremium}`,
-                            children: t.A.check
+                            className: `${t().matrixAvailability} ${t().matrixAvailabilityPremium}`,
+                            children: o.A.check
                           })]
                         }), (0, r.jsxs)("div", {
-                          className: n().matrixMobilePlan,
+                          className: t().matrixMobilePlan,
                           children: [(0, r.jsx)("span", {
-                            children: D("common.pricing.free_plan.name")
+                            children: T("common.pricing.free_plan.name")
                           }), (0, r.jsx)("div", {
-                            className: n().matrixAvailability,
-                            children: e.premium ? t.A.cross : t.A.check
+                            className: t().matrixAvailability,
+                            children: e.premium ? o.A.cross : o.A.check
                           })]
                         })]
                       })]
@@ -348,154 +354,160 @@
                 })
               })]
             }), (0, r.jsxs)("div", {
-              className: n().otherProducts,
-              ref: $,
+              className: t().otherProducts,
+              ref: S,
               children: [(0, r.jsx)("div", {
-                className: n().otherProductsDescription,
+                className: t().otherProductsDescription,
                 children: (0, r.jsx)("h1", {
-                  children: D("pricing.other_products")
+                  children: T("pricing.other_products")
                 })
               }), (0, r.jsxs)("div", {
-                className: n().products,
+                className: t().products,
                 children: [(0, r.jsxs)("div", {
-                  className: n().pricingProduct,
+                  className: t().pricingProduct,
                   children: [(0, r.jsxs)("div", {
                     children: [(0, r.jsxs)("h1", {
-                      children: [t.A.customBadge, " ", D("common.pricing.custom_badge.name")]
+                      children: [o.A.customBadge, " ", T("common.pricing.custom_badge.name")]
                     }), (0, r.jsxs)("div", {
-                      className: n().price,
+                      className: t().price,
                       children: [(0, r.jsxs)("h1", {
-                        children: [(0, v.$g)(v.q9.customBadge), (0, r.jsxs)("span", {
-                          children: ["/", D("common.pricing.lifetime_text")]
+                        children: [(0, r.jsx)(n.A, {
+                          product: "customBadge"
+                        }), (0, r.jsxs)("span", {
+                          children: ["/", T("common.pricing.lifetime_text")]
                         })]
                       }), (0, r.jsx)("span", {
-                        className: n().lifetimeText,
-                        children: D("common.pricing.lifetime_text_description")
+                        className: t().lifetimeText,
+                        children: T("common.pricing.lifetime_text_description")
                       })]
                     }), (0, r.jsx)("h3", {
-                      children: D("common.pricing.custom_badge.description")
+                      children: T("common.pricing.custom_badge.description")
                     }), (0, r.jsxs)("div", {
-                      className: n().features,
+                      className: t().features,
                       children: [(0, r.jsxs)("span", {
-                        children: [t.A.checkmark, " ", D("common.pricing.custom_badge.features.custom")]
+                        children: [o.A.checkmark, " ", T("common.pricing.custom_badge.features.custom")]
                       }), (0, r.jsxs)("span", {
-                        children: [t.A.checkmark, " ", D("common.pricing.custom_badge.features.exclusive_appearance")]
+                        children: [o.A.checkmark, " ", T("common.pricing.custom_badge.features.exclusive_appearance")]
                       }), (0, r.jsxs)("span", {
-                        children: [t.A.checkmark, " ", D("common.pricing.custom_badge.features.editable_anytime")]
+                        children: [o.A.checkmark, " ", T("common.pricing.custom_badge.features.editable_anytime")]
                       })]
                     })]
                   }), (0, r.jsxs)("div", {
-                    className: n().productButtons,
-                    children: [B ? (0, r.jsx)("span", {
-                      className: n().purchaseButton,
-                      onClick: () => F("custombadge"),
-                      children: D("common.pricing.custom_badge.button")
-                    }) : (0, r.jsx)(j.A, {
-                      className: n().purchaseButton,
+                    className: t().productButtons,
+                    children: [$ ? (0, r.jsx)("span", {
+                      className: t().purchaseButton,
+                      onClick: () => M("custombadge"),
+                      children: T("common.pricing.custom_badge.button")
+                    }) : (0, r.jsx)(_.A, {
+                      className: t().purchaseButton,
                       href: "/login?returnUri=/pricing",
-                      children: D("common.pricing.custom_badge.button")
-                    }), (0, r.jsx)(o.A, {
+                      children: T("common.pricing.custom_badge.button")
+                    }), (0, r.jsx)(d.A, {
                       defaultSelection: "custombadge",
-                      redirectLogin: !B,
-                      purchaseSource: g.j.pricing
+                      redirectLogin: !$,
+                      purchaseSource: f.j.pricing
                     })]
                   }), (0, r.jsx)("div", {
-                    className: n().mostPopularWrapper,
+                    className: t().mostPopularWrapper,
                     children: (0, r.jsx)("span", {
-                      className: n().mostPopular,
-                      children: D("common.pricing.custom_badge.new")
+                      className: t().mostPopular,
+                      children: T("common.pricing.custom_badge.new")
                     })
                   })]
                 }), (0, r.jsxs)("div", {
-                  className: n().pricingProduct,
+                  className: t().pricingProduct,
                   children: [(0, r.jsxs)("div", {
                     children: [(0, r.jsxs)("h1", {
-                      children: [t.A.imagehost, " ", D("common.pricing.imagehost_plan.name")]
+                      children: [o.A.imagehost, " ", T("common.pricing.imagehost_plan.name")]
                     }), (0, r.jsxs)("div", {
-                      className: n().price,
+                      className: t().price,
                       children: [(0, r.jsxs)("h1", {
-                        children: [(0, v.$g)(v.q9.imagehost), (0, r.jsxs)("span", {
-                          children: ["/", D("common.pricing.lifetime_text")]
+                        children: [(0, r.jsx)(n.A, {
+                          product: "imagehost"
+                        }), (0, r.jsxs)("span", {
+                          children: ["/", T("common.pricing.lifetime_text")]
                         })]
                       }), (0, r.jsx)("span", {
-                        className: n().lifetimeText,
-                        children: D("common.pricing.lifetime_text_description")
+                        className: t().lifetimeText,
+                        children: T("common.pricing.lifetime_text_description")
                       })]
                     }), (0, r.jsx)("h3", {
-                      children: D("common.pricing.imagehost_plan.description")
+                      children: T("common.pricing.imagehost_plan.description")
                     }), (0, r.jsxs)("div", {
-                      className: n().features,
+                      className: t().features,
                       children: [(0, r.jsxs)("span", {
-                        children: [t.A.checkmark, " ", D("common.pricing.imagehost_plan.features.custom_domain")]
+                        children: [o.A.checkmark, " ", T("common.pricing.imagehost_plan.features.custom_domain")]
                       }), (0, r.jsxs)("span", {
-                        children: [t.A.checkmark, " ", D("common.pricing.imagehost_plan.features.public_domains")]
+                        children: [o.A.checkmark, " ", T("common.pricing.imagehost_plan.features.public_domains")]
                       }), (0, r.jsxs)("span", {
-                        children: [t.A.checkmark, " ", D("common.pricing.imagehost_plan.features.exclusive_badge")]
+                        children: [o.A.checkmark, " ", T("common.pricing.imagehost_plan.features.exclusive_badge")]
                       }), (0, r.jsxs)("span", {
-                        children: [t.A.checkmark, " ", D("common.pricing.imagehost_plan.features.fast_secure_uploads")]
+                        children: [o.A.checkmark, " ", T("common.pricing.imagehost_plan.features.fast_secure_uploads")]
                       }), (0, r.jsxs)("span", {
-                        children: [t.A.checkmark, " ", D("common.pricing.imagehost_plan.features.advanced_image_gallery")]
+                        children: [o.A.checkmark, " ", T("common.pricing.imagehost_plan.features.advanced_image_gallery")]
                       }), (0, r.jsxs)("span", {
-                        children: [t.A.checkmark, " ", D("common.pricing.imagehost_plan.features.paste_bin")]
+                        children: [o.A.checkmark, " ", T("common.pricing.imagehost_plan.features.paste_bin")]
                       })]
                     })]
                   }), (0, r.jsxs)("div", {
-                    className: n().productButtons,
-                    children: [B ? (0, r.jsx)("span", {
-                      className: n().purchaseButton,
-                      onClick: () => F("imagehost"),
-                      children: D("common.pricing.imagehost_plan.button")
-                    }) : (0, r.jsx)(j.A, {
-                      className: n().purchaseButton,
+                    className: t().productButtons,
+                    children: [$ ? (0, r.jsx)("span", {
+                      className: t().purchaseButton,
+                      onClick: () => M("imagehost"),
+                      children: T("common.pricing.imagehost_plan.button")
+                    }) : (0, r.jsx)(_.A, {
+                      className: t().purchaseButton,
                       href: "/login?returnUri=/pricing",
-                      children: D("common.pricing.imagehost_plan.button")
-                    }), (0, r.jsx)(o.A, {
+                      children: T("common.pricing.imagehost_plan.button")
+                    }), (0, r.jsx)(d.A, {
                       defaultSelection: "imagehost",
-                      redirectLogin: !B,
-                      purchaseSource: g.j.pricing
+                      redirectLogin: !$,
+                      purchaseSource: f.j.pricing
                     })]
                   })]
                 }), (0, r.jsxs)("div", {
-                  className: n().pricingProduct,
+                  className: t().pricingProduct,
                   children: [(0, r.jsxs)("div", {
                     children: [(0, r.jsxs)("h1", {
-                      children: [t.A.verified, " ", D("common.pricing.verified.name")]
+                      children: [o.A.verified, " ", T("common.pricing.verified.name")]
                     }), (0, r.jsxs)("div", {
-                      className: n().price,
+                      className: t().price,
                       children: [(0, r.jsxs)("h1", {
-                        children: [(0, v.$g)(v.q9.verified), (0, r.jsxs)("span", {
-                          children: ["/", D("common.pricing.lifetime_text")]
+                        children: [(0, r.jsx)(n.A, {
+                          product: "verified"
+                        }), (0, r.jsxs)("span", {
+                          children: ["/", T("common.pricing.lifetime_text")]
                         })]
                       }), (0, r.jsx)("span", {
-                        className: n().lifetimeText,
-                        children: D("common.pricing.lifetime_text_description")
+                        className: t().lifetimeText,
+                        children: T("common.pricing.lifetime_text_description")
                       })]
                     }), (0, r.jsx)("h3", {
-                      children: D("common.pricing.verified.description")
+                      children: T("common.pricing.verified.description")
                     }), (0, r.jsxs)("div", {
-                      className: n().features,
+                      className: t().features,
                       children: [(0, r.jsxs)("span", {
-                        children: [t.A.checkmark, " ", D("common.pricing.verified.features.exclusive_verified_badge")]
+                        children: [o.A.checkmark, " ", T("common.pricing.verified.features.exclusive_verified_badge")]
                       }), (0, r.jsxs)("span", {
-                        children: [t.A.checkmark, " ", D("common.pricing.verified.features.special_role")]
+                        children: [o.A.checkmark, " ", T("common.pricing.verified.features.special_role")]
                       }), (0, r.jsxs)("span", {
-                        children: [t.A.checkmark, " ", D("common.pricing.verified.features.trust_credibility")]
+                        children: [o.A.checkmark, " ", T("common.pricing.verified.features.trust_credibility")]
                       })]
                     })]
                   }), (0, r.jsxs)("div", {
-                    className: n().productButtons,
-                    children: [B ? (0, r.jsx)("span", {
-                      className: n().purchaseButton,
-                      onClick: () => F("verified"),
-                      children: D("common.pricing.verified.button")
-                    }) : (0, r.jsx)(j.A, {
-                      className: n().purchaseButton,
+                    className: t().productButtons,
+                    children: [$ ? (0, r.jsx)("span", {
+                      className: t().purchaseButton,
+                      onClick: () => M("verified"),
+                      children: T("common.pricing.verified.button")
+                    }) : (0, r.jsx)(_.A, {
+                      className: t().purchaseButton,
                       href: "/login?returnUri=/pricing",
-                      children: D("common.pricing.verified.button")
-                    }), (0, r.jsx)(o.A, {
+                      children: T("common.pricing.verified.button")
+                    }), (0, r.jsx)(d.A, {
                       defaultSelection: "verified",
-                      redirectLogin: !B,
-                      purchaseSource: g.j.pricing
+                      redirectLogin: !$,
+                      purchaseSource: f.j.pricing
                     })]
                   })]
                 })]
@@ -508,65 +520,65 @@
     79157: (e, i, s) => {
       "use strict";
       s.d(i, {
-        A: () => d
+        A: () => u
       });
       var r = s(95155),
-        c = s(12115),
-        n = s(91801),
-        a = s.n(n),
+        c = s(98028),
+        n = s(12115),
+        a = s(91801),
+        t = s.n(a),
         m = s(97478),
-        t = s(3434),
-        l = s(50686),
-        o = s(86891),
-        p = s(61836);
+        l = s(3434),
+        o = s(50686),
+        p = s(86891),
+        d = s(61836);
 
-      function d({
+      function u({
         purchaseSource: e = "unknown"
       }) {
-        let i = (0, o.kj)(),
-          [s, n] = (0, c.useState)(1),
-          [d, u] = (0, c.useState)(!1),
-          h = async e => {
-            u(!0)
-          }, x = s > 1 ? (0, r.jsxs)(r.Fragment, {
-            children: [(0, p.o3)(s).totalPrice, "€ ", (0, r.jsxs)("s", {
-              children: [(0, p.o3)(s).rawPrice, "€"]
-            })]
-          }) : (0, r.jsxs)(r.Fragment, {
-            children: [(0, p.o3)(s).totalPrice, "€"]
-          });
+        let i = (0, p.kj)();
+        (0, c.u)();
+        let [s, a] = (0, n.useState)(1), [u, h] = (0, n.useState)(!1), x = async e => {
+          h(!0)
+        }, g = s > 1 ? (0, r.jsxs)(r.Fragment, {
+          children: [(0, d.o3)(s).totalPrice, "€ ", (0, r.jsxs)("s", {
+            children: [(0, d.o3)(s).rawPrice, "€"]
+          })]
+        }) : (0, r.jsxs)(r.Fragment, {
+          children: [(0, d.o3)(s).totalPrice, "€"]
+        });
         return (0, r.jsx)(r.Fragment, {
-          children: d ? (0, r.jsx)(l.A, {
+          children: u ? (0, r.jsx)(o.A, {
             type: "customBadge",
             customBadgeData: {
               amount: s,
-              totalPrice: (0, p.o3)(s).totalPrice
+              totalPrice: (0, d.o3)(s).totalPrice
             },
             purchaseSource: e
           }) : (0, r.jsxs)("div", {
-            className: a().CustomBadgePurchaseModal,
+            className: t().CustomBadgePurchaseModal,
             children: [(0, r.jsx)(m.A, {
               featureName: i("modals.custom_badge.title"),
               max: 500,
               value: s,
               min: 1,
-              onChange: n,
-              icon: t.A.shoppingBag
+              onChange: a,
+              icon: l.A.shoppingBag
             }), (0, r.jsxs)("div", {
-              className: a().CustomBadgePurchaseModalDiscount,
+              className: t().CustomBadgePurchaseModalDiscount,
               children: [(0, r.jsx)("h1", {
                 children: i("modals.custom_badge.information_text")
               }), (0, r.jsx)("h3", {
                 children: i("modals.custom_badge.description", {
-                  percentage: (0, p.o3)(s).discountPercent,
+                  percentage: (0, d.o3)(s).discountPercent,
                   quantity: s
                 })
               })]
             }), (0, r.jsx)("span", {
-              className: a().CustomBadgePurchaseModalButton,
-              onClick: h,
+              className: t().CustomBadgePurchaseModalButton,
+              onClick: x,
               children: i("modals.custom_badge.purchase_text", {
-                price: x
+                price: g
               })
             })]
           })
@@ -578,6 +590,6 @@
     }
   },
   e => {
-    e.O(0, [4801, 8604, 1899, 379, 4236, 6870, 6609, 4293, 5810, 6891, 5886, 9182, 8481, 3434, 1378, 6788, 1382, 8756, 8441, 3794, 7358], () => e(e.s = 95331)), _N_E = e.O()
+    e.O(0, [8604, 5311, 379, 4236, 1850, 6609, 4293, 5810, 6891, 5886, 9182, 8481, 3434, 1378, 5041, 6788, 1382, 1531, 8441, 3794, 7358], () => e(e.s = 95331)), _N_E = e.O()
   }
 ]);

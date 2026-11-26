@@ -1,5 +1,5 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [8756], {
+  [1531], {
     28356: (e, t) => {
       "use strict";
       Object.defineProperty(t, "__esModule", {
@@ -198,15 +198,15 @@
         get: r[l]
       });
       let c = a(73623),
-        i = a(66388),
-        n = a(95155),
+        n = a(66388),
+        i = a(95155),
         d = c._(a(47650)),
-        f = i._(a(12115)),
+        f = n._(a(12115)),
         o = a(75368),
         s = a(3584),
         u = a(28356),
-        _ = new Map,
-        b = new Set,
+        b = new Map,
+        _ = new Set,
         p = e => {
           let {
             src: t,
@@ -214,18 +214,18 @@
             onLoad: r = () => {},
             onReady: l = null,
             dangerouslySetInnerHTML: c,
-            children: i = "",
-            strategy: n = "afterInteractive",
+            children: n = "",
+            strategy: i = "afterInteractive",
             onError: f,
             stylesheets: o
           } = e, u = a || t;
-          if (u && b.has(u)) return;
-          if (_.has(t)) {
-            b.add(u), _.get(t).then(r, f);
+          if (u && _.has(u)) return;
+          if (b.has(t)) {
+            _.add(u), b.get(t).then(r, f);
             return
           }
           let p = () => {
-              l && l(), b.add(u)
+              l && l(), _.add(u)
             },
             h = document.createElement("script"),
             m = new Promise((e, t) => {
@@ -237,7 +237,7 @@
             }).catch(function(e) {
               f && f(e)
             });
-          c ? (h.innerHTML = c.__html || "", p()) : i ? (h.textContent = "string" == typeof i ? i : Array.isArray(i) ? i.join("") : "", p()) : t && (h.src = t, _.set(t, m)), (0, s.setAttributesFromProps)(h, e), "worker" === n && h.setAttribute("type", "text/partytown"), h.setAttribute("data-nscript", n), o && (e => {
+          c ? (h.innerHTML = c.__html || "", p()) : n ? (h.textContent = "string" == typeof n ? n : Array.isArray(n) ? n.join("") : "", p()) : t && (h.src = t, b.set(t, m)), (0, s.setAttributesFromProps)(h, e), "worker" === i && h.setAttribute("type", "text/partytown"), h.setAttribute("data-nscript", i), o && (e => {
             if (d.default.preinit) return e.forEach(e => {
               d.default.preinit(e, {
                 as: "style"
@@ -265,7 +265,7 @@
       function m(e) {
         e.forEach(h), [...document.querySelectorAll('[data-nscript="beforeInteractive"]'), ...document.querySelectorAll('[data-nscript="beforePageRender"]')].forEach(e => {
           let t = e.id || e.getAttribute("src");
-          b.add(t)
+          _.add(t)
         })
       }
 
@@ -276,9 +276,9 @@
           onLoad: r = () => {},
           onReady: l = null,
           strategy: c = "afterInteractive",
-          onError: i,
+          onError: n,
           stylesheets: s,
-          ..._
+          ...b
         } = e, {
           updateScripts: h,
           scripts: m,
@@ -286,11 +286,11 @@
           appDir: g,
           nonce: S
         } = (0, f.useContext)(o.HeadManagerContext);
-        S = _.nonce || S;
+        S = b.nonce || S;
         let x = (0, f.useRef)(!1);
         (0, f.useEffect)(() => {
           let e = t || a;
-          x.current || (l && e && b.has(e) && l(), x.current = !0)
+          x.current || (l && e && _.has(e) && l(), x.current = !0)
         }, [l, t, a]);
         let N = (0, f.useRef)(!1);
         if ((0, f.useEffect)(() => {
@@ -306,10 +306,10 @@
             src: a,
             onLoad: r,
             onReady: l,
-            onError: i,
-            ..._,
+            onError: n,
+            ...b,
             nonce: S
-          }]), h(m)) : w && w() ? b.add(t || a) : w && !w() && p({
+          }]), h(m)) : w && w() ? _.add(t || a) : w && !w() && p({
             ...e,
             nonce: S
           })), g) {
@@ -318,36 +318,36 @@
                 as: "style"
               })
             }), "beforeInteractive" === c)
-            if (!a) return _.dangerouslySetInnerHTML && (_.children = _.dangerouslySetInnerHTML.__html, delete _.dangerouslySetInnerHTML), (0, n.jsx)("script", {
+            if (!a) return b.dangerouslySetInnerHTML && (b.children = b.dangerouslySetInnerHTML.__html, delete b.dangerouslySetInnerHTML), (0, i.jsx)("script", {
               nonce: S,
               dangerouslySetInnerHTML: {
-                __html: `(self.__next_s=self.__next_s||[]).push(${JSON.stringify([0,{..._,id:t}])})`
+                __html: `(self.__next_s=self.__next_s||[]).push(${JSON.stringify([0,{...b,id:t}])})`
               }
             });
-            else return d.default.preload(a, _.integrity ? {
+            else return d.default.preload(a, b.integrity ? {
               as: "script",
-              integrity: _.integrity,
+              integrity: b.integrity,
               nonce: S,
-              crossOrigin: _.crossOrigin
+              crossOrigin: b.crossOrigin
             } : {
               as: "script",
               nonce: S,
-              crossOrigin: _.crossOrigin
-            }), (0, n.jsx)("script", {
+              crossOrigin: b.crossOrigin
+            }), (0, i.jsx)("script", {
               nonce: S,
               dangerouslySetInnerHTML: {
-                __html: `(self.__next_s=self.__next_s||[]).push(${JSON.stringify([a,{..._,id:t}])})`
+                __html: `(self.__next_s=self.__next_s||[]).push(${JSON.stringify([a,{...b,id:t}])})`
               }
             });
-          "afterInteractive" === c && a && d.default.preload(a, _.integrity ? {
+          "afterInteractive" === c && a && d.default.preload(a, b.integrity ? {
             as: "script",
-            integrity: _.integrity,
+            integrity: b.integrity,
             nonce: S,
-            crossOrigin: _.crossOrigin
+            crossOrigin: b.crossOrigin
           } : {
             as: "script",
             nonce: S,
-            crossOrigin: _.crossOrigin
+            crossOrigin: b.crossOrigin
           })
         }
         return null
@@ -367,6 +367,30 @@
       });
       var r = a(42593),
         l = a.n(r)
+    },
+    79939: (e, t, a) => {
+      "use strict";
+      a.d(t, {
+        A: () => o
+      });
+      var r = a(95155),
+        l = a(86278),
+        c = a.n(l),
+        n = a(81934),
+        i = a(15041),
+        d = a(86891),
+        f = a(98028);
+
+      function o() {
+        let e = (0, d.kj)();
+        return (0, f.u)() ? (0, r.jsxs)(n.A, {
+          href: "/pricing",
+          className: c().blackWeekPromo,
+          children: [i.A.blackWeek2026, (0, r.jsx)("span", {
+            children: e("common.other.black_week_promo")
+          })]
+        }) : null
+      }
     },
     86278: e => {
       e.exports = {
@@ -436,7 +460,8 @@
         otherProductsDescription: "GUNS__7d-3d489a2f-ffd15105-1c4e6ac6",
         pricingProduct: "GUNS__bd-cb2a76b5-babb4383-30f2bcec",
         productButtons: "GUNS__ff-b4daf737-8f949ac1-cee0cf61",
-        easterPromo: "GUNS__8f-881f3166-cb84f790-c4ed3bf9"
+        easterPromo: "GUNS__8f-881f3166-cb84f790-c4ed3bf9",
+        blackWeekPromo: "GUNS__8b-168a6feb-a327625e-4ba499c1"
       }
     }
   }

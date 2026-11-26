@@ -259,7 +259,7 @@
     91912: (a, e, s) => {
       "use strict";
       s.d(e, {
-        A: () => b
+        A: () => p
       });
       var n = s(95155),
         r = s(12115),
@@ -273,36 +273,27 @@
         m = s(13699),
         h = s(81934),
         g = s(86891),
-        _ = s(61836);
+        _ = s(61836),
+        b = s(98028);
 
-      function b({
+      function p({
         onRequestModalSize: a,
         aliasManagerData: e
       }) {
-        let s = (0, g.kj)(),
-          [c, b] = (0, r.useState)(""),
-          [p, f] = (0, r.useState)(e),
-          [x, j] = (0, r.useState)(""),
-          [y, v] = (0, r.useState)(!1),
-          [N, w] = (0, r.useState)(!1),
-          [k, S] = (0, r.useState)(1),
-          [A, C] = (0, r.useState)(!1),
-          [M, $] = (0, r.useState)(Math.floor(Date.now() / 1e3)),
-          O = p?.price_per_alias_credit || _.q9.aliasCredit,
-          R = p?.purchasable_alias_credits_remaining || 0,
-          P = parseFloat((k * O).toFixed(2)),
-          T = (0, r.useMemo)(() => [1, 2, 3, 4, 5].filter(a => a <= R).slice(0, 3), [R]);
+        let s = (0, g.kj)();
+        (0, b.u)();
+        let [c, p] = (0, r.useState)(""), [f, x] = (0, r.useState)(e), [j, y] = (0, r.useState)(""), [v, N] = (0, r.useState)(!1), [w, k] = (0, r.useState)(!1), [S, A] = (0, r.useState)(1), [C, M] = (0, r.useState)(!1), [$, O] = (0, r.useState)(Math.floor(Date.now() / 1e3)), R = _.q9.aliasCredit, P = f?.purchasable_alias_credits_remaining || 0, T = parseFloat((S * R).toFixed(2)), B = (0, r.useMemo)(() => [1, 2, 3, 4, 5].filter(a => a <= P).slice(0, 3), [P]);
         (0, r.useEffect)(() => {
-          R <= 0 ? S(1) : k > R && S(R)
-        }, [R, k]), (0, r.useEffect)(() => {
-          if (a) return a(N ? "430px" : "36rem"), () => a("36rem")
-        }, [N, a]), (0, r.useEffect)(() => {
+          P <= 0 ? A(1) : S > P && A(P)
+        }, [P, S]), (0, r.useEffect)(() => {
+          if (a) return a(w ? "430px" : "36rem"), () => a("36rem")
+        }, [w, a]), (0, r.useEffect)(() => {
           let a = window.setInterval(() => {
-            $(Math.floor(Date.now() / 1e3))
+            O(Math.floor(Date.now() / 1e3))
           }, 1e3);
           return () => window.clearInterval(a)
         }, []);
-        let B = async a => {
+        let D = async a => {
           let e = await fetch("https://guns.lol/api/account/alias", {
               method: "POST",
               headers: {
@@ -315,37 +306,37 @@
             response: e,
             payload: s
           }
-        }, D = async (a, e) => {
+        }, E = async (a, e) => {
           let n = `${a}:${e||""}`;
           try {
-            j(n);
+            y(n);
             let {
               response: r,
               payload: c
-            } = await B({
+            } = await D({
               action: a,
               alias: e
             });
-            if (r.ok) return t.oR.success(c.message), f(c.data), !0;
+            if (r.ok) return t.oR.success(c.message), x(c.data), !0;
             return t.oR.error(c.error || s("dashboard.account.manage.alias_manager.toasts.unknown_error")), !1
           } catch (a) {
             return t.oR.error(s("dashboard.account.manage.alias_manager.toasts.unknown_error")), console.error(a.message), !1
           } finally {
-            j("")
+            y("")
           }
-        }, E = async () => {
+        }, L = async () => {
           let a = c.trim().toLowerCase();
-          a ? await D("create", a) && b("") : t.oR.error(s("dashboard.account.manage.alias_manager.toasts.enter_alias"))
+          a ? await E("create", a) && p("") : t.oR.error(s("dashboard.account.manage.alias_manager.toasts.enter_alias"))
         };
-        if (N) return (0, n.jsx)(u.A, {
+        if (w) return (0, n.jsx)(u.A, {
           type: "aliascredits",
           aliasCreditsData: {
-            amount: k,
-            totalPrice: P
+            amount: S,
+            totalPrice: T
           },
           purchaseSource: m.v.aliasManager
         });
-        if (y && p) return (0, n.jsxs)("div", {
+        if (v && f) return (0, n.jsxs)("div", {
           className: i().creditsContainer,
           children: [(0, n.jsxs)("div", {
             className: i().creditsDescription,
@@ -361,47 +352,47 @@
               children: s("dashboard.account.manage.alias_manager.credits.question")
             }), (0, n.jsxs)("div", {
               className: i().preselectedAmounts,
-              children: [T.map(a => (0, n.jsxs)("div", {
-                className: `${i().preselectedAmount} ${k===a&&!A?i().active:""}`,
+              children: [B.map(a => (0, n.jsxs)("div", {
+                className: `${i().preselectedAmount} ${S===a&&!C?i().active:""}`,
                 onClick: () => {
-                  C(!1), S(a)
+                  M(!1), A(a)
                 },
                 children: [(0, n.jsxs)("span", {
                   className: i().amountText,
                   children: [a, " ", 1 === a ? s("dashboard.account.manage.alias_manager.credits.credit_single") : s("dashboard.account.manage.alias_manager.credits.credit_multiple")]
                 }), (0, n.jsxs)("span", {
                   className: i().priceText,
-                  children: [(a * O).toFixed(2), "€"]
+                  children: [(a * R).toFixed(2), "€"]
                 })]
               }, a)), (0, n.jsxs)("span", {
-                className: `${i().customCreditsAmountButton} ${A?i().active:""}`,
-                onClick: () => C(!0),
+                className: `${i().customCreditsAmountButton} ${C?i().active:""}`,
+                onClick: () => M(!0),
                 children: [o.A.customAmount, " ", s("dashboard.account.manage.alias_manager.credits.custom_amount")]
               })]
-            }), A && (0, n.jsxs)("div", {
+            }), C && (0, n.jsxs)("div", {
               className: i().customCreditsAmount,
               children: [(0, n.jsx)("h1", {
                 children: s("dashboard.account.manage.alias_manager.credits.custom_amount_label")
               }), (0, n.jsx)(d.A, {
-                value: k,
-                onChange: S,
+                value: S,
+                onChange: A,
                 icon: o.A.shoppingBag,
                 min: 1,
-                max: R
+                max: P
               })]
             }), (0, n.jsx)("span", {
               className: i().purchaseCreditsButton,
-              onClick: () => w(!0),
+              onClick: () => k(!0),
               children: s("dashboard.account.manage.alias_manager.credits.purchase_button", {
-                price: P.toFixed(2)
+                price: T.toFixed(2)
               })
             })]
           })]
         });
-        if (!p) return null;
-        let L = p.alias_entries,
-          F = p.unlocked_slots_remaining <= 0,
-          I = p.purchasable_alias_credits_remaining > 0;
+        if (!f) return null;
+        let F = f.alias_entries,
+          I = f.unlocked_slots_remaining <= 0,
+          G = f.purchasable_alias_credits_remaining > 0;
         return (0, n.jsxs)("div", {
           className: i().aliasManagerContainer,
           children: [(0, n.jsxs)("div", {
@@ -410,7 +401,7 @@
               children: s("dashboard.account.manage.alias_manager.summary.title")
             }), (0, n.jsx)("h3", {
               children: s("dashboard.account.manage.alias_manager.summary.description")
-            }), !p.premium && (0, n.jsx)(h.A, {
+            }), !f.premium && (0, n.jsx)(h.A, {
               href: "/pricing",
               style: {
                 textDecoration: "none"
@@ -429,30 +420,30 @@
             }), (0, n.jsxs)("div", {
               className: i().aliasManagerBadges,
               children: [(0, n.jsx)("span", {
-                className: `${i().badgeCredits} ${p.unlocked_slots_remaining<=0&&i().red}`,
+                className: `${i().badgeCredits} ${f.unlocked_slots_remaining<=0&&i().red}`,
                 children: s("dashboard.account.manage.alias_manager.summary.credits_available", {
-                  count: p.unlocked_slots_remaining,
-                  suffix: 1 === p.unlocked_slots_remaining ? "" : "s"
+                  count: f.unlocked_slots_remaining,
+                  suffix: 1 === f.unlocked_slots_remaining ? "" : "s"
                 })
               }), (0, n.jsx)("span", {
                 className: i().badgeCredits,
                 children: s("dashboard.account.manage.alias_manager.summary.slots_used", {
-                  used: p.used_alias_slots,
-                  maxSlots: p.plan_max_aliases
+                  used: f.used_alias_slots,
+                  maxSlots: f.plan_max_aliases
                 })
               })]
             })]
           }), (0, n.jsx)("div", {
             className: i().aliasManagerList,
-            children: 0 === L.length ? (0, n.jsx)("div", {
+            children: 0 === F.length ? (0, n.jsx)("div", {
               className: i().aliasManagerEmpty,
               children: s("dashboard.account.manage.alias_manager.list.empty")
-            }) : L.map(a => {
+            }) : F.map(a => {
               let e = `remove:${a.alias}`,
-                r = Number(a.cooldown_timestamp || 0) <= M,
-                c = !r || "" !== x,
+                r = Number(a.cooldown_timestamp || 0) <= $,
+                c = !r || "" !== j,
                 l = (a => {
-                  let e = Math.max(0, a - M);
+                  let e = Math.max(0, a - $);
                   if (e <= 0) return s("dashboard.account.manage.alias_manager.cooldown_ready");
                   let n = Math.floor(e / 86400),
                     r = Math.floor(e % 86400 / 3600),
@@ -461,7 +452,7 @@
                   return n > 0 ? `${n}d ${r}h ${t}m` : r > 0 ? `${r}h ${t}m ${c}s` : t > 0 ? `${t}m ${c}s` : `${c}s`
                 })(Number(a.cooldown_timestamp || 0)),
                 d = `guns.lol/${a.alias}`,
-                u = p.username ? `guns.lol/${p.username}` : String(s("dashboard.account.manage.alias_manager.list.fallback_target_username")),
+                u = f.username ? `guns.lol/${f.username}` : String(s("dashboard.account.manage.alias_manager.list.fallback_target_username")),
                 m = r ? String(s("dashboard.account.manage.alias_manager.list.remove_ready")) : String(s("dashboard.account.manage.alias_manager.list.remove_waiting", {
                   time: l
                 }));
@@ -483,9 +474,9 @@
                   children: (0, n.jsx)("span", {
                     className: `${i().aliasManagerAction} ${i().aliasManagerActionDanger} ${c?i().aliasManagerActionDisabled:""}`,
                     onClick: () => {
-                      c ? t.oR.info(m) : D("remove", a.alias)
+                      c ? t.oR.info(m) : E("remove", a.alias)
                     },
-                    children: x === e ? o.A.loading : s("dashboard.account.manage.alias_manager.list.remove_button")
+                    children: j === e ? o.A.loading : s("dashboard.account.manage.alias_manager.list.remove_button")
                   })
                 })]
               }, a.alias)
@@ -495,21 +486,21 @@
             children: [(0, n.jsx)(l.A, {
               featureName: s("dashboard.account.manage.alias_manager.create.feature_name"),
               value: c,
-              onChangeFunction: a => b(a.target.value),
+              onChangeFunction: a => p(a.target.value),
               placeholder: s("dashboard.account.manage.alias_manager.create.placeholder"),
               icon: o.A.alias,
               maxLength: 16
             }), (0, n.jsxs)("div", {
               className: i().aliasManagerButtons,
               children: [(0, n.jsx)("span", {
-                className: `${i().aliasManagerButtonPrimary} ${F||x.startsWith("create:")?i().aliasManagerButtonDisabled:""}`,
+                className: `${i().aliasManagerButtonPrimary} ${I||j.startsWith("create:")?i().aliasManagerButtonDisabled:""}`,
                 onClick: () => {
-                  F || x || E()
+                  I || j || L()
                 },
-                children: x.startsWith("create:") ? o.A.loading : s("dashboard.account.manage.alias_manager.create.button")
-              }), I && (0, n.jsxs)("span", {
+                children: j.startsWith("create:") ? o.A.loading : s("dashboard.account.manage.alias_manager.create.button")
+              }), G && (0, n.jsxs)("span", {
                 className: i().aliasManagerButtonSecondary,
-                onClick: () => v(!0),
+                onClick: () => N(!0),
                 children: [o.A.purchase, " ", s("dashboard.account.manage.alias_manager.create.buy_button")]
               })]
             })]

@@ -74,6 +74,24 @@
         return a
       }
     },
+    41029: (e, t, r) => {
+      "use strict";
+      r.d(t, {
+        B: () => a,
+        p: () => n
+      });
+      let a = {
+        badge: "black_week_2026",
+        startsAt: Date.parse("2026-11-25T00:00:00+01:00"),
+        endsAt: 1796252399e3,
+        discountPercent: 15,
+        giftDiscountPercent: 10
+      };
+
+      function n(e = Date.now()) {
+        return e >= a.startsAt && e < a.endsAt
+      }
+    },
     42593: (e, t, r) => {
       "use strict";
       Object.defineProperty(t, "__esModule", {
@@ -95,12 +113,12 @@
         get: a[n]
       });
       let c = r(73623),
-        o = r(66388),
-        s = r(95155),
-        i = c._(r(47650)),
-        d = o._(r(12115)),
-        l = r(75368),
-        u = r(3584),
+        i = r(66388),
+        o = r(95155),
+        s = c._(r(47650)),
+        d = i._(r(12115)),
+        u = r(75368),
+        l = r(3584),
         f = r(28356),
         p = new Map,
         _ = new Set,
@@ -111,10 +129,10 @@
             onLoad: a = () => {},
             onReady: n = null,
             dangerouslySetInnerHTML: c,
-            children: o = "",
-            strategy: s = "afterInteractive",
+            children: i = "",
+            strategy: o = "afterInteractive",
             onError: d,
-            stylesheets: l
+            stylesheets: u
           } = e, f = r || t;
           if (f && _.has(f)) return;
           if (p.has(t)) {
@@ -134,9 +152,9 @@
             }).catch(function(e) {
               d && d(e)
             });
-          c ? (m.innerHTML = c.__html || "", b()) : o ? (m.textContent = "string" == typeof o ? o : Array.isArray(o) ? o.join("") : "", b()) : t && (m.src = t, p.set(t, g)), (0, u.setAttributesFromProps)(m, e), "worker" === s && m.setAttribute("type", "text/partytown"), m.setAttribute("data-nscript", s), l && (e => {
-            if (i.default.preinit) return e.forEach(e => {
-              i.default.preinit(e, {
+          c ? (m.innerHTML = c.__html || "", b()) : i ? (m.textContent = "string" == typeof i ? i : Array.isArray(i) ? i.join("") : "", b()) : t && (m.src = t, p.set(t, g)), (0, l.setAttributesFromProps)(m, e), "worker" === o && m.setAttribute("type", "text/partytown"), m.setAttribute("data-nscript", o), u && (e => {
+            if (s.default.preinit) return e.forEach(e => {
+              s.default.preinit(e, {
                 as: "style"
               })
             });
@@ -147,7 +165,7 @@
                 r.type = "text/css", r.rel = "stylesheet", r.href = e, t.appendChild(r)
               })
             }
-          })(l), document.body.appendChild(m)
+          })(u), document.body.appendChild(m)
         };
 
       function m(e) {
@@ -173,77 +191,77 @@
           onLoad: a = () => {},
           onReady: n = null,
           strategy: c = "afterInteractive",
-          onError: o,
-          stylesheets: u,
+          onError: i,
+          stylesheets: l,
           ...p
         } = e, {
           updateScripts: m,
           scripts: g,
           getIsSsr: h,
           appDir: S,
-          nonce: N
-        } = (0, d.useContext)(l.HeadManagerContext);
-        N = p.nonce || N;
-        let y = (0, d.useRef)(!1);
+          nonce: G
+        } = (0, d.useContext)(u.HeadManagerContext);
+        G = p.nonce || G;
+        let N = (0, d.useRef)(!1);
         (0, d.useEffect)(() => {
           let e = t || r;
-          y.current || (n && e && _.has(e) && n(), y.current = !0)
+          N.current || (n && e && _.has(e) && n(), N.current = !0)
         }, [n, t, r]);
-        let G = (0, d.useRef)(!1);
+        let y = (0, d.useRef)(!1);
         if ((0, d.useEffect)(() => {
-            if (!G.current) {
+            if (!y.current) {
               if ("afterInteractive" === c) b(e);
               else "lazyOnload" === c && ("complete" === document.readyState ? (0, f.requestIdleCallback)(() => b(e)) : window.addEventListener("load", () => {
                 (0, f.requestIdleCallback)(() => b(e))
               }));
-              G.current = !0
+              y.current = !0
             }
           }, [e, c]), ("beforeInteractive" === c || "worker" === c) && (m ? (g[c] = (g[c] || []).concat([{
             id: t,
             src: r,
             onLoad: a,
             onReady: n,
-            onError: o,
+            onError: i,
             ...p,
-            nonce: N
+            nonce: G
           }]), m(g)) : h && h() ? _.add(t || r) : h && !h() && b({
             ...e,
-            nonce: N
+            nonce: G
           })), S) {
-          if (u && u.forEach(e => {
-              i.default.preinit(e, {
+          if (l && l.forEach(e => {
+              s.default.preinit(e, {
                 as: "style"
               })
             }), "beforeInteractive" === c)
-            if (!r) return p.dangerouslySetInnerHTML && (p.children = p.dangerouslySetInnerHTML.__html, delete p.dangerouslySetInnerHTML), (0, s.jsx)("script", {
-              nonce: N,
+            if (!r) return p.dangerouslySetInnerHTML && (p.children = p.dangerouslySetInnerHTML.__html, delete p.dangerouslySetInnerHTML), (0, o.jsx)("script", {
+              nonce: G,
               dangerouslySetInnerHTML: {
                 __html: `(self.__next_s=self.__next_s||[]).push(${JSON.stringify([0,{...p,id:t}])})`
               }
             });
-            else return i.default.preload(r, p.integrity ? {
+            else return s.default.preload(r, p.integrity ? {
               as: "script",
               integrity: p.integrity,
-              nonce: N,
+              nonce: G,
               crossOrigin: p.crossOrigin
             } : {
               as: "script",
-              nonce: N,
+              nonce: G,
               crossOrigin: p.crossOrigin
-            }), (0, s.jsx)("script", {
-              nonce: N,
+            }), (0, o.jsx)("script", {
+              nonce: G,
               dangerouslySetInnerHTML: {
                 __html: `(self.__next_s=self.__next_s||[]).push(${JSON.stringify([r,{...p,id:t}])})`
               }
             });
-          "afterInteractive" === c && r && i.default.preload(r, p.integrity ? {
+          "afterInteractive" === c && r && s.default.preload(r, p.integrity ? {
             as: "script",
             integrity: p.integrity,
-            nonce: N,
+            nonce: G,
             crossOrigin: p.crossOrigin
           } : {
             as: "script",
-            nonce: N,
+            nonce: G,
             crossOrigin: p.crossOrigin
           })
         }
@@ -320,14 +338,14 @@
     60204: (e, t, r) => {
       "use strict";
       r.d(t, {
-        M: () => s,
-        b: () => o
+        M: () => o,
+        b: () => i
       });
       var a = r(95155),
         n = r(48796),
         c = r.n(n);
 
-      function o({
+      function i({
         compact: e = !1
       }) {
         return (0, a.jsxs)("span", {
@@ -344,7 +362,7 @@
         })
       }
 
-      function s({
+      function o({
         comparison: e,
         compact: t = !1
       }) {
@@ -368,29 +386,70 @@
     61836: (e, t, r) => {
       "use strict";
       r.d(t, {
-        $g: () => d,
-        KH: () => c,
-        YL: () => o,
-        Yi: () => n,
-        dd: () => i,
-        gP: () => l,
-        o3: () => u,
-        q9: () => a,
-        wH: () => s
+        $g: () => f,
+        EJ: () => n,
+        KH: () => o,
+        YL: () => s,
+        Yi: () => i,
+        dd: () => u,
+        gP: () => p,
+        it: () => l,
+        o3: () => _,
+        q9: () => c,
+        wH: () => d
       });
-      let a = {
+      var a = r(41029);
+      let n = {
           free: 0,
           premium: 7.99,
           premiumGift: 7.19,
           imagehost: 4.99,
+          imagehostGift: 4.99,
           verified: 14.99,
+          verifiedGift: 14.99,
           customBadge: 8.99,
+          customBadgeGift: 8.99,
           badgeCredit: 2.99,
           aliasCredit: 4.99,
           donationMinimum: 1,
           donorBadgeMinimum: 10
         },
-        n = [{
+        c = {
+          free: n.free,
+          get premium() {
+            return (0, a.p)() ? 6.79 : n.premium
+          },
+          get premiumGift() {
+            return (0, a.p)() ? 6.49 : n.premiumGift
+          },
+          get imagehost() {
+            return (0, a.p)() ? 4.25 : n.imagehost
+          },
+          get imagehostGift() {
+            return (0, a.p)() ? 4.49 : n.imagehostGift
+          },
+          get verified() {
+            return (0, a.p)() ? 12.75 : n.verified
+          },
+          get verifiedGift() {
+            return (0, a.p)() ? 13.49 : n.verifiedGift
+          },
+          get customBadge() {
+            return (0, a.p)() ? 7.65 : n.customBadge
+          },
+          get customBadgeGift() {
+            return (0, a.p)() ? 8.09 : n.customBadgeGift
+          },
+          get badgeCredit() {
+            return (0, a.p)() ? 2.55 : n.badgeCredit
+          },
+          get aliasCredit() {
+            return (0, a.p)() ? 4.25 : n.aliasCredit
+          },
+          donationMinimum: n.donationMinimum,
+          donorBadgeMinimum: n.donorBadgeMinimum
+        },
+        i = [{
           gb: 5,
           price: 4.99
         }, {
@@ -404,49 +463,65 @@
           gb: 50,
           price: 34.99
         }],
-        c = 5,
-        o = 200;
-
-      function s(e) {
-        return !Number.isInteger(e) || e < c || e > o ? null : (100 * Math.ceil((e <= 10 ? 100 * e - 1 : e <= 25 ? 999 + Math.round(1e3 / 15 * (e - 10)) : e <= 50 ? 1999 + (e - 25) * 60 : 3499 + (e - 50) * 50) / 100) - 1) / 100
-      }
-      let i = 15;
+        o = 5,
+        s = 200;
 
       function d(e) {
+        return !Number.isInteger(e) || e < o || e > s ? null : (100 * Math.ceil((e <= 10 ? 100 * e - 1 : e <= 25 ? 999 + Math.round(1e3 / 15 * (e - 10)) : e <= 50 ? 1999 + (e - 25) * 60 : 3499 + (e - 50) * 50) / 100) - 1) / 100
+      }
+      let u = 15,
+        l = {
+          get premiumlifetime() {
+            return c.premium
+          },
+          get imagehost() {
+            return c.imagehost
+          },
+          get verified() {
+            return c.verified
+          },
+          get custombadge() {
+            return c.customBadge
+          },
+          get aliascredits() {
+            return c.aliasCredit
+          }
+        };
+
+      function f(e) {
         return `${e.toFixed(2).replace(/\.00$/,"").replace(".",",")}€`
       }
 
-      function l(e) {
-        let t = a.badgeCredit * e ** .85,
-          r = a.badgeCredit * e;
+      function p(e) {
+        let t = c.badgeCredit * e ** .85,
+          r = n.badgeCredit * e;
         return {
           totalPrice: Number(t.toFixed(2)),
           discountPercent: Number(((1 - t / r) * 100).toFixed(0))
         }
       }
 
-      function u(e) {
-        let t = a.customBadge * e ** .95,
-          r = a.customBadge * e;
+      function _(e, t = !1) {
+        let r = (t && (0, a.p)() ? .9 * n.customBadgeGift : c.customBadge) * e ** .95,
+          i = n.customBadge * e;
         return {
-          totalPrice: Number(t.toFixed(2)),
-          rawPrice: Number(r.toFixed(2)),
-          discountPercent: Number(((1 - t / r) * 100).toFixed(0))
+          totalPrice: Number(r.toFixed(2)),
+          rawPrice: Number(i.toFixed(2)),
+          discountPercent: Number(((1 - r / i) * 100).toFixed(0))
         }
       }
-      a.premium, a.imagehost, a.verified, a.customBadge, a.aliasCredit
     },
     61850: (e, t, r) => {
       "use strict";
       r.d(t, {
-        A: () => s
+        A: () => o
       });
       var a = r(95155),
         n = r(86891),
         c = r(48796),
-        o = r.n(c);
+        i = r.n(c);
 
-      function s({
+      function o({
         comparisons: e
       }) {
         let t = (0, n.kj)(),
@@ -454,7 +529,7 @@
             name: e
           }) => e).join(", ");
         return (0, a.jsx)("div", {
-          className: o().trademarkDisclaimer,
+          className: i().trademarkDisclaimer,
           children: t("comparisons.disclaimer", {
             names: r,
             reviewedDate: t("comparisons.verified_date")
@@ -473,8 +548,8 @@
     98073: (e, t, r) => {
       "use strict";
       r.d(t, {
-        PD: () => o,
-        i0: () => s
+        PD: () => i,
+        i0: () => o
       });
       var a = r(61836);
       let n = [{
@@ -545,7 +620,7 @@
         }, (e, t) => t)
       }
 
-      function o(e) {
+      function i(e) {
         let t = e("comparisons.premium_once", {
           price: (0, a.$g)(a.q9.premium)
         });
@@ -583,7 +658,7 @@
         })
       }
 
-      function s(e, t) {
+      function o(e, t) {
         return t.find(t => t.slug === e)
       }
       n.map(({

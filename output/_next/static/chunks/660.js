@@ -400,20 +400,20 @@
               z = () => {
                 P = !1
               },
-              I = e => {
+              B = e => {
                 if (!o) return;
                 e.preventDefault();
                 let t = f.getBoundingClientRect(),
                   r = e.touches[0];
                 P = U(r.clientX - t.left, r.clientY - t.top)
               },
-              B = () => {
+              I = () => {
                 P = !1
               };
-            o && (f.addEventListener("mousemove", M), f.addEventListener("mouseleave", z), f.addEventListener("touchmove", I, {
+            o && (f.addEventListener("mousemove", M), f.addEventListener("mouseleave", z), f.addEventListener("touchmove", B, {
               passive: !1
-            }), f.addEventListener("touchend", B)), f.cleanupFuzzyText = () => {
-              window.cancelAnimationFrame(a), o && (f.removeEventListener("mousemove", M), f.removeEventListener("mouseleave", z), f.removeEventListener("touchmove", I), f.removeEventListener("touchend", B))
+            }), f.addEventListener("touchend", I)), f.cleanupFuzzyText = () => {
+              window.cancelAnimationFrame(a), o && (f.removeEventListener("mousemove", M), f.removeEventListener("mouseleave", z), f.removeEventListener("touchmove", B), f.removeEventListener("touchend", I))
             }
           })(), () => {
             m = !0, window.cancelAnimationFrame(a), f && f.cleanupFuzzyText && f.cleanupFuzzyText()
@@ -458,8 +458,8 @@
           U = (0, n.useRef)(null),
           M = (0, n.useRef)([]),
           z = (0, n.useRef)(null),
-          I = (0, n.useRef)(!1),
-          B = (0, n.useRef)(null);
+          B = (0, n.useRef)(!1),
+          I = (0, n.useRef)(null);
         (0, n.useEffect)(() => {
           "fonts" in document ? "loaded" === document.fonts.status ? $(!0) : document.fonts.ready.then(() => $(!0)) : $(!0)
         }, []), (0, c.L)(() => {
@@ -472,7 +472,7 @@
             p = 0 === n ? "" : n < 0 ? `-=${Math.abs(n)}${c}` : `+=${n}${c}`,
             h = `top ${(1-m)*100}%${p}`,
             $ = () => {
-              B.current && A.current && (A.current.removeEventListener("mouseenter", B.current), B.current = null)
+              I.current && A.current && (A.current.removeEventListener("mouseenter", I.current), I.current = null)
             },
             P = () => {
               z.current && (z.current.kill(), z.current = null), M.current.length && (M.current.forEach(e => {
@@ -483,7 +483,7 @@
               try {
                 U.current?.revert()
               } catch {}
-              U.current = null, I.current = !1
+              U.current = null, B.current = !1
             },
             L = () => {
               P(), U.current = new l.A(t, {
@@ -560,7 +560,7 @@
             D = () => {
               let e = M.current.map(e => e.firstElementChild);
               if (!e.length) return;
-              I.current = !0;
+              B.current = !0;
               let t = i.os.timeline({
                   smoothChildTiming: !0,
                   repeat: y ? -1 : 0,
@@ -571,7 +571,7 @@
                     }), g?.()
                   },
                   onComplete: () => {
-                    I.current = !1, y || (M.current.forEach(e => {
+                    B.current = !1, y || (M.current.forEach(e => {
                       let t = e.firstElementChild;
                       if (!t) return;
                       let r = t.querySelector('[data-orig="1"]');
@@ -621,9 +621,9 @@
               if (!k || !A.current) return;
               $();
               let e = () => {
-                I.current || (L(), _ && W(), D())
+                B.current || (L(), _ && W(), D())
               };
-              B.current = e, A.current.addEventListener("mouseenter", e)
+              I.current = e, A.current.addEventListener("mouseenter", e)
             },
             F = o.u.create({
               trigger: t,
@@ -1658,7 +1658,7 @@ void main() {
   gl_Position = vec4(position, 0.0, 1.0);
 }
 `,
-        I = `#version 300 es
+        B = `#version 300 es
 precision highp float;
 
 uniform float uTime;
@@ -1757,7 +1757,7 @@ void main() {
 }
 `;
 
-      function B(e) {
+      function I(e) {
         let {
           colorStops: t = ["#5227FF", "#7cff67", "#5227FF"],
           amplitude: r = 1,
@@ -1790,7 +1790,7 @@ void main() {
           });
           e = new U.B(l, {
             vertex: z,
-            fragment: I,
+            fragment: B,
             uniforms: {
               uTime: {
                 value: 0
@@ -2297,10 +2297,10 @@ void main(){
               }
               j.oldPosition = n, l.needsUpdate = !0, c.needsUpdate = !0, j.mouseI = (j.mouseI + 800) % 32e4
             },
-            I = e => {
+            B = e => {
               z(e.clientX - j.clientHalfWidth, e.clientY - j.clientHalfHeight)
             },
-            B = e => {
+            I = e => {
               e.touches[0] && z(e.touches[0].clientX - j.clientHalfWidth, e.touches[0].clientY - j.clientHalfHeight)
             },
             L = () => {
@@ -2319,10 +2319,10 @@ void main(){
             H = e => {
               y && (j.timestamp = e - D, k.timestamp.value = j.timestamp, S.render(C, N)), n = requestAnimationFrame(H)
             };
-          return window.addEventListener("pointermove", I), window.addEventListener("touchmove", B, {
+          return window.addEventListener("pointermove", B), window.addEventListener("touchmove", I, {
             passive: !0
           }), window.addEventListener("resize", L), n = requestAnimationFrame(H), () => {
-            W.disconnect(), cancelAnimationFrame(n), window.removeEventListener("pointermove", I), window.removeEventListener("touchmove", B), window.removeEventListener("resize", L), C.remove(M), A.dispose(), U.dispose(), S.dispose()
+            W.disconnect(), cancelAnimationFrame(n), window.removeEventListener("pointermove", B), window.removeEventListener("touchmove", I), window.removeEventListener("resize", L), C.remove(M), A.dispose(), U.dispose(), S.dispose()
           }
         }, [t, r, s, i, o, l, c, d, u, m, f, p, h, g]), (0, a.jsx)("div", {
           ref: x,
@@ -2575,7 +2575,7 @@ void main() {
             waveAmplitude: .3,
             waveFrequency: 2,
             waveSpeed: .06
-          }) : j ? (0, a.jsx)(B, {
+          }) : j ? (0, a.jsx)(I, {
             colorStops: [d, d, d],
             blend: .5,
             amplitude: .5,
@@ -2661,6 +2661,7 @@ void main() {
             domain_legend: "Domain Legend",
             easter_2025: "Easter 2025",
             easter_2026: "Easter 2026",
+            black_week_2026: "Black Week 2026",
             summer_2026: "Summer 2026",
             helper: "Community Helper",
             gifter: "Gifter",
@@ -2684,6 +2685,7 @@ void main() {
             domain_legend: "domainLegend",
             easter_2025: "easter2025",
             easter_2026: "easter2026",
+            black_week_2026: "blackWeek2026",
             summer_2026: "summer2026",
             helper: "helper",
             gifter: "gifter",
@@ -2707,6 +2709,7 @@ void main() {
             "Domain Legend": "domainLegend",
             "Easter 2025": "easter2025",
             "Easter 2026": "easter2026",
+            "Black Week 2026": "blackWeek2026",
             "Summer 2026": "summer2026",
             "Community Helper": "helper",
             Gifter: "gifter",
@@ -4051,7 +4054,7 @@ void main() {
           [$, P] = (0, n.useState)({}),
           [E, U] = (0, n.useState)(!0),
           [M, z] = (0, n.useState)(null),
-          [I, B] = (0, n.useState)(null),
+          [B, I] = (0, n.useState)(null),
           L = (0, n.useRef)(null),
           W = Object.keys(t.second_tab)[0],
           D = !!t.second_tab_enabled && "enabled" !== e.presence,
@@ -4275,7 +4278,7 @@ void main() {
                   minute: "2-digit",
                   hour12: !1
                 });
-              B({
+              I({
                 diffMinutes: n - s,
                 visitorTime: i
               })
@@ -4729,12 +4732,12 @@ void main() {
                       timeZoneName: "short"
                     }).formatToParts(M), u.find(e => "timeZoneName" === e.type)?.value ?? i) : "--"
                   })]
-                }), null !== I && (0, a.jsx)("div", {
+                }), null !== B && (0, a.jsx)("div", {
                   className: eA().timezoneVisitor,
-                  children: 0 === I.diffMinutes ? (0, a.jsx)("span", {
+                  children: 0 === B.diffMinutes ? (0, a.jsx)("span", {
                     children: "Same timezone as you"
                   }) : (0, a.jsxs)("span", {
-                    children: ["Your time: ", I.visitorTime, " (", (m = Math.abs(o = I.diffMinutes), f = o >= 0 ? "+" : "-", p = Math.floor(m / 60), 0 == (h = m % 60) ? `${f}${p}h` : 0 === p ? `${f}${h}m` : `${f}${p}h ${h}m`), ")"]
+                    children: ["Your time: ", B.visitorTime, " (", (m = Math.abs(o = B.diffMinutes), f = o >= 0 ? "+" : "-", p = Math.floor(m / 60), 0 == (h = m % 60) ? `${f}${p}h` : 0 === p ? `${f}${h}m` : `${f}${p}h ${h}m`), ")"]
                   })
                 })]
               }), (0, a.jsxs)("span", {
@@ -4752,7 +4755,7 @@ void main() {
         eM = r.n(eU),
         ez = r(85737);
 
-      function eI({
+      function eB({
         userData: e,
         config: t,
         premiumConfig: r,
@@ -4823,7 +4826,7 @@ void main() {
         })
       }
 
-      function eB({
+      function eI({
         challengeData: e,
         onProof: t
       }) {
@@ -4872,7 +4875,7 @@ void main() {
             method: "POST"
           })
         }, [e, h, f, u, t]), (0, a.jsxs)(a.Fragment, {
-          children: [!u && (0, a.jsx)(eB, {
+          children: [!u && (0, a.jsx)(eI, {
             challengeData: e,
             onProof: _
           }), (0, a.jsx)(x.default, {
@@ -5036,7 +5039,7 @@ void main() {
               })]
             }), "enabled" === t.presence && (0, a.jsx)("div", {
               className: `${i().discordPresenceWrapper} ${w&&s}`,
-              children: (0, a.jsx)(eI, {
+              children: (0, a.jsx)(eB, {
                 userData: e,
                 config: t,
                 premiumConfig: r,
@@ -5120,14 +5123,14 @@ void main() {
           U = r.border_radius > 35 && .15 * r.border_radius,
           M = t.username_effects,
           z = t.text_color,
-          I = r.links_position ?? "center",
-          B = !!("" !== t.avatar || t.use_discord_avatar && m),
+          B = r.links_position ?? "center",
+          I = !!("" !== t.avatar || t.use_discord_avatar && m),
           L = Object.keys(r.second_tab).length,
           W = r.second_tab_enabled && L >= 1 ? [] : b;
         return (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsxs)("div", {
             className: `${eA().userProfile} ${P&&s}`,
-            children: [B ? (0, a.jsxs)("div", {
+            children: [I ? (0, a.jsxs)("div", {
               className: i().avatarWrapper,
               children: [E && (0, a.jsx)("img", {
                 src: u,
@@ -5298,7 +5301,7 @@ void main() {
               style: x,
               children: ["enabled" === t.presence && (0, a.jsx)("div", {
                 className: eA().widgetContainerFlex,
-                children: (0, a.jsx)(eI, {
+                children: (0, a.jsx)(eB, {
                   userData: e,
                   config: t,
                   premiumConfig: r,
@@ -5309,7 +5312,7 @@ void main() {
               }), v && (0, a.jsx)("div", {
                 className: eA().widgetContainerFlex,
                 style: x,
-                children: (0, a.jsx)(eI, {
+                children: (0, a.jsx)(eB, {
                   userData: e,
                   config: t,
                   premiumConfig: r,
@@ -5336,7 +5339,7 @@ void main() {
               username: e.username,
               fontSize: r.font_size,
               style: {
-                justifyContent: "left" === I ? "flex-start" : "right" === I ? "flex-end" : "center"
+                justifyContent: "left" === B ? "flex-start" : "right" === B ? "flex-end" : "center"
               }
             })
           }), (0, a.jsxs)("div", {
@@ -5484,8 +5487,8 @@ void main() {
           U = (0, n.useMemo)(() => (0, eV.O5)(String(E?.synced_lyrics || "")), [E?.synced_lyrics]),
           M = (0, n.useMemo)(() => (0, eV.L$)(U, C + .045), [U, C]),
           z = M >= 0 ? U[M] : null,
-          I = (0, n.useMemo)(() => (0, eV.r$)(z?.words, C + .045), [z?.words, C]),
-          B = M >= 0 ? M : 0,
+          B = (0, n.useMemo)(() => (0, eV.r$)(z?.words, C + .045), [z?.words, C]),
+          I = M >= 0 ? M : 0,
           L = x && y?.show_lyrics === !0;
         (0, n.useEffect)(() => {
           let e = r.ref;
@@ -5768,7 +5771,7 @@ void main() {
             children: U.length > 0 ? (0, a.jsx)("div", {
               className: i().audioLyricsViewport,
               children: U.map((e, t) => {
-                let r = t - B,
+                let r = t - I,
                   n = Math.abs(r);
                 if (n > 8) return null;
                 let s = t === M,
@@ -5784,8 +5787,8 @@ void main() {
                     className: `${i().audioLyricsLineText} ${i().audioLyricsLineTextEnhanced}`,
                     children: e.words.map((e, t) => {
                       var r;
-                      let n, o = s && t === I,
-                        l = s && I >= 0 && t < I,
+                      let n, o = s && t === B,
+                        l = s && B >= 0 && t < B,
                         c = (n = String((r = e.text) || "").match(/^(\W*)(.*?)([\s.,!?;:)"'\]]*)$/), {
                           prefix: n?.[1] || "",
                           body: n?.[2] || r,
@@ -5851,12 +5854,12 @@ void main() {
           U = o === i().unfoldStart,
           M = t.username_effects,
           z = t.text_color,
-          I = !!("" !== t.avatar || t.use_discord_avatar && b),
-          B = e.discord?.user_badges || [];
+          B = !!("" !== t.avatar || t.use_discord_avatar && b),
+          I = e.discord?.user_badges || [];
         return (0, a.jsx)(a.Fragment, {
           children: (0, a.jsxs)("div", {
             className: eG().userInformation,
-            children: [I && (0, a.jsxs)("div", {
+            children: [B && (0, a.jsxs)("div", {
               className: i().avatarWrapper,
               children: [E && (0, a.jsx)("img", {
                 src: w,
@@ -5937,12 +5940,12 @@ void main() {
               })]
             }), "enabled" === t.presence && (0, a.jsx)("div", {
               className: `${i().discordPresenceWrapper} ${U&&o}`,
-              children: (0, a.jsx)(eI, {
+              children: (0, a.jsx)(eB, {
                 userData: e,
                 config: t,
                 premiumConfig: r,
                 presenceInformation: n,
-                discordUserBadges: B,
+                discordUserBadges: I,
                 discordLoading: s
               })
             }), t.socials.length > 0 && (0, a.jsx)("div", {
@@ -7040,12 +7043,12 @@ void main() {
           U = n.typewriter_speed ?? 5,
           M = n.typewriter_delete_speed ?? 7,
           z = "unfold" === n.animation || "pop" === n.animation || "fade" === n.animation ? n.animation : "fade",
-          I = {
+          B = {
             ...m.username,
             fontSize: m.username.fontSize,
             fontWeight: 700
           },
-          B = window.matchMedia?.("(pointer: coarse)").matches,
+          I = window.matchMedia?.("(pointer: coarse)").matches,
           L = r.username_effects,
           W = "rgb" === L || "rainbow" === L,
           D = !!L && !W && !["none", "typewriter", "fuzzy", "shuffle"].includes(L),
@@ -7089,7 +7092,7 @@ void main() {
                       pageTooltipStyles: !0,
                       children: "typewriter" === L ? (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsx)("style", {
-                          children: `.hero-tw-${u} .Typewriter { font-size: ${I.fontSize}; font-weight: ${I.fontWeight??700}; font-family: ${I.fontFamily??"inherit"}; color: var(--textColor); text-shadow: var(--colorUsernameGlow); }`
+                          children: `.hero-tw-${u} .Typewriter { font-size: ${B.fontSize}; font-weight: ${B.fontWeight??700}; font-family: ${B.fontFamily??"inherit"}; color: var(--textColor); text-shadow: var(--colorUsernameGlow); }`
                         }), (0, a.jsx)("div", {
                           className: `hero-tw-${u}`,
                           children: (0, a.jsx)(ea(), {
@@ -7104,11 +7107,11 @@ void main() {
                       }) : "fuzzy" === L || "shuffle" === L ? (0, a.jsx)(eW.A, {
                         username: f,
                         usernameEffect: L,
-                        fontSize: I.fontSize,
+                        fontSize: B.fontSize,
                         textColor: r.text_color
                       }) : (0, a.jsx)("h1", {
                         className: W ? i().rainbowName : D ? tr().heroTitleEffects : void 0,
-                        style: I,
+                        style: B,
                         children: f
                       })
                     }), E && "classic" === u && (0, a.jsx)("div", {
@@ -7178,7 +7181,7 @@ void main() {
           className: `${tr().heroModule} ${tr().portfolioTopSection}`,
           "data-animation": z,
           "data-hero-style": u,
-          children: [n.parallax_animation && !B ? (0, a.jsx)(e6.A, {
+          children: [n.parallax_animation && !I ? (0, a.jsx)(e6.A, {
             ...ts,
             tiltEnable: !0,
             style: {
@@ -7288,7 +7291,7 @@ void main() {
                                         width: 100%;
                                         justify-content: space-between;
                                     }`
-                }), (0, a.jsx)(eI, {
+                }), (0, a.jsx)(eB, {
                   userData: s,
                   config: {
                     ...t,
@@ -7831,7 +7834,7 @@ void main() {
         }), s("list-end"), r
       }
 
-      function tI() {
+      function tB() {
         let e = (0, ed.kj)(),
           t = "guns_promo_seen_v1",
           [r, s] = (0, n.useState)(!1),
@@ -7901,7 +7904,7 @@ void main() {
           })]
         }) : null
       }
-      var tB = r(45941);
+      var tI = r(45941);
 
       function tL({
         templateInfo: e,
@@ -8038,7 +8041,7 @@ void main() {
           }),
           _ = e.config?.premium?.metadata?.favicon;
         e.alias && e.redirect && (0, e3.redirect)(e.redirect);
-        let [w, S] = (0, n.useState)(e.config ?? tB.hR), [N, C] = (0, n.useState)(w.premium), [k, A] = (0, n.useState)({
+        let [w, S] = (0, n.useState)(e.config ?? tI.hR), [N, C] = (0, n.useState)(w.premium), [k, A] = (0, n.useState)({
           playing: !1,
           currentTime: 0,
           duration: 0,
@@ -8048,7 +8051,7 @@ void main() {
           title: "",
           cover: "",
           id: ""
-        }), [P, E] = (0, n.useState)(!1), U = (0, n.useRef)(null), M = (0, n.useRef)(null), z = (0, n.useRef)(null), I = (0, n.useRef)(null), B = (0, n.useRef)(null), L = g({
+        }), [P, E] = (0, n.useState)(!1), U = (0, n.useRef)(null), M = (0, n.useRef)(null), z = (0, n.useRef)(null), B = (0, n.useRef)(null), I = (0, n.useRef)(null), L = g({
           font: N.font,
           fontSize: N.font_size
         }), W = s.templatePreview ? s.previewDiscord : e.discord, D = s.templatePreview ? {
@@ -8156,13 +8159,13 @@ void main() {
             let e = 0 === (r = a ? r + 1 : r - 1) ? "" : t.slice(0, r);
             document.title = "@" + e
           }, 380)), eh || eb(w.url) || (ed === i().fadeUp ? setTimeout(function() {
-            z.current && z.current.classList.add(i().fadeUp), I.current && I.current?.classList.add(i().fadeUp), B.current && B.current?.classList.add(i().fadeUp)
+            z.current && z.current.classList.add(i().fadeUp), B.current && B.current?.classList.add(i().fadeUp), I.current && I.current?.classList.add(i().fadeUp)
           }, 350) : ed === i().unfold ? document.querySelectorAll(`.${i().unfoldStart}`).forEach((e, t) => {
             setTimeout(() => {
               e.classList.add(i().unfold)
             }, 300 * t)
           }) : ed === i().scaleFade && setTimeout(function() {
-            z.current && z.current.classList.add(i().scaleFade), I.current && I.current?.classList.add(i().scaleFade), B.current && B.current?.classList.add(i().scaleFade)
+            z.current && z.current.classList.add(i().scaleFade), B.current && B.current?.classList.add(i().scaleFade), I.current && I.current?.classList.add(i().scaleFade)
           }, 350))
         }, [r, w]), (0, n.useEffect)(() => {
           let e = navigator.userAgent.toLowerCase();
@@ -8284,7 +8287,7 @@ void main() {
             href: _,
             sizes: "any"
           }), e.success && !e.ban && e.verified && !h ? (0, a.jsxs)(a.Fragment, {
-            children: [!e.premium && !s.templatePreview && (0, a.jsx)(tI, {}), (0, a.jsx)(o, {
+            children: [!e.premium && !s.templatePreview && (0, a.jsx)(tB, {}), (0, a.jsx)(o, {
               backgroundUrl: w.url,
               audio: w.audio,
               shuffleAudios: w.shuffle_audios,
@@ -8302,8 +8305,8 @@ void main() {
               userContainerRef: z,
               animationClass: ed,
               setAudioPlayer: A,
-              audioContainerRef: I,
-              discordWidgetRef: B,
+              audioContainerRef: B,
+              discordWidgetRef: I,
               onEnter: () => E(!0)
             }), (0, a.jsx)(u, {
               enabled: !!e.premium && "none" !== N.click_sound,
@@ -8400,7 +8403,7 @@ void main() {
                     setAudioData: $,
                     audioData: T,
                     setAudioPlayer: A,
-                    audioContainerRef: I,
+                    audioContainerRef: B,
                     setVolume: j
                   }), (0, a.jsx)("style", {
                     children: `
@@ -8485,7 +8488,7 @@ void main() {
                         audioData: T,
                         audioPlayer: k,
                         setAudioPlayer: A,
-                        audioContainerRef: I,
+                        audioContainerRef: B,
                         setVolume: j,
                         profileBorderClass: ea,
                         profileBorderEffect: et
@@ -8497,7 +8500,7 @@ void main() {
                         animationStartClass: ec,
                         isTemplatePreview: s.templatePreview
                       })]
-                    }), "enabled" === w.presence && "sleek" === N.layout && (0, a.jsx)(eI, {
+                    }), "enabled" === w.presence && "sleek" === N.layout && (0, a.jsx)(eB, {
                       userData: D,
                       config: w,
                       premiumConfig: N,
@@ -8506,7 +8509,7 @@ void main() {
                       discordLoading: f,
                       variant: "sleek",
                       animationStartClass: ec,
-                      discordWidgetRef: B,
+                      discordWidgetRef: I,
                       profileBorderClass: ea,
                       profileBorderEffect: et
                     }), w.audio_player && "" !== T.url && "simplistic" !== N.layout && (0, a.jsx)(eq, {
@@ -8516,7 +8519,7 @@ void main() {
                       setAudioData: $,
                       audioData: T,
                       setAudioPlayer: A,
-                      audioContainerRef: I,
+                      audioContainerRef: B,
                       currentFont: N.font,
                       audioList: w.audio,
                       setVolume: j,
@@ -8563,7 +8566,7 @@ void main() {
                         audioData: T,
                         audioPlayer: k,
                         setAudioPlayer: A,
-                        audioContainerRef: I,
+                        audioContainerRef: B,
                         setVolume: j,
                         profileBorderClass: ea,
                         profileBorderEffect: et
@@ -8575,7 +8578,7 @@ void main() {
                         animationStartClass: ec,
                         isTemplatePreview: s.templatePreview
                       })]
-                    }), "enabled" === w.presence && "sleek" === N.layout && (0, a.jsx)(eI, {
+                    }), "enabled" === w.presence && "sleek" === N.layout && (0, a.jsx)(eB, {
                       userData: D,
                       config: w,
                       premiumConfig: N,
@@ -8584,7 +8587,7 @@ void main() {
                       discordLoading: f,
                       variant: "sleek",
                       animationStartClass: ec,
-                      discordWidgetRef: B,
+                      discordWidgetRef: I,
                       profileBorderClass: ea,
                       profileBorderEffect: et
                     }), w.audio_player && "" !== T.url && "simplistic" !== N.layout && (0, a.jsx)(eq, {
@@ -8594,7 +8597,7 @@ void main() {
                       setAudioData: $,
                       audioData: T,
                       setAudioPlayer: A,
-                      audioContainerRef: I,
+                      audioContainerRef: B,
                       currentFont: N.font,
                       audioList: w.audio,
                       setVolume: j,
